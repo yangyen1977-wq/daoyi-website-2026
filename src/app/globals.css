@@ -364,6 +364,83 @@ a:hover {
   font-size: 0.88rem;
 }
 
+.hero-action-plan {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 17, 31, 0.7);
+  display: grid;
+  gap: 18px;
+}
+
+.hero-action-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hero-action-card {
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  display: grid;
+  gap: 10px;
+}
+
+.hero-action-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hero-action-metric {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.hero-action-card h3 {
+  font-size: 1.05rem;
+  color: #f4f8ff;
+}
+
+.hero-action-card p {
+  color: #c8d8ea;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.hero-action-cta {
+  border-radius: 22px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-action-cta strong {
+  display: block;
+  color: #f1f7ff;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.hero-action-cta p {
+  color: #d1e2f7;
+  font-size: 0.92rem;
+  max-width: 60ch;
+}
+
+.hero-action-link {
+  min-width: 220px;
+}
+
 .hero-story {
   margin-top: 20px;
   display: grid;
@@ -611,6 +688,13 @@ a:hover {
   .hero-clarity-checklist {
     grid-template-columns: 1fr;
   }
+  .hero-action-cards {
+    grid-template-columns: 1fr;
+  }
+  .hero-action-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .persona-playbook {
     grid-template-columns: 1fr;
   }
@@ -831,6 +915,127 @@ a:hover {
   justify-content: space-between;
   gap: 16px;
 }
+
+.case-overview-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.case-overview-card {
+  padding: 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(14, 26, 43, 0.08);
+  background: linear-gradient(180deg, #fdfdff, #f0f5ff);
+  color: var(--text-dark);
+  box-shadow: 0 16px 40px rgba(11, 21, 38, 0.06);
+}
+
+.case-overview-card strong {
+  display: block;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.case-overview-card p {
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .case-overview-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mobile-preview {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.mobile-preview-phone {
+  width: 240px;
+  aspect-ratio: 9 / 18;
+  border-radius: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 17, 31, 0.8);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mobile-preview-hero {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-preview-lines {
+  display: grid;
+  gap: 6px;
+}
+
+.mobile-preview-lines div {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.mobile-preview-cta {
+  border-radius: 18px;
+  border: 1px solid rgba(93, 228, 215, 0.4);
+  background: rgba(93, 228, 215, 0.1);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mobile-preview-cta strong {
+  color: #f5fbff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.mobile-preview-cta span {
+  color: rgba(245, 251, 255, 0.8);
+  font-size: 0.85rem;
+}
+
+.mobile-preview-cta button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #04111f;
+  font-weight: 600;
+}
+
+.mobile-preview-copy {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .mobile-preview {
+    grid-template-columns: 1fr;
+  }
+  .mobile-preview-phone {
+    width: 100%;
+  }
+}
+
 
 
 .proof-grid {

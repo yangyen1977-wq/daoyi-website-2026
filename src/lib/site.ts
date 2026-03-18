@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "B2B AI 官網與 DPP 交付中心",
+  heroTitle: "5 秒講清楚的 AI 官網與 DPP",
   heroDescription:
-    "6-10 字就說清楚價值、立即給出行動選項，並把真實案例、AI / DPP 工作流程與 Core Web Vitals 一次校準。",
+    "把價值主張、案例 KPI、Sticky CTA 與 DPP / AI 工作流程一次呈現，讓決策者不用猜下一步。",
 };
 
 export const navItems = [
@@ -37,6 +37,27 @@ export const heroProofs = [
   { value: "+32%", label: "Activation", description: "Hero 敘事 + 即時案例" },
   { value: "15s demo", label: "互動預覽", description: "手機 / 桌機同步" },
   { value: "24h", label: "提案 SLA", description: "5 分鐘寄出草稿" },
+];
+
+export const heroActionSignals = [
+  {
+    step: "01",
+    metric: "5 分鐘",
+    title: "送出 Quick Brief",
+    detail: "3 欄表單 + 自動帶入郵件草稿，Mobile sticky CTA 隨時可點。",
+  },
+  {
+    step: "02",
+    metric: "24 小時",
+    title: "收到下一步",
+    detail: "寄回會議時段、初步優先順序與風險提示，避免空泛往返。",
+  },
+  {
+    step: "03",
+    metric: "10 週",
+    title: "完成 Discover → Operate",
+    detail: "依四個 sprint 交付 IA、UI、系統與 KPI 儀表板，確保可維運。",
+  },
 ];
 
 export const heroClarityChecklist = [
@@ -168,6 +189,24 @@ export const cases = [
     description:
       "規劃可追溯資料欄位、產品頁與掃碼體驗，讓企業能更早布局 DPP 與國際法規需求。",
     impact: "強化品牌信任、供應鏈協作與法規準備度。",
+  },
+];
+
+export const caseOverviewStats = [
+  {
+    label: "Activation uplift",
+    value: "+32%",
+    detail: "Stan Vision 樣板：首屏案例 KPI + Sticky CTA 讓 activation 成長 32%。",
+  },
+  {
+    label: "審查時間",
+    value: "-45%",
+    detail: "Traceability cockpit 讓永續 / 採購審查不用再來回追資料。",
+  },
+  {
+    label: "導入週期",
+    value: "10 週",
+    detail: "Discover → Operate 四個 sprint，就能把 IA、UI、系統與資料欄位一起交付。",
   },
 ];
 
@@ -338,6 +377,7 @@ export const mobileExperienceHighlights = [
   { title: "Sticky CTA Footer", metric: "+41% 行動 leads", description: "行動版常駐 CTA + 2 欄表單，避免訪客往回滑。" },
   { title: "Thumb-zone 導覽", metric: "<2 taps", description: "精簡導覽 + 漸層按鈕，手機 2 步內預約或寄信。" },
   { title: "即時案例快照", metric: "5 秒內理解", description: "hero 區直接掛上代表案例與量化成果，降低決策風險。" },
+  { title: "<2.3s Core Web Vitals", metric: "Performance budget", description: "精簡動畫 + inline 字體 + Edge caching，確保手機 LCP < 2.3s。" },
 ];
 
 export const engagementSteps = [

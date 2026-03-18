@@ -1,12 +1,14 @@
 import Link from "next/link";
 import {
   cases,
+  caseSnapshots,
   clientSegments,
   differentiators,
   faqs,
   insightTopics,
   processSteps,
   proofPoints,
+  siteConfig,
   solutions,
   testimonials,
   mobileExperienceHighlights,
@@ -18,7 +20,9 @@ import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
 import { CaseSnapshots } from "@/components/case-snapshots";
+import { CaseOverviewStats } from "@/components/case-overview-stats";
 import { ConversionCTA } from "@/components/conversion-cta";
+import { MobileCtaPreview } from "@/components/mobile-cta-preview";
 import { PersonaPlaybook } from "@/components/persona-playbook";
 
 const faqSchema = {
@@ -30,6 +34,28 @@ const faqSchema = {
     acceptedAnswer: {
       "@type": "Answer",
       text: item.answer,
+    },
+  })),
+};
+
+const caseSnapshotSchema = {
+  "@context": "https://schema.org",
+  "@graph": caseSnapshots.map((snapshot) => ({
+    "@type": "CaseStudy",
+    name: snapshot.title,
+    description: snapshot.summary,
+    url: `${siteConfig.url}${snapshot.href}`,
+    audience: {
+      "@type": "Audience",
+      audienceType: snapshot.label,
+    },
+    industry: snapshot.context,
+    measurementTechnique: snapshot.metrics.map((metric) => `${metric.label}: ${metric.value} (${metric.detail})`),
+    abstract: snapshot.highlights.join("；"),
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
   })),
 };
@@ -117,6 +143,7 @@ export default function Home() {
             ))}
           </ul>
         </div>
+        <MobileCtaPreview />
       </Section>
 
       <Section eyebrow="解決方案" title="聚焦三種高價值數位解法，對應品牌、流程與永續升級需求。">
@@ -136,6 +163,7 @@ export default function Home() {
       </Section>
 
       <Section eyebrow="案例實績" title="從研究平台到產業場域，成果可以被看見，也能被驗證。">
+        <CaseOverviewStats />
         <div className="card-grid three-up">
           {cases.map((item) => (
             <article key={item.title} className="card case-card">
@@ -155,6 +183,7 @@ export default function Home() {
         description="參考 Stan Vision / Veza Digital 案例，把可被驗證的數據與行動提示直接結合案例，減少再往下找資料的時間。"
       >
         <CaseSnapshots />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSnapshotSchema) }} />
       </Section>
 
       <Section eyebrow="信任憑證" title="把成果具體化，用可被量測的證據與回饋降低決策風險。">
@@ -273,7 +302,7 @@ export default function Home() {
       </section>
 
 
-      <Section eyebrow="快速提案" title="用三個欄位交出專案簡報，5 分鐘內收到回覆。">
+      <Section id="quick-brief" eyebrow="快速提案" title="用三個欄位交出專案簡報，5 分鐘內收到回覆。">
         <div className="quick-brief-grid">
           <QuickBriefForm />
           <div className="feature-surface quick-brief-note">

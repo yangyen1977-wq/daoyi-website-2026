@@ -3,6 +3,7 @@ import { siteConfig, stats } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
+import { HeroActionPlan } from "@/components/hero-action-plan";
 
 const heroHighlights = [
   "釐清價值主張與導覽策略",
@@ -52,6 +53,8 @@ export function Hero() {
               </ul>
             </article>
           </div>
+
+          <HeroActionPlan />
 
           <div className="hero-actions">
             <Link href="/contact" className="button-primary button-large">
