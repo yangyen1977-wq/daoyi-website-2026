@@ -10,6 +10,8 @@ import {
   solutions,
   testimonials,
   mobileExperienceHighlights,
+  engagementSteps,
+  fitSignals,
   seoGuardrails,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
@@ -58,6 +60,35 @@ export default function Home() {
               <li>重視長期維運、可擴充性與轉換效率</li>
             </ul>
           </div>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="啟動節奏"
+        title="先讓潛在客戶知道：現在聯絡道易，接下來會發生什麼。"
+        description="參考 Stan Vision 對 first-use friction 的整理，把接洽流程寫得更具體，降低第一次詢問的猶豫。"
+      >
+        <div className="engagement-grid">
+          {engagementSteps.map((item) => (
+            <article key={item.title} className="feature-surface engagement-card">
+              <span className="mini-label accent">{item.step}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+        <div className="fit-grid">
+          {fitSignals.map((group) => (
+            <article key={group.title} className="fit-card">
+              <span className="mini-label">{group.title}</span>
+              <ul className="bullet-list compact">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </Section>
 

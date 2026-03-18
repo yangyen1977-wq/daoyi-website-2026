@@ -1314,6 +1314,38 @@ a:hover {
   color: var(--primary);
 }
 
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.engagement-card {
+  display: grid;
+  gap: 12px;
+}
+
+.engagement-card strong {
+  color: #0d223c;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.fit-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.fit-card {
+  padding: 24px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #f8fbff, #eef4ff);
+  border: 1px solid rgba(14, 26, 43, 0.08);
+  box-shadow: 0 16px 40px rgba(12, 22, 36, 0.05);
+}
+
 .mobile-experience-grid {
   margin-top: 20px;
   display: grid;
@@ -1502,6 +1534,8 @@ a:hover {
   .hero-proof-metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .engagement-grid,
+  .fit-grid,
   .mobile-experience-grid {
     grid-template-columns: 1fr;
   }

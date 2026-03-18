@@ -340,6 +340,38 @@ export const mobileExperienceHighlights = [
   { title: "即時案例快照", metric: "5 秒內理解", description: "hero 區直接掛上代表案例與量化成果，降低決策風險。" },
 ];
 
+export const engagementSteps = [
+  {
+    step: "Step 1",
+    title: "5 分鐘送出需求",
+    description: "填 Quick Brief 或直接寄信，先說清楚目標、時程與現況卡點。",
+    proof: "3 欄表單 + 自動帶入郵件草稿",
+  },
+  {
+    step: "Step 2",
+    title: "24 小時內收到下一步",
+    description: "回覆會議時段、初步優先順序與建議切入方式，避免空泛來回。",
+    proof: "含優先級、風險與所需資料清單",
+  },
+  {
+    step: "Step 3",
+    title: "30 分鐘對焦可執行方案",
+    description: "用案例、欄位與交付節奏對焦，確認是官網、平台、AI 或 DPP 專案。",
+    proof: "會後可直接進入 Discover sprint",
+  },
+];
+
+export const fitSignals = [
+  {
+    title: "適合現在就談",
+    items: ["要重做官網但需要更強案例與轉換", "AI / DPP 已有方向，但資料與流程還沒整好", "需要把品牌、內容、系統交付一次對齊"],
+  },
+  {
+    title: "這輪最常被問的交付",
+    items: ["品牌官網 + 案例模組", "知識平台 IA / 查詢流程", "DPP / Traceability 欄位與 QR 體驗"],
+  },
+];
+
 export const seoGuardrails = [
   { title: "Organization + FAQ Schema", detail: "首頁與 FAQ 皆以 JSON-LD 輸出，對應 AI Overview 與長尾搜尋。" },
   { title: "Performance Budget", detail: "LCP < 2.3s、CLS < 0.1，並以暗色/亮色分層避免 layout shift。" },
