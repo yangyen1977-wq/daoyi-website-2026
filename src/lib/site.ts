@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 AI、資料與官網做成可成交的系統",
+  heroTitle: "把品牌、資料與 AI 做成會成交的數位系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：用更清楚的品牌主張、可驗證案例證據、行動優先 CTA 與可維運架構，讓官網、知識平台與 DPP 專案從第一屏就開始成交。",
+    "給 B2B 品牌、製造業與研究型組織：用更清楚的價值主張、可驗證案例證據、行動優先 CTA 與可維運架構，讓官網、知識平台與 DPP 專案從第一屏就建立信任並推進詢問。",
 };
 
 export const navItems = [
@@ -510,6 +510,38 @@ export const engagementPackages = [
     summary: "聚焦 ESPR、產品資料欄位、QR 體驗與供應鏈可追溯資料治理。",
     outputs: ["ESPR / DPP 欄位藍圖", "產品頁 / Traceability cockpit", "審查文件與下載包"],
     fit: "適合製造、永續、採購與法遵團隊提前布局法規要求。",
+  },
+];
+
+export const proofNarratives = [
+  {
+    label: "Proof near CTA",
+    title: "把『可不可信』放在『要不要聯絡』旁邊",
+    description: "參考 SaaSHero / Veza Digital 的做法，讓案例數據、回覆 SLA、合作節奏與 CTA 同區出現，減少決策者跳頁找證據。",
+    bullets: ["首屏與 mid-page CTA 附上量化成果", "Contact 區同步交代 24h 回覆與 NDA 流程", "桌機與手機都維持明確主行動"],
+  },
+  {
+    label: "Decision support",
+    title: "不只是展示能力，也幫訪客判斷該從哪裡開始",
+    description: "成熟 B2B 官網會把常見起點、適合情境與交付邏輯說清楚，降低『我是不是現在就該談』的不確定感。",
+    bullets: ["用三種 delivery track 對應不同成熟度", "把 before / after 與成果訊號寫進首頁", "讓 Contact 頁先回答風險與準備事項"],
+  },
+  {
+    label: "Mobile conversion",
+    title: "手機不是縮小桌機，而是直接成交的第一現場",
+    description: "依 ALM / SaaSHero 的 mobile-first 觀察，sticky CTA、thumb-zone 導覽與更短表單，才是 B2B 研究流量的基本盤。",
+    bullets: ["主 CTA 維持 44px 以上可點區", "表單限制 3 欄，降低首次詢問阻力", "案例與聯絡承諾優先出現在首屏後段"],
+  },
+];
+
+export const contactPrepChecklist = [
+  {
+    title: "第一次會議前，道易會先整理什麼",
+    items: ["你目前網站 / 系統的訊息落差", "最該先補強的 CTA、案例或資料流程", "第一階段適合先做的 sprint 與預估投入"],
+  },
+  {
+    title: "你只需要先準備這些",
+    items: ["目前網址或簡報連結", "這次想改善的成果指標", "主要決策者或使用者是誰", "若涉及敏感資料，可先 NDA 再談"],
   },
 ];
 

@@ -1088,9 +1088,24 @@ a:hover {
 
 .segment-card,
 .package-card,
-.decision-card {
+.decision-card,
+.proof-narrative-card,
+.prep-card {
   display: grid;
   gap: 14px;
+}
+
+.proof-narrative-card {
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
+.prep-card {
+  min-height: 100%;
+}
+
+.prep-card ul,
+.proof-narrative-card ul {
+  margin-top: 4px;
 }
 
 .package-card strong {

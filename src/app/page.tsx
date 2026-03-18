@@ -22,6 +22,7 @@ import {
   trustSignals,
   deliveryTracks,
   homepageContactProof,
+  proofNarratives,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -241,6 +242,27 @@ export default function Home() {
               <span className="proof-value">{item.value}</span>
               <h3>{item.label}</h3>
               <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Proof architecture"
+        title="把高轉換 B2B 官網的證據排序，翻成道易自己的成交結構。"
+        description="這一段承接 ALM、SaaSHero 與 Veza Digital 的共通做法：證據不該散落，而要剛好出現在訪客準備下判斷的地方。"
+      >
+        <div className="card-grid three-up">
+          {proofNarratives.map((item) => (
+            <article key={item.title} className="card proof-narrative-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <ul className="bullet-list compact">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>

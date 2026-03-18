@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -85,6 +85,26 @@ export default function ContactPage() {
               <span className="mini-label accent">{item.metric}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Meeting prep"
+        title="先把第一次接洽的資訊不對稱拿掉，訪客更敢留下資料。"
+        description="這是從近期 B2B / SaaS Contact 頁研究抽出的重點：先說清楚雙方各自要準備什麼，比單純催填表更有效。"
+      >
+        <div className="card-grid two-up">
+          {contactPrepChecklist.map((group) => (
+            <article key={group.title} className="feature-surface prep-card">
+              <span className="mini-label accent">Contact enablement</span>
+              <h3>{group.title}</h3>
+              <ul className="bullet-list compact">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
