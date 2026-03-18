@@ -35,14 +35,14 @@ export function QuickBriefForm() {
 
     const subject = encodeURIComponent(`DaoYi 專案簡報 - ${form.company}`);
     const body = encodeURIComponent(
-      `姓名：${form.name}\n公司 / 團隊：${form.company}\n主要關注：${form.focus}\n\n請協助安排 30 分鐘會議，了解道易科技的建議。`
+      `姓名：${form.name}\n公司 / 團隊：${form.company}\n主要關注：${form.focus}\n\n目前最想改善的成果（可直接改寫）：詢問量 / 線索品質 / 內容理解度 / 流程效率 / DPP 合規準備\n希望時程：\n補充網址或文件：\n\n請協助安排 30 分鐘會議，了解道易科技的建議。`
     );
 
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
   }
 
   return (
-    <form className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
+    <form id="quick-brief" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
       <span className="mini-label accent">Baymard：3 欄 CTA 最少阻力</span>
       <h3>快速丟出專案重點</h3>
       <p>Baymard / ALM 2026 研究指出，縮短欄位與自動生成郵件草稿可以把 demo 請求拉高 20% 以上，因此這裡只問姓名、公司與本次焦點。若你是要談品牌官網、案例頁強化或 Contact 轉換，這份 brief 也能直接用。</p>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -19,6 +19,14 @@ export default function ContactPage() {
           <p>
             無論是官網重構、AI 導入、知識平台整理或 DPP 規劃，道易都適合在專案前期一起把方向定清楚。
           </p>
+          <div className="contact-fast-facts" aria-label="聯絡重點">
+            {contactFastFacts.map((item) => (
+              <div key={item.label} className="contact-fast-fact">
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

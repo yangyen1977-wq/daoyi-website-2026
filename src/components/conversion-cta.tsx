@@ -8,8 +8,8 @@ export function ConversionCTA() {
     <div className="conversion-panel">
       <div>
         <span className="mini-label accent">Ready in 5 minutes</span>
-        <h3>想複製上面的成果？把需求丟進來，我們 24 小時內回覆下一步。</h3>
-        <p>行動版 sticky CTA、案例快照與 JSON-LD 都已經準備好，下一步只差 30 分鐘的同步會議。</p>
+        <h3>想把官網、案例或 DPP 專案講得更有說服力？先丟需求，我們 24 小時內回覆下一步。</h3>
+        <p>這不是泛泛的「歡迎洽詢」：你會先拿到可執行的切入建議、建議 sprint 起點，以及第一次會議該看的重點。</p>
       </div>
       <div className="conversion-actions">
         <Link href="/contact" className="button-primary button-large">

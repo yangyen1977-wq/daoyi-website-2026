@@ -26,6 +26,7 @@ import {
   proofNarratives,
   auditOffer,
   urgencySignals,
+  homepageCaseStories,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -137,6 +138,30 @@ export default function Home() {
               <strong>{client.name}</strong>
               <span>{client.context}</span>
             </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="代表案例敘事"
+        title="把 challenge → solution → outcome 寫在首頁，讓訪客不用先跳去案例頁才看到證據。"
+        description="這輪參考 JoinAmply、Insaim 與 Vev 整理的高轉換做法：首屏後盡快出現案例敘事、量化成果與可行下一步。"
+      >
+        <div className="case-story-grid">
+          {homepageCaseStories.map((item) => (
+            <article key={item.title} className="case-story-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <div className="case-story-block">
+                <strong>Challenge</strong>
+                <p>{item.challenge}</p>
+              </div>
+              <div className="case-story-block">
+                <strong>Solution</strong>
+                <p>{item.solution}</p>
+              </div>
+              <div className="case-story-outcome">{item.outcome}</div>
+            </article>
           ))}
         </div>
       </Section>

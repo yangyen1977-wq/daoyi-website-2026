@@ -76,6 +76,37 @@ export const homepageContactProof = [
   "若需要 NDA、法規文件或舊站診斷，可在第一封信就一起處理。",
 ];
 
+export const contactFastFacts = [
+  { label: "Response SLA", value: "24h" },
+  { label: "對焦會議", value: "30 分鐘" },
+  { label: "首次 brief", value: "3 欄" },
+  { label: "合作起步", value: "先診斷再提案" },
+];
+
+export const homepageCaseStories = [
+  {
+    label: "Brand website",
+    title: "把『我們很專業』改成決策者 5 秒內看懂的價值主張",
+    challenge: "舊站內容很多，但 hero 太抽象、案例太後面，第一次來的訪客很難快速判斷是否值得聯絡。",
+    solution: "首屏先放清楚主張、代表案例數字與雙 CTA，再用分眾區塊把品牌 / 營運 / 永續三種決策路徑拆開。",
+    outcome: "+32% demo / brief request uplift",
+  },
+  {
+    label: "Research platform",
+    title: "把複雜知識平台做成『可理解、可查詢、可被再利用』的體驗",
+    challenge: "資料欄位很多、內容跨語言又跨版本，若只談功能，決策者與研究者都很難理解價值。",
+    solution: "以產品化敘事呈現檢索流程、範例結果與 API 擴充性，並把案例證據直接掛在首頁與案例頁。",
+    outcome: "查詢流程理解時間 ↓45%",
+  },
+  {
+    label: "DPP / ESG",
+    title: "把法規壓力轉成可展示的 traceability 與審查證據鏈",
+    challenge: "永續 / 採購 / 法遵常卡在資料散落不同部門，網站很難直接說明 DPP 專案到底做得到什麼。",
+    solution: "把 ESPR 欄位藍圖、QR 掃碼情境、API 與審查輸出包寫成同一個案例敘事，讓決策者知道能怎麼落地。",
+    outcome: "審查準備時間 -45%",
+  },
+];
+
 export const auditOffer = [
   {
     label: "Deliverable 01",
