@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
-import { contactChannels, siteConfig } from "@/lib/site";
+import { QuickBriefForm } from "@/components/quick-brief-form";
+import { contactChannels, siteConfig, contactCommitments } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -36,20 +37,37 @@ export default function ContactPage() {
         </div>
       </Section>
 
+      <Section
+        eyebrow="Response promise"
+        title="讓第一次接洽更放心：你會知道接下來真的會發生什麼。"
+        description="參考優秀 agency / SaaS contact page 的做法，把回覆節奏、對焦方式與保密安排先講清楚。"
+      >
+        <div className="card-grid three-up">
+          {contactCommitments.map((item) => (
+            <article key={item.title} className="card">
+              <span className="mini-label accent">Contact SLA</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       <Section eyebrow="合作前常見需求" title="這些題目，特別適合在一開始就一起釐清。">
-        <div className="feature-surface two-column">
-          <ul className="bullet-list compact">
-            <li>現有網站該怎麼重整價值主張與導覽</li>
-            <li>研究型或內容型資料如何整理成平台</li>
-            <li>AI 可以放進哪些真實工作流程</li>
-            <li>DPP / Traceability 該如何先做 MVP</li>
-          </ul>
-          <div className="contact-callout">
-            <span className="mini-label">Suggested brief</span>
-            <strong>建議來信附上目前網站、專案目標、使用者對象與預計時程。</strong>
-            <p>如果需求還不完整也沒關係，先把你目前最卡的地方講清楚就好。</p>
+        <div className="quick-brief-grid">
+          <QuickBriefForm />
+          <div className="feature-surface quick-brief-note">
+            <span className="mini-label accent">Suggested brief</span>
+            <h3>如果你不知道從哪裡開始，先提供這四件事就夠。</h3>
+            <ul className="bullet-list compact">
+              <li>目前網站或系統連結，以及最卡的地方</li>
+              <li>這次要面對的對象：客戶、採購、法遵或內部團隊</li>
+              <li>希望改善的結果：詢問量、作業效率、資料透明或法規準備</li>
+              <li>預計時程與是否需要 NDA</li>
+            </ul>
+            <p className="quick-brief-meta">不確定需求也沒關係，先把現況限制說清楚，道易會協助你切出第一步。</p>
             <a className="button-primary inline-button" href={`mailto:${siteConfig.email}`}>
-              寄信到 {siteConfig.email}
+              直接寄信到 {siteConfig.email}
             </a>
           </div>
         </div>

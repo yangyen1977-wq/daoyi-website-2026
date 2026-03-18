@@ -16,6 +16,8 @@ import {
   fitSignals,
   seoGuardrails,
   conversionGuardrails,
+  engagementPackages,
+  decisionSignals,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -261,6 +263,44 @@ export default function Home() {
               <Link href={segment.href} className="button-secondary segment-cta">
                 {segment.cta}
               </Link>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Engagement packages"
+        title="把服務講清楚：不同階段的客戶，應該怎麼開始合作。"
+        description="參考 Blend / Webflow 對 agency 首頁的共通做法，把可購買的起點、交付內容與適合情境寫清楚，降低第一次接洽的不確定感。"
+      >
+        <div className="card-grid three-up">
+          {engagementPackages.map((pkg) => (
+            <article key={pkg.title} className="card package-card">
+              <span className="mini-label accent">{pkg.timeline}</span>
+              <h3>{pkg.title}</h3>
+              <p>{pkg.summary}</p>
+              <ul className="bullet-list compact">
+                {pkg.outputs.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <strong>{pkg.fit}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Decision support"
+        title="先處理決策焦慮，潛在客戶才會真的留下來。"
+        description="優秀 B2B / SaaS 官網不只展示能力，也會把『為什麼現在該開始』說清楚。"
+      >
+        <div className="card-grid three-up">
+          {decisionSignals.map((item) => (
+            <article key={item.title} className="feature-surface decision-card">
+              <span className="mini-label">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
             </article>
           ))}
         </div>

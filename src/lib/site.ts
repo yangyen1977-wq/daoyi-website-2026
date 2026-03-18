@@ -445,3 +445,60 @@ export const conversionGuardrails = [
     source: "Veza Digital 2026",
   },
 ];
+
+export const engagementPackages = [
+  {
+    title: "官網 / 品牌轉換衝刺",
+    timeline: "2-4 週啟動",
+    summary: "適合要在短時間內重做 hero、案例模組、CTA 與 RWD 體驗的 B2B 團隊。",
+    outputs: ["價值主張與導覽重整", "首頁 / 案例 / Contact UI 系統", "表單與 CTA 轉換優化"],
+    fit: "適合已有內容基礎，但需要快速拉高說服力與詢問量。",
+  },
+  {
+    title: "AI / 資料流程導入",
+    timeline: "6-10 週交付",
+    summary: "把 OCR、語意分析、資料欄位與既有流程接起來，避免 AI 只停在 PoC。",
+    outputs: ["Discover workshop", "資料欄位 / API contract", "MVP + 管理介面 + SOP"],
+    fit: "適合想把內部流程、知識或視覺辨識做成可運作用的系統。",
+  },
+  {
+    title: "DPP / Traceability Ready",
+    timeline: "8-12 週上線",
+    summary: "聚焦 ESPR、產品資料欄位、QR 體驗與供應鏈可追溯資料治理。",
+    outputs: ["ESPR / DPP 欄位藍圖", "產品頁 / Traceability cockpit", "審查文件與下載包"],
+    fit: "適合製造、永續、採購與法遵團隊提前布局法規要求。",
+  },
+];
+
+export const decisionSignals = [
+  {
+    label: "如果你現在最怕的是",
+    title: "做了新網站，但還是講不清楚差異",
+    description: "先從 hero 訊息、案例證據與 CTA 優先順序下手，避免只換視覺不換成交能力。",
+  },
+  {
+    label: "如果你現在最怕的是",
+    title: "AI / 系統導入最後卡在資料與流程",
+    description: "先定義欄位、權責、SOP 與驗收節點，讓導入成本可預估、可追蹤。",
+  },
+  {
+    label: "如果你現在最怕的是",
+    title: "DPP / 永續要求來了，但內部還沒準備好",
+    description: "先做 traceability MVP，把產品資料、QR 與審查輸出先接起來，再逐步擴大。",
+  },
+];
+
+export const contactCommitments = [
+  {
+    title: "24 小時內回覆下一步",
+    detail: "不是只回『收到』，而是會附上建議切入方式、會議時段與需要補的資料。",
+  },
+  {
+    title: "30 分鐘對焦會議",
+    detail: "用業務目標、現況限制與案例對照，快速判斷適合先做官網、平台、AI 還是 DPP。",
+  },
+  {
+    title: "可先 NDA 再交流",
+    detail: "若已有客戶資料、法規文件或內部流程限制，可先簽 NDA 再進一步討論。",
+  },
+];

@@ -1086,9 +1086,21 @@ a:hover {
   font-weight: 600;
 }
 
-.segment-card {
+.segment-card,
+.package-card,
+.decision-card {
   display: grid;
   gap: 14px;
+}
+
+.package-card strong {
+  color: #0d223c;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.decision-card {
+  background: linear-gradient(180deg, #f8fbff, #eef5ff);
 }
 
 .segment-cta {
