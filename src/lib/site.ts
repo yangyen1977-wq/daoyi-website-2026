@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技專注 AI 應用、知識平台、數位產品護照 DPP 與客製化系統整合，協助組織把複雜資料轉化為可運作、可維運、可成長的數位成果。",
+    "道易科技專注 B2B AI 應用、製造業與研究型知識平台、數位產品護照 DPP 與客製化系統整合，協助企業把複雜資料轉化為可運作、可維運、可成長的數位成果。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",

@@ -11,6 +11,7 @@ import {
   testimonials,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
+import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
 
 const faqSchema = {
@@ -182,6 +183,23 @@ export default function Home() {
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </section>
+
+
+      <Section eyebrow="快速提案" title="用三個欄位交出專案簡報，5 分鐘內收到回覆。">
+        <div className="quick-brief-grid">
+          <QuickBriefForm />
+          <div className="feature-surface quick-brief-note">
+            <span className="mini-label accent">What happens next</span>
+            <h3>提交後 5 分鐘內寄出郵件草稿，24 小時內安排會議。</h3>
+            <ul className="bullet-list compact">
+              <li>系統會自動帶入郵件主旨與內容，可再補充檔案或說明。</li>
+              <li>我們會回覆 30 分鐘線上討論時段或提供初步規劃重點。</li>
+              <li>若需要 NDA，可在郵件內直接附上或索取模板。</li>
+            </ul>
+            <p className="quick-brief-meta">表單資料僅作為初步聯繫參考，不會被儲存於網站伺服器。</p>
+          </div>
+        </div>
+      </Section>
 
       <section className="section-block cta-band">
         <div className="shell cta-panel">
