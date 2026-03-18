@@ -39,6 +39,27 @@ export const heroProofs = [
   { value: "24h", label: "提案 SLA", description: "5 分鐘寄出草稿" },
 ];
 
+export const heroClarityChecklist = [
+  {
+    label: "這是什麼？",
+    answer: "B2B AI 官網 + DPP",
+    detail: "以 6-10 字 hero ＋ 15 秒互動 demo，直接展示產品與流程。",
+    metric: "Clarity <5s",
+  },
+  {
+    label: "對誰？",
+    answer: "品牌 / 營運 / 永續主管",
+    detail: "分眾 CTA + sticky footer，確保決策角色都能立即行動。",
+    metric: "Thumb-zone CTA",
+  },
+  {
+    label: "有何證據？",
+    answer: "+32% activation",
+    detail: "Stan Vision 與 ALM 研究：首屏 KPI + 實際案例讓轉換成長 18-32%。",
+    metric: "Proof above fold",
+  },
+];
+
 export const personaPlaybooks = [
   {
     id: "marketing",

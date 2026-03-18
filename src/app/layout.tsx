@@ -3,13 +3,24 @@ import { Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
 import { SiteHeader } from "@/components/site-header";
-import { siteConfig, solutions } from "@/lib/site";
+import { siteConfig, solutions, navItems } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const breadcrumbList = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": navItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    item: `${siteConfig.url}${item.href === "/" ? "" : item.href}`
+  }))
+};
 
 const serviceStructuredData = solutions.map((solution) => ({
   "@context": "https://schema.org",
@@ -61,7 +72,8 @@ const structuredData = [
       "query-input": "required name=search_term_string"
     }
   },
-  ...serviceStructuredData
+  ...serviceStructuredData,
+  breadcrumbList
 ];
 
 export const metadata: Metadata = {

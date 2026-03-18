@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig, stats } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
+import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 
 const heroHighlights = [
   "釐清價值主張與導覽策略",
@@ -18,6 +19,7 @@ export function Hero() {
           <div className="hero-intro-badge">從研究脈絡走到產業落地的數位整合團隊</div>
           <h1>{siteConfig.heroTitle}</h1>
           <p>{siteConfig.heroDescription}</p>
+          <HeroClarityChecklist />
 
           <div className="hero-priority-strip" aria-label="品牌重點">
             <div>
