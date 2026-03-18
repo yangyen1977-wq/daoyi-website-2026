@@ -1,7 +1,30 @@
 import Link from "next/link";
+import {
+  cases,
+  clientSegments,
+  differentiators,
+  faqs,
+  insightTopics,
+  processSteps,
+  proofPoints,
+  solutions,
+  testimonials,
+} from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { Section } from "@/components/section";
-import { cases, differentiators, insightTopics, processSteps, solutions } from "@/lib/site";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 
 export default function Home() {
   return (
@@ -32,10 +55,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="解決方案"
-        title="聚焦三種高價值數位解法，對應品牌、流程與永續升級需求。"
-      >
+      <Section eyebrow="解決方案" title="聚焦三種高價值數位解法，對應品牌、流程與永續升級需求。">
         <div className="card-grid three-up">
           {solutions.map((solution) => (
             <article key={solution.title} className="card">
@@ -51,10 +71,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="案例實績"
-        title="從研究平台到產業場域，成果可以被看見，也能被驗證。"
-      >
+      <Section eyebrow="案例實績" title="從研究平台到產業場域，成果可以被看見，也能被驗證。">
         <div className="card-grid three-up">
           {cases.map((item) => (
             <article key={item.title} className="card case-card">
@@ -67,10 +84,53 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="方法論"
-        title="讓系統真正上線並持續運作，需要比開發更完整的節奏。"
-      >
+      <Section eyebrow="信任憑證" title="把成果具體化，用可被量測的證據與回饋降低決策風險。">
+        <div className="proof-grid">
+          {proofPoints.map((item) => (
+            <article key={item.label} className="proof-card">
+              <span className="proof-value">{item.value}</span>
+              <h3>{item.label}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="客戶評語" title="第三方視角：客戶怎麼看道易的交付方式？">
+        <div className="testimonial-grid">
+          {testimonials.map((item) => (
+            <article key={item.client} className="testimonial-card">
+              <p className="quote">“{item.quote}”</p>
+              <div className="testimonial-meta">
+                <strong>{item.client}</strong>
+                <span>{item.role}</span>
+                <p className="result">{item.result}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="合作場景" title="依你所在的產業與任務，給出最適合的下一步。">
+        <div className="card-grid three-up">
+          {clientSegments.map((segment) => (
+            <article key={segment.title} className="card segment-card">
+              <span className="mini-label accent">{segment.title}</span>
+              <h3>{segment.description}</h3>
+              <ul className="bullet-list compact">
+                {segment.benefits.map((benefit) => (
+                  <li key={benefit}>{benefit}</li>
+                ))}
+              </ul>
+              <Link href={segment.href} className="button-secondary segment-cta">
+                {segment.cta}
+              </Link>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="方法論" title="讓系統真正上線並持續運作，需要比開發更完整的節奏。">
         <div className="card-grid four-up">
           {processSteps.map((step) => (
             <article key={step.step} className="card process-card">
@@ -82,10 +142,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="為什麼是道易"
-        title="我們擅長的，不只是做出東西，而是把方向、結構與交付一起校準。"
-      >
+      <Section eyebrow="為什麼是道易" title="我們擅長的，不只是做出東西，而是把方向、結構與交付一起校準。">
         <div className="card-grid three-up">
           {differentiators.map((item) => (
             <article key={item.title} className="card">
@@ -96,10 +153,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="洞察內容"
-        title="未來可延伸成 SEO 與專業信任兼具的內容欄位。"
-      >
+      <Section eyebrow="洞察內容" title="未來可延伸成 SEO 與專業信任兼具的內容欄位。">
         <div className="stack-list">
           {insightTopics.map((topic) => (
             <article key={topic} className="stack-item">
@@ -109,6 +163,25 @@ export default function Home() {
           ))}
         </div>
       </Section>
+
+      <section className="section-block faq-block">
+        <div className="shell">
+          <div className="section-heading">
+            <span className="section-eyebrow">常見問題</span>
+            <h2>提前回答採購、資訊與營運團隊最關心的問題。</h2>
+            <p>這些問答同時對應 SEO 長尾查詢，減少往返溝通。</p>
+          </div>
+          <div className="faq-list">
+            {faqs.map((item) => (
+              <article key={item.question} className="faq-item">
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      </section>
 
       <section className="section-block cta-band">
         <div className="shell cta-panel">

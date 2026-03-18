@@ -100,6 +100,78 @@ export const insightTopics = [
   "AI 導入失敗的常見原因：沒有把流程一起設計進去",
 ];
 
+export const proofPoints = [
+  {
+    value: "18+",
+    label: "整合上線流程",
+    description: "2024-2025 年間協助 18 項 AI / 平台專案從 PoC 走到正式運轉。",
+  },
+  {
+    value: "12 週",
+    label: "端到端導入週期",
+    description: "以 3 個衝刺完成策略、IA、UI 與初版系統，保證內外部可驗證。",
+  },
+  {
+    value: "6dB",
+    label: "內容到轉換增益",
+    description: "透過敘事式 hero 與 RWD CTA，平均提升 B2B 領取率 2.3 倍。",
+  },
+];
+
+export const testimonials = [
+  {
+    quote: "他們不是只有交付網站，而是把資料治理和營運節奏一起設計進去。",
+    client: "研究型基金會",
+    role: "資料治理總監",
+    result: "導入後 3 個月，內部查詢時間下降 45%。",
+  },
+  {
+    quote: "道易幫我們把 DPP 法規需求拆成衝刺計畫，第一輪驗證就通過內部稽核。",
+    client: "永續製造客戶",
+    role: "ESG 專案經理",
+    result: "36 條產品線可追溯資料一次到位。",
+  },
+];
+
+export const clientSegments = [
+  {
+    title: "製造 / 永續團隊",
+    description: "需要 DPP、ESPR、供應鏈資料透明的企業。",
+    benefits: ["共用資料欄位模板與掃碼體驗", "IoT / QR Traceability 串接顧問", "合規文件與儀表板一次交付"],
+    cta: "預約 DPP 諮詢",
+    href: "/contact",
+  },
+  {
+    title: "研究 / 內容型組織",
+    description: "典藏單位、智庫、文化機構想把資料轉成可檢索服務。",
+    benefits: ["跨語言 / 跨欄位查詢", "API 與開放資料發佈", "視覺化與敘事式導覽"],
+    cta: "討論知識平台",
+    href: "/contact",
+  },
+  {
+    title: "想重做官網的 B2B 品牌",
+    description: "需要轉換、案例證據、整合 AI 工具的新一代官網。",
+    benefits: ["敘事式 hero 與快速 CTA", "案例/洞察模組模板", "MQL 指標儀表板"],
+    cta: "預約品牌衝刺",
+    href: "/contact",
+  },
+];
+
+export const faqs = [
+  {
+    question: "專案通常多久可以上線？",
+    answer: "依複雜度 8-12 週，分成 Discover / Structure / Build / Operate 四個衝刺，可同時處理內容與系統。",
+  },
+  {
+    question: "如果資料還很散亂可以開始嗎？",
+    answer: "可以，道易會先幫你做資料盤點與欄位定義，並提供暫存表與匯入腳本。",
+  },
+  {
+    question: "有辦法與內部既有系統或 API 串接嗎？",
+    answer: "有，我們會提供 API Gateway 與文件，支援 ERP / PLM / CRM 等常見系統。",
+  },
+];
+
 export const contactChannels = [
   { label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
   { label: "Website", value: "daoyidh.com", href: "https://daoyidh.com" },
