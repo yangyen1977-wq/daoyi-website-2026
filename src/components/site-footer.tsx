@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contactChannels, navItems, siteConfig } from "@/lib/site";
 
@@ -6,8 +7,15 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div className="footer-brand">
-          <p className="footer-eyebrow">DaoYi Technology / 2026</p>
-          <h2>{siteConfig.name}</h2>
+          <div className="footer-brand-head">
+            <span className="brand-mark-logoWrap footer-logoWrap">
+              <Image src="/assets/daoyi-logo.png" alt="DaoYi Technology logo" width={48} height={48} className="brand-mark-logo" />
+            </span>
+            <div>
+              <p className="footer-eyebrow">DaoYi Technology / 2026</p>
+              <h2>{siteConfig.name}</h2>
+            </div>
+          </div>
           <p>{siteConfig.description}</p>
         </div>
 

@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把複雜資料、AI 與產業需求，轉化成真正可落地的數位成果。",
+  heroTitle: "把複雜資料、AI 與產業需求，整理成真正可落地的數位成果。",
   heroDescription:
-    "從知識平台、研究資料治理到 AI 工作流程與數位產品護照，道易科技協助企業與機構打造兼具策略、設計與技術落地能力的下一代網站與系統。",
+    "從知識平台、研究資料治理到 AI 工作流程與數位產品護照，道易科技協助企業與機構打造兼具策略、設計、RWD 與技術落地能力的下一代網站與系統。",
 };
 
 export const navItems = [

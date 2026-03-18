@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navItems, siteConfig } from "@/lib/site";
 
@@ -6,10 +7,12 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="shell site-header-inner">
         <Link href="/" className="brand-mark" aria-label={siteConfig.name}>
-          <span className="brand-mark-badge">DY</span>
+          <span className="brand-mark-logoWrap">
+            <Image src="/assets/daoyi-logo.png" alt="DaoYi Technology logo" width={44} height={44} className="brand-mark-logo" priority />
+          </span>
           <span>
             <strong>{siteConfig.name}</strong>
-            <small>AI / Knowledge / DPP</small>
+            <small>AI / Knowledge Platform / DPP</small>
           </span>
         </Link>
 
