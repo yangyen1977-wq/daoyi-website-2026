@@ -3,6 +3,7 @@ import {
   cases,
   caseSnapshots,
   clientSegments,
+  evidenceMatrix,
   differentiators,
   faqs,
   insightTopics,
@@ -242,6 +243,23 @@ export default function Home() {
               <span className="proof-value">{item.value}</span>
               <h3>{item.label}</h3>
               <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Evidence matrix"
+        title="把訪客真正會拿來判斷的三件事，直接排進同一個決策區。"
+        description="這輪把競品常見的 clarity / proof / RWD conversion 三件套再往前推，讓首頁在更短時間內完成說明、建立信任、提供下一步。"
+      >
+        <div className="card-grid three-up">
+          {evidenceMatrix.map((item) => (
+            <article key={item.title} className="card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.metric}</strong>
             </article>
           ))}
         </div>

@@ -253,6 +253,27 @@ export const caseOverviewStats = [
   },
 ];
 
+export const evidenceMatrix = [
+  {
+    label: "Brand clarity",
+    title: "首頁不是只講能力，而是先講決策者當下能得到什麼",
+    metric: "6–10 字 hero / 5 秒內理解",
+    detail: "參考 ALM / Webstacks 的高轉換 B2B 做法，把『做什麼、給誰、為何重要』壓縮到首屏內，避免訪客還沒理解就先離開。",
+  },
+  {
+    label: "Case proof",
+    title: "每個主力方向都要對應一個可描述的成果訊號",
+    metric: "+32% / -45% / 10 週",
+    detail: "把 B2B 常見的 trust gap 從抽象『我們很專業』，改成可被記住的成果數字、導入週期與情境化說明。",
+  },
+  {
+    label: "RWD conversion",
+    title: "手機先給下一步，而不是先塞滿內容",
+    metric: "Sticky CTA / 3 欄 brief",
+    detail: "依據 SaaS 官網研究，手機流量最怕找不到 CTA；因此用拇指區 CTA、短表單與快速寄信，把首輪詢問阻力降到最低。",
+  },
+];
+
 export const caseSnapshots = [
   {
     id: "dpp",

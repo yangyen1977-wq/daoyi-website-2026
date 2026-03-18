@@ -3,10 +3,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navItems, siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const ctaHref = pathname === "/" ? "/#quick-brief" : "/contact";
+  const ctaLabel = pathname === "/" ? "立即送出 Quick Brief" : "24h 內取得下一步";
 
   useEffect(() => {
     const onResize = () => {
@@ -56,8 +60,8 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <Link href="/contact" className="header-cta" onClick={() => setMenuOpen(false)}>
-            24h 內取得下一步
+          <Link href={ctaHref} className="header-cta" onClick={() => setMenuOpen(false)}>
+            {ctaLabel}
           </Link>
         </div>
       </div>

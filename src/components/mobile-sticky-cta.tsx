@@ -9,6 +9,8 @@ export function MobileStickyCTA() {
   const pathname = usePathname();
   const hiddenRoutes = ["/contact"];
   const [dismissed, setDismissed] = useState(false);
+  const primaryHref = pathname === "/" ? "/#quick-brief" : "/contact";
+  const primaryLabel = pathname === "/" ? "立即送出 Quick Brief" : "24h 內取得建議";
 
   if (hiddenRoutes.includes(pathname) || dismissed) {
     return null;
@@ -18,8 +20,8 @@ export function MobileStickyCTA() {
     <div className="mobile-cta-bar" role="complementary" aria-label="快速行動">
       <div className="mobile-cta-content">
         <div className="mobile-cta-actions">
-          <Link href="/contact" className="mobile-cta-button primary">
-            24h 內取得建議
+          <Link href={primaryHref} className="mobile-cta-button primary">
+            {primaryLabel}
           </Link>
           <a className="mobile-cta-button secondary" href={`mailto:${siteConfig.email}?subject=DaoYi%20Quick%20Brief`}>
             快速寄信
