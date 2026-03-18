@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { siteConfig, stats } from "@/lib/site";
+import { HeroProofBar } from "@/components/hero-proof-bar";
+import { HeroProductPreview } from "@/components/hero-product-preview";
 
 const heroHighlights = [
   "釐清價值主張與導覽策略",
@@ -39,6 +41,8 @@ export function Hero() {
 
           <div className="hero-cta-note">適合想在 2026 年重做品牌官網、資料平台或 AI 專案的企業與機構。</div>
 
+          <HeroProofBar />
+
           <div className="hero-tags">
             <span>AI 智慧應用</span>
             <span>知識平台建置</span>
@@ -65,6 +69,7 @@ export function Hero() {
               </article>
             ))}
           </div>
+          <HeroProductPreview />
         </div>
       </div>
     </section>

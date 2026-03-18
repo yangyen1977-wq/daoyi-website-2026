@@ -9,6 +9,8 @@ import {
   proofPoints,
   solutions,
   testimonials,
+  mobileExperienceHighlights,
+  seoGuardrails,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -53,6 +55,33 @@ export default function Home() {
               <li>重視長期維運、可擴充性與轉換效率</li>
             </ul>
           </div>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="手機 / SEO 體驗"
+        title="行動優先 CTA 與結構化資料，讓訪客 3 秒內找到下一步。"
+        description="依據 2026 SaaS 官網統計配置 sticky CTA、拇指區導覽與 JSON-LD，確保手機流量與搜尋流量都能即時轉換。"
+      >
+        <div className="mobile-experience-grid">
+          {mobileExperienceHighlights.map((item) => (
+            <article key={item.title} className="feature-surface mobile-experience-card">
+              <span className="mini-label accent">{item.metric}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+        <div className="seo-guardrail-card">
+          <span className="mini-label">SEO / AI Overview guardrails</span>
+          <ul>
+            {seoGuardrails.map((guardrail) => (
+              <li key={guardrail.title}>
+                <strong>{guardrail.title}</strong>
+                <p>{guardrail.detail}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 

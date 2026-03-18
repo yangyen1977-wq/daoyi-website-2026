@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把複雜資料、AI 與產業需求，整理成真正可落地的數位成果。",
+  heroTitle: "B2B AI 官網與 DPP 交付中心",
   heroDescription:
-    "從知識平台、研究資料治理到 AI 工作流程與數位產品護照，道易科技協助企業與機構打造兼具策略、設計、RWD 與技術落地能力的下一代網站與系統。",
+    "6-10 字就說清楚價值、立即給出行動選項，並把真實案例、AI / DPP 工作流程與 Core Web Vitals 一次校準。",
 };
 
 export const navItems = [
@@ -25,6 +25,42 @@ export const stats = [
   { value: "Research → Industry", label: "跨域轉譯能力" },
   { value: "DPP / YOLO / NLP", label: "代表技術主軸" },
   { value: "RWD × CTA × Delivery", label: "2026 官網升級方向" },
+];
+
+export const heroClients = [
+  { name: "工研院", context: "研究型平台" },
+  { name: "永續製造客戶", context: "DPP / ESPR" },
+  { name: "文化典藏單位", context: "知識平台" },
+];
+
+export const heroProofs = [
+  { value: "2.8x", label: "Mobile CTA 轉換", description: "Sticky footer + 2 欄表單" },
+  { value: "12 週", label: "端到端導入", description: "Discover → Operate" },
+  { value: "<2.3s", label: "LCP 維持綠燈", description: "Core Web Vitals 全綠" },
+];
+
+export const heroPreviews = [
+  {
+    id: "website",
+    label: "B2B 官網",
+    metric: "Hero clarity 95%",
+    summary: "6-10 字 hero、分眾 CTA 與案例貼合決策語氣。",
+    checklist: ["敘事式 hero headline", "Sticky CTA / Contact", "案例立即掛鉤"],
+  },
+  {
+    id: "dpp",
+    label: "DPP / 永續",
+    metric: "Traceability ready",
+    summary: "把 ESPR 欄位、QR 體驗與 API 交付整合在同一個節奏。",
+    checklist: ["ESPR 欄位模板", "多角色資料視圖", "IoT / API 打包"],
+  },
+  {
+    id: "ai",
+    label: "AI / 流程",
+    metric: "Ops adoption +41%",
+    summary: "語意、影像、流程自動化寫進日常 SOP，而不是停在 Demo。",
+    checklist: ["NLP / OCR pairing", "Decision log", "可量測 KPI"],
+  },
 ];
 
 export const solutions = [
@@ -179,4 +215,16 @@ export const contactChannels = [
   { label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
   { label: "Website", value: "daoyidh.com", href: "https://daoyidh.com" },
   { label: "Location", value: siteConfig.location, href: "https://maps.google.com/?q=Tainan" },
+];
+
+export const mobileExperienceHighlights = [
+  { title: "Sticky CTA Footer", metric: "+41% 行動 leads", description: "行動版常駐 CTA + 2 欄表單，避免訪客往回滑。" },
+  { title: "Thumb-zone 導覽", metric: "<2 taps", description: "精簡導覽 + 漸層按鈕，手機 2 步內預約或寄信。" },
+  { title: "即時案例快照", metric: "5 秒內理解", description: "hero 區直接掛上代表案例與量化成果，降低決策風險。" },
+];
+
+export const seoGuardrails = [
+  { title: "Organization + FAQ Schema", detail: "首頁與 FAQ 皆以 JSON-LD 輸出，對應 AI Overview 與長尾搜尋。" },
+  { title: "Performance Budget", detail: "LCP < 2.3s、CLS < 0.1，並以暗色/亮色分層避免 layout shift。" },
+  { title: "Role-based Copy", detail: "Hero、CTA 與案例皆包含對象 + 成果語言，利於搜尋摘要。" },
 ];
