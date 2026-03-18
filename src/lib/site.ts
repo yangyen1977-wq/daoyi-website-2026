@@ -24,7 +24,7 @@ export const stats = [
   { value: "AI / Data / Platform", label: "核心整合能力" },
   { value: "Research → Industry", label: "跨域轉譯能力" },
   { value: "DPP / YOLO / NLP", label: "代表技術主軸" },
-  { value: "Strategy × Build × Operate", label: "交付模式" },
+  { value: "RWD × CTA × Delivery", label: "2026 官網升級方向" },
 ];
 
 export const solutions = [

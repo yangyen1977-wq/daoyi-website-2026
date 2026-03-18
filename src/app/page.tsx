@@ -13,17 +13,22 @@ export default function Home() {
         title="不只是做網站或導入 AI，而是把技術落地成可運作、可維運、可成長的成果。"
         description="道易科技的核心優勢，在於能同時理解內容、資料、流程與品牌表達。"
       >
-        <div className="feature-surface two-column">
-          <div>
+        <div className="homepage-priority-grid">
+          <div className="feature-surface priority-summary-card">
+            <span className="mini-label accent">Why DaoYi</span>
+            <h3>先把問題結構整理清楚，再決定最適合的網站、平台或 AI 解法。</h3>
             <p>
               道易科技從數位人文與知識資料處理出發，長期累積語意分析、資料整合、平台建置與跨領域系統設計經驗。從研究型知識平台，到產業 AI 應用與數位產品護照，我們擅長把複雜需求整理成清楚、可靠、可擴充的數位方案。
             </p>
           </div>
-          <ul className="bullet-list">
-            <li>從資訊結構與資料脈絡出發，而不是只堆疊功能</li>
-            <li>兼具研究型資料理解與商業導向的落地能力</li>
-            <li>重視長期維運、可擴充性與轉換效率</li>
-          </ul>
+          <div className="feature-surface priority-list-card">
+            <span className="mini-label accent">你會得到什麼</span>
+            <ul className="bullet-list">
+              <li>從資訊結構與資料脈絡出發，而不是只堆疊功能</li>
+              <li>兼具研究型資料理解與商業導向的落地能力</li>
+              <li>重視長期維運、可擴充性與轉換效率</li>
+            </ul>
+          </div>
         </div>
       </Section>
 
@@ -112,13 +117,14 @@ export default function Home() {
             <h2>如果你正在規劃 AI、知識平台、DPP 或品牌官網，道易可以一起把它做對。</h2>
             <p>從需求釐清、資訊架構到系統落地與內容維運，這會是一個能長期運作的數位方案。</p>
           </div>
-          <div className="hero-actions">
-            <Link href="/contact" className="button-primary">
-              聯絡我們
+          <div className="cta-actions">
+            <Link href="/contact" className="button-primary button-large cta-primary">
+              立即聯絡我們
             </Link>
-            <a className="button-secondary" href="https://daoyidh.com" target="_blank" rel="noreferrer">
+            <a className="button-secondary button-large" href="https://daoyidh.com" target="_blank" rel="noreferrer">
               查看現有官網
             </a>
+            <p className="cta-helper-text">手機上可直接先點「立即聯絡我們」，再補看方案內容。</p>
           </div>
         </div>
       </section>
