@@ -197,6 +197,16 @@ a:hover {
 }
 
 .button-large {
+.button-small {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 0.9rem;
+}
+
+.case-link {
+  margin-top: 16px;
+}
+
   min-height: 48px;
   padding: 0 20px;
   font-size: 0.96rem;
@@ -902,4 +912,31 @@ a:hover {
 .mobile-cta-button.secondary {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #f4f8ff;
+}
+
+.mobile-cta-content {
+  width: min(560px, 100%);
+  background: rgba(4, 11, 22, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-cta-actions {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.mobile-cta-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: transparent;
+  color: #f4f8ff;
+  font-size: 1.2rem;
 }

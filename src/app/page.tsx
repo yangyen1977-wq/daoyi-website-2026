@@ -80,6 +80,7 @@ export default function Home() {
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <strong>{item.impact}</strong>
+              <Link href={`/cases#${item.slug}`} className="button-secondary button-small case-link">查看案例細節</Link>
             </article>
           ))}
         </div>

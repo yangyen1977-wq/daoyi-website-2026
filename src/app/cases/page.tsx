@@ -28,7 +28,7 @@ export default function CasesPage() {
       <Section eyebrow="案例方向" title="三種代表性實作，對應道易目前最有辨識度的能力版圖。">
         <div className="stack-list">
           {cases.map((item) => (
-            <article key={item.title} className="stack-item feature-surface">
+            <article key={item.title} id={item.slug} className="stack-item feature-surface">
               <div>
                 <span className="mini-label accent">{item.category}</span>
                 <h3>{item.title}</h3>

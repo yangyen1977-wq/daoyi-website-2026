@@ -50,6 +50,7 @@ export const solutions = [
 
 export const cases = [
   {
+    slug: "research-platform",
     category: "數位人文 / 研究平台",
     title: "跨文本與書目資料整合平台",
     description:
@@ -57,6 +58,7 @@ export const cases = [
     impact: "讓研究資源不只可保存，還能被檢索、理解與再利用。",
   },
   {
+    slug: "solar-vision",
     category: "AI 應用 / 視覺辨識",
     title: "太陽能板回收辨識流程優化",
     description:
@@ -64,6 +66,7 @@ export const cases = [
     impact: "把 AI 從模型展示推進到現場流程節點。",
   },
   {
+    slug: "easydpp",
     category: "永續應用 / EasyDPP",
     title: "產品履歷與資料透明化體系",
     description:

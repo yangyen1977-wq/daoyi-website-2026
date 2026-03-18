@@ -11,6 +11,37 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": siteConfig.name,
+    "url": siteConfig.url,
+    "email": siteConfig.email,
+    "logo": `${siteConfig.url}/assets/daoyi-logo.png`,
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": siteConfig.email,
+        "areaServed": "TW",
+        "availableLanguage": ["zh-Hant", "en"]
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteConfig.shortName,
+    "url": siteConfig.url,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteConfig.url}/?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  }
+];
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -64,6 +95,7 @@ export default function RootLayout({
           {children}
           <SiteFooter />
           <MobileStickyCTA />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         </div>
       </body>
     </html>
