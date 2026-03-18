@@ -9,6 +9,7 @@ import {
   processSteps,
   proofPoints,
   siteConfig,
+  heroClients,
   solutions,
   testimonials,
   mobileExperienceHighlights,
@@ -18,6 +19,9 @@ import {
   conversionGuardrails,
   engagementPackages,
   decisionSignals,
+  trustSignals,
+  deliveryTracks,
+  homepageContactProof,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -105,6 +109,30 @@ export default function Home() {
               <p>{guardrail.description}</p>
               <small className="quick-brief-hint">{guardrail.source}</small>
             </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="B2B 信任結構"
+        title="把優秀 agency / SaaS 官網常見的信任訊號，濃縮成更容易下判斷的首屏後段。"
+        description="這一段參考 Makers、Contractbook、Blend 與 Digital Silk 的共通模式：把交付方式、轉換證據與 mobile-ready 承諾拉到訪客還沒流失前。"
+      >
+        <div className="card-grid three-up trust-grid">
+          {trustSignals.map((item) => (
+            <article key={item.title} className="card trust-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="logo-chip-row" aria-label="代表合作情境">
+          {heroClients.map((client) => (
+            <div key={client.name} className="logo-chip">
+              <strong>{client.name}</strong>
+              <span>{client.context}</span>
+            </div>
           ))}
         </div>
       </Section>
@@ -306,6 +334,26 @@ export default function Home() {
         </div>
       </Section>
 
+      <Section
+        eyebrow="Delivery tracks"
+        title="先決定這次合作是要補清楚品牌說服、系統導入，還是上線後優化。"
+        description="參考成熟 B2B agency 首頁常見的 service packaging，把交付切成三種容易理解的起點，讓潛在客戶更快判斷要從哪裡開始。"
+      >
+        <div className="card-grid three-up">
+          {deliveryTracks.map((track) => (
+            <article key={track.title} className="card package-card delivery-track-card">
+              <h3>{track.title}</h3>
+              <p>{track.summary}</p>
+              <ul className="bullet-list compact">
+                {track.outputs.map((output) => (
+                  <li key={output}>{output}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       <Section eyebrow="方法論" title="讓系統真正上線並持續運作，需要比開發更完整的節奏。">
         <div className="card-grid four-up">
           {processSteps.map((step) => (
@@ -371,6 +419,11 @@ export default function Home() {
               <li>我們會回覆 30 分鐘線上討論時段或提供初步規劃重點。</li>
               <li>若需要 NDA，可在郵件內直接附上或索取模板。</li>
             </ul>
+            <div className="contact-proof-list">
+              {homepageContactProof.map((item) => (
+                <p key={item} className="contact-proof-pill">{item}</p>
+              ))}
+            </div>
             <p className="quick-brief-meta">表單資料僅作為初步聯繫參考，不會被儲存於網站伺服器。</p>
           </div>
         </div>

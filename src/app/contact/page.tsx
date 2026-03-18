@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -49,6 +49,27 @@ export default function ContactPage() {
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Before you contact"
+        title="在真正填表前，先把決策者最在意的 reassurance 放到前面。"
+        description="參考高轉換 B2B contact page 的寫法，先降低風險感，再請對方留下聯絡資訊。"
+      >
+        <div className="card-grid three-up trust-grid">
+          {trustSignals.map((item) => (
+            <article key={item.title} className="card trust-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="contact-proof-list">
+          {homepageContactProof.map((item) => (
+            <p key={item} className="contact-proof-pill">{item}</p>
           ))}
         </div>
       </Section>

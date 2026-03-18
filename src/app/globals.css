@@ -1781,6 +1781,62 @@ a:hover {
   }
 }
 
+.trust-grid {
+  margin-bottom: 18px;
+}
+
+.trust-card {
+  min-height: 100%;
+}
+
+.logo-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo-chip {
+  display: grid;
+  gap: 4px;
+  min-width: 180px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+  border: 1px solid rgba(14, 26, 43, 0.08);
+  box-shadow: 0 12px 30px rgba(12, 22, 36, 0.05);
+  color: var(--text-dark);
+}
+
+.logo-chip strong {
+  font-size: 0.95rem;
+}
+
+.logo-chip span {
+  color: var(--text-body);
+  font-size: 0.84rem;
+}
+
+.delivery-track-card {
+  background: linear-gradient(180deg, #ffffff, #f6faff);
+}
+
+.contact-proof-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.contact-proof-pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(93, 228, 215, 0.12);
+  border: 1px solid rgba(86, 168, 255, 0.18);
+  color: #0f2742;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
 @media (max-width: 760px) {
   .hero-proof-bar {
     padding: 14px;
@@ -1790,5 +1846,9 @@ a:hover {
   }
   .preview-tabs {
     grid-template-columns: 1fr;
+  }
+  .logo-chip-row,
+  .contact-proof-list {
+    display: grid;
   }
 }

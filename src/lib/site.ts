@@ -31,6 +31,49 @@ export const heroClients = [
   { name: "工研院", context: "研究型平台" },
   { name: "永續製造客戶", context: "DPP / ESPR" },
   { name: "文化典藏單位", context: "知識平台" },
+  { name: "跨域品牌團隊", context: "B2B 官網升級" },
+];
+
+export const trustSignals = [
+  {
+    label: "Trusted workflow",
+    title: "策略、設計、開發同一節奏交付",
+    detail: "參考 Blend / Digital Silk 的 agency 首頁做法，把跨角色協作、交付節奏與後續維運一次說清楚。",
+  },
+  {
+    label: "Conversion proof",
+    title: "案例數據、回覆 SLA、CTA 都拉到前面",
+    detail: "對標 Contractbook / Makers 類型 B2B 首頁，把行動入口與證據併排呈現，避免資訊分散。",
+  },
+  {
+    label: "Mobile-ready",
+    title: "行動版先處理 thumb-zone 與聯絡阻力",
+    detail: "重要 CTA、聯絡承諾與案例摘要都在手機首屏附近出現，不讓訪客來回找入口。",
+  },
+];
+
+export const deliveryTracks = [
+  {
+    title: "Brand clarity sprint",
+    summary: "先把價值主張、導覽、案例證據與 Hero 視覺講清楚。",
+    outputs: ["首頁 / 案例 / Contact 線框", "訊息優先級與 CTA 文案", "行動版首屏節奏調整"],
+  },
+  {
+    title: "System & data sprint",
+    summary: "把 AI、資料欄位、API 與營運流程整理成可驗證 MVP。",
+    outputs: ["欄位藍圖與資料流", "MVP / dashboard / API contract", "驗收節點與風險清單"],
+  },
+  {
+    title: "Operate & optimize",
+    summary: "上線後持續優化內容、SEO、CTA 與轉換追蹤。",
+    outputs: ["GA / Search Console 事件", "SEO / schema 調整", "後續內容與案例增補"],
+  },
+];
+
+export const homepageContactProof = [
+  "24 小時內回覆具體下一步，不只回『收到』。",
+  "可直接以 Email 開始，也可用 3 欄 Quick Brief 先對焦。",
+  "若需要 NDA、法規文件或舊站診斷，可在第一封信就一起處理。",
 ];
 
 export const heroProofs = [
