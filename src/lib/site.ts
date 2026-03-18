@@ -76,6 +76,30 @@ export const homepageContactProof = [
   "若需要 NDA、法規文件或舊站診斷，可在第一封信就一起處理。",
 ];
 
+export const auditOffer = [
+  {
+    label: "Deliverable 01",
+    title: "首頁訊息診斷",
+    detail: "確認訪客 5 秒內能不能理解：你是誰、為誰服務、下一步該做什麼。",
+  },
+  {
+    label: "Deliverable 02",
+    title: "案例 / CTA 阻力盤點",
+    detail: "找出首屏證據、案例排序、Contact 入口與 mobile CTA 的流失點。",
+  },
+  {
+    label: "Deliverable 03",
+    title: "24h 改版優先清單",
+    detail: "回傳最值得先改的 3-5 項，含 quick wins、風險與推薦 sprint 起點。",
+  },
+];
+
+export const urgencySignals = [
+  "舊站流量有了，但詢問量沒有一起上升",
+  "案例很多，卻沒有被整理成決策者看得懂的證據",
+  "AI / DPP / 平台方向已確定，但網站還沒把價值說清楚",
+];
+
 export const heroProofs = [
   { value: "+32%", label: "Activation", description: "Hero 敘事 + 即時案例" },
   { value: "15s demo", label: "互動預覽", description: "手機 / 桌機同步" },

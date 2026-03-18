@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -83,6 +83,22 @@ export default function ContactPage() {
           {contactDecisionCards.map((item) => (
             <article key={item.title} className="card decision-card">
               <span className="mini-label accent">{item.metric}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="First response kit"
+        title="不是只有留資料，而是先知道你會拿到什麼。"
+        description="參考成熟 B2B agency Contact 頁常見做法，把第一次接洽可交付內容寫清楚，降低『留了資料也不知道接下來會怎樣』的不安。"
+      >
+        <div className="card-grid three-up">
+          {auditOffer.map((item) => (
+            <article key={item.title} className="card">
+              <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>

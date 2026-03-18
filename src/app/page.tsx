@@ -24,6 +24,8 @@ import {
   deliveryTracks,
   homepageContactProof,
   proofNarratives,
+  auditOffer,
+  urgencySignals,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -136,6 +138,31 @@ export default function Home() {
               <span>{client.context}</span>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="先做一輪診斷"
+        title="對還在觀望的 B2B 決策者，先給一個低摩擦、可交付的起手式。"
+        description="參考高轉換 agency / SaaS 首頁常見做法，把 first offer 寫清楚：不是抽象『聊聊』，而是先拿到一份可用的判斷依據。"
+      >
+        <div className="card-grid three-up">
+          {auditOffer.map((item) => (
+            <article key={item.title} className="card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="feature-surface quick-brief-note">
+          <span className="mini-label accent">適合現在就開始的情況</span>
+          <ul className="bullet-list compact">
+            {urgencySignals.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="quick-brief-meta">這種「先診斷、再提案」的起手式，通常比直接丟大而空的服務介紹，更能降低第一次詢問門檻。</p>
         </div>
       </Section>
 
