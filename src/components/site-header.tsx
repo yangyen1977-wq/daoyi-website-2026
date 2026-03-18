@@ -57,7 +57,7 @@ export function SiteHeader() {
           </nav>
 
           <Link href="/contact" className="header-cta" onClick={() => setMenuOpen(false)}>
-            預約專案討論
+            24h 內取得下一步
           </Link>
         </div>
       </div>

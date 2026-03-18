@@ -1334,6 +1334,22 @@ a:hover {
   font-size: 0.82rem;
 }
 
+.contact-trust-note-list {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-trust-note {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #f8fbff, #eef4ff);
+  border: 1px solid rgba(14, 26, 43, 0.08);
+  color: #17304f;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .mobile-cta-bar {
   position: fixed;
   left: 0;

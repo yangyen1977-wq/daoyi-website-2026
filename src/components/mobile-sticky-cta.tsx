@@ -19,7 +19,7 @@ export function MobileStickyCTA() {
       <div className="mobile-cta-content">
         <div className="mobile-cta-actions">
           <Link href="/contact" className="mobile-cta-button primary">
-            預約專案討論
+            24h 內取得建議
           </Link>
           <a className="mobile-cta-button secondary" href={`mailto:${siteConfig.email}?subject=DaoYi%20Quick%20Brief`}>
             快速寄信

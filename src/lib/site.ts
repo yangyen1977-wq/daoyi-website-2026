@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "5 秒講清楚的 AI 官網與 DPP",
+  heroTitle: "把 AI、資料與官網做成可成交的系統",
   heroDescription:
-    "參考 ALM Corp 2026 SaaS 研究：以 6-10 字 hero、真實 KPI 與 sticky CTA 呈現產品實際畫面，5 秒內說明價值、對象與證據。",
+    "給 B2B 品牌、製造業與研究型組織：用更清楚的品牌主張、可驗證案例證據、行動優先 CTA 與可維運架構，讓官網、知識平台與 DPP 專案從第一屏就開始成交。",
 };
 
 export const navItems = [
@@ -501,4 +501,28 @@ export const contactCommitments = [
     title: "可先 NDA 再交流",
     detail: "若已有客戶資料、法規文件或內部流程限制，可先簽 NDA 再進一步討論。",
   },
+];
+
+export const contactDecisionCards = [
+  {
+    title: "想重做官網，但還講不清楚差異",
+    detail: "適合先對焦 hero、案例證據、CTA 與導覽策略，避免只換視覺不換轉換。",
+    metric: "Brand / Conversion",
+  },
+  {
+    title: "AI / 資料專案已有方向，但流程還沒整理好",
+    detail: "適合先盤資料欄位、權責與驗收節點，降低導入後期卡關風險。",
+    metric: "AI / Ops",
+  },
+  {
+    title: "DPP / ESPR 要求逼近，內部還沒準備好",
+    detail: "適合先做 traceability MVP、欄位藍圖與審查輸出包，先把第一版證據鏈接起來。",
+    metric: "DPP / Compliance",
+  },
+];
+
+export const contactTrustNotes = [
+  "可先用 Email / Quick Brief 做第一輪需求釐清，再安排 30 分鐘會議。",
+  "若已有舊站、提案、法規文件或流程圖，可直接附在郵件裡。",
+  "道易會先協助界定優先順序，不會一開始就把專案做大。",
 ];

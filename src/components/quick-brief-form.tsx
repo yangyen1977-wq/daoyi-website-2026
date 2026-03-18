@@ -4,10 +4,11 @@ import { useMemo, useState } from "react";
 import { siteConfig } from "@/lib/site";
 
 const projectFocusOptions = [
+  "品牌官網重構 / 提升詢問量",
   "AI / 流程整合",
   "知識平台 / 內容治理",
   "DPP / 永續資料",
-  "品牌官網重構",
+  "案例頁 / Contact 轉換優化",
 ];
 
 type FormState = {
@@ -44,7 +45,7 @@ export function QuickBriefForm() {
     <form className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
       <span className="mini-label accent">Baymard：3 欄 CTA 最少阻力</span>
       <h3>快速丟出專案重點</h3>
-      <p>Baymard / ALM 2026 研究指出，縮短欄位與自動生成郵件草稿可以把 demo 請求拉高 20% 以上，因此這裡只問姓名、公司與本次焦點。</p>
+      <p>Baymard / ALM 2026 研究指出，縮短欄位與自動生成郵件草稿可以把 demo 請求拉高 20% 以上，因此這裡只問姓名、公司與本次焦點。若你是要談品牌官網、案例頁強化或 Contact 轉換，這份 brief 也能直接用。</p>
 
       <label className="form-field">
         <span>姓名</span>

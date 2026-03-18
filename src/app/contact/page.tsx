@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
-  description: "聯絡道易科技，討論 AI、知識平台、DPP 與品牌官網等數位專案需求。",
+  description: "聯絡道易科技，討論 AI、知識平台、DPP 與品牌官網等數位專案需求。24 小時內提供下一步建議與會議安排。",
   alternates: { canonical: "/contact" },
 };
 
@@ -53,6 +53,22 @@ export default function ContactPage() {
         </div>
       </Section>
 
+      <Section
+        eyebrow="適合直接來談的情境"
+        title="如果你卡在這三種情況，通常已經值得安排第一次會議。"
+        description="把決策焦慮具體化，會比單純放聯絡表單更容易促成有效詢問。"
+      >
+        <div className="card-grid three-up">
+          {contactDecisionCards.map((item) => (
+            <article key={item.title} className="card decision-card">
+              <span className="mini-label accent">{item.metric}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       <Section eyebrow="合作前常見需求" title="這些題目，特別適合在一開始就一起釐清。">
         <div className="quick-brief-grid">
           <QuickBriefForm />
@@ -65,6 +81,11 @@ export default function ContactPage() {
               <li>希望改善的結果：詢問量、作業效率、資料透明或法規準備</li>
               <li>預計時程與是否需要 NDA</li>
             </ul>
+            <div className="contact-trust-note-list">
+              {contactTrustNotes.map((note) => (
+                <p key={note} className="contact-trust-note">{note}</p>
+              ))}
+            </div>
             <p className="quick-brief-meta">不確定需求也沒關係，先把現況限制說清楚，道易會協助你切出第一步。</p>
             <a className="button-primary inline-button" href={`mailto:${siteConfig.email}`}>
               直接寄信到 {siteConfig.email}
