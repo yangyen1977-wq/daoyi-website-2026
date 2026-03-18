@@ -15,6 +15,7 @@ import {
   engagementSteps,
   fitSignals,
   seoGuardrails,
+  conversionGuardrails,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -86,6 +87,23 @@ export default function Home() {
               <li>重視長期維運、可擴充性與轉換效率</li>
             </ul>
           </div>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="2026 轉換守則"
+        title="把 ALM / Veza 研究直接寫進網站的行動守則。"
+        description="依據 ALM Corp、Baymard 與 Veza Digital 的 2026 SaaS 官網研究，把 hero 社會證明、產品優先視覺、RWD 與 Bento 分眾做法變成固定流程。"
+      >
+        <div className="card-grid four-up">
+          {conversionGuardrails.map((guardrail) => (
+            <article key={guardrail.title} className="card">
+              <span className="mini-label accent">{guardrail.signal}</span>
+              <h3>{guardrail.title}</h3>
+              <p>{guardrail.description}</p>
+              <small className="quick-brief-hint">{guardrail.source}</small>
+            </article>
+          ))}
         </div>
       </Section>
 

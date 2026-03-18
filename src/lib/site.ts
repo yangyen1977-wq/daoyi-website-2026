@@ -9,7 +9,7 @@ export const siteConfig = {
   location: "Tainan / Taipei / Remote",
   heroTitle: "5 秒講清楚的 AI 官網與 DPP",
   heroDescription:
-    "把價值主張、案例 KPI、Sticky CTA 與 DPP / AI 工作流程一次呈現，讓決策者不用猜下一步。",
+    "參考 ALM Corp 2026 SaaS 研究：以 6-10 字 hero、真實 KPI 與 sticky CTA 呈現產品實際畫面，5 秒內說明價值、對象與證據。",
 };
 
 export const navItems = [
@@ -369,6 +369,7 @@ export const faqs = [
 
 export const contactChannels = [
   { label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
+  { label: "電話", value: siteConfig.phone, href: `tel:${siteConfig.phone.replace(/[^+\d]/g, "")}` },
   { label: "Website", value: "daoyidh.com", href: "https://daoyidh.com" },
   { label: "Location", value: siteConfig.location, href: "https://maps.google.com/?q=Tainan" },
 ];
@@ -416,4 +417,31 @@ export const seoGuardrails = [
   { title: "Organization + FAQ Schema", detail: "首頁與 FAQ 皆以 JSON-LD 輸出，對應 AI Overview 與長尾搜尋。" },
   { title: "Performance Budget", detail: "LCP < 2.3s、CLS < 0.1，並以暗色/亮色分層避免 layout shift。" },
   { title: "Role-based Copy", detail: "Hero、CTA 與案例皆包含對象 + 成果語言，利於搜尋摘要。" },
+];
+
+export const conversionGuardrails = [
+  {
+    signal: "2.3x 信任",
+    title: "首屏社會證明",
+    description: "Baymard Institute / ALM 研究指出，logo bar 與量化成果拉到 hero，可以讓互動率提升 2.3 倍。",
+    source: "Baymard 2026",
+  },
+  {
+    signal: "+18~32% demo",
+    title: "產品優先視覺",
+    description: "用真實 UI、互動預覽取代抽象插畫，讓訪客立即理解功能，ALM 統計 demo 請求可多 18-32%。",
+    source: "ALM Corp 2026",
+  },
+  {
+    signal: "-7%/sec 流失",
+    title: "Performance-first RWD",
+    description: "每慢 1 秒轉換就掉 7%，因此將 LCP 控制在 2.3 秒內並提供 sticky CTA，讓手機流量立即行動。",
+    source: "ALM / Google CWV",
+  },
+  {
+    signal: "Bento clarity",
+    title: "分眾 Bento 版位",
+    description: "Veza Digital 整理指出 Bento grid 讓複雜功能更易掃描，也能在暗色系中維持 UI 層次與技術感。",
+    source: "Veza Digital 2026",
+  },
 ];

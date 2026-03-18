@@ -42,9 +42,9 @@ export function QuickBriefForm() {
 
   return (
     <form className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
-      <span className="mini-label accent">5 分鐘內送出</span>
+      <span className="mini-label accent">Baymard：3 欄 CTA 最少阻力</span>
       <h3>快速丟出專案重點</h3>
-      <p>留下三個欄位，道易即可回傳初步建議與討論時段。</p>
+      <p>Baymard / ALM 2026 研究指出，縮短欄位與自動生成郵件草稿可以把 demo 請求拉高 20% 以上，因此這裡只問姓名、公司與本次焦點。</p>
 
       <label className="form-field">
         <span>姓名</span>
@@ -70,6 +70,7 @@ export function QuickBriefForm() {
       <button type="submit" className="button-primary button-large" disabled={isDisabled}>
         送出 5 分鐘簡報
       </button>
+      <small className="quick-brief-hint">ALM Corp 追蹤 200+ SaaS 官網後指出，表單少於 4 欄且有次要 CTA，可把 Qualified Leads 提升 18-32%。</small>
       <small className="quick-brief-hint">提交後會開啟郵件，預先填好主旨與內容，可再補充細節。</small>
     </form>
   );
