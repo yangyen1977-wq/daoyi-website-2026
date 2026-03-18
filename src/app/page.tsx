@@ -17,6 +17,7 @@ import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
 import { CaseSnapshots } from "@/components/case-snapshots";
 import { ConversionCTA } from "@/components/conversion-cta";
+import { PersonaPlaybook } from "@/components/persona-playbook";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -158,6 +159,14 @@ export default function Home() {
         description="參考 LandingPageFlow 的 sticky footer / mid-page CTA 作法，讓剛看完案例與推薦的人不用再往回找表單。"
       >
         <ConversionCTA />
+      </Section>
+
+      <Section
+        eyebrow="分眾 CTA"
+        title="依決策角色調整 CTA、語氣與可下載資源。"
+        description="參考 SaaSFrame 2026 分眾趨勢，讓品牌、營運與永續團隊各自看到最相關的下一步，縮短猶豫時間。"
+      >
+        <PersonaPlaybook />
       </Section>
 
       <Section eyebrow="合作場景" title="依你所在的產業與任務，給出最適合的下一步。">

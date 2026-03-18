@@ -21,10 +21,10 @@ export const navItems = [
 ];
 
 export const stats = [
-  { value: "AI / Data / Platform", label: "核心整合能力" },
-  { value: "Research → Industry", label: "跨域轉譯能力" },
-  { value: "DPP / YOLO / NLP", label: "代表技術主軸" },
-  { value: "RWD × CTA × Delivery", label: "2026 官網升級方向" },
+  { value: "+32%", label: "Activation 提升" },
+  { value: "15 秒", label: "互動 Demo" },
+  { value: "<2.3s", label: "Mobile LCP" },
+  { value: "3 欄", label: "表單欄位" },
 ];
 
 export const heroClients = [
@@ -34,9 +34,48 @@ export const heroClients = [
 ];
 
 export const heroProofs = [
-  { value: "2.8x", label: "Mobile CTA 轉換", description: "Sticky footer + 2 欄表單" },
-  { value: "12 週", label: "端到端導入", description: "Discover → Operate" },
-  { value: "<2.3s", label: "LCP 維持綠燈", description: "Core Web Vitals 全綠" },
+  { value: "+32%", label: "Activation", description: "Hero 敘事 + 即時案例" },
+  { value: "15s demo", label: "互動預覽", description: "手機 / 桌機同步" },
+  { value: "24h", label: "提案 SLA", description: "5 分鐘寄出草稿" },
+];
+
+export const personaPlaybooks = [
+  {
+    id: "marketing",
+    title: "品牌 / 行銷主管",
+    headline: "需要 5 秒內說服董事與採購",
+    challenge: "舊站 hero 要滑三屏才看到 CTA，Signup Rate 僅 0.8%。",
+    win: "敘事式 hero + logo bar + mid-page CTA 讓 demo request +28%。",
+    checklist: ["6-8 字價值主張", "社會證明拉到首屏", "故事式 hero 視差"],
+    metric: { label: "預約 demo", value: "+28%" },
+    ctaLabel: "查看品牌案例",
+    ctaHref: "/cases#research-platform",
+    helperText: "適合品牌重塑、國際發表前 90 天。",
+  },
+  {
+    id: "ops",
+    title: "營運 / IT 團隊",
+    headline: "要證明系統真的可維運、可串資料",
+    challenge: "Proof-of-concept 不等於實際導入，容易卡在流程與資料欄位。",
+    win: "10 週 DPP / API Cockpit，含 SOP、Decision Log 與 24h 支援。",
+    checklist: ["API / Data Contract", "決策紀錄板", "RWD Monitoring"],
+    metric: { label: "導入週期", value: "10 週" },
+    ctaLabel: "下載技術清單",
+    ctaHref: "/solutions",
+    helperText: "適合計劃 1 季內要上線的營運 / IT 單位。",
+  },
+  {
+    id: "sustainability",
+    title: "永續 / 法遵 / 採購",
+    headline: "需要即時看到 DPP / ESPR 可用證據",
+    challenge: "供應鏈資料分散，審查常被 Excel 卡住。",
+    win: "Traceability cockpit 讓審查單位掃碼就看到欄位與 API 回傳，審核時間 -45%。",
+    checklist: ["ESPR 欄位樣板", "QR / Traceability", "審查下載包"],
+    metric: { label: "審查時間", value: "-45%" },
+    ctaLabel: "預約 30 分鐘審查 Demo",
+    ctaHref: "/contact",
+    helperText: "適合採購、永續長或法遵團隊。",
+  },
 ];
 
 export const heroPreviews = [

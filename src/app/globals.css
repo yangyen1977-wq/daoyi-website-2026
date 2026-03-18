@@ -197,6 +197,11 @@ a:hover {
 }
 
 .button-large {
+  min-height: 48px;
+  padding: 0 20px;
+  font-size: 0.96rem;
+}
+
 .button-small {
   min-height: 40px;
   padding: 0 16px;
@@ -205,11 +210,6 @@ a:hover {
 
 .case-link {
   margin-top: 16px;
-}
-
-  min-height: 48px;
-  padding: 0 20px;
-  font-size: 0.96rem;
 }
 
 .header-cta,
@@ -222,6 +222,38 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.04);
   color: #f5f8fc;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .button-primary,
+  .mobile-cta-button.primary {
+    animation: ctaPulse 4s ease-in-out infinite;
+  }
+
+  .hero-story-card,
+  .persona-panel,
+  .preview-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hero-story-card:hover,
+  .persona-panel:hover,
+  .preview-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 45px rgba(8, 17, 31, 0.3);
+  }
+}
+
+@keyframes ctaPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(93, 228, 215, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(93, 228, 215, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(93, 228, 215, 0);
+  }
 }
 
 .hero-section,
@@ -332,6 +364,39 @@ a:hover {
   font-size: 0.88rem;
 }
 
+.hero-story {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hero-story-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(8, 17, 31, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f4f8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-story-card h3 {
+  font-size: 1.1rem;
+}
+
+.hero-story-card ul {
+  margin-left: 18px;
+  color: #c6d6e7;
+  line-height: 1.5;
+}
+
+.hero-story-card--after {
+  border-color: rgba(93, 228, 215, 0.3);
+  box-shadow: 0 10px 30px rgba(93, 228, 215, 0.18);
+}
+
 .hero-panel {
   padding: 20px;
   border-radius: 24px;
@@ -397,6 +462,130 @@ a:hover {
 
 .section-block {
   padding: 0 0 72px;
+}
+
+.persona-playbook {
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.persona-tablist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.persona-tab {
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: #f4f8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.92rem;
+}
+
+.persona-tab strong {
+  font-size: 1rem;
+}
+
+.persona-tab.is-active {
+  border-color: rgba(93, 228, 215, 0.4);
+  background: rgba(93, 228, 215, 0.08);
+}
+
+.persona-panel {
+  padding: 28px;
+  border-radius: 28px;
+  background: #ffffff;
+  color: var(--text-dark);
+  border: 1px solid var(--line-dark);
+  box-shadow: 0 24px 60px rgba(11, 21, 38, 0.12);
+}
+
+.persona-panel h3 {
+  font-size: 1.4rem;
+  margin: 12px 0;
+}
+
+.persona-challenge {
+  color: var(--text-body);
+}
+
+.persona-win {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #0d223c;
+}
+
+.persona-metrics {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 0.28fr 0.72fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.persona-metric-card {
+  padding: 18px;
+  border-radius: 20px;
+  background: #0d223c;
+  color: #f4f8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.persona-metric-card strong {
+  font-size: 1.6rem;
+}
+
+.persona-checklist ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.persona-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.persona-helper {
+  color: var(--text-body);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-story {
+    grid-template-columns: 1fr;
+  }
+  .persona-playbook {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .persona-tablist {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .persona-tab {
+    min-width: 220px;
+  }
 }
 
 .section-heading {

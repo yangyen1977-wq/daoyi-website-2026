@@ -30,6 +30,27 @@ export function Hero() {
             </div>
           </div>
 
+          <div className="hero-story">
+            <article className="hero-story-card">
+              <span className="mini-label">Before 改版</span>
+              <h3>6.4 秒載入、0.8% Signup</h3>
+              <p>舊站 hero 沒講清楚，也沒有可點 CTA，訪客得滑到第三屏才知道如何聯絡。</p>
+              <ul>
+                <li>影片拖慢 LCP，42% 訪客沒看到 CTA。</li>
+                <li>案例證明藏在頁尾，信任感不足。</li>
+              </ul>
+            </article>
+            <article className="hero-story-card hero-story-card--after">
+              <span className="mini-label accent">After 道易版本</span>
+              <h3>15 秒互動 demo + 首屏證據</h3>
+              <p>把敘事式 hero、真實 KPI 與互動預覽放在第一視窗，並加入 sticky CTA。</p>
+              <ul>
+                <li>首屏展示 +32% activation 的案例數據。</li>
+                <li>行動版 thumb-zone CTA，永遠在拇指可及範圍。</li>
+              </ul>
+            </article>
+          </div>
+
           <div className="hero-actions">
             <Link href="/contact" className="button-primary button-large">
               立即預約專案討論
