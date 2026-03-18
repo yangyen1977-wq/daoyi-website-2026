@@ -3,13 +3,34 @@ import { Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
 import { SiteHeader } from "@/components/site-header";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, solutions } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const serviceStructuredData = solutions.map((solution) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": solution.title,
+  "serviceType": solution.title,
+  "description": solution.description,
+  "provider": {
+    "@type": "Organization",
+    "name": siteConfig.name,
+    "url": siteConfig.url,
+    "email": siteConfig.email,
+  },
+  "areaServed": "Asia-Pacific",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "price": "0",
+    "priceCurrency": "TWD"
+  }
+}));
 
 const structuredData = [
   {
@@ -39,7 +60,8 @@ const structuredData = [
       "target": `${siteConfig.url}/?q={search_term_string}`,
       "query-input": "required name=search_term_string"
     }
-  }
+  },
+  ...serviceStructuredData
 ];
 
 export const metadata: Metadata = {

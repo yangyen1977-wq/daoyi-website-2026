@@ -15,6 +15,8 @@ import {
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
+import { CaseSnapshots } from "@/components/case-snapshots";
+import { ConversionCTA } from "@/components/conversion-cta";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -115,6 +117,14 @@ export default function Home() {
         </div>
       </Section>
 
+      <Section
+        eyebrow="3 秒看懂成果"
+        title="互動式案例快照，讓訪客在首屏就理解流程、KPI 與 CTA。"
+        description="參考 Stan Vision / Veza Digital 案例，把可被驗證的數據與行動提示直接結合案例，減少再往下找資料的時間。"
+      >
+        <CaseSnapshots />
+      </Section>
+
       <Section eyebrow="信任憑證" title="把成果具體化，用可被量測的證據與回饋降低決策風險。">
         <div className="proof-grid">
           {proofPoints.map((item) => (
@@ -140,6 +150,14 @@ export default function Home() {
             </article>
           ))}
         </div>
+      </Section>
+
+      <Section
+        eyebrow="CTA after proof"
+        title="社會證明後立即提供行動入口，行動版也能隨時預約。"
+        description="參考 LandingPageFlow 的 sticky footer / mid-page CTA 作法，讓剛看完案例與推薦的人不用再往回找表單。"
+      >
+        <ConversionCTA />
       </Section>
 
       <Section eyebrow="合作場景" title="依你所在的產業與任務，給出最適合的下一步。">

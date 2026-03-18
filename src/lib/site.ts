@@ -111,6 +111,63 @@ export const cases = [
   },
 ];
 
+export const caseSnapshots = [
+  {
+    id: "dpp",
+    label: "永續製造 / DPP",
+    title: "EasyDPP Traceability Cockpit",
+    context: "製造業｜ESPR / QR 體驗",
+    summary: "10 週內完成 ESPR 欄位、QR 導覽與供應鏈共編，讓採購審查直接看到資料證據。",
+    metrics: [
+      { label: "導入週期", value: "10 週", detail: "ESPR-ready 欄位 + API" },
+      { label: "表單完成率", value: "+32%", detail: "Sticky CTA + 3 欄表單" },
+      { label: "法規文件準備", value: "100%", detail: "一次輸出 BOM / LCI" },
+    ],
+    highlights: [
+      "行動版 persistent CTA，掃碼即可預約審查 demo",
+      "案例頁同步顯示排程、資料欄位與可下載範本",
+      "JSON-LD Product + Service schema，對應 AI Overview",
+    ],
+    href: "/cases#easydpp",
+  },
+  {
+    id: "research",
+    label: "知識平台",
+    title: "Cross-text Knowledge Atlas",
+    context: "文化典藏｜資料平台",
+    summary: "把 120+ 年史料、文本、版本系統化，訪客 5 秒內可以理解查詢方式並直接進入典藏。",
+    metrics: [
+      { label: "查詢速度", value: "↓45%", detail: "語意索引 + 快速篩選" },
+      { label: "重訪率", value: "+28%", detail: "分眾 CTA / 指南" },
+      { label: "API 套用", value: "18 條", detail: "外部平台直接讀取" },
+    ],
+    highlights: [
+      "Hero 區即顯示使用方式影片 + 範例結果",
+      "行動版 thumb-zone 導覽，一鍵存取導覽地圖",
+      "FAQ schema 對應研究者搜尋語句",
+    ],
+    href: "/cases#research-platform",
+  },
+  {
+    id: "vision",
+    label: "AI 視覺",
+    title: "Solar Vision Ops Console",
+    context: "循環經濟｜AI 視覺",
+    summary: "將 YOLO 辨識模型與現場回收流程整合，新增的 CTA 讓工廠端可直接預約 30 分鐘線上演示。",
+    metrics: [
+      { label: "稽核通過", value: "1 次", detail: "含 SOP / 風險記錄" },
+      { label: "現場採用", value: "+41%", detail: "Ops adoption" },
+      { label: "表單欄位", value: "3 欄", detail: "Progressive profiling" },
+    ],
+    highlights: [
+      "案例頁放入實際畫面輪播，展示辨識結果",
+      "Sticky footer CTA 引導預約現場演示",
+      "Schema 註記 ImageObject / HowTo，利於搜尋卡片",
+    ],
+    href: "/cases#solar-vision",
+  },
+];
+
 export const processSteps = [
   { step: "01", title: "Discover", description: "釐清商業目標、資料來源、利害關係人與最核心的決策情境。" },
   { step: "02", title: "Structure", description: "整理資訊架構、資料模型與使用者路徑，避免系統一開始就失焦。" },
