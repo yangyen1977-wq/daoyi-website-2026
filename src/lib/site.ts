@@ -89,21 +89,72 @@ export const homepageCaseStories = [
     title: "把『我們很專業』改成決策者 5 秒內看懂的價值主張",
     challenge: "舊站內容很多，但 hero 太抽象、案例太後面，第一次來的訪客很難快速判斷是否值得聯絡。",
     solution: "首屏先放清楚主張、代表案例數字與雙 CTA，再用分眾區塊把品牌 / 營運 / 永續三種決策路徑拆開。",
-    outcome: "+32% demo / brief request uplift",
+    outcome: "+32% demo / brief request uplift（同類型改版 benchmark）",
   },
   {
     label: "Research platform",
     title: "把複雜知識平台做成『可理解、可查詢、可被再利用』的體驗",
     challenge: "資料欄位很多、內容跨語言又跨版本，若只談功能，決策者與研究者都很難理解價值。",
     solution: "以產品化敘事呈現檢索流程、範例結果與 API 擴充性，並把案例證據直接掛在首頁與案例頁。",
-    outcome: "查詢流程理解時間 ↓45%",
+    outcome: "查詢流程理解時間 ↓45%（專案目標格式示例）",
   },
   {
     label: "DPP / ESG",
     title: "把法規壓力轉成可展示的 traceability 與審查證據鏈",
     challenge: "永續 / 採購 / 法遵常卡在資料散落不同部門，網站很難直接說明 DPP 專案到底做得到什麼。",
     solution: "把 ESPR 欄位藍圖、QR 掃碼情境、API 與審查輸出包寫成同一個案例敘事，讓決策者知道能怎麼落地。",
-    outcome: "審查準備時間 -45%",
+    outcome: "審查準備時間 -45%（導入情境 benchmark）",
+  },
+];
+
+export const caseDecisionChecklist = [
+  {
+    title: "先交代專案背景，不只秀結果",
+    description: "每個案例都先說明客戶情境、限制條件與需要協調的部門，讓數字不是孤立 KPI。",
+  },
+  {
+    title: "把成果標成 benchmark / 專案目標 / 已上線成效",
+    description: "避免所有數字看起來都像已驗證成果，讓決策者能分辨哪些是已驗證、哪些是規劃指標。",
+  },
+  {
+    title: "把交付內容對應到決策風險",
+    description: "用 IA、資料欄位、RWD、CTA、API 與審查輸出等項目，回答『你們到底會做什麼』。",
+  },
+];
+
+export const caseProofFormat = [
+  {
+    label: "Evidence label",
+    title: "已上線成果",
+    detail: "用於已有實際上線與可追蹤指標的案例，會標註改善範圍、時間或使用情境。",
+  },
+  {
+    label: "Evidence label",
+    title: "專案 benchmark",
+    detail: "用於提案、診斷或類型研究常見的參考值，幫助客戶判斷合理目標區間。",
+  },
+  {
+    label: "Evidence label",
+    title: "交付樣板",
+    detail: "用於說明 DPP 欄位藍圖、資料結構、案例敘事或 Contact 轉換優化等可交付成果。",
+  },
+];
+
+export const caseDeliveryFrames = [
+  {
+    title: "品牌官網重整",
+    context: "適合：既有流量存在，但詢問量、案例說服力與 CTA 轉換偏弱。",
+    outputs: ["價值主張重寫", "首頁 / 案例 / Contact 節奏整理", "Mobile sticky CTA 與 Quick Brief"],
+  },
+  {
+    title: "知識平台 / 研究資料服務",
+    context: "適合：資料複雜、欄位多、搜尋與理解成本高的研究型或內容型組織。",
+    outputs: ["資訊架構與檢索旅程", "欄位模型 / API 邏輯", "案例敘事與再利用場景"],
+  },
+  {
+    title: "DPP / Traceability 專案",
+    context: "適合：永續、採購、法遵與營運需要同時對齊資料欄位與審查輸出。",
+    outputs: ["ESPR / DPP 欄位藍圖", "QR / traceability 體驗", "審查輸出包與決策節點"],
   },
 ];
 
