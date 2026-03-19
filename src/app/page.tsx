@@ -6,19 +6,15 @@ import {
   faqs,
   proofPoints,
   siteConfig,
-  heroClients,
   solutions,
   testimonials,
   mobileExperienceHighlights,
-  engagementSteps,
-  fitSignals,
   seoGuardrails,
   auditOffer,
   homepageContactProof,
   urgencySignals,
   homepageCaseStories,
   homepageDecisionCards,
-  caseProofFormat,
   contactFastFacts,
   contactCommitments,
   contactPrepChecklist,
@@ -72,7 +68,7 @@ const caseSnapshotSchema = {
 
 const homepageJumpLinks = [
   { label: "看案例證據", href: "#proof-ledger" },
-  { label: "看適合哪條 sprint", href: "#decision-paths" },
+  { label: "看合作起點", href: "#decision-paths" },
   { label: "直接送出 brief", href: "#quick-brief" },
 ];
 
@@ -98,8 +94,8 @@ export default function Home() {
 
       <Section
         eyebrow="First-response 設計"
-        title="讓第一次接洽更像拿到判斷依據，而不是丟一封沒有下文的詢問。"
-        description="這輪參考 Amply、Webstacks、Proofmap 常見做法：把 response SLA、聯絡分流與 first deliverable 提前放在 hero 後面，讓高考量 B2B 專案更容易開始。"
+        title="第一次接洽先拿到判斷依據，而不是只留下一封沒有下文的詢問。"
+        description="這輪參考 Amply、ALM、Proofmap 常見做法：先把 response SLA、聯絡分流與起手交付提早講清楚，減少決策者第一次接洽的不確定感。"
       >
         <div className="card-grid three-up">
           {heroDecisionMetrics.map((item) => (
@@ -177,40 +173,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="證據閱讀方式"
-        title="先分清楚什麼是已交付能力、什麼是 benchmark、什麼是合作起點。"
-        description="參考 ALM、Blend 與高轉換 B2B SaaS 官網常見做法：把 proof 的層級講清楚，首頁才不會像把所有亮點一次塞滿。"
-      >
-        <div className="homepage-proof-protocol">
-          <div className="feature-surface proof-protocol-summary">
-            <span className="mini-label accent">Proof protocol</span>
-            <h3>道易首頁現在只保留三種最重要的判斷訊號。</h3>
-            <ul className="bullet-list compact">
-              <li>已交付樣態：說明道易真的做過哪些類型的交付。</li>
-              <li>專案 benchmark：作為策略參考，不假裝成既有客戶成效。</li>
-              <li>合作起點：直接告訴訪客現在可以怎麼開始。</li>
-            </ul>
-          </div>
-          <div className="logo-chip-row" aria-label="代表合作情境">
-            {heroClients.map((client) => (
-              <div key={client.name} className="logo-chip">
-                <strong>{client.name}</strong>
-                <span>{client.context}</span>
-              </div>
-            ))}
-          </div>
-          <div className="card-grid three-up">
-            {caseProofFormat.map((item) => (
-              <article key={item.title} className="card proof-narrative-card">
-                <span className="mini-label accent">{item.label}</span>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </Section>
 
       <Section
         id="decision-paths"
@@ -238,11 +200,11 @@ export default function Home() {
 
       <Section
         eyebrow="代表案例敘事"
-        title="把 challenge → solution → outcome 寫在首頁，讓訪客不用先跳去案例頁才看到證據。"
-        description="這輪參考 JoinAmply、Insaim 與 Vev 整理的高轉換做法：首屏後盡快出現案例敘事、量化成果與可行下一步。"
+        title="先用兩個代表場景看懂道易怎麼把 challenge 變成可交付結果。"
+        description="這輪參考 JoinAmply、Proofmap 與高轉換 agency 首頁做法：首頁只留兩個代表情境，讓案例敘事更快被讀完。"
       >
         <div className="case-story-grid">
-          {homepageCaseStories.map((item) => (
+          {homepageCaseStories.slice(0, 2).map((item) => (
             <article key={item.title} className="case-story-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
@@ -285,34 +247,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="啟動節奏"
-        title="先讓潛在客戶知道：現在聯絡道易，接下來會發生什麼。"
-        description="參考 Stan Vision 對 first-use friction 的整理，把接洽流程寫得更具體，降低第一次詢問的猶豫。"
-      >
-        <div className="engagement-grid">
-          {engagementSteps.map((item) => (
-            <article key={item.title} className="feature-surface engagement-card">
-              <span className="mini-label accent">{item.step}</span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-        <div className="fit-grid">
-          {fitSignals.map((group) => (
-            <article key={group.title} className="fit-card">
-              <span className="mini-label">{group.title}</span>
-              <ul className="bullet-list compact">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       <Section
         eyebrow="手機 / SEO 體驗"
@@ -491,7 +425,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="quick-brief" eyebrow="快速提案" title="用三個欄位交出專案簡報，5 分鐘內收到回覆。">
+      <Section id="quick-brief" eyebrow="快速提案" title="現在只給三個資訊，先拿到具體下一步。">
         <div className="quick-brief-grid">
           <QuickBriefForm />
           <div className="feature-surface quick-brief-note">
