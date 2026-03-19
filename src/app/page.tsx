@@ -25,6 +25,7 @@ import {
   engagementPackages,
   engagementSteps,
   homepageTrustStrip,
+  homepageOutcomeSignals,
   homepageBuyerSignals,
   competitiveInsights,
   homepageHeuristicScorecard,
@@ -137,6 +138,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="What improves first"
+        title="先把最影響 B2B 詢問品質的四件事講清楚。"
+        description="綜合 Veza Digital、ALM Corp 與 ThunderClap 對 2026 B2B / SaaS 官網的觀察，首頁前段最值得優先強化的是：主張清晰度、證據密度、手機轉換與第一次接洽安心感。"
+      >
+        <div className="card-grid four-up homepage-outcome-grid">
+          {homepageOutcomeSignals.map((item) => (
+            <article key={item.title} className="feature-surface homepage-outcome-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         id="why-now"

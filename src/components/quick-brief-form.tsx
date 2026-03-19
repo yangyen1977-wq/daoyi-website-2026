@@ -49,12 +49,26 @@ export function QuickBriefForm() {
 
       <label className="form-field">
         <span>姓名</span>
-        <input type="text" value={form.name} onChange={(event) => handleChange("name", event.target.value)} placeholder="王小明" required />
+        <input
+          type="text"
+          value={form.name}
+          onChange={(event) => handleChange("name", event.target.value)}
+          placeholder="王小明"
+          autoComplete="name"
+          required
+        />
       </label>
 
       <label className="form-field">
         <span>公司 / 單位</span>
-        <input type="text" value={form.company} onChange={(event) => handleChange("company", event.target.value)} placeholder="道易科技" required />
+        <input
+          type="text"
+          value={form.company}
+          onChange={(event) => handleChange("company", event.target.value)}
+          placeholder="例如：製造品牌 / 研究單位 / 內容平台團隊"
+          autoComplete="organization"
+          required
+        />
       </label>
 
       <label className="form-field">
@@ -68,8 +82,8 @@ export function QuickBriefForm() {
         </select>
       </label>
 
-      <button type="submit" className="button-primary button-large" disabled={isDisabled}>
-        送出 5 分鐘簡報
+      <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟已填好的 DaoYi 專案詢問郵件">
+        開啟已填好的專案郵件
       </button>
       <a className="button-secondary inline-button" href={`mailto:${siteConfig.email}`}>
         先用 Email 問問題

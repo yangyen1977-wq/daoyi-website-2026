@@ -41,6 +41,29 @@ export const homepageTrustStrip = [
   { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
 ];
 
+export const homepageOutcomeSignals = [
+  {
+    label: "Pipeline clarity",
+    title: "決策者進站 5 秒內就知道道易適不適合這次專案",
+    detail: "把『官網、AI、DPP、知識平台』整成一句可理解的主張，減少第一次接觸的認知成本。",
+  },
+  {
+    label: "Proof density",
+    title: "案例、導入週期與回覆承諾一起出現，信任建立更快",
+    detail: "不讓 proof 藏在後段：首頁前段就先看到案例型態、成果訊號與 24h response promise。",
+  },
+  {
+    label: "Mobile conversion",
+    title: "手機版先保留下一步，不讓 B2B 流量卡在找 CTA",
+    detail: "thumb-zone CTA、3 欄 brief 與 Email fallback 讓第一次詢問更低摩擦。",
+  },
+  {
+    label: "Sales readiness",
+    title: "送出前就知道會拿到什麼，不像把資料丟進黑洞",
+    detail: "把 first-response kit、30 分鐘對焦會議與 NDA 選項提早揭露，降低留資料的不安。",
+  },
+];
+
 export const homepageBuyerSignals = [
   {
     title: "你們是做網站，還是做系統 / AI？",

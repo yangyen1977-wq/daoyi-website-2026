@@ -415,6 +415,21 @@ a:hover {
   line-height: 1.55;
 }
 
+.homepage-outcome-grid {
+  margin-top: 6px;
+}
+
+.homepage-outcome-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.homepage-outcome-card h3 {
+  font-size: 1.06rem;
+  line-height: 1.55;
+}
+
 .homepage-why-now-grid {
   margin-top: 6px;
 }

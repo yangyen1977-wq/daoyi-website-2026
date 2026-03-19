@@ -106,7 +106,13 @@ export const metadata: Metadata = {
     canonical: "/",
     languages: {
       "zh-TW": "/",
+      "en": "/",
     },
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
   openGraph: {
     type: "website",
