@@ -25,15 +25,11 @@ import {
   engagementPackages,
   engagementSteps,
   homepageTrustStrip,
-  homepageBenchmarkSignals,
-  homepageFitAssessment,
   homepageFirstWeekDeliverables,
-  homepageSwitchSignals,
-  homepageOutcomeSignals,
-  homepageBuyerSignals,
   competitiveInsights,
-  homepageHeuristicScorecard,
   homepageResponseTimeline,
+  homepageDecisionSnapshot,
+  homepageCompactCaseEvidence,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -144,60 +140,35 @@ export default function Home() {
       </section>
 
       <Section
-        eyebrow="Benchmark-led homepage"
-        title="這次首頁前段先內化三個 2025–2026 B2B / SaaS 高轉換共識。"
-        description="整理自 Digital Silk、Blend、Databox / Wynter 類型 SaaS 首頁與 Proofmap 的案例研究：高表現網站的共同點不是內容更多，而是更快交代定位、證據與 next step。"
+        eyebrow="Homepage decision snapshot"
+        title="先把買方最在意的四件事濃縮在前面：你們是誰、做過什麼、怎麼開始、風險怎麼控。"
+        description="這輪直接吸收 Stan Vision、Proofmap、Digital Silk 的共通做法：首頁前半段先像一張 decision sheet，而不是先丟一長串公司介紹。"
       >
-        <div className="card-grid three-up homepage-benchmark-grid">
-          {homepageBenchmarkSignals.map((item) => (
-            <article key={item.title} className="feature-surface homepage-benchmark-card">
+        <div className="card-grid four-up homepage-snapshot-grid">
+          {homepageDecisionSnapshot.map((item) => (
+            <article key={item.title} className="feature-surface homepage-snapshot-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
-              <div className="homepage-benchmark-proof">
-                <strong>可直接沿用的做法</strong>
-                <p>{item.proof}</p>
-              </div>
+              <strong>{item.proof}</strong>
             </article>
           ))}
         </div>
       </Section>
 
       <Section
-        eyebrow="Fit check"
-        title="先幫訪客判斷：現在談，會不會太早？"
-        description="參考 Directive、Axon Garside 與近年高轉換 B2B 首頁的 self-qualification 做法，把『適合現在談』與『還沒準備好也能怎麼開始』提早講清楚，降低猶豫與錯配。"
+        eyebrow="Real delivery evidence"
+        title="與其說很多服務，不如先用三種已交付樣態建立信任。"
+        description="參考 Proofmap 對高成長 SaaS case study 的整理：買方更在意是否有真實場景、明確交付與可記住的結果訊號。"
       >
-        <div className="homepage-fit-grid">
-          {homepageFitAssessment.map((group) => (
-            <article key={group.title} className="feature-surface homepage-fit-card">
-              <span className="mini-label accent">{group.label}</span>
-              <h3>{group.title}</h3>
-              <ul className="bullet-list compact">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Why mature teams switch"
-        title="2026 的優秀 B2B 官網，已經不是公司簡介，而是更像會工作的 pipeline asset。"
-        description="整理自 Blend、Bop Design、Amply、Superside 常見的高表現做法：比起講自己會什麼，成熟團隊更在意網站能不能更快建立信任、支援內容營運與產生高品質對話。"
-      >
-        <div className="card-grid three-up homepage-benchmark-grid">
-          {homepageSwitchSignals.map((item) => (
-            <article key={item.title} className="feature-surface homepage-benchmark-card">
+        <div className="card-grid three-up compact-case-evidence-grid">
+          {homepageCompactCaseEvidence.map((item) => (
+            <article key={item.title} className="card compact-case-evidence-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
+              <strong>{item.evidence}</strong>
               <p>{item.detail}</p>
-              <div className="homepage-benchmark-proof">
-                <strong>這版沿用的原則</strong>
-                <p>{item.proof}</p>
-              </div>
+              <small>{item.outcome}</small>
             </article>
           ))}
         </div>
@@ -219,21 +190,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="What improves first"
-        title="先把最影響 B2B 詢問品質的四件事講清楚。"
-        description="綜合 Veza Digital、ALM Corp 與 ThunderClap 對 2026 B2B / SaaS 官網的觀察，首頁前段最值得優先強化的是：主張清晰度、證據密度、手機轉換與第一次接洽安心感。"
-      >
-        <div className="card-grid four-up homepage-outcome-grid">
-          {homepageOutcomeSignals.map((item) => (
-            <article key={item.title} className="feature-surface homepage-outcome-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       <Section
         id="why-now"
@@ -364,22 +320,6 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="決策者常見疑問"
-        title="成熟 B2B 官網不是只展示，而是先快速解除決策疑慮。"
-        description="這輪參考 Amply、Axon Garside 與多個技術型官網案例，補上 buyer-side 常見問題，讓首頁更像一個可快速判斷的業務入口。"
-      >
-        <div className="card-grid three-up buyer-signal-grid">
-          {homepageBuyerSignals.map((item) => (
-            <article key={item.title} className="feature-surface buyer-signal-card">
-              <span className="mini-label accent">Buyer signal</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         eyebrow="Contact timeline"
         title="把第一次詢問到可執行下一步的節奏，直接在首頁說清楚。"
         description="參考 Stan Vision 與 2025-2026 多個高轉換 B2B / agency contact flow，買方最需要的不是更多形容詞，而是明確知道：送出後會發生什麼。"
@@ -409,26 +349,6 @@ export default function Home() {
               <div className="competitive-insight-application">
                 <strong>如何用在道易</strong>
                 <p>{item.application}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Homepage heuristic"
-        title="把外部研究直接翻成一份 3 分鐘可判讀的首頁檢查表。"
-        description="這段刻意做成 decision tool，而不是長段落介紹：讓第一次來的 B2B 決策者更快確認這個網站是否值得往下談。"
-      >
-        <div className="card-grid two-up homepage-heuristic-grid">
-          {homepageHeuristicScorecard.map((item) => (
-            <article key={item.title} className="feature-surface homepage-heuristic-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <div className="competitive-insight-application">
-                <strong>這版如何落地</strong>
-                <p>{item.action}</p>
               </div>
             </article>
           ))}

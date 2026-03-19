@@ -122,6 +122,57 @@ export const homepageFirstWeekDeliverables = [
   },
 ];
 
+export const homepageDecisionSnapshot = [
+  {
+    label: "Who it helps",
+    title: "給需要同時處理官網、AI、資料與 DPP 的 B2B 團隊",
+    detail: "不是單點設計外包，而是把品牌訊息、資料欄位、流程與網站體驗一起整理。",
+    proof: "B2B 官網 / AI 導入 / 知識平台 / Traceability",
+  },
+  {
+    label: "Proof first",
+    title: "首頁先看已交付樣態，不用先讀很長的公司介紹",
+    detail: "沿用 Proofmap 的 case-study pattern，把 challenge、交付與結果訊號提早放到首頁前段。",
+    proof: "研究平台 / AI 視覺流程 / DPP 欄位藍圖",
+  },
+  {
+    label: "Low-friction start",
+    title: "第一次接洽先拿到下一步，而不是填完表單後沒下文",
+    detail: "直接揭露 24h response SLA、30 分鐘對焦與 first-response kit，讓買方知道送出後會發生什麼。",
+    proof: "24h 回覆 / 30 分鐘對焦 / 3 欄 brief",
+  },
+  {
+    label: "Mobile-ready",
+    title: "手機版也保留 CTA、案例訊號與 Email 備援路徑",
+    detail: "Stan Vision 與近年 B2B / SaaS 案例都指出：行動版要先服務『快速判斷 + 立即開始』。",
+    proof: "Sticky CTA / thumb-zone / NDA-friendly contact",
+  },
+];
+
+export const homepageCompactCaseEvidence = [
+  {
+    label: "Knowledge platform",
+    title: "跨文本與書目資料整合平台",
+    evidence: "交付：跨欄位檢索、關聯瀏覽、API 擴充架構",
+    detail: "把文本、版本、出版社與研究脈絡整理成可查詢、可理解、可再利用的平台，不只是一個資料庫前台。",
+    outcome: "結果訊號：研究者能更快找到資料，組織也更容易持續維運與擴充。",
+  },
+  {
+    label: "AI operations",
+    title: "太陽能板回收辨識流程優化",
+    evidence: "交付：YOLO 辨識模型接到現場 SOP 與驗收節點",
+    detail: "重點不是展示模型，而是讓辨識結果進入實際流程、降低判讀落差，並保留後續維運節奏。",
+    outcome: "結果訊號：AI 從 demo 走進作業現場，成為真正可被採用的流程工具。",
+  },
+  {
+    label: "DPP / Traceability",
+    title: "產品履歷與資料透明化體系",
+    evidence: "交付：欄位藍圖、掃碼體驗、審查輸出包",
+    detail: "把永續、採購、法遵需要的資料鏈先做成可啟動版本，讓 DPP 不再只是概念簡報。",
+    outcome: "結果訊號：品牌信任、供應鏈協作與法規準備度可同步往前推進。",
+  },
+];
+
 export const homepageOutcomeSignals = [
   {
     label: "Pipeline clarity",

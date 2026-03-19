@@ -5,8 +5,19 @@ import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, 
 
 export const metadata: Metadata = {
   title: "聯絡我們",
-  description: "聯絡道易科技，討論 AI、知識平台、DPP 與品牌官網等數位專案需求。24 小時內提供下一步建議與會議安排。",
+  description: "聯絡道易科技，討論 B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合。24 小時內提供下一步建議、NDA 支援與會議安排。",
+  keywords: ["聯絡道易科技", "B2B 官網改版諮詢", "AI 導入顧問", "DPP 規劃", "知識平台建置", "NDA 專案詢問"],
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "聯絡道易科技｜B2B 官網、AI、知識平台、DPP 專案討論",
+    description: "適合要重做官網、整理資料流程、規劃知識平台或 DPP 的團隊。可先 Quick Brief，也可 Email + NDA 開始。",
+    url: `${siteConfig.url}/contact`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "聯絡道易科技｜B2B 官網、AI、知識平台、DPP 專案討論",
+    description: "24h 內回覆，支援 Quick Brief、Email 與 NDA-friendly contact flow。",
+  },
 };
 
 const contactFaqSchema = {

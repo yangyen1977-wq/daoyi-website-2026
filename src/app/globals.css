@@ -415,8 +415,41 @@ a:hover {
   line-height: 1.55;
 }
 
+.homepage-snapshot-grid,
+.compact-case-evidence-grid,
 .homepage-benchmark-grid {
   margin-top: 6px;
+}
+
+.homepage-snapshot-card,
+.compact-case-evidence-card {
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
+}
+
+.homepage-snapshot-card strong,
+.compact-case-evidence-card strong {
+  color: #0d223c;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.compact-case-evidence-card {
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
+.compact-case-evidence-card small {
+  color: #0c5671;
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.homepage-benchmark-card {
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
 }
 
 .homepage-benchmark-card {
