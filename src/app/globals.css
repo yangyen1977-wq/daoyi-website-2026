@@ -253,6 +253,42 @@ a:hover {
   align-self: flex-start;
 }
 
+.evidence-matrix-card,
+.engagement-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.evidence-matrix-card strong,
+.engagement-step-card strong,
+.engagement-package-card .mini-label {
+  color: #ffffff;
+}
+
+.engagement-package-grid {
+  margin-bottom: 18px;
+}
+
+.engagement-package-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.engagement-package-fit {
+  margin-top: auto;
+  padding-top: 6px;
+  color: var(--text-body) !important;
+  font-size: 0.9rem;
+}
+
+.engagement-step-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
 .header-cta,
 .button-primary {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
@@ -2188,5 +2224,8 @@ a:hover {
   .homepage-jump-link-row {
     width: 100%;
     justify-content: flex-start;
+  }
+  .engagement-step-strip {
+    grid-template-columns: 1fr;
   }
 }

@@ -21,6 +21,9 @@ import {
   homepageContactRoutes,
   heroDecisionMetrics,
   verifiedProofLedger,
+  evidenceMatrix,
+  engagementPackages,
+  engagementSteps,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -217,6 +220,55 @@ export default function Home() {
                 <p>{item.solution}</p>
               </div>
               <div className="case-story-outcome">{item.outcome}</div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="決策依據"
+        title="把這個首頁的核心做法講清楚：清楚、證據、手機轉換。"
+        description="這輪把 Veza Digital、ALM Corp 提到的高轉換原則濃縮成三個矩陣，讓訪客與內部團隊都更容易判斷現在的首頁到底在強化什麼。"
+      >
+        <div className="card-grid three-up evidence-matrix-grid">
+          {evidenceMatrix.map((item) => (
+            <article key={item.title} className="feature-surface evidence-matrix-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <strong>{item.metric}</strong>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="合作方案 / Engagement"
+        title="不必先想清楚全部需求，也能先找到最適合的啟動方式。"
+        description="參考成熟 B2B / agency 官網常見的 package-first 寫法，把時程、交付與適合情境提前講清楚，讓第一次接洽更容易進入具體討論。"
+      >
+        <div className="card-grid three-up engagement-package-grid">
+          {engagementPackages.map((item) => (
+            <article key={item.title} className="card engagement-package-card">
+              <span className="mini-label accent">{item.timeline}</span>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+              <ul className="bullet-list compact">
+                {item.outputs.map((output) => (
+                  <li key={output}>{output}</li>
+                ))}
+              </ul>
+              <p className="engagement-package-fit">{item.fit}</p>
+            </article>
+          ))}
+        </div>
+        <div className="engagement-step-strip" aria-label="合作啟動節奏">
+          {engagementSteps.map((item) => (
+            <article key={item.step} className="feature-surface engagement-step-card">
+              <span className="mini-label accent">{item.step}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <strong>{item.proof}</strong>
             </article>
           ))}
         </div>
