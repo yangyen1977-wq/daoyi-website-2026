@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 B2B 官網、AI 與 DPP 變成更容易成交、也更容易落地的系統",
+  heroTitle: "把 B2B 官網、AI、資料流程與 DPP 整成更容易成交、也更容易落地的系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者 5 秒內看懂、團隊 10 週內看見可落地版本。",
+    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者 5 秒內看懂你們在做什麼，也知道下一步怎麼開始。",
 };
 
 export const navItems = [
@@ -39,6 +39,27 @@ export const homepageTrustStrip = [
   { label: "Start option", value: "3 欄 Quick Brief / Email 皆可" },
   { label: "Project types", value: "官網、AI、知識平台、DPP" },
   { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
+];
+
+export const homepageBenchmarkSignals = [
+  {
+    label: "Competitor pattern",
+    title: "首屏先交代『誰 + 解什麼 + 下一步』，不要讓訪客自己拼圖。",
+    detail: "參考 Databox、Wynter、Digital Silk 與近年 SaaS 首頁，最有效的 hero 都會先把定位、對象與 CTA 說完，再用視覺支撐，而不是反過來。",
+    proof: "Clear headline + supporting visual + direct CTA",
+  },
+  {
+    label: "Case-study pattern",
+    title: "案例不只放在作品集，而是提早當成首頁的信任槓桿。",
+    detail: "Proofmap 對高速成長 SaaS 的整理指出，首頁提早放 customer proof、案例摘要與量化結果，更容易讓買方願意進一步了解。",
+    proof: "Challenge → solution → impact + persistent CTA",
+  },
+  {
+    label: "Mobile pattern",
+    title: "手機版優先保留決策入口，而不是塞滿完整公司介紹。",
+    detail: "Blend 與多個高轉換 B2B 網站都把 mobile 版本視為第一個成交場景：主 CTA、關鍵成果與 next step 要在短距離內看完。",
+    proof: "Thumb-zone CTA + short proof blocks + low-friction contact",
+  },
 ];
 
 export const homepageFitAssessment = [

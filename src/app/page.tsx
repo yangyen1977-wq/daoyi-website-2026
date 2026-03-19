@@ -25,6 +25,7 @@ import {
   engagementPackages,
   engagementSteps,
   homepageTrustStrip,
+  homepageBenchmarkSignals,
   homepageFitAssessment,
   homepageFirstWeekDeliverables,
   homepageOutcomeSignals,
@@ -140,6 +141,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Benchmark-led homepage"
+        title="這次首頁前段先內化三個 2025–2026 B2B / SaaS 高轉換共識。"
+        description="整理自 Digital Silk、Blend、Databox / Wynter 類型 SaaS 首頁與 Proofmap 的案例研究：高表現網站的共同點不是內容更多，而是更快交代定位、證據與 next step。"
+      >
+        <div className="card-grid three-up homepage-benchmark-grid">
+          {homepageBenchmarkSignals.map((item) => (
+            <article key={item.title} className="feature-surface homepage-benchmark-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <div className="homepage-benchmark-proof">
+                <strong>可直接沿用的做法</strong>
+                <p>{item.proof}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="Fit check"
