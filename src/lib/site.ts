@@ -177,6 +177,30 @@ export const contactFastFacts = [
   { label: "合作起步", value: "先診斷再提案" },
 ];
 
+export const contactIntentCards = [
+  {
+    label: "Brand / Website",
+    title: "我要重做官網與案例頁",
+    detail: "適合已經有舊站、想提升價值主張、案例證據與 Contact 轉換的團隊。",
+    cta: "寄出官網需求",
+    href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("想討論道易官網改版 / 案例頁優化")}`,
+  },
+  {
+    label: "AI / Ops",
+    title: "我要談 AI 導入或資料流程",
+    detail: "適合已有 AI / 系統方向，但卡在欄位、流程、驗收與實際上線節奏的專案。",
+    cta: "寄出 AI / 流程需求",
+    href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("想討論 AI 導入 / 資料流程整合")}`,
+  },
+  {
+    label: "DPP / Compliance",
+    title: "我要談 DPP / Traceability",
+    detail: "適合永續、法遵、採購或製造團隊先確認欄位藍圖、QR 體驗與審查輸出包。",
+    cta: "寄出 DPP 需求",
+    href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("想討論 DPP / Traceability 規劃")}`,
+  },
+];
+
 export const verifiedProofLedger = [
   {
     label: "已交付樣態",

@@ -53,11 +53,21 @@ export function SiteHeader() {
 
         <div className={`site-header-navWrap ${menuOpen ? "is-open" : ""}`}>
           <nav id="site-navigation" className="site-nav" aria-label="主要導覽">
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={isActive ? "is-active" : undefined}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <Link href={ctaHref} className="header-cta" onClick={() => setMenuOpen(false)}>

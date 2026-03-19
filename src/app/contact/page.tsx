@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -40,6 +40,23 @@ export default function ContactPage() {
               <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
                 前往 {item.label}
               </a>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Fast entry"
+        title="如果你知道要談哪一類專案，可以直接用對應主旨開始。"
+        description="參考高轉換 B2B contact 頁常見做法，把『如何開口』也一起設計掉，降低第一次寄信阻力。"
+      >
+        <div className="card-grid three-up">
+          {contactIntentCards.map((item) => (
+            <article key={item.title} className="feature-surface contact-intent-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <a href={item.href} className="button-secondary inline-button">{item.cta}</a>
             </article>
           ))}
         </div>

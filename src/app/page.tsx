@@ -26,6 +26,7 @@ import {
   engagementSteps,
   homepageTrustStrip,
   homepageBuyerSignals,
+  competitiveInsights,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -227,6 +228,26 @@ export default function Home() {
               <span className="mini-label accent">Buyer signal</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Competitive learnings"
+        title="這一版不是憑感覺堆內容，而是內化近年的 B2B / SaaS 官網共同做法。"
+        description="本輪參考 Powered by Search、Amply、Axon Garside 等案例整理，把值得沿用的首頁原則直接轉成道易自己的設計守則。"
+      >
+        <div className="card-grid three-up competitive-insight-grid">
+          {competitiveInsights.map((item) => (
+            <article key={item.title} className="feature-surface competitive-insight-card">
+              <span className="mini-label accent">{item.source}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <div className="competitive-insight-application">
+                <strong>如何用在道易</strong>
+                <p>{item.application}</p>
+              </div>
             </article>
           ))}
         </div>
