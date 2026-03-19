@@ -34,6 +34,28 @@ export const heroClients = [
   { name: "跨域品牌團隊", context: "B2B 官網升級" },
 ];
 
+export const homepageTrustStrip = [
+  { label: "Response SLA", value: "24h 內回覆具體下一步" },
+  { label: "Start option", value: "3 欄 Quick Brief / Email 皆可" },
+  { label: "Project types", value: "官網、AI、知識平台、DPP" },
+  { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
+];
+
+export const homepageBuyerSignals = [
+  {
+    title: "你們是做網站，還是做系統 / AI？",
+    detail: "道易不是只做頁面，而是把品牌訊息、資料欄位、流程與交付節奏一起整合；適合需要同時處理官網、平台、AI 或 DPP 的團隊。",
+  },
+  {
+    title: "第一次聯絡會不會只得到很空泛的回覆？",
+    detail: "首頁直接寫清楚 24h 回覆 SLA、30 分鐘對焦會議與 first-offer 診斷，降低 B2B 採購常見的不確定感。",
+  },
+  {
+    title: "案例很多，但能不能快速判斷跟我有沒有關？",
+    detail: "先用角色切口、代表案例與成果訊號做首頁分流，讓品牌、營運、永續三種決策者都能快速找到自己的起點。",
+  },
+];
+
 export const heroDecisionMetrics = [
   {
     label: "首次回覆",

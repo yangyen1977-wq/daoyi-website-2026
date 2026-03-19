@@ -24,6 +24,8 @@ import {
   evidenceMatrix,
   engagementPackages,
   engagementSteps,
+  homepageTrustStrip,
+  homepageBuyerSignals,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -91,6 +93,19 @@ export default function Home() {
                 </a>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage-trust-strip" aria-label="道易合作信任條件">
+        <div className="shell">
+          <div className="homepage-trust-strip-grid">
+            {homepageTrustStrip.map((item) => (
+              <article key={item.label} className="homepage-trust-chip">
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -196,6 +211,22 @@ export default function Home() {
               <Link href={item.href} className="button-secondary inline-button">
                 {item.cta}
               </Link>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="決策者常見疑問"
+        title="成熟 B2B 官網不是只展示，而是先快速解除決策疑慮。"
+        description="這輪參考 Amply、Axon Garside 與多個技術型官網案例，補上 buyer-side 常見問題，讓首頁更像一個可快速判斷的業務入口。"
+      >
+        <div className="card-grid three-up buyer-signal-grid">
+          {homepageBuyerSignals.map((item) => (
+            <article key={item.title} className="feature-surface buyer-signal-card">
+              <span className="mini-label accent">Buyer signal</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
             </article>
           ))}
         </div>

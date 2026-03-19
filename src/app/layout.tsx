@@ -79,7 +79,7 @@ const structuredData = [
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | B2B 官網・AI・知識平台・DPP 數位解決方案`,
+    default: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台與 DPP 解決方案`,
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,

@@ -375,6 +375,54 @@ a:hover {
   font-weight: 600;
 }
 
+.homepage-trust-strip {
+  padding: 12px 0 8px;
+}
+
+.homepage-trust-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.homepage-trust-chip {
+  padding: 16px 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 8px;
+}
+
+.homepage-trust-chip span {
+  color: rgba(232, 238, 247, 0.7);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.homepage-trust-chip strong {
+  color: #f4f8ff;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.buyer-signal-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.buyer-signal-card h3 {
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.buyer-signal-grid {
+  margin-top: 6px;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -1978,7 +2026,8 @@ a:hover {
   .fit-grid,
   .mobile-experience-grid,
   .case-story-grid,
-  .contact-fast-facts {
+  .contact-fast-facts,
+  .homepage-trust-strip-grid {
     grid-template-columns: 1fr;
   }
   .snapshot-grid,
