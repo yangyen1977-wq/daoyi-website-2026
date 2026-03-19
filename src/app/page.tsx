@@ -3,10 +3,8 @@ import {
   cases,
   caseSnapshots,
   clientSegments,
-  evidenceMatrix,
   differentiators,
   faqs,
-  insightTopics,
   processSteps,
   proofPoints,
   siteConfig,
@@ -17,14 +15,8 @@ import {
   engagementSteps,
   fitSignals,
   seoGuardrails,
-  conversionGuardrails,
-  competitiveInsights,
   engagementPackages,
-  decisionSignals,
-  trustSignals,
-  deliveryTracks,
   homepageContactProof,
-  proofNarratives,
   auditOffer,
   urgencySignals,
   homepageCaseStories,
@@ -167,42 +159,37 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="首頁該先說清楚什麼"
-        title="先把成交真正需要的三件事拉到前面。"
-        description="本輪把競品學習濃縮成更直接的首頁原則：先清楚定位，再提供證據，最後把下一步講明白。"
+        eyebrow="證據閱讀方式"
+        title="先分清楚什麼是已交付能力、什麼是 benchmark、什麼是合作起點。"
+        description="參考 ALM、Blend 與高轉換 B2B SaaS 官網常見做法：把 proof 的層級講清楚，首頁才不會像把所有亮點一次塞滿。"
       >
-        <div className="card-grid three-up">
-          {competitiveInsights.map((insight) => (
-            <article key={insight.source} className="card competitive-card">
-              <span className="mini-label accent">{insight.source}</span>
-              <h3>{insight.title}</h3>
-              <p>{insight.application}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="B2B 信任結構"
-        title="把優秀 agency / SaaS 官網常見的信任訊號，濃縮成更容易下判斷的首屏後段。"
-        description="這一段參考 Makers、Contractbook、Blend 與 Digital Silk 的共通模式：把交付方式、轉換證據與 mobile-ready 承諾拉到訪客還沒流失前。"
-      >
-        <div className="card-grid three-up trust-grid">
-          {trustSignals.map((item) => (
-            <article key={item.title} className="card trust-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="logo-chip-row" aria-label="代表合作情境">
-          {heroClients.map((client) => (
-            <div key={client.name} className="logo-chip">
-              <strong>{client.name}</strong>
-              <span>{client.context}</span>
-            </div>
-          ))}
+        <div className="homepage-proof-protocol">
+          <div className="feature-surface proof-protocol-summary">
+            <span className="mini-label accent">Proof protocol</span>
+            <h3>道易首頁現在只保留三種最重要的判斷訊號。</h3>
+            <ul className="bullet-list compact">
+              <li>已交付樣態：說明道易真的做過哪些類型的交付。</li>
+              <li>專案 benchmark：作為策略參考，不假裝成既有客戶成效。</li>
+              <li>合作起點：直接告訴訪客現在可以怎麼開始。</li>
+            </ul>
+          </div>
+          <div className="logo-chip-row" aria-label="代表合作情境">
+            {heroClients.map((client) => (
+              <div key={client.name} className="logo-chip">
+                <strong>{client.name}</strong>
+                <span>{client.context}</span>
+              </div>
+            ))}
+          </div>
+          <div className="card-grid three-up">
+            {caseProofFormat.map((item) => (
+              <article key={item.title} className="card proof-narrative-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -387,22 +374,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="案例證據怎麼讀"
-        title="把成果分清楚，首頁證據才會更可信。"
-        description="這輪把 proof 不再混成一團，而是明確標示已上線成果、benchmark 與交付樣板，幫決策者更快判斷內容可信度。"
-      >
-        <div className="card-grid three-up">
-          {caseProofFormat.map((item) => (
-            <article key={item.title} className="card proof-narrative-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
       <Section eyebrow="客戶評語" title="第三方視角：客戶怎麼看道易的交付方式？">
         <div className="testimonial-grid">
           {testimonials.map((item) => (
@@ -476,27 +447,7 @@ export default function Home() {
       </Section>
 
 
-      <Section
-        eyebrow="Delivery tracks"
-        title="先決定這次合作是要補清楚品牌說服、系統導入，還是上線後優化。"
-        description="參考成熟 B2B agency 首頁常見的 service packaging，把交付切成三種容易理解的起點，讓潛在客戶更快判斷要從哪裡開始。"
-      >
-        <div className="card-grid three-up">
-          {deliveryTracks.map((track) => (
-            <article key={track.title} className="card package-card delivery-track-card">
-              <h3>{track.title}</h3>
-              <p>{track.summary}</p>
-              <ul className="bullet-list compact">
-                {track.outputs.map((output) => (
-                  <li key={output}>{output}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="方法論" title="讓系統真正上線並持續運作，需要比開發更完整的節奏。">
+      <Section eyebrow="交付節奏" title="合作不是抽象顧問，而是有清楚起點、節奏與驗收的 sprint。">
         <div className="card-grid four-up">
           {processSteps.map((step) => (
             <article key={step.step} className="card process-card">
@@ -514,17 +465,6 @@ export default function Home() {
             <article key={item.title} className="card">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="洞察內容" title="未來可延伸成 SEO 與專業信任兼具的內容欄位。">
-        <div className="stack-list">
-          {insightTopics.map((topic) => (
-            <article key={topic} className="stack-item">
-              <h3>{topic}</h3>
-              <p>適合延伸為品牌觀點、客戶教育與搜尋流量入口內容。</p>
             </article>
           ))}
         </div>

@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 AI、資料與品牌官網，做成能成交也能維運的數位系統",
+  heroTitle: "B2B 官網、AI 與 DPP，一次做成能成交也能維運的系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把價值主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整理成決策者看得懂、團隊接得住、後續也能持續成長的網站與平台。",
+    "給 B2B 品牌、製造業與研究型組織：道易把價值主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者更快判斷、團隊更容易落地。",
 };
 
 export const navItems = [
