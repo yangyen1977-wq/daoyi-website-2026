@@ -1,12 +1,25 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
   description: "聯絡道易科技，討論 AI、知識平台、DPP 與品牌官網等數位專案需求。24 小時內提供下一步建議與會議安排。",
   alternates: { canonical: "/contact" },
+};
+
+const contactFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: contactFaqs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
 };
 
 export default function ContactPage() {
@@ -71,6 +84,15 @@ export default function ContactPage() {
           {contactCommitments.map((item) => (
             <article key={item.title} className="card">
               <span className="mini-label accent">Contact SLA</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="card-grid three-up homepage-response-grid contact-response-grid">
+          {homepageResponseTimeline.map((item) => (
+            <article key={item.step} className="feature-surface homepage-response-card">
+              <span className="mini-label accent">{item.step}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
@@ -175,6 +197,25 @@ export default function ContactPage() {
           </div>
         </div>
       </Section>
+
+      <section className="section-block faq-block">
+        <div className="shell narrow">
+          <div className="section-heading">
+            <span className="section-eyebrow">Contact FAQ</span>
+            <h2>第一次聯絡前，決策者最常問的三個問題。</h2>
+            <p>把回覆速度、保密流程與專案起點先說清楚，通常能讓有效詢問更快發生。</p>
+          </div>
+          <div className="faq-list">
+            {contactFaqs.map((item) => (
+              <article key={item.question} className="faq-item">
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactFaqSchema) }} />
+      </section>
     </main>
   );
 }

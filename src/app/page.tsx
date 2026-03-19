@@ -28,6 +28,7 @@ import {
   homepageBuyerSignals,
   competitiveInsights,
   homepageHeuristicScorecard,
+  homepageResponseTimeline,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -274,6 +275,22 @@ export default function Home() {
           {homepageBuyerSignals.map((item) => (
             <article key={item.title} className="feature-surface buyer-signal-card">
               <span className="mini-label accent">Buyer signal</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Contact timeline"
+        title="把第一次詢問到可執行下一步的節奏，直接在首頁說清楚。"
+        description="參考 Stan Vision 與 2025-2026 多個高轉換 B2B / agency contact flow，買方最需要的不是更多形容詞，而是明確知道：送出後會發生什麼。"
+      >
+        <div className="card-grid three-up homepage-response-grid">
+          {homepageResponseTimeline.map((item) => (
+            <article key={item.step} className="feature-surface homepage-response-card">
+              <span className="mini-label accent">{item.step}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>

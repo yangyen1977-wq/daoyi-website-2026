@@ -949,6 +949,39 @@ export const homepageHeuristicScorecard = [
   },
 ];
 
+export const homepageResponseTimeline = [
+  {
+    step: "0-5 分鐘",
+    title: "完成 brief 或寄出 Email",
+    detail: "延續 Stan Vision 與 Amply 常見的低摩擦 contact pattern：先讓買方快速起步，而不是一開始就卡在冗長表單。",
+  },
+  {
+    step: "24 小時內",
+    title: "收到具體下一步與建議切入點",
+    detail: "參考高轉換 B2B / agency contact 頁，明確揭露 response SLA、建議時段與需要補的資料，降低石沉大海的不安。",
+  },
+  {
+    step: "首次會議後",
+    title: "拿到優先順序、風險與推薦 sprint",
+    detail: "不是只停在『後續再聯絡』，而是讓第一次接洽就能形成可執行的品牌 / AI / 平台 / DPP 啟動方向。",
+  },
+];
+
+export const contactFaqs = [
+  {
+    question: "第一次聯絡後，大概多久會收到回覆？",
+    answer: "一般會在 24 小時內收到具體下一步、建議會議時段，以及需要補充的網址、簡報或資料清單。",
+  },
+  {
+    question: "如果專案內容敏感，能先簽 NDA 嗎？",
+    answer: "可以。若涉及客戶資料、法規文件、採購或內部流程內容，可先 NDA 再安排進一步討論。",
+  },
+  {
+    question: "我還不確定要先做官網、AI 還是 DPP，也適合聯絡嗎？",
+    answer: "適合。道易會先用 30 分鐘對焦會議協助判斷哪一條 sprint 最適合作為第一步，再進入後續提案或診斷。",
+  },
+];
+
 export const quickBriefAssistPoints = [
   "不確定要先做官網、AI 還是 DPP，也可以先寄一封 Email。",
   "會先回覆建議切入點、會議時段與需要補的資料，不只回『收到』。",
