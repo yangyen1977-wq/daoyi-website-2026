@@ -84,6 +84,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  referrer: "origin-when-cross-origin",
   keywords: [
     "道易科技",
     "DaoYi Technology",
@@ -103,6 +104,9 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   alternates: {
     canonical: "/",
+    languages: {
+      "zh-TW": "/",
+    },
   },
   openGraph: {
     type: "website",
@@ -111,11 +115,31 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} | AI・知識平台・DPP 數位解決方案`,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/assets/daoyi-logo.png",
+        width: 512,
+        height: 512,
+        alt: `${siteConfig.name} logo`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | AI・知識平台・DPP 數位解決方案`,
     description: siteConfig.description,
+    images: ["/assets/daoyi-logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   category: "technology",
 };

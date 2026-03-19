@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig, stats } from "@/lib/site";
+import { heroDecisionMetrics, siteConfig, stats } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
@@ -63,6 +63,16 @@ export function Hero() {
             <Link href="/solutions" className="button-secondary button-large">
               先看解決方案
             </Link>
+          </div>
+
+          <div className="hero-inline-proof-grid" aria-label="首次接洽重點">
+            {heroDecisionMetrics.map((item) => (
+              <article key={item.label} className="hero-inline-proof-card">
+                <span className="mini-label accent">{item.label}</span>
+                <strong>{item.value}</strong>
+                <p>{item.detail}</p>
+              </article>
+            ))}
           </div>
 
           <div className="hero-cta-note">適合想在 2026 年重做 B2B 官網、資料平台、DPP 或 AI 專案的企業與機構。</div>

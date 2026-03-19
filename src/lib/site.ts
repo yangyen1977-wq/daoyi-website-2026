@@ -34,6 +34,48 @@ export const heroClients = [
   { name: "跨域品牌團隊", context: "B2B 官網升級" },
 ];
 
+export const heroDecisionMetrics = [
+  {
+    label: "首次回覆",
+    value: "24h",
+    detail: "會附建議切入點、時段與待補資料，不只回『收到』。",
+  },
+  {
+    label: "第一次會議",
+    value: "30 分鐘",
+    detail: "用案例、欄位與風險對焦，快速判斷先做官網、AI、平台或 DPP。",
+  },
+  {
+    label: "起手交付",
+    value: "3 欄 brief",
+    detail: "保留低摩擦進站路徑，也提供 Email 備援 CTA。",
+  },
+];
+
+export const homepageContactRoutes = [
+  {
+    label: "Quick Brief",
+    title: "想先拿到具體下一步",
+    detail: "直接用 3 欄 brief 送出目標、公司與焦點，最快進入討論。",
+    cta: "送出 brief",
+    href: "/#quick-brief",
+  },
+  {
+    label: "Email fallback",
+    title: "案子敏感、想先文字釐清",
+    detail: "可先用 Email 補網址、簡報、法規文件或 NDA 需求，再安排會議。",
+    cta: "先寄 Email",
+    href: `mailto:${siteConfig.email}`,
+  },
+  {
+    label: "Decision support",
+    title: "還不確定該先做官網、AI、還是 DPP",
+    detail: "首頁會先幫你判斷適合的 sprint 與交付方向，減少第一次詢問的不確定感。",
+    cta: "看啟動方式",
+    href: "/contact",
+  },
+];
+
 export const trustSignals = [
   {
     label: "Trusted workflow",

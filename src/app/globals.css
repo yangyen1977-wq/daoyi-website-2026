@@ -212,6 +212,47 @@ a:hover {
   margin-top: 16px;
 }
 
+.hero-inline-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0 6px;
+}
+
+.hero-inline-proof-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.hero-inline-proof-card strong {
+  display: block;
+  margin: 8px 0 10px;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.hero-inline-proof-card p {
+  color: #c9d4e3;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.homepage-contact-route-grid {
+  margin-top: 18px;
+}
+
+.homepage-contact-route-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.homepage-contact-route-card .inline-button {
+  align-self: flex-start;
+}
+
 .header-cta,
 .button-primary {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
@@ -2018,7 +2059,8 @@ a:hover {
   .hero-proof-bar {
     padding: 14px;
   }
-  .hero-proof-metrics {
+  .hero-proof-metrics,
+  .hero-inline-proof-grid {
     grid-template-columns: 1fr;
   }
   .preview-tabs {

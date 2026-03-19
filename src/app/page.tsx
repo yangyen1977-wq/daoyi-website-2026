@@ -33,6 +33,8 @@ import {
   contactFastFacts,
   contactCommitments,
   contactPrepChecklist,
+  homepageContactRoutes,
+  heroDecisionMetrics,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -82,6 +84,44 @@ export default function Home() {
   return (
     <main>
       <Hero />
+
+      <Section
+        eyebrow="First-response 設計"
+        title="讓第一次接洽更像拿到判斷依據，而不是丟一封沒有下文的詢問。"
+        description="這輪參考 Amply、Webstacks、Proofmap 常見做法：把 response SLA、聯絡分流與 first deliverable 提前放在 hero 後面，讓高考量 B2B 專案更容易開始。"
+      >
+        <div className="card-grid three-up">
+          {heroDecisionMetrics.map((item) => (
+            <article key={item.label} className="card proof-narrative-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.value}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="card-grid three-up homepage-contact-route-grid">
+          {homepageContactRoutes.map((item) => {
+            const isExternal = item.href.startsWith("mailto:");
+
+            return (
+              <article key={item.title} className="feature-surface homepage-contact-route-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+                {isExternal ? (
+                  <a href={item.href} className="button-secondary inline-button">
+                    {item.cta}
+                  </a>
+                ) : (
+                  <Link href={item.href} className="button-secondary inline-button">
+                    {item.cta}
+                  </Link>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </Section>
 
       <Section
         eyebrow="品牌摘要"
