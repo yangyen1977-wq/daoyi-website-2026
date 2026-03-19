@@ -29,6 +29,8 @@ import {
   urgencySignals,
   homepageCaseStories,
   homepageDecisionCards,
+  caseProofFormat,
+  contactFastFacts,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
