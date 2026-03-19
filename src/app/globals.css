@@ -302,6 +302,43 @@ a:hover {
   padding: 42px 0 60px;
 }
 
+.homepage-jump-nav {
+  margin-top: -12px;
+  padding-bottom: 8px;
+}
+
+.homepage-jump-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow);
+}
+
+.homepage-jump-link-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.homepage-jump-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ecf4ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -2140,5 +2177,16 @@ a:hover {
   .logo-chip-row,
   .contact-proof-list {
     display: grid;
+  }
+  .homepage-jump-nav {
+    margin-top: -4px;
+  }
+  .homepage-jump-nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .homepage-jump-link-row {
+    width: 100%;
+    justify-content: flex-start;
   }
 }

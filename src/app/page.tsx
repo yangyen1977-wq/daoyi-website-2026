@@ -2,10 +2,8 @@ import Link from "next/link";
 import {
   cases,
   caseSnapshots,
-  clientSegments,
   differentiators,
   faqs,
-  processSteps,
   proofPoints,
   siteConfig,
   heroClients,
@@ -15,9 +13,8 @@ import {
   engagementSteps,
   fitSignals,
   seoGuardrails,
-  engagementPackages,
-  homepageContactProof,
   auditOffer,
+  homepageContactProof,
   urgencySignals,
   homepageCaseStories,
   homepageDecisionCards,
@@ -73,10 +70,31 @@ const caseSnapshotSchema = {
   })),
 };
 
+const homepageJumpLinks = [
+  { label: "看案例證據", href: "#proof-ledger" },
+  { label: "看適合哪條 sprint", href: "#decision-paths" },
+  { label: "直接送出 brief", href: "#quick-brief" },
+];
+
 export default function Home() {
   return (
     <main>
       <Hero />
+
+      <section className="homepage-jump-nav" aria-label="首頁快速導覽">
+        <div className="shell">
+          <div className="homepage-jump-nav-inner">
+            <span className="mini-label accent">Quick path</span>
+            <div className="homepage-jump-link-row">
+              {homepageJumpLinks.map((item) => (
+                <a key={item.href} href={item.href} className="homepage-jump-link">
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Section
         eyebrow="First-response 設計"
@@ -141,6 +159,7 @@ export default function Home() {
       </Section>
 
       <Section
+        id="proof-ledger"
         eyebrow="案例證據先講"
         title="先讓訪客看到道易到底交付過哪一類成果。"
         description="參考 ALM / Webflow / Axon Garside 常見做法，把抽象能力改成可辨識的『交付樣態 + 可驗證內容』，補強首頁的真實感。"
@@ -194,6 +213,7 @@ export default function Home() {
       </Section>
 
       <Section
+        id="decision-paths"
         eyebrow="下一步判斷"
         title="先幫訪客判斷：現在最該從哪個切口開始。"
         description="參考 Blend、Amply 與技術型 B2B 官網常見做法，把『適合誰、先做什麼、為什麼現在值得聯絡』濃縮成同一段，讓首頁更像決策輔助，而不是資訊陳列。"
@@ -405,61 +425,11 @@ export default function Home() {
         <PersonaPlaybook />
       </Section>
 
-      <Section eyebrow="合作場景" title="依你所在的產業與任務，給出最適合的下一步。">
-        <div className="card-grid three-up">
-          {clientSegments.map((segment) => (
-            <article key={segment.title} className="card segment-card">
-              <span className="mini-label accent">{segment.title}</span>
-              <h3>{segment.description}</h3>
-              <ul className="bullet-list compact">
-                {segment.benefits.map((benefit) => (
-                  <li key={benefit}>{benefit}</li>
-                ))}
-              </ul>
-              <Link href={segment.href} className="button-secondary segment-cta">
-                {segment.cta}
-              </Link>
-            </article>
-          ))}
-        </div>
-      </Section>
-
       <Section
-        eyebrow="Engagement packages"
-        title="把服務講清楚：不同階段的客戶，應該怎麼開始合作。"
-        description="參考 Blend / Webflow 對 agency 首頁的共通做法，把可購買的起點、交付內容與適合情境寫清楚，降低第一次接洽的不確定感。"
+        eyebrow="為什麼值得談"
+        title="把差異講短一點，但更像決策資訊，而不是補充閱讀。"
+        description="本輪刻意拿掉首頁後段多組重複服務敘事，把真正有助於決策的差異收斂成三點。"
       >
-        <div className="card-grid three-up">
-          {engagementPackages.map((pkg) => (
-            <article key={pkg.title} className="card package-card">
-              <span className="mini-label accent">{pkg.timeline}</span>
-              <h3>{pkg.title}</h3>
-              <p>{pkg.summary}</p>
-              <ul className="bullet-list compact">
-                {pkg.outputs.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <strong>{pkg.fit}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-
-      <Section eyebrow="交付節奏" title="合作不是抽象顧問，而是有清楚起點、節奏與驗收的 sprint。">
-        <div className="card-grid four-up">
-          {processSteps.map((step) => (
-            <article key={step.step} className="card process-card">
-              <span className="step-index">{step.step}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="為什麼是道易" title="我們擅長的，不只是做出東西，而是把方向、結構與交付一起校準。">
         <div className="card-grid three-up">
           {differentiators.map((item) => (
             <article key={item.title} className="card">
