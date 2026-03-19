@@ -65,7 +65,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="hero-cta-note">適合想在 2026 年重做品牌官網、資料平台或 AI 專案的企業與機構。</div>
+          <div className="hero-cta-note">適合想在 2026 年重做 B2B 官網、資料平台、DPP 或 AI 專案的企業與機構。</div>
 
           <HeroProofBar />
 

@@ -1984,7 +1984,37 @@ a:hover {
   line-height: 1.5;
 }
 
+.contact-readiness-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px;
+}
+
+.contact-commitments-grid,
+.contact-prep-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-commitment-card {
+  min-height: 100%;
+}
+
+.contact-commitment-card h3,
+.contact-prep-grid h3 {
+  margin-top: 10px;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.contact-prep-grid .prep-card {
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
 @media (max-width: 760px) {
+  .contact-readiness-grid {
+    grid-template-columns: 1fr;
+  }
   .hero-proof-bar {
     padding: 14px;
   }

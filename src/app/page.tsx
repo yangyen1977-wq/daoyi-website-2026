@@ -31,6 +31,8 @@ import {
   homepageDecisionCards,
   caseProofFormat,
   contactFastFacts,
+  contactCommitments,
+  contactPrepChecklist,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -488,6 +490,37 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </section>
 
+
+      <Section
+        eyebrow="先把風險講清楚"
+        title="第一次聯絡前最在意的三件事，也直接在首頁回答。"
+        description="參考 2026 高轉換 B2B / SaaS 官網的 friction-reduction 做法，把回覆速度、第一次會議準備與 NDA / 敏感資料顧慮寫清楚，降低第一次詢問門檻。"
+      >
+        <div className="contact-readiness-grid">
+          <div className="contact-commitments-grid">
+            {contactCommitments.map((item) => (
+              <article key={item.title} className="feature-surface contact-commitment-card">
+                <span className="mini-label accent">Risk removal</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <div className="contact-prep-grid">
+            {contactPrepChecklist.map((group) => (
+              <article key={group.title} className="card prep-card">
+                <span className="mini-label accent">Meeting readiness</span>
+                <h3>{group.title}</h3>
+                <ul className="bullet-list compact">
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       <Section id="quick-brief" eyebrow="快速提案" title="用三個欄位交出專案簡報，5 分鐘內收到回覆。">
         <div className="quick-brief-grid">
