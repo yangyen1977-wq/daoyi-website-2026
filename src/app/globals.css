@@ -415,6 +415,36 @@ a:hover {
   line-height: 1.55;
 }
 
+.homepage-fit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.homepage-fit-card {
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
+}
+
+.homepage-fit-card h3,
+.homepage-first-week-card h3 {
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.homepage-first-week-grid {
+  margin-top: 6px;
+}
+
+.homepage-first-week-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
 .homepage-outcome-grid {
   margin-top: 6px;
 }
@@ -2087,7 +2117,8 @@ a:hover {
   .mobile-experience-grid,
   .case-story-grid,
   .contact-fast-facts,
-  .homepage-trust-strip-grid {
+  .homepage-trust-strip-grid,
+  .homepage-fit-grid {
     grid-template-columns: 1fr;
   }
   .snapshot-grid,

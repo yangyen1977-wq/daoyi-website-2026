@@ -25,6 +25,8 @@ import {
   engagementPackages,
   engagementSteps,
   homepageTrustStrip,
+  homepageFitAssessment,
+  homepageFirstWeekDeliverables,
   homepageOutcomeSignals,
   homepageBuyerSignals,
   competitiveInsights,
@@ -138,6 +140,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Fit check"
+        title="先幫訪客判斷：現在談，會不會太早？"
+        description="參考 Directive、Axon Garside 與近年高轉換 B2B 首頁的 self-qualification 做法，把『適合現在談』與『還沒準備好也能怎麼開始』提早講清楚，降低猶豫與錯配。"
+      >
+        <div className="homepage-fit-grid">
+          {homepageFitAssessment.map((group) => (
+            <article key={group.title} className="feature-surface homepage-fit-card">
+              <span className="mini-label accent">{group.label}</span>
+              <h3>{group.title}</h3>
+              <ul className="bullet-list compact">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="First 7 days"
+        title="第一次接洽後的一週內，會拿到什麼？"
+        description="把 contact promise 寫成可預期交付，延續 Proofmap 與 B2B SaaS case-study 常見的 persistent CTA / clear next step 原則，讓第一次詢問更像進入合作流程，而不是把資料丟進黑洞。"
+      >
+        <div className="card-grid three-up homepage-first-week-grid">
+          {homepageFirstWeekDeliverables.map((item) => (
+            <article key={item.title} className="card homepage-first-week-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="What improves first"

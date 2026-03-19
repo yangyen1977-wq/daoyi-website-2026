@@ -41,6 +41,45 @@ export const homepageTrustStrip = [
   { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
 ];
 
+export const homepageFitAssessment = [
+  {
+    label: "Ideal fit",
+    title: "適合現在就談的情況",
+    items: [
+      "舊站已有流量，但詢問品質、案例說服力或成交節奏偏弱。",
+      "要同時處理品牌官網、AI / 資料流程或 DPP，而不是只做單點頁面。",
+      "希望第一次接洽就拿到優先順序、風險與建議 sprint，而不是空泛報價。",
+    ],
+  },
+  {
+    label: "Not yet",
+    title: "如果還沒準備好，也可以先從這裡開始",
+    items: [
+      "只有模糊方向，還沒想清楚先做官網、AI、平台或 DPP。",
+      "案例、簡報、舊站內容分散，想先整理出可討論版本。",
+      "專案涉及採購、法遵或敏感資料，想先 Email / NDA 再進一步。",
+    ],
+  },
+];
+
+export const homepageFirstWeekDeliverables = [
+  {
+    label: "Day 1",
+    title: "收到回覆與建議切入點",
+    detail: "24h 內回覆會議時段、待補資料與最可能的啟動方向，避免石沉大海。",
+  },
+  {
+    label: "Day 3",
+    title: "看到優先順序與阻力盤點",
+    detail: "先整理 hero、案例證據、CTA、資料欄位或 DPP 準備度，讓團隊知道先改哪裡最划算。",
+  },
+  {
+    label: "Day 7",
+    title: "拿到推薦 sprint 與起手交付",
+    detail: "把品牌澄清、AI / 資料流程、知識平台或 DPP traceability 拆成可開始的第一輪計畫。",
+  },
+];
+
 export const homepageOutcomeSignals = [
   {
     label: "Pipeline clarity",
