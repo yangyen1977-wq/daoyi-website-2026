@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { heroDecisionMetrics, siteConfig, stats } from "@/lib/site";
+import { heroContactLadder, heroDecisionMetrics, heroFitSignals, siteConfig, stats } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
@@ -75,6 +75,29 @@ export function Hero() {
             ))}
           </div>
 
+          <div className="hero-decision-rail" aria-label="聯絡路徑選擇">
+            {heroContactLadder.map((item) => {
+              const isExternal = item.href.startsWith("mailto:");
+
+              return (
+                <article key={item.title} className="hero-route-card">
+                  <span className="mini-label accent">{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                  {isExternal ? (
+                    <a href={item.href} className="button-secondary inline-button">
+                      {item.cta}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="button-secondary inline-button">
+                      {item.cta}
+                    </Link>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+
           <div className="hero-cta-note">適合想在 2026 年重做 B2B 官網、資料平台、DPP 或 AI 專案的企業與機構。</div>
 
           <HeroProofBar />
@@ -93,6 +116,15 @@ export function Hero() {
             <strong>道易科技不只做網站，也不只做 AI；而是把策略、資料、介面與交付節奏一起做對。</strong>
             <ul className="bullet-list compact hero-highlight-list">
               {heroHighlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="hero-panel-card fit-card">
+            <span className="mini-label accent">Project fit check</span>
+            <h3>如果你符合下面任兩項，通常就值得先談。</h3>
+            <ul className="bullet-list compact hero-fit-list">
+              {heroFitSignals.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>

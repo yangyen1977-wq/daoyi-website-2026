@@ -382,6 +382,39 @@ a:hover {
   margin-top: 10px;
 }
 
+.hero-decision-rail {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hero-route-card {
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  display: grid;
+  gap: 10px;
+}
+
+.hero-route-card h3 {
+  color: #f5fbff;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.hero-route-card p {
+  color: #c9d9ea;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.hero-route-card .inline-button {
+  margin-top: 2px;
+  width: fit-content;
+}
+
 .hero-cta-note {
   margin-top: 14px;
   color: #d8e4f1;
@@ -586,6 +619,20 @@ a:hover {
   color: #c0cedd;
 }
 
+.fit-card h3 {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: #f4f8ff;
+}
+
+.hero-fit-list {
+  margin-top: 14px;
+}
+
+.hero-fit-list li {
+  color: #d9e6f2;
+}
+
 .hero-highlight-list {
   margin-top: 14px;
 }
@@ -726,7 +773,8 @@ a:hover {
   .hero-story {
     grid-template-columns: 1fr;
   }
-  .hero-clarity-checklist {
+  .hero-clarity-checklist,
+  .hero-decision-rail {
     grid-template-columns: 1fr;
   }
   .hero-action-cards {

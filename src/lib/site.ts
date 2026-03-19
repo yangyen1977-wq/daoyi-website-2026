@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "B2B 官網、DPP、AI 系統一次做對",
+  heroTitle: "把 AI、資料與品牌官網，做成能成交也能維運的數位系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：把價值主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整理成更容易理解、也更容易成交的數位系統。",
+    "給 B2B 品牌、製造業與研究型組織：道易把價值主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整理成決策者看得懂、團隊接得住、後續也能持續成長的網站與平台。",
 };
 
 export const navItems = [
@@ -50,6 +50,36 @@ export const heroDecisionMetrics = [
     value: "3 欄 brief",
     detail: "保留低摩擦進站路徑，也提供 Email 備援 CTA。",
   },
+];
+
+export const heroContactLadder = [
+  {
+    label: "最快開始",
+    title: "3 欄 Quick Brief 先丟需求",
+    detail: "適合已知道要改官網、補案例頁、做 AI 導入或 DPP 規劃的團隊。",
+    cta: "送出 brief",
+    href: "/#quick-brief",
+  },
+  {
+    label: "敏感專案",
+    title: "先用 Email 補網址、簡報或 NDA",
+    detail: "如果牽涉採購、法遵、永續審查或現有系統文件，可先文字釐清。",
+    cta: "先寄 Email",
+    href: `mailto:${siteConfig.email}`,
+  },
+  {
+    label: "還在判斷",
+    title: "先看哪一條 sprint 最適合你",
+    detail: "把品牌澄清、系統資料與 DPP traceability 拆成可開始的三條路。",
+    cta: "看啟動方式",
+    href: "/contact",
+  },
+];
+
+export const heroFitSignals = [
+  "舊站流量有了，但詢問品質與說服力不夠。",
+  "案例很多，卻還是難讓採購、法遵或高層快速理解價值。",
+  "要同時處理品牌官網、資料流程、AI 或 DPP，而不是單點做頁面。",
 ];
 
 export const homepageContactRoutes = [
