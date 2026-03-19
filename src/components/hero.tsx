@@ -35,21 +35,21 @@ export function Hero() {
 
           <div className="hero-story">
             <article className="hero-story-card">
-              <span className="mini-label">Before 改版</span>
-              <h3>6.4 秒載入、0.8% Signup</h3>
-              <p>舊站 hero 沒講清楚，也沒有可點 CTA，訪客得滑到第三屏才知道如何聯絡。</p>
+              <span className="mini-label">Before</span>
+              <h3>舊站常見的三個阻力</h3>
               <ul>
-                <li>影片拖慢 LCP，42% 訪客沒看到 CTA。</li>
-                <li>案例證明藏在頁尾，信任感不足。</li>
+                <li>價值主張太晚出現，第一次進站看不懂重點。</li>
+                <li>案例與成果分散，難以快速建立信任。</li>
+                <li>聯絡入口太深，手機上更容易中途離開。</li>
               </ul>
             </article>
             <article className="hero-story-card hero-story-card--after">
-              <span className="mini-label accent">After 道易版本</span>
-              <h3>15 秒互動 demo + 首屏證據</h3>
-              <p>把敘事式 hero、真實 KPI 與互動預覽放在第一視窗，並加入 sticky CTA。</p>
+              <span className="mini-label accent">After</span>
+              <h3>道易想交付的首頁狀態</h3>
               <ul>
-                <li>首屏展示 +32% activation 的案例數據。</li>
-                <li>行動版 thumb-zone CTA，永遠在拇指可及範圍。</li>
+                <li>第一視窗先說清楚你是誰、做什麼、為何值得談。</li>
+                <li>代表案例與成果緊貼 CTA，降低決策不確定感。</li>
+                <li>桌機與手機都能在最少步驟內進入聯絡或提案流程。</li>
               </ul>
             </article>
           </div>

@@ -106,34 +106,16 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="2026 轉換守則"
-        title="把 ALM / Veza 研究直接寫進網站的行動守則。"
-        description="依據 ALM Corp、Baymard 與 Veza Digital 的 2026 SaaS 官網研究，把 hero 社會證明、產品優先視覺、RWD 與 Bento 分眾做法變成固定流程。"
-      >
-        <div className="card-grid four-up">
-          {conversionGuardrails.map((guardrail) => (
-            <article key={guardrail.title} className="card">
-              <span className="mini-label accent">{guardrail.signal}</span>
-              <h3>{guardrail.title}</h3>
-              <p>{guardrail.description}</p>
-              <small className="quick-brief-hint">{guardrail.source}</small>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="競品洞察"
-        title="每小時更新的 B2B 樣板 → 道易官網的落地清單。"
-        description="整理 Amply、PoweredBySearch 與 Axon Garside 最新文章中值得抄的元素，確認我們的 hero、案例與 RWD 真的跟得上 2026 標準。"
+        eyebrow="首頁該先說清楚什麼"
+        title="先把成交真正需要的三件事拉到前面。"
+        description="本輪把競品學習濃縮成更直接的首頁原則：先清楚定位，再提供證據，最後把下一步講明白。"
       >
         <div className="card-grid three-up">
           {competitiveInsights.map((insight) => (
             <article key={insight.source} className="card competitive-card">
               <span className="mini-label accent">{insight.source}</span>
               <h3>{insight.title}</h3>
-              <p>{insight.detail}</p>
-              <small className="quick-brief-hint">{insight.application}</small>
+              <p>{insight.application}</p>
             </article>
           ))}
         </div>
@@ -345,38 +327,16 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="Evidence matrix"
-        title="把訪客真正會拿來判斷的三件事，直接排進同一個決策區。"
-        description="這輪把競品常見的 clarity / proof / RWD conversion 三件套再往前推，讓首頁在更短時間內完成說明、建立信任、提供下一步。"
+        eyebrow="案例證據怎麼讀"
+        title="把成果分清楚，首頁證據才會更可信。"
+        description="這輪把 proof 不再混成一團，而是明確標示已上線成果、benchmark 與交付樣板，幫決策者更快判斷內容可信度。"
       >
         <div className="card-grid three-up">
-          {evidenceMatrix.map((item) => (
-            <article key={item.title} className="card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.metric}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Proof architecture"
-        title="把高轉換 B2B 官網的證據排序，翻成道易自己的成交結構。"
-        description="這一段承接 ALM、SaaSHero 與 Veza Digital 的共通做法：證據不該散落，而要剛好出現在訪客準備下判斷的地方。"
-      >
-        <div className="card-grid three-up">
-          {proofNarratives.map((item) => (
+          {caseProofFormat.map((item) => (
             <article key={item.title} className="card proof-narrative-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <ul className="bullet-list compact">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
+              <p>{item.detail}</p>
             </article>
           ))}
         </div>
@@ -454,21 +414,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Decision support"
-        title="先處理決策焦慮，潛在客戶才會真的留下來。"
-        description="優秀 B2B / SaaS 官網不只展示能力，也會把『為什麼現在該開始』說清楚。"
-      >
-        <div className="card-grid three-up">
-          {decisionSignals.map((item) => (
-            <article key={item.title} className="feature-surface decision-card">
-              <span className="mini-label">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       <Section
         eyebrow="Delivery tracks"
@@ -555,6 +500,14 @@ export default function Home() {
               <li>我們會回覆 30 分鐘線上討論時段或提供初步規劃重點。</li>
               <li>若需要 NDA，可在郵件內直接附上或索取模板。</li>
             </ul>
+            <div className="contact-fast-facts" aria-label="聯絡重點">
+              {contactFastFacts.map((item) => (
+                <div key={item.label} className="contact-fast-fact">
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                </div>
+              ))}
+            </div>
             <div className="contact-proof-list">
               {homepageContactProof.map((item) => (
                 <p key={item} className="contact-proof-pill">{item}</p>

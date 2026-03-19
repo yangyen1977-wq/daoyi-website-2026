@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技專注 B2B AI 應用、製造業與研究型知識平台、數位產品護照 DPP 與客製化系統整合，協助企業把複雜資料轉化為可運作、可維運、可成長的數位成果。",
+    "道易科技專注 B2B AI 應用、研究型知識平台、數位產品護照 DPP 與客製化系統整合，協助企業把複雜資料轉化為可運作、可維運、可成長的數位成果。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把品牌、資料與 AI 做成會成交的數位系統",
+  heroTitle: "把品牌、資料與 AI 做成真正能上線的數位系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：把 Amply 2026、PoweredBySearch 與 Axon Garside 研究的行動守則寫進網站，讓價值主張、案例證據、行動優先 CTA 與可維運架構在第一屏就建立信任並推進詢問。",
+    "給 B2B 品牌、製造業與研究型組織：從價值主張、案例證據、RWD 體驗到 Contact 轉換，一次整理成更容易理解、也更容易成交的官網與數位服務。",
 };
 
 export const navItems = [
