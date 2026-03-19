@@ -28,6 +28,7 @@ import {
   homepageBenchmarkSignals,
   homepageFitAssessment,
   homepageFirstWeekDeliverables,
+  homepageSwitchSignals,
   homepageOutcomeSignals,
   homepageBuyerSignals,
   competitiveInsights,
@@ -177,6 +178,26 @@ export default function Home() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Why mature teams switch"
+        title="2026 的優秀 B2B 官網，已經不是公司簡介，而是更像會工作的 pipeline asset。"
+        description="整理自 Blend、Bop Design、Amply、Superside 常見的高表現做法：比起講自己會什麼，成熟團隊更在意網站能不能更快建立信任、支援內容營運與產生高品質對話。"
+      >
+        <div className="card-grid three-up homepage-benchmark-grid">
+          {homepageSwitchSignals.map((item) => (
+            <article key={item.title} className="feature-surface homepage-benchmark-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <div className="homepage-benchmark-proof">
+                <strong>這版沿用的原則</strong>
+                <p>{item.proof}</p>
+              </div>
             </article>
           ))}
         </div>

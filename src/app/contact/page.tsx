@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline, contactHeroChecklist } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline, contactHeroChecklist, contactRouteAssurances } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -110,6 +110,15 @@ export default function ContactPage() {
           {homepageResponseTimeline.map((item) => (
             <article key={item.step} className="feature-surface homepage-response-card">
               <span className="mini-label accent">{item.step}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="card-grid three-up homepage-response-grid contact-response-grid">
+          {contactRouteAssurances.map((item) => (
+            <article key={item.title} className="feature-surface homepage-response-card">
+              <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>

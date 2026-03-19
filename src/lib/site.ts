@@ -83,6 +83,27 @@ export const homepageFitAssessment = [
   },
 ];
 
+export const homepageSwitchSignals = [
+  {
+    label: "From brochure to pipeline",
+    title: "不是把官網做漂亮，而是讓網站更像可持續工作的業務資產。",
+    detail: "參考 Blend、Bop Design 常見的高表現 B2B 站點，成熟團隊通常不只要求視覺升級，而是要求網站能更快建立信任、支援內容營運，並帶來更高品質的詢問。",
+    proof: "案例需有真實客戶、具體結果與可追溯交付，不只抽象『品牌升級』。",
+  },
+  {
+    label: "From services to proof",
+    title: "服務介紹要退到第二層，第一層先讓買方看到做過什麼、怎麼開始。",
+    detail: "Amply、ClarityDX、Superside 這類網站共同點都很明顯：首頁先交代 ICP、代表案例、成果與 CTA，再把完整服務內容留到 deeper pages。",
+    proof: "首屏後先看到 proof、process 與 next step，能明顯降低第一次接洽的不確定感。",
+  },
+  {
+    label: "From desktop-first to mobile-first",
+    title: "手機版優先保留決策資訊與 contact path，而不是把桌機內容縮小塞滿。",
+    detail: "2026 的 B2B 決策流量很多來自手機初訪；因此 thumb-zone CTA、短表單、response SLA 與代表成果必須在短距離內被看到。",
+    proof: "對道易來說，就是首頁前段保留 brief、Email fallback、案例訊號與 first-response promise。",
+  },
+];
+
 export const homepageFirstWeekDeliverables = [
   {
     label: "Day 1",
@@ -299,6 +320,24 @@ export const contactIntentCards = [
     detail: "適合永續、法遵、採購或製造團隊先確認欄位藍圖、QR 體驗與審查輸出包。",
     cta: "寄出 DPP 需求",
     href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("想討論 DPP / Traceability 規劃")}`,
+  },
+];
+
+export const contactRouteAssurances = [
+  {
+    label: "Low-friction start",
+    title: "先用 3 欄 brief 開始，也不會被導向冗長流程。",
+    detail: "保留最短啟動路徑，讓第一次接洽更像取得下一步，而不是填一張大表單。",
+  },
+  {
+    label: "Sensitive projects",
+    title: "若專案敏感，可直接 Email + NDA，再安排後續會議。",
+    detail: "把法遵、採購、既有客戶資料或內部流程限制提早納入，不逼對方先公開太多資訊。",
+  },
+  {
+    label: "Specific next step",
+    title: "留下資料後，會知道何時回覆、要補什麼、第一輪會拿到什麼。",
+    detail: "這是優秀 B2B contact 頁的關鍵：先消除不確定感，再提高有效詢問率。",
   },
 ];
 
