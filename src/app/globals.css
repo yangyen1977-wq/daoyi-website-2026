@@ -415,6 +415,25 @@ a:hover {
   line-height: 1.55;
 }
 
+.homepage-why-now-grid {
+  margin-top: 6px;
+}
+
+.homepage-why-now-card {
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
+}
+
+.homepage-why-now-card h3 {
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.homepage-why-now-card .bullet-list {
+  margin-top: 2px;
+}
+
 .buyer-signal-card {
   display: grid;
   gap: 12px;

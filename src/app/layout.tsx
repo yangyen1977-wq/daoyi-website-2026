@@ -79,7 +79,7 @@ const structuredData = [
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台與 DPP 解決方案`,
+    default: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
@@ -112,8 +112,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_TW",
     url: siteConfig.url,
-    title: `${siteConfig.name} | AI・知識平台・DPP 數位解決方案`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} | B2B 官網、AI、知識平台、DPP 與資料流程整合`,
+    description: "給需要同時處理品牌主張、案例證據、RWD 體驗、AI 導入與 DPP / Traceability 的 B2B 團隊，先把可交付成果與下一步講清楚。",
     siteName: siteConfig.name,
     images: [
       {
@@ -126,8 +126,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | AI・知識平台・DPP 數位解決方案`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} | B2B 官網、AI、知識平台與 DPP 數位解決方案`,
+    description: "把品牌主張、案例證據、資料流程、RWD 與 Contact 轉換整成同一套可交付方案。",
     images: ["/assets/daoyi-logo.png"],
   },
   robots: {

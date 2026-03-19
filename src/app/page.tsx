@@ -74,9 +74,34 @@ const caseSnapshotSchema = {
 };
 
 const homepageJumpLinks = [
+  { label: "看現在適不適合談", href: "#why-now" },
   { label: "看案例證據", href: "#proof-ledger" },
   { label: "看合作起點", href: "#decision-paths" },
   { label: "直接送出 brief", href: "#quick-brief" },
+];
+
+const homepageWhyNowCards = [
+  {
+    label: "Clarity first",
+    title: "先讓決策者 5 秒內知道：道易不是單點外包，而是把官網、資料與流程一起做對。",
+    detail:
+      "參考 2025-2026 B2B / SaaS 首頁共同做法，這版把 target buyer、可交付樣態與 first response 承諾都提早放到首頁前段，減少第一次接觸的不確定感。",
+    bullets: ["Who + what + outcome 的 hero 結構", "Response SLA 與聯絡路徑提前揭露", "案例證據不再埋在後段"],
+  },
+  {
+    label: "Proof before pitch",
+    title: "把『會做什麼』改成『已交付哪些成果樣態』，首頁更像業務證據頁。",
+    detail:
+      "從 Axon Garside、Huemor、Marketer Milk 常提到的高轉換結構裡，最值得沿用的是 proof 先於長文：先看到案例型態、交付內容與成果訊號，再決定要不要深入讀。",
+    bullets: ["Challenge → solution → outcome 敘事", "案例快照與 proof ledger 併排", "CTA 靠近社會證明與交付節奏"],
+  },
+  {
+    label: "Mobile conversion",
+    title: "手機版不是縮小桌機，而是第一次詢問最容易發生的現場。",
+    detail:
+      "因此這版持續強化 quick brief、sticky CTA、thumb-zone 導覽與 contact fast facts，讓使用者在手機上也能快速完成第一步，不必一直來回找入口。",
+    bullets: ["主 CTA 保留在拇指區", "3 欄 brief 降低第一次詢問阻力", "Contact 承諾與 NDA 流程提前說清楚"],
+  },
 ];
 
 export default function Home() {
@@ -111,6 +136,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        id="why-now"
+        eyebrow="Why DaoYi / Why now"
+        title="高轉換 B2B 官網的共同特徵，不是更花，而是更快讓人做出下一步判斷。"
+        description="這輪把 Axon Garside、Huemor、Marketer Milk 提到的共通原則轉成道易首頁前段結構：先清楚、再證據、最後才是延伸閱讀。"
+      >
+        <div className="card-grid three-up homepage-why-now-grid">
+          {homepageWhyNowCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-why-now-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <ul className="bullet-list compact">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="First-response 設計"
