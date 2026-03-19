@@ -82,12 +82,14 @@ export function QuickBriefForm() {
         </select>
       </label>
 
-      <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟已填好的 DaoYi 專案詢問郵件">
-        開啟已填好的專案郵件
-      </button>
-      <a className="button-secondary inline-button" href={`mailto:${siteConfig.email}`}>
-        先用 Email 問問題
-      </a>
+      <div className="quick-brief-action-group">
+        <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟已填好的 DaoYi 專案詢問郵件">
+          開啟已填好的專案郵件
+        </button>
+        <a className="button-secondary inline-button" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論專案方向")}`}>
+          先用 Email 問問題
+        </a>
+      </div>
       <div className="quick-brief-assist-list" aria-label="聯絡輔助說明">
         {quickBriefAssistPoints.map((item) => (
           <p key={item} className="quick-brief-assist-pill">{item}</p>

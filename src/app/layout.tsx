@@ -96,6 +96,8 @@ export const metadata: Metadata = {
     "系統整合",
     "品牌官網設計",
     "B2B 官網改版",
+    "製造業官網改版",
+    "B2B SaaS 網站設計",
     "DPP 顧問",
     "AI 網站開發",
   ],

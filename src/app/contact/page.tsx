@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline, contactHeroChecklist } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -38,6 +38,23 @@ export default function ContactPage() {
                 <span>{item.label}</span>
                 <strong>{item.value}</strong>
               </div>
+            ))}
+          </div>
+
+          <div className="contact-hero-actions">
+            <a className="button-primary button-large" href="#quick-brief">直接送出 Quick Brief</a>
+            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("想和道易討論新專案")}`}>
+              先用 Email 開始
+            </a>
+          </div>
+
+          <div className="contact-hero-checklist" aria-label="第一次聯絡建議準備">
+            {contactHeroChecklist.map((item) => (
+              <article key={item.title} className="contact-hero-checklist-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </article>
             ))}
           </div>
         </div>
