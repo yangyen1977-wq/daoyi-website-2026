@@ -27,6 +27,7 @@ import {
   homepageTrustStrip,
   homepageBuyerSignals,
   competitiveInsights,
+  homepageHeuristicScorecard,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -247,6 +248,26 @@ export default function Home() {
               <div className="competitive-insight-application">
                 <strong>如何用在道易</strong>
                 <p>{item.application}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Homepage heuristic"
+        title="把外部研究直接翻成一份 3 分鐘可判讀的首頁檢查表。"
+        description="這段刻意做成 decision tool，而不是長段落介紹：讓第一次來的 B2B 決策者更快確認這個網站是否值得往下談。"
+      >
+        <div className="card-grid two-up homepage-heuristic-grid">
+          {homepageHeuristicScorecard.map((item) => (
+            <article key={item.title} className="feature-surface homepage-heuristic-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <div className="competitive-insight-application">
+                <strong>這版如何落地</strong>
+                <p>{item.action}</p>
               </div>
             </article>
           ))}
