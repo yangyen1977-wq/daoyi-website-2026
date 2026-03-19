@@ -749,3 +749,39 @@ export const contactTrustNotes = [
   "若已有舊站、提案、法規文件或流程圖，可直接附在郵件裡。",
   "道易會先協助界定優先順序，不會一開始就把專案做大。",
 ];
+
+export const homepageDecisionCards = [
+  {
+    label: "Brand clarity sprint",
+    title: "舊站有流量，但訪客還是不知道你到底強在哪裡",
+    detail: "先改 hero、案例排序、CTA 與導覽節奏，讓第一次進站的人 5 秒內知道你是誰、為誰服務、下一步怎麼做。",
+    benchmark: "首屏 clarity + case KPI + 雙 CTA",
+    proof: "Amply / Blend 類型研究：清楚 headline + early proof 能明顯提升 demo / contact intent。",
+    cta: "先看品牌衝刺",
+    href: "/solutions",
+  },
+  {
+    label: "Ops / AI enablement",
+    title: "AI / 系統方向對了，但資料欄位、流程與驗收還沒對齊",
+    detail: "把資料 contract、角色責任、交付節點與 demo 路徑先講清楚，避免導入後半段才發現卡在流程。",
+    benchmark: "資料流 + SOP + MVP 驗收節點",
+    proof: "高轉換 B2B 技術官網會把 solution、use case 與實際交付一起呈現，而不是只列功能。",
+    cta: "看 AI / 系統方案",
+    href: "/solutions",
+  },
+  {
+    label: "Contact conversion",
+    title: "有興趣的人不少，但聯絡入口太弱、第一次詢問阻力太高",
+    detail: "把 3 欄 brief、Email 備用 CTA、24h 回覆承諾與首次交付內容放在同一區，降低『先留資料會不會石沉大海』的不安。",
+    benchmark: "3 欄 brief + 次要 CTA + 回覆 SLA",
+    proof: "Baymard / ALM 常見結論：短表單與明確 next step，比抽象「聯絡我們」更容易拿到有效線索。",
+    cta: "直接前往 Contact",
+    href: "/contact",
+  },
+];
+
+export const quickBriefAssistPoints = [
+  "不確定要先做官網、AI 還是 DPP，也可以先寄一封 Email。",
+  "會先回覆建議切入點、會議時段與需要補的資料，不只回『收到』。",
+  "若案子敏感，可直接在第一封信要求 NDA。",
+];

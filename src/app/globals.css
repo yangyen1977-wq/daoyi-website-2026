@@ -1939,6 +1939,51 @@ a:hover {
   color: #ffffff;
 }
 
+.homepage-decision-card {
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
+}
+
+.decision-card-meta {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(93, 228, 215, 0.1);
+  border: 1px solid rgba(86, 168, 255, 0.16);
+}
+
+.decision-card-meta strong {
+  color: #0d2844;
+  font-size: 0.95rem;
+}
+
+.decision-card-meta small {
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.inline-button {
+  width: fit-content;
+}
+
+.quick-brief-assist-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-brief-assist-pill {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(93, 228, 215, 0.12);
+  border: 1px solid rgba(86, 168, 255, 0.16);
+  color: var(--text-body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
 @media (max-width: 760px) {
   .hero-proof-bar {
     padding: 14px;

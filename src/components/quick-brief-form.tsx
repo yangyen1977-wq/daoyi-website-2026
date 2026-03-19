@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { siteConfig } from "@/lib/site";
+import { quickBriefAssistPoints, siteConfig } from "@/lib/site";
 
 const projectFocusOptions = [
   "品牌官網重構 / 提升詢問量",
@@ -71,8 +71,16 @@ export function QuickBriefForm() {
       <button type="submit" className="button-primary button-large" disabled={isDisabled}>
         送出 5 分鐘簡報
       </button>
+      <a className="button-secondary inline-button" href={`mailto:${siteConfig.email}`}>
+        先用 Email 問問題
+      </a>
+      <div className="quick-brief-assist-list" aria-label="聯絡輔助說明">
+        {quickBriefAssistPoints.map((item) => (
+          <p key={item} className="quick-brief-assist-pill">{item}</p>
+        ))}
+      </div>
       <small className="quick-brief-hint">ALM Corp 追蹤 200+ SaaS 官網後指出，表單少於 4 欄且有次要 CTA，可把 Qualified Leads 提升 18-32%。</small>
-      <small className="quick-brief-hint">提交後會開啟郵件，預先填好主旨與內容，可再補充細節。</small>
+      <small className="quick-brief-hint">提交後會開啟郵件，預先填好主旨與內容；若不想先填表，也可直接用 Email 開始。</small>
     </form>
   );
 }

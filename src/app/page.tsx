@@ -28,6 +28,7 @@ import {
   auditOffer,
   urgencySignals,
   homepageCaseStories,
+  homepageDecisionCards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -156,6 +157,29 @@ export default function Home() {
               <strong>{client.name}</strong>
               <span>{client.context}</span>
             </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="下一步判斷"
+        title="先幫訪客判斷：現在最該從哪個切口開始。"
+        description="參考 Blend、Amply 與技術型 B2B 官網常見做法，把『適合誰、先做什麼、為什麼現在值得聯絡』濃縮成同一段，讓首頁更像決策輔助，而不是資訊陳列。"
+      >
+        <div className="card-grid three-up homepage-decision-grid">
+          {homepageDecisionCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-decision-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <div className="decision-card-meta">
+                <strong>{item.benchmark}</strong>
+                <small>{item.proof}</small>
+              </div>
+              <Link href={item.href} className="button-secondary inline-button">
+                {item.cta}
+              </Link>
+            </article>
           ))}
         </div>
       </Section>
