@@ -125,6 +125,30 @@ export const contactFastFacts = [
   { label: "合作起步", value: "先診斷再提案" },
 ];
 
+export const verifiedProofLedger = [
+  {
+    label: "已交付樣態",
+    title: "研究 / 典藏知識平台",
+    proof: "跨欄位檢索、版本脈絡、API 擴充規劃",
+    detail: "把文本、書目、版本與人物資料整理成可查詢、可視覺化、可再利用的平台架構。",
+    confidence: "真實交付能力",
+  },
+  {
+    label: "已交付樣態",
+    title: "AI 視覺流程導入",
+    proof: "YOLO 辨識接到現場流程與 SOP",
+    detail: "不是只展示模型，而是把辨識結果納入作業節點、驗收方式與後續維運。",
+    confidence: "真實交付能力",
+  },
+  {
+    label: "已交付樣態",
+    title: "DPP / Traceability 規劃",
+    proof: "欄位藍圖、QR 體驗、審查輸出包",
+    detail: "把永續、採購、法遵需要的資料鏈整理成更容易啟動的第一版交付。",
+    confidence: "真實交付能力",
+  },
+];
+
 export const homepageCaseStories = [
   {
     label: "Brand website",

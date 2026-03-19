@@ -45,7 +45,7 @@ export function QuickBriefForm() {
     <form id="quick-brief" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
       <span className="mini-label accent">Baymard：3 欄 CTA 最少阻力</span>
       <h3>快速丟出專案重點</h3>
-      <p>Baymard / ALM 2026 研究指出，縮短欄位與自動生成郵件草稿可以把 demo 請求拉高 20% 以上，因此這裡只問姓名、公司與本次焦點。若你是要談品牌官網、案例頁強化或 Contact 轉換，這份 brief 也能直接用。</p>
+      <p>這裡只問姓名、公司與本次焦點，讓第一次聯絡維持低摩擦。若你要談品牌官網、案例頁強化、AI 導入或 DPP，這份 brief 都能直接開始。</p>
 
       <label className="form-field">
         <span>姓名</span>

@@ -35,6 +35,7 @@ import {
   contactPrepChecklist,
   homepageContactRoutes,
   heroDecisionMetrics,
+  verifiedProofLedger,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -144,6 +145,24 @@ export default function Home() {
               <li>重視長期維運、可擴充性與轉換效率</li>
             </ul>
           </div>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="案例證據先講"
+        title="先讓訪客看到道易到底交付過哪一類成果。"
+        description="參考 ALM / Webflow / Axon Garside 常見做法，把抽象能力改成可辨識的『交付樣態 + 可驗證內容』，補強首頁的真實感。"
+      >
+        <div className="card-grid three-up proof-ledger-grid">
+          {verifiedProofLedger.map((item) => (
+            <article key={item.title} className="card proof-ledger-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <strong>{item.proof}</strong>
+              <p>{item.detail}</p>
+              <small>{item.confidence}</small>
+            </article>
+          ))}
         </div>
       </Section>
 

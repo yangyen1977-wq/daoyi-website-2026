@@ -1147,6 +1147,29 @@ a:hover {
   background: linear-gradient(180deg, #ffffff, #f4f8ff);
 }
 
+.proof-ledger-grid {
+  margin-top: 4px;
+}
+
+.proof-ledger-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+  background: linear-gradient(180deg, #ffffff, #f6faff);
+}
+
+.proof-ledger-card strong {
+  color: #0d223c;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.proof-ledger-card small {
+  color: #0c5671;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
 .prep-card {
   min-height: 100%;
 }

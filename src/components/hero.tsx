@@ -6,8 +6,8 @@ import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 import { HeroActionPlan } from "@/components/hero-action-plan";
 
 const heroHighlights = [
-  "釐清價值主張與導覽策略",
-  "把 AI、資料與流程整合成可用系統",
+  "先把價值主張與案例證據講清楚",
+  "把 AI、資料與流程整理成可交付系統",
   "兼顧品牌說服力、RWD 與後續維運",
 ];
 
