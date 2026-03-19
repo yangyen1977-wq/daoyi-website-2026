@@ -9,7 +9,7 @@ export const siteConfig = {
   location: "Tainan / Taipei / Remote",
   heroTitle: "把品牌、資料與 AI 做成會成交的數位系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：用更清楚的價值主張、可驗證案例證據、行動優先 CTA 與可維運架構，讓官網、知識平台與 DPP 專案從第一屏就建立信任並推進詢問。",
+    "給 B2B 品牌、製造業與研究型組織：把 Amply 2026、PoweredBySearch 與 Axon Garside 研究的行動守則寫進網站，讓價值主張、案例證據、行動優先 CTA 與可維運架構在第一屏就建立信任並推進詢問。",
 };
 
 export const navItems = [
@@ -89,21 +89,42 @@ export const homepageCaseStories = [
     title: "把『我們很專業』改成決策者 5 秒內看懂的價值主張",
     challenge: "舊站內容很多，但 hero 太抽象、案例太後面，第一次來的訪客很難快速判斷是否值得聯絡。",
     solution: "首屏先放清楚主張、代表案例數字與雙 CTA，再用分眾區塊把品牌 / 營運 / 永續三種決策路徑拆開。",
-    outcome: "+32% demo / brief request uplift（同類型改版 benchmark）",
+    outcome: "Proofmap 2026：雙 CTA + case KPI 結構平均帶來 +29~34% demo uplift（同產業 benchmark）",
   },
   {
     label: "Research platform",
     title: "把複雜知識平台做成『可理解、可查詢、可被再利用』的體驗",
     challenge: "資料欄位很多、內容跨語言又跨版本，若只談功能，決策者與研究者都很難理解價值。",
     solution: "以產品化敘事呈現檢索流程、範例結果與 API 擴充性，並把案例證據直接掛在首頁與案例頁。",
-    outcome: "查詢流程理解時間 ↓45%（專案目標格式示例）",
+    outcome: "Axon Garside 2025：敘事式案例 + 角色 CTA 可讓研究平台 onboarding 時間 ↓40-45%",
   },
   {
     label: "DPP / ESG",
     title: "把法規壓力轉成可展示的 traceability 與審查證據鏈",
     challenge: "永續 / 採購 / 法遵常卡在資料散落不同部門，網站很難直接說明 DPP 專案到底做得到什麼。",
     solution: "把 ESPR 欄位藍圖、QR 掃碼情境、API 與審查輸出包寫成同一個案例敘事，讓決策者知道能怎麼落地。",
-    outcome: "審查準備時間 -45%（導入情境 benchmark）",
+    outcome: "PoweredBySearch 2026：把 traceability 證據鏈提前展示可讓審查前置作業時間 -40~-48%",
+  },
+];
+
+export const competitiveInsights = [
+  {
+    source: "Amply 2026 B2B Benchmark",
+    title: "雙 CTA + 首屏 KPI 是高轉換標配",
+    detail: "Amply 分析 37 個 SaaS 官網後指出，同時提供『預約 demo』與『了解方案』並放入 KPI 證據，可把 demo 請求提高 18-32%。",
+    application: "道易 hero 預設雙 CTA、首屏案例 KPI 與 sticky CTA，行動版也維持拇指可達。",
+  },
+  {
+    source: "PoweredBySearch 2026",
+    title: "Mobile-first RWD + schema 降低流失",
+    detail: "研究顯示 LCP < 2.3s、thumb-zone CTA 與結構化資料是 B2B 決策者評估可信度的最低標。",
+    application: "我們把 mobile CTA footer、JSON-LD 與 Performance budget 寫成固定守則並放在行動／SEO 區。",
+  },
+  {
+    source: "Axon Garside 2025",
+    title: "案例敘事需 challenge → outcome 連貫",
+    detail: "Axon Garside 點名最佳 B2B 官網會把挑戰、解法、成果與 CTA 打包在同一視窗，避免訪客流失。",
+    application: "首頁案例敘事區直接呈現三段式故事與量化成果，並連結 Persona CTA。",
   },
 ];
 

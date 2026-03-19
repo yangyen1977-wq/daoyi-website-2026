@@ -18,6 +18,7 @@ import {
   fitSignals,
   seoGuardrails,
   conversionGuardrails,
+  competitiveInsights,
   engagementPackages,
   decisionSignals,
   trustSignals,
@@ -113,6 +114,23 @@ export default function Home() {
               <h3>{guardrail.title}</h3>
               <p>{guardrail.description}</p>
               <small className="quick-brief-hint">{guardrail.source}</small>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="競品洞察"
+        title="每小時更新的 B2B 樣板 → 道易官網的落地清單。"
+        description="整理 Amply、PoweredBySearch 與 Axon Garside 最新文章中值得抄的元素，確認我們的 hero、案例與 RWD 真的跟得上 2026 標準。"
+      >
+        <div className="card-grid three-up">
+          {competitiveInsights.map((insight) => (
+            <article key={insight.source} className="card competitive-card">
+              <span className="mini-label accent">{insight.source}</span>
+              <h3>{insight.title}</h3>
+              <p>{insight.detail}</p>
+              <small className="quick-brief-hint">{insight.application}</small>
             </article>
           ))}
         </div>

@@ -769,6 +769,13 @@ a:hover {
   margin: 10px 0;
 }
 
+.competitive-card small {
+  display: block;
+  margin-top: 12px;
+  color: var(--text-body);
+  font-size: 0.85rem;
+}
+
 .case-card strong,
 .contact-callout strong {
   display: block;
