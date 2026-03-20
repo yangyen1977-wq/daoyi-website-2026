@@ -2923,6 +2923,25 @@ a:hover {
     width: 100%;
     justify-content: flex-start;
   }
+  .homepage-jump-link {
+    width: 100%;
+    justify-content: center;
+  }
+  .homepage-trust-strip {
+    padding: 8px 0 4px;
+  }
+  .homepage-trust-chip {
+    padding: 14px 16px;
+    border-radius: 18px;
+  }
+  .conversion-panel {
+    padding: 22px;
+    border-radius: 24px;
+  }
+  .conversion-actions .button-primary,
+  .conversion-actions .button-secondary {
+    width: 100%;
+  }
   .engagement-step-strip {
     grid-template-columns: 1fr;
   }

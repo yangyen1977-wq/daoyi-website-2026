@@ -44,7 +44,6 @@ import { CaseSnapshots } from "@/components/case-snapshots";
 import { CaseOverviewStats } from "@/components/case-overview-stats";
 import { ConversionCTA } from "@/components/conversion-cta";
 import { MobileCtaPreview } from "@/components/mobile-cta-preview";
-import { PersonaPlaybook } from "@/components/persona-playbook";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -343,14 +342,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </Section>
-
-      <Section
-        eyebrow="Persona CTA"
-        title="不同決策角色，不該看到完全一樣的第一步。"
-        description="參考 Wynter、Databox 與近年高轉換 B2B 首頁常見做法，把 buyer intent 做成可切換的 role-based CTA，讓品牌、營運與永續角色更快找到對應入口。"
-      >
-        <PersonaPlaybook />
       </Section>
 
       <Section
