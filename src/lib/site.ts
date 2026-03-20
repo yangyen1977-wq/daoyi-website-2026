@@ -7,10 +7,54 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把官網、AI 與 DPP 做成更快成交的 B2B 決策系統",
+  heroTitle: "把官網、AI 與 DPP 整成更容易成交的 B2B 決策系統",
   heroDescription:
     "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者在第一屏就看懂你們做什麼、做過什麼，以及現在最適合怎麼開始。",
 };
+
+export const homepagePatternSignals = [
+  {
+    label: "What top B2B sites do",
+    title: "先把買方會問的第一句講完，再讓視覺加分。",
+    detail: "從 Webflow 2026 SaaS 精選、Axon Garside 與 Blend 對技術型網站的整理來看，高表現首頁共通點都是先說清楚：誰、解什麼問題、下一步是什麼。",
+    proof: "Hero = ICP + outcome + low-friction CTA",
+  },
+  {
+    label: "Proof pattern",
+    title: "案例證據要靠近 CTA，而不是埋在作品集深處。",
+    detail: "Contractbook、Makers 這類 B2B 站都把 social proof、案例摘要與量化結果提早放，讓第一次進站的人不用先翻完整案例頁才建立信任。",
+    proof: "Case snapshot + quantified outcome + CTA in one scan",
+  },
+  {
+    label: "Mobile pattern",
+    title: "手機版優先保留『立即開始』，不是把桌機長頁等比縮小。",
+    detail: "高轉換做法通常會把 response SLA、sticky CTA、短表單與 Email fallback 放在拇指可達區，先服務第一次詢問，而不是先展示所有內容。",
+    proof: "Thumb-zone CTA + short form + reassurance",
+  },
+];
+
+export const homepageBeforeAfterRows = [
+  {
+    topic: "價值主張",
+    before: "只看得出會做網站或 AI，但不容易立刻理解整體價值。",
+    after: "直接講清楚：道易把官網、資料流程、AI 與 DPP 整成可交付系統。",
+  },
+  {
+    topic: "案例證據",
+    before: "案例像作品集摘要，訪客要自己拼湊哪些能力真的做過。",
+    after: "先用交付樣態、成果訊號與代表場景建立信任，再延伸到完整案例頁。",
+  },
+  {
+    topic: "Contact 轉換",
+    before: "只有『聯絡我們』，不知道留資料後會得到什麼。",
+    after: "同步揭露 24h 回覆、30 分鐘對焦、Quick Brief 與 Email + NDA 路徑。",
+  },
+  {
+    topic: "RWD / 手機版",
+    before: "桌機內容縮小後偏長，第一次詢問入口不夠前面。",
+    after: "手機首屏附近先保留 CTA、proof 與 reassurance，讓行動流量能快速起步。",
+  },
+];
 
 export const homepageDecisionFlashcards = [
   {

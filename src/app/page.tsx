@@ -37,6 +37,8 @@ import {
   homepageHeuristicScorecard,
   heroClients,
   homepageDecisionFlashcards,
+  homepagePatternSignals,
+  homepageBeforeAfterRows,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -208,6 +210,44 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Competitor patterns applied"
+        title="把 2025–2026 優秀 B2B / SaaS 官網的共同做法，直接翻成道易首頁可用的判斷模組。"
+        description="這輪吸收 Webflow、Axon Garside、Blend 等常見高表現做法：先清楚、再證據、再降低第一次 contact 阻力，而不是先堆很多服務敘述。"
+      >
+        <div className="card-grid three-up homepage-pattern-grid">
+          {homepagePatternSignals.map((item) => (
+            <article key={item.title} className="feature-surface homepage-pattern-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Before / after buyer scan"
+        title="讓買方一眼看懂：這個新官網到底比傳統技術公司首頁多解決了哪些事。"
+        description="不少競品研究都指出，B2B 首頁若不能快速對照『舊做法 vs 新做法』，訪客很難立刻感受到差異。這版直接把四個最重要的差異攤開。"
+      >
+        <div className="homepage-before-after-table" role="table" aria-label="道易首頁 before after 對照">
+          <div className="homepage-before-after-header" role="row">
+            <span role="columnheader">判斷面向</span>
+            <span role="columnheader">傳統舊站常見狀態</span>
+            <span role="columnheader">道易 2026 新版做法</span>
+          </div>
+          {homepageBeforeAfterRows.map((item) => (
+            <article key={item.topic} className="homepage-before-after-row" role="row">
+              <strong role="rowheader">{item.topic}</strong>
+              <p>{item.before}</p>
+              <p>{item.after}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <section className="homepage-momentum-band" aria-label="首頁第一輪判斷依據">
         <div className="shell">

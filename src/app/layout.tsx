@@ -108,7 +108,6 @@ export const metadata: Metadata = {
     canonical: "/",
     languages: {
       "zh-TW": "/",
-      "en": "/",
     },
   },
   formatDetection: {
@@ -157,6 +156,8 @@ export const metadata: Metadata = {
   },
   other: {
     "theme-color": "#08111f",
+    "apple-mobile-web-app-capable": "yes",
+    "mobile-web-app-capable": "yes",
   },
 };
 
