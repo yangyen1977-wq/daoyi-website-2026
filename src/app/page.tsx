@@ -39,6 +39,8 @@ import {
   homepageDecisionFlashcards,
   homepagePatternSignals,
   homepageBeforeAfterRows,
+  homepageShortlistSignals,
+  homepageContactMicrocopy,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";

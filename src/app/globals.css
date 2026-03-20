@@ -2281,6 +2281,24 @@ a:hover {
   gap: 10px;
 }
 
+.mobile-cta-copy {
+  display: none;
+}
+
+.mobile-cta-copy strong {
+  display: block;
+  color: #f5fbff;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.mobile-cta-copy span {
+  display: block;
+  margin-top: 2px;
+  color: rgba(245, 251, 255, 0.72);
+  font-size: 0.72rem;
+}
+
 .mobile-cta-actions {
   flex: 1;
   display: flex;

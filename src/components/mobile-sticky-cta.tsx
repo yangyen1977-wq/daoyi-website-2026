@@ -19,6 +19,10 @@ export function MobileStickyCTA() {
   return (
     <div className="mobile-cta-bar" role="complementary" aria-label="快速行動">
       <div className="mobile-cta-content">
+        <div className="mobile-cta-copy">
+          <strong>先拿到下一步，不必先講完整個專案</strong>
+          <span>Quick Brief / Email / NDA-friendly</span>
+        </div>
         <div className="mobile-cta-actions">
           <Link href={primaryHref} className="mobile-cta-button primary">
             {primaryLabel}

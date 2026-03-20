@@ -124,6 +124,33 @@ export const homepageTrustStrip = [
   { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
 ];
 
+export const homepageShortlistSignals = [
+  {
+    label: "Shortlist reason 01",
+    title: "先讓採購 / 高層 / 專案 owner 在同一頁上快速達成共識",
+    detail: "借鏡 Directive、ThunderClap 一類高轉換 B2B 網站的做法，不先堆長篇服務，而是先把價值主張、證據與 next step 排成同一套 decision flow。",
+    proof: "定位、案例、CTA 與 response promise 需在同一輪掃讀內成立",
+  },
+  {
+    label: "Shortlist reason 02",
+    title: "首頁證據必須像業務材料，而不是作品集縮圖",
+    detail: "從近期 B2B agency / SaaS 範例可見，真正有效的首頁會把 representative outcomes、交付樣態與風險控制語言放前面，讓買方更快 shortlist。",
+    proof: "Challenge → delivery → outcome → reassurance",
+  },
+  {
+    label: "Shortlist reason 03",
+    title: "Contact 不是最後一步，而是前段就要被放心地看到",
+    detail: "Knapsack Creative 與多個 consulting contact page 都會在 CTA 附近補上 reassurance copy：回覆多久、需不需要 NDA、第一次會拿到什麼，降低第一次詢問阻力。",
+    proof: "24h 回覆、Email fallback、NDA-friendly 路徑前置",
+  },
+];
+
+export const homepageContactMicrocopy = [
+  "可先寄現有官網、提案或法規文件，不必一次講完整個專案。",
+  "若需 NDA，可先用 Email 開始，確認範圍後再安排會議。",
+  "第一次接洽的目標不是報價而已，而是先拿到優先順序與推薦 sprint。",
+];
+
 export const homepageDecisionBoard = [
   {
     label: "What buyers need first",
