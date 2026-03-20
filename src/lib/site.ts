@@ -7,10 +7,31 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP 整成更快成交的決策系統",
+  heroTitle: "把官網、AI 與 DPP 做成更快成交的 B2B 決策系統",
   heroDescription:
     "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者在第一屏就看懂你們做什麼、做過什麼，以及現在最適合怎麼開始。",
 };
+
+export const homepageDecisionFlashcards = [
+  {
+    label: "Why teams switch",
+    title: "不是再做一個漂亮官網，而是把銷售、資料與交付節奏一起整理好。",
+    detail: "參考 Blend 與 Beetle Beetle 常提到的 B2B 首頁架構，先回答決策者最常問的三件事：你們解什麼問題、已經交付過什麼、現在怎麼低風險開始。",
+    points: ["品牌主張與案例證據同時前置", "首頁先服務決策，不先堆長篇介紹", "Quick Brief 與 Email fallback 一起可見"],
+  },
+  {
+    label: "Proof pattern",
+    title: "案例要像業務證據，不是作品集縮圖。",
+    detail: "吸收 Proofmap 對 SaaS case study 的整理後，首頁前段直接把 challenge、交付與結果訊號濃縮成可掃讀卡片，讓第一次進站就能建立信任。",
+    points: ["Quick summary 先講重點", "量化結果與交付樣態一起出現", "CTA 緊貼 proof，不讓人另外找入口"],
+  },
+  {
+    label: "Mobile buyer flow",
+    title: "手機版優先保留下一步，讓第一次詢問不會卡住。",
+    detail: "雖然許多 B2B 站仍偏桌機導向，但這版持續把 mobile 當成第一次篩選現場：先讓人看到 CTA、回覆承諾與敏感專案的安全起點。",
+    points: ["thumb-zone CTA", "24h response promise above the fold", "NDA-friendly contact path"],
+  },
+];
 
 export const homepageMomentumCards = [
   {

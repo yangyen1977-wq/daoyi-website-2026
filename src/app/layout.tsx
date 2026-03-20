@@ -150,6 +150,14 @@ export const metadata: Metadata = {
     },
   },
   category: "technology",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  other: {
+    "theme-color": "#08111f",
+  },
 };
 
 export default function RootLayout({

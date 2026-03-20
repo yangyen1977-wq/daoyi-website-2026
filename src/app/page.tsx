@@ -36,6 +36,7 @@ import {
   homepageMomentumCards,
   homepageHeuristicScorecard,
   heroClients,
+  homepageDecisionFlashcards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -147,6 +148,25 @@ export default function Home() {
   return (
     <main id="main-content">
       <Hero />
+
+      <section className="homepage-flashcards" aria-label="首頁決策摘要">
+        <div className="shell">
+          <div className="homepage-flashcards-grid">
+            {homepageDecisionFlashcards.map((item) => (
+              <article key={item.title} className="feature-surface homepage-flashcard">
+                <span className="mini-label accent">{item.label}</span>
+                <h2>{item.title}</h2>
+                <p>{item.detail}</p>
+                <ul className="bullet-list compact">
+                  {item.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="homepage-jump-nav" aria-label="首頁快速導覽">
         <div className="shell">
