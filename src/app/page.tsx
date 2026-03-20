@@ -82,6 +82,24 @@ const homepageJumpLinks = [
   { label: "直接送出 brief", href: "#quick-brief" },
 ];
 
+const homepageStartNowCards = [
+  {
+    label: "適合誰先來談",
+    title: "舊站有流量，但價值主張、案例證據或 CTA 還不夠強",
+    detail: "這類型通常先從首頁訊息澄清、案例排序與 Contact 路徑優化開始，最快看出差異。",
+  },
+  {
+    label: "第一次會拿到什麼",
+    title: "不是只有報價，而是先拿到優先順序、阻力點與推薦 sprint",
+    detail: "把買方常見的不確定感直接拆掉，讓第一次接洽就更接近真正合作流程。",
+  },
+  {
+    label: "敏感專案也能開始",
+    title: "如果牽涉 NDA、採購、法遵或既有系統文件，也可先用 Email 小步開始",
+    detail: "保留低摩擦 contact flow，讓高敏感度專案不用一開始就填很長的表單。",
+  },
+];
+
 const homepageWhyNowCards = [
   {
     label: "Clarity first",
@@ -108,7 +126,7 @@ const homepageWhyNowCards = [
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
 
       <section className="homepage-jump-nav" aria-label="首頁快速導覽">
@@ -190,6 +208,21 @@ export default function Home() {
         </div>
       </Section>
 
+      <Section
+        eyebrow="Start without friction"
+        title="如果你現在就要判斷值不值得談，先看這三件事就夠。"
+        description="這輪把 Directive 與近年高轉換 B2B landing page 常見做法內化成首頁中前段的『立即開始區』：一個主要 CTA、明確 reassurance、以及敏感專案也能接受的次要路徑。"
+      >
+        <div className="card-grid three-up homepage-start-now-grid">
+          {homepageStartNowCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-start-now-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         id="why-now"

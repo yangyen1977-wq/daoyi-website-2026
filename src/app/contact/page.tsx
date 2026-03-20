@@ -35,7 +35,7 @@ const contactFaqSchema = {
 
 export default function ContactPage() {
   return (
-    <main>
+    <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Contact</span>

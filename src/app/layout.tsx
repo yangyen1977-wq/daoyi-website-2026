@@ -160,6 +160,7 @@ export default function RootLayout({
   return (
     <html lang="zh-Hant">
       <body className={geistSans.variable}>
+        <a href="#main-content" className="skip-link">跳到主要內容</a>
         <div className="site-shell">
           <SiteHeader />
           {children}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { heroContactLadder, heroDecisionMetrics, heroFitSignals, siteConfig, stats } from "@/lib/site";
+import { heroContactLadder, heroDecisionMetrics, heroFitSignals, siteConfig, stats, homepageContactProof, contactFastFacts } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
@@ -57,12 +57,12 @@ export function Hero() {
           <HeroActionPlan />
 
           <div className="hero-actions">
-            <Link href="/contact" className="button-primary button-large">
-              立即預約專案討論
+            <Link href="/#quick-brief" className="button-primary button-large">
+              立即送出 Quick Brief
             </Link>
-            <Link href="/solutions" className="button-secondary button-large">
-              先看解決方案
-            </Link>
+            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論 2026 新專案")}`}>
+              先用 Email 開始
+            </a>
           </div>
 
           <div className="hero-inline-proof-grid" aria-label="首次接洽重點">
@@ -99,6 +99,26 @@ export function Hero() {
           </div>
 
           <div className="hero-cta-note">適合想在 2026 年重做 B2B 官網、資料平台、DPP 或 AI 專案的企業與機構；若案子敏感，也可先 NDA 再往下談。</div>
+
+          <div className="hero-contact-reassurance" aria-label="第一次聯絡前的 reassurance">
+            <div className="hero-contact-reassurance-head">
+              <span className="mini-label accent">Before you contact</span>
+              <h3>先知道送出後會發生什麼，聯絡門檻就會低很多。</h3>
+            </div>
+            <div className="hero-contact-fastfacts">
+              {contactFastFacts.map((item) => (
+                <article key={item.label} className="hero-contact-fastfact-card">
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                </article>
+              ))}
+            </div>
+            <div className="hero-contact-proof-list">
+              {homepageContactProof.map((item) => (
+                <p key={item} className="hero-contact-proof-pill">{item}</p>
+              ))}
+            </div>
+          </div>
 
           <HeroProofBar />
 

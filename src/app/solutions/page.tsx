@@ -25,7 +25,7 @@ const outcomeBlocks = [
 
 export default function SolutionsPage() {
   return (
-    <main>
+    <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Solutions</span>

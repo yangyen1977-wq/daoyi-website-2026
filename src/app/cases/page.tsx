@@ -23,7 +23,7 @@ const caseProofNotes = [
 
 export default function CasesPage() {
   return (
-    <main>
+    <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Selected Cases</span>
