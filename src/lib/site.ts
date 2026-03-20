@@ -570,6 +570,39 @@ export const caseDeliveryFrames = [
   },
 ];
 
+export const caseProofSnapshots = [
+  {
+    slug: "research-platform",
+    label: "Evidence snapshot",
+    title: "跨文本與書目資料整合平台",
+    evidenceLabel: "交付樣板",
+    summary: "把文本、版本、出版社與研究脈絡整理成可查詢、可延伸、可再利用的研究平台。",
+    facts: ["場景：研究 / 典藏 / 多欄位資料", "重點交付：檢索架構、關聯瀏覽、API 擴充", "Time-to-value：先做可查詢核心，再擴充資料視圖"],
+    proofPack: ["Snapshot box：先看場景、交付、適合對象", "Flow：Challenge → structure → usable result", "CTA：對應研究平台 / 知識服務諮詢"],
+    cta: "討論知識平台案例",
+  },
+  {
+    slug: "solar-vision",
+    label: "Evidence snapshot",
+    title: "太陽能板回收辨識流程優化",
+    evidenceLabel: "已交付樣態",
+    summary: "把 YOLO 辨識模型接到現場 SOP、驗收節點與資料回饋流程，而不是停在 demo。",
+    facts: ["場景：AI 視覺 / 現場作業", "重點交付：模型流程銜接、SOP、驗收節點", "Time-to-value：先讓辨識能進入現場流程"],
+    proofPack: ["Snapshot box：誰在用、卡在哪、先改善哪段", "Flow：現場判讀落差 → 模型接流程 → 可採用節點", "CTA：對應 AI / 資料流程對焦"],
+    cta: "討論 AI 導入案例",
+  },
+  {
+    slug: "easydpp",
+    label: "Evidence snapshot",
+    title: "產品履歷與資料透明化體系",
+    evidenceLabel: "交付樣板",
+    summary: "先把 DPP 需要的欄位藍圖、QR 體驗與審查輸出包整理成能啟動的第一版。",
+    facts: ["場景：DPP / ESPR / Traceability", "重點交付：欄位藍圖、掃碼體驗、審查輸出", "Time-to-value：先接起第一版證據鏈"],
+    proofPack: ["Snapshot box：法規 / 採購 / 永續需求同框", "Flow：資料散落 → traceability blueprint → 可審查輸出", "CTA：對應 DPP / 合規規劃諮詢"],
+    cta: "討論 DPP 案例",
+  },
+];
+
 export const auditOffer = [
   {
     label: "Deliverable 01",

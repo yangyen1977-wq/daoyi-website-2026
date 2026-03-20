@@ -1,12 +1,36 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import { cases, caseDecisionChecklist, caseProofFormat, caseDeliveryFrames } from "@/lib/site";
+import {
+  cases,
+  caseDecisionChecklist,
+  caseProofFormat,
+  caseDeliveryFrames,
+  caseProofSnapshots,
+  siteConfig,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "案例實績",
   description: "查看道易科技在研究平台、AI 視覺辨識與產品資料透明化方面的案例方向。",
+  keywords: ["B2B 案例頁設計", "案例研究頁", "AI 導入案例", "知識平台案例", "DPP 案例"],
   alternates: { canonical: "/cases" },
+};
+
+const caseStudySchema = {
+  "@context": "https://schema.org",
+  "@graph": caseProofSnapshots.map((item) => ({
+    "@type": "CreativeWork",
+    name: item.title,
+    about: item.facts.join("；"),
+    abstract: item.summary,
+    url: `${siteConfig.url}/cases#${item.slug}`,
+    creator: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+  })),
 };
 
 const deliveryNotes = [
@@ -35,11 +59,43 @@ export default function CasesPage() {
       <Section
         eyebrow="案例方向"
         title="三種代表性實作，對應道易目前最有辨識度的能力版圖。"
-        description="這一版把案例頁做得更像決策頁：除了案例方向，也先說清楚證據格式、交付範圍與適用情境。"
+        description="這輪吸收 Proofmap、Amply 與近期 B2B case-study best practice：案例頁要先給 snapshot box、proof pack 與 time-to-value，而不是只列一段簡介。"
       >
-        <div className="stack-list">
+        <div className="card-grid three-up case-proof-snapshot-grid">
+          {caseProofSnapshots.map((item) => (
+            <article key={item.title} id={item.slug} className="card case-proof-snapshot-card">
+              <div className="case-proof-snapshot-head">
+                <span className="mini-label accent">{item.label}</span>
+                <span className="case-evidence-badge">{item.evidenceLabel}</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+              <div className="case-proof-snapshot-box">
+                <strong>Snapshot box</strong>
+                <ul className="bullet-list compact">
+                  {item.facts.map((fact) => (
+                    <li key={fact}>{fact}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="case-proof-pack">
+                <strong>Proof pack</strong>
+                <ul className="bullet-list compact">
+                  {item.proofPack.map((proof) => (
+                    <li key={proof}>{proof}</li>
+                  ))}
+                </ul>
+              </div>
+              <Link href="/contact" className="button-secondary inline-button">
+                {item.cta}
+              </Link>
+            </article>
+          ))}
+        </div>
+
+        <div className="stack-list case-direction-stack">
           {cases.map((item) => (
-            <article key={item.title} id={item.slug} className="stack-item feature-surface">
+            <article key={item.title} className="stack-item feature-surface">
               <div>
                 <span className="mini-label accent">{item.category}</span>
                 <h3>{item.title}</h3>
@@ -145,6 +201,8 @@ export default function CasesPage() {
           </div>
         </div>
       </Section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }} />
     </main>
   );
 }
