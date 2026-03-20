@@ -32,6 +32,8 @@ import {
   homepageResponseTimeline,
   homepageDecisionSnapshot,
   homepageCompactCaseEvidence,
+  homepageBuyerFitCards,
+  homepageContactCompare,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -74,6 +76,20 @@ const caseSnapshotSchema = {
       name: siteConfig.name,
       url: siteConfig.url,
     },
+  })),
+};
+
+const contactHowToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "如何開始與道易科技討論 B2B 官網、AI 或 DPP 專案",
+  description: "用 Quick Brief、Email 或推薦 sprint 三種低摩擦方式開始，並在 24 小時內收到具體下一步。",
+  totalTime: "PT24H",
+  step: homepageContactCompare.map((item, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: item.title,
+    text: `${item.detail}（${item.meta}）`,
   })),
 };
 
@@ -260,6 +276,30 @@ export default function Home() {
       </Section>
 
       <Section
+        eyebrow="Project fit in one scan"
+        title="讓不同類型的買方，用一眼就知道自己比較像哪一種專案。"
+        description="吸收 Veza Digital 的 clarity / friction reduction 與 Genesys Growth 提到的 outcome-first、mobile-first landing page 寫法後，這輪把『適合誰先談』做成更像篩選器的三張卡。"
+      >
+        <div className="card-grid three-up homepage-buyer-fit-grid">
+          {homepageBuyerFitCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-buyer-fit-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+              <ul className="bullet-list compact">
+                {item.cues.map((cue) => (
+                  <li key={cue}>{cue}</li>
+                ))}
+              </ul>
+              <Link href={item.href} className="button-secondary inline-button">
+                {item.cta}
+              </Link>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
         id="why-now"
         eyebrow="Why DaoYi / Why now"
         title="高轉換 B2B 官網的共同特徵，不是更花，而是更快讓人做出下一步判斷。"
@@ -401,6 +441,17 @@ export default function Home() {
             </article>
           ))}
         </div>
+        <div className="card-grid three-up homepage-contact-compare-grid">
+          {homepageContactCompare.map((item) => (
+            <article key={item.title} className="card homepage-contact-compare-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.meta}</strong>
+            </article>
+          ))}
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactHowToSchema) }} />
       </Section>
 
       <Section

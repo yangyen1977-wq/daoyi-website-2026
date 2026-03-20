@@ -210,6 +210,54 @@ export const homepageCompactCaseEvidence = [
   },
 ];
 
+export const homepageBuyerFitCards = [
+  {
+    label: "網站 / 品牌",
+    title: "適合正在重整官網，但不想只換皮的 B2B 團隊",
+    summary: "如果你要的不只是視覺更新，而是更清楚的定位、案例說服力與 Contact 轉換，這會是最適合先談的起點。",
+    cues: ["舊站流量有了，詢問品質卻不穩", "首頁看起來完整，但 5 秒內仍講不清楚", "案例不少，但決策者還是難快速信任"],
+    cta: "看品牌衝刺",
+    href: "/solutions",
+  },
+  {
+    label: "AI / 資料流程",
+    title: "適合方向已確定，但 PoC 還沒變成可採用流程的專案",
+    summary: "把 AI、資料欄位、SOP、驗收節點與前台體驗接起來，才有機會從 demo 走進日常營運。",
+    cues: ["模型能跑，但現場流程還沒接起來", "資料欄位、角色責任或驗收方式不夠清楚", "需要網站 / dashboard 一起講清楚價值"],
+    cta: "看 AI / 系統方案",
+    href: "/solutions",
+  },
+  {
+    label: "DPP / 合規",
+    title: "適合要提前準備 traceability、法規證據與跨部門資料鏈的團隊",
+    summary: "先把欄位藍圖、掃碼體驗與審查輸出包整理成能啟動的第一版，比空談法規更能往前走。",
+    cues: ["永續、採購、法遵需要共用同一份資料脈絡", "想先做出可展示的 QR / 產品履歷體驗", "需要讓管理層更快理解 DPP 專案怎麼落地"],
+    cta: "看 DPP 啟動方式",
+    href: "/contact",
+  },
+];
+
+export const homepageContactCompare = [
+  {
+    label: "最快開始",
+    title: "Quick Brief",
+    detail: "適合已知道主題與目標，想先拿到會議時段與建議切入點。",
+    meta: "3 欄 / 約 5 分鐘",
+  },
+  {
+    label: "敏感專案",
+    title: "Email + NDA",
+    detail: "適合涉及採購、法遵、客戶資料或既有系統文件，需要先低風險釐清。",
+    meta: "可先文字往返，再安排會議",
+  },
+  {
+    label: "還在判斷",
+    title: "先看推薦 sprint",
+    detail: "適合還不確定該先做官網、AI、知識平台或 DPP 的團隊。",
+    meta: "先界定優先順序，再投入資源",
+  },
+];
+
 export const homepageOutcomeSignals = [
   {
     label: "Pipeline clarity",
