@@ -1846,10 +1846,36 @@ a:hover {
   background: linear-gradient(180deg, #ffffff, #f6faff);
 }
 
+.proof-ledger-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.proof-ledger-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  background: rgba(12, 86, 113, 0.08);
+  border: 1px solid rgba(12, 86, 113, 0.14);
+  color: #0c5671;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .proof-ledger-card strong {
   color: #0d223c;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.proof-ledger-bullets {
+  margin-top: -2px;
 }
 
 .proof-ledger-card small {

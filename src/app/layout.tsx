@@ -120,8 +120,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_TW",
     url: siteConfig.url,
-    title: `${siteConfig.name} | B2B 官網、AI、知識平台、DPP 與資料流程整合`,
-    description: "給需要同時處理品牌主張、案例證據、RWD 體驗、AI 導入與 DPP / Traceability 的 B2B 團隊：先把可交付成果、回覆節奏與下一步講清楚。",
+    title: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
+    description: "給需要同時處理品牌主張、案例證據、RWD 體驗、AI 導入與 DPP / Traceability 的 B2B 團隊：先看已交付樣態、回覆節奏與低摩擦 contact 起點。",
     siteName: siteConfig.name,
     images: [
       {

@@ -523,6 +523,8 @@ export const verifiedProofLedger = [
     proof: "跨欄位檢索、版本脈絡、API 擴充規劃",
     detail: "把文本、書目、版本與人物資料整理成可查詢、可視覺化、可再利用的平台架構。",
     confidence: "真實交付能力",
+    status: "Verified delivery",
+    bullets: ["資訊架構與欄位梳理", "跨資料源檢索與關聯瀏覽", "方便後續擴充的 API / 後台規劃"],
   },
   {
     label: "已交付樣態",
@@ -530,6 +532,8 @@ export const verifiedProofLedger = [
     proof: "YOLO 辨識接到現場流程與 SOP",
     detail: "不是只展示模型，而是把辨識結果納入作業節點、驗收方式與後續維運。",
     confidence: "真實交付能力",
+    status: "Verified delivery",
+    bullets: ["模型結果接入現場 SOP", "驗收節點與誤判處理機制", "保留後續維運與調參節奏"],
   },
   {
     label: "已交付樣態",
@@ -537,6 +541,8 @@ export const verifiedProofLedger = [
     proof: "欄位藍圖、QR 體驗、審查輸出包",
     detail: "把永續、採購、法遵需要的資料鏈整理成更容易啟動的第一版交付。",
     confidence: "真實交付能力",
+    status: "Delivery blueprint",
+    bullets: ["跨部門欄位藍圖", "產品履歷 / QR 掃碼體驗", "審查與對外說明的輸出包"],
   },
 ];
 
