@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把官網、AI 與 DPP 整成更容易成交的 B2B 決策系統",
+  heroTitle: "把官網、AI 與 DPP 整成更容易成交的 B2B 成長系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者在第一屏就看懂你們做什麼、做過什麼，以及現在最適合怎麼開始。",
+    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者更快看懂你們做什麼、做過什麼，以及現在最適合怎麼開始。",
 };
 
 export const homepagePatternSignals = [

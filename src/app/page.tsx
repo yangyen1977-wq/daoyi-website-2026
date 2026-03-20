@@ -214,6 +214,23 @@ export default function Home() {
       </section>
 
       <Section
+        eyebrow="Why buyers shortlist DaoYi"
+        title="先回答買方真正會拿來 shortlist 的三個問題，而不是先丟一整頁公司介紹。"
+        description="這輪把 Webflow、Amply、Proofmap 與 consulting contact page 常見做法翻成首頁前段決策模組：先看值不值得談、證據夠不夠、第一次接洽安不安心。"
+      >
+        <div className="card-grid three-up homepage-shortlist-grid">
+          {homepageShortlistSignals.map((item) => (
+            <article key={item.title} className="feature-surface homepage-shortlist-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
         eyebrow="Competitor patterns applied"
         title="把 2025–2026 優秀 B2B / SaaS 官網的共同做法，直接翻成道易首頁可用的判斷模組。"
         description="這輪吸收 Webflow、Axon Garside、Blend 等常見高表現做法：先清楚、再證據、再降低第一次 contact 阻力，而不是先堆很多服務敘述。"
