@@ -25,6 +25,8 @@ import {
   engagementPackages,
   engagementSteps,
   homepageTrustStrip,
+  homepageDecisionBoard,
+  homepageSignalStack,
   homepageFirstWeekDeliverables,
   competitiveInsights,
   homepageResponseTimeline,
@@ -153,6 +155,39 @@ export default function Home() {
                 <strong>{item.value}</strong>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage-decision-board" aria-label="首頁決策板">
+        <div className="shell">
+          <div className="homepage-decision-board-grid">
+            <div className="homepage-decision-board-main">
+              {homepageDecisionBoard.map((item) => (
+                <article key={item.title} className="feature-surface homepage-decision-board-card">
+                  <span className="mini-label accent">{item.accent}</span>
+                  <h2>{item.title}</h2>
+                  <p>{item.detail}</p>
+                  <div className="homepage-decision-board-proof">
+                    <strong>{item.label}</strong>
+                    <ul className="bullet-list compact">
+                      {item.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <aside className="homepage-signal-stack" aria-label="設計守則摘要">
+              {homepageSignalStack.map((item) => (
+                <article key={item.title} className="homepage-signal-card">
+                  <span className="mini-label accent">{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
+            </aside>
           </div>
         </div>
       </section>

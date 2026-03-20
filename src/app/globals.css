@@ -432,6 +432,76 @@ a:hover {
   line-height: 1.55;
 }
 
+.homepage-decision-board {
+  padding: 14px 0 10px;
+}
+
+.homepage-decision-board-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.homepage-decision-board-main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.homepage-decision-board-card {
+  display: grid;
+  gap: 16px;
+  min-height: 100%;
+}
+
+.homepage-decision-board-card h2 {
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+}
+
+.homepage-decision-board-proof {
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(93, 228, 215, 0.08), rgba(86, 168, 255, 0.06));
+  border: 1px solid rgba(86, 168, 255, 0.12);
+}
+
+.homepage-decision-board-proof strong {
+  color: #0d223c;
+  font-size: 0.94rem;
+}
+
+.homepage-signal-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.homepage-signal-card {
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 10px;
+}
+
+.homepage-signal-card h3 {
+  color: #f4f8ff;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.homepage-signal-card p {
+  color: #d1deec;
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
 .homepage-snapshot-grid,
 .compact-case-evidence-grid,
 .homepage-benchmark-grid {
@@ -625,6 +695,39 @@ a:hover {
   color: #cfdae8;
   font-size: 0.92rem;
   line-height: 1.6;
+}
+
+.contact-route-speed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.contact-route-speed-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  gap: 10px;
+}
+
+.contact-route-speed-card h3 {
+  color: #f4f8ff;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.contact-route-speed-card p {
+  color: #cfdae8;
+  font-size: 0.9rem;
+  line-height: 1.58;
+}
+
+.contact-route-speed-card strong {
+  color: var(--primary);
+  font-size: 0.86rem;
 }
 
 .quick-brief-action-group {
@@ -1220,7 +1323,12 @@ a:hover {
   }
   .hero-clarity-checklist,
   .hero-decision-rail,
-  .contact-hero-checklist {
+  .contact-hero-checklist,
+  .contact-route-speed-grid,
+  .homepage-decision-board-main {
+    grid-template-columns: 1fr;
+  }
+  .homepage-decision-board-grid {
     grid-template-columns: 1fr;
   }
   .hero-action-cards {

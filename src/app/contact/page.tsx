@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline, contactHeroChecklist, contactRouteAssurances } from "@/lib/site";
+import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline, contactHeroChecklist, contactRouteAssurances, contactRouteSpeedCards } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -65,6 +65,17 @@ export default function ContactPage() {
                 <span className="mini-label accent">{item.label}</span>
                 <h3>{item.title}</h3>
                 <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="contact-route-speed-grid" aria-label="聯絡節奏選擇">
+            {contactRouteSpeedCards.map((item) => (
+              <article key={item.title} className="contact-route-speed-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+                <strong>{item.meta}</strong>
               </article>
             ))}
           </div>

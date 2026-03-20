@@ -41,6 +41,43 @@ export const homepageTrustStrip = [
   { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
 ];
 
+export const homepageDecisionBoard = [
+  {
+    label: "What buyers need first",
+    title: "先讓第一次進站的人在 5 秒內做出三個判斷：你們做什麼、做給誰、現在怎麼開始。",
+    detail:
+      "綜合 ALM、Amply、Veza Digital 近期對高轉換 B2B / SaaS 官網的共同觀察，首頁前段最有效的不是更多形容詞，而是更快把決策資訊排好順序。",
+    bullets: ["一句話主張先說清楚", "案例證據比公司介紹更早出現", "主要 CTA 與 Email fallback 同時可見"],
+    accent: "Decision board",
+  },
+  {
+    label: "Mobile-first conversion",
+    title: "手機初訪要先看見 contact promise，不要先掉進長篇介紹。",
+    detail:
+      "B2B 決策者常在手機完成第一次篩選，因此這版把 quick brief、response SLA、NDA-friendly 路徑與案例訊號壓進前段可掃讀區塊。",
+    bullets: ["thumb-zone CTA", "short proof blocks", "contact reassurance in first scroll"],
+    accent: "RWD / CTA",
+  },
+];
+
+export const homepageSignalStack = [
+  {
+    label: "Conversion heuristic",
+    title: "Proof near CTA",
+    detail: "把案例、回覆時程與下一步放在同一閱讀區，降低第一次接洽的不確定感。",
+  },
+  {
+    label: "Brand heuristic",
+    title: "Specific over generic",
+    detail: "少用抽象形容詞，多用可交付樣態、適合對象與起手方式來建立信任。",
+  },
+  {
+    label: "SEO heuristic",
+    title: "Intent-matched structure",
+    detail: "Hero、案例、FAQ 與 Contact 都直接對應 B2B 官網改版、AI 導入、DPP 等搜尋意圖。",
+  },
+];
+
 export const homepageBenchmarkSignals = [
   {
     label: "Competitor pattern",
@@ -371,6 +408,27 @@ export const contactIntentCards = [
     detail: "適合永續、法遵、採購或製造團隊先確認欄位藍圖、QR 體驗與審查輸出包。",
     cta: "寄出 DPP 需求",
     href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("想討論 DPP / Traceability 規劃")}`,
+  },
+];
+
+export const contactRouteSpeedCards = [
+  {
+    label: "Fastest path",
+    title: "3 欄 Quick Brief",
+    detail: "適合已經知道這次卡在官網、案例、AI 導入或 DPP 哪一段，想先拿到下一步的人。",
+    meta: "最快 5 分鐘內完成",
+  },
+  {
+    label: "Best for sensitive projects",
+    title: "Email + NDA",
+    detail: "如果專案涉及採購、法遵、既有客戶資料或內部流程限制，可先用 Email 開始，再安排 NDA。",
+    meta: "保留低風險啟動方式",
+  },
+  {
+    label: "Need guidance",
+    title: "先看推薦 sprint",
+    detail: "若還不確定應該先做品牌官網、資料流程或 traceability，可先透過 Contact 頁釐清起點。",
+    meta: "先判斷，再投入",
   },
 ];
 
