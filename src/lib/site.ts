@@ -7,10 +7,28 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 B2B 官網、AI、資料流程與 DPP 整成更容易成交、也更容易落地的系統",
+  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP 整成決策者更快願意聯絡的成長系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者 5 秒內看懂你們在做什麼，也知道下一步怎麼開始。",
+    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、RWD 體驗、資料流程與 Contact 轉換整成同一套可交付網站與平台，讓決策者 5 秒內看懂你們在做什麼、做過什麼，以及現在最適合怎麼開始。",
 };
+
+export const homepageMomentumCards = [
+  {
+    label: "適合現在就談",
+    title: "舊站已經有流量或需求，但價值主張、案例證據與 CTA 還沒形成同一個成交節奏。",
+    detail: "這類型最適合先談首頁訊息、案例排序、Contact 路徑與 mobile friction，通常也最快看出成效。",
+  },
+  {
+    label: "第一次就能拿到",
+    title: "不是只有報價，而是優先順序、風險點與推薦 sprint 起手式。",
+    detail: "讓第一次接洽更像拿到一份 decision pack，而不是把需求丟進黑洞。",
+  },
+  {
+    label: "敏感專案也能開始",
+    title: "若牽涉 NDA、採購、法遵、既有系統或客戶資料，可先走 Email + NDA 路徑。",
+    detail: "保留低風險 contact flow，讓高敏感度專案也能先小步往前，不必一開始就填很長表單。",
+  },
+];
 
 export const navItems = [
   { href: "/", label: "首頁" },

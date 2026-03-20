@@ -34,6 +34,7 @@ import {
   homepageCompactCaseEvidence,
   homepageBuyerFitCards,
   homepageContactCompare,
+  homepageMomentumCards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -169,6 +170,20 @@ export default function Home() {
               <article key={item.label} className="homepage-trust-chip">
                 <span>{item.label}</span>
                 <strong>{item.value}</strong>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage-momentum-band" aria-label="首頁第一輪判斷依據">
+        <div className="shell">
+          <div className="homepage-momentum-grid">
+            {homepageMomentumCards.map((item) => (
+              <article key={item.title} className="feature-surface homepage-momentum-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h2>{item.title}</h2>
+                <p>{item.detail}</p>
               </article>
             ))}
           </div>

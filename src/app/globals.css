@@ -403,6 +403,28 @@ a:hover {
   padding: 12px 0 8px;
 }
 
+.homepage-momentum-band {
+  padding: 10px 0 10px;
+}
+
+.homepage-momentum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.homepage-momentum-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+  background: linear-gradient(180deg, #ffffff, #f6faff);
+}
+
+.homepage-momentum-card h2 {
+  font-size: 1.06rem;
+  line-height: 1.55;
+}
+
 .homepage-trust-strip-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2067,6 +2089,20 @@ a:hover {
   gap: 10px;
 }
 
+.quick-brief-reassurance {
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #f8fbff, #eef5ff);
+  border: 1px solid rgba(14, 26, 43, 0.08);
+}
+
+.quick-brief-reassurance strong {
+  color: #0d223c;
+  font-size: 0.95rem;
+}
+
 .contact-trust-note {
   padding: 12px 14px;
   border-radius: 16px;
@@ -2500,7 +2536,8 @@ a:hover {
   .case-story-grid,
   .contact-fast-facts,
   .homepage-trust-strip-grid,
-  .homepage-fit-grid {
+  .homepage-fit-grid,
+  .homepage-momentum-grid {
     grid-template-columns: 1fr;
   }
   .snapshot-grid,

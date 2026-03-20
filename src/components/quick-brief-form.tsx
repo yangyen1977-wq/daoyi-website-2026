@@ -95,6 +95,14 @@ export function QuickBriefForm() {
           <p key={item} className="quick-brief-assist-pill">{item}</p>
         ))}
       </div>
+      <div className="quick-brief-reassurance">
+        <strong>送出後會發生什麼？</strong>
+        <ul className="bullet-list compact">
+          <li>會先開啟已填好的 Email，方便補網址、簡報或 NDA 需求。</li>
+          <li>24 小時內會回覆建議切入點、會議時段與待補資料。</li>
+          <li>如果案子偏敏感，也可以直接改走 Email + NDA，不必重填。</li>
+        </ul>
+      </div>
       <small className="quick-brief-hint">ALM Corp 追蹤 200+ SaaS 官網後指出，表單少於 4 欄且有次要 CTA，可把 Qualified Leads 提升 18-32%。</small>
       <small className="quick-brief-hint">提交後會開啟郵件，預先填好主旨與內容；若不想先填表，也可直接用 Email 開始。</small>
     </form>
