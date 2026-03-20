@@ -333,6 +333,14 @@ export default function Home() {
       </Section>
 
       <Section
+        eyebrow="Persona CTA"
+        title="不同決策角色，不該看到完全一樣的第一步。"
+        description="參考 Wynter、Databox 與近年高轉換 B2B 首頁常見做法，把 buyer intent 做成可切換的 role-based CTA，讓品牌、營運與永續角色更快找到對應入口。"
+      >
+        <PersonaPlaybook />
+      </Section>
+
+      <Section
         id="why-now"
         eyebrow="Why DaoYi / Why now"
         title="高轉換 B2B 官網的共同特徵，不是更花，而是更快讓人做出下一步判斷。"
