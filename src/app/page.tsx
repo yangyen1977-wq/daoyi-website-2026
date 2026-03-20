@@ -35,6 +35,7 @@ import {
   homepageContactCompare,
   homepageMomentumCards,
   homepageHeuristicScorecard,
+  heroClients,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -170,6 +171,19 @@ export default function Home() {
               <article key={item.label} className="homepage-trust-chip">
                 <span>{item.label}</span>
                 <strong>{item.value}</strong>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage-trust-strip" aria-label="道易常見合作脈絡">
+        <div className="shell">
+          <div className="homepage-trust-strip-grid">
+            {heroClients.map((item) => (
+              <article key={item.name} className="homepage-trust-chip">
+                <span>{item.context}</span>
+                <strong>{item.name}</strong>
               </article>
             ))}
           </div>
@@ -704,17 +718,9 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="分眾 CTA"
-        title="依決策角色調整 CTA、語氣與可下載資源。"
-        description="參考 SaaSFrame 2026 分眾趨勢，讓品牌、營運與永續團隊各自看到最相關的下一步，縮短猶豫時間。"
-      >
-        <PersonaPlaybook />
-      </Section>
-
-      <Section
         eyebrow="為什麼值得談"
         title="把差異講短一點，但更像決策資訊，而不是補充閱讀。"
-        description="本輪刻意拿掉首頁後段多組重複服務敘事，把真正有助於決策的差異收斂成三點。"
+        description="本輪刻意拿掉首頁後段重複的角色分眾 CTA，保留真正有助於成交判斷的差異資訊。"
       >
         <div className="card-grid three-up">
           {differentiators.map((item) => (
