@@ -35,6 +35,7 @@ import {
   homepageBuyerFitCards,
   homepageContactCompare,
   homepageMomentumCards,
+  homepageHeuristicScorecard,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -189,6 +190,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Buyer due diligence"
+        title="把 B2B 首頁最常被快速檢查的四件事，直接做成首頁上的 decision scorecard。"
+        description="綜合 Stan Vision、Webflow 與 Veza Digital 近年整理：成熟的 B2B / SaaS 首頁，通常都先處理 clarity、proof、tool-like structure 與 mobile conversion，而不是先堆疊長文。"
+      >
+        <div className="card-grid four-up homepage-scorecard-grid">
+          {homepageHeuristicScorecard.map((item) => (
+            <article key={item.title} className="feature-surface homepage-scorecard-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.action}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <section className="homepage-decision-board" aria-label="首頁決策板">
         <div className="shell">

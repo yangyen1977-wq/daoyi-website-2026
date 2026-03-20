@@ -243,6 +243,21 @@ a:hover {
   margin: 18px 0 6px;
 }
 
+.homepage-scorecard-grid {
+  align-items: stretch;
+}
+
+.homepage-scorecard-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.homepage-scorecard-card strong {
+  color: #ffffff;
+  margin-top: auto;
+}
+
 .hero-inline-proof-card {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);

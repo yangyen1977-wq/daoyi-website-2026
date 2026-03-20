@@ -9,6 +9,7 @@ const projectFocusOptions = [
   "知識平台 / 內容治理",
   "DPP / 永續資料",
   "案例頁 / Contact 轉換優化",
+  "先做首頁 / Contact 快速診斷",
 ];
 
 type FormState = {
@@ -43,9 +44,9 @@ export function QuickBriefForm() {
 
   return (
     <form id="quick-brief" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
-      <span className="mini-label accent">Baymard：3 欄 CTA 最少阻力</span>
+      <span className="mini-label accent">Low-friction intake / 3 欄先開始</span>
       <h3>快速丟出專案重點</h3>
-      <p>這裡只問姓名、公司與本次焦點，讓第一次聯絡維持低摩擦。若你要談品牌官網、案例頁強化、AI 導入或 DPP，這份 brief 都能直接開始。</p>
+      <p>這裡只問姓名、公司與本次焦點，讓第一次聯絡維持低摩擦。若你要談品牌官網、案例頁強化、AI 導入、DPP，或只是先想做一輪首頁 / Contact 診斷，這份 brief 都能直接開始。</p>
 
       <label className="form-field">
         <span>姓名</span>

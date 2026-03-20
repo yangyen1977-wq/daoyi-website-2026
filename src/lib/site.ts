@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技協助 B2B 品牌、製造業與研究型組織規劃官網改版、AI 導入、知識平台與數位產品護照 DPP，將複雜資料與流程整理成可運作、可維運、可成長的數位成果。",
+    "道易科技協助 B2B 品牌、製造業與研究型組織規劃官網改版、AI 導入、知識平台與數位產品護照 DPP，將複雜資料、案例證據與流程整理成可運作、可維運、可成長的數位成果。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
@@ -1274,25 +1274,25 @@ export const homepageHeuristicScorecard = [
   {
     label: "Clarity in 3 seconds",
     title: "主張要具體到『誰 + 什麼成果 + 怎麼做到』，不能只剩抽象定位。",
-    detail: "參考 Powered by Search 的 product-page 框架，首頁不只講『提升效率』，而要直接說清楚：道易替 B2B 團隊把官網、AI、DPP 與資料流程整成可交付系統。",
+    detail: "參考 Stan Vision 與 Webflow 對 2026 SaaS 首頁的共同觀察，首頁不只講『提升效率』，而要直接說清楚：道易替 B2B 團隊把官網、AI、DPP 與資料流程整成可交付系統。",
     action: "這版已把 target buyer 與交付樣態拉到 hero、品牌摘要與 decision path。",
   },
   {
     label: "Proof before prose",
     title: "買方先看證據，再決定要不要讀長文。",
-    detail: "參考 Veza / Axon 的 2026 觀察，首屏後應先看到案例型態、成果訊號與回覆節奏，而不是一大段公司自介。",
+    detail: "Veza Digital 與多個 agency / SaaS 範例都指出，首屏後應先看到案例型態、成果訊號與回覆節奏，而不是一大段公司自介。",
     action: "首頁前段持續把 proof ledger、案例快照與 response SLA 擺在 CTA 周邊。",
   },
   {
     label: "Tools, not paragraphs",
     title: "B2B 官網要像判斷工具，不只是展示頁。",
-    detail: "Axon Garside 強調 2026 的高效網站要提供判斷輔助：哪些情況適合先談、要準備什麼、第一次會拿到什麼。",
+    detail: "高轉換網站會提供判斷輔助：哪些情況適合先談、要準備什麼、第一次會拿到什麼，而不是只堆服務清單。",
     action: "這版加入 decision cards、meeting prep、engagement packages 與 quick brief 路徑。",
   },
   {
     label: "Mobile conversion",
     title: "手機首屏也要保留主 CTA、證據與低摩擦路徑。",
-    detail: "Powered by Search 提到 mobile 版本仍應保留關鍵 bullet 與 CTA above the fold，減少來回滑動成本。",
+    detail: "Flow Agency 與近年 B2B landing page best practices 都強調：mobile 版本仍應保留關鍵 bullet、足夠大 tap target 與 above-the-fold CTA。",
     action: "沿用 sticky CTA、3 欄 brief、thumb-zone 導覽與 contact fast facts。",
   },
 ];
