@@ -33,6 +33,7 @@ import {
   heroClients,
   homepageBeforeAfterRows,
   homepageContactMicrocopy,
+  homepageShortlistScorecards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -198,6 +199,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Shortlist scorecard"
+        title="把成熟 B2B 官網常見的三個成交訊號，直接濃縮成首頁前段判斷卡。"
+        description="綜合 Amply、Axon Garside 對高轉換 SaaS / B2B 網站的共同觀察：越早說清楚 clarity、proof 與 conversion reassurance，越容易讓第一次進站的人留下來。"
+      >
+        <div className="card-grid three-up homepage-scorecard-grid">
+          {homepageShortlistScorecards.map((item) => (
+            <article key={item.title} className="card homepage-scorecard-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="What changed in mature B2B sites"

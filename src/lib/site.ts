@@ -139,6 +139,33 @@ export const homepageTrustStrip = [
   { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
 ];
 
+export const headerReassuranceSignals = [
+  "24h 內回覆具體下一步",
+  "Quick Brief 只要 3 欄",
+  "敏感專案可先 Email / NDA",
+];
+
+export const homepageShortlistScorecards = [
+  {
+    label: "Clarity",
+    title: "先用一句話判斷：這是不是同時卡在品牌、案例與資料流程的案子？",
+    detail: "參考 Amply 對高轉換 SaaS 首頁的整理，第一屏先講清楚對象、結果與 next step，會比再多一段抽象品牌介紹更有效。",
+    proof: "Hero 先完成 ICP + outcome + CTA",
+  },
+  {
+    label: "Proof",
+    title: "案例不是放在很後面，而是前段就讓人看見已交付樣態與代表成果。",
+    detail: "吸收 Axon Garside 對 Makers、Contractbook 的分析後，把 social proof、案例摘要與量化結果視為 shortlist 材料，而不是補充資料。",
+    proof: "Case snapshot、結果訊號與 CTA 同區出現",
+  },
+  {
+    label: "Conversion",
+    title: "第一次聯絡前先把回覆速度、保密路徑與起手方式講清楚。",
+    detail: "這輪把成熟 B2B / agency 常見的 reassurance copy 再前移：讓桌機與手機流量都能更快放心開始，不必先滑完整頁面。",
+    proof: "24h response + Quick Brief + Email / NDA fallback",
+  },
+];
+
 export const homepageShortlistSignals = [
   {
     label: "Shortlist reason 01",

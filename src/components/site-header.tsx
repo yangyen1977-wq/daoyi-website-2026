@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navItems, siteConfig } from "@/lib/site";
+import { headerReassuranceSignals, navItems, siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,6 +52,12 @@ export function SiteHeader() {
         </div>
 
         <div className={`site-header-navWrap ${menuOpen ? "is-open" : ""}`}>
+          <div className="site-header-reassurance" aria-label="聯絡前關鍵承諾">
+            {headerReassuranceSignals.map((item) => (
+              <span key={item} className="site-header-reassurance-pill">{item}</span>
+            ))}
+          </div>
+
           <nav id="site-navigation" className="site-nav" aria-label="主要導覽">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);

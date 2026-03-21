@@ -178,6 +178,42 @@ a:hover {
   justify-content: space-between;
   gap: 20px;
   flex: 1;
+  flex-wrap: wrap;
+}
+
+.site-header-reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  flex: 1 1 100%;
+}
+
+.site-header-reassurance-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 228, 215, 0.16);
+  background: rgba(93, 228, 215, 0.08);
+  color: #dff7f4;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.site-header-reassurance-pill::before {
+  content: "•";
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+.site-header-reassurance-pill:first-child::before {
+  content: "✓";
+}
+
+.site-header-navWrap .header-cta {
+  margin-left: auto;
 }
 
 .site-nav a {
