@@ -117,6 +117,34 @@ const homepageStartNowCards = [
   },
 ];
 
+const homepageFrictionRemovalCards = [
+  {
+    label: "Clarity within 5 seconds",
+    title: "先回答『是不是給我看的』，再談服務內容。",
+    detail: "綜合 ALM、Amply、Veza Digital 對高轉換 B2B / SaaS 首頁的共通觀察：第一屏要先講清楚對象、成果與下一步。",
+    points: ["一句話講清楚 B2B 官網 / AI / DPP", "首屏直接出現聯絡起點", "案例與信任訊號前置"],
+  },
+  {
+    label: "Show, don’t just tell",
+    title: "把代表交付樣態壓成可掃讀證據，而不是抽象能力。",
+    detail: "參考 Pixeto 與 JoinAmply 對 SaaS / agency 首頁的整理，成熟站點會把實際畫面、成果與場景貼近 CTA，減少買方自己腦補。",
+    points: ["案例先講 challenge / delivery / outcome", "結果訊號緊貼 CTA", "降低作品集式跳出"],
+  },
+  {
+    label: "Mobile-first reassurance",
+    title: "手機版先保留 response promise，讓第一次詢問更放心。",
+    detail: "行動流量通常是第一次篩選現場，因此這輪刻意把 24h 回覆、NDA-friendly 路徑與 Quick Brief 留在前段可見範圍。",
+    points: ["thumb-zone CTA", "短句 reassurance", "Email fallback 同步可見"],
+  },
+];
+
+const homepageConversionChecklist = [
+  "主 CTA 與次 CTA 同時可見，不必回頭找入口",
+  "案例證據在首頁前半段就出現，而非埋在後段",
+  "手機第一次滾動內就能知道回覆速度與聯絡方式",
+  "敏感專案可直接走 Email + NDA 路徑，降低心理阻力",
+];
+
 export default function Home() {
   return (
     <main id="main-content">
@@ -253,6 +281,40 @@ export default function Home() {
               <p>{item.detail}</p>
             </article>
           ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Why this homepage direction"
+        title="這輪把成熟 B2B / SaaS 官網最常見的三個轉換原則，壓成首頁中前段的短決策區。"
+        description="從 Veza Digital、ALM、Pixeto、Amply 近年的整理可以看到：真正有效的首頁，不是資訊更多，而是更快讓訪客確認適配性、看到證據、並放心採取下一步。"
+      >
+        <div className="card-grid three-up homepage-friction-grid">
+          {homepageFrictionRemovalCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-friction-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <ul className="bullet-list compact">
+                {item.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="homepage-conversion-band">
+          <div className="homepage-conversion-band-copy">
+            <span className="mini-label accent">Homepage conversion checklist</span>
+            <h3>這一版首頁刻意把「清楚、證據、放心開始」放在同一個滾動節奏裡。</h3>
+            <p>目的不是讓首頁更長，而是讓第一次進站的 B2B 決策者能在更短時間內完成 shortlist 判斷。</p>
+          </div>
+          <div className="homepage-conversion-band-list" aria-label="首頁轉換檢查清單">
+            {homepageConversionChecklist.map((item) => (
+              <p key={item} className="homepage-conversion-pill">{item}</p>
+            ))}
+          </div>
         </div>
       </Section>
 

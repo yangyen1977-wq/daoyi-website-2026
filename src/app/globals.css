@@ -297,6 +297,63 @@ a:hover {
   align-self: flex-start;
 }
 
+.homepage-friction-grid {
+  margin-bottom: 18px;
+}
+
+.homepage-friction-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.homepage-conversion-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(6, 18, 34, 0.96), rgba(12, 27, 47, 0.92));
+  box-shadow: var(--shadow);
+}
+
+.homepage-conversion-band-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.homepage-conversion-band-copy h3 {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.homepage-conversion-band-copy p {
+  color: #c8d5e5;
+  line-height: 1.75;
+}
+
+.homepage-conversion-band-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+}
+
+.homepage-conversion-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(93, 228, 215, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4f8ff;
+  line-height: 1.6;
+}
+
 .evidence-matrix-card,
 .engagement-step-card {
   display: flex;
@@ -3227,6 +3284,16 @@ a:hover {
 
   .engagement-step-strip {
     grid-template-columns: 1fr;
+  }
+
+  .homepage-conversion-band {
+    grid-template-columns: 1fr;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .homepage-conversion-pill {
+    width: 100%;
   }
 }
 
