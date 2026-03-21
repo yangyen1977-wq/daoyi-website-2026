@@ -70,7 +70,7 @@ export function QuickBriefForm() {
     <form id="quick-brief-form" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
       <span className="mini-label accent">Low-friction intake / 3 欄先開始</span>
       <h3>快速丟出專案重點</h3>
-      <p>這裡只問姓名、公司與本次焦點，讓第一次聯絡維持低摩擦。若你要談品牌官網、案例頁強化、AI 導入、DPP，或只是先想做一輪首頁 / Contact 診斷，這份 brief 都能直接開始。</p>
+      <p>這裡只問姓名、公司與本次焦點，維持高轉換 SaaS / agency 常見的低摩擦起手式。若你要談品牌官網、案例頁強化、AI 導入、DPP，或只是先想做一輪首頁 / Contact 診斷，這份 brief 都能直接開始。</p>
       <div className="quick-brief-priority-note">
         <strong>送出後 24h 內，你會先拿到什麼？</strong>
         <p>不是只有收到回信，而是先拿到首頁 / Contact 可先補哪裡、建議從哪個 sprint 開始，以及第一次會議該對焦的阻力點。</p>
@@ -126,7 +126,7 @@ export function QuickBriefForm() {
 
       <div className="quick-brief-action-group">
         <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟已填好的 DaoYi 專案詢問郵件">
-          開啟郵件，拿 24h 建議
+          開啟已填好詢問信，拿 24h 建議
         </button>
         <a className="button-secondary inline-button" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論專案方向")}`}>
           先用 Email 問問題

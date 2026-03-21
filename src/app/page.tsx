@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   cases,
@@ -145,6 +146,44 @@ const homepageConversionChecklist = [
   "敏感專案可直接走 Email + NDA 路徑，降低心理阻力",
 ];
 
+export const metadata: Metadata = {
+  title: "B2B 官網改版、AI 導入、知識平台與 DPP 首頁",
+  description:
+    "道易科技協助 B2B 品牌、製造業與研究型組織，把官網改版、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付系統；首頁直接提供案例證據、24h 回覆承諾與低摩擦 contact 起點。",
+  keywords: [
+    "B2B 官網改版",
+    "AI 導入",
+    "知識平台",
+    "DPP",
+    "Traceability",
+    "製造業官網",
+    "B2B 網站設計",
+    "案例頁優化",
+  ],
+  alternates: { canonical: "/" },
+};
+
+const homepageShortlistCards = [
+  {
+    label: "30-second shortlist",
+    title: "先看見適配對象與起手式，讓第一次進站不必自己拼圖。",
+    detail: "參考 Databox、Wynter、Blend 一類首頁做法，先在前段交代 ICP、代表成果與 next step，比先講完整公司故事更容易留下合格詢問。",
+    bullets: ["B2B 品牌 / 製造業 / 研究型組織", "官網、AI、知識平台、DPP 四條路線", "Quick Brief 與 Email fallback 同時可見"],
+  },
+  {
+    label: "Evidence near CTA",
+    title: "把交付樣態與回覆承諾放在 CTA 附近，而不是藏到深頁。",
+    detail: "吸收 Pixeto、ALM、Proofmap 對 SaaS / agency 首頁的觀察後，這輪持續把案例 snapshot、response SLA 與 contact reassurance 綁在同一段。",
+    bullets: ["交付樣態比抽象形容詞更前面", "24h 回覆與 NDA-friendly path 前置", "降低『留資料後會怎樣』的不確定感"],
+  },
+  {
+    label: "Mobile buyer flow",
+    title: "手機版先保住 thumb-zone CTA、短句 reassurance 與低摩擦表單。",
+    detail: "行動版不是把桌機頁縮小，而是優先保留第一次詢問需要的資訊：怎麼開始、多久回覆、能不能先小步談。",
+    bullets: ["sticky CTA 保留在拇指區", "3 欄 brief 維持低摩擦", "Email / NDA 路徑同步可見"],
+  },
+];
+
 const homepageCompetitiveInsights = [
   {
     label: "2026 pattern 01",
@@ -220,6 +259,41 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Shortlist in 30 seconds"
+        title="把高轉換 B2B / SaaS 首頁常見的三個決策訊號，壓成更快讀完的 shortlist 區。"
+        description="綜合 Databox、Wynter、Blend、Pixeto 在 2025-2026 的案例整理：前段最重要的是適配對象、證據貼近 CTA，以及手機版第一次詢問的安心感。"
+      >
+        <div className="card-grid three-up">
+          {homepageShortlistCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-friction-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <ul className="bullet-list compact">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="homepage-conversion-band">
+          <div className="homepage-conversion-band-copy">
+            <span className="mini-label accent">Why this matters</span>
+            <h3>首頁前 30 秒先完成 shortlist 判斷，後面的案例、方案與 FAQ 才真的會被看。</h3>
+            <p>所以這輪不是再加更多花樣，而是把品牌主張、案例證據、回覆承諾與 contact 起點排得更像決策工具。</p>
+          </div>
+          <div className="homepage-conversion-band-list" aria-label="首頁前 30 秒需要回答的問題">
+            <p className="homepage-conversion-pill">這是不是做給我們這類團隊看的？</p>
+            <p className="homepage-conversion-pill">他們是否真的交付過相近型態的專案？</p>
+            <p className="homepage-conversion-pill">如果我現在詢問，會多久收到具體下一步？</p>
+            <p className="homepage-conversion-pill">若專案敏感，能不能先用 Email / NDA 小步開始？</p>
+          </div>
+        </div>
+      </Section>
 
       <Section
         eyebrow="2026 competitor learnings"
