@@ -10,7 +10,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const ctaHref = pathname === "/" ? "/#quick-brief" : "/contact";
-  const ctaLabel = pathname === "/" ? "立即送出 Quick Brief" : "24h 內取得下一步";
+  const ctaLabel = pathname === "/" ? "24h 內拿首頁建議" : "24h 內取得下一步";
 
   useEffect(() => {
     const onResize = () => {

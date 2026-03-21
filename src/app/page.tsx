@@ -145,6 +145,36 @@ const homepageConversionChecklist = [
   "敏感專案可直接走 Email + NDA 路徑，降低心理阻力",
 ];
 
+const homepageCompetitiveInsights = [
+  {
+    label: "2026 pattern 01",
+    title: "5 秒內回答『你是誰、做給誰、現在怎麼開始』。",
+    detail:
+      "整理 Veza Digital 與 ALM 對高轉換 B2B / SaaS 首頁的共通觀察後，可以看到真正有效的 hero 不靠形容詞取勝，而是先把定位、對象與下一步說完。",
+    applicationTitle: "套用到道易",
+    application:
+      "這輪把首頁前段的 benchmark 解釋更前置，讓價值主張、Buyer fit 與 Quick Brief / Email 路徑在更短滾動距離內一起被看見。",
+  },
+  {
+    label: "2026 pattern 02",
+    title: "證據要像業務材料，而不是作品集縮圖。",
+    detail:
+      "ALM 與 Pixeto 都反覆提到：高表現科技 / SaaS 官網會把實際畫面、交付樣態、成果訊號與 social proof 靠近 CTA，而不是藏在深層案例頁。",
+    applicationTitle: "套用到道易",
+    application:
+      "首頁保留『交付樣態 + 結果訊號 + 聯絡 promise』的緊鄰關係，讓第一次進站的人不需要先翻完整案例頁才敢詢問。",
+  },
+  {
+    label: "2026 pattern 03",
+    title: "手機版先保住 CTA 與 reassurance，再談完整敘事。",
+    detail:
+      "從 SaaS / agency 首頁整理可見，mobile-first 不只是排版縮小，而是先把 sticky CTA、response SLA、短表單與 NDA-friendly fallback 留在拇指可達區。",
+    applicationTitle: "套用到道易",
+    application:
+      "這輪把 header、mobile sticky CTA 與 Quick Brief 文案改成更像『先拿到建議』的語氣，降低第一次接洽的心理摩擦。",
+  },
+];
+
 export default function Home() {
   return (
     <main id="main-content">
@@ -190,6 +220,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="2026 competitor learnings"
+        title="把這輪競品學到的三個高轉換原則，直接翻成道易首頁可用做法。"
+        description="這不是單純收集漂亮案例，而是把 Veza Digital、ALM、Pixeto 提到的 clarity、evidence-first、mobile-first 轉成更貼近道易的首頁 decision flow。"
+      >
+        <div className="card-grid three-up">
+          {homepageCompetitiveInsights.map((item) => (
+            <article key={item.title} className="feature-surface competitive-insight-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <div className="competitive-insight-application">
+                <strong>{item.applicationTitle}</strong>
+                <p>{item.application}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="Shortlist decision board"
