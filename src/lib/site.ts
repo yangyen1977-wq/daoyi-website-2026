@@ -7,23 +7,23 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把品牌主張、案例證據與資料流程，整成更容易成交的 B2B 官網",
+  heroTitle: "把品牌、案例證據與 AI / 資料流程，整成更容易成交的 B2B 成長官網",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把官網改版、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付系統，讓決策者更快看懂你們做什麼、做過什麼，以及現在最適合怎麼開始。",
+    "給 B2B 品牌、製造業與研究型組織：道易把官網改版、案例證據、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付系統，讓決策者更快理解你們的差異、信任你們的交付，並願意現在就開始聯絡。",
 };
 
 export const heroOutcomeStrip = [
   {
     label: "為什麼現在值得談",
-    value: "先把舊站流量變成更高品質的詢問與 shortlist 機會",
+    value: "把舊站流量轉成更高品質詢問、shortlist 與實際會議機會",
   },
   {
     label: "這次會先補什麼",
-    value: "價值主張、案例證據、CTA 路徑、手機版 friction 與 first-response 設計",
+    value: "價值主張、案例證據、CTA 路徑、手機版首屏與 first-response 設計",
   },
   {
     label: "適合的案型",
-    value: "B2B 官網改版、AI 導入、知識平台、DPP / Traceability 與資料治理升級",
+    value: "品牌官網升級、AI 導入、知識平台、DPP / Traceability 與資料治理",
   },
 ];
 
@@ -866,6 +866,25 @@ export const heroQuickSignals = [
   {
     label: "敏感專案也可",
     value: "Email / NDA 先開始，不必先填完整需求",
+  },
+];
+
+
+export const heroProofHighlights = [
+  {
+    label: "Brand promise",
+    title: "不是只做一個新網站，而是先把買方 5 秒內要懂的差異講清楚。",
+    detail: "把價值主張、案例證據、資料流程與 CTA 排成同一條 decision flow，讓首頁更像成交工具，而不是公司簡介。",
+  },
+  {
+    label: "Proof near CTA",
+    title: "代表案例、回覆承諾與 contact 起點要出現在同一輪掃讀裡。",
+    detail: "借鏡 Linear、Vercel、Webflow Enterprise 常見做法：結果訊號與 next step 靠得夠近，信任建立才夠快。",
+  },
+  {
+    label: "Mobile-first reassurance",
+    title: "手機第一次進站，也要立刻知道多久回覆、怎麼開始、能不能先 NDA。",
+    detail: "把 24h 回覆、Quick Brief、Email fallback 與敏感專案路徑保留在首段可見區，降低第一次詢問摩擦。",
   },
 ];
 

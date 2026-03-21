@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts, heroOutcomeStrip } from "@/lib/site";
+import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts, heroOutcomeStrip, heroProofHighlights } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 import { HeroActionPlan } from "@/components/hero-action-plan";
 
 const heroHighlights = [
-  "先把價值主張與案例證據講清楚",
-  "把 AI、資料與流程整理成可交付系統",
-  "兼顧品牌說服力、RWD 與後續維運",
+  "先回答買方 5 秒內最在意的事：你們是誰、做給誰、怎麼開始",
+  "把案例證據、AI / 資料流程與品牌敘事整成同一個成交節奏",
+  "兼顧品牌說服力、RWD / 手機轉換與後續維運",
 ];
 
 export function Hero() {
@@ -47,6 +47,16 @@ export function Hero() {
               <article key={item.label} className="hero-outcome-card">
                 <span>{item.label}</span>
                 <strong>{item.value}</strong>
+              </article>
+            ))}
+          </div>
+
+          <div className="hero-proof-highlight-grid" aria-label="首頁前段成交重點">
+            {heroProofHighlights.map((item) => (
+              <article key={item.label} className="hero-proof-highlight-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
               </article>
             ))}
           </div>

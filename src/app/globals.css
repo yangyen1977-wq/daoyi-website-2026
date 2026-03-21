@@ -1333,6 +1333,73 @@ a:hover {
   min-width: 220px;
 }
 
+
+.hero-proof-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.hero-proof-highlight-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 10px;
+}
+
+.hero-proof-highlight-card h3 {
+  color: #f5fbff;
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.hero-proof-highlight-card p {
+  color: #c9d9ea;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.homepage-opening-band {
+  padding: 12px 0 8px;
+}
+
+.homepage-opening-band-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 18px;
+  padding: 24px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(6, 18, 34, 0.96), rgba(12, 27, 47, 0.92));
+  box-shadow: var(--shadow);
+}
+
+.homepage-opening-band-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.homepage-opening-band-copy h2 {
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1.22;
+  color: #ffffff;
+}
+
+.homepage-opening-band-copy p {
+  color: #c8d5e5;
+  line-height: 1.75;
+}
+
+.homepage-opening-band-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+}
+
 .hero-story {
   margin-top: 20px;
   display: grid;
@@ -1593,9 +1660,11 @@ a:hover {
   }
   .hero-clarity-checklist,
   .hero-decision-rail,
+  .hero-proof-highlight-grid,
   .contact-hero-checklist,
   .contact-route-speed-grid,
-  .homepage-decision-board-main {
+  .homepage-decision-board-main,
+  .homepage-opening-band-inner {
     grid-template-columns: 1fr;
   }
   .homepage-decision-board-grid {

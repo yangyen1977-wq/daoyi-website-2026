@@ -147,9 +147,9 @@ const homepageConversionChecklist = [
 ];
 
 export const metadata: Metadata = {
-  title: "B2B 官網改版、AI 導入、知識平台與 DPP 首頁",
+  title: "B2B 成長官網、AI 導入、知識平台與 DPP 首頁",
   description:
-    "道易科技協助 B2B 品牌、製造業與研究型組織，把官網改版、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付系統；首頁直接提供案例證據、24h 回覆承諾與低摩擦 contact 起點。",
+    "道易科技協助 B2B 品牌、製造業與研究型組織，把品牌官網升級、案例證據、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付系統；首頁直接提供案例證據、24h 回覆承諾與低摩擦 contact 起點。",
   keywords: [
     "B2B 官網改版",
     "AI 導入",
@@ -280,6 +280,23 @@ export default function Home() {
                 <strong>{item.name}</strong>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage-opening-band" aria-label="首頁前段成交摘要">
+        <div className="shell">
+          <div className="homepage-opening-band-inner">
+            <div className="homepage-opening-band-copy">
+              <span className="mini-label accent">Why buyers keep scrolling</span>
+              <h2>先把價值主張、案例證據、回覆承諾與 contact 起點排在一起，首頁才會更像成交工具。</h2>
+              <p>這輪吸收 Linear、Vercel、Webflow Enterprise 與近年 B2B / SaaS 首頁常見做法：不要只靠漂亮視覺，而要更快讓決策者完成 shortlist 判斷。</p>
+            </div>
+            <div className="homepage-opening-band-pills" aria-label="首頁前段核心訊號">
+              <p className="homepage-conversion-pill">5 秒內知道道易做什麼、做給誰、現在怎麼開始</p>
+              <p className="homepage-conversion-pill">案例證據與 CTA 靠近，不用先翻完整作品集</p>
+              <p className="homepage-conversion-pill">手機首段就看得到 24h 回覆、Quick Brief 與 Email fallback</p>
+            </div>
           </div>
         </div>
       </section>
