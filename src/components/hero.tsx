@@ -32,7 +32,7 @@ export function Hero() {
       <div className="shell hero-grid">
         <div className="hero-copy">
           <span className="hero-eyebrow">DaoYi Technology 2026 / AI / Data / Knowledge Platform / DPP</span>
-          <div className="hero-intro-badge">從研究脈絡走到產業落地，專長是把複雜需求整理成可成交、可維運的數位系統</div>
+          <div className="hero-intro-badge">從研究脈絡走到產業落地，把複雜需求整理成可成交、可維運的數位系統</div>
           <h1>{siteConfig.heroTitle}</h1>
           <p>{siteConfig.heroDescription}</p>
 

@@ -22,7 +22,6 @@ import {
   homepageContactRoutes,
   heroDecisionMetrics,
   verifiedProofLedger,
-  evidenceMatrix,
   engagementPackages,
   engagementSteps,
   homepageTrustStrip,
@@ -249,39 +248,6 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="What you can verify fast"
-        title="先回答三個買方最在意的問題，再決定要不要談。"
-        description="首頁前段現在優先處理適配、證據與聯絡節奏，而不是再解釋這版首頁在做什麼。"
-      >
-        <div className="homepage-conversion-band">
-          <div className="homepage-conversion-band-copy">
-            <span className="mini-label accent">Fast buyer check</span>
-            <h3>讓品牌、營運、採購、法遵或 IT 在同一輪掃讀裡完成 shortlist。</h3>
-            <p>你會先看到：道易適合哪類專案、已交付過什麼型態、以及第一次聯絡後多久會收到具體下一步。</p>
-          </div>
-          <div className="homepage-conversion-band-list" aria-label="買方快速判斷問題">
-            <p className="homepage-conversion-pill">這是不是做給我們這類團隊看的？</p>
-            <p className="homepage-conversion-pill">他們是否真的做過相近型態的交付？</p>
-            <p className="homepage-conversion-pill">如果現在詢問，接下來會發生什麼？</p>
-          </div>
-        </div>
-
-        <div className="card-grid three-up proof-ledger-grid">
-          {verifiedProofLedger.map((item) => (
-            <article key={item.title} className="card proof-ledger-card">
-              <div className="proof-ledger-card-topline">
-                <span className="mini-label accent">{item.label}</span>
-                <span className="proof-ledger-status">{item.status}</span>
-              </div>
-              <h3>{item.title}</h3>
-              <strong>{item.proof}</strong>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         eyebrow="Real delivery evidence"
         title="與其說很多服務，不如先用三種已交付樣態建立信任。"
         description="參考 Proofmap 對高成長 SaaS case study 的整理：買方更在意是否有真實場景、明確交付與可記住的結果訊號。"
@@ -500,23 +466,6 @@ export default function Home() {
                 <p>{item.solution}</p>
               </div>
               <div className="case-story-outcome">{item.outcome}</div>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="決策依據"
-        title="把這個首頁的核心做法講清楚：清楚、證據、手機轉換。"
-        description="這輪把 Veza Digital、ALM Corp 提到的高轉換原則濃縮成三個矩陣，讓訪客與內部團隊都更容易判斷現在的首頁到底在強化什麼。"
-      >
-        <div className="card-grid three-up evidence-matrix-grid">
-          {evidenceMatrix.map((item) => (
-            <article key={item.title} className="feature-surface evidence-matrix-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <strong>{item.metric}</strong>
-              <p>{item.detail}</p>
             </article>
           ))}
         </div>

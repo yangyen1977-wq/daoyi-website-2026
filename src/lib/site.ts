@@ -9,7 +9,7 @@ export const siteConfig = {
   location: "Tainan / Taipei / Remote",
   heroTitle: "把官網、案例證據與 AI / 資料流程，整成會成交的 B2B 系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、AI 導入、知識平台與 DPP / Traceability 收斂成同一套可交付方案，讓決策者更快完成 shortlist，並用更低摩擦的方式開始下一步。",
+    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、AI 導入、知識平台與 DPP / Traceability 收斂成同一套可交付方案，讓決策者更快完成 shortlist，也更容易放心開始下一步。",
 };
 
 export const heroOutcomeStrip = [
