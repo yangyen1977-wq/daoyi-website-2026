@@ -63,6 +63,24 @@ const structuredData = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": siteConfig.name,
+    "url": siteConfig.url,
+    "description": siteConfig.description,
+    "email": siteConfig.email,
+    "telephone": siteConfig.phone,
+    "areaServed": ["TW", "Asia-Pacific"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tainan / Taipei",
+      "addressCountry": "TW"
+    },
+    "serviceType": ["B2B 官網改版", "AI 導入", "知識平台建置", "DPP / Traceability"],
+    "knowsAbout": ["B2B website redesign", "AI workflow", "knowledge platform", "digital product passport"],
+    "availableLanguage": ["zh-Hant", "en"]
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "WebSite",
     "name": siteConfig.shortName,
     "url": siteConfig.url,
@@ -120,7 +138,7 @@ export const metadata: Metadata = {
     locale: "zh_TW",
     url: siteConfig.url,
     title: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
-    description: "給需要同時處理官網改版、案例證據、AI 導入與 DPP / Traceability 的 B2B 團隊：先看已交付樣態、下一步與低摩擦 contact 起點。", 
+    description: "給需要同時處理官網改版、案例證據、AI 導入與 DPP / Traceability 的 B2B 團隊：先看 shortlist 級品牌主張、已交付案例證據、下一步與低摩擦 contact 起點。", 
     siteName: siteConfig.name,
     images: [
       {

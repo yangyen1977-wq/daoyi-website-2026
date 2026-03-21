@@ -30,6 +30,10 @@ import {
   homepageBuyerFitCards,
   homepageContactCompare,
   heroClients,
+  homepageDecisionBoard,
+  homepageBeforeAfterRows,
+  homepageSignalStack,
+  homepageContactMicrocopy,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -159,6 +163,63 @@ export default function Home() {
         </div>
       </section>
 
+      <Section
+        eyebrow="Shortlist decision board"
+        title="把買方第一次會問的問題，直接做成首頁前段的 shortlist 版面。"
+        description="綜合 Databox、Wynter、Blend、Webstacks 等 2025-2026 B2B / SaaS 首頁共通做法：先講清楚定位與對象，再把 proof、CTA 與 reassurance 放在同一輪掃讀內。"
+      >
+        <div className="card-grid two-up">
+          {homepageDecisionBoard.map((item) => (
+            <article key={item.title} className="feature-surface">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <ul className="bullet-list compact">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="card-grid two-up">
+          {homepageBeforeAfterRows.map((item) => (
+            <article key={item.topic} className="card">
+              <span className="mini-label accent">{item.topic}</span>
+              <div className="case-story-block">
+                <strong>Before</strong>
+                <p>{item.before}</p>
+              </div>
+              <div className="case-story-block">
+                <strong>After</strong>
+                <p>{item.after}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="card-grid three-up">
+          {homepageSignalStack.map((item) => (
+            <article key={item.title} className="card proof-narrative-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="feature-surface quick-brief-note">
+          <span className="mini-label accent">Contact reassurance</span>
+          <h3>先把第一次聯絡的不確定感拆掉，轉換通常就會更自然。</h3>
+          <ul className="bullet-list compact">
+            {homepageContactMicrocopy.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="quick-brief-meta">這段刻意參考高轉換 B2B / agency contact page 的 reassurance copy 寫法，讓首頁前段就能回答「送出後會怎樣」。</p>
+        </div>
+      </Section>
 
       <Section
         eyebrow="Real delivery evidence"
