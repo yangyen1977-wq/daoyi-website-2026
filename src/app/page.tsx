@@ -20,28 +20,16 @@ import {
   contactPrepChecklist,
   homepageContactRoutes,
   heroDecisionMetrics,
-  heroOutcomeStrip,
   verifiedProofLedger,
   evidenceMatrix,
   engagementPackages,
   engagementSteps,
   homepageTrustStrip,
-  homepageDecisionBoard,
-  homepageSignalStack,
-  homepageFirstWeekDeliverables,
   homepageResponseTimeline,
-  homepageDecisionSnapshot,
   homepageCompactCaseEvidence,
   homepageBuyerFitCards,
   homepageContactCompare,
-  homepageMomentumCards,
-  homepageHeuristicScorecard,
   heroClients,
-  homepageDecisionFlashcards,
-  homepagePatternSignals,
-  homepageBeforeAfterRows,
-  homepageShortlistSignals,
-  homepageContactMicrocopy,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -125,53 +113,10 @@ const homepageStartNowCards = [
   },
 ];
 
-const homepageWhyNowCards = [
-  {
-    label: "Clarity first",
-    title: "先讓決策者 5 秒內知道：道易不是單點外包，而是把官網、資料與流程一起做對。",
-    detail:
-      "參考 2025-2026 B2B / SaaS 首頁共同做法，這版把 target buyer、可交付樣態與 first response 承諾都提早放到首頁前段，減少第一次接觸的不確定感。",
-    bullets: ["Who + what + outcome 的 hero 結構", "Response SLA 與聯絡路徑提前揭露", "案例證據不再埋在後段"],
-  },
-  {
-    label: "Proof before pitch",
-    title: "把『會做什麼』改成『已交付哪些成果樣態』，首頁更像業務證據頁。",
-    detail:
-      "從 Axon Garside、Huemor、Marketer Milk 常提到的高轉換結構裡，最值得沿用的是 proof 先於長文：先看到案例型態、交付內容與成果訊號，再決定要不要深入讀。",
-    bullets: ["Challenge → solution → outcome 敘事", "案例快照與 proof ledger 併排", "CTA 靠近社會證明與交付節奏"],
-  },
-  {
-    label: "Mobile conversion",
-    title: "手機版不是縮小桌機，而是第一次詢問最容易發生的現場。",
-    detail:
-      "因此這版持續強化 quick brief、sticky CTA、thumb-zone 導覽與 contact fast facts，讓使用者在手機上也能快速完成第一步，不必一直來回找入口。",
-    bullets: ["主 CTA 保留在拇指區", "3 欄 brief 降低第一次詢問阻力", "Contact 承諾與 NDA 流程提前說清楚"],
-  },
-];
-
 export default function Home() {
   return (
     <main id="main-content">
       <Hero />
-
-      <section className="homepage-flashcards" aria-label="首頁決策摘要">
-        <div className="shell">
-          <div className="homepage-flashcards-grid">
-            {homepageDecisionFlashcards.map((item) => (
-              <article key={item.title} className="feature-surface homepage-flashcard">
-                <span className="mini-label accent">{item.label}</span>
-                <h2>{item.title}</h2>
-                <p>{item.detail}</p>
-                <ul className="bullet-list compact">
-                  {item.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="homepage-jump-nav" aria-label="首頁快速導覽">
         <div className="shell">
@@ -214,141 +159,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Section
-        eyebrow="Why buyers shortlist DaoYi"
-        title="先回答買方真正會拿來 shortlist 的三個問題，而不是先丟一整頁公司介紹。"
-        description="這輪把 Webflow、Amply、Proofmap 與 consulting contact page 常見做法翻成首頁前段決策模組：先看值不值得談、證據夠不夠、第一次接洽安不安心。"
-      >
-        <div className="card-grid three-up homepage-shortlist-grid">
-          {homepageShortlistSignals.map((item) => (
-            <article key={item.title} className="feature-surface homepage-shortlist-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Competitor patterns applied"
-        title="把 2025–2026 優秀 B2B / SaaS 官網的共同做法，直接翻成道易首頁可用的判斷模組。"
-        description="這輪吸收 Webflow、Axon Garside、Blend 等常見高表現做法：先清楚、再證據、再降低第一次 contact 阻力，而不是先堆很多服務敘述。"
-      >
-        <div className="card-grid three-up homepage-pattern-grid">
-          {homepagePatternSignals.map((item) => (
-            <article key={item.title} className="feature-surface homepage-pattern-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Before / after buyer scan"
-        title="讓買方一眼看懂：這個新官網到底比傳統技術公司首頁多解決了哪些事。"
-        description="不少競品研究都指出，B2B 首頁若不能快速對照『舊做法 vs 新做法』，訪客很難立刻感受到差異。這版直接把四個最重要的差異攤開。"
-      >
-        <div className="homepage-before-after-table" role="table" aria-label="道易首頁 before after 對照">
-          <div className="homepage-before-after-header" role="row">
-            <span role="columnheader">判斷面向</span>
-            <span role="columnheader">傳統舊站常見狀態</span>
-            <span role="columnheader">道易 2026 新版做法</span>
-          </div>
-          {homepageBeforeAfterRows.map((item) => (
-            <article key={item.topic} className="homepage-before-after-row" role="row">
-              <strong role="rowheader">{item.topic}</strong>
-              <p>{item.before}</p>
-              <p>{item.after}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <section className="homepage-momentum-band" aria-label="首頁第一輪判斷依據">
-        <div className="shell">
-          <div className="homepage-momentum-grid">
-            {homepageMomentumCards.map((item) => (
-              <article key={item.title} className="feature-surface homepage-momentum-card">
-                <span className="mini-label accent">{item.label}</span>
-                <h2>{item.title}</h2>
-                <p>{item.detail}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Section
-        eyebrow="Buyer due diligence"
-        title="把 B2B 首頁最常被快速檢查的四件事，直接做成首頁上的 decision scorecard。"
-        description="綜合 Stan Vision、Webflow 與 Veza Digital 近年整理：成熟的 B2B / SaaS 首頁，通常都先處理 clarity、proof、tool-like structure 與 mobile conversion，而不是先堆疊長文。"
-      >
-        <div className="card-grid four-up homepage-scorecard-grid">
-          {homepageHeuristicScorecard.map((item) => (
-            <article key={item.title} className="feature-surface homepage-scorecard-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.action}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <section className="homepage-decision-board" aria-label="首頁決策板">
-        <div className="shell">
-          <div className="homepage-decision-board-grid">
-            <div className="homepage-decision-board-main">
-              {homepageDecisionBoard.map((item) => (
-                <article key={item.title} className="feature-surface homepage-decision-board-card">
-                  <span className="mini-label accent">{item.accent}</span>
-                  <h2>{item.title}</h2>
-                  <p>{item.detail}</p>
-                  <div className="homepage-decision-board-proof">
-                    <strong>{item.label}</strong>
-                    <ul className="bullet-list compact">
-                      {item.bullets.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <aside className="homepage-signal-stack" aria-label="設計守則摘要">
-              {homepageSignalStack.map((item) => (
-                <article key={item.title} className="homepage-signal-card">
-                  <span className="mini-label accent">{item.label}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.detail}</p>
-                </article>
-              ))}
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <Section
-        eyebrow="Homepage decision snapshot"
-        title="先把買方最在意的四件事濃縮在前面：你們是誰、做過什麼、怎麼開始、風險怎麼控。"
-        description="這輪直接吸收 Stan Vision、Proofmap、Digital Silk 的共通做法：首頁前半段先像一張 decision sheet，而不是先丟一長串公司介紹。"
-      >
-        <div className="card-grid four-up homepage-snapshot-grid">
-          {homepageDecisionSnapshot.map((item) => (
-            <article key={item.title} className="feature-surface homepage-snapshot-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       <Section
         eyebrow="Real delivery evidence"
@@ -363,22 +173,6 @@ export default function Home() {
               <strong>{item.evidence}</strong>
               <p>{item.detail}</p>
               <small>{item.outcome}</small>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="First 7 days"
-        title="第一次接洽後的一週內，會拿到什麼？"
-        description="把 contact promise 寫成可預期交付，延續 Proofmap 與 B2B SaaS case-study 常見的 persistent CTA / clear next step 原則，讓第一次詢問更像進入合作流程，而不是把資料丟進黑洞。"
-      >
-        <div className="card-grid three-up homepage-first-week-grid">
-          {homepageFirstWeekDeliverables.map((item) => (
-            <article key={item.title} className="card homepage-first-week-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
             </article>
           ))}
         </div>
@@ -419,28 +213,6 @@ export default function Home() {
               <Link href={item.href} className="button-secondary inline-button">
                 {item.cta}
               </Link>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        id="why-now"
-        eyebrow="Why DaoYi / Why now"
-        title="高轉換 B2B 官網的共同特徵，不是更花，而是更快讓人做出下一步判斷。"
-        description="這輪把 Axon Garside、Huemor、Marketer Milk 提到的共通原則轉成道易首頁前段結構：先清楚、再證據、最後才是延伸閱讀。"
-      >
-        <div className="card-grid three-up homepage-why-now-grid">
-          {homepageWhyNowCards.map((item) => (
-            <article key={item.title} className="feature-surface homepage-why-now-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <ul className="bullet-list compact">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
             </article>
           ))}
         </div>
