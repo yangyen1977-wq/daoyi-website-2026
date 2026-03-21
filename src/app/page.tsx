@@ -116,6 +116,33 @@ const homepageStartNowCards = [
   },
 ];
 
+const homepageRoleDecisionCards = [
+  {
+    label: "Brand / Marketing",
+    title: "品牌與行銷團隊：先補清楚定位、案例證據與首屏 CTA。",
+    detail: "如果你最在意的是『流量有了，但詢問品質不穩』，通常先從 hero、proof 與 Contact 路徑開始最有效。",
+    outcome: "第一次接洽後可先拿到首頁訊息優先順序與 quick wins。",
+  },
+  {
+    label: "Operations / IT",
+    title: "營運與資訊團隊：先把 AI、資料欄位與 SOP 接成可採用流程。",
+    detail: "如果 PoC 已有方向，但驗收、角色分工與資料 contract 還不夠清楚，首頁要先把這種交付能力講明白。",
+    outcome: "第一次接洽後可先界定 MVP、欄位與流程節點。",
+  },
+  {
+    label: "ESG / Compliance",
+    title: "永續與法遵團隊：先講清楚 DPP / traceability 怎麼真正啟動。",
+    detail: "如果內部已開始談法規、供應鏈透明或審查資料，但還沒有對外可理解的敘事與體驗，這會是優先切口。",
+    outcome: "第一次接洽後可先拿到欄位藍圖、QR 體驗與審查輸出方向。",
+  },
+  {
+    label: "Research / Knowledge",
+    title: "研究與知識平台團隊：先把複雜內容整理成可被查詢、理解與再利用。",
+    detail: "如果資料跨語言、跨版本、跨欄位，真正的價值不是頁面多，而是決策者與使用者都能快速看懂系統價值。",
+    outcome: "第一次接洽後可先對焦資訊架構、檢索路徑與案例說服力。",
+  },
+];
+
 export const metadata: Metadata = {
   title: "B2B 成長官網、AI 導入、知識平台與 DPP 首頁",
   description:
@@ -302,6 +329,23 @@ export default function Home() {
               <Link href={item.href} className="button-secondary inline-button">
                 {item.cta}
               </Link>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Role-based decision flow"
+        title="不只分專案類型，也讓不同角色一眼知道自己要先看哪個切口。"
+        description="這輪參考 Databox、Boomi、Partful 一類成熟 B2B / SaaS 站常見的 role-aware messaging：讓品牌、營運、永續、研究型團隊更快對號入座，而不是讀完整站後才發現適不適合。"
+      >
+        <div className="card-grid two-up homepage-role-decision-grid">
+          {homepageRoleDecisionCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-role-decision-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.outcome}</strong>
             </article>
           ))}
         </div>
