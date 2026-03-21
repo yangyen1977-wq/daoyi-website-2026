@@ -31,6 +31,8 @@ import {
   homepageBuyerFitCards,
   homepageContactCompare,
   heroClients,
+  homepageBeforeAfterRows,
+  homepageContactMicrocopy,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -196,6 +198,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="What changed in mature B2B sites"
+        title="不是只把網站做漂亮，而是把買方第一次判斷所需的資訊排正確。"
+        description="這輪吸收 Axon Garside、Bop Design、Arounda 對 2025-2026 B2B / SaaS 官網的共通觀察：高表現網站會更早講清楚價值主張、案例證據、聯絡 reassurance 與 mobile-first CTA。"
+      >
+        <div className="homepage-before-after-table" aria-label="首頁優化前後差異">
+          <div className="homepage-before-after-header">
+            <span>項目</span>
+            <span>常見舊站狀態</span>
+            <span>這版首頁做法</span>
+          </div>
+          {homepageBeforeAfterRows.map((item) => (
+            <article key={item.topic} className="homepage-before-after-row">
+              <strong>{item.topic}</strong>
+              <p>{item.before}</p>
+              <p>{item.after}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="feature-surface" style={{ marginTop: 20 }}>
+          <span className="mini-label accent">Contact reassurance</span>
+          <h3 style={{ marginTop: 10 }}>第一次詢問前先把顧慮講清楚，通常比再多一段公司介紹更能提高有效轉換。</h3>
+          <ul className="bullet-list compact" style={{ marginTop: 14 }}>
+            {homepageContactMicrocopy.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </Section>
 
       <Section
         eyebrow="What you can verify fast"
