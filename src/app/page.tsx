@@ -214,6 +214,30 @@ const homepageCompetitiveInsights = [
   },
 ];
 
+const homepageBenchmarkScorecards = [
+  {
+    label: "Linear",
+    title: "Hero 不只講服務，而是把『系統 + 新工作方式』一起賣掉。",
+    detail: "Linear 首屏把 product system、AI workflows 與速度感綁在一起，讓買方立刻知道這不是一般工具介紹。",
+    takeaways: ["先賣工作方式，不只賣功能", "視覺與文案共同支持『高效率』感", "首屏就給明確下一步"],
+    daoYi: "道易也應先強調『把品牌、資料、AI 與交付節奏整成系統』，而不是分散成零碎服務。",
+  },
+  {
+    label: "Vercel",
+    title: "把效益數字與產品敘事綁在一起，可信度會高很多。",
+    detail: "Vercel 會把 build time、page load、24x 之類結果直接跟平台能力並列，形成 outcome-first 的品牌感。",
+    takeaways: ["數字盡量貼近價值主張", "先講商業結果，再講技術能力", "讓 SEO / speed / AI 成為同一套故事"],
+    daoYi: "這輪把『24h 回覆、先拿到下一步、代表交付樣態』放更前面，補強 outcome-first 的說服方式。",
+  },
+  {
+    label: "Webflow Enterprise",
+    title: "案例與 ROI 要像業務證據一樣被掃讀，而不是藏在深頁。",
+    detail: "Webflow Enterprise 把 332% ROI、20% conversion uplift、$6M cost savings 這種證據做成首頁節奏的一部分。",
+    takeaways: ["案例卡要先講 impact", "不同角色都要看見自己關心的利益", "Contact sales 與 proof 同區出現"],
+    daoYi: "因此首頁前段持續把 proof、buyer fit、contact promise 與 Quick Brief 綁在一起，而不是把案例留到很後面。",
+  },
+];
+
 export default function Home() {
   return (
     <main id="main-content">
@@ -259,6 +283,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Benchmark scorecards"
+        title="把 Linear、Vercel、Webflow Enterprise 的首頁節奏，翻成道易可直接吸收的三張 scorecard。"
+        description="這輪不只看漂亮版型，而是抓三個最值得借鏡的模式：system-level brand story、outcome-first 數字敘事、以及 proof 與 CTA 緊鄰的企業級案例節奏。"
+      >
+        <div className="card-grid three-up homepage-scorecard-grid">
+          {homepageBenchmarkScorecards.map((item) => (
+            <article key={item.label} className="hero-inline-proof-card homepage-scorecard-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <ul className="bullet-list compact">
+                {item.takeaways.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <strong>{item.daoYi}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="Shortlist in 30 seconds"
