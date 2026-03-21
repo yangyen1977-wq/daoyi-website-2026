@@ -31,10 +31,6 @@ import {
   homepageBuyerFitCards,
   homepageContactCompare,
   heroClients,
-  homepageDecisionBoard,
-  homepageBeforeAfterRows,
-  homepageSignalStack,
-  homepageContactMicrocopy,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -118,34 +114,6 @@ const homepageStartNowCards = [
   },
 ];
 
-const homepageFrictionRemovalCards = [
-  {
-    label: "Clarity within 5 seconds",
-    title: "先回答『是不是給我看的』，再談服務內容。",
-    detail: "綜合 ALM、Amply、Veza Digital 對高轉換 B2B / SaaS 首頁的共通觀察：第一屏要先講清楚對象、成果與下一步。",
-    points: ["一句話講清楚 B2B 官網 / AI / DPP", "首屏直接出現聯絡起點", "案例與信任訊號前置"],
-  },
-  {
-    label: "Show, don’t just tell",
-    title: "把代表交付樣態壓成可掃讀證據，而不是抽象能力。",
-    detail: "參考 Pixeto 與 JoinAmply 對 SaaS / agency 首頁的整理，成熟站點會把實際畫面、成果與場景貼近 CTA，減少買方自己腦補。",
-    points: ["案例先講 challenge / delivery / outcome", "結果訊號緊貼 CTA", "降低作品集式跳出"],
-  },
-  {
-    label: "Mobile-first reassurance",
-    title: "手機版先保留 response promise，讓第一次詢問更放心。",
-    detail: "行動流量通常是第一次篩選現場，因此這輪刻意把 24h 回覆、NDA-friendly 路徑與 Quick Brief 留在前段可見範圍。",
-    points: ["thumb-zone CTA", "短句 reassurance", "Email fallback 同步可見"],
-  },
-];
-
-const homepageConversionChecklist = [
-  "主 CTA 與次 CTA 同時可見，不必回頭找入口",
-  "案例證據在首頁前半段就出現，而非埋在後段",
-  "手機第一次滾動內就能知道回覆速度與聯絡方式",
-  "敏感專案可直接走 Email + NDA 路徑，降低心理阻力",
-];
-
 export const metadata: Metadata = {
   title: "B2B 成長官網、AI 導入、知識平台與 DPP 首頁",
   description:
@@ -163,80 +131,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const homepageShortlistCards = [
-  {
-    label: "30-second shortlist",
-    title: "先看見適配對象與起手式，讓第一次進站不必自己拼圖。",
-    detail: "參考 Databox、Wynter、Blend 一類首頁做法，先在前段交代 ICP、代表成果與 next step，比先講完整公司故事更容易留下合格詢問。",
-    bullets: ["B2B 品牌 / 製造業 / 研究型組織", "官網、AI、知識平台、DPP 四條路線", "Quick Brief 與 Email fallback 同時可見"],
-  },
-  {
-    label: "Evidence near CTA",
-    title: "把交付樣態與回覆承諾放在 CTA 附近，而不是藏到深頁。",
-    detail: "吸收 Pixeto、ALM、Proofmap 對 SaaS / agency 首頁的觀察後，這輪持續把案例 snapshot、response SLA 與 contact reassurance 綁在同一段。",
-    bullets: ["交付樣態比抽象形容詞更前面", "24h 回覆與 NDA-friendly path 前置", "降低『留資料後會怎樣』的不確定感"],
-  },
-  {
-    label: "Mobile buyer flow",
-    title: "手機版先保住 thumb-zone CTA、短句 reassurance 與低摩擦表單。",
-    detail: "行動版不是把桌機頁縮小，而是優先保留第一次詢問需要的資訊：怎麼開始、多久回覆、能不能先小步談。",
-    bullets: ["sticky CTA 保留在拇指區", "3 欄 brief 維持低摩擦", "Email / NDA 路徑同步可見"],
-  },
-];
 
-const homepageCompetitiveInsights = [
-  {
-    label: "2026 pattern 01",
-    title: "5 秒內回答『你是誰、做給誰、現在怎麼開始』。",
-    detail:
-      "整理 Veza Digital 與 ALM 對高轉換 B2B / SaaS 首頁的共通觀察後，可以看到真正有效的 hero 不靠形容詞取勝，而是先把定位、對象與下一步說完。",
-    applicationTitle: "套用到道易",
-    application:
-      "這輪把首頁前段的 benchmark 解釋更前置，讓價值主張、Buyer fit 與 Quick Brief / Email 路徑在更短滾動距離內一起被看見。",
-  },
-  {
-    label: "2026 pattern 02",
-    title: "證據要像業務材料，而不是作品集縮圖。",
-    detail:
-      "ALM 與 Pixeto 都反覆提到：高表現科技 / SaaS 官網會把實際畫面、交付樣態、成果訊號與 social proof 靠近 CTA，而不是藏在深層案例頁。",
-    applicationTitle: "套用到道易",
-    application:
-      "首頁保留『交付樣態 + 結果訊號 + 聯絡 promise』的緊鄰關係，讓第一次進站的人不需要先翻完整案例頁才敢詢問。",
-  },
-  {
-    label: "2026 pattern 03",
-    title: "手機版先保住 CTA 與 reassurance，再談完整敘事。",
-    detail:
-      "從 SaaS / agency 首頁整理可見，mobile-first 不只是排版縮小，而是先把 sticky CTA、response SLA、短表單與 NDA-friendly fallback 留在拇指可達區。",
-    applicationTitle: "套用到道易",
-    application:
-      "這輪把 header、mobile sticky CTA 與 Quick Brief 文案改成更像『先拿到建議』的語氣，降低第一次接洽的心理摩擦。",
-  },
-];
 
-const homepageBenchmarkScorecards = [
-  {
-    label: "Linear",
-    title: "Hero 不只講服務，而是把『系統 + 新工作方式』一起賣掉。",
-    detail: "Linear 首屏把 product system、AI workflows 與速度感綁在一起，讓買方立刻知道這不是一般工具介紹。",
-    takeaways: ["先賣工作方式，不只賣功能", "視覺與文案共同支持『高效率』感", "首屏就給明確下一步"],
-    daoYi: "道易也應先強調『把品牌、資料、AI 與交付節奏整成系統』，而不是分散成零碎服務。",
-  },
-  {
-    label: "Vercel",
-    title: "把效益數字與產品敘事綁在一起，可信度會高很多。",
-    detail: "Vercel 會把 build time、page load、24x 之類結果直接跟平台能力並列，形成 outcome-first 的品牌感。",
-    takeaways: ["數字盡量貼近價值主張", "先講商業結果，再講技術能力", "讓 SEO / speed / AI 成為同一套故事"],
-    daoYi: "這輪把『24h 回覆、先拿到下一步、代表交付樣態』放更前面，補強 outcome-first 的說服方式。",
-  },
-  {
-    label: "Webflow Enterprise",
-    title: "案例與 ROI 要像業務證據一樣被掃讀，而不是藏在深頁。",
-    detail: "Webflow Enterprise 把 332% ROI、20% conversion uplift、$6M cost savings 這種證據做成首頁節奏的一部分。",
-    takeaways: ["案例卡要先講 impact", "不同角色都要看見自己關心的利益", "Contact sales 與 proof 同區出現"],
-    daoYi: "因此首頁前段持續把 proof、buyer fit、contact promise 與 Quick Brief 綁在一起，而不是把案例留到很後面。",
-  },
-];
 
 export default function Home() {
   return (
@@ -288,151 +184,49 @@ export default function Home() {
         <div className="shell">
           <div className="homepage-opening-band-inner">
             <div className="homepage-opening-band-copy">
-              <span className="mini-label accent">Why buyers keep scrolling</span>
-              <h2>先把價值主張、案例證據、回覆承諾與 contact 起點排在一起，首頁才會更像成交工具。</h2>
-              <p>這輪吸收 Linear、Vercel、Webflow Enterprise 與近年 B2B / SaaS 首頁常見做法：不要只靠漂亮視覺，而要更快讓決策者完成 shortlist 判斷。</p>
+              <span className="mini-label accent">Why teams contact DaoYi</span>
+              <h2>先讓決策者快速看懂：你們正在做哪一類專案，道易能拿出哪些證據，現在怎麼開始。</h2>
+              <p>這輪依照 B2B / SaaS 官網常見高轉換做法，把前段自我解釋型內容減量，改成更短的適配訊號、真實交付樣態與明確 contact promise。</p>
             </div>
             <div className="homepage-opening-band-pills" aria-label="首頁前段核心訊號">
-              <p className="homepage-conversion-pill">5 秒內知道道易做什麼、做給誰、現在怎麼開始</p>
-              <p className="homepage-conversion-pill">案例證據與 CTA 靠近，不用先翻完整作品集</p>
-              <p className="homepage-conversion-pill">手機首段就看得到 24h 回覆、Quick Brief 與 Email fallback</p>
+              <p className="homepage-conversion-pill">B2B 官網、AI 導入、知識平台、DPP 四條路線一眼看懂</p>
+              <p className="homepage-conversion-pill">已交付樣態直接放前面，不必先翻完整案例頁</p>
+              <p className="homepage-conversion-pill">24h 回覆、Quick Brief、Email / NDA 路徑同步可見</p>
             </div>
           </div>
         </div>
       </section>
 
       <Section
-        eyebrow="Benchmark scorecards"
-        title="把 Linear、Vercel、Webflow Enterprise 的首頁節奏，翻成道易可直接吸收的三張 scorecard。"
-        description="這輪不只看漂亮版型，而是抓三個最值得借鏡的模式：system-level brand story、outcome-first 數字敘事、以及 proof 與 CTA 緊鄰的企業級案例節奏。"
+        eyebrow="What you can verify fast"
+        title="先回答三個買方最在意的問題，再決定要不要談。"
+        description="首頁前段現在優先處理適配、證據與聯絡節奏，而不是再解釋這版首頁在做什麼。"
       >
-        <div className="card-grid three-up homepage-scorecard-grid">
-          {homepageBenchmarkScorecards.map((item) => (
-            <article key={item.label} className="hero-inline-proof-card homepage-scorecard-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <ul className="bullet-list compact">
-                {item.takeaways.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-              <strong>{item.daoYi}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Shortlist in 30 seconds"
-        title="把高轉換 B2B / SaaS 首頁常見的三個決策訊號，壓成更快讀完的 shortlist 區。"
-        description="綜合 Databox、Wynter、Blend、Pixeto 在 2025-2026 的案例整理：前段最重要的是適配對象、證據貼近 CTA，以及手機版第一次詢問的安心感。"
-      >
-        <div className="card-grid three-up">
-          {homepageShortlistCards.map((item) => (
-            <article key={item.title} className="feature-surface homepage-friction-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <ul className="bullet-list compact">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
         <div className="homepage-conversion-band">
           <div className="homepage-conversion-band-copy">
-            <span className="mini-label accent">Why this matters</span>
-            <h3>首頁前 30 秒先完成 shortlist 判斷，後面的案例、方案與 FAQ 才真的會被看。</h3>
-            <p>所以這輪不是再加更多花樣，而是把品牌主張、案例證據、回覆承諾與 contact 起點排得更像決策工具。</p>
+            <span className="mini-label accent">Fast buyer check</span>
+            <h3>讓品牌、營運、採購、法遵或 IT 在同一輪掃讀裡完成 shortlist。</h3>
+            <p>你會先看到：道易適合哪類專案、已交付過什麼型態、以及第一次聯絡後多久會收到具體下一步。</p>
           </div>
-          <div className="homepage-conversion-band-list" aria-label="首頁前 30 秒需要回答的問題">
+          <div className="homepage-conversion-band-list" aria-label="買方快速判斷問題">
             <p className="homepage-conversion-pill">這是不是做給我們這類團隊看的？</p>
-            <p className="homepage-conversion-pill">他們是否真的交付過相近型態的專案？</p>
-            <p className="homepage-conversion-pill">如果我現在詢問，會多久收到具體下一步？</p>
-            <p className="homepage-conversion-pill">若專案敏感，能不能先用 Email / NDA 小步開始？</p>
+            <p className="homepage-conversion-pill">他們是否真的做過相近型態的交付？</p>
+            <p className="homepage-conversion-pill">如果現在詢問，接下來會發生什麼？</p>
           </div>
         </div>
-      </Section>
 
-      <Section
-        eyebrow="2026 competitor learnings"
-        title="把這輪競品學到的三個高轉換原則，直接翻成道易首頁可用做法。"
-        description="這不是單純收集漂亮案例，而是把 Veza Digital、ALM、Pixeto 提到的 clarity、evidence-first、mobile-first 轉成更貼近道易的首頁 decision flow。"
-      >
-        <div className="card-grid three-up">
-          {homepageCompetitiveInsights.map((item) => (
-            <article key={item.title} className="feature-surface competitive-insight-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <div className="competitive-insight-application">
-                <strong>{item.applicationTitle}</strong>
-                <p>{item.application}</p>
+        <div className="card-grid three-up proof-ledger-grid">
+          {verifiedProofLedger.map((item) => (
+            <article key={item.title} className="card proof-ledger-card">
+              <div className="proof-ledger-card-topline">
+                <span className="mini-label accent">{item.label}</span>
+                <span className="proof-ledger-status">{item.status}</span>
               </div>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Shortlist decision board"
-        title="把買方第一次會問的問題，直接做成首頁前段的 shortlist 版面。"
-        description="綜合 Databox、Wynter、Blend、Webstacks 等 2025-2026 B2B / SaaS 首頁共通做法：先講清楚定位與對象，再把 proof、CTA 與 reassurance 放在同一輪掃讀內。"
-      >
-        <div className="card-grid two-up">
-          {homepageDecisionBoard.map((item) => (
-            <article key={item.title} className="feature-surface">
-              <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <ul className="bullet-list compact">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <div className="card-grid two-up">
-          {homepageBeforeAfterRows.map((item) => (
-            <article key={item.topic} className="card">
-              <span className="mini-label accent">{item.topic}</span>
-              <div className="case-story-block">
-                <strong>Before</strong>
-                <p>{item.before}</p>
-              </div>
-              <div className="case-story-block">
-                <strong>After</strong>
-                <p>{item.after}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="card-grid three-up">
-          {homepageSignalStack.map((item) => (
-            <article key={item.title} className="card proof-narrative-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
+              <strong>{item.proof}</strong>
               <p>{item.detail}</p>
             </article>
           ))}
-        </div>
-
-        <div className="feature-surface quick-brief-note">
-          <span className="mini-label accent">Contact reassurance</span>
-          <h3>先把第一次聯絡的不確定感拆掉，轉換通常就會更自然。</h3>
-          <ul className="bullet-list compact">
-            {homepageContactMicrocopy.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <p className="quick-brief-meta">這段刻意參考高轉換 B2B / agency contact page 的 reassurance copy 寫法，讓首頁前段就能回答「送出後會怎樣」。</p>
         </div>
       </Section>
 
@@ -471,39 +265,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Why this homepage direction"
-        title="這輪把成熟 B2B / SaaS 官網最常見的三個轉換原則，壓成首頁中前段的短決策區。"
-        description="從 Veza Digital、ALM、Pixeto、Amply 近年的整理可以看到：真正有效的首頁，不是資訊更多，而是更快讓訪客確認適配性、看到證據、並放心採取下一步。"
-      >
-        <div className="card-grid three-up homepage-friction-grid">
-          {homepageFrictionRemovalCards.map((item) => (
-            <article key={item.title} className="feature-surface homepage-friction-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <ul className="bullet-list compact">
-                {item.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <div className="homepage-conversion-band">
-          <div className="homepage-conversion-band-copy">
-            <span className="mini-label accent">Homepage conversion checklist</span>
-            <h3>這一版首頁刻意把「清楚、證據、放心開始」放在同一個滾動節奏裡。</h3>
-            <p>目的不是讓首頁更長，而是讓第一次進站的 B2B 決策者能在更短時間內完成 shortlist 判斷。</p>
-          </div>
-          <div className="homepage-conversion-band-list" aria-label="首頁轉換檢查清單">
-            {homepageConversionChecklist.map((item) => (
-              <p key={item} className="homepage-conversion-pill">{item}</p>
-            ))}
-          </div>
-        </div>
-      </Section>
 
       <Section
         eyebrow="Project fit in one scan"
