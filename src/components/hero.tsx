@@ -36,6 +36,8 @@ export function Hero() {
           <h1>{siteConfig.heroTitle}</h1>
           <p>{siteConfig.heroDescription}</p>
 
+          <HeroProofBar />
+
           <div className="hero-buyer-assurance-grid" aria-label="首頁前三個決策保證">
             {heroBuyerAssurances.map((item) => (
               <article key={item.label} className="hero-buyer-assurance-card">
@@ -172,8 +174,6 @@ export function Hero() {
               ))}
             </div>
           </div>
-
-          <HeroProofBar />
 
           <div className="hero-tags">
             <span>AI 智慧應用</span>
