@@ -4,25 +4,49 @@ import { useMemo, useState } from "react";
 import { quickBriefAssistPoints, siteConfig } from "@/lib/site";
 
 const projectFocusOptions = [
-  "品牌官網重構 / 提升詢問量",
-  "AI / 流程整合",
-  "知識平台 / 內容治理",
-  "DPP / 永續資料",
-  "案例頁 / Contact 轉換優化",
-  "先做首頁 / Contact 快速診斷",
-];
+  {
+    value: "品牌官網重構 / 提升詢問量",
+    label: "品牌官網重構 / 提升詢問量",
+    detail: "適合舊站有流量，但主張、案例與 CTA 還不夠強的團隊。",
+  },
+  {
+    value: "AI / 流程整合",
+    label: "AI / 流程整合",
+    detail: "把模型、資料欄位、SOP 與前台體驗接成可採用流程。",
+  },
+  {
+    value: "知識平台 / 內容治理",
+    label: "知識平台 / 內容治理",
+    detail: "整理檢索、權限、內容結構與後續維運的整體規劃。",
+  },
+  {
+    value: "DPP / 永續資料",
+    label: "DPP / 永續資料",
+    detail: "適合要先做 traceability、欄位藍圖或產品履歷體驗的專案。",
+  },
+  {
+    value: "案例頁 / Contact 轉換優化",
+    label: "案例頁 / Contact 轉換優化",
+    detail: "想先強化詢問率、證據密度與第一次接洽的安心感。",
+  },
+  {
+    value: "先做首頁 / Contact 快速診斷",
+    label: "先做首頁 / Contact 快速診斷",
+    detail: "還不確定要怎麼開始，先拿一份可執行的診斷方向。",
+  },
+] as const;
 
 type FormState = {
   name: string;
   company: string;
-  focus: string;
+  focus: (typeof projectFocusOptions)[number]["value"];
 };
 
 export function QuickBriefForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
     company: "",
-    focus: projectFocusOptions[0],
+    focus: projectFocusOptions[0].value,
   });
 
   const isDisabled = useMemo(() => !form.name || !form.company, [form.name, form.company]);
@@ -76,16 +100,29 @@ export function QuickBriefForm() {
         />
       </label>
 
-      <label className="form-field">
-        <span>這次最需要什麼？</span>
-        <select value={form.focus} onChange={(event) => handleChange("focus", event.target.value)}>
-          {projectFocusOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </label>
+      <fieldset className="form-field quick-brief-focus-fieldset">
+        <legend>這次最需要什麼？</legend>
+        <p className="quick-brief-field-hint">直接點選最接近的起點即可，手機上比傳統下拉更快，也更不容易選錯。</p>
+        <div className="quick-brief-focus-grid" role="radiogroup" aria-label="專案焦點">
+          {projectFocusOptions.map((option) => {
+            const checked = form.focus === option.value;
+
+            return (
+              <label key={option.value} className={`quick-brief-focus-card ${checked ? "is-selected" : ""}`}>
+                <input
+                  type="radio"
+                  name="focus"
+                  value={option.value}
+                  checked={checked}
+                  onChange={() => handleChange("focus", option.value)}
+                />
+                <span className="quick-brief-focus-title">{option.label}</span>
+                <small>{option.detail}</small>
+              </label>
+            );
+          })}
+        </div>
+      </fieldset>
 
       <div className="quick-brief-action-group">
         <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟已填好的 DaoYi 專案詢問郵件">
