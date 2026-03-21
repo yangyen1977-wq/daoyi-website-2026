@@ -47,6 +47,10 @@ export function QuickBriefForm() {
       <span className="mini-label accent">Low-friction intake / 3 欄先開始</span>
       <h3>快速丟出專案重點</h3>
       <p>這裡只問姓名、公司與本次焦點，讓第一次聯絡維持低摩擦。若你要談品牌官網、案例頁強化、AI 導入、DPP，或只是先想做一輪首頁 / Contact 診斷，這份 brief 都能直接開始。</p>
+      <div className="quick-brief-priority-note">
+        <strong>最適合現在就送出的情況</strong>
+        <p>舊站有流量但價值主張不清、案例證據太散、或聯絡入口太弱。先用 3 欄起步，通常比整理一大份需求書更快進入有效討論。</p>
+      </div>
 
       <label className="form-field">
         <span>姓名</span>

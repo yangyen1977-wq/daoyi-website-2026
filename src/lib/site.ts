@@ -821,21 +821,36 @@ export const heroActionSignals = [
 export const heroClarityChecklist = [
   {
     label: "這是什麼？",
-    answer: "B2B AI 官網 + DPP",
-    detail: "以 6-10 字 hero ＋ 15 秒互動 demo，直接展示產品與流程。",
+    answer: "B2B 官網 + AI + DPP",
+    detail: "用一句話先說清楚：道易把品牌主張、資料流程與網站體驗整成同一套交付。",
     metric: "Clarity <5s",
   },
   {
     label: "對誰？",
-    answer: "品牌 / 營運 / 永續主管",
-    detail: "分眾 CTA + sticky footer，確保決策角色都能立即行動。",
-    metric: "Thumb-zone CTA",
+    answer: "品牌 / 營運 / 永續決策者",
+    detail: "讓品牌、營運、採購與法遵都能快速判斷這個案子該不該先談。",
+    metric: "Buyer-fit scan",
   },
   {
     label: "有何證據？",
-    answer: "+32% activation",
-    detail: "Stan Vision 與 ALM 研究：首屏 KPI + 實際案例讓轉換成長 18-32%。",
+    answer: "案例 / 交付 / 回覆節奏",
+    detail: "先看已交付樣態、代表成果與 24h response promise，再決定是否聯絡。",
     metric: "Proof above fold",
+  },
+];
+
+export const heroQuickSignals = [
+  {
+    label: "適合情境",
+    value: "舊站有流量，但說服力與詢問品質不穩",
+  },
+  {
+    label: "第一次會拿到",
+    value: "建議切入點、優先順序、推薦 sprint",
+  },
+  {
+    label: "敏感專案也可",
+    value: "Email / NDA 先開始，不必先填完整需求",
   },
 ];
 

@@ -158,6 +158,7 @@ export const metadata: Metadata = {
     "theme-color": "#08111f",
     "apple-mobile-web-app-capable": "yes",
     "mobile-web-app-capable": "yes",
+    "format-detection": "telephone=no",
   },
 };
 

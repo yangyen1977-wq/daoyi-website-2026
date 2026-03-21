@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { heroContactLadder, heroDecisionMetrics, heroFitSignals, siteConfig, stats, homepageContactProof, contactFastFacts } from "@/lib/site";
+import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
@@ -21,6 +21,15 @@ export function Hero() {
           <h1>{siteConfig.heroTitle}</h1>
           <p>{siteConfig.heroDescription}</p>
           <HeroClarityChecklist />
+
+          <div className="hero-quick-signals" aria-label="首輪決策摘要">
+            {heroQuickSignals.map((item) => (
+              <article key={item.label} className="hero-quick-signal-card">
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
+              </article>
+            ))}
+          </div>
 
           <div className="hero-priority-strip" aria-label="品牌重點">
             <div>
