@@ -1044,6 +1044,28 @@ a:hover {
   margin-top: 24px;
 }
 
+.hero-buyer-assurance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.hero-buyer-assurance-card {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-buyer-assurance-card strong {
+  color: #f5fbff;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
 .hero-intro-badge {
   display: inline-flex;
   align-items: center;
@@ -1661,6 +1683,7 @@ a:hover {
   .hero-clarity-checklist,
   .hero-decision-rail,
   .hero-proof-highlight-grid,
+  .hero-buyer-assurance-grid,
   .contact-hero-checklist,
   .contact-route-speed-grid,
   .homepage-decision-board-main,
@@ -1706,6 +1729,16 @@ a:hover {
   .mobile-cta-button {
     flex: 1 1 0;
     min-width: 0;
+  }
+
+  .mobile-cta-content {
+    border-radius: 28px;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .mobile-cta-copy {
+    width: 100%;
   }
 }
 
@@ -2558,7 +2591,9 @@ a:hover {
 }
 
 .mobile-cta-copy {
-  display: none;
+  display: block;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .mobile-cta-copy strong {

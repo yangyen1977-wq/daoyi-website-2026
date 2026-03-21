@@ -11,15 +11,40 @@ const heroHighlights = [
   "兼顧品牌說服力、RWD / 手機轉換與後續維運",
 ];
 
+const heroBuyerAssurances = [
+  {
+    label: "Shortlist faster",
+    title: "先讓決策者判斷適不適合談，而不是先讀完整家公司介紹。",
+  },
+  {
+    label: "Proof that feels real",
+    title: "案例、交付樣態與回覆承諾貼近 CTA，信任建立會更快。",
+  },
+  {
+    label: "Mobile-first contact",
+    title: "手機版先保留 24h 回覆、Quick Brief 與 Email / NDA 路徑。",
+  },
+];
+
 export function Hero() {
   return (
     <section className="hero-section">
       <div className="shell hero-grid">
         <div className="hero-copy">
           <span className="hero-eyebrow">DaoYi Technology 2026 / AI / Data / Knowledge Platform / DPP</span>
-          <div className="hero-intro-badge">從研究脈絡走到產業落地的數位整合團隊</div>
+          <div className="hero-intro-badge">從研究脈絡走到產業落地，專長是把複雜需求整理成可成交、可維運的數位系統</div>
           <h1>{siteConfig.heroTitle}</h1>
           <p>{siteConfig.heroDescription}</p>
+
+          <div className="hero-buyer-assurance-grid" aria-label="首頁前三個決策保證">
+            {heroBuyerAssurances.map((item) => (
+              <article key={item.label} className="hero-buyer-assurance-card">
+                <span className="mini-label accent">{item.label}</span>
+                <strong>{item.title}</strong>
+              </article>
+            ))}
+          </div>
+
           <HeroClarityChecklist />
 
           <div className="hero-quick-signals" aria-label="首輪決策摘要">
