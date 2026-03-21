@@ -10,7 +10,8 @@ export function MobileStickyCTA() {
   const hiddenRoutes = ["/contact"];
   const [dismissed, setDismissed] = useState(false);
   const primaryHref = pathname === "/" ? "/#quick-brief" : "/contact";
-  const primaryLabel = pathname === "/" ? "3 欄先開始" : "24h 內取得建議";
+  const primaryLabel = pathname === "/" ? "3 欄快速開始" : "24h 內取得建議";
+  const secondaryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論新專案")}`;
 
   if (hiddenRoutes.includes(pathname) || dismissed) {
     return null;

@@ -43,7 +43,7 @@ export function QuickBriefForm() {
   }
 
   return (
-    <form id="quick-brief" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
+    <form id="quick-brief-form" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
       <span className="mini-label accent">Low-friction intake / 3 欄先開始</span>
       <h3>快速丟出專案重點</h3>
       <p>這裡只問姓名、公司與本次焦點，讓第一次聯絡維持低摩擦。若你要談品牌官網、案例頁強化、AI 導入、DPP，或只是先想做一輪首頁 / Contact 診斷，這份 brief 都能直接開始。</p>

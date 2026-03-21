@@ -240,6 +240,7 @@ export default function Home() {
       </Section>
 
       <Section
+        id="why-now"
         eyebrow="Start without friction"
         title="如果你現在就要判斷值不值得談，先看這三件事就夠。"
         description="這輪把 Directive 與近年高轉換 B2B landing page 常見做法內化成首頁中前段的『立即開始區』：一個主要 CTA、明確 reassurance、以及敏感專案也能接受的次要路徑。"
