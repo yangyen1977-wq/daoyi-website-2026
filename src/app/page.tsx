@@ -20,6 +20,7 @@ import {
   contactPrepChecklist,
   homepageContactRoutes,
   heroDecisionMetrics,
+  heroOutcomeStrip,
   verifiedProofLedger,
   evidenceMatrix,
   engagementPackages,

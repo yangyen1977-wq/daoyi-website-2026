@@ -2091,7 +2091,9 @@ a:hover {
   .proof-grid,
   .testimonial-grid,
   .quick-brief-grid,
-  .hero-priority-strip {
+  .hero-priority-strip,
+  .hero-outcome-strip,
+  .homepage-outcome-strip-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -3068,62 +3070,79 @@ a:hover {
   .hero-contact-fastfacts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .hero-outcome-card,
+  .homepage-outcome-strip-card {
+    padding: 14px 16px;
+    border-radius: 18px;
+  }
 }
 
 @media (max-width: 760px) {
   .hero-contact-fastfacts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
 
-@media (max-width: 760px) {
   .contact-readiness-grid {
     grid-template-columns: 1fr;
   }
+
   .hero-proof-bar {
     padding: 14px;
   }
+
   .hero-proof-metrics,
   .hero-inline-proof-grid {
     grid-template-columns: 1fr;
   }
+
   .preview-tabs {
     grid-template-columns: 1fr;
   }
+
   .logo-chip-row,
   .contact-proof-list {
     display: grid;
   }
+
   .homepage-jump-nav {
     margin-top: -4px;
   }
+
   .homepage-jump-nav-inner {
     align-items: flex-start;
     flex-direction: column;
   }
+
   .homepage-jump-link-row {
     width: 100%;
     justify-content: flex-start;
   }
+
   .homepage-jump-link {
     width: 100%;
     justify-content: center;
   }
+
   .homepage-trust-strip {
     padding: 8px 0 4px;
   }
+
   .homepage-trust-chip {
     padding: 14px 16px;
     border-radius: 18px;
   }
+
   .conversion-panel {
     padding: 22px;
     border-radius: 24px;
   }
+
   .conversion-actions .button-primary,
   .conversion-actions .button-secondary {
     width: 100%;
   }
+
   .engagement-step-strip {
     grid-template-columns: 1fr;
   }

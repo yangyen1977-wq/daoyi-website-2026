@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts } from "@/lib/site";
+import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts, heroOutcomeStrip } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
@@ -40,6 +40,15 @@ export function Hero() {
               <span className="mini-label">適合專案</span>
               <p>品牌官網重整、AI 導入、知識平台、DPP / Traceability 與資料治理升級。</p>
             </div>
+          </div>
+
+          <div className="hero-outcome-strip" aria-label="首屏結果導向摘要">
+            {heroOutcomeStrip.map((item) => (
+              <article key={item.label} className="hero-outcome-card">
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
+              </article>
+            ))}
           </div>
 
           <div className="hero-story">
