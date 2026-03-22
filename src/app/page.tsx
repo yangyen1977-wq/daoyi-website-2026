@@ -197,12 +197,12 @@ const homepageProofPulse = [
 const homepageConversionSnapshot = [
   {
     label: "Best fit",
-    title: "你如果正在重整官網、補案例證據或把 AI / DPP 講成可成交方案，這頁就是為你設計。",
+    title: "適合正在重整官網、補案例證據，或把 AI / DPP 講成可成交方案的團隊。",
     bullets: ["B2B 官網升級", "AI / 資料流程落地", "知識平台 / DPP / Traceability"],
   },
   {
     label: "Proof upfront",
-    title: "首頁前段先給你三種可信證據：交付樣態、代表場景、第一次接洽會拿到什麼。",
+    title: "先看三種可信證據：交付樣態、代表場景、第一次接洽會拿到什麼。",
     bullets: ["研究 / 典藏平台", "AI 視覺流程與 SOP", "欄位藍圖 / QR / 審查輸出"],
   },
   {
@@ -332,14 +332,17 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="feature-surface" style={{ marginTop: 20 }}>
-          <span className="mini-label accent">Quick fit check</span>
-          <h3 style={{ marginTop: 10 }}>如果下面三種情況你中了其中一到兩項，通常就值得先談。</h3>
-          <ul className="bullet-list compact" style={{ marginTop: 14 }}>
-            {homepageProofPulse.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+        <div className="homepage-shortlist-summary-grid" style={{ marginTop: 20 }}>
+          <article className="feature-surface homepage-shortlist-summary-card">
+            <span className="mini-label accent">What buyers want fast</span>
+            <h3>高意圖訪客通常只想先確認三件事：適不適合、證據夠不夠、送出後會得到什麼。</h3>
+            <p>因此首頁前段刻意把「交付樣態 + 代表案例 + first response promise」壓在同一輪掃讀裡，減少手機版重複閱讀。</p>
+          </article>
+          <article className="feature-surface homepage-shortlist-summary-card">
+            <span className="mini-label accent">Contact reassurance</span>
+            <h3>第一次聯絡前先把 24h 回覆、Quick Brief、Email / NDA 路徑講清楚。</h3>
+            <p>這比再多一段抽象品牌形容詞更有效，因為它直接回答買方最在意的風險與下一步。</p>
+          </article>
         </div>
       </Section>
 

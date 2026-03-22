@@ -323,6 +323,23 @@ a:hover {
   gap: 14px;
 }
 
+.homepage-shortlist-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.homepage-shortlist-summary-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.homepage-shortlist-summary-card h3 {
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
 .homepage-first-response-kit-card {
   display: grid;
   gap: 12px;
@@ -3206,7 +3223,8 @@ a:hover {
   .homepage-trust-strip-grid,
   .homepage-fit-grid,
   .homepage-momentum-grid,
-  .homepage-first-response-kit {
+  .homepage-first-response-kit,
+  .homepage-shortlist-summary-grid {
     grid-template-columns: 1fr;
   }
   .snapshot-grid,
