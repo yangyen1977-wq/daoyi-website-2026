@@ -37,6 +37,8 @@ import {
   homepageReadinessCards,
   homepageResponsePromiseCards,
   homepageFirstScanEvidence,
+  contactIntentCards,
+  deliveryTracks,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -636,6 +638,44 @@ export default function Home() {
         </div>
       </Section>
 
+
+      <Section
+        eyebrow="How engagement starts"
+        title="先把三種最常見的啟動方式擺在首頁，讓不同成熟度的買方都能直接開始。"
+        description="這輪吸收 ALM、Veza Digital 與 Sitebuilder Report 的共通模式：成熟 B2B 站不只給一個 CTA，而是同時保留低摩擦 brief、敏感案 Email / NDA，以及先看交付節奏的入口。"
+      >
+        <div className="card-grid three-up">
+          {contactIntentCards.map((item) => (
+            <article key={item.title} className="feature-surface contact-intent-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <a href={item.href} className="button-secondary inline-button">{item.cta}</a>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="What you actually get"
+        title="不只說服務名稱，而是直接揭露每條 sprint 會交付什麼。"
+        description="競品研究顯示，當買方能更快看到 deliverables、風險控制與後續優化節奏，對第一次接洽的信任感會明顯提高。這段把道易的交付說法做得更像 decision pack。"
+      >
+        <div className="card-grid three-up">
+          {deliveryTracks.map((track) => (
+            <article key={track.title} className="card package-card">
+              <span className="mini-label accent">Delivery track</span>
+              <h3>{track.title}</h3>
+              <p>{track.summary}</p>
+              <ul className="bullet-list compact">
+                {track.outputs.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="手機 / SEO 體驗"
