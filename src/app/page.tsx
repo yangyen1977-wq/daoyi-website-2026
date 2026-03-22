@@ -217,7 +217,7 @@ const homepageConversionSnapshot = [
 export const metadata: Metadata = {
   title: "B2B 成長官網、AI 導入、知識平台與 DPP 首頁",
   description:
-    "道易科技協助 B2B 品牌、製造業與研究型組織，把品牌官網升級、案例證據、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付系統；首頁直接提供案例證據、24h 回覆承諾與低摩擦 contact 起點。",
+    "道易科技協助 B2B 品牌、製造業與研究型組織，把品牌官網升級、案例證據、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付系統；首頁直接提供 shortlist 級價值主張、案例證據、24h 回覆承諾、Email / NDA 備援與低摩擦 contact 起點。",
   keywords: [
     "B2B 官網改版",
     "AI 導入",
@@ -422,6 +422,23 @@ export default function Home() {
       </Section>
 
       <Section
+        eyebrow="What this round sharpened"
+        title="把競品觀察轉成更短、更硬、更適合手機決策的首頁規則。"
+        description="根據 Marketer Milk、Powered by Search、Superside 這輪共同提到的方向：清楚 headline、proof 靠近 CTA、手機先保留下一步。"
+      >
+        <div className="card-grid three-up">
+          {homepageBenchmarkLearnings.map((item) => (
+            <article key={item.title} className="feature-surface homepage-start-now-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.action}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
         eyebrow="Buyer fit by project type"
         title="讓不同成熟度的買方，直接找到最接近自己的合作入口。"
         description="參考高轉換 agency / SaaS 網站常見做法：不要讓不同角色自己猜，直接把適合對象、常見訊號與下一步放在同一張卡裡。"
@@ -582,6 +599,17 @@ export default function Home() {
               <Link href={item.href} className="button-secondary inline-button">
                 {item.cta}
               </Link>
+            </article>
+          ))}
+        </div>
+
+        <div className="card-grid three-up" style={{ marginTop: 20 }}>
+          {homepageRoleDecisionCards.map((item) => (
+            <article key={item.title} className="card homepage-shortlist-scenario-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.outcome}</strong>
             </article>
           ))}
         </div>
