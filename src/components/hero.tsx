@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts, heroOutcomeStrip, heroProofHighlights } from "@/lib/site";
+import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
-import { HeroActionPlan } from "@/components/hero-action-plan";
 
 const heroHighlights = [
   "先回答買方 5 秒內最在意的事：你們是誰、做給誰、怎麼開始",
@@ -11,18 +10,18 @@ const heroHighlights = [
   "兼顧品牌說服力、RWD / 手機轉換與後續維運",
 ];
 
-const heroBuyerAssurances = [
+const heroMicroProof = [
   {
-    label: "Shortlist faster",
-    title: "先讓決策者判斷適不適合談，而不是先讀完整家公司介紹。",
+    label: "適合案型",
+    value: "B2B 官網升級 / AI 導入 / 知識平台 / DPP",
   },
   {
-    label: "Proof that feels real",
-    title: "案例、交付樣態與回覆承諾貼近 CTA，信任建立會更快。",
+    label: "起手方式",
+    value: "Quick Brief 3 欄或直接 Email / NDA",
   },
   {
-    label: "Mobile-first contact",
-    title: "手機版先保留 24h 回覆、Quick Brief 與 Email / NDA 路徑。",
+    label: "回覆節奏",
+    value: "24h 內回覆具體下一步",
   },
 ];
 
@@ -38,11 +37,11 @@ export function Hero() {
 
           <HeroProofBar />
 
-          <div className="hero-buyer-assurance-grid" aria-label="首頁前三個決策保證">
-            {heroBuyerAssurances.map((item) => (
-              <article key={item.label} className="hero-buyer-assurance-card">
+          <div className="hero-inline-proof-grid" aria-label="首屏快速證據">
+            {heroMicroProof.map((item) => (
+              <article key={item.label} className="hero-inline-proof-card">
                 <span className="mini-label accent">{item.label}</span>
-                <strong>{item.title}</strong>
+                <strong>{item.value}</strong>
               </article>
             ))}
           </div>
@@ -61,55 +60,13 @@ export function Hero() {
           <div className="hero-priority-strip" aria-label="品牌重點">
             <div>
               <span className="mini-label">核心定位</span>
-              <strong>把複雜內容、資料流程與品牌體驗，整理成客戶看得懂也用得起來的系統。</strong>
+              <strong>把複雜內容、資料流程與品牌體驗，整理成客戶看得懂也願意開始的系統。</strong>
             </div>
             <div>
-              <span className="mini-label">適合專案</span>
-              <p>品牌官網重整、AI 導入、知識平台、DPP / Traceability 與資料治理升級。</p>
+              <span className="mini-label">這一版的重點</span>
+              <p>首屏先收斂成定位、證據與下一步，不再讓訪客在第一屏做太多閱讀負擔。</p>
             </div>
           </div>
-
-          <div className="hero-outcome-strip" aria-label="首屏結果導向摘要">
-            {heroOutcomeStrip.map((item) => (
-              <article key={item.label} className="hero-outcome-card">
-                <span>{item.label}</span>
-                <strong>{item.value}</strong>
-              </article>
-            ))}
-          </div>
-
-          <div className="hero-proof-highlight-grid" aria-label="首頁前段成交重點">
-            {heroProofHighlights.map((item) => (
-              <article key={item.label} className="hero-proof-highlight-card">
-                <span className="mini-label accent">{item.label}</span>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="hero-story">
-            <article className="hero-story-card">
-              <span className="mini-label">Before</span>
-              <h3>舊站常見的三個阻力</h3>
-              <ul>
-                <li>價值主張太晚出現，第一次進站看不懂重點。</li>
-                <li>案例與成果分散，難以快速建立信任。</li>
-                <li>聯絡入口太深，手機上更容易中途離開。</li>
-              </ul>
-            </article>
-            <article className="hero-story-card hero-story-card--after">
-              <span className="mini-label accent">After</span>
-              <h3>道易想交付的首頁狀態</h3>
-              <ul>
-                <li>第一視窗先說清楚你是誰、做什麼、為何值得談。</li>
-                <li>代表案例與成果緊貼 CTA，降低決策不確定感。</li>
-                <li>桌機與手機都能在最少步驟內進入聯絡或提案流程。</li>
-              </ul>
-            </article>
-          </div>
-
-          <HeroActionPlan />
 
           <div className="hero-actions">
             <Link href="/#quick-brief" className="button-primary button-large">
