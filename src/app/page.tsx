@@ -220,22 +220,22 @@ export default function Home() {
           <div className="homepage-opening-band-inner">
             <div className="homepage-opening-band-copy">
               <span className="mini-label accent">Why teams contact DaoYi</span>
-              <h2>先讓決策者快速看懂：你們正在做哪一類專案，道易能拿出哪些證據，現在怎麼開始。</h2>
-              <p>這輪依照 B2B / SaaS 官網常見高轉換做法，把前段自我解釋型內容減量，改成更短的適配訊號、真實交付樣態與明確 contact promise。</p>
+              <h2>先講清楚：適不適合你、做過哪些交付、現在怎麼低摩擦開始。</h2>
+              <p>這輪依照 ALM 與 Veza Digital 提到的 clarity / proof / friction reduction 原則，把首頁前段收斂成更短的 decision flow，減少重複判斷卡。</p>
             </div>
             <div className="homepage-opening-band-pills" aria-label="首頁前段核心訊號">
-              <p className="homepage-conversion-pill">B2B 官網、AI 導入、知識平台、DPP 四條路線一眼看懂</p>
-              <p className="homepage-conversion-pill">已交付樣態直接放前面，不必先翻完整案例頁</p>
-              <p className="homepage-conversion-pill">24h 回覆、Quick Brief、Email / NDA 路徑同步可見</p>
+              <p className="homepage-conversion-pill">一句話先說清楚 B2B 官網、AI、知識平台、DPP 四種主軸</p>
+              <p className="homepage-conversion-pill">案例證據與交付樣態比品牌自述更早出現</p>
+              <p className="homepage-conversion-pill">Quick Brief、Email / NDA、24h 回覆同步可見</p>
             </div>
           </div>
         </div>
       </section>
 
       <Section
-        eyebrow="First-scan heuristics"
-        title="先把成熟 B2B / SaaS 首頁最常贏的三件事，濃縮成道易前段的第一輪掃讀。"
-        description="本輪競品學習重點來自 Webflow、ALM、Proofmap、Webstacks：高表現網站不是先講很多，而是先把 clarity、proof 與 low-friction next step 放進同一個視窗。"
+        eyebrow="Homepage decision flow"
+        title="把成熟 B2B / SaaS 首頁最重要的 proof、fit 與 CTA，濃縮成一段就看懂。"
+        description="這輪不再堆疊多組相似 scorecard，而是保留更像 shortlist 材料的核心區：先講 proof，再講適合誰，最後講怎麼開始。"
       >
         <div className="card-grid three-up homepage-first-scan-grid">
           {homepageFirstScanEvidence.map((item) => (
@@ -247,65 +247,8 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </Section>
 
-      <Section
-        eyebrow="Decision snapshot"
-        title="先用 4 張極短判斷卡，讓第一次進站的人快速完成 shortlist。"
-        description="吸收 ALM 與 Veza Digital 對高轉換 B2B / SaaS 站點的共通觀察：首頁前段越能快速回答『這是給誰、做過什麼、怎麼開始、手機上能不能立刻行動』，越容易留下高意圖訪客。"
-      >
-        <div className="card-grid four-up homepage-decision-snapshot-grid">
-          {homepageDecisionSnapshot.map((item) => (
-            <article key={item.title} className="card homepage-decision-snapshot-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Readiness scan"
-        title="再用 3 張 readiness 卡，把『現在值不值得談』說得更短、更像決策資訊。"
-        description="綜合 ALM、Veza Digital 與近年 B2B agency 首頁 pattern：成熟買方不想先看大段品牌故事，而是要先知道現在的站點是不是卡在 clarity、proof、conversion，尤其手機上能不能立刻採取下一步。"
-      >
-        <div className="card-grid three-up homepage-readiness-grid">
-          {homepageReadinessCards.map((item) => (
-            <article key={item.title} className="card homepage-readiness-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Shortlist scorecard"
-        title="把成熟 B2B 官網常見的三個成交訊號，直接濃縮成首頁前段判斷卡。"
-        description="綜合 Amply、Axon Garside 對高轉換 SaaS / B2B 網站的共同觀察：越早說清楚 clarity、proof 與 conversion reassurance，越容易讓第一次進站的人留下來。"
-      >
-        <div className="card-grid three-up homepage-scorecard-grid">
-          {homepageShortlistScorecards.map((item) => (
-            <article key={item.title} className="card homepage-scorecard-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="What changed in mature B2B sites"
-        title="不是只把網站做漂亮，而是把買方第一次判斷所需的資訊排正確。"
-        description="這輪吸收 Axon Garside、Bop Design、Arounda 對 2025-2026 B2B / SaaS 官網的共通觀察：高表現網站會更早講清楚價值主張、案例證據、聯絡 reassurance 與 mobile-first CTA。"
-      >
-        <div className="homepage-before-after-table" aria-label="首頁優化前後差異">
+        <div className="homepage-before-after-table" aria-label="首頁優化前後差異" style={{ marginTop: 24 }}>
           <div className="homepage-before-after-header">
             <span>項目</span>
             <span>常見舊站狀態</span>
