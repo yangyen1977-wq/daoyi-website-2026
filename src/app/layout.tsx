@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
@@ -51,6 +51,7 @@ const structuredData = [
     "url": siteConfig.url,
     "email": siteConfig.email,
     "logo": `${siteConfig.url}/assets/daoyi-logo.png`,
+    "sameAs": ["https://daoyidh.com"],
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -93,6 +94,13 @@ const structuredData = [
   ...serviceStructuredData,
   breadcrumbList
 ];
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#08111f",
+  colorScheme: "dark light",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),

@@ -32,9 +32,7 @@ import {
   heroClients,
   homepageBeforeAfterRows,
   homepageContactMicrocopy,
-  homepageShortlistScorecards,
   homepageDecisionSnapshot,
-  homepageReadinessCards,
   homepageResponsePromiseCards,
   homepageFirstScanEvidence,
   contactIntentCards,
@@ -149,6 +147,33 @@ const homepageRoleDecisionCards = [
     detail: "如果資料跨語言、跨版本、跨欄位，真正的價值不是頁面多，而是決策者與使用者都能快速看懂系統價值。",
     outcome: "第一次接洽後可先對焦資訊架構、檢索路徑與案例說服力。",
   },
+];
+
+const homepageBenchmarkLearnings = [
+  {
+    label: "Clarity within 5 seconds",
+    title: "高表現 B2B / SaaS 首屏會先完成：對象、結果、下一步。",
+    detail: "這輪把首頁前段再往『誰適合、先拿到什麼、怎麼低風險開始』收斂，避免訪客先被大量服務敘述淹沒。",
+    action: "對應調整：補上首頁診斷摘要與 first-response kit。",
+  },
+  {
+    label: "Proof near CTA",
+    title: "案例證據、回覆承諾與 CTA 要在同一段掃讀內成立。",
+    detail: "競品多半不是把 proof 放得更後面，而是把結果訊號、交付樣態與 contact reassurance 更早前置。",
+    action: "對應調整：在 Quick Brief 前再補一層 evidence + reassurance。",
+  },
+  {
+    label: "Mobile first reassurance",
+    title: "手機版要先讓人敢點，而不是先讓人讀完整頁。",
+    detail: "高轉換站常把 24h 回覆、短表單、Email / NDA 備援與適合對象放進拇指可達區附近。",
+    action: "對應調整：新增手機友善的 project-start 區塊與更短的 contact microcopy。",
+  },
+];
+
+const homepageExecutiveSummary = [
+  "如果你是要重做 B2B 官網、整理案例說服力、補強 Contact 詢問品質，這一版首頁就是先為這類案型設計。",
+  "如果專案牽涉 AI、資料欄位、DPP 或既有系統串接，首頁會先講清楚交付能力，而不是只講設計語氣。",
+  "如果案子敏感，也可直接走 Email + NDA，不必先填長表單或把資訊一次說完。",
 ];
 
 export const metadata: Metadata = {
@@ -375,6 +400,35 @@ export default function Home() {
               <Link href={item.href} className="button-secondary inline-button">
                 {item.cta}
               </Link>
+            </article>
+          ))}
+        </div>
+
+        <div className="homepage-executive-summary feature-surface" style={{ marginTop: 20 }}>
+          <div>
+            <span className="mini-label accent">Executive summary</span>
+            <h3 style={{ marginTop: 10 }}>給高意圖買方的一段話版本：先判斷值不值得談，再決定要不要往下看完整頁。</h3>
+          </div>
+          <ul className="bullet-list compact" style={{ marginTop: 14 }}>
+            {homepageExecutiveSummary.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="This round’s benchmark learnings"
+        title="把競品值得學的 conversion pattern，直接轉成道易首頁可用的寫法。"
+        description="本輪參考 ALM、Veza Digital、Webflow Consulting examples 的共通點：越成熟的 B2B 官網，越會把 clarity、proof、CTA 與 mobile reassurance 收在同一個 decision flow 裡。"
+      >
+        <div className="card-grid three-up homepage-benchmark-grid">
+          {homepageBenchmarkLearnings.map((item) => (
+            <article key={item.title} className="card homepage-benchmark-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.action}</strong>
             </article>
           ))}
         </div>
@@ -836,6 +890,18 @@ export default function Home() {
       </Section>
 
       <Section id="quick-brief" eyebrow="快速提案" title="現在只給三個資訊，先拿到具體下一步。">
+        <div className="feature-surface homepage-project-start-strip" style={{ marginBottom: 20 }}>
+          <div>
+            <span className="mini-label accent">Project start options</span>
+            <h3 style={{ marginTop: 10 }}>不想先讀完整站也沒關係，直接選最適合你的起手方式。</h3>
+            <p style={{ marginTop: 10 }}>這裡把成熟 B2B / agency 常見的低摩擦 contact flow 收斂成三句話：快速拿建議、敏感案可先 NDA、以及第一次回覆會附帶具體下一步。</p>
+          </div>
+          <div className="homepage-project-start-pills">
+            <p className="homepage-conversion-pill">想先知道首頁 / Contact 怎麼補 → 直接送出 3 欄 Quick Brief</p>
+            <p className="homepage-conversion-pill">案子偏敏感或已經有文件 → 先 Email，必要時先 NDA</p>
+            <p className="homepage-conversion-pill">24h 內先回覆建議切入點、會議方向與待補材料</p>
+          </div>
+        </div>
         <div className="quick-brief-grid">
           <QuickBriefForm />
           <div className="feature-surface quick-brief-note">
