@@ -818,6 +818,8 @@ export const verifiedProofLedger = [
     detail: "把文本、書目、版本與人物資料整理成可查詢、可視覺化、可再利用的平台架構。",
     confidence: "真實交付能力",
     status: "Verified delivery",
+    source: "Source: 知識平台 / 數位典藏交付經驗",
+    bestFit: "Best-fit teams：研究單位、基金會、典藏與內容型組織",
     bullets: ["資訊架構與欄位梳理", "跨資料源檢索與關聯瀏覽", "方便後續擴充的 API / 後台規劃"],
   },
   {
@@ -827,6 +829,8 @@ export const verifiedProofLedger = [
     detail: "不是只展示模型，而是把辨識結果納入作業節點、驗收方式與後續維運。",
     confidence: "真實交付能力",
     status: "Verified delivery",
+    source: "Source: AI 視覺辨識與現場流程整合經驗",
+    bestFit: "Best-fit teams：營運、工廠現場、IT / 數據導入專案",
     bullets: ["模型結果接入現場 SOP", "驗收節點與誤判處理機制", "保留後續維運與調參節奏"],
   },
   {
@@ -834,8 +838,10 @@ export const verifiedProofLedger = [
     title: "DPP / Traceability 規劃",
     proof: "欄位藍圖、QR 體驗、審查輸出包",
     detail: "把永續、採購、法遵需要的資料鏈整理成更容易啟動的第一版交付。",
-    confidence: "真實交付能力",
+    confidence: "可明確定義的交付藍圖",
     status: "Delivery blueprint",
+    source: "Source: DPP / ESPR / traceability 需求建模",
+    bestFit: "Best-fit teams：永續、法遵、採購、製造與供應鏈團隊",
     bullets: ["跨部門欄位藍圖", "產品履歷 / QR 掃碼體驗", "審查與對外說明的輸出包"],
   },
 ];

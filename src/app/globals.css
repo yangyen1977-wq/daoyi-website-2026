@@ -2463,20 +2463,52 @@ a:hover {
   text-transform: uppercase;
 }
 
+.proof-ledger-meta-row {
+  display: grid;
+  gap: 10px;
+}
+
 .proof-ledger-card strong {
   color: #0d223c;
   font-size: 1rem;
   line-height: 1.6;
 }
 
+.proof-ledger-source {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(93, 228, 215, 0.1);
+  border: 1px solid rgba(93, 228, 215, 0.22);
+  color: #0c5671;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 .proof-ledger-bullets {
   margin-top: -2px;
+}
+
+.proof-ledger-footer {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 4px;
 }
 
 .proof-ledger-card small {
   color: #0c5671;
   font-size: 0.84rem;
   font-weight: 600;
+}
+
+.proof-ledger-footer span {
+  color: var(--text-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 .prep-card {

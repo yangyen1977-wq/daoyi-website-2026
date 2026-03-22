@@ -582,6 +582,9 @@ export default function Home() {
         title="先讓訪客看到道易到底交付過哪一類成果。"
         description="參考 ALM / Webflow / Axon Garside 常見做法，把抽象能力改成可辨識的『交付樣態 + 可驗證內容』，補強首頁的真實感。"
       >
+        <div className="proof-ledger-intro">
+          <p>把案例證據拆成三種買方更容易判斷的標示：<strong>Verified delivery</strong> 代表已有真實交付能力，<strong>Delivery blueprint</strong> 代表已可明確定義輸出內容，<strong>Best-fit teams</strong> 則幫助訪客快速對位自己的專案類型。</p>
+        </div>
         <div className="card-grid three-up proof-ledger-grid">
           {verifiedProofLedger.map((item) => (
             <article key={item.title} className="card proof-ledger-card">
@@ -590,14 +593,20 @@ export default function Home() {
                 <span className="proof-ledger-status">{item.status}</span>
               </div>
               <h3>{item.title}</h3>
-              <strong>{item.proof}</strong>
+              <div className="proof-ledger-meta-row">
+                <strong>{item.proof}</strong>
+                <span className="proof-ledger-source">{item.source}</span>
+              </div>
               <p>{item.detail}</p>
               <ul className="bullet-list compact proof-ledger-bullets">
                 {item.bullets.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
-              <small>{item.confidence}</small>
+              <div className="proof-ledger-footer">
+                <small>{item.confidence}</small>
+                <span>{item.bestFit}</span>
+              </div>
             </article>
           ))}
         </div>
