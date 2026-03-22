@@ -33,6 +33,7 @@ import {
   homepageBeforeAfterRows,
   homepageContactMicrocopy,
   homepageShortlistScorecards,
+  homepageDecisionSnapshot,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -225,6 +226,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Decision snapshot"
+        title="先用 4 張極短判斷卡，讓第一次進站的人快速完成 shortlist。"
+        description="吸收 ALM 與 Veza Digital 對高轉換 B2B / SaaS 站點的共通觀察：首頁前段越能快速回答『這是給誰、做過什麼、怎麼開始、手機上能不能立刻行動』，越容易留下高意圖訪客。"
+      >
+        <div className="card-grid four-up homepage-decision-snapshot-grid">
+          {homepageDecisionSnapshot.map((item) => (
+            <article key={item.title} className="card homepage-decision-snapshot-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="Shortlist scorecard"

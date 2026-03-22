@@ -10,8 +10,8 @@ export function MobileStickyCTA() {
   const hiddenRoutes = ["/contact"];
   const [dismissed, setDismissed] = useState(false);
   const primaryHref = pathname === "/" ? "/#quick-brief" : "/contact";
-  const primaryLabel = pathname === "/" ? "先填 3 欄 brief" : "24h 內拿建議";
-  const secondaryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論新專案")}`;
+  const primaryLabel = pathname === "/" ? "3 欄拿建議" : "24h 內拿建議";
+  const secondaryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論新專案 / NDA")}&body=${encodeURIComponent("目前網址或資料：\n希望先聊的範圍：\n是否需要 NDA：\n補充說明：")}`;
 
   if (hiddenRoutes.includes(pathname) || dismissed) {
     return null;
@@ -22,7 +22,7 @@ export function MobileStickyCTA() {
       <div className="mobile-cta-content">
         <div className="mobile-cta-copy">
           <strong>先用 3 欄拿 24h 建議，不必先講完整個專案</strong>
-          <span>Quick Brief 主 CTA，Email / NDA 保留低風險起點</span>
+          <span>主 CTA 走 Quick Brief；敏感案可直接 Email / NDA 開始</span>
         </div>
         <div className="mobile-cta-actions">
           <Link href={primaryHref} className="mobile-cta-button primary">
