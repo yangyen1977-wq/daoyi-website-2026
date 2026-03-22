@@ -5,23 +5,23 @@ import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 
 const heroHighlights = [
-  "先在 5 秒內講清楚：道易適合哪些 B2B 團隊、會補哪一段成長瓶頸",
-  "把案例證據、AI / 資料流程、品牌敘事與 Contact 路徑排成同一個成交節奏",
-  "同時兼顧品牌成熟度、RWD / 手機轉換、SEO 與後續維運延展性",
+  "先用一句話講清楚：誰適合、先補哪段、值不值得現在談",
+  "把案例證據、交付樣態、AI / 資料流程與 Contact reassurance 放進同一輪掃讀",
+  "手機版優先保留 CTA、回覆承諾與 NDA-friendly 起手路徑，減少第一次詢問阻力",
 ];
 
 const heroMicroProof = [
   {
     label: "適合案型",
-    value: "B2B 官網升級 / AI 導入 / 知識平台 / DPP",
+    value: "官網升級 / AI 導入 / 知識平台 / DPP",
   },
   {
-    label: "起手方式",
-    value: "Quick Brief 3 欄或直接 Email / NDA",
+    label: "首次回覆",
+    value: "24h 內附建議切入點與下一步",
   },
   {
-    label: "回覆節奏",
-    value: "24h 內回覆具體下一步",
+    label: "開始方式",
+    value: "3 欄 Quick Brief / Email / NDA",
   },
 ];
 
@@ -31,8 +31,8 @@ export function Hero() {
     <section className="hero-section">
       <div className="shell hero-grid">
         <div className="hero-copy">
-          <span className="hero-eyebrow">DaoYi Technology 2026 / AI / Data / Knowledge Platform / DPP</span>
-          <div className="hero-intro-badge">從研究脈絡走到產業落地，把複雜需求整理成可成交、可維運的數位系統</div>
+          <span className="hero-eyebrow">DaoYi Technology 2026 / B2B Website / AI / Knowledge Platform / DPP</span>
+          <div className="hero-intro-badge">讓決策者先看懂價值、團隊更容易啟動、網站上線後也更容易持續成長</div>
           <h1>{siteConfig.heroTitle}</h1>
           <p>{siteConfig.heroDescription}</p>
 
@@ -61,21 +61,21 @@ export function Hero() {
           <div className="hero-priority-strip" aria-label="品牌重點">
             <div>
               <span className="mini-label">核心定位</span>
-              <strong>把複雜內容、資料流程與品牌體驗，整理成決策者看得懂、內部也推得動的系統。</strong>
+              <strong>把首頁訊息、案例證據、CTA、AI / 資料流程與交付方式，一次整理成更容易成交的系統。</strong>
             </div>
             <div>
               <span className="mini-label">這一版的重點</span>
-              <p>首頁前段先完成定位、證據與下一步三件事，讓訪客不用滑很久才知道值不值得談。</p>
+              <p>首屏先完成 3 件事：誰適合、做過什麼、現在怎麼低風險開始。</p>
             </div>
           </div>
 
           <div className="hero-actions">
             <Link href="/#quick-brief" className="button-primary button-large">
-              立即送出 Quick Brief
+              3 欄送出 Quick Brief
             </Link>
-            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論 2026 新專案")}`}>
-              先用 Email 開始
-            </a>
+            <Link href="/#proof-ledger" className="button-secondary button-large">
+              先看案例證據
+            </Link>
           </div>
 
           <div className="hero-inline-proof-grid" aria-label="首次接洽重點">
@@ -111,7 +111,7 @@ export function Hero() {
             })}
           </div>
 
-          <div className="hero-cta-note">適合想在 2026 年重做 B2B 官網、資料平台、DPP 或 AI 專案的企業與機構；若案子敏感，也可先 NDA 再往下談。</div>
+          <div className="hero-cta-note">適合正在重做 B2B 官網、補強案例說服力、整理 AI / 資料流程或啟動 DPP 的團隊；若案子敏感，也可先 Email / NDA 再往下談。</div>
 
           <div className="hero-contact-reassurance" aria-label="第一次聯絡前的 reassurance">
             <div className="hero-contact-reassurance-head">

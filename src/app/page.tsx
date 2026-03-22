@@ -265,23 +265,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="homepage-opening-band" aria-label="首頁前段成交摘要">
-        <div className="shell">
-          <div className="homepage-opening-band-inner">
-            <div className="homepage-opening-band-copy">
-              <span className="mini-label accent">Why teams contact DaoYi</span>
-              <h2>先把 shortlist 最需要的三件事講完：適不適合、做過什麼、現在怎麼開始。</h2>
-              <p>首頁前段收斂成更像 B2B shortlist 的 decision flow：一句話定位、案例證據、contact reassurance 與下一步同時可見，讓第一次進站的人更快完成判斷。</p>
-            </div>
-            <div className="homepage-opening-band-pills" aria-label="首頁前段核心訊號">
-              <p className="homepage-conversion-pill">一句話先說清楚 B2B 官網、AI、知識平台、DPP 四種主軸</p>
-              <p className="homepage-conversion-pill">案例證據與交付樣態比品牌自述更早出現</p>
-              <p className="homepage-conversion-pill">Quick Brief、Email / NDA、24h 回覆同步可見</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Section
         eyebrow="Shortlist-ready homepage"
         title="先把道易為什麼值得 shortlist 的理由，濃縮成一段就看懂。"
@@ -404,41 +387,18 @@ export default function Home() {
 
 
       <Section
-        eyebrow="Project fit in one scan"
-        title="讓不同類型的買方，用一眼就知道自己比較像哪一種專案。"
-        description="把『適合誰先談』做成更像篩選器的三張卡，讓不同角色不用讀完整頁也能找到自己的起點。"
+        eyebrow="Executive summary"
+        title="給高意圖買方的一段話版本：先判斷值不值得談，再決定要不要往下看完整頁。"
+        description="把原本分散的買方 fit 提示壓成一個更短的摘要區，減少重複掃讀。"
       >
-        <div className="card-grid three-up homepage-buyer-fit-grid">
-          {homepageBuyerFitCards.map((item) => (
-            <article key={item.title} className="feature-surface homepage-buyer-fit-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.summary}</p>
-              <ul className="bullet-list compact">
-                {item.cues.map((cue) => (
-                  <li key={cue}>{cue}</li>
-                ))}
-              </ul>
-              <Link href={item.href} className="button-secondary inline-button">
-                {item.cta}
-              </Link>
-            </article>
-          ))}
-        </div>
-
-        <div className="homepage-executive-summary feature-surface" style={{ marginTop: 20 }}>
-          <div>
-            <span className="mini-label accent">Executive summary</span>
-            <h3 style={{ marginTop: 10 }}>給高意圖買方的一段話版本：先判斷值不值得談，再決定要不要往下看完整頁。</h3>
-          </div>
-          <ul className="bullet-list compact" style={{ marginTop: 14 }}>
+        <div className="homepage-executive-summary feature-surface">
+          <ul className="bullet-list compact" style={{ marginTop: 0 }}>
             {homepageExecutiveSummary.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
       </Section>
-
 
 
       <Section
