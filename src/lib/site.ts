@@ -7,10 +7,49 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把官網、案例證據與 AI / 資料流程，整成會成交的 B2B 系統",
+  heroTitle: "把品牌官網、案例證據與 AI / 資料流程，整成真正能成交的 B2B 系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、AI 導入、知識平台與 DPP / Traceability 收斂成同一套可交付方案，讓決策者更快完成 shortlist，也更容易放心開始下一步。",
+    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、AI 導入、知識平台與 DPP / Traceability 收斂成同一套可交付方案，讓決策者更快完成 shortlist、讓內部更快對齊，也讓第一次接洽更容易放心開始。",
 };
+
+export const homepageShortlistScenarios = [
+  {
+    label: "Brand / Marketing",
+    title: "舊站流量有了，但首頁還講不清楚差異，也撐不起更高品質詢問。",
+    detail: "先補 hero 主張、案例證據密度與 CTA 節奏，讓第一次進站的人 5 秒內完成『適不適合』判斷。",
+    outcome: "會先看到：首頁訊息優先序、案例排序與 Contact friction quick wins",
+  },
+  {
+    label: "Operations / IT",
+    title: "AI 或系統方向已經有了，但資料欄位、流程與驗收還沒被說清楚。",
+    detail: "把 AI / 資料流程寫成買方看得懂的交付敘事，同時保留 MVP、欄位與 SOP 的可信度。",
+    outcome: "會先看到：資料 contract、角色節點與 MVP 起手建議",
+  },
+  {
+    label: "ESG / Compliance",
+    title: "要開始談 DPP / traceability，但現況還停在法規壓力與分散資料。",
+    detail: "先把欄位藍圖、掃碼體驗與審查輸出包變成可展示的第一版，讓管理層與供應鏈都更容易理解。",
+    outcome: "會先看到：欄位藍圖、QR 體驗與審查輸出方向",
+  },
+];
+
+export const homepageFirstResponseKit = [
+  {
+    label: "24h response",
+    title: "回覆不是只有收到，而是先附建議切入點。",
+    detail: "參考 Intercom 與 Metajive 一類成熟 B2B 站常見做法：把『接下來會發生什麼』講到很具體，降低第一次接洽的不確定感。",
+  },
+  {
+    label: "Decision pack",
+    title: "第一次會議前，就先整理成可討論的 shortlist 材料。",
+    detail: "優先整理首頁訊息、案例證據、資料欄位或 DPP 起點，不讓會議時間浪費在重新定義問題。",
+  },
+  {
+    label: "NDA-friendly",
+    title: "敏感專案可先從 Email / NDA 開始，不逼你先公開太多。",
+    detail: "保留低摩擦與低風險雙路徑，讓採購、法遵、既有系統或客戶資料案也能先往前推一步。",
+  },
+];
 
 export const heroOutcomeStrip = [
   {

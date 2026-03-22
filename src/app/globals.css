@@ -286,16 +286,52 @@ a:hover {
 
 .homepage-first-scan-grid,
 .homepage-decision-snapshot-grid,
-.homepage-scorecard-grid {
+.homepage-scorecard-grid,
+.homepage-shortlist-scenario-grid {
   align-items: stretch;
 }
 
 .homepage-first-scan-card,
 .homepage-decision-snapshot-card,
-.homepage-scorecard-card {
+.homepage-scorecard-card,
+.homepage-shortlist-scenario-card {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.homepage-shortlist-scenario-card {
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
+.homepage-shortlist-scenario-card h3 {
+  color: #0d223c;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.homepage-shortlist-scenario-card strong {
+  margin-top: auto;
+  color: #0d2844;
+  line-height: 1.7;
+}
+
+.homepage-first-response-kit {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.homepage-first-response-kit-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.homepage-first-response-kit-card h3 {
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .homepage-first-scan-card {
@@ -3133,7 +3169,8 @@ a:hover {
   .contact-fast-facts,
   .homepage-trust-strip-grid,
   .homepage-fit-grid,
-  .homepage-momentum-grid {
+  .homepage-momentum-grid,
+  .homepage-first-response-kit {
     grid-template-columns: 1fr;
   }
   .snapshot-grid,

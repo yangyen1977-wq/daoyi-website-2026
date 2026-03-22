@@ -39,6 +39,8 @@ import {
   homepageFirstScanEvidence,
   contactIntentCards,
   deliveryTracks,
+  homepageShortlistScenarios,
+  homepageFirstResponseKit,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -231,6 +233,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Shortlist scenarios"
+        title="先讓三種最常見的高意圖專案，在前段就找到自己的切口。"
+        description="這輪吸收 Linear 的 role-aware 首屏敘事、Intercom 的 system-first clarity，以及 Metajive case page 常見的『成果 / 起手方式 / mobile 簡化』做法：先讓品牌、營運、法遵型買方各自快速對號入座。"
+      >
+        <div className="card-grid three-up homepage-shortlist-scenario-grid">
+          {homepageShortlistScenarios.map((item) => (
+            <article key={item.title} className="card homepage-shortlist-scenario-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.outcome}</strong>
+            </article>
+          ))}
+        </div>
+
+        <div className="homepage-first-response-kit" aria-label="第一次接洽前的保證訊號">
+          {homepageFirstResponseKit.map((item) => (
+            <article key={item.title} className="feature-surface homepage-first-response-kit-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="Decision snapshot"
