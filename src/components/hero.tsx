@@ -39,8 +39,8 @@ const heroBuyerAssurance = [
   },
   {
     label: "Proof near CTA",
-    title: "把案例樣態、回覆承諾與 Contact 路徑放在同一輪掃讀內。",
-    detail: "高意圖買方通常不想先翻完整案例頁；這版首屏直接補齊信任與下一步，讓 shortlist 判斷更快。",
+    title: "把案例證據、回覆承諾與 CTA 放在同一輪掃讀裡。",
+    detail: "高意圖訪客通常不會先翻完整案例頁；先在首屏附近補齊信任與下一步，更容易進入 shortlist。",
   },
   {
     label: "Mobile reassurance",

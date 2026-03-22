@@ -262,7 +262,7 @@ export default function Home() {
       <Section
         eyebrow="Shortlist scenarios"
         title="先讓三種最常見的高意圖專案，在前段就找到自己的切口。"
-        description="這輪吸收 Linear 的 role-aware 首屏敘事、Intercom 的 system-first clarity，以及 Metajive case page 常見的『成果 / 起手方式 / mobile 簡化』做法：先讓品牌、營運、法遵型買方各自快速對號入座。"
+        description="把品牌、營運與法遵 / 永續三種買方的起點拆清楚，讓訪客不必讀完整頁才知道自己該從哪裡開始。"
       >
         <div className="card-grid three-up homepage-shortlist-scenario-grid">
           {homepageShortlistScenarios.map((item) => (
