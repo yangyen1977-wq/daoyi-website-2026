@@ -25,29 +25,6 @@ const heroMicroProof = [
   },
 ];
 
-const heroDecisionQuestions = [
-  "這是不是同時卡在品牌訊息、案例證據與 Contact 轉換的案子？",
-  "如果牽涉 AI、資料欄位或 DPP，首頁能不能先講清楚交付能力？",
-  "第一次接洽後，對方能不能很快知道下一步而不是等報價？",
-];
-
-const heroBuyerAssurance = [
-  {
-    label: "Clarity-first",
-    title: "先用一句話講清楚誰適合、會得到什麼、怎麼開始。",
-    detail: "把抽象能力收斂成短句，減少第一屏思考成本，讓決策者更快理解道易適合處理哪一類專案。",
-  },
-  {
-    label: "Proof near CTA",
-    title: "把案例證據、回覆承諾與 CTA 放在同一輪掃讀裡。",
-    detail: "高意圖訪客通常不會先翻完整案例頁；先在首屏附近補齊信任與下一步，更容易進入 shortlist。",
-  },
-  {
-    label: "Mobile reassurance",
-    title: "手機版先保留拇指可達 CTA、Email / NDA 備援與 24h 回覆。",
-    detail: "不是把桌機長頁縮小，而是先讓行動訪客敢開始，之後再決定要不要繼續深讀。",
-  },
-];
 
 export function Hero() {
   return (
@@ -72,16 +49,6 @@ export function Hero() {
 
           <HeroClarityChecklist />
 
-          <div className="hero-buyer-assurance-grid" aria-label="競品學習後內化的首頁原則">
-            {heroBuyerAssurance.map((item) => (
-              <article key={item.title} className="hero-buyer-assurance-card">
-                <span className="mini-label accent">{item.label}</span>
-                <strong>{item.title}</strong>
-                <p>{item.detail}</p>
-              </article>
-            ))}
-          </div>
-
           <div className="hero-quick-signals" aria-label="首輪決策摘要">
             {heroQuickSignals.map((item) => (
               <article key={item.label} className="hero-quick-signal-card">
@@ -100,12 +67,6 @@ export function Hero() {
               <span className="mini-label">這一版的重點</span>
               <p>首頁前段先完成定位、證據與下一步三件事，讓訪客不用滑很久才知道值不值得談。</p>
             </div>
-          </div>
-
-          <div className="hero-decision-question-strip" aria-label="買方快速判斷問題">
-            {heroDecisionQuestions.map((item) => (
-              <p key={item} className="hero-decision-question-pill">{item}</p>
-            ))}
           </div>
 
           <div className="hero-actions">

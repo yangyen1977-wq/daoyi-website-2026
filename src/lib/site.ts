@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP，整理成更容易成交也更容易啟動的系統",
+  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP，整成決策者一看就懂、團隊也推得動的系統",
   heroDescription:
-    "給品牌、製造業與研究型組織：道易把首頁主張、案例說服力、資料流程、RWD / 手機 CTA 與 Contact 轉換整成同一套可交付方案，讓第一次進站更快 shortlist、第一次接洽更快拿到可執行下一步。",
+    "給品牌、製造業與研究型組織：道易用更清楚的品牌主張、可驗證的案例證據、低摩擦 CTA 與資料流程敘事，讓第一次進站更快 shortlist、第一次接洽更快進到可執行下一步。",
 };
 
 export const homepageShortlistScenarios = [

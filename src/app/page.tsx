@@ -19,8 +19,6 @@ import {
   contactFastFacts,
   contactCommitments,
   contactPrepChecklist,
-  homepageContactRoutes,
-  heroDecisionMetrics,
   verifiedProofLedger,
   engagementPackages,
   engagementSteps,
@@ -32,9 +30,7 @@ import {
   heroClients,
   homepageBeforeAfterRows,
   homepageContactMicrocopy,
-  homepageDecisionSnapshot,
   homepageResponsePromiseCards,
-  homepageFirstScanEvidence,
   contactIntentCards,
   deliveryTracks,
   homepageShortlistScenarios,
@@ -341,39 +337,11 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="Decision snapshot"
-        title="先用四張卡，把首頁最重要的判斷一次講完。"
-        description="延續 ALM、Veza Digital 與 Genesys Growth 反覆提到的原則：高意圖買方通常只想先知道適不適合、做過什麼、怎麼開始，以及手機上會不會卡住。"
-      >
-        <div className="card-grid two-up homepage-decision-snapshot-grid">
-          {homepageDecisionSnapshot.map((item) => (
-            <article key={item.title} className="card homepage-decision-snapshot-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         eyebrow="Homepage decision flow"
         title="把成熟 B2B / SaaS 首頁最重要的 proof、fit 與 CTA，濃縮成一段就看懂。"
-        description="不再堆疊多組相似 scorecard，而是保留更像 shortlist 材料的核心區：先講 proof，再講適合誰，最後講怎麼開始。"
+        description="保留真正有助於 shortlist 的內容：先講 proof，再講適合誰，最後講怎麼開始。"
       >
-        <div className="card-grid three-up homepage-first-scan-grid">
-          {homepageFirstScanEvidence.map((item) => (
-            <article key={item.title} className="card homepage-first-scan-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.proof}</strong>
-            </article>
-          ))}
-        </div>
-
-        <div className="homepage-before-after-table" aria-label="首頁優化前後差異" style={{ marginTop: 24 }}>
+        <div className="homepage-before-after-table" aria-label="首頁優化前後差異">
           <div className="homepage-before-after-header">
             <span>項目</span>
             <span>常見舊站狀態</span>
@@ -471,77 +439,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Homepage decision principles"
-        title="把成熟 B2B 官網常見的 conversion 原則，整理成道易首頁的判斷方式。"
-        description="越成熟的 B2B 官網，越會把 clarity、proof、CTA 與 mobile reassurance 收在同一個 decision flow 裡；這段就是把那些原則直接變成買方看得懂的首頁訊息。"
-      >
-        <div className="card-grid three-up homepage-benchmark-grid">
-          {homepageBenchmarkLearnings.map((item) => (
-            <article key={item.title} className="card homepage-benchmark-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.action}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
 
-      <Section
-        eyebrow="Role-based decision flow"
-        title="不只分專案類型，也讓不同角色一眼知道自己要先看哪個切口。"
-        description="用 role-aware messaging 讓品牌、營運、永續、研究型團隊更快對號入座，而不是讀完整站後才發現適不適合。"
-      >
-        <div className="card-grid two-up homepage-role-decision-grid">
-          {homepageRoleDecisionCards.map((item) => (
-            <article key={item.title} className="feature-surface homepage-role-decision-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.outcome}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="First-response 設計"
-        title="第一次接洽先拿到判斷依據，而不是只留下一封沒有下文的詢問。"
-        description="先把 response SLA、聯絡分流與起手交付提早講清楚，減少決策者第一次接洽的不確定感。"
-      >
-        <div className="card-grid three-up">
-          {heroDecisionMetrics.map((item) => (
-            <article key={item.label} className="card proof-narrative-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.value}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="card-grid three-up homepage-contact-route-grid">
-          {homepageContactRoutes.map((item) => {
-            const isExternal = item.href.startsWith("mailto:");
-
-            return (
-              <article key={item.title} className="feature-surface homepage-contact-route-card">
-                <span className="mini-label accent">{item.label}</span>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
-                {isExternal ? (
-                  <a href={item.href} className="button-secondary inline-button">
-                    {item.cta}
-                  </a>
-                ) : (
-                  <Link href={item.href} className="button-secondary inline-button">
-                    {item.cta}
-                  </Link>
-                )}
-              </article>
-            );
-          })}
-        </div>
-      </Section>
 
       <Section
         eyebrow="品牌摘要"
