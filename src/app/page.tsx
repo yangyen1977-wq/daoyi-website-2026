@@ -35,6 +35,7 @@ import {
   deliveryTracks,
   homepageShortlistScenarios,
   homepageFirstResponseKit,
+  homepageBenchmarkSignals,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -314,6 +315,49 @@ export default function Home() {
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Competitive patterns applied"
+        title="把這輪競品學到的高表現模式，直接翻成道易首頁可用的 decision UI。"
+        description="這段不是單純列參考站，而是把最近 B2B / SaaS 官網反覆出現的三種有效模式，明確對應到道易首頁的做法。"
+      >
+        <div className="card-grid three-up homepage-benchmark-grid">
+          {homepageBenchmarkSignals.map((item) => (
+            <article key={item.title} className="card homepage-benchmark-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <div className="homepage-benchmark-proof">
+                <strong>{item.proof}</strong>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Buyer fit by project type"
+        title="讓不同成熟度的買方，直接找到最接近自己的合作入口。"
+        description="參考高轉換 agency / SaaS 網站常見做法：不要讓不同角色自己猜，直接把適合對象、常見訊號與下一步放在同一張卡裡。"
+      >
+        <div className="card-grid three-up homepage-buyer-fit-grid">
+          {homepageBuyerFitCards.map((item) => (
+            <article key={item.title} className="card homepage-buyer-fit-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+              <ul className="bullet-list compact">
+                {item.cues.map((cue) => (
+                  <li key={cue}>{cue}</li>
+                ))}
+              </ul>
+              <Link href={item.href} className="button-secondary inline-button">
+                {item.cta}
+              </Link>
             </article>
           ))}
         </div>
