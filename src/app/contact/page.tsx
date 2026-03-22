@@ -79,6 +79,19 @@ export default function ContactPage() {
               </article>
             ))}
           </div>
+
+          <div className="contact-first-scan-band" aria-label="第一次聯絡先看這三件事">
+            <article className="contact-first-scan-card">
+              <span className="mini-label accent">先判斷適不適合</span>
+              <h2>如果你卡在「官網說不清楚、案例不夠像證據、聯絡入口偏弱」，通常現在就值得談。</h2>
+              <p>這一版把 contact 首屏也做成 decision flow：先讓高意圖買方知道適不適合，再決定要用 brief 還是 Email / NDA 開始。</p>
+            </article>
+            <div className="contact-first-scan-pills">
+              <p className="homepage-conversion-pill">Quick Brief：適合已知道主題，想 5 分鐘內開始</p>
+              <p className="homepage-conversion-pill">Email / NDA：適合敏感案、既有文件或法遵流程</p>
+              <p className="homepage-conversion-pill">24h 回覆：會先附建議切入點，不只回收到</p>
+            </div>
+          </div>
         </div>
       </section>
 

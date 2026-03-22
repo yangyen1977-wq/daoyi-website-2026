@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
+import { DesktopQuickContact } from "@/components/desktop-quick-contact";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig, solutions, navItems } from "@/lib/site";
 import "./globals.css";
@@ -202,6 +203,7 @@ export default function RootLayout({
           <SiteHeader />
           {children}
           <SiteFooter />
+          <DesktopQuickContact />
           <MobileStickyCTA />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         </div>

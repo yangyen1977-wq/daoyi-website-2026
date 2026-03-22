@@ -3657,6 +3657,10 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+  .desktop-quick-contact {
+    display: none;
+  }
+
   .homepage-project-start-strip {
     grid-template-columns: 1fr;
   }
