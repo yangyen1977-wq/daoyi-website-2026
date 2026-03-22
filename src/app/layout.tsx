@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     default: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
     template: `%s | ${siteConfig.shortName}`,
   },
-  description: "道易科技協助 B2B 品牌、製造業與研究型組織規劃 2026 官網改版、AI 導入、知識平台與 DPP / Traceability，把品牌主張、案例證據、資料流程與 Contact 轉換整成同一套可交付系統。",
+  description: "道易科技協助 B2B 品牌、製造業與研究型組織規劃 2026 官網改版、AI 導入、知識平台與 DPP / Traceability，把品牌主張、案例證據、資料流程、RWD / 手機轉換與 Contact 轉換整成同一套可交付系統。",
   applicationName: siteConfig.name,
   referrer: "origin-when-cross-origin",
   keywords: [
@@ -147,7 +147,7 @@ export const metadata: Metadata = {
     locale: "zh_TW",
     url: siteConfig.url,
     title: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
-    description: "給需要同時處理官網改版、案例證據、AI 導入與 DPP / Traceability 的 B2B 團隊：先看 shortlist 級品牌主張、已交付案例證據、24h 回覆承諾與低摩擦 contact 起點。",
+    description: "給需要同時處理官網改版、案例證據、AI 導入與 DPP / Traceability 的 B2B 團隊：先看 shortlist 級品牌主張、已交付案例證據、RWD / 手機 CTA、24h 回覆承諾與低摩擦 contact 起點。",
     siteName: siteConfig.name,
     alternateLocale: ["zh_TW", "en_US"],
     images: [
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | B2B 官網、AI、知識平台與 DPP 數位解決方案`,
-    description: "把品牌主張、案例證據、資料流程、RWD 與 Contact 轉換整成同一套可交付方案。",
+    description: "把品牌主張、案例證據、資料流程、RWD / 手機 CTA 與 Contact 轉換整成同一套可交付方案。",
     images: ["/assets/daoyi-logo.png"],
   },
   robots: {

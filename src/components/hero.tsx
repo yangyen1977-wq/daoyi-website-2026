@@ -5,9 +5,9 @@ import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 
 const heroHighlights = [
-  "先回答買方 5 秒內最在意的事：你們是誰、做給誰、怎麼開始",
-  "把案例證據、AI / 資料流程與品牌敘事整成同一個成交節奏",
-  "兼顧品牌說服力、RWD / 手機轉換與後續維運",
+  "先在 5 秒內講清楚：道易適合哪些 B2B 團隊、會補哪一段成長瓶頸",
+  "把案例證據、AI / 資料流程、品牌敘事與 Contact 路徑排成同一個成交節奏",
+  "同時兼顧品牌成熟度、RWD / 手機轉換、SEO 與後續維運延展性",
 ];
 
 const heroMicroProof = [

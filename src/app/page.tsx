@@ -176,6 +176,33 @@ const homepageExecutiveSummary = [
   "如果案子敏感，也可直接走 Email + NDA，不必先填長表單或把資訊一次說完。",
 ];
 
+const homepageShortlistReasons = [
+  {
+    label: "Why DaoYi makes the shortlist",
+    title: "不是只重做視覺，而是把首頁訊息、案例證據、CTA 與交付邏輯一次排好。",
+    detail: "這輪吸收 Stan Vision、ALM、Webflow 2026 SaaS / B2B pattern 後，把前段改成決策者更容易掃讀的 shortlisting flow。",
+    proof: "Value proposition、proof、CTA 與 response promise 在前 2 屏內成立",
+  },
+  {
+    label: "Case evidence first",
+    title: "先講代表交付與結果訊號，避免訪客自己拼湊道易到底做過什麼。",
+    detail: "比起多一段抽象公司介紹，B2B 買方更在意有沒有做過類似案型、能否安全開始，以及第一次接洽後會拿到什麼。",
+    proof: "研究平台、AI 現場流程、DPP / traceability 三種證據前置",
+  },
+  {
+    label: "Mobile reassurance",
+    title: "手機版先保留能放心開始的路徑，而不是要求把整頁讀完。",
+    detail: "把 Quick Brief、Email / NDA、24h 回覆與敏感專案備援放在更短的掃讀距離內，降低第一次詢問阻力。",
+    proof: "Short form、sticky CTA、reassurance microcopy 同步可見",
+  },
+];
+
+const homepageProofPulse = [
+  "舊站有流量，但首頁仍講不清楚差異與下一步。",
+  "AI / 資料流程方向有了，卻還沒被整理成買方看得懂的交付敘事。",
+  "專案敏感、需 NDA 或已有簡報 / 文件，想低風險先往前推一步。",
+];
+
 export const metadata: Metadata = {
   title: "B2B 成長官網、AI 導入、知識平台與 DPP 首頁",
   description:
@@ -247,8 +274,8 @@ export default function Home() {
           <div className="homepage-opening-band-inner">
             <div className="homepage-opening-band-copy">
               <span className="mini-label accent">Why teams contact DaoYi</span>
-              <h2>先講清楚：適不適合你、做過哪些交付、現在怎麼低摩擦開始。</h2>
-              <p>這輪依照 ALM 與 Veza Digital 提到的 clarity / proof / friction reduction 原則，把首頁前段收斂成更短的 decision flow，減少重複判斷卡。</p>
+              <h2>先把 shortlist 最需要的三件事講完：適不適合、做過什麼、現在怎麼開始。</h2>
+              <p>這輪依照 Stan Vision、ALM、Webflow 2026 SaaS pattern，把首頁前段收斂成更像 B2B shortlist 的 decision flow：一句話定位、案例證據、contact reassurance 與下一步同時可見。</p>
             </div>
             <div className="homepage-opening-band-pills" aria-label="首頁前段核心訊號">
               <p className="homepage-conversion-pill">一句話先說清楚 B2B 官網、AI、知識平台、DPP 四種主軸</p>
@@ -258,6 +285,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Shortlist-ready homepage"
+        title="先把道易為什麼值得 shortlist 的理由，濃縮成一段就看懂。"
+        description="比起再多一層服務介紹，成熟 B2B 團隊通常先判斷三件事：能不能快速看懂價值、有沒有足夠證據、以及現在能不能低風險開始。"
+      >
+        <div className="card-grid three-up">
+          {homepageShortlistReasons.map((item) => (
+            <article key={item.title} className="feature-surface homepage-start-now-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+
+        <div className="feature-surface" style={{ marginTop: 20 }}>
+          <span className="mini-label accent">Quick fit check</span>
+          <h3 style={{ marginTop: 10 }}>如果下面三種情況你中了其中一到兩項，通常就值得先談。</h3>
+          <ul className="bullet-list compact" style={{ marginTop: 14 }}>
+            {homepageProofPulse.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </Section>
 
       <Section
         eyebrow="Shortlist scenarios"
