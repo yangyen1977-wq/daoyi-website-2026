@@ -346,10 +346,24 @@ a:hover {
   margin-top: 18px;
 }
 
+.homepage-readiness-grid,
+.homepage-response-promise-grid {
+  margin-top: 6px;
+}
+
+.homepage-readiness-card,
+.homepage-response-promise-card,
 .homepage-contact-route-card {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.homepage-readiness-card strong,
+.homepage-response-promise-card strong {
+  margin-top: auto;
+  color: #0d2844;
+  line-height: 1.65;
 }
 
 .homepage-contact-route-card .inline-button {
@@ -1794,12 +1808,14 @@ a:hover {
   .mobile-cta-button {
     flex: 1 1 0;
     min-width: 0;
+    min-height: 48px;
   }
 
   .mobile-cta-content {
     border-radius: 28px;
     align-items: stretch;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .mobile-cta-copy {

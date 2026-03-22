@@ -338,6 +338,45 @@ export const homepageDecisionSnapshot = [
   },
 ];
 
+export const homepageReadinessCards = [
+  {
+    label: "適合先談的情況",
+    title: "舊站已經有流量，但 hero、案例證據與 Contact 還沒形成同一個成交節奏。",
+    detail: "對成熟 B2B 團隊來說，問題常不是『沒內容』，而是第一次進站的人很難在短時間內完成 shortlist。",
+    proof: "先補 clarity、proof、CTA，通常比擴充更多頁面更有效。",
+  },
+  {
+    label: "買方最想先知道",
+    title: "不是你們做很多服務，而是你們做過哪些交付、能多快回、現在怎麼開始。",
+    detail: "參考 2026 多個高轉換 SaaS / agency 首頁，前段越像 decision pack，越能留下高意圖訪客。",
+    proof: "交付樣態、response SLA、敏感專案路徑都要前移。",
+  },
+  {
+    label: "手機版 first scroll",
+    title: "手機第一次進站也要先看到 CTA、proof 與 NDA-friendly fallback，而不是先滑長篇介紹。",
+    detail: "B2B 初訪常在手機完成，因此把行動 CTA、Email fallback 與 quick proof 一起壓進前段。",
+    proof: "sticky CTA + response promise + short proof cards",
+  },
+];
+
+export const homepageResponsePromiseCards = [
+  {
+    label: "What you send",
+    title: "只要給網址、簡報或一句需求，也能先開始。",
+    detail: "不要求第一次就整理完全部需求；先把專案方向、時程或阻力點丟出來即可。",
+  },
+  {
+    label: "What DaoYi replies",
+    title: "24 小時內回覆建議切入點、待補資料與推薦路徑。",
+    detail: "不是只回收到，而是先協助判斷該從品牌官網、AI / 資料流程、知識平台還是 DPP 切入。",
+  },
+  {
+    label: "Why this converts",
+    title: "先把第一次接洽的不確定感拿掉，通常比再多一段品牌描述更有用。",
+    detail: "這是近年成熟 B2B / SaaS contact flow 的共同做法：先降低風險，再提高有效詢問率。",
+  },
+];
+
 export const homepageCompactCaseEvidence = [
   {
     label: "Knowledge platform",

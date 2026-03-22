@@ -34,6 +34,8 @@ import {
   homepageContactMicrocopy,
   homepageShortlistScorecards,
   homepageDecisionSnapshot,
+  homepageReadinessCards,
+  homepageResponsePromiseCards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -235,6 +237,23 @@ export default function Home() {
         <div className="card-grid four-up homepage-decision-snapshot-grid">
           {homepageDecisionSnapshot.map((item) => (
             <article key={item.title} className="card homepage-decision-snapshot-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Readiness scan"
+        title="再用 3 張 readiness 卡，把『現在值不值得談』說得更短、更像決策資訊。"
+        description="綜合 ALM、Veza Digital 與近年 B2B agency 首頁 pattern：成熟買方不想先看大段品牌故事，而是要先知道現在的站點是不是卡在 clarity、proof、conversion，尤其手機上能不能立刻採取下一步。"
+      >
+        <div className="card-grid three-up homepage-readiness-grid">
+          {homepageReadinessCards.map((item) => (
+            <article key={item.title} className="card homepage-readiness-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
@@ -491,6 +510,15 @@ export default function Home() {
           {homepageResponseTimeline.map((item) => (
             <article key={item.step} className="feature-surface homepage-response-card">
               <span className="mini-label accent">{item.step}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="card-grid three-up homepage-response-promise-grid">
+          {homepageResponsePromiseCards.map((item) => (
+            <article key={item.title} className="card homepage-response-promise-card">
+              <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
