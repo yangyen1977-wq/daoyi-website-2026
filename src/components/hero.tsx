@@ -31,6 +31,24 @@ const heroDecisionQuestions = [
   "第一次接洽後，對方能不能很快知道下一步而不是等報價？",
 ];
 
+const heroBuyerAssurance = [
+  {
+    label: "Clarity-first",
+    title: "先用一句話講清楚誰適合、會得到什麼、怎麼開始。",
+    detail: "參考 Webflow、Stan Vision 與 Veza Digital 的 2026 B2B / SaaS pattern，把抽象能力收斂成短句，減少第一屏思考成本。",
+  },
+  {
+    label: "Proof near CTA",
+    title: "把案例樣態、回覆承諾與 Contact 路徑放在同一輪掃讀內。",
+    detail: "高意圖買方通常不想先翻完整案例頁；這版首屏直接補齊信任與下一步，讓 shortlist 判斷更快。",
+  },
+  {
+    label: "Mobile reassurance",
+    title: "手機版先保留拇指可達 CTA、Email / NDA 備援與 24h 回覆。",
+    detail: "不是把桌機長頁縮小，而是先讓行動訪客敢開始，之後再決定要不要繼續深讀。",
+  },
+];
+
 export function Hero() {
   return (
     <section className="hero-section">
@@ -53,6 +71,16 @@ export function Hero() {
           </div>
 
           <HeroClarityChecklist />
+
+          <div className="hero-buyer-assurance-grid" aria-label="競品學習後內化的首頁原則">
+            {heroBuyerAssurance.map((item) => (
+              <article key={item.title} className="hero-buyer-assurance-card">
+                <span className="mini-label accent">{item.label}</span>
+                <strong>{item.title}</strong>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
 
           <div className="hero-quick-signals" aria-label="首輪決策摘要">
             {heroQuickSignals.map((item) => (
