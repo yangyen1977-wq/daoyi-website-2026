@@ -167,12 +167,6 @@ const homepageBenchmarkLearnings = [
   },
 ];
 
-const homepageExecutiveSummary = [
-  "如果你是要重做 B2B 官網、整理案例說服力、補強 Contact 詢問品質，這一版首頁就是先為這類案型設計。",
-  "如果專案牽涉 AI、資料欄位、DPP 或既有系統串接，首頁會先講清楚交付能力，而不是只講設計語氣。",
-  "如果案子敏感，也可直接走 Email + NDA，不必先填長表單或把資訊一次說完。",
-];
-
 const homepageShortlistReasons = [
   {
     label: "Why DaoYi makes the shortlist",
@@ -198,6 +192,24 @@ const homepageProofPulse = [
   "舊站有流量，但首頁仍講不清楚差異與下一步。",
   "AI / 資料流程方向有了，卻還沒被整理成買方看得懂的交付敘事。",
   "專案敏感、需 NDA 或已有簡報 / 文件，想低風險先往前推一步。",
+];
+
+const homepageConversionSnapshot = [
+  {
+    label: "Best fit",
+    title: "你如果正在重整官網、補案例證據或把 AI / DPP 講成可成交方案，這頁就是為你設計。",
+    bullets: ["B2B 官網升級", "AI / 資料流程落地", "知識平台 / DPP / Traceability"],
+  },
+  {
+    label: "Proof upfront",
+    title: "首頁前段先給你三種可信證據：交付樣態、代表場景、第一次接洽會拿到什麼。",
+    bullets: ["研究 / 典藏平台", "AI 視覺流程與 SOP", "欄位藍圖 / QR / 審查輸出"],
+  },
+  {
+    label: "Low-friction start",
+    title: "不想先填長表單也沒關係，Quick Brief、Email 與 NDA-friendly 路徑都保留。",
+    bullets: ["3 欄 Quick Brief", "24h 內回覆具體下一步", "敏感專案可先 Email / NDA"],
+  },
 ];
 
 export const metadata: Metadata = {
@@ -265,6 +277,44 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="5-second decision snapshot"
+        title="先在前 1 屏內回答三件事：是不是做給你、證據夠不夠、現在怎麼開始。"
+        description="這輪參考 Stan Vision、ALM、Proofmap 的共同模式，把首頁前段再壓縮成更像 shortlist 用的 decision pack。"
+      >
+        <div className="card-grid three-up">
+          {homepageConversionSnapshot.map((item) => (
+            <article key={item.title} className="feature-surface homepage-start-now-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <ul className="bullet-list compact" style={{ marginTop: 14 }}>
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="feature-surface" style={{ marginTop: 20 }}>
+          <span className="mini-label accent">What top B2B / SaaS sites keep above the fold</span>
+          <h3 style={{ marginTop: 10 }}>一句主張 + 即時 proof + 明確 next step，比多一段公司介紹更能提高 shortlist 機率。</h3>
+          <p style={{ marginTop: 10 }}>
+            本輪把首頁前段進一步朝這個方向收斂：更短的品牌主張、更前的案例證據、以及更清楚的 contact reassurance。
+          </p>
+        </div>
+
+        <div className="feature-surface" style={{ marginTop: 20 }}>
+          <span className="mini-label accent">Quick fit check</span>
+          <h3 style={{ marginTop: 10 }}>如果下面三種情況你中了其中一到兩項，通常就值得先談。</h3>
+          <ul className="bullet-list compact" style={{ marginTop: 14 }}>
+            {homepageProofPulse.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </Section>
 
       <Section
         eyebrow="Shortlist-ready homepage"
@@ -426,21 +476,6 @@ export default function Home() {
               <p>{item.detail}</p>
             </article>
           ))}
-        </div>
-      </Section>
-
-
-      <Section
-        eyebrow="Executive summary"
-        title="給高意圖買方的一段話版本：先判斷值不值得談，再決定要不要往下看完整頁。"
-        description="把原本分散的買方 fit 提示壓成一個更短的摘要區，減少重複掃讀。"
-      >
-        <div className="homepage-executive-summary feature-surface">
-          <ul className="bullet-list compact" style={{ marginTop: 0 }}>
-            {homepageExecutiveSummary.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </div>
       </Section>
 
