@@ -38,6 +38,7 @@ import {
   homepageBenchmarkSignals,
   homepageExecutiveScorecards,
   homepageLaunchpadCards,
+  homepageDecisionStripCards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -261,6 +262,28 @@ export default function Home() {
               <article key={item.label} className="homepage-trust-chip">
                 <span>{item.label}</span>
                 <strong>{item.value}</strong>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage-decision-strip" aria-label="首頁快速決策摘要">
+        <div className="shell">
+          <div className="homepage-decision-strip-grid">
+            {homepageDecisionStripCards.map((item) => (
+              <article key={item.title} className="feature-surface homepage-decision-strip-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h2>{item.title}</h2>
+                <p>{item.detail}</p>
+                <ul className="bullet-list compact homepage-decision-strip-list">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+                <Link href={item.href} className="button-secondary inline-button homepage-decision-strip-button">
+                  {item.cta}
+                </Link>
               </article>
             ))}
           </div>

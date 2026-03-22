@@ -54,6 +54,25 @@ export const homepageLaunchpadCards = [
   },
 ];
 
+export const homepageDecisionStripCards = [
+  {
+    label: "1 分鐘內完成判斷",
+    title: "如果你現在最在意的是『這站值不值得 shortlist』，先看這裡。",
+    detail: "把適合對象、代表交付、回覆節奏與起手方式壓成更短的 decision strip，讓高意圖訪客不用先讀完整頁才敢開始。",
+    bullets: ["誰適合先談", "有哪些可複述的證據", "現在可怎麼低風險開始"],
+    cta: "先看案例證據",
+    href: "/#proof-ledger",
+  },
+  {
+    label: "現在就能開始",
+    title: "如果案子已經在跑，只差一個低摩擦入口，直接從 Contact flow 進去。",
+    detail: "參考 Directive、Stan Vision 與近期 B2B agency contact pattern，把 Quick Brief、Email / NDA 與 24h 回覆 promise 收斂成一個更短的起手區。",
+    bullets: ["3 欄 Quick Brief", "敏感案可先 Email / NDA", "24h 內收到具體下一步"],
+    cta: "直接開始",
+    href: "/#quick-brief",
+  },
+];
+
 export const homepageShortlistScenarios = [
   {
     label: "Brand / Marketing",

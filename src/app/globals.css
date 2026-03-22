@@ -624,6 +624,39 @@ a:hover {
   padding: 12px 0 8px;
 }
 
+.homepage-decision-strip {
+  padding: 8px 0 10px;
+}
+
+.homepage-decision-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.homepage-decision-strip-card {
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
+  padding: 24px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #f9fcff, #eef5ff);
+}
+
+.homepage-decision-strip-card h2 {
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.35;
+  color: #0d223c;
+}
+
+.homepage-decision-strip-list {
+  margin-top: 0;
+}
+
+.homepage-decision-strip-button {
+  margin-top: auto;
+}
+
 .homepage-momentum-band {
   padding: 10px 0 10px;
 }
@@ -3261,7 +3294,8 @@ a:hover {
   .homepage-momentum-grid,
   .homepage-first-response-kit,
   .homepage-shortlist-summary-grid,
-  .homepage-launchpad-grid {
+  .homepage-launchpad-grid,
+  .homepage-decision-strip-grid {
     grid-template-columns: 1fr;
   }
   .snapshot-grid,
