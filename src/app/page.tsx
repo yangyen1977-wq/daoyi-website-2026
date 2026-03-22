@@ -896,8 +896,8 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading">
             <span className="section-eyebrow">常見問題</span>
-            <h2>提前回答採購、資訊與營運團隊最關心的問題。</h2>
-            <p>這些問答同時對應 SEO 長尾查詢，減少往返溝通。</p>
+            <h2>提前回答採購、資訊、品牌與營運團隊最常卡住的問題。</h2>
+            <p>這一段刻意把「能不能先開始、敏感案怎麼處理、第一次需要準備什麼」一起寫進來，兼顧 SEO 長尾查詢與實際轉換前疑慮。</p>
           </div>
           <div className="faq-list">
             {faqs.map((item) => (

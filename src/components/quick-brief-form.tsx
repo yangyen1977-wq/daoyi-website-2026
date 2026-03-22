@@ -95,7 +95,7 @@ export function QuickBriefForm() {
     <form id="quick-brief-form" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
       <span className="mini-label accent">Low-friction intake / 3 欄先開始</span>
       <h3>先用 3 欄拿到具體下一步</h3>
-      <p>這裡只問姓名、公司與本次焦點，維持高轉換 SaaS / agency 常見的低摩擦起手式。重點不是把資料填很滿，而是先讓你在 24 小時內拿到建議切入點、推薦 sprint 與第一次會議該對焦的阻力。</p>
+      <p>這裡只問姓名、公司與本次焦點，維持高轉換 SaaS / agency 常見的低摩擦起手式。重點不是第一次就把資料填滿，而是先讓你在 24 小時內拿到建議切入點、推薦 sprint、需要補哪些材料，以及第一次會議該對焦的阻力。</p>
       <div className="quick-brief-priority-note">
         <strong>送出後 24h 內，你會先拿到什麼？</strong>
         <p>不是只有收到回信，而是先拿到首頁 / Contact 可先補哪裡、建議從哪個 sprint 開始，以及第一次會議該對焦的阻力點。</p>

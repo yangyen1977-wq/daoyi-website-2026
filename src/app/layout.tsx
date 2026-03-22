@@ -86,7 +86,12 @@ const structuredData = [
     "@type": "WebSite",
     "name": siteConfig.shortName,
     "url": siteConfig.url,
-    "inLanguage": ["zh-Hant", "en"]
+    "inLanguage": ["zh-Hant", "en"],
+    "potentialAction": {
+      "@type": "ContactAction",
+      "name": "Request project brief",
+      "target": `${siteConfig.url}/#quick-brief`
+    }
   },
   ...serviceStructuredData,
   breadcrumbList

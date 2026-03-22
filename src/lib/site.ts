@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把官網、案例證據、AI / 資料流程，整理成決策者看得懂也敢啟動的 B2B 系統",
+  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP，整理成更容易成交也更容易啟動的系統",
   heroDescription:
-    "給 B2B 品牌、製造業與研究型組織：道易把品牌主張、案例證據、AI 導入、知識平台與 DPP / Traceability 整成同一套可交付方案，讓第一次進站更快理解價值、第一次接洽更快拿到下一步。",
+    "給品牌、製造業與研究型組織：道易把首頁主張、案例說服力、資料流程、RWD / 手機 CTA 與 Contact 轉換整成同一套可交付方案，讓第一次進站更快 shortlist、第一次接洽更快拿到可執行下一步。",
 };
 
 export const homepageShortlistScenarios = [
@@ -1309,15 +1309,27 @@ export const clientSegments = [
 export const faqs = [
   {
     question: "專案通常多久可以上線？",
-    answer: "依複雜度 8-12 週，分成 Discover / Structure / Build / Operate 四個衝刺，可同時處理內容與系統。",
+    answer: "依複雜度通常 8-12 週，分成 Discover / Structure / Build / Operate 四個衝刺；若先做首頁、案例頁或 Contact conversion sprint，2-4 週就能先交出第一版。",
+  },
+  {
+    question: "如果還沒確定要先做官網、AI、知識平台還是 DPP，可以先談嗎？",
+    answer: "可以。第一次接洽的目的不是立刻定完整 scope，而是先釐清現在最值得啟動的切口，通常會先回覆首頁 / 案例 / Contact、資料流程 MVP，或 DPP 欄位藍圖哪一條最適合先跑。",
   },
   {
     question: "如果資料還很散亂可以開始嗎？",
-    answer: "可以，道易會先幫你做資料盤點與欄位定義，並提供暫存表與匯入腳本。",
+    answer: "可以，道易會先幫你做資料盤點、欄位定義與暫存表規劃，必要時再補 API contract、匯入腳本與角色流程，讓專案不用等到資料完美才開始。",
+  },
+  {
+    question: "敏感專案或需要 NDA，也能先接洽嗎？",
+    answer: "可以。若牽涉採購、法遵、客戶資料、既有系統文件或未公開規劃，可直接先用 Email 開始，必要時先 NDA，再進入後續會議與需求交換。",
   },
   {
     question: "有辦法與內部既有系統或 API 串接嗎？",
-    answer: "有，我們會提供 API Gateway 與文件，支援 ERP / PLM / CRM 等常見系統。",
+    answer: "有，我們會依專案需求規劃 API Gateway、欄位對接與文件，支援 ERP / PLM / CRM 等常見系統，也會一起定義前台體驗、後台流程與驗收節點。",
+  },
+  {
+    question: "第一次聯絡前需要準備很多資料嗎？",
+    answer: "不用。先提供姓名、公司與最在意的焦點即可；若已經有官網網址、簡報、流程圖、法規文件或案例資料，再補進 Email 就好。重點是先讓道易在 24 小時內回覆可執行下一步。",
   },
 ];
 
