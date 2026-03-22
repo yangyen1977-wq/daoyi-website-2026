@@ -145,7 +145,7 @@ export function QuickBriefForm() {
           <li>如果案子偏敏感，也可以直接改走 Email + NDA，不必重填。</li>
         </ul>
       </div>
-      <small className="quick-brief-hint">ALM Corp 追蹤 200+ SaaS 官網後指出，表單少於 4 欄且有次要 CTA，可把 Qualified Leads 提升 18-32%。</small>
+      <small className="quick-brief-hint">競品研究重點：ALM 指出表單少於 4 欄且保留次要 CTA，能提升 Qualified Leads；Proofmap / Webstacks 也都強調先給可理解的 next step，比要求第一次就填滿所有資訊更容易成交。</small>
       <small className="quick-brief-hint">提交後會開啟郵件，預先填好主旨與內容；若不想先填表，也可直接用 Email 開始。</small>
     </form>
   );

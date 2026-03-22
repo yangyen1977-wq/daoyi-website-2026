@@ -338,6 +338,27 @@ export const homepageDecisionSnapshot = [
   },
 ];
 
+export const homepageFirstScanEvidence = [
+  {
+    label: "Website / brand",
+    title: "首屏先回答：誰適合、會看到什麼證據、怎麼開始",
+    detail: "吸收 Webflow 與 ALM 對 2026 高轉換 SaaS 首頁的共通觀察：6-10 字主張、真實交付畫面 / 證據、以及低摩擦 CTA 要在第一輪掃讀內成立。",
+    proof: "Clarity + product-first proof + dual CTA",
+  },
+  {
+    label: "Case-study pattern",
+    title: "案例摘要要像業務材料，不是作品集目錄",
+    detail: "參考 Proofmap 與 Webstacks 對 B2B case study 的整理，先把 challenge、solution、impact 與見證型證據壓成可快速掃讀的摘要，再引導到 deeper page。",
+    proof: "Challenge → solution → impact → CTA",
+  },
+  {
+    label: "Mobile conversion",
+    title: "手機版優先保留 24h 回覆承諾、Quick Brief 與 Email / NDA 備援",
+    detail: "延續 ALM 提到的 frictionless journey：不要讓行動流量在找 CTA、保密路徑或第一步時卡住，因此把 reassurance 與 CTA 維持在 thumb-zone 附近。",
+    proof: "Sticky CTA + response SLA + NDA-friendly fallback",
+  },
+];
+
 export const homepageReadinessCards = [
   {
     label: "適合先談的情況",

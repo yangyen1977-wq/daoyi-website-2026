@@ -284,16 +284,34 @@ a:hover {
   margin: 18px 0 6px;
 }
 
+.homepage-first-scan-grid,
 .homepage-decision-snapshot-grid,
 .homepage-scorecard-grid {
   align-items: stretch;
 }
 
+.homepage-first-scan-card,
 .homepage-decision-snapshot-card,
 .homepage-scorecard-card {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.homepage-first-scan-card {
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
+.homepage-first-scan-card h3 {
+  color: #0d223c;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.homepage-first-scan-card strong {
+  color: #0d2844;
+  margin-top: auto;
+  line-height: 1.7;
 }
 
 .homepage-decision-snapshot-card {

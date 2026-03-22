@@ -22,7 +22,7 @@ export function MobileStickyCTA() {
       <div className="mobile-cta-content">
         <div className="mobile-cta-copy">
           <strong>先用 3 欄拿 24h 建議，不必先講完整個專案</strong>
-          <span>主 CTA 走 Quick Brief；敏感案可直接 Email / NDA 開始</span>
+          <span>主 CTA 走 Quick Brief；可先寄網址 / NDA。手機版保留主 CTA 與敏感案備援路徑。</span>
         </div>
         <div className="mobile-cta-actions">
           <Link href={primaryHref} className="mobile-cta-button primary">

@@ -36,6 +36,7 @@ import {
   homepageDecisionSnapshot,
   homepageReadinessCards,
   homepageResponsePromiseCards,
+  homepageFirstScanEvidence,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -228,6 +229,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="First-scan heuristics"
+        title="先把成熟 B2B / SaaS 首頁最常贏的三件事，濃縮成道易前段的第一輪掃讀。"
+        description="本輪競品學習重點來自 Webflow、ALM、Proofmap、Webstacks：高表現網站不是先講很多，而是先把 clarity、proof 與 low-friction next step 放進同一個視窗。"
+      >
+        <div className="card-grid three-up homepage-first-scan-grid">
+          {homepageFirstScanEvidence.map((item) => (
+            <article key={item.title} className="card homepage-first-scan-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="Decision snapshot"
