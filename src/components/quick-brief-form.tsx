@@ -49,6 +49,31 @@ export function QuickBriefForm() {
     focus: projectFocusOptions[0].value,
   });
 
+  const selectedFocus = useMemo(
+    () => projectFocusOptions.find((option) => option.value === form.focus) ?? projectFocusOptions[0],
+    [form.focus]
+  );
+
+  const recommendedStart = useMemo(() => {
+    if (form.focus.includes("首頁") || form.focus.includes("Contact") || form.focus.includes("官網")) {
+      return "建議先從首頁訊息、案例證據與 CTA / Contact friction audit 開始。";
+    }
+
+    if (form.focus.includes("AI") || form.focus.includes("流程")) {
+      return "建議先釐清資料欄位、角色分工與可驗收的 AI / SOP 節點。";
+    }
+
+    if (form.focus.includes("知識平台")) {
+      return "建議先整理資訊架構、檢索場景與內容治理優先順序。";
+    }
+
+    if (form.focus.includes("DPP")) {
+      return "建議先盤點 traceability 欄位藍圖、法規脈絡與 QR / 履歷體驗。";
+    }
+
+    return "建議先釐清最接近成交的切口，再決定 sprint 起點。";
+  }, [form.focus]);
+
   const isDisabled = useMemo(() => !form.name || !form.company, [form.name, form.company]);
 
   function handleChange<K extends keyof FormState>(key: K, value: FormState[K]) {
@@ -74,6 +99,12 @@ export function QuickBriefForm() {
       <div className="quick-brief-priority-note">
         <strong>送出後 24h 內，你會先拿到什麼？</strong>
         <p>不是只有收到回信，而是先拿到首頁 / Contact 可先補哪裡、建議從哪個 sprint 開始，以及第一次會議該對焦的阻力點。</p>
+      </div>
+
+      <div className="quick-brief-start-recommendation" aria-live="polite">
+        <span className="mini-label accent">Recommended start</span>
+        <strong>{selectedFocus.label}</strong>
+        <p>{recommendedStart}</p>
       </div>
 
       <label className="form-field">

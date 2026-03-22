@@ -233,6 +233,23 @@ export default function Home() {
       </section>
 
       <Section
+        eyebrow="Decision snapshot"
+        title="先用四張卡，把首頁最重要的判斷一次講完。"
+        description="延續 ALM、Veza Digital 與 Genesys Growth 反覆提到的原則：高意圖買方通常只想先知道適不適合、做過什麼、怎麼開始，以及手機上會不會卡住。"
+      >
+        <div className="card-grid two-up homepage-decision-snapshot-grid">
+          {homepageDecisionSnapshot.map((item) => (
+            <article key={item.title} className="card homepage-decision-snapshot-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
         eyebrow="Homepage decision flow"
         title="把成熟 B2B / SaaS 首頁最重要的 proof、fit 與 CTA，濃縮成一段就看懂。"
         description="這輪不再堆疊多組相似 scorecard，而是保留更像 shortlist 材料的核心區：先講 proof，再講適合誰，最後講怎麼開始。"

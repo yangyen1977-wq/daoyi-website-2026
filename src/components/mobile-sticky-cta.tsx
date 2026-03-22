@@ -23,6 +23,7 @@ export function MobileStickyCTA() {
         <div className="mobile-cta-copy">
           <strong>3 欄先拿建議，或直接 Email / NDA</strong>
           <span>手機版優先保留主 CTA、保密備援路徑與 24h 回覆承諾。</span>
+          <small>通常會先回覆建議切入點、會議時段與需要補的資料。</small>
         </div>
         <div className="mobile-cta-actions">
           <Link href={primaryHref} className="mobile-cta-button primary">

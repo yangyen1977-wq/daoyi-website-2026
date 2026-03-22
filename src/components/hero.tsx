@@ -25,6 +25,12 @@ const heroMicroProof = [
   },
 ];
 
+const heroDecisionQuestions = [
+  "這是不是同時卡在品牌訊息、案例證據與 Contact 轉換的案子？",
+  "如果牽涉 AI、資料欄位或 DPP，首頁能不能先講清楚交付能力？",
+  "第一次接洽後，對方能不能很快知道下一步而不是等報價？",
+];
+
 export function Hero() {
   return (
     <section className="hero-section">
@@ -66,6 +72,12 @@ export function Hero() {
               <span className="mini-label">這一版的重點</span>
               <p>首屏先收斂成定位、證據與下一步，不再讓訪客在第一屏做太多閱讀負擔。</p>
             </div>
+          </div>
+
+          <div className="hero-decision-question-strip" aria-label="買方快速判斷問題">
+            {heroDecisionQuestions.map((item) => (
+              <p key={item} className="hero-decision-question-pill">{item}</p>
+            ))}
           </div>
 
           <div className="hero-actions">

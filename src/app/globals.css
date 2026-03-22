@@ -1037,6 +1037,24 @@ a:hover {
   color: var(--text-body);
 }
 
+.quick-brief-start-recommendation {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(93, 228, 215, 0.08);
+  border: 1px solid rgba(93, 228, 215, 0.18);
+}
+
+.quick-brief-start-recommendation strong {
+  color: #0d223c;
+  font-size: 1rem;
+}
+
+.quick-brief-start-recommendation p {
+  color: var(--text-body);
+}
+
 .quick-brief-action-group {
   display: flex;
   gap: 12px;
@@ -1228,6 +1246,23 @@ a:hover {
 
 .hero-priority-strip p {
   margin-top: 10px;
+}
+
+.hero-decision-question-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.hero-decision-question-pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 228, 215, 0.16);
+  background: rgba(93, 228, 215, 0.08);
+  color: #dff7f4;
+  font-size: 0.84rem;
+  line-height: 1.5;
 }
 
 .hero-outcome-strip {
@@ -2707,6 +2742,14 @@ a:hover {
   margin-top: 2px;
   color: rgba(245, 251, 255, 0.72);
   font-size: 0.72rem;
+}
+
+.mobile-cta-copy small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(245, 251, 255, 0.58);
+  font-size: 0.66rem;
+  line-height: 1.45;
 }
 
 .mobile-cta-actions {
