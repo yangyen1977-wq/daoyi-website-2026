@@ -21,9 +21,9 @@ export function MobileStickyCTA() {
     <div className="mobile-cta-bar" role="complementary" aria-label="快速行動">
       <div className="mobile-cta-content">
         <div className="mobile-cta-copy">
-          <strong>先拿首頁 / 案例 / Contact 的下一步，或直接 Email / NDA</strong>
-          <span>手機版優先保留主 CTA、案例證據導向的 reassurance，與 24h 回覆承諾。</span>
-          <small>通常會先回覆建議切入點、推薦 sprint、會議時段與需要補的資料。</small>
+          <strong>先拿這案值不值得談的下一步，或直接 Email / NDA</strong>
+          <span>手機版先保留主 CTA、24h 回覆承諾與敏感專案備援路徑。</span>
+          <small>通常會先回覆建議切入點、推薦 sprint、會議方向與需要補的資料。</small>
         </div>
         <div className="mobile-cta-actions">
           <Link href={primaryHref} className="mobile-cta-button primary">

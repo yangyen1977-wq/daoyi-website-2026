@@ -36,6 +36,8 @@ import {
   homepageShortlistScenarios,
   homepageFirstResponseKit,
   homepageBenchmarkSignals,
+  homepageExecutiveScorecards,
+  homepageLaunchpadCards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -264,6 +266,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="Executive shortlist scorecard"
+        title="把首頁前段再壓短：先回答『適不適合、證據夠不夠、現在怎麼開始』。"
+        description="這輪參考 Webflow 2026 SaaS 設計整理、Clear Digital case-study 寫法與 VWO 的 CTA 可見性觀察，把決策資訊再往前收斂。"
+      >
+        <div className="card-grid three-up homepage-executive-scorecard-grid">
+          {homepageExecutiveScorecards.map((item) => (
+            <article key={item.title} className="card homepage-executive-scorecard-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.proof}</strong>
+            </article>
+          ))}
+        </div>
+        <div className="homepage-launchpad-grid" style={{ marginTop: 18 }}>
+          {homepageLaunchpadCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-launchpad-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.meta}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <section className="homepage-trust-strip" aria-label="道易常見合作脈絡">
         <div className="shell">

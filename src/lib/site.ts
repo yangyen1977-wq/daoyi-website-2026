@@ -7,10 +7,52 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP，整理成 5 秒內看懂的成交首頁",
+  heroTitle: "把 B2B 官網、AI 與 DPP，整理成決策者 5 秒內敢往下談的成交系統",
   heroDescription:
-    "道易科技協助品牌、製造業與研究型組織，把品牌主張、案例證據、資料流程與 Contact 轉換整成同一套可交付系統；第一次接洽 24 小時內就能拿到具體下一步。",
+    "道易科技協助品牌、製造業與研究型組織，把品牌主張、案例證據、資料流程、RWD 體驗與 Contact 轉換整成同一套可交付系統；第一次接洽 24 小時內就能拿到具體下一步與推薦 sprint。",
 };
+
+export const homepageExecutiveScorecards = [
+  {
+    label: "For shortlist decisions",
+    title: "先讓高意圖訪客在 1 分鐘內知道：道易是不是這案子的對的人。",
+    detail: "把對象、交付能力與起手方式壓縮成更短的 executive scorecard，讓採購、主管與專案 owner 可以更快形成共識。",
+    proof: "適合：官網升級 / AI 導入 / 知識平台 / DPP / Traceability",
+  },
+  {
+    label: "Proof buyers can repeat",
+    title: "不是只說懂技術，而是直接講已交付樣態、案例類型與第一次會拿到什麼。",
+    detail: "參考高轉換 B2B / SaaS 官網，這種可複述的 proof 比抽象『我們很專業』更容易支撐 shortlist 與下一步會議。",
+    proof: "研究平台、AI 視覺流程、DPP 欄位藍圖三類證據前置",
+  },
+  {
+    label: "Mobile conversion first",
+    title: "手機先保留主 CTA、24h 回覆承諾與 Email / NDA 備援，不逼人先讀完整頁。",
+    detail: "第一次判斷常在手機完成，因此先讓人敢點、敢留資料、敢往下談，比把桌機長頁原封縮小更重要。",
+    proof: "Sticky CTA + 3 欄 Quick Brief + NDA-friendly fallback",
+  },
+];
+
+export const homepageLaunchpadCards = [
+  {
+    label: "最快開始",
+    title: "3 欄 Quick Brief",
+    detail: "適合已知道大方向，想先拿到建議切入點、會議方向與推薦 sprint。",
+    meta: "約 5 分鐘內完成",
+  },
+  {
+    label: "敏感專案",
+    title: "Email / NDA 先走",
+    detail: "若牽涉採購、法遵、既有客戶資料或內部文件，可先低風險釐清，再安排會議。",
+    meta: "保留低摩擦與低風險雙路徑",
+  },
+  {
+    label: "第一次回覆",
+    title: "24h 內給具體下一步",
+    detail: "不是只回收到，而是先回應建議切入點、待補資料與適合的 project track。",
+    meta: "先拿 decision pack，再談完整 scope",
+  },
+];
 
 export const homepageShortlistScenarios = [
   {
