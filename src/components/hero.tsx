@@ -35,7 +35,7 @@ const heroBuyerAssurance = [
   {
     label: "Clarity-first",
     title: "先用一句話講清楚誰適合、會得到什麼、怎麼開始。",
-    detail: "參考 Webflow、Stan Vision 與 Veza Digital 的 2026 B2B / SaaS pattern，把抽象能力收斂成短句，減少第一屏思考成本。",
+    detail: "把抽象能力收斂成短句，減少第一屏思考成本，讓決策者更快理解道易適合處理哪一類專案。",
   },
   {
     label: "Proof near CTA",

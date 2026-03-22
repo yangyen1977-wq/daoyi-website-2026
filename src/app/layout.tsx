@@ -86,11 +86,7 @@ const structuredData = [
     "@type": "WebSite",
     "name": siteConfig.shortName,
     "url": siteConfig.url,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": `${siteConfig.url}/?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
+    "inLanguage": ["zh-Hant", "en"]
   },
   ...serviceStructuredData,
   breadcrumbList

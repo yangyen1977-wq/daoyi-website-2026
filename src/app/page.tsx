@@ -153,7 +153,7 @@ const homepageBenchmarkLearnings = [
   {
     label: "Clarity within 5 seconds",
     title: "高表現 B2B / SaaS 首屏會先完成：對象、結果、下一步。",
-    detail: "這輪把首頁前段再往『誰適合、先拿到什麼、怎麼低風險開始』收斂，避免訪客先被大量服務敘述淹沒。",
+    detail: "首頁前段先聚焦『誰適合、先拿到什麼、怎麼低風險開始』三件事，避免訪客先被大量服務敘述淹沒。",
     action: "對應調整：補上首頁診斷摘要與 first-response kit。",
   },
   {
@@ -180,7 +180,7 @@ const homepageShortlistReasons = [
   {
     label: "Why DaoYi makes the shortlist",
     title: "不是只重做視覺，而是把首頁訊息、案例證據、CTA 與交付邏輯一次排好。",
-    detail: "這輪吸收 Stan Vision、ALM、Webflow 2026 SaaS / B2B pattern 後，把前段改成決策者更容易掃讀的 shortlisting flow。",
+    detail: "把前段整理成更容易短時間完成判斷的 shortlisting flow，讓決策者更快知道是否值得往下談。",
     proof: "Value proposition、proof、CTA 與 response promise 在前 2 屏內成立",
   },
   {
@@ -275,7 +275,7 @@ export default function Home() {
             <div className="homepage-opening-band-copy">
               <span className="mini-label accent">Why teams contact DaoYi</span>
               <h2>先把 shortlist 最需要的三件事講完：適不適合、做過什麼、現在怎麼開始。</h2>
-              <p>這輪依照 Stan Vision、ALM、Webflow 2026 SaaS pattern，把首頁前段收斂成更像 B2B shortlist 的 decision flow：一句話定位、案例證據、contact reassurance 與下一步同時可見。</p>
+              <p>首頁前段收斂成更像 B2B shortlist 的 decision flow：一句話定位、案例證據、contact reassurance 與下一步同時可見，讓第一次進站的人更快完成判斷。</p>
             </div>
             <div className="homepage-opening-band-pills" aria-label="首頁前段核心訊號">
               <p className="homepage-conversion-pill">一句話先說清楚 B2B 官網、AI、知識平台、DPP 四種主軸</p>
@@ -360,7 +360,7 @@ export default function Home() {
       <Section
         eyebrow="Homepage decision flow"
         title="把成熟 B2B / SaaS 首頁最重要的 proof、fit 與 CTA，濃縮成一段就看懂。"
-        description="這輪不再堆疊多組相似 scorecard，而是保留更像 shortlist 材料的核心區：先講 proof，再講適合誰，最後講怎麼開始。"
+        description="不再堆疊多組相似 scorecard，而是保留更像 shortlist 材料的核心區：先講 proof，再講適合誰，最後講怎麼開始。"
       >
         <div className="card-grid three-up homepage-first-scan-grid">
           {homepageFirstScanEvidence.map((item) => (
@@ -421,7 +421,7 @@ export default function Home() {
         id="why-now"
         eyebrow="Start without friction"
         title="如果你現在就要判斷值不值得談，先看這三件事就夠。"
-        description="這輪把 Directive 與近年高轉換 B2B landing page 常見做法內化成首頁中前段的『立即開始區』：一個主要 CTA、明確 reassurance、以及敏感專案也能接受的次要路徑。"
+        description="首頁中前段保留一個主要 CTA、明確 reassurance，以及敏感專案也能接受的次要路徑，讓高意圖訪客能直接開始。"
       >
         <div className="card-grid three-up homepage-start-now-grid">
           {homepageStartNowCards.map((item) => (
@@ -438,7 +438,7 @@ export default function Home() {
       <Section
         eyebrow="Project fit in one scan"
         title="讓不同類型的買方，用一眼就知道自己比較像哪一種專案。"
-        description="吸收 Veza Digital 的 clarity / friction reduction 與 Genesys Growth 提到的 outcome-first、mobile-first landing page 寫法後，這輪把『適合誰先談』做成更像篩選器的三張卡。"
+        description="把『適合誰先談』做成更像篩選器的三張卡，讓不同角色不用讀完整頁也能找到自己的起點。"
       >
         <div className="card-grid three-up homepage-buyer-fit-grid">
           {homepageBuyerFitCards.map((item) => (
@@ -472,9 +472,9 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="This round’s benchmark learnings"
-        title="把競品值得學的 conversion pattern，直接轉成道易首頁可用的寫法。"
-        description="本輪參考 ALM、Veza Digital、Webflow Consulting examples 的共通點：越成熟的 B2B 官網，越會把 clarity、proof、CTA 與 mobile reassurance 收在同一個 decision flow 裡。"
+        eyebrow="Homepage decision principles"
+        title="把成熟 B2B 官網常見的 conversion 原則，整理成道易首頁的判斷方式。"
+        description="越成熟的 B2B 官網，越會把 clarity、proof、CTA 與 mobile reassurance 收在同一個 decision flow 裡；這段就是把那些原則直接變成買方看得懂的首頁訊息。"
       >
         <div className="card-grid three-up homepage-benchmark-grid">
           {homepageBenchmarkLearnings.map((item) => (
@@ -491,7 +491,7 @@ export default function Home() {
       <Section
         eyebrow="Role-based decision flow"
         title="不只分專案類型，也讓不同角色一眼知道自己要先看哪個切口。"
-        description="這輪參考 Databox、Boomi、Partful 一類成熟 B2B / SaaS 站常見的 role-aware messaging：讓品牌、營運、永續、研究型團隊更快對號入座，而不是讀完整站後才發現適不適合。"
+        description="用 role-aware messaging 讓品牌、營運、永續、研究型團隊更快對號入座，而不是讀完整站後才發現適不適合。"
       >
         <div className="card-grid two-up homepage-role-decision-grid">
           {homepageRoleDecisionCards.map((item) => (
@@ -657,7 +657,7 @@ export default function Home() {
       <Section
         eyebrow="代表案例敘事"
         title="先用兩個代表場景看懂道易怎麼把 challenge 變成可交付結果。"
-        description="這輪參考 JoinAmply、Proofmap 與高轉換 agency 首頁做法：首頁只留兩個代表情境，讓案例敘事更快被讀完。"
+        description="首頁只留兩個代表情境，讓案例敘事更快被讀完，也更容易記住道易擅長處理的案型。"
       >
         <div className="case-story-grid">
           {homepageCaseStories.slice(0, 2).map((item) => (
@@ -739,7 +739,7 @@ export default function Home() {
       <Section
         eyebrow="How engagement starts"
         title="先把三種最常見的啟動方式擺在首頁，讓不同成熟度的買方都能直接開始。"
-        description="這輪吸收 ALM、Veza Digital 與 Sitebuilder Report 的共通模式：成熟 B2B 站不只給一個 CTA，而是同時保留低摩擦 brief、敏感案 Email / NDA，以及先看交付節奏的入口。"
+        description="成熟 B2B 站不只給一個 CTA，而是同時保留低摩擦 brief、敏感案 Email / NDA，以及先看交付節奏的入口。"
       >
         <div className="card-grid three-up">
           {contactIntentCards.map((item) => (
