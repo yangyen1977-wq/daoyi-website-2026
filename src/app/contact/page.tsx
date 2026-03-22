@@ -201,7 +201,7 @@ export default function ContactPage() {
       <Section
         eyebrow="First response kit"
         title="不是只有留資料，而是先知道你會拿到什麼。"
-        description="參考成熟 B2B agency Contact 頁常見做法，把第一次接洽可交付內容寫清楚，降低『留了資料也不知道接下來會怎樣』的不安。"
+        description="把第一次接洽可交付內容寫清楚，降低『留了資料也不知道接下來會怎樣』的不安。"
       >
         <div className="card-grid three-up">
           {auditOffer.map((item) => (

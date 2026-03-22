@@ -94,11 +94,11 @@ export function Hero() {
           <div className="hero-priority-strip" aria-label="品牌重點">
             <div>
               <span className="mini-label">核心定位</span>
-              <strong>把複雜內容、資料流程與品牌體驗，整理成客戶看得懂也願意開始的系統。</strong>
+              <strong>把複雜內容、資料流程與品牌體驗，整理成決策者看得懂、內部也推得動的系統。</strong>
             </div>
             <div>
               <span className="mini-label">這一版的重點</span>
-              <p>首屏先收斂成定位、證據與下一步，不再讓訪客在第一屏做太多閱讀負擔。</p>
+              <p>首頁前段先完成定位、證據與下一步三件事，讓訪客不用滑很久才知道值不值得談。</p>
             </div>
           </div>
 

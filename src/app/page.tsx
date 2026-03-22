@@ -454,7 +454,7 @@ export default function Home() {
       <Section
         eyebrow="First-response 設計"
         title="第一次接洽先拿到判斷依據，而不是只留下一封沒有下文的詢問。"
-        description="這輪參考 Amply、ALM、Proofmap 常見做法：先把 response SLA、聯絡分流與起手交付提早講清楚，減少決策者第一次接洽的不確定感。"
+        description="先把 response SLA、聯絡分流與起手交付提早講清楚，減少決策者第一次接洽的不確定感。"
       >
         <div className="card-grid three-up">
           {heroDecisionMetrics.map((item) => (
