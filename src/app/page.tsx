@@ -219,13 +219,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="homepage-trust-strip" aria-label="道易常見合作脈絡">
+      <section className="homepage-evidence-snapshot" aria-label="首頁快速案例證據">
         <div className="shell">
-          <div className="homepage-trust-strip-grid">
+          <div className="homepage-evidence-snapshot-head">
+            <div>
+              <span className="mini-label accent">Evidence snapshot</span>
+              <h2>首屏下方直接補三種代表交付，讓買方更快 shortlist。</h2>
+              <p>吸收 Directive 與近期 B2B / SaaS 官網共通做法：不要先塞更多解釋，先把買方最容易複述的案例型態、交付樣態與適合團隊放到前 2 屏。</p>
+            </div>
+            <Link href="/#proof-ledger" className="button-secondary inline-button homepage-evidence-snapshot-link">
+              看完整案例證據
+            </Link>
+          </div>
+
+          <div className="homepage-trust-strip-grid homepage-context-chip-grid">
             {heroClients.map((item) => (
               <article key={item.name} className="homepage-trust-chip">
                 <span>{item.context}</span>
                 <strong>{item.name}</strong>
+              </article>
+            ))}
+          </div>
+
+          <div className="card-grid three-up homepage-evidence-snapshot-grid">
+            {homepageCompactCaseEvidence.map((item) => (
+              <article key={item.title} className="card homepage-evidence-snapshot-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <strong>{item.evidence}</strong>
+                <p>{item.detail}</p>
+                <small>{item.outcome}</small>
               </article>
             ))}
           </div>
