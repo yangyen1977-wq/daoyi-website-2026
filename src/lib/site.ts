@@ -233,10 +233,10 @@ export const heroClients = [
 ];
 
 export const homepageTrustStrip = [
-  { label: "Response SLA", value: "24h 內回覆具體下一步" },
-  { label: "Start option", value: "3 欄 Quick Brief / Email 皆可" },
-  { label: "Project types", value: "官網、AI、知識平台、DPP" },
-  { label: "Sensitive cases", value: "可先 NDA 再進一步討論" },
+  { label: "Response SLA", value: "24h 內回覆具體下一步與建議切口" },
+  { label: "Start option", value: "3 欄 Quick Brief / Email / NDA 皆可" },
+  { label: "Project types", value: "官網、AI、知識平台、DPP / Traceability" },
+  { label: "Mobile-first CTA", value: "手機首屏就能開始，不必先滑完整頁" },
 ];
 
 export const headerReassuranceSignals = [
@@ -775,20 +775,20 @@ export const contactRouteSpeedCards = [
   {
     label: "Fastest path",
     title: "3 欄 Quick Brief",
-    detail: "適合已經知道這次卡在官網、案例、AI 導入或 DPP 哪一段，想先拿到下一步的人。",
-    meta: "最快 5 分鐘內完成",
+    detail: "適合已知道主要卡點，想先拿到可執行下一步，而不是只得到一封『收到』回信的人。",
+    meta: "最快 5 分鐘內完成 / 24h 內收到建議切口",
   },
   {
     label: "Best for sensitive projects",
     title: "Email + NDA",
     detail: "如果專案涉及採購、法遵、既有客戶資料或內部流程限制，可先用 Email 開始，再安排 NDA。",
-    meta: "保留低風險啟動方式",
+    meta: "保留低風險啟動方式 / 適合先交換文件",
   },
   {
     label: "Need guidance",
     title: "先看推薦 sprint",
     detail: "若還不確定應該先做品牌官網、資料流程或 traceability，可先透過 Contact 頁釐清起點。",
-    meta: "先判斷，再投入",
+    meta: "先判斷，再投入 / 避免一次做太大",
   },
 ];
 
@@ -1050,15 +1050,15 @@ export const heroClarityChecklist = [
 export const heroQuickSignals = [
   {
     label: "適合情境",
-    value: "舊站有流量，但說服力與詢問品質不穩",
+    value: "舊站有流量，但價值主張、案例證據或 CTA 還撐不起 shortlist",
   },
   {
     label: "第一次會拿到",
-    value: "建議切入點、優先順序、推薦 sprint",
+    value: "建議切入點、優先順序、推薦 sprint 與待補材料",
   },
   {
     label: "敏感專案也可",
-    value: "Email / NDA 先開始，不必先填完整需求",
+    value: "Email / NDA 先開始，不必先填完整需求或上傳所有文件",
   },
 ];
 

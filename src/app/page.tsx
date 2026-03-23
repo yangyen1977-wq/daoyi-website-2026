@@ -35,6 +35,7 @@ import {
   deliveryTracks,
   homepageDecisionStripCards,
   homepageHeuristicScorecard,
+  homepageExecutiveScorecards,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -215,6 +216,26 @@ export default function Home() {
                 <Link href={item.href} className="button-secondary inline-button homepage-decision-strip-button">
                   {item.cta}
                 </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block homepage-executive-scorecards" aria-label="首頁執行級判斷摘要">
+        <div className="shell">
+          <div className="section-heading">
+            <span className="section-eyebrow">Executive scorecard</span>
+            <h2>把成熟 B2B / SaaS 官網常見的高轉換結構，壓成決策者一眼看得懂的三張卡。</h2>
+            <p>這輪依照 Veza Digital、ALM 等整理出的共通原則，補強「5 秒內定位、證據要能被複述、手機也要先看到下一步」三件事。</p>
+          </div>
+          <div className="card-grid three-up homepage-executive-scorecard-grid">
+            {homepageExecutiveScorecards.map((item) => (
+              <article key={item.title} className="card homepage-executive-scorecard-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+                <strong>{item.proof}</strong>
               </article>
             ))}
           </div>
