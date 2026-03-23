@@ -34,6 +34,7 @@ import {
   contactIntentCards,
   deliveryTracks,
   homepageDecisionStripCards,
+  homepageHeuristicScorecard,
 } from "@/lib/site";
 import { Hero } from "@/components/hero";
 import { QuickBriefForm } from "@/components/quick-brief-form";
@@ -213,6 +214,42 @@ export default function Home() {
                 <Link href={item.href} className="button-secondary inline-button homepage-decision-strip-button">
                   {item.cta}
                 </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage-benchmark-band" aria-label="首頁決策基準與競品啟發">
+        <div className="shell">
+          <div className="homepage-benchmark-head">
+            <div>
+              <span className="mini-label accent">What strong B2B sites do</span>
+              <h2>先把競品有效的轉換邏輯翻成道易買方看得懂的判斷基準。</h2>
+              <p>綜合本輪參考的 SaaS / consulting / B2B agency 官網做法：高表現首頁不是只更漂亮，而是更快回答「是不是適合我、做過什麼、現在怎麼低風險開始」。</p>
+            </div>
+          </div>
+          <div className="card-grid four-up homepage-heuristic-grid">
+            {homepageHeuristicScorecard.map((item) => (
+              <article key={item.title} className="card homepage-heuristic-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+                <strong>{item.action}</strong>
+              </article>
+            ))}
+          </div>
+          <div className="homepage-before-after-table" aria-label="道易首頁優化前後判斷差異">
+            <div className="homepage-before-after-header">
+              <span>題目</span>
+              <span>常見弱訊號</span>
+              <span>本版優化方向</span>
+            </div>
+            {homepageBeforeAfterRows.map((item) => (
+              <article key={item.topic} className="homepage-before-after-row">
+                <strong>{item.topic}</strong>
+                <p>{item.before}</p>
+                <p>{item.after}</p>
               </article>
             ))}
           </div>

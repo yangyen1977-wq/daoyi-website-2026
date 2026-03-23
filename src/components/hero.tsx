@@ -7,7 +7,7 @@ import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 const heroHighlights = [
   "先用一句話講清楚：誰適合、先補哪段、值不值得現在談",
   "把案例證據、交付樣態、AI / 資料流程與 Contact reassurance 放進同一輪掃讀",
-  "手機版優先保留 CTA、回覆承諾與 NDA-friendly 起手路徑，減少第一次詢問阻力",
+  "競品共通高轉換做法是先回答『是不是適合我』，再用視覺成熟度加分",
 ];
 
 const heroMicroProof = [
