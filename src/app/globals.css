@@ -284,6 +284,34 @@ a:hover {
   margin: 18px 0 6px;
 }
 
+.hero-case-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0 10px;
+}
+
+.hero-case-proof-card {
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(93, 228, 215, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-case-proof-card strong {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.hero-case-proof-card p {
+  color: #d5dfeb;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .homepage-first-scan-grid,
 .homepage-decision-snapshot-grid,
 .homepage-scorecard-grid,
@@ -3819,7 +3847,8 @@ a:hover {
   }
 
   .hero-proof-metrics,
-  .hero-inline-proof-grid {
+  .hero-inline-proof-grid,
+  .hero-case-proof-strip {
     grid-template-columns: 1fr;
   }
 

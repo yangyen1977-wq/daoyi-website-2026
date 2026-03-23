@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { heroContactLadder, heroDecisionMetrics, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts } from "@/lib/site";
+import { heroContactLadder, heroFitSignals, heroQuickSignals, siteConfig, stats, homepageContactProof, contactFastFacts, homepageCompactCaseEvidence } from "@/lib/site";
 import { HeroProofBar } from "@/components/hero-proof-bar";
 import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 
 const heroHighlights = [
   "先用一句話講清楚：誰適合、先補哪段、值不值得現在談",
-  "把案例證據、交付樣態、AI / 資料流程與 Contact reassurance 放進同一輪掃讀",
+  "把最硬的案例證據提前到前兩屏，不讓買方先讀一大段介紹",
   "競品共通高轉換做法是先回答『是不是適合我』，再用視覺成熟度加分",
 ];
 
@@ -78,12 +78,12 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="hero-inline-proof-grid" aria-label="首次接洽重點">
-            {heroDecisionMetrics.map((item) => (
-              <article key={item.label} className="hero-inline-proof-card">
+          <div className="hero-case-proof-strip" aria-label="首屏代表案例證據">
+            {homepageCompactCaseEvidence.map((item) => (
+              <article key={item.title} className="hero-case-proof-card">
                 <span className="mini-label accent">{item.label}</span>
-                <strong>{item.value}</strong>
-                <p>{item.detail}</p>
+                <strong>{item.title}</strong>
+                <p>{item.evidence}</p>
               </article>
             ))}
           </div>
