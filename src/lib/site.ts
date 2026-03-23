@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 B2B 官網、AI 與 DPP，整理成決策者 5 秒內敢往下談的成交系統",
+  heroTitle: "讓 B2B 決策者 5 秒內看懂：你是誰、做過什麼、現在怎麼安全開始",
   heroDescription:
-    "道易科技協助品牌、製造業與研究型組織，把品牌主張、案例證據、資料流程、RWD 體驗與 Contact 轉換整成同一套可交付系統；第一次接洽 24 小時內就能拿到具體下一步與推薦 sprint。",
+    "道易科技協助品牌、製造業與研究型組織，把品牌主張、案例證據、資料流程、RWD 體驗與 Contact 轉換整成同一套可交付系統；首頁先完成 clarity、proof 與 friction reduction，第一次接洽 24 小時內就能拿到具體下一步與推薦 sprint。",
 };
 
 export const homepageExecutiveScorecards = [

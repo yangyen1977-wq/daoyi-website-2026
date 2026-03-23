@@ -215,6 +215,30 @@ const homepageConversionSnapshot = [
   },
 ];
 
+const homepageResearchApplicationCards = [
+  {
+    label: "Clarity pattern",
+    title: "競品共同點 1：首屏先回答『你做什麼、給誰、為什麼現在值得看』。",
+    detail:
+      "參考 Veza Digital、Stan Vision 與多個高表現 SaaS 首頁，真正有效的不是更華麗，而是更快完成價值理解。這一輪把 DaoYi hero 主張再收斂，讓角色、結果與 next step 更容易被複述。",
+    takeaway: "對應調整：hero 主張改成更明確的 5 秒理解句型。",
+  },
+  {
+    label: "Proof near CTA",
+    title: "競品共同點 2：social proof、案例摘要與 CTA 要在同一輪掃讀內成立。",
+    detail:
+      "Pixeto、Raycast、Slack 型首頁都把證據靠近行動，而不是把 proof 埋在很後面。這輪延續把『已交付樣態 + 24h 回覆承諾 + Quick Brief / Email-NDA』集中在前段。",
+    takeaway: "對應調整：首屏與 contact 區文案同步強化 reassurance。",
+  },
+  {
+    label: "Mobile-first reassurance",
+    title: "競品共同點 3：手機版先讓人敢點，不是先逼人看完整頁。",
+    detail:
+      "Stan Vision 提到 thumb-zone 內的低摩擦 CTA 對 trial / demo 很關鍵；因此這輪把 mobile sticky CTA 與 desktop quick contact 的措辭，改成更明確的 fit check + NDA fallback。",
+    takeaway: "對應調整：把『先判斷 fit』與『敏感案可先 NDA』說得更直白。",
+  },
+];
+
 export const metadata: Metadata = {
   title: "B2B 成長官網、AI 導入、知識平台與 DPP 首頁",
   description:
@@ -267,6 +291,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section
+        eyebrow="This hour's benchmark-to-site translation"
+        title="把這輪競品觀察直接翻成 DaoYi 首頁可用的三個轉換規則。"
+        description="參考 Pixeto 對高辨識 SaaS 首頁的視覺層次、Veza Digital 對 B2B clarity / social proof 結構的拆解，以及 Stan Vision 對 mobile friction reduction 的強調。"
+      >
+        <div className="card-grid three-up">
+          {homepageResearchApplicationCards.map((item) => (
+            <article key={item.title} className="feature-surface homepage-start-now-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.takeaway}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <section className="homepage-decision-strip" aria-label="首頁快速決策摘要">
         <div className="shell">

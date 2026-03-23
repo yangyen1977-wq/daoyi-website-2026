@@ -18,8 +18,8 @@ export function DesktopQuickContact() {
   return (
     <aside className="desktop-quick-contact" aria-label="桌機快速聯絡">
       <span className="mini-label accent">Quick contact</span>
-      <strong>24h 內拿到下一步</strong>
-      <p>不想先滑完整頁也沒關係，直接 brief 或 Email / NDA 開始。</p>
+      <strong>24h 內拿到可執行下一步</strong>
+      <p>不想先滑完整頁也沒關係，先用 Quick Brief 判斷 fit，或直接從 Email / NDA 低風險開始。</p>
       <div className="desktop-quick-contact-actions">
         <Link href={primaryHref} className="button-primary button-small">
           {primaryLabel}

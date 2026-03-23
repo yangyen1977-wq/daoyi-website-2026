@@ -98,7 +98,7 @@ export function QuickBriefForm() {
       <p>這裡只問姓名、公司與本次焦點，維持高轉換 SaaS / agency 常見的低摩擦起手式。重點不是第一次就把資料填滿，而是先讓你在 24 小時內拿到建議切入點、推薦 sprint、需要補哪些材料，以及第一次會議該對焦的阻力。</p>
       <div className="quick-brief-priority-note">
         <strong>送出後 24h 內，你會先拿到什麼？</strong>
-        <p>不是只有收到回信，而是先拿到首頁 / Contact 可先補哪裡、建議從哪個 sprint 開始，以及第一次會議該對焦的阻力點。</p>
+        <p>不是只有收到回信，而是先拿到首頁 / Contact 可先補哪裡、建議從哪個 sprint 開始、第一次會議該對焦的阻力點，以及目前比較適合 Quick Brief 還是 Email / NDA 路徑。</p>
       </div>
 
       <div className="quick-brief-start-recommendation" aria-live="polite">
