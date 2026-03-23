@@ -43,6 +43,7 @@ import { CaseSnapshots } from "@/components/case-snapshots";
 import { CaseOverviewStats } from "@/components/case-overview-stats";
 import { ConversionCTA } from "@/components/conversion-cta";
 import { MobileCtaPreview } from "@/components/mobile-cta-preview";
+import { PersonaPlaybook } from "@/components/persona-playbook";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -403,6 +404,14 @@ export default function Home() {
             </article>
           ))}
         </div>
+      </Section>
+
+      <Section
+        eyebrow="Buyer playbooks"
+        title="讓品牌、營運、永續三種買方，用自己的語言更快判斷要不要找道易。"
+        description="這一段吸收 2026 SaaS / agency 常見的 role-based messaging：不是只說服務，而是直接對應不同決策角色的阻力、預期成果與最適合的下一步。"
+      >
+        <PersonaPlaybook />
       </Section>
 
       <Section
