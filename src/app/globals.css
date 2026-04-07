@@ -452,17 +452,29 @@ a:hover {
 
 .homepage-readiness-card,
 .homepage-response-promise-card,
-.homepage-contact-route-card {
+.homepage-contact-route-card,
+.homepage-contact-start-card {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
 .homepage-readiness-card strong,
-.homepage-response-promise-card strong {
+.homepage-response-promise-card strong,
+.homepage-contact-start-card strong {
   margin-top: auto;
   color: #0d2844;
   line-height: 1.65;
+}
+
+.homepage-contact-start-grid {
+  align-items: stretch;
+}
+
+.homepage-contact-start-card {
+  min-height: 100%;
+  background: linear-gradient(180deg, rgba(93, 228, 215, 0.08), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(93, 228, 215, 0.14);
 }
 
 .homepage-contact-route-card .inline-button {

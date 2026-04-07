@@ -162,6 +162,17 @@ export const metadata: Metadata = {
     "案例頁優化",
   ],
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "道易科技｜B2B 成長官網、AI 導入、知識平台與 DPP",
+    description:
+      "給需要同時處理品牌主張、案例證據、Contact 轉換與 DPP / AI 敘事的 B2B 團隊，一站看懂道易怎麼讓網站更容易 shortlist。",
+    url: `${siteConfig.url}/`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "道易科技｜B2B 官網、AI、知識平台與 DPP",
+    description: "先看懂值不值得 shortlist，再用 Quick Brief 或 Email / NDA 低摩擦開始。",
+  },
 };
 
 
@@ -331,6 +342,23 @@ export default function Home() {
         </div>
       </Section>
 
+
+      <Section
+        eyebrow="Choose your starting path"
+        title="先選一條最適合的起手路徑，不必先讀完整站才敢聯絡。"
+        description="這是從近期成熟 B2B / agency contact pattern 抽出的共同做法：把 Quick Brief、Email / NDA 與第一次回覆承諾提前，讓手機訪客也能更快開始。"
+      >
+        <div className="card-grid three-up homepage-contact-start-grid">
+          {homepageContactCompare.map((item) => (
+            <article key={item.title} className="feature-surface homepage-contact-start-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <strong>{item.meta}</strong>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section
         eyebrow="品牌摘要"
