@@ -5,9 +5,9 @@ import { HeroProductPreview } from "@/components/hero-product-preview";
 import { HeroClarityChecklist } from "@/components/hero-clarity-checklist";
 
 const heroHighlights = [
-  "先用一句話講清楚：誰適合、先補哪段、值不值得現在談",
-  "把最硬的案例證據提前到前兩屏，不讓買方先讀一大段介紹",
-  "競品共通高轉換做法是先回答『是不是適合我』，再用視覺成熟度加分",
+  "先用一句話講清楚：誰適合、做過什麼、現在怎麼低風險開始",
+  "把可複述的案例證據提前到前兩屏，不讓買方先讀一大段公司介紹",
+  "第一次接洽先給具體下一步與推薦 sprint，不讓聯絡流程停在『收到』",
 ];
 
 const heroMicroProof = [
@@ -61,11 +61,11 @@ export function Hero() {
           <div className="hero-priority-strip" aria-label="品牌重點">
             <div>
               <span className="mini-label">核心定位</span>
-              <strong>把首頁訊息、案例證據、CTA、AI / 資料流程與交付方式，一次整理成更容易成交的系統。</strong>
+              <strong>把首頁訊息、案例證據、CTA、AI / 資料流程與交付方式，一次整理成更容易 shortlist 與成交的系統。</strong>
             </div>
             <div>
-              <span className="mini-label">這一版的重點</span>
-              <p>首屏先完成 3 件事：誰適合、做過什麼、現在怎麼低風險開始。</p>
+              <span className="mini-label">第一次接洽會拿到</span>
+              <p>建議切入點、優先順序、待補資料與推薦 sprint，不只是一封制式回信。</p>
             </div>
           </div>
 
@@ -111,7 +111,7 @@ export function Hero() {
             })}
           </div>
 
-          <div className="hero-cta-note">適合正在重做 B2B 官網、補強案例說服力、整理 AI / 資料流程或啟動 DPP 的團隊；若案子敏感，也可先 Email / NDA 再往下談。</div>
+          <div className="hero-cta-note">適合正在重做 B2B 官網、補強案例說服力、整理 AI / 資料流程或啟動 DPP 的團隊；若案子敏感，也可先 Email / NDA，再往下談。</div>
 
           <div className="hero-contact-reassurance" aria-label="第一次聯絡前的 reassurance">
             <div className="hero-contact-reassurance-head">
@@ -144,12 +144,15 @@ export function Hero() {
         <div className="hero-panel">
           <div className="hero-panel-card spotlight">
             <span className="mini-label">2026 Brand Positioning</span>
-            <strong>道易科技不只做網站，也不只做 AI；而是把策略、資料、介面與交付節奏一起做對。</strong>
+            <strong>道易科技不只做網站，也不只做 AI；而是把策略、資料、介面與交付節奏一起做對，讓買方更快形成共識。</strong>
             <ul className="bullet-list compact hero-highlight-list">
               {heroHighlights.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
+            <p className="hero-cta-note" style={{ marginTop: 14 }}>
+              這版刻意把 benchmark 語氣降下來，改以前段可複述的交付證據、回覆節奏與起手方式建立信任。
+            </p>
           </div>
           <div className="hero-panel-card fit-card">
             <span className="mini-label accent">Project fit check</span>

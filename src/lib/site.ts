@@ -7,9 +7,9 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "讓 B2B 決策者 5 秒內看懂：道易能不能成為這案子的 shortlist",
+  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP 敘事，整理成更容易成交的首頁系統",
   heroDescription:
-    "道易科技把品牌主張、案例證據、資料流程與 Contact 轉換整成同一套可交付系統，讓 B2B 買方更快判斷值不值得 shortlist；第一次接洽 24 小時內就能拿到具體下一步與推薦 sprint。",
+    "道易科技協助 B2B 團隊把品牌主張、案例證據、資料流程與 Contact 轉換整理成同一套可交付系統，讓決策者更快判斷值不值得談；第一次接洽 24 小時內就能拿到具體下一步與建議切入點。",
 };
 
 export const homepageExecutiveScorecards = [
@@ -219,10 +219,10 @@ export const navItems = [
 ];
 
 export const stats = [
-  { value: "+32%", label: "Activation 提升" },
-  { value: "15 秒", label: "互動 Demo" },
-  { value: "<2.3s", label: "Mobile LCP" },
-  { value: "3 欄", label: "表單欄位" },
+  { value: "24h", label: "Response SLA" },
+  { value: "30 分鐘", label: "對焦會議" },
+  { value: "3 欄", label: "Quick Brief" },
+  { value: "Email / NDA", label: "敏感案起手" },
 ];
 
 export const heroClients = [
@@ -483,18 +483,18 @@ export const homepageReadinessCards = [
 export const homepageResponsePromiseCards = [
   {
     label: "What you send",
-    title: "只要給網址、簡報或一句需求，也能先開始。",
-    detail: "不要求第一次就整理完全部需求；先把專案方向、時程或阻力點丟出來即可。",
+    title: "只要給網址、簡報、現況卡點或一句需求，也能先開始。",
+    detail: "不要求第一次就整理完全部需求；先把專案方向、時程、既有網站或阻力點丟出來即可。",
   },
   {
     label: "What DaoYi replies",
     title: "24 小時內回覆建議切入點、待補資料與推薦路徑。",
-    detail: "不是只回收到，而是先協助判斷該從品牌官網、AI / 資料流程、知識平台還是 DPP 切入。",
+    detail: "不是只回收到，而是先協助判斷該從品牌官網、AI / 資料流程、知識平台還是 DPP 切入，並附上可執行下一步。",
   },
   {
-    label: "Why this converts",
-    title: "先把第一次接洽的不確定感拿掉，通常比再多一段品牌描述更有用。",
-    detail: "這是近年成熟 B2B / SaaS contact flow 的共同做法：先降低風險，再提高有效詢問率。",
+    label: "What the first call delivers",
+    title: "第一次會議後，會拿到優先順序、風險點與推薦 sprint。",
+    detail: "讓第一次接洽更像拿到一份 decision pack，而不是只有一場泛泛簡介。",
   },
 ];
 

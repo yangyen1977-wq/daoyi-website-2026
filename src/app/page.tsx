@@ -95,6 +95,25 @@ const contactHowToSchema = {
   })),
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ProfessionalService"],
+  name: siteConfig.name,
+  url: siteConfig.url,
+  email: siteConfig.email,
+  areaServed: "TW",
+  serviceType: ["B2B website redesign", "AI enablement", "Knowledge platform", "DPP / Traceability"],
+  description: siteConfig.description,
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: siteConfig.email,
+      availableLanguage: ["zh-Hant", "en"],
+    },
+  ],
+};
+
 const homepageJumpLinks = [
   { label: "看現在適不適合談", href: "#why-now" },
   { label: "看案例證據", href: "#proof-ledger" },
@@ -205,6 +224,25 @@ export default function Home() {
               <article key={item.label} className="homepage-trust-chip">
                 <span>{item.label}</span>
                 <strong>{item.value}</strong>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block" aria-label="第一次接洽交付摘要">
+        <div className="shell">
+          <div className="section-heading">
+            <span className="section-eyebrow">First response kit</span>
+            <h2>不是只留下聯絡方式，而是先拿到一份可往下推進的判斷包。</h2>
+            <p>參考近期成熟 B2B / SaaS 官網常見做法，把第一次接洽後會拿到的內容寫得更明確，降低決策者對「留資料後會不會石沉大海」的疑慮。</p>
+          </div>
+          <div className="card-grid three-up homepage-response-promise-grid">
+            {homepageResponsePromiseCards.map((item) => (
+              <article key={item.title} className="card homepage-response-promise-card">
+                <span className="mini-label accent">{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
               </article>
             ))}
           </div>
@@ -477,15 +515,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="card-grid three-up homepage-response-promise-grid">
-          {homepageResponsePromiseCards.map((item) => (
-            <article key={item.title} className="card homepage-response-promise-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
         <div className="card-grid three-up homepage-contact-compare-grid">
           {homepageContactCompare.map((item) => (
             <article key={item.title} className="card homepage-contact-compare-card">
@@ -497,6 +526,7 @@ export default function Home() {
           ))}
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactHowToSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </Section>
 
       <Section
