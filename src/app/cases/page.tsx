@@ -1,48 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import {
-  cases,
-  caseDecisionChecklist,
-  caseProofFormat,
-  caseDeliveryFrames,
-  caseProofSnapshots,
-  siteConfig,
-} from "@/lib/site";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "案例實績",
-  description: "查看道易科技在研究平台、AI 視覺辨識與產品資料透明化方面的案例方向。",
-  keywords: ["B2B 案例頁設計", "案例研究頁", "AI 導入案例", "知識平台案例", "DPP 案例"],
+  title: "案例證據",
+  description: "道易科技案例頁的 2026 方向，不把案例當作品集，而是當成能支撐 shortlist、採購與提案溝通的證據系統。",
   alternates: { canonical: "/cases" },
 };
 
-const caseStudySchema = {
-  "@context": "https://schema.org",
-  "@graph": caseProofSnapshots.map((item) => ({
-    "@type": "CreativeWork",
-    name: item.title,
-    about: item.facts.join("；"),
-    abstract: item.summary,
-    url: `${siteConfig.url}/cases#${item.slug}`,
-    creator: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.url,
-    },
-  })),
-};
-
-const deliveryNotes = [
-  "跨領域資料整合與檢索架構整理",
-  "結合 AI 模型與實際作業節點的流程設計",
-  "兼顧對外展示、對內管理與後續資料擴充",
+const proofStories = [
+  {
+    label: "Knowledge platform",
+    title: "研究與典藏型平台",
+    summary: "重點不是頁面多，而是如何把複雜內容整理成可查詢、可理解、可維運的知識系統。",
+    bullets: ["資訊架構", "內容治理", "搜尋與瀏覽體驗", "跨資料來源整合"],
+  },
+  {
+    label: "AI workflow",
+    title: "AI 視覺與流程型專案",
+    summary: "買方真正想知道的，是 AI 怎麼嵌入實際流程、誰會用、怎麼驗收，而不只是模型多準。",
+    bullets: ["角色流程", "欄位與 SOP", "前台與後台銜接", "商業化敘事"],
+  },
+  {
+    label: "DPP / Traceability",
+    title: "資料透明與產品履歷體驗",
+    summary: "把法規壓力與資料複雜度，整理成更成熟的對外體驗與內部管理框架。",
+    bullets: ["欄位藍圖", "掃碼體驗", "審查輸出", "品牌與合規並行"],
+  },
 ];
 
-const caseProofNotes = [
-  "若案例為已上線成果，會優先描述改善範圍、時間區段與使用情境。",
-  "若數值屬於 benchmark 或提案目標，會直接標示，避免與實績混淆。",
-  "若因 NDA 無法公開品牌名稱，會改用產業角色、問題結構與交付內容呈現。",
+const proofRules = [
+  "案例先給 snapshot，再展開完整脈絡。",
+  "案例要寫交付內容與情境，不只寫成果形容詞。",
+  "若有 NDA，就用問題結構與交付方式維持可信度。",
+  "案例頁要支撐銷售對話，而不是停留在設計展示。",
 ];
 
 export default function CasesPage() {
@@ -50,117 +42,25 @@ export default function CasesPage() {
     <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
-          <span className="section-eyebrow">Selected Cases</span>
-          <h1>道易的案例特色，不是炫技，而是把複雜任務整理成可以真的用的成果。</h1>
-          <p>從學術研究到產業應用，我們看重的是資料脈絡與系統價值能不能被放大。</p>
+          <span className="section-eyebrow">Proof System</span>
+          <h1>新的案例頁，不應該像作品集，而應該像一套能支撐商務決策的證據系統。</h1>
+          <p>成熟 B2B 官網的案例頁，重點是讓訪客快速理解你處理過哪些複雜問題、怎麼做、適不適合自己，而不是只看幾張成果圖。</p>
         </div>
       </section>
 
-      <Section
-        eyebrow="案例方向"
-        title="三種代表性實作，對應道易目前最有辨識度的能力版圖。"
-        description="這輪吸收 Proofmap、Amply 與近期 B2B case-study best practice：案例頁要先給 snapshot box、proof pack 與 time-to-value，而不是只列一段簡介。"
-      >
-        <div className="card-grid three-up case-proof-snapshot-grid">
-          {caseProofSnapshots.map((item) => (
-            <article key={item.title} id={item.slug} className="card case-proof-snapshot-card">
+      <Section eyebrow="Selected proof formats" title="三種代表性案例型態，對應道易最有說服力的能力版圖。">
+        <div className="card-grid three-up">
+          {proofStories.map((item) => (
+            <article key={item.title} className="card case-proof-snapshot-card">
               <div className="case-proof-snapshot-head">
                 <span className="mini-label accent">{item.label}</span>
-                <span className="case-evidence-badge">{item.evidenceLabel}</span>
+                <span className="case-evidence-badge">Proof snapshot</span>
               </div>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
-              <div className="case-proof-snapshot-box">
-                <strong>Snapshot box</strong>
-                <ul className="bullet-list compact">
-                  {item.facts.map((fact) => (
-                    <li key={fact}>{fact}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="case-proof-pack">
-                <strong>Proof pack</strong>
-                <ul className="bullet-list compact">
-                  {item.proofPack.map((proof) => (
-                    <li key={proof}>{proof}</li>
-                  ))}
-                </ul>
-              </div>
-              <Link href="/contact" className="button-secondary inline-button">
-                {item.cta}
-              </Link>
-            </article>
-          ))}
-        </div>
-
-        <div className="stack-list case-direction-stack">
-          {cases.map((item) => (
-            <article key={item.title} className="stack-item feature-surface">
-              <div>
-                <span className="mini-label accent">{item.category}</span>
-                <h3>{item.title}</h3>
-              </div>
-              <div>
-                <p>{item.description}</p>
-                <strong>{item.impact}</strong>
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Proof system"
-        title="先告訴你我們怎麼呈現證據，減少『這些數字是真的嗎？』的疑慮。"
-        description="參考高轉換 B2B / SaaS 案例頁做法，把 evidence label 寫清楚，比堆更多華麗 KPI 更有信任感。"
-      >
-        <div className="card-grid three-up">
-          {caseProofFormat.map((item) => (
-            <article key={item.title} className="card trust-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="feature-surface" style={{ marginTop: 24 }}>
-          <ul className="bullet-list compact">
-            {caseProofNotes.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Decision support"
-        title="決策者通常不是只想看成果，而是想知道這類專案到底怎麼做、風險在哪。"
-        description="把案例頁補成決策支援頁，是近年不少 B2B agency / SaaS 官網的共同方向。"
-      >
-        <div className="card-grid three-up">
-          {caseDecisionChecklist.map((item) => (
-            <article key={item.title} className="card">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="交付樣板"
-        title="不同類型專案，實際會拿到的東西也不一樣。"
-        description="這裡把 deliverables 直接寫出來，讓品牌、營運與永續團隊更快對焦。"
-      >
-        <div className="card-grid three-up">
-          {caseDeliveryFrames.map((item) => (
-            <article key={item.title} className="card">
-              <span className="mini-label accent">Delivery frame</span>
-              <h3>{item.title}</h3>
-              <p>{item.context}</p>
               <ul className="bullet-list compact">
-                {item.outputs.map((output) => (
-                  <li key={output}>{output}</li>
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
             </article>
@@ -168,41 +68,46 @@ export default function CasesPage() {
         </div>
       </Section>
 
-      <Section eyebrow="共同特徵" title="這些專案背後，都需要同時處理內容、資料、介面與維運邏輯。">
+      <Section eyebrow="Proof rules" title="案例頁要遵守的四個原則。">
         <div className="feature-surface">
           <ul className="bullet-list compact">
-            {deliveryNotes.map((item) => (
+            {proofRules.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
       </Section>
 
-      <Section
-        eyebrow="Next step"
-        title="如果你想知道自己的專案比較像哪一類，最快的方法是先做一輪診斷。"
-        description="不是先進大提案，而是先確認：你的案例、CTA、資料結構或 DPP 敘事，哪一段最值得先修。"
-      >
+      <Section eyebrow="Next step" title="如果你想知道你的案例該怎麼重寫成更有說服力的版本，可以直接開始。">
         <div className="feature-surface two-column">
           <div>
-            <h3>你會先拿到什麼</h3>
+            <h3>你會先拿到</h3>
             <ul className="bullet-list compact">
-              <li>目前網站 / 系統最影響轉換或理解的 3–5 個阻力點</li>
-              <li>案例頁與首頁應先補哪種證據格式</li>
-              <li>適合從品牌、平台或 DPP 哪一條 sprint 開始</li>
+              <li>案例首頁摘要應該如何寫</li>
+              <li>哪些 proof 應該前置到首頁</li>
+              <li>案例與 CTA 怎麼排得更像成熟 B2B 官網</li>
             </ul>
           </div>
           <div>
-            <h3>適合現在就開始的情況</h3>
-            <p>已經準備改版、要對外提案、要面對採購 / 法遵審查，或明明內容很多卻還是難以說服決策者時，通常就值得先談。</p>
-            <Link href="/contact" className="button-primary button-large case-link">
-              預約 30 分鐘案例診斷
-            </Link>
+            <h3>立即啟動</h3>
+            <p>
+              <Link href="/contact" className="button-primary inline-button">預約案例重構討論</Link>
+            </p>
           </div>
         </div>
       </Section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "DaoYi proof system",
+            url: `${siteConfig.url}/cases`,
+          }),
+        }}
+      />
     </main>
   );
 }

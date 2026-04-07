@@ -10,7 +10,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const ctaHref = pathname === "/" ? "/#quick-brief" : "/contact";
-  const ctaLabel = pathname === "/" ? "3 欄拿建議" : "24h 內拿下一步";
+  const ctaLabel = pathname === "/" ? "啟動新官網" : "24h 內拿下一步";
 
   useEffect(() => {
     const onResize = () => {
@@ -33,7 +33,7 @@ export function SiteHeader() {
             </span>
             <span>
               <strong>{siteConfig.name}</strong>
-              <small>AI / Knowledge Platform / DPP</small>
+              <small>B2B Website / AI / DPP Experience</small>
             </span>
           </Link>
 

@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技協助 B2B 品牌、製造業與研究型組織規劃官網改版、AI 導入、知識平台與數位產品護照 DPP，將複雜資料、案例證據與流程整理成可運作、可維運、可成長的數位成果。",
+    "道易科技以重新設計與重建思維，協助 B2B 品牌、製造業與研究型組織重設官網、案例系統、AI / 資料流程敘事與 DPP 體驗，打造更成熟的商用版數位網站。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把 B2B 官網、案例證據、AI 與 DPP 敘事，整理成更容易成交的首頁系統",
+  heroTitle: "把道易科技官網重建成更成熟的 B2B 商用版網站",
   heroDescription:
-    "道易科技協助 B2B 團隊把品牌主張、案例證據、資料流程與 Contact 轉換整理成同一套可交付系統，讓決策者更快判斷值不值得談；第一次接洽 24 小時內就能拿到具體下一步與建議切入點。",
+    "不沿用舊站持續優化思維，而是重新整理品牌主張、案例證據、AI / 資料流程與 DPP 體驗，讓網站真正支撐 shortlist、詢問與商務對話。",
 };
 
 export const homepageExecutiveScorecards = [
@@ -212,10 +212,10 @@ export const homepageMomentumCards = [
 
 export const navItems = [
   { href: "/", label: "首頁" },
-  { href: "/about", label: "關於道易" },
-  { href: "/solutions", label: "解決方案" },
-  { href: "/cases", label: "案例實績" },
-  { href: "/contact", label: "聯絡我們" },
+  { href: "/about", label: "定位" },
+  { href: "/solutions", label: "能力架構" },
+  { href: "/cases", label: "案例證據" },
+  { href: "/contact", label: "啟動專案" },
 ];
 
 export const stats = [
@@ -240,8 +240,8 @@ export const homepageTrustStrip = [
 ];
 
 export const headerReassuranceSignals = [
+  "重建思維，不走舊站微調",
   "24h 內回覆具體下一步",
-  "Quick Brief 只要 3 欄",
   "敏感專案可先 Email / NDA",
 ];
 

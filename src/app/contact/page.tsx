@@ -1,211 +1,62 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChannels, siteConfig, contactCommitments, contactDecisionCards, contactTrustNotes, trustSignals, homepageContactProof, contactPrepChecklist, auditOffer, contactFastFacts, contactIntentCards, contactFaqs, homepageResponseTimeline, contactHeroChecklist, contactRouteAssurances, contactRouteSpeedCards } from "@/lib/site";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "聯絡我們",
-  description: "聯絡道易科技，討論 B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合。24 小時內提供下一步建議、NDA 支援與會議安排。",
-  keywords: ["聯絡道易科技", "B2B 官網改版諮詢", "AI 導入顧問", "DPP 規劃", "知識平台建置", "NDA 專案詢問"],
+  title: "啟動專案",
+  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Email 與 NDA 流程。",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "聯絡道易科技｜B2B 官網、AI、知識平台、DPP 專案討論",
-    description: "適合要重做官網、整理資料流程、規劃知識平台或 DPP 的團隊。可先 Quick Brief，也可 Email + NDA 開始。",
+    title: "啟動道易專案｜2026 官網、AI、知識平台、DPP",
+    description: "把第一次接洽設計成真正能往前走的 decision flow。",
     url: `${siteConfig.url}/contact`,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "聯絡道易科技｜B2B 官網、AI、知識平台、DPP 專案討論",
-    description: "24h 內回覆，支援 Quick Brief、Email 與 NDA-friendly contact flow。",
   },
 };
 
-const contactFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: contactFaqs.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
+const startModes = [
+  {
+    label: "Quick Brief",
+    title: "已大致知道要談什麼，想快速拿到切入點。",
+    detail: "適合要重做官網、案例或 solution page 的團隊。",
+  },
+  {
+    label: "Email / NDA",
+    title: "專案偏敏感，想先低風險確認 fit。",
+    detail: "適合涉及採購、法遵、既有客戶資料或內部文件的團隊。",
+  },
+  {
+    label: "24h response",
+    title: "第一次回覆會先附具體下一步。",
+    detail: "不是只回收到，而是回覆切入方向、待補資料與建議流程。",
+  },
+];
+
+const checklist = [
+  "目前網站或專案最大的溝通阻力是什麼",
+  "是品牌訊息、案例、AI 敘事，還是 DPP / 資料透明出了問題",
+  "目前想先做短 sprint，還是已準備進入完整重建",
+];
 
 export default function ContactPage() {
   return (
     <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
-          <span className="section-eyebrow">Contact</span>
-          <h1>如果你正在規劃新的數位專案，現在就可以開始對話。</h1>
-          <p>
-            無論是官網重構、AI 導入、知識平台整理或 DPP 規劃，道易都適合在專案前期一起把方向定清楚。
-          </p>
-          <div className="contact-fast-facts" aria-label="聯絡重點">
-            {contactFastFacts.map((item) => (
-              <div key={item.label} className="contact-fast-fact">
-                <span>{item.label}</span>
-                <strong>{item.value}</strong>
-              </div>
-            ))}
-          </div>
-
+          <span className="section-eyebrow">Start a Project</span>
+          <h1>把第一次接洽設計得更清楚，專案就更容易開始。</h1>
+          <p>這一頁不只是聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的啟動方式。</p>
           <div className="contact-hero-actions">
             <a className="button-primary button-large" href="#quick-brief">直接送出 Quick Brief</a>
-            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("想和道易討論新專案")}`}>
-              先用 Email 開始
-            </a>
-          </div>
-
-          <div className="contact-hero-checklist" aria-label="第一次聯絡建議準備">
-            {contactHeroChecklist.map((item) => (
-              <article key={item.title} className="contact-hero-checklist-card">
-                <span className="mini-label accent">{item.label}</span>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="contact-route-speed-grid" aria-label="聯絡節奏選擇">
-            {contactRouteSpeedCards.map((item) => (
-              <article key={item.title} className="contact-route-speed-card">
-                <span className="mini-label accent">{item.label}</span>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
-                <strong>{item.meta}</strong>
-              </article>
-            ))}
-          </div>
-
-          <div className="contact-first-scan-band" aria-label="第一次聯絡先看這三件事">
-            <article className="contact-first-scan-card">
-              <span className="mini-label accent">先判斷適不適合</span>
-              <h2>如果你卡在「官網說不清楚、案例不夠像證據、聯絡入口偏弱」，通常現在就值得談。</h2>
-              <p>這一版把 contact 首屏也做成 decision flow：先讓高意圖買方知道適不適合，再決定要用 brief 還是 Email / NDA 開始。</p>
-            </article>
-            <div className="contact-first-scan-pills">
-              <p className="homepage-conversion-pill">Quick Brief：適合已知道主題，想 5 分鐘內開始</p>
-              <p className="homepage-conversion-pill">Email / NDA：適合敏感案、既有文件或法遵流程</p>
-              <p className="homepage-conversion-pill">24h 回覆：會先附建議切入點，不只回收到</p>
-            </div>
+            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi 2026 專案討論 / NDA")}`}>先用 Email / NDA 開始</a>
           </div>
         </div>
       </section>
 
-      <Section eyebrow="聯絡方式" title="先把需求說清楚，合作就會快很多。">
+      <Section eyebrow="Start modes" title="三種起手方式，對應三種常見專案狀態。">
         <div className="card-grid three-up">
-          {contactChannels.map((item) => (
-            <article key={item.label} className="card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.value}</h3>
-              <p>點擊即可直接聯繫或查看相關資訊。</p>
-              <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
-                前往 {item.label}
-              </a>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Fast entry"
-        title="如果你知道要談哪一類專案，可以直接用對應主旨開始。"
-        description="參考高轉換 B2B contact 頁常見做法，把『如何開口』也一起設計掉，降低第一次寄信阻力。"
-      >
-        <div className="card-grid three-up">
-          {contactIntentCards.map((item) => (
-            <article key={item.title} className="feature-surface contact-intent-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <a href={item.href} className="button-secondary inline-button">{item.cta}</a>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Response promise"
-        title="讓第一次接洽更放心：你會知道接下來真的會發生什麼。"
-        description="參考優秀 agency / SaaS contact page 的做法，把回覆節奏、對焦方式與保密安排先講清楚。"
-      >
-        <div className="card-grid three-up">
-          {contactCommitments.map((item) => (
-            <article key={item.title} className="card">
-              <span className="mini-label accent">Contact SLA</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="card-grid three-up homepage-response-grid contact-response-grid">
-          {homepageResponseTimeline.map((item) => (
-            <article key={item.step} className="feature-surface homepage-response-card">
-              <span className="mini-label accent">{item.step}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="card-grid three-up homepage-response-grid contact-response-grid">
-          {contactRouteAssurances.map((item) => (
-            <article key={item.title} className="feature-surface homepage-response-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Before you contact"
-        title="在真正填表前，先把決策者最在意的 reassurance 放到前面。"
-        description="參考高轉換 B2B contact page 的寫法，先降低風險感，再請對方留下聯絡資訊。"
-      >
-        <div className="card-grid three-up trust-grid">
-          {trustSignals.map((item) => (
-            <article key={item.title} className="card trust-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="contact-proof-list">
-          {homepageContactProof.map((item) => (
-            <p key={item} className="contact-proof-pill">{item}</p>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="適合直接來談的情境"
-        title="如果你卡在這三種情況，通常已經值得安排第一次會議。"
-        description="把決策焦慮具體化，會比單純放聯絡表單更容易促成有效詢問。"
-      >
-        <div className="card-grid three-up">
-          {contactDecisionCards.map((item) => (
+          {startModes.map((item) => (
             <article key={item.title} className="card decision-card">
-              <span className="mini-label accent">{item.metric}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="First response kit"
-        title="不是只有留資料，而是先知道你會拿到什麼。"
-        description="把第一次接洽可交付內容寫清楚，降低『留了資料也不知道接下來會怎樣』的不安。"
-      >
-        <div className="card-grid three-up">
-          {auditOffer.map((item) => (
-            <article key={item.title} className="card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
@@ -214,69 +65,19 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Meeting prep"
-        title="先把第一次接洽的資訊不對稱拿掉，訪客更敢留下資料。"
-        description="這是從近期 B2B / SaaS Contact 頁研究抽出的重點：先說清楚雙方各自要準備什麼，比單純催填表更有效。"
-      >
-        <div className="card-grid two-up">
-          {contactPrepChecklist.map((group) => (
-            <article key={group.title} className="feature-surface prep-card">
-              <span className="mini-label accent">Contact enablement</span>
-              <h3>{group.title}</h3>
-              <ul className="bullet-list compact">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="合作前常見需求" title="這些題目，特別適合在一開始就一起釐清。">
-        <div className="quick-brief-grid">
-          <QuickBriefForm />
-          <div className="feature-surface quick-brief-note">
-            <span className="mini-label accent">Suggested brief</span>
-            <h3>如果你不知道從哪裡開始，先提供這四件事就夠。</h3>
-            <ul className="bullet-list compact">
-              <li>目前網站或系統連結，以及最卡的地方</li>
-              <li>這次要面對的對象：客戶、採購、法遵或內部團隊</li>
-              <li>希望改善的結果：詢問量、作業效率、資料透明或法規準備</li>
-              <li>預計時程與是否需要 NDA</li>
-            </ul>
-            <div className="contact-trust-note-list">
-              {contactTrustNotes.map((note) => (
-                <p key={note} className="contact-trust-note">{note}</p>
-              ))}
-            </div>
-            <p className="quick-brief-meta">不確定需求也沒關係，先把現況限制說清楚，道易會協助你切出第一步。</p>
-            <a className="button-primary inline-button" href={`mailto:${siteConfig.email}`}>
-              直接寄信到 {siteConfig.email}
-            </a>
-          </div>
-        </div>
-      </Section>
-
-      <section className="section-block faq-block">
-        <div className="shell narrow">
-          <div className="section-heading">
-            <span className="section-eyebrow">Contact FAQ</span>
-            <h2>第一次聯絡前，決策者最常問的三個問題。</h2>
-            <p>把回覆速度、保密流程與專案起點先說清楚，通常能讓有效詢問更快發生。</p>
-          </div>
-          <div className="faq-list">
-            {contactFaqs.map((item) => (
-              <article key={item.question} className="faq-item">
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
-              </article>
+      <Section eyebrow="Before you send" title="送出前，先想清楚這三件事，第一次對話會更有效。">
+        <div className="feature-surface">
+          <ul className="bullet-list compact">
+            {checklist.map((item) => (
+              <li key={item}>{item}</li>
             ))}
-          </div>
+          </ul>
         </div>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactFaqSchema) }} />
-      </section>
+      </Section>
+
+      <Section id="quick-brief" eyebrow="Quick Brief" title="用最短路徑，開始這次重建。">
+        <QuickBriefForm />
+      </Section>
     </main>
   );
 }
