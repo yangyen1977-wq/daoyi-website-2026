@@ -5,10 +5,10 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "能力架構",
-  description: "道易科技 2026 能力架構，將 B2B 官網重設、AI / 流程敘事、知識平台與 DPP 體驗重新整理成三條成熟商用方案。",
+  description: "道易科技 2026 能力架構，將 B2B 官網重設、AI / 流程敘事、知識平台與 DPP 體驗重組成三條成熟商用方案。",
   alternates: { canonical: "/solutions" },
   openGraph: {
-    title: "道易科技能力架構｜B2B 官網、AI、知識平台、DPP",
+    title: "道易科技能力架構",
     description: "不是服務清單，而是三條能支撐商用官網與複雜專案溝通的解決方案主軸。",
     url: `${siteConfig.url}/solutions`,
   },
@@ -36,18 +36,9 @@ const tracks = [
 ];
 
 const buyingGuide = [
-  {
-    title: "如果你最在意詢問品質",
-    detail: "先從官網重設與案例證據系統開始。",
-  },
-  {
-    title: "如果你最在意 AI 能不能被理解",
-    detail: "先從 solution framing、流程與驗收節點開始。",
-  },
-  {
-    title: "如果你最在意資料透明與合規",
-    detail: "先從 DPP / traceability 體驗與欄位藍圖開始。",
-  },
+  ["如果你最在意詢問品質", "先從官網重設與案例證據系統開始。"],
+  ["如果你最在意 AI 能不能被理解", "先從 solution framing、流程與驗收節點開始。"],
+  ["如果你最在意資料透明與合規", "先從 DPP / traceability 體驗與欄位藍圖開始。"],
 ];
 
 export default function SolutionsPage() {
@@ -69,9 +60,7 @@ export default function SolutionsPage() {
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
               <ul className="bullet-list compact">
-                {item.outputs.map((output) => (
-                  <li key={output}>{output}</li>
-                ))}
+                {item.outputs.map((output) => <li key={output}>{output}</li>)}
               </ul>
             </article>
           ))}
@@ -80,10 +69,10 @@ export default function SolutionsPage() {
 
       <Section eyebrow="Buying guide" title="先看自己比較像哪一種狀態，再決定要進哪條方案。">
         <div className="card-grid three-up">
-          {buyingGuide.map((item) => (
-            <article key={item.title} className="feature-surface">
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
+          {buyingGuide.map(([title, detail]) => (
+            <article key={title} className="feature-surface">
+              <h3>{title}</h3>
+              <p>{detail}</p>
             </article>
           ))}
         </div>
@@ -101,9 +90,7 @@ export default function SolutionsPage() {
           </div>
           <div>
             <h3>下一步</h3>
-            <p>
-              <Link href="/contact" className="button-primary inline-button">描述你的專案狀態</Link>
-            </p>
+            <p><Link href="/contact" className="button-primary inline-button">描述你的專案狀態</Link></p>
           </div>
         </div>
       </Section>

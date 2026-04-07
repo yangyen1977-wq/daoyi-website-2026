@@ -10,24 +10,9 @@ export const metadata: Metadata = {
 };
 
 const proofStories = [
-  {
-    label: "Knowledge platform",
-    title: "研究與典藏型平台",
-    summary: "重點不是頁面多，而是如何把複雜內容整理成可查詢、可理解、可維運的知識系統。",
-    bullets: ["資訊架構", "內容治理", "搜尋與瀏覽體驗", "跨資料來源整合"],
-  },
-  {
-    label: "AI workflow",
-    title: "AI 視覺與流程型專案",
-    summary: "買方真正想知道的，是 AI 怎麼嵌入實際流程、誰會用、怎麼驗收，而不只是模型多準。",
-    bullets: ["角色流程", "欄位與 SOP", "前台與後台銜接", "商業化敘事"],
-  },
-  {
-    label: "DPP / Traceability",
-    title: "資料透明與產品履歷體驗",
-    summary: "把法規壓力與資料複雜度，整理成更成熟的對外體驗與內部管理框架。",
-    bullets: ["欄位藍圖", "掃碼體驗", "審查輸出", "品牌與合規並行"],
-  },
+  { label: "Knowledge platform", title: "研究 / 典藏型平台", summary: "把大量內容整理成可理解、可查找、可持續擴充的知識產品。" },
+  { label: "AI workflow", title: "AI 與流程導入型專案", summary: "把角色流程、欄位、驗收與實際工作節點講清楚。" },
+  { label: "DPP / Traceability", title: "產品履歷與合規展示", summary: "把資料透明、QR 體驗與審查輸出整理成對內對外都成立的介面。" },
 ];
 
 const proofRules = [
@@ -52,17 +37,9 @@ export default function CasesPage() {
         <div className="card-grid three-up">
           {proofStories.map((item) => (
             <article key={item.title} className="card case-proof-snapshot-card">
-              <div className="case-proof-snapshot-head">
-                <span className="mini-label accent">{item.label}</span>
-                <span className="case-evidence-badge">Proof snapshot</span>
-              </div>
+              <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
-              <ul className="bullet-list compact">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
             </article>
           ))}
         </div>
@@ -70,11 +47,7 @@ export default function CasesPage() {
 
       <Section eyebrow="Proof rules" title="案例頁要遵守的四個原則。">
         <div className="feature-surface">
-          <ul className="bullet-list compact">
-            {proofRules.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <ul className="bullet-list compact">{proofRules.map((item) => <li key={item}>{item}</li>)}</ul>
         </div>
       </Section>
 
@@ -90,24 +63,12 @@ export default function CasesPage() {
           </div>
           <div>
             <h3>立即啟動</h3>
-            <p>
-              <Link href="/contact" className="button-primary inline-button">預約案例重構討論</Link>
-            </p>
+            <p><Link href="/contact" className="button-primary inline-button">預約案例重構討論</Link></p>
           </div>
         </div>
       </Section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "DaoYi proof system",
-            url: `${siteConfig.url}/cases`,
-          }),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CollectionPage", name: "DaoYi proof system", url: `${siteConfig.url}/cases` }) }} />
     </main>
   );
 }

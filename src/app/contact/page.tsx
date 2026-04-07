@@ -8,28 +8,16 @@ export const metadata: Metadata = {
   description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Email 與 NDA 流程。",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "啟動道易專案｜2026 官網、AI、知識平台、DPP",
+    title: "啟動道易專案",
     description: "把第一次接洽設計成真正能往前走的 decision flow。",
     url: `${siteConfig.url}/contact`,
   },
 };
 
 const startModes = [
-  {
-    label: "Quick Brief",
-    title: "已大致知道要談什麼，想快速拿到切入點。",
-    detail: "適合要重做官網、案例或 solution page 的團隊。",
-  },
-  {
-    label: "Email / NDA",
-    title: "專案偏敏感，想先低風險確認 fit。",
-    detail: "適合涉及採購、法遵、既有客戶資料或內部文件的團隊。",
-  },
-  {
-    label: "24h response",
-    title: "第一次回覆會先附具體下一步。",
-    detail: "不是只回收到，而是回覆切入方向、待補資料與建議流程。",
-  },
+  ["Quick Brief", "已大致知道要談什麼，想快速拿到切入點。"],
+  ["Email / NDA", "專案偏敏感，想先低風險確認 fit。"],
+  ["24h response", "第一次回覆會先附具體下一步。"],
 ];
 
 const checklist = [
@@ -55,11 +43,10 @@ export default function ContactPage() {
 
       <Section eyebrow="Start modes" title="三種起手方式，對應三種常見專案狀態。">
         <div className="card-grid three-up">
-          {startModes.map((item) => (
-            <article key={item.title} className="card decision-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
+          {startModes.map(([title, detail]) => (
+            <article key={title} className="card decision-card">
+              <span className="mini-label accent">{title}</span>
+              <p>{detail}</p>
             </article>
           ))}
         </div>
@@ -67,11 +54,7 @@ export default function ContactPage() {
 
       <Section eyebrow="Before you send" title="送出前，先想清楚這三件事，第一次對話會更有效。">
         <div className="feature-surface">
-          <ul className="bullet-list compact">
-            {checklist.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <ul className="bullet-list compact">{checklist.map((item) => <li key={item}>{item}</li>)}</ul>
         </div>
       </Section>
 

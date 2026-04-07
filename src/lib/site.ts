@@ -211,11 +211,11 @@ export const homepageMomentumCards = [
 ];
 
 export const navItems = [
-  { href: "/", label: "首頁" },
+  { href: "/", label: "首頁重建" },
   { href: "/about", label: "定位" },
-  { href: "/solutions", label: "能力架構" },
-  { href: "/cases", label: "案例證據" },
-  { href: "/contact", label: "啟動專案" },
+  { href: "/solutions", label: "方案" },
+  { href: "/cases", label: "證據" },
+  { href: "/contact", label: "啟動" },
 ];
 
 export const stats = [
@@ -242,7 +242,7 @@ export const homepageTrustStrip = [
 export const headerReassuranceSignals = [
   "重建思維，不走舊站微調",
   "24h 內回覆具體下一步",
-  "敏感專案可先 Email / NDA",
+  "Quick Brief / Email / NDA 都可",
 ];
 
 export const homepageShortlistScorecards = [
