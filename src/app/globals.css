@@ -277,6 +277,61 @@ a:hover {
   margin-top: 16px;
 }
 
+.hero-rebuild {
+  padding-top: 56px;
+}
+
+.hero-rebuild-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.hero-outcome-board,
+.rebuild-note-stack {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.hero-outcome-card,
+.rebuild-module-card {
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(93, 228, 215, 0.12);
+}
+
+.hero-rebuild-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.rebuild-module-grid {
+  align-items: stretch;
+}
+
+.rebuild-start-surface {
+  display: grid;
+  gap: 18px;
+}
+
+.inline-dual-cta,
+.contact-hero-actions,
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+@media (max-width: 980px) {
+  .hero-rebuild-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .hero-inline-proof-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
