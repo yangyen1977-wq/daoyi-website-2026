@@ -110,55 +110,24 @@ export const metadata: Metadata = {
     default: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
     template: `%s | ${siteConfig.shortName}`,
   },
-  description: "道易科技協助 B2B 品牌、製造業與研究型組織規劃 2026 官網改版、AI 導入、知識平台與 DPP / Traceability，把品牌主張、案例證據、資料流程、RWD / 手機轉換與 Contact 轉換整成同一套可交付系統。",
+  description: "道易科技以重新設計與重建思維，協助 B2B、科技、製造與研究型團隊，把品牌主張、案例證據、資料流程、RWD / 手機 CTA 與 Contact 轉換整成同一套可交付系統。",
   applicationName: siteConfig.name,
   referrer: "origin-when-cross-origin",
-  keywords: [
-    "道易科技",
-    "DaoYi Technology",
-    "AI 應用",
-    "知識平台",
-    "數位產品護照",
-    "DPP",
-    "數位人文",
-    "系統整合",
-    "品牌官網設計",
-    "B2B 官網改版",
-    "製造業官網改版",
-    "B2B SaaS 網站設計",
-    "DPP 顧問",
-    "AI 網站開發",
-  ],
+  keywords: ["道易科技", "DaoYi Technology", "B2B 官網改版", "AI 導入", "知識平台", "DPP", "數位產品護照"],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  alternates: {
-    canonical: "/",
-    languages: {
-      "zh-TW": "/",
-    },
-  },
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  alternates: { canonical: "/", languages: { "zh-TW": "/" } },
+  formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: "website",
     locale: "zh_TW",
     url: siteConfig.url,
     title: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
-    description: "給需要同時處理官網改版、案例證據、AI 導入與 DPP / Traceability 的 B2B 團隊：先看 shortlist 級品牌主張、已交付案例證據、RWD / 手機 CTA、24h 回覆承諾與低摩擦 contact 起點。",
+    description: "把舊站持續優化，改成重新設計與重建。",
     siteName: siteConfig.name,
     alternateLocale: ["zh_TW", "en_US"],
-    images: [
-      {
-        url: "/assets/daoyi-logo.png",
-        width: 512,
-        height: 512,
-        alt: `${siteConfig.name} logo`,
-      },
-    ],
+    images: [{ url: "/assets/daoyi-logo.png", width: 512, height: 512, alt: `${siteConfig.name} logo` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -169,33 +138,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
   category: "technology",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
-  other: {
-    "theme-color": "#08111f",
-    "apple-mobile-web-app-capable": "yes",
-    "mobile-web-app-capable": "yes",
-    "format-detection": "telephone=no",
-  },
+  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico", apple: "/favicon.ico" },
+  other: { "theme-color": "#08111f" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="zh-Hant">
       <body className={geistSans.variable}>
