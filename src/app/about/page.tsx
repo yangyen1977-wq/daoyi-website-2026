@@ -4,11 +4,11 @@ import { Section } from "@/components/section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "定位",
-  description: "道易科技 2026 定位：不是單純網站公司，而是能把複雜 B2B、AI、知識平台與 DPP 專案重建成成熟商用體驗的團隊。",
+  title: "品牌定位",
+  description: "道易科技 2026 品牌定位頁，說清楚為何我們不是一般網站公司，而是重建複雜 B2B 商業溝通系統的夥伴。",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "道易科技定位",
+    title: "道易科技品牌定位",
     description: "把品牌、證據、流程與轉換整成可成交的商用官網系統。",
     url: `${siteConfig.url}/about`,
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const positioningCards = [
   {
     title: "不是單純網站公司",
-    detail: "道易的價值，不在於會不會做頁面，而在於能不能把複雜能力變成買方願意往下談的商業敘事。",
+    detail: "道易的價值，不在於能不能做頁面，而在於能不能把複雜能力變成買方願意往下談的商業敘事。",
   },
   {
     title: "不是抽象策略顧問",
@@ -42,7 +42,7 @@ export default function AboutPage() {
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Positioning</span>
-          <h1>道易科技的定位，應該是一間能把複雜專案整理成成熟商用體驗的團隊。</h1>
+          <h1>道易科技的定位，是把複雜專案整理成成熟商用體驗的團隊。</h1>
           <p>這不是傳統「我們會網站、也會 AI」的並列式介紹，而是更高一層的品牌說法：道易擅長把品牌、資料、流程與對外溝通整成真的能成交、能推動專案的系統。</p>
         </div>
       </section>

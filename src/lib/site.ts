@@ -16,28 +16,28 @@ export const navItems = [
   { href: "/", label: "首頁" },
   { href: "/about", label: "品牌定位" },
   { href: "/solutions", label: "方案架構" },
-  { href: "/work", label: "案例系統" },
+  { href: "/work", label: "案例證據" },
   { href: "/contact", label: "啟動專案" },
 ];
 
 export const headerReassuranceSignals = [
-  "重建思維，不做舊站微調",
-  "24h 內回覆具體下一步",
-  "Quick Brief / Email / NDA 都可",
+  "重新設計與重建，不做舊站微調",
+  "首頁先做 shortlist 判斷",
+  "Quick Brief / Email / NDA 同時可開始",
 ];
 
 export const solutions = [
   {
     title: "Website Rebuild System",
-    description: "重做官網架構、首頁模組、案例證據與 Contact 轉換系統。",
+    description: "重做官網定位、首頁架構、案例證據與 contact flow，讓網站回到商務決策核心。",
   },
   {
-    title: "AI / Data Narrative",
-    description: "把 AI、流程、欄位與驗收節點翻成主管與買方都能理解的商業語言。",
+    title: "AI / Data Commercial Narrative",
+    description: "把 AI、資料、角色與 SOP 轉成主管、買方與合作方都看得懂的方案語言。",
   },
   {
-    title: "DPP / Knowledge Experience",
-    description: "把知識平台、資料透明與 DPP 體驗整理成可展示、可採購、可延伸的數位介面。",
+    title: "Knowledge / DPP Experience",
+    description: "把知識平台、透明資料與 DPP 體驗做成可展示、可採購、可延伸的成熟數位介面。",
   },
 ];
 
@@ -48,42 +48,42 @@ export const contactChannels = [
 ];
 
 export const quickBriefAssistPoints = [
-  "低摩擦 3 欄起手",
-  "24h 內收到建議切入點",
-  "敏感專案可轉 Email / NDA",
+  "低摩擦起手，不用先寫完整需求書",
+  "24h 內收到建議切入點與推薦 sprint",
+  "敏感專案可直接切換 Email / NDA 路徑",
 ];
 
 export const stats = [
-  { value: "24h", label: "Response" },
+  { value: "24h", label: "Response promise" },
   { value: "3 tracks", label: "Buying paths" },
-  { value: "5 pages", label: "Core sitemap" },
-  { value: "Mobile-first", label: "Conversion" },
+  { value: "5 pages", label: "Rebuilt sitemap" },
+  { value: "Proof-led", label: "Case structure" },
 ];
 
 export const heroClients = [
-  { name: "研究平台團隊", context: "Knowledge UX" },
-  { name: "製造品牌", context: "DPP / Traceability" },
-  { name: "科技公司", context: "B2B Website" },
-  { name: "跨域顧問團隊", context: "AI Narrative" },
+  { name: "研究與典藏平台團隊", context: "Knowledge UX" },
+  { name: "製造與品牌團隊", context: "DPP / Traceability" },
+  { name: "科技與 SaaS 公司", context: "B2B Website" },
+  { name: "跨部門流程專案", context: "AI / Workflow" },
 ];
 
 export const heroProofs = [
   { label: "首屏任務", value: "5 秒", description: "先看懂適不適合、做過什麼、怎麼開始" },
-  { label: "案例方式", value: "Proof-led", description: "先講問題、交付、結果，再展開細節" },
-  { label: "聯絡設計", value: "2 路徑", description: "Quick Brief 與 Email / NDA 同時可見" },
+  { label: "案例方式", value: "Proof-led", description: "先講情境、交付、結果，再展開細節" },
+  { label: "聯絡設計", value: "3 路徑", description: "Quick Brief、Email、NDA 同時可見" },
 ];
 
 export const heroQuickSignals = [
   { label: "適合案型", value: "B2B / 科技 / 製造 / 研究" },
-  { label: "本次重建", value: "品牌、架構、案例、轉換" },
+  { label: "本次重建", value: "定位、結構、案例、轉換" },
   { label: "起手方式", value: "Quick Brief / Email / NDA" },
 ];
 
 export const heroFitSignals = [
-  "舊站看起來能用，但無法支撐高品質詢問或提案說服",
+  "舊站看起來完整，但無法支撐高品質詢問、提案或 shortlist",
   "內部能力其實很強，對外卻說不清楚 AI、流程或資料價值",
   "案例很多，但還停留在作品集陳列，沒有形成信任證據",
-  "需要同時處理品牌、資訊架構、UI/UX 與轉換流程",
+  "需要一起處理品牌、資訊架構、UI/UX、案例與聯絡流程",
 ];
 
 export const heroContactLadder = [
@@ -100,6 +100,13 @@ export const heroContactLadder = [
     detail: "適合牽涉採購、敏感資料或需要先保密的專案。",
     cta: "先寄 Email",
     href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi 專案討論 / NDA")}`,
+  },
+  {
+    label: "Path 03",
+    title: "Sprint fit",
+    detail: "還不確定做多大時，先從首頁、案例或 solution framing sprint 開始。",
+    cta: "看啟動方式",
+    href: "/contact",
   },
 ];
 
@@ -134,23 +141,23 @@ export const homepageCompactCaseEvidence = [
 ];
 
 export const heroActionSignals = [
-  { step: "Step 1", metric: "5 分鐘", title: "送出 Quick Brief", detail: "先留下姓名、公司與這次焦點。" },
-  { step: "Step 2", metric: "24h", title: "收到建議切入點", detail: "直接回你適合從哪個 sprint 開始。" },
-  { step: "Step 3", metric: "30 分鐘", title: "對焦會議", detail: "聚焦目標頁面、案例與轉換阻力。" },
+  { step: "Step 1", metric: "5 分鐘", title: "送出 Quick Brief", detail: "先留下公司、現況與這次最想重建的部分。" },
+  { step: "Step 2", metric: "24h", title: "收到建議切入點", detail: "直接回你建議先做首頁、案例或 solution framing。" },
+  { step: "Step 3", metric: "30 分鐘", title: "對焦會議", detail: "聚焦目標頁面、證據與轉換阻力。" },
 ];
 
 export const heroPreviews = [
   {
     id: "rebuild",
     label: "Website rebuild",
-    metric: "Conversion first",
+    metric: "Decision flow",
     summary: "重做 sitemap、首頁訊息優先序、案例前置與 CTA 節奏。",
-    checklist: ["首頁 decision flow", "內頁分工", "Proof module", "Contact path"],
+    checklist: ["首頁 decision deck", "內頁分工", "Proof module", "Contact path"],
   },
   {
     id: "ai",
     label: "AI / Data",
-    metric: "Business framing",
+    metric: "Commercial framing",
     summary: "把模型、欄位、流程與 SOP 轉成買方聽得懂的交付。",
     checklist: ["角色流程", "欄位設計", "MVP 節點", "驗收說法"],
   },
@@ -177,8 +184,8 @@ export const caseSnapshots = [
     title: "把複雜內容重構成可檢索、可理解、可持續擴充的平台",
     summary: "重點不是頁面數，而是資訊架構與查找路徑是否支撐使用任務。",
     metrics: [
-      { label: "Focus", value: "IA", detail: "先釐清知識分類與查找場景" },
-      { label: "Output", value: "Platform narrative", detail: "讓平台角色與價值能被說清楚" },
+      { label: "Challenge", value: "內容密度高", detail: "先釐清知識分類與查找場景" },
+      { label: "Delivery", value: "IA + narrative", detail: "讓平台角色與價值能被快速理解" },
     ],
     highlights: ["重整內容階層", "建立搜尋 / 瀏覽雙路徑", "把案例寫成問題解法"],
     href: "/work",
@@ -190,8 +197,8 @@ export const caseSnapshots = [
     title: "把 AI 能力從炫技，改寫成真正可採購的流程方案",
     summary: "讓主管與執行團隊都知道系統怎麼接、怎麼驗收。",
     metrics: [
-      { label: "Focus", value: "Workflow", detail: "角色、資料、節點都要能對外說明" },
-      { label: "Output", value: "Buyer-ready", detail: "提案與網站說法同步" },
+      { label: "Challenge", value: "難以理解", detail: "外部聽得懂功能，卻聽不懂導入價值" },
+      { label: "Delivery", value: "Buyer-ready framing", detail: "角色、資料與節點都能對外說明" },
     ],
     highlights: ["整理 SOP 節點", "定義資料欄位", "把結果講成人話"],
     href: "/work",
@@ -203,8 +210,8 @@ export const caseSnapshots = [
     title: "把產品履歷與透明資料做成可信、可理解的介面",
     summary: "不只談法規，而是把資料展示、QR 體驗與供應鏈語境整合。",
     metrics: [
-      { label: "Focus", value: "Trust", detail: "先建立資料可信與理解門檻" },
-      { label: "Output", value: "Field blueprint", detail: "讓第一版可討論、可延伸" },
+      { label: "Challenge", value: "信任門檻高", detail: "先建立資料可信與理解門檻" },
+      { label: "Delivery", value: "Field blueprint", detail: "讓第一版可討論、可延伸" },
     ],
     highlights: ["欄位藍圖", "掃碼場景", "內外部說明頁"],
     href: "/work",
