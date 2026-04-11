@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { siteConfig } from "@/lib/site";
+import { contactFastFacts, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "啟動專案",
+  title: "啟動合作",
   description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Email 與 NDA 流程。",
   alternates: { canonical: "/contact" },
   openGraph: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const startModes = [
-  ["Quick Brief", "已大致知道要談什麼，想快速拿到切入點。"],
+  ["Quick Brief", "已大致知道方向，想快速拿到切入點。"],
   ["Email / NDA", "專案偏敏感，想先低風險確認 fit。"],
   ["24h response", "第一次回覆會先附具體下一步。"],
 ];
@@ -33,13 +33,26 @@ export default function ContactPage() {
         <div className="shell narrow">
           <span className="section-eyebrow">Start a Project</span>
           <h1>把第一次接洽設計得更清楚，專案就更容易開始。</h1>
-          <p>這一頁不只是聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的啟動方式。</p>
+          <p>這一頁不是只放聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的啟動方式。</p>
           <div className="contact-hero-actions">
             <a className="button-primary button-large" href="#quick-brief">直接送出 Quick Brief</a>
-            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi 2026 專案討論 / NDA")}`}>先用 Email / NDA 開始</a>
+            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi 2026 專案討論 / NDA")}`}>
+              先用 Email / NDA 開始
+            </a>
           </div>
         </div>
       </section>
+
+      <Section eyebrow="Fast facts" title="先知道回覆節奏與下一步，對話會更順。">
+        <div className="card-grid four-up">
+          {contactFastFacts.map((item) => (
+            <article key={item.label} className="card trust-card">
+              <span className="mini-label accent">{item.label}</span>
+              <h3>{item.value}</h3>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section eyebrow="Start modes" title="三種起手方式，對應三種常見專案狀態。">
         <div className="card-grid three-up">

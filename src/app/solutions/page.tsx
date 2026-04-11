@@ -1,43 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "方案架構",
-  description: "道易科技 2026 方案架構，將 B2B 官網重設、AI / 流程敘事、知識平台與 DPP 體驗重組成三條成熟商用方案。",
+  title: "解決方案",
+  description: "道易科技 2026 解決方案頁，把 B2B 官網重設、AI / 流程敘事、知識平台與 DPP 體驗重組成三條成熟商用方案。",
   alternates: { canonical: "/solutions" },
   openGraph: {
-    title: "道易科技方案架構",
+    title: "道易科技解決方案",
     description: "不是服務清單，而是三條能支撐商用官網與複雜專案溝通的解決方案主軸。",
     url: `${siteConfig.url}/solutions`,
   },
 };
 
-const tracks = [
-  {
-    label: "Track 01",
-    title: "B2B 官網重設與轉換系統",
-    detail: "針對品牌主張不清、案例證據偏弱、CTA 路徑鬆散的團隊，重做首頁、內頁與 contact flow。",
-    outputs: ["sitemap 重整", "首頁與內頁模組", "案例摘要框架", "CTA / contact path"],
-  },
-  {
-    label: "Track 02",
-    title: "AI 與資料流程的商業化敘事",
-    detail: "把模型、資料、角色與 SOP 說成買方與主管都能理解的方案，讓技術能力更容易被接受與採購。",
-    outputs: ["solution framing", "流程與欄位說明", "驗收節點", "對外說服內容"],
-  },
-  {
-    label: "Track 03",
-    title: "知識平台與 DPP 體驗設計",
-    detail: "面對大量內容、產品履歷、透明化與合規需求時，重做資訊架構與對外體驗。",
-    outputs: ["資訊架構", "搜尋 / 瀏覽路徑", "DPP / traceability 敘事", "對外展示模組"],
-  },
-];
-
 const buyingGuide = [
   ["如果你最在意詢問品質", "先從官網重設與案例證據系統開始。"],
-  ["如果你最在意 AI 能不能被理解", "先從 solution framing、流程與驗收節點開始。"],
+  ["如果你最在意 AI 能不能被理解", "先從 AI framing、流程與驗收節點開始。"],
   ["如果你最在意資料透明與合規", "先從 DPP / traceability 體驗與欄位藍圖開始。"],
 ];
 
@@ -47,21 +26,17 @@ export default function SolutionsPage() {
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Capabilities</span>
-          <h1>能力架構不是把服務排開，而是把不同買方情境導向正確的起手式。</h1>
-          <p>新的 solutions page 應該像 buying guide，幫訪客判斷自己該先從哪條路開始，而不是看完一串能力名詞還是不知道下一步。</p>
+          <h1>方案頁的任務不是列服務，而是幫買方找到正確起手式。</h1>
+          <p>這一頁像 buying guide, 讓訪客判斷自己該先從哪條路開始，而不是看完一串能力名詞後仍然不知道下一步。</p>
         </div>
       </section>
 
       <Section eyebrow="Core tracks" title="三條能力主軸，對應三種最常見的商用需求。">
         <div className="card-grid three-up">
-          {tracks.map((item) => (
+          {solutions.map((item) => (
             <article key={item.title} className="card trust-card">
-              <span className="mini-label accent">{item.label}</span>
               <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <ul className="bullet-list compact">
-                {item.outputs.map((output) => <li key={output}>{output}</li>)}
-              </ul>
+              <p>{item.description}</p>
             </article>
           ))}
         </div>
