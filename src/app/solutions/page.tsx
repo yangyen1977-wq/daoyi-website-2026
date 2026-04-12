@@ -4,11 +4,11 @@ import { Section } from "@/components/section";
 import { siteConfig, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "解決方案",
-  description: "道易科技 2026 解決方案頁，把 B2B 官網重設、AI / 流程敘事、知識平台與 DPP 體驗重組成三條成熟商用方案。",
+  title: "商用方案",
+  description: "道易科技 2026 商用方案頁，把 B2B 官網重建、AI / 流程敘事、知識平台與 DPP 體驗重組成三條成熟商用方案。",
   alternates: { canonical: "/solutions" },
   openGraph: {
-    title: "道易科技解決方案",
+    title: "道易科技商用方案",
     description: "不是服務清單，而是三條能支撐商用官網與複雜專案溝通的解決方案主軸。",
     url: `${siteConfig.url}/solutions`,
   },
@@ -20,6 +20,13 @@ const buyingGuide = [
   ["如果你最在意資料透明與合規", "先從 DPP / traceability 體驗與欄位藍圖開始。"],
 ];
 
+const deliverables = [
+  "重新定義品牌主張與 sitemap",
+  "重做首頁、方案頁、案例頁與 contact flow",
+  "把 AI / DPP / knowledge 內容翻成買方語言",
+  "建立可持續擴充的 evidence modules",
+];
+
 export default function SolutionsPage() {
   return (
     <main id="main-content">
@@ -27,7 +34,7 @@ export default function SolutionsPage() {
         <div className="shell narrow">
           <span className="section-eyebrow">Capabilities</span>
           <h1>方案頁的任務不是列服務，而是幫買方找到正確起手式。</h1>
-          <p>這一頁像 buying guide, 讓訪客判斷自己該先從哪條路開始，而不是看完一串能力名詞後仍然不知道下一步。</p>
+          <p>這一頁像 buying guide，讓訪客判斷自己該先從哪條路開始，而不是看完一串能力名詞後仍然不知道下一步。</p>
         </div>
       </section>
 
@@ -48,6 +55,16 @@ export default function SolutionsPage() {
             <article key={title} className="feature-surface">
               <h3>{title}</h3>
               <p>{detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Deliverables" title="這不是打包型服務清單，而是重建官網時會一起完成的核心交付。">
+        <div className="card-grid two-up">
+          {deliverables.map((item) => (
+            <article key={item} className="card rebuild-module-card">
+              <p>{item}</p>
             </article>
           ))}
         </div>

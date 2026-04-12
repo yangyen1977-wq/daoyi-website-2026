@@ -4,12 +4,12 @@ import { Section } from "@/components/section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "品牌策略",
-  description: "道易科技 2026 品牌策略頁，說清楚我們如何把複雜 B2B 能力重建成成熟商務網站。",
+  title: "品牌系統",
+  description: "道易科技 2026 品牌系統頁，說清楚我們如何把複雜 B2B 能力重建成成熟商務官網。",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "道易科技品牌策略",
-    description: "把品牌、證據、流程與轉換整成可成交的商用官網系統。",
+    title: "道易科技品牌系統",
+    description: "把品牌、證據、頁面角色與轉換路徑整成可成交的官網系統。",
     url: `${siteConfig.url}/about`,
   },
 };
@@ -21,7 +21,7 @@ const positioningCards = [
   },
   {
     title: "不是抽象顧問話術",
-    detail: "我們會把定位轉成 sitemap、模組、案例格式與 contact flow。",
+    detail: "我們會把定位直接轉成 sitemap、首頁模組、案例格式與 contact flow。",
   },
   {
     title: "是能處理複雜型 B2B 專案的數位夥伴",
@@ -36,6 +36,12 @@ const workingModel = [
   ["Convert", "把 Contact flow 做成真正的啟動入口。"],
 ];
 
+const researchTakeaways = [
+  "成熟 B2B 網站會先講 outcome、適用對象與風險控制，再談細節。",
+  "資訊架構清楚時，複雜服務反而更容易被理解與轉傳。",
+  "案例摘要如果先給決策訊號，採購與提案流程會順很多。",
+];
+
 export default function AboutPage() {
   return (
     <main id="main-content">
@@ -43,7 +49,7 @@ export default function AboutPage() {
         <div className="shell narrow">
           <span className="section-eyebrow">Positioning</span>
           <h1>我們把官網看成決策介面，不是公司簡介。這是整個重建的起點。</h1>
-          <p>道易科技的定位不是「我們也會網站、也會 AI」，而是把品牌、資料、流程與對外溝通整成能成交、能推動專案的系統。</p>
+          <p>道易科技不是「也會網站、也會 AI」的描述，而是把品牌、資料、流程與對外溝通整成能成交、能推動專案的系統。</p>
         </div>
       </section>
 
@@ -64,6 +70,16 @@ export default function AboutPage() {
             <article key={step} className="card process-card">
               <span className="step-index">{step}</span>
               <p>{detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Research takeaways" title="我們借鏡的是成熟 B2B / SaaS / 設計官網的共通規律。">
+        <div className="card-grid three-up">
+          {researchTakeaways.map((item) => (
+            <article key={item} className="card rebuild-module-card">
+              <p>{item}</p>
             </article>
           ))}
         </div>

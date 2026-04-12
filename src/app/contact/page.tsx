@@ -5,7 +5,7 @@ import { contactFastFacts, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "啟動合作",
-  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Email 與 NDA 流程。",
+  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Strategy Call 與 NDA 流程。",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "啟動道易專案",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 const startModes = [
   ["Quick Brief", "已大致知道方向，想快速拿到切入點。"],
+  ["Strategy Call", "需要一起對焦網站角色、sprint 範圍與 buying blockers。"],
   ["Email / NDA", "專案偏敏感，想先低風險確認 fit。"],
-  ["24h response", "第一次回覆會先附具體下一步。"],
 ];
 
 const checklist = [
