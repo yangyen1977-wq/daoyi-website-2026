@@ -10,13 +10,11 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const ctaHref = pathname === "/" ? "/#quick-brief" : "/contact";
-  const ctaLabel = pathname === "/" ? "啟動新官網" : "24h 內拿下一步";
+  const ctaLabel = pathname === "/" ? "啟動重建" : "24h 內拿下一步";
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth > 1100) {
-        setMenuOpen(false);
-      }
+      if (window.innerWidth > 1100) setMenuOpen(false);
     };
 
     window.addEventListener("resize", onResize);
@@ -33,7 +31,7 @@ export function SiteHeader() {
             </span>
             <span>
               <strong>{siteConfig.name}</strong>
-              <small>B2B Website / AI / DPP Experience</small>
+              <small>B2B Rebuild / AI Framing / Trust UX</small>
             </span>
           </Link>
 
@@ -61,15 +59,8 @@ export function SiteHeader() {
           <nav id="site-navigation" className="site-nav" aria-label="主要導覽">
             {navItems.map((item) => {
               const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
-
               return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={isActive ? "is-active" : undefined}
-                  aria-current={isActive ? "page" : undefined}
-                >
+                <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)} className={isActive ? "is-active" : undefined} aria-current={isActive ? "page" : undefined}>
                   {item.label}
                 </Link>
               );

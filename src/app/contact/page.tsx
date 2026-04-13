@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactFastFacts, siteConfig } from "@/lib/site";
+import { contactFastFacts, homepageContactProof, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "啟動合作",
+  title: "啟動專案",
   description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Strategy Call 與 NDA 流程。",
   alternates: { canonical: "/contact" },
   openGraph: {
@@ -49,6 +49,16 @@ export default function ContactPage() {
             <article key={item.label} className="card trust-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.value}</h3>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Proof" title="讓對話更快進入正題的原因，是先把期待說清楚。">
+        <div className="card-grid three-up">
+          {homepageContactProof.map((item) => (
+            <article key={item} className="card rebuild-module-card">
+              <p>{item}</p>
             </article>
           ))}
         </div>

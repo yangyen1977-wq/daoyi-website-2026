@@ -4,29 +4,20 @@ import { Section } from "@/components/section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "品牌系統",
-  description: "道易科技 2026 品牌系統頁，說清楚我們如何把複雜 B2B 能力重建成成熟商務官網。",
+  title: "品牌定位",
+  description: "道易科技 2026 品牌定位頁，說清楚我們如何把複雜型 B2B 能力重建成成熟商務官網。",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "道易科技品牌系統",
+    title: "道易科技品牌定位",
     description: "把品牌、證據、頁面角色與轉換路徑整成可成交的官網系統。",
     url: `${siteConfig.url}/about`,
   },
 };
 
 const positioningCards = [
-  {
-    title: "不是單純網站公司",
-    detail: "真正的工作不是做頁面，而是把複雜能力翻成買方願意往下談的商業敘事。",
-  },
-  {
-    title: "不是抽象顧問話術",
-    detail: "我們會把定位直接轉成 sitemap、首頁模組、案例格式與 contact flow。",
-  },
-  {
-    title: "是能處理複雜型 B2B 專案的數位夥伴",
-    detail: "特別適合品牌、資料、流程、合規與對外說明都很重要的案子。",
-  },
+  { title: "不是單純網站公司", detail: "真正的工作不是做頁面，而是把複雜能力翻成買方願意往下談的商業敘事。" },
+  { title: "不是抽象顧問話術", detail: "我們會把定位直接轉成 sitemap、首頁模組、案例格式與 contact flow。" },
+  { title: "是能處理複雜型 B2B 專案的數位夥伴", detail: "特別適合品牌、資料、流程、合規與對外說明都很重要的案子。" },
 ];
 
 const workingModel = [
@@ -48,7 +39,7 @@ export default function AboutPage() {
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Positioning</span>
-          <h1>我們把官網看成決策介面，不是公司簡介。這是整個重建的起點。</h1>
+          <h1>我們把官網看成決策介面，不是公司簡介。</h1>
           <p>道易科技不是「也會網站、也會 AI」的描述，而是把品牌、資料、流程與對外溝通整成能成交、能推動專案的系統。</p>
         </div>
       </section>
