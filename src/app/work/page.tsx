@@ -7,7 +7,7 @@ import { PersonaPlaybook } from "@/components/persona-playbook";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "案例系統",
+  title: "案例證據",
   description: "道易科技 2026 案例系統頁，不把案例當作品集，而是當成能支撐 shortlist、採購與提案決策的證據系統。",
   alternates: { canonical: "/work" },
 };
@@ -23,7 +23,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <Section eyebrow="Case structure" title="案例採用 context / delivery / proof / next 的重述方式。">
+      <Section eyebrow="Case structure" title="案例採用 context / delivery / proof / fit 的重述方式。">
         <CaseOverviewStats />
       </Section>
 

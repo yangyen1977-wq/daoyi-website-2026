@@ -4,11 +4,11 @@ import { QuickBriefForm } from "@/components/quick-brief-form";
 import { contactFastFacts, homepageContactProof, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "啟動專案",
+  title: "啟動重建",
   description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Strategy Call 與 NDA 流程。",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "啟動道易專案",
+    title: "啟動道易重建專案",
     description: "把第一次接洽設計成真正能往前走的 decision flow。",
     url: `${siteConfig.url}/contact`,
   },
@@ -36,9 +36,7 @@ export default function ContactPage() {
           <p>這一頁不是只放聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的啟動方式。</p>
           <div className="contact-hero-actions">
             <a className="button-primary button-large" href="#quick-brief">直接送出 Quick Brief</a>
-            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi 2026 專案討論 / NDA")}`}>
-              先用 Email / NDA 開始
-            </a>
+            <a className="button-secondary button-large" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi 2026 專案討論 / NDA")}`}>先用 Email / NDA 開始</a>
           </div>
         </div>
       </section>

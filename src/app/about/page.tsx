@@ -4,11 +4,11 @@ import { Section } from "@/components/section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "品牌定位",
-  description: "道易科技 2026 品牌定位頁，說清楚我們如何把複雜型 B2B 能力重建成成熟商務官網。",
+  title: "定位系統",
+  description: "道易科技 2026 定位頁，說清楚我們如何把複雜型 B2B 能力重建成成熟商務官網。",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "道易科技品牌定位",
+    title: "道易科技定位系統",
     description: "把品牌、證據、頁面角色與轉換路徑整成可成交的官網系統。",
     url: `${siteConfig.url}/about`,
   },
@@ -84,7 +84,7 @@ export default function AboutPage() {
           </div>
           <div>
             <h3>最快的起手方式</h3>
-            <p><Link href="/contact" className="button-primary inline-button">前往啟動專案</Link></p>
+            <p><Link href="/contact" className="button-primary inline-button">前往啟動重建</Link></p>
           </div>
         </div>
       </Section>
