@@ -4,8 +4,8 @@ import { QuickBriefForm } from "@/components/quick-brief-form";
 import { contactFastFacts, homepageContactProof, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "啟動重建",
-  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 DPP 專案。支援 Quick Brief、Strategy Call 與 NDA 流程。",
+  title: "啟動方式",
+  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 trust 專案。支援 Quick Brief、Strategy Call 與 NDA 流程。",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "啟動道易重建專案",
@@ -22,7 +22,7 @@ const startModes = [
 
 const checklist = [
   "目前網站或專案最大的溝通阻力是什麼",
-  "是品牌訊息、案例、AI 敘事，還是 DPP / 資料透明出了問題",
+  "是品牌訊息、案例、AI 敘事，還是 trust / 資料透明出了問題",
   "目前想先做短 sprint，還是已準備進入完整重建",
 ];
 

@@ -4,12 +4,12 @@ import { Section } from "@/components/section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "定位系統",
-  description: "道易科技 2026 定位頁，說清楚我們如何把複雜型 B2B 能力重建成成熟商務官網。",
+  title: "適合對象",
+  description: "道易科技 2026 適合對象頁，說清楚我們如何幫高複雜度 B2B 團隊重建更成熟的商務官網。",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "道易科技定位系統",
-    description: "把品牌、證據、頁面角色與轉換路徑整成可成交的官網系統。",
+    title: "道易科技適合對象",
+    description: "不是所有網站問題都要靠優化，很多案子其實需要重新設計與重建。",
     url: `${siteConfig.url}/about`,
   },
 };
@@ -33,6 +33,12 @@ const researchTakeaways = [
   "案例摘要如果先給決策訊號，採購與提案流程會順很多。",
 ];
 
+const fitSignals = [
+  "你們有實力，但外部看起來還像資訊倉庫，不像商務入口。",
+  "需要讓主管、業務、採購都看得懂，而不只是行銷部門覺得好看。",
+  "網站要承擔 shortlist、提案、信任建立與啟動對話。",
+];
+
 export default function AboutPage() {
   return (
     <main id="main-content">
@@ -50,6 +56,16 @@ export default function AboutPage() {
             <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Fit check" title="如果你有這些狀況，通常就不是微調能解決。">
+        <div className="card-grid three-up">
+          {fitSignals.map((item) => (
+            <article key={item} className="card rebuild-module-card">
+              <p>{item}</p>
             </article>
           ))}
         </div>

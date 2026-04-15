@@ -7,7 +7,7 @@ import { PersonaPlaybook } from "@/components/persona-playbook";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "案例證據",
+  title: "案例系統",
   description: "道易科技 2026 案例系統頁，不把案例當作品集，而是當成能支撐 shortlist、採購與提案決策的證據系統。",
   alternates: { canonical: "/work" },
 };
@@ -52,7 +52,7 @@ export default function WorkPage() {
         </div>
       </Section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CollectionPage", name: "DaoYi work system", url: `${siteConfig.url}/work` }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "CollectionPage", name: "DaoYi case system", url: `${siteConfig.url}/work` }) }} />
     </main>
   );
 }

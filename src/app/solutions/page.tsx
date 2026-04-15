@@ -4,12 +4,12 @@ import { Section } from "@/components/section";
 import { siteConfig, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "方案架構",
-  description: "道易科技 2026 方案頁，把 B2B 官網重建、AI 敘事、知識平台與 DPP 體驗重組成三條成熟商用路徑。",
+  title: "重建路徑",
+  description: "道易科技 2026 重建路徑頁，把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
   alternates: { canonical: "/solutions" },
   openGraph: {
-    title: "道易科技方案架構",
-    description: "不是服務清單，而是三條能支撐商用官網與複雜專案溝通的方案主軸。",
+    title: "道易科技重建路徑",
+    description: "不是服務清單，而是三條能支撐商用官網與複雜專案溝通的起手式。",
     url: `${siteConfig.url}/solutions`,
   },
 };
@@ -17,14 +17,20 @@ export const metadata: Metadata = {
 const buyingGuide = [
   ["如果你最在意詢問品質", "先從官網重設與案例證據系統開始。"],
   ["如果你最在意 AI 能不能被理解", "先從 AI framing、流程與驗收節點開始。"],
-  ["如果你最在意資料透明與合規", "先從 DPP / traceability 體驗與欄位藍圖開始。"],
+  ["如果你最在意資料透明與合規", "先從 trust UX 與欄位藍圖開始。"],
 ];
 
 const deliverables = [
   "重新定義品牌主張與 sitemap",
   "重做首頁、方案頁、案例頁與 contact flow",
-  "把 AI / DPP / knowledge 內容翻成買方語言",
+  "把 AI / trust / knowledge 內容翻成買方語言",
   "建立可持續擴充的 evidence modules",
+];
+
+const sprintOptions = [
+  ["首頁重構 sprint", "適合先把首屏主張、證據與 CTA 重新排版。"],
+  ["案例系統 sprint", "適合把作品牆改成能支援 shortlist 的 evidence assets。"],
+  ["Offer framing sprint", "適合把 AI、顧問能力或複雜服務說得更成熟。"],
 ];
 
 export default function SolutionsPage() {
@@ -75,9 +81,9 @@ export default function SolutionsPage() {
           <div>
             <h3>適合先做的短 sprint</h3>
             <ul className="bullet-list compact">
-              <li>首頁重構 sprint</li>
-              <li>案例證據系統 sprint</li>
-              <li>AI / DPP solution framing sprint</li>
+              {sprintOptions.map(([title, detail]) => (
+                <li key={title}><strong>{title}</strong>，{detail}</li>
+              ))}
             </ul>
           </div>
           <div>
