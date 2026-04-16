@@ -4,11 +4,11 @@ import { Section } from "@/components/section";
 import { siteConfig, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "重建路徑",
-  description: "道易科技 2026 重建路徑頁，把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
+  title: "重建藍圖",
+  description: "道易科技 2026 重建藍圖頁，把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
   alternates: { canonical: "/solutions" },
   openGraph: {
-    title: "道易科技重建路徑",
+    title: "道易科技重建藍圖",
     description: "不是服務清單，而是三條能支撐商用官網與複雜專案溝通的起手式。",
     url: `${siteConfig.url}/solutions`,
   },
