@@ -1,36 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import { siteConfig, solutions } from "@/lib/site";
+import { siteConfig, solutionTracks, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "重建藍圖",
   description: "道易科技 2026 重建藍圖頁，把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
   alternates: { canonical: "/solutions" },
-  openGraph: {
-    title: "道易科技重建藍圖",
-    description: "不是服務清單，而是三條能支撐商用官網與複雜專案溝通的起手式。",
-    url: `${siteConfig.url}/solutions`,
-  },
 };
 
 const buyingGuide = [
   ["如果你最在意詢問品質", "先從官網重設與案例證據系統開始。"],
   ["如果你最在意 AI 能不能被理解", "先從 AI framing、流程與驗收節點開始。"],
   ["如果你最在意資料透明與合規", "先從 trust UX 與欄位藍圖開始。"],
-];
-
-const deliverables = [
-  "重新定義品牌主張與 sitemap",
-  "重做首頁、方案頁、案例頁與 contact flow",
-  "把 AI / trust / knowledge 內容翻成買方語言",
-  "建立可持續擴充的 evidence modules",
-];
-
-const sprintOptions = [
-  ["首頁重構 sprint", "適合先把首屏主張、證據與 CTA 重新排版。"],
-  ["案例系統 sprint", "適合把作品牆改成能支援 shortlist 的 evidence assets。"],
-  ["Offer framing sprint", "適合把 AI、顧問能力或複雜服務說得更成熟。"],
 ];
 
 export default function SolutionsPage() {
@@ -66,11 +48,15 @@ export default function SolutionsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Deliverables" title="這不是打包型服務清單，而是重建官網時會一起完成的核心交付。">
-        <div className="card-grid two-up">
-          {deliverables.map((item) => (
-            <article key={item} className="card rebuild-module-card">
-              <p>{item}</p>
+      <Section eyebrow="Delivery model" title="三個 sprint 路徑，對應三種常見重建切入點。">
+        <div className="card-grid three-up">
+          {solutionTracks.map((item) => (
+            <article key={item.title} className="card rebuild-module-card">
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+              <ul className="bullet-list compact">
+                {item.outputs.map((output) => <li key={output}>{output}</li>)}
+              </ul>
             </article>
           ))}
         </div>
@@ -80,11 +66,7 @@ export default function SolutionsPage() {
         <div className="feature-surface two-column">
           <div>
             <h3>適合先做的短 sprint</h3>
-            <ul className="bullet-list compact">
-              {sprintOptions.map(([title, detail]) => (
-                <li key={title}><strong>{title}</strong>，{detail}</li>
-              ))}
-            </ul>
+            <p>先處理最卡成交的那個模組，通常是首頁、案例系統，或方案頁 framing。</p>
           </div>
           <div>
             <h3>下一步</h3>
@@ -92,6 +74,8 @@ export default function SolutionsPage() {
           </div>
         </div>
       </Section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "DaoYi rebuild tracks", url: `${siteConfig.url}/solutions` }) }} />
     </main>
   );
 }

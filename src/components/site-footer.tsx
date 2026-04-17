@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { contactChannels, navItems, siteConfig } from "@/lib/site";
+import { navItems, siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -33,14 +33,9 @@ export function SiteFooter() {
         <div>
           <h3>聯絡資訊</h3>
           <ul className="footer-list">
-            {contactChannels.map((item) => (
-              <li key={item.label}>
-                <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
-                </a>
-              </li>
-            ))}
+            <li><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></li>
+            <li><a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a></li>
+            <li><span>{siteConfig.location}</span></li>
           </ul>
         </div>
       </div>

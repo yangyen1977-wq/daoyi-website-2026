@@ -5,13 +5,8 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "適合對象",
-  description: "道易科技 2026 適合對象頁，說清楚我們如何幫高複雜度 B2B 團隊重建更成熟的商務官網。",
+  description: "道易科技 2026 適合對象頁，說清楚哪些高複雜度 B2B 團隊最適合用重新設計與重建方式做官網。",
   alternates: { canonical: "/about" },
-  openGraph: {
-    title: "道易科技適合對象",
-    description: "不是所有網站問題都要靠優化，很多案子其實需要重新設計與重建。",
-    url: `${siteConfig.url}/about`,
-  },
 };
 
 const positioningCards = [
@@ -25,12 +20,6 @@ const workingModel = [
   ["Restructure", "重做 sitemap、首頁與內頁模組。"],
   ["Prove", "把案例、輸出與方法寫成可複述的 proof。"],
   ["Convert", "把 Contact flow 做成真正的啟動入口。"],
-];
-
-const researchTakeaways = [
-  "成熟 B2B 網站會先講 outcome、適用對象與風險控制，再談細節。",
-  "資訊架構清楚時，複雜服務反而更容易被理解與轉傳。",
-  "案例摘要如果先給決策訊號，採購與提案流程會順很多。",
 ];
 
 const fitSignals = [
@@ -77,16 +66,6 @@ export default function AboutPage() {
             <article key={step} className="card process-card">
               <span className="step-index">{step}</span>
               <p>{detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Research takeaways" title="我們借鏡的是成熟 B2B / SaaS / 設計官網的共通規律。">
-        <div className="card-grid three-up">
-          {researchTakeaways.map((item) => (
-            <article key={item} className="card rebuild-module-card">
-              <p>{item}</p>
             </article>
           ))}
         </div>
