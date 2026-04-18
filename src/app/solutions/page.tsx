@@ -5,14 +5,14 @@ import { siteConfig, solutionTracks, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "重建藍圖",
-  description: "道易科技 2026 重建藍圖頁，把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
+  description: "把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
   alternates: { canonical: "/solutions" },
 };
 
 const buyingGuide = [
-  ["如果你最在意詢問品質", "先從官網重設與案例證據系統開始。"],
-  ["如果你最在意 AI 能不能被理解", "先從 AI framing、流程與驗收節點開始。"],
-  ["如果你最在意資料透明與合規", "先從 trust UX 與欄位藍圖開始。"],
+  ["詢問品質最重要", "先從官網重設與案例證據系統開始。"],
+  ["AI 能力需要被理解", "先從 capability framing、流程與驗收節點開始。"],
+  ["資料透明與合規優先", "先從 trust UX 與欄位藍圖開始。"],
 ];
 
 export default function SolutionsPage() {

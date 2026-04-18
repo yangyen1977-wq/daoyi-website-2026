@@ -5,7 +5,7 @@ import { contactFastFacts, contactModes, contactChecklist, homepageContactProof,
 
 export const metadata: Metadata = {
   title: "啟動方式",
-  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 trust 專案。支援 Quick Brief、Decision Workshop 與 NDA 流程。",
+  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 trust 專案。",
   alternates: { canonical: "/contact" },
 };
 

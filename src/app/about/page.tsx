@@ -5,27 +5,37 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "適合對象",
-  description: "道易科技 2026 適合對象頁，說清楚哪些高複雜度 B2B 團隊最適合用重新設計與重建方式做官網。",
+  description: "哪些 B2B、科技、製造與知識型團隊最適合用重新設計與重建方式做官網。",
   alternates: { canonical: "/about" },
 };
 
-const positioningCards = [
-  { title: "不是單純網站公司", detail: "真正的工作不是做頁面，而是把複雜能力翻成買方願意往下談的商業敘事。" },
-  { title: "不是抽象顧問話術", detail: "我們會把定位直接轉成 sitemap、首頁模組、案例格式與 contact flow。" },
-  { title: "是能處理複雜型 B2B 專案的數位夥伴", detail: "特別適合品牌、資料、流程、合規與對外說明都很重要的案子。" },
+const fitCards = [
+  {
+    title: "能力很多，但網站像資訊倉庫",
+    detail: "買方看完還是不知道你真正賣的是什麼，也不知道該不該往下談。",
+  },
+  {
+    title: "案例有料，但不能直接轉傳",
+    detail: "主管、業務與採購都需要能快速理解的 proof format，不只是作品圖。",
+  },
+  {
+    title: "內部成熟度高，對外敘事卻還停留在舊版本",
+    detail: "當商業階段變了，網站也要跟著重定 category、頁面角色與 CTA。",
+  },
 ];
 
-const workingModel = [
-  ["Reframe", "先重定義市場定位、買方問題與網站角色。"],
-  ["Restructure", "重做 sitemap、首頁與內頁模組。"],
-  ["Prove", "把案例、輸出與方法寫成可複述的 proof。"],
-  ["Convert", "把 Contact flow 做成真正的啟動入口。"],
+const personas = [
+  ["B2B SaaS / 平台", "把產品能力、導入方式與 enterprise 信任訊號講成熟。"],
+  ["製造 / 工業 / 出口", "把驗證、供應鏈與合作方式整理成買方易懂的說服路徑。"],
+  ["AI / 顧問 / 自動化", "把抽象能力翻成可提案、可採購、可驗收的 framing。"],
+  ["研究 / 永續 / 知識平台", "在高內容密度下維持清晰、權威與可引用。"],
 ];
 
-const fitSignals = [
-  "你們有實力，但外部看起來還像資訊倉庫，不像商務入口。",
-  "需要讓主管、業務、採購都看得懂，而不只是行銷部門覺得好看。",
-  "網站要承擔 shortlist、提案、信任建立與啟動對話。",
+const operatingModel = [
+  { step: "01", title: "Reframe", detail: "先重定義市場定位、買方問題與官網角色。" },
+  { step: "02", title: "Restructure", detail: "重做 sitemap、首頁模組與內頁任務。" },
+  { step: "03", title: "Prove", detail: "把案例與 proof 寫成可複述的商務材料。" },
+  { step: "04", title: "Convert", detail: "把 Contact flow 做成低摩擦啟動入口。" },
 ];
 
 export default function AboutPage() {
@@ -35,13 +45,13 @@ export default function AboutPage() {
         <div className="shell narrow">
           <span className="section-eyebrow">Positioning</span>
           <h1>我們把官網看成決策介面，不是公司簡介。</h1>
-          <p>道易科技不是「也會網站、也會 AI」的描述，而是把品牌、資料、流程與對外溝通整成能成交、能推動專案的系統。</p>
+          <p>道易科技協助高複雜度團隊，把品牌、案例、資料與轉換路徑整理成能成交的商務前台。</p>
         </div>
       </section>
 
-      <Section eyebrow="Brand position" title="新的品牌主張，要讓對的人一眼知道這是不是自己的案子。">
+      <Section eyebrow="Fit signals" title="如果你有這些狀況，通常就不是微調能解決。">
         <div className="card-grid three-up">
-          {positioningCards.map((item) => (
+          {fitCards.map((item) => (
             <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
@@ -50,32 +60,34 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Fit check" title="如果你有這些狀況，通常就不是微調能解決。">
-        <div className="card-grid three-up">
-          {fitSignals.map((item) => (
-            <article key={item} className="card rebuild-module-card">
-              <p>{item}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Working model" title="2026 版本的合作方式，核心是重設，不是修補。">
+      <Section eyebrow="Who it fits" title="這些團隊最適合用重建方式，而不是持續優化。">
         <div className="card-grid four-up">
-          {workingModel.map(([step, detail]) => (
-            <article key={step} className="card process-card">
-              <span className="step-index">{step}</span>
+          {personas.map(([title, detail]) => (
+            <article key={title} className="card rebuild-module-card">
+              <h3>{title}</h3>
               <p>{detail}</p>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Why now" title="如果你要重做官網、案例系統，或把 AI / DPP 講得更成熟，現在就值得開始。">
+      <Section eyebrow="Working model" title="2026 版本的合作方式，核心是先重設，再落地。">
+        <div className="card-grid four-up">
+          {operatingModel.map((item) => (
+            <article key={item.step} className="card process-card">
+              <span className="step-index">{item.step}</span>
+              <strong>{item.title}</strong>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Why now" title="如果網站已經跟不上業務階段，現在就值得開始。">
         <div className="feature-surface two-column">
           <div>
             <h3>適合現在談的情況</h3>
-            <p>網站已經跟不上業務階段，或內部能力很強，但對外說法還不夠成熟、可信、好理解。</p>
+            <p>你已經有能力與案例，但外部敘事還不夠成熟、可信、好理解。</p>
           </div>
           <div>
             <h3>最快的起手方式</h3>
