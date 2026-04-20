@@ -31,7 +31,7 @@ export function SiteHeader() {
             </span>
             <span>
               <strong>{siteConfig.name}</strong>
-              <small>B2B Rebuild / AI Framing / Trust UX</small>
+              <small>Revenue Website / Offer System / Trust UX</small>
             </span>
           </Link>
 

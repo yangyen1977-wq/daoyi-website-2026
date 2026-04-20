@@ -7,7 +7,7 @@ import { PersonaPlaybook } from "@/components/persona-playbook";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "案例系統",
+  title: "證據系統",
   description: "把案例當成能支撐 shortlist、採購與提案決策的證據系統。",
   alternates: { canonical: "/work" },
 };

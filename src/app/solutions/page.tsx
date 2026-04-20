@@ -4,7 +4,7 @@ import { Section } from "@/components/section";
 import { siteConfig, solutionTracks, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "重建藍圖",
+  title: "重建方案",
   description: "把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
   alternates: { canonical: "/solutions" },
 };

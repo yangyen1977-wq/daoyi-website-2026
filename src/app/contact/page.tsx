@@ -4,7 +4,7 @@ import { QuickBriefForm } from "@/components/quick-brief-form";
 import { contactFastFacts, contactModes, contactChecklist, homepageContactProof, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "啟動方式",
+  title: "啟動專案",
   description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 trust 專案。",
   alternates: { canonical: "/contact" },
 };

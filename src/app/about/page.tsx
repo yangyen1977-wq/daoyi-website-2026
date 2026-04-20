@@ -4,7 +4,7 @@ import { Section } from "@/components/section";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "適合對象",
+  title: "買方情境",
   description: "哪些 B2B、科技、製造與知識型團隊最適合用重新設計與重建方式做官網。",
   alternates: { canonical: "/about" },
 };
@@ -19,7 +19,7 @@ const fitCards = [
     detail: "主管、業務與採購都需要能快速理解的 proof format，不只是作品圖。",
   },
   {
-    title: "內部成熟度高，對外敘事卻還停留在舊版本",
+    title: "內部成熟度高，對外敘事卻還停在舊版本",
     detail: "當商業階段變了，網站也要跟著重定 category、頁面角色與 CTA。",
   },
 ];
