@@ -5,7 +5,7 @@ import { contactFastFacts, contactModes, contactChecklist, homepageContactProof,
 
 export const metadata: Metadata = {
   title: "啟動專案",
-  description: "用更低摩擦的方式，和道易科技啟動 2026 官網、AI、知識平台或 trust 專案。",
+  description: "用更低摩擦但更成熟的方式，和道易科技啟動 enterprise website rebuild、solution 或 trust 專案。",
   alternates: { canonical: "/contact" },
 };
 
@@ -15,8 +15,8 @@ export default function ContactPage() {
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Start a Project</span>
-          <h1>把第一次接洽設計得更清楚，專案就更容易開始。</h1>
-          <p>這一頁不是只放聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的啟動方式。</p>
+          <h1>把第一次接洽設計成有節奏的啟動系統，專案就更容易開始。</h1>
+          <p>這一頁不是只放聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的啟動方式與回覆預期。</p>
         </div>
       </section>
 

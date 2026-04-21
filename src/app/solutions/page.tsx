@@ -5,7 +5,7 @@ import { siteConfig, solutionTracks, solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "重建方案",
-  description: "把 B2B 官網、AI 敘事、知識平台與 trust UX 重組成三條成熟商用路徑。",
+  description: "把 B2B 官網、solution 包裝、知識平台與 trust UX 重組成三條成熟商用路徑。",
   alternates: { canonical: "/solutions" },
 };
 
@@ -21,8 +21,8 @@ export default function SolutionsPage() {
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Capabilities</span>
-          <h1>方案頁的任務不是列服務，而是幫買方找到正確起手式。</h1>
-          <p>這一頁像 buying guide，讓訪客判斷自己該先從哪條路開始，而不是看完一串能力名詞後仍然不知道下一步。</p>
+          <h1>方案頁的任務不是列能力，而是把複雜服務包成可購買的路徑。</h1>
+          <p>這一頁像 enterprise buying guide，讓訪客判斷自己該先從哪條路開始，而不是看完能力名詞後仍不知道下一步。</p>
         </div>
       </section>
 

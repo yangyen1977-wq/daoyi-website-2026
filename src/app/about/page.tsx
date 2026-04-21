@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "買方情境",
-  description: "哪些 B2B、科技、製造與知識型團隊最適合用重新設計與重建方式做官網。",
+  description: "哪些 B2B、科技、製造與知識型團隊，最需要用 enterprise rebuild 思維重做官網。",
   alternates: { canonical: "/about" },
 };
 
@@ -44,8 +44,8 @@ export default function AboutPage() {
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Positioning</span>
-          <h1>我們把官網看成決策介面，不是公司簡介。</h1>
-          <p>道易科技協助高複雜度團隊，把品牌、案例、資料與轉換路徑整理成能成交的商務前台。</p>
+          <h1>我們把官網看成 enterprise decision interface，不是公司簡介。</h1>
+          <p>道易科技協助高複雜度團隊，把品牌、方案、案例、資料與轉換路徑重建成能支撐 shortlist、提案與採購前進的商務前台。</p>
         </div>
       </section>
 

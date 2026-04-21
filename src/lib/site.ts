@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技專注替 B2B、科技、製造、AI 與高知識密度團隊，從零重建更成熟的 revenue website system。不是修舊站，而是重做 category framing、offer packaging、proof architecture、page choreography 與 conversion path，讓官網真的能支撐 shortlist、提案、採購與成交前進。",
+    "道易科技替 B2B、科技、製造、AI 與高知識密度團隊，重新設計並重建企業級 revenue website system。核心不是延續舊站，而是重做 positioning、solution architecture、evidence system、buyer journey 與 conversion operations，讓官網真正成為商務成長前台。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把官網重建成 buying committee 看得懂、內部拿得去賣、商務對話接得上的 revenue website system.",
+  heroTitle: "把官網重建成能服務品牌敘事、商務開發、shortlist 與採購決策的 enterprise revenue website system.",
   heroDescription:
-    "2026 版不是延續舊站優化思維，而是直接重做 category、訊息、頁面角色、證據系統與啟動節奏，讓網站像成熟商用前台，而不是資訊倉庫。",
+    "這不是舊站優化案，而是重新設計與重建案。道易直接重做定位、頁面架構、案例證據、solution 包裝與 contact flow，讓網站從介紹頁升級成真正的商務作戰前台。",
 };
 
 export const navItems = [
@@ -21,23 +21,23 @@ export const navItems = [
 ];
 
 export const headerReassuranceSignals = [
-  "用重建，不用舊站修補思維",
-  "品牌、IA、offer、proof、CTA 一起重做",
-  "Quick Brief / Workshop / NDA 三層入口",
+  "重建 positioning、IA、proof 與 CTA，不做表面修補",
+  "首頁, 方案頁, 案例頁, Contact 各自負責明確決策任務",
+  "Quick Brief / Strategy Call / NDA 三層啟動入口",
 ];
 
 export const solutions = [
   {
     title: "Revenue Website Rebuild",
-    description: "把首頁、導覽、核心內頁與 CTA choreography 重做成真正支撐 buyer fit、shortlisting 與商務前進的網站系統。",
+    description: "從首頁到關鍵內頁一起重構，讓網站先完成 buyer fit 判斷、價值理解、proof 建立與下一步啟動。",
   },
   {
-    title: "Offer Packaging System",
-    description: "把複雜的 AI、平台、製造、顧問或資料能力，重組成 buying committee 看得懂、業務說得清、採購接得住的購買語言。",
+    title: "Solution Packaging System",
+    description: "把複雜能力重組成清楚 solution narrative、delivery model、風險邊界與驗收方式，讓 buying committee 更容易形成共識。",
   },
   {
-    title: "Evidence and Trust Architecture",
-    description: "把案例、方法、驗證、流程與內容資產整理成 shortlist-ready 的證據系統，不再只是漂亮展示。",
+    title: "Evidence and Trust System",
+    description: "把案例、流程、驗證與內容資產設計成可轉傳、可引用、可支撐 shortlist 與採購的證據系統。",
   },
 ];
 
@@ -68,15 +68,15 @@ export const heroClients = [
 ];
 
 export const heroProofs = [
-  { label: "Category", value: "Outcome before intro", description: "先講你幫誰創造什麼商業前進，不先掉進公司自介。" },
-  { label: "UX logic", value: "One page, one decision", description: "每一頁只負責一種判斷，不讓資訊互相稀釋。" },
-  { label: "Conversion", value: "Friction-shaped starts", description: "不同專案成熟度，給不同進入方式與資訊負擔。" },
+  { label: "Positioning", value: "Outcome before company intro", description: "先讓訪客理解商業價值與適合對象，再補公司背景。" },
+  { label: "Page logic", value: "One page, one business job", description: "首頁、方案頁、案例頁與 Contact 各自完成不同決策任務。" },
+  { label: "Conversion", value: "Low-friction entry ladder", description: "依專案成熟度安排 Brief、Call、NDA，不讓首次接觸卡住。" },
 ];
 
 export const heroQuickSignals = [
-  { label: "適合客群", value: "B2B / 科技 / 製造 / AI / 高知識密度團隊" },
-  { label: "重建範圍", value: "Category、offer、proof、頁面、CTA 系統" },
-  { label: "啟動方式", value: "Quick Brief / Workshop / NDA" },
+  { label: "適合客群", value: "B2B / SaaS / 製造 / AI / 研究與知識型團隊" },
+  { label: "重建範圍", value: "Positioning、solution packaging、evidence、頁面架構、CTA" },
+  { label: "啟動方式", value: "Quick Brief / Strategy Call / NDA" },
 ];
 
 export const heroFitSignals = [
@@ -87,15 +87,15 @@ export const heroFitSignals = [
 ];
 
 export const heroContactLadder = [
-  { label: "Path 01", title: "Quick Brief", detail: "適合已知道方向，想先拿到 category 切口、頁面優先序與建議 sprint。", cta: "3 分鐘開始", href: "/#quick-brief" },
-  { label: "Path 02", title: "Decision Workshop", detail: "適合已有一定共識，需要一起釐清 buyer、proof gap 與重建順序。", cta: "看工作坊", href: "/contact" },
-  { label: "Path 03", title: "Email / NDA", detail: "適合涉及保密、採購或法遵，想先低風險確認 fit 與合作邊界。", cta: "先寄 Email", href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi Revenue Website Rebuild / NDA")}` },
+  { label: "Path 01", title: "Quick Brief", detail: "適合已知道問題方向，想先拿到定位切口、頁面優先序與建議 sprint。", cta: "3 分鐘開始", href: "/#quick-brief" },
+  { label: "Path 02", title: "Strategy Call", detail: "適合已進入內部討論，需要一起對齊 buyer、solution、proof gap 與 launch priority。", cta: "看啟動方式", href: "/contact" },
+  { label: "Path 03", title: "Email / NDA", detail: "適合涉及保密、投標、採購或法遵，先低風險確認 fit 與合作邊界。", cta: "先寄 Email", href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi Enterprise Website Rebuild / NDA")}` },
 ];
 
 export const homepageContactProof = [
-  "第一次回覆就先指出最該重做的是定位、首頁、方案頁、案例系統，還是 contact friction。",
-  "會直接建議先從哪個 sprint 進場，而不是先丟一串泛泛流程。",
-  "敏感專案可直接切 NDA，不必在第一輪就公開全部內部資訊。",
+  "第一次回覆就先指出最該重建的是 positioning、首頁、solution page、evidence system，還是 contact friction。",
+  "會直接建議起手 sprint、頁面優先序與內部需要先對齊的決策問題。",
+  "敏感專案可直接切 NDA，不必在第一輪就揭露全部商務與內部資訊。",
 ];
 
 export const contactFastFacts = [
@@ -118,24 +118,24 @@ export const contactChecklist = [
 ];
 
 export const homepageModules = [
-  { label: "Category framing", title: "首屏先完成 buyer fit 判斷，而不是先介紹公司背景", evidence: "先讓訪客知道你幫誰、解什麼、值不值得談，再往下看細節。" },
-  { label: "Offer packaging", title: "整站像 buying system，不像內容倉庫或能力清單", evidence: "首頁、方案頁、案例頁、Contact 各自負責不同的商務問題。" },
-  { label: "Proof architecture", title: "案例先變成證據資產，再變成作品展示", evidence: "先給 context、shift、proof、fit，讓人能快速轉傳與判斷。" },
+  { label: "Positioning system", title: "首屏先完成 buyer fit 與商業價值判斷，不先掉進公司介紹", evidence: "先讓訪客知道你幫誰、改善什麼、為什麼現在值得談。" },
+  { label: "Solution architecture", title: "整站像 enterprise buying system，不像能力清單或內容倉庫", evidence: "首頁、方案頁、案例頁、Contact 各自負責不同決策工作。" },
+  { label: "Evidence system", title: "案例與 proof 先成為商務證據，再成為展示內容", evidence: "先給 context、shift、proof、fit，讓主管、業務與採購能直接轉傳。" },
 ];
 
 export const homepageCompactCaseEvidence = homepageModules;
 
 export const homepageBenchmarks = [
-  { source: "Stripe / Ramp 類型", title: "Outcome-first messaging", detail: "首頁前段優先回答商業結果、適合對象、可信規模與下一步。", application: "道易首頁先處理 buyer fit、決策價值與低摩擦入口，再補公司介紹。" },
-  { source: "Linear / Vercel 類型", title: "Dense but scannable", detail: "高密度資訊可以成立，前提是模組任務清楚、層級穩定、掃讀節奏順。", application: "把複雜能力拆成 buying question blocks，不再平均分散。" },
-  { source: "高品質設計公司站", title: "Proof-led storytelling", detail: "案例先講情境、價值與可引用訊號，再談方法與畫面。", application: "道易案例先做 shortlist-ready 摘要，再延伸完整專案內容。" },
+  { source: "Stripe / Ramp 類型", title: "Outcome-first messaging", detail: "首頁前段先交代服務誰、創造什麼商業結果、下一步怎麼開始。", application: "道易首頁先做 buyer fit、價值與啟動路徑，再補背景。" },
+  { source: "Linear / Vercel 類型", title: "Dense but controlled", detail: "資訊可以密，但每個模組只解一個問題，階層清楚、掃讀快速。", application: "把複雜能力拆成高層 decision blocks，不再平均灑字。" },
+  { source: "成熟設計 / B2B agency 站", title: "Portable proof storytelling", detail: "案例先交付可轉傳摘要，再展開方法、流程與畫面。", application: "道易案例改成 evidence asset，而不是作品牆。" },
 ];
 
 export const homepageDecisionLayers = [
-  { label: "Layer 01", title: "Category clarity", detail: "五秒內說清楚替誰解哪一種高價值問題。" },
-  { label: "Layer 02", title: "Offer choreography", detail: "讓首頁、方案頁、案例頁、Contact 各自負責一種決策工作。" },
-  { label: "Layer 03", title: "Proof portability", detail: "證據先支援轉傳、提案與採購，再支援欣賞。" },
-  { label: "Layer 04", title: "Conversion ladder", detail: "依成熟度提供不同 friction 的起手方式。" },
+  { label: "Layer 01", title: "Positioning clarity", detail: "五秒內說清楚替誰解什麼高價值商務問題。" },
+  { label: "Layer 02", title: "Solution architecture", detail: "讓首頁、方案頁、案例頁、Contact 各自負責一種商務任務。" },
+  { label: "Layer 03", title: "Evidence portability", detail: "證據先服務 shortlist、轉傳與採購溝通，再服務展示。" },
+  { label: "Layer 04", title: "Conversion operations", detail: "依成熟度提供不同 friction 的起手方式與回覆節奏。" },
 ];
 
 export const homepageSitemap = [
@@ -167,8 +167,8 @@ export const heroClarityChecklist = [
 
 export const caseOverviewStats = [
   { label: "Case format", value: "Context → Shift → Proof → Fit", detail: "案例先回答商業情境、改變了什麼、證據訊號與適用對象。" },
-  { label: "Decision use", value: "Shortlist-ready", detail: "能被業務、主管與 buying committee 快速轉傳。" },
-  { label: "Proof style", value: "摘要先行", detail: "先講可引用訊號，再延伸到更完整內容與畫面。" },
+  { label: "Decision use", value: "Shortlist-ready", detail: "能被主管、業務、PM 與 buying committee 快速轉傳。" },
+  { label: "Proof style", value: "Executive summary first", detail: "先講可引用摘要與結果訊號，再延伸完整內容。" },
 ];
 
 export const executiveScorecards = [
@@ -192,18 +192,18 @@ export const personaPlaybooks = [
 
 export const solutionTracks = [
   {
-    title: "Category and Homepage Sprint",
-    summary: "適合網站已跟不上商業成熟度，需要先重做 category framing、首頁結構與核心訊息。",
-    outputs: ["category thesis 與首屏主張", "新 sitemap 與頁面任務", "首頁 / 重建方案 / Contact 第一輪模組"],
+    title: "Positioning and Homepage Sprint",
+    summary: "適合網站已跟不上商業成熟度，需要先重做定位、首頁結構與核心敘事。",
+    outputs: ["positioning thesis 與首屏主張", "新 sitemap 與頁面任務", "首頁 / 方案頁 / Contact 第一輪模組"],
   },
   {
-    title: "Offer Packaging Sprint",
-    summary: "適合能力很多但不好賣，需要把服務與能力重組成 buying committee 容易理解的路線。",
-    outputs: ["offer map", "buyer questions 與 objection map", "solution page 與啟動方式重組"],
+    title: "Solution Packaging Sprint",
+    summary: "適合能力很多但不好賣，需要把服務與能力重組成 buying committee 容易理解的方案敘事。",
+    outputs: ["solution map", "buyer question 與 objection map", "solution page 與啟動方式重組"],
   },
   {
     title: "Evidence System Sprint",
     summary: "適合案例很多但不好用，想把作品牆改成真正支撐 shortlist 的證據系統。",
-    outputs: ["case summary 模板", "proof blocks 與轉傳情境", "CTA 與 follow-up 路徑設計"],
+    outputs: ["executive summary case 模板", "proof blocks 與轉傳情境", "CTA 與 follow-up 路徑設計"],
   },
 ];

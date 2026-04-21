@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "證據系統",
-  description: "把案例當成能支撐 shortlist、採購與提案決策的證據系統。",
+  description: "把案例、proof 與 trust content 當成能支撐 shortlist、採購與提案決策的證據系統。",
   alternates: { canonical: "/work" },
 };
 
@@ -18,8 +18,8 @@ export default function WorkPage() {
       <section className="subpage-hero">
         <div className="shell narrow">
           <span className="section-eyebrow">Case System</span>
-          <h1>案例頁重做成決策材料，不再是作品集清單。</h1>
-          <p>新的案例系統先讓訪客看懂情境、交付與結果訊號，再決定要不要深入看完整專案。</p>
+          <h1>案例頁重做成 executive proof layer，不再是作品集清單。</h1>
+          <p>新的案例系統先讓訪客看懂情境、交付、結果訊號與適用對象，再決定要不要深入看完整專案。</p>
         </div>
       </section>
 
