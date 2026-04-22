@@ -2,42 +2,42 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技替 B2B、科技、製造、AI 與高知識密度團隊，重新設計並重建企業級 revenue website system。核心不是延續舊站，而是重做 positioning、solution architecture、evidence system、buyer journey 與 conversion operations，讓官網真正成為商務成長前台。",
+    "道易科技為 B2B、科技、製造、AI 與高知識密度團隊，重新設計並重建企業級 growth website system。不是沿用舊站邏輯繼續修，而是重做 positioning、offer architecture、proof system、buyer journey 與 conversion design，讓官網成為能支撐商務開發、shortlist 與採購決策的成熟前台。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把官網重建成能服務品牌敘事、商務開發、shortlist 與採購決策的 enterprise revenue website system.",
+  heroTitle: "把官網重建成能同時服務品牌敘事、商務成交、shortlist 與 buying committee 的 growth website system.",
   heroDescription:
-    "這不是舊站優化案，而是重新設計與重建案。道易直接重做定位、頁面架構、案例證據、solution 包裝與 contact flow，讓網站從介紹頁升級成真正的商務作戰前台。",
+    "這不是舊站優化，而是重新設計與重建。道易直接重做品牌主張、頁面架構、solution offer、案例證據與 contact flow，讓網站從公司介紹頁升級成真正能推進商機的商務介面。",
 };
 
 export const navItems = [
   { href: "/", label: "首頁" },
-  { href: "/about", label: "買方情境" },
-  { href: "/solutions", label: "重建方案" },
-  { href: "/work", label: "證據系統" },
-  { href: "/contact", label: "啟動專案" },
+  { href: "/about", label: "重建觀點" },
+  { href: "/solutions", label: "Offer 架構" },
+  { href: "/work", label: "案例證據" },
+  { href: "/contact", label: "啟動重建" },
 ];
 
 export const headerReassuranceSignals = [
-  "重建 positioning、IA、proof 與 CTA，不做表面修補",
-  "首頁, 方案頁, 案例頁, Contact 各自負責明確決策任務",
-  "Quick Brief / Strategy Call / NDA 三層啟動入口",
+  "不是修舊站，是重做品牌主張、offer 與 buyer journey",
+  "首頁、Offer、案例、Contact 各自承接不同商務決策任務",
+  "Quick Brief / Workshop / NDA 三層啟動入口",
 ];
 
 export const solutions = [
   {
-    title: "Revenue Website Rebuild",
-    description: "從首頁到關鍵內頁一起重構，讓網站先完成 buyer fit 判斷、價值理解、proof 建立與下一步啟動。",
+    title: "Website Strategy Rebuild",
+    description: "從品牌主張、首頁與關鍵內頁一起重構，讓網站先完成 buyer fit 判斷、價值理解、信任建立與下一步啟動。",
   },
   {
-    title: "Solution Packaging System",
-    description: "把複雜能力重組成清楚 solution narrative、delivery model、風險邊界與驗收方式，讓 buying committee 更容易形成共識。",
+    title: "Offer Architecture System",
+    description: "把複雜能力重組成更可購買的 offer narrative、delivery model、風險邊界與驗收方式，讓 buying committee 更容易形成共識。",
   },
   {
-    title: "Evidence and Trust System",
-    description: "把案例、流程、驗證與內容資產設計成可轉傳、可引用、可支撐 shortlist 與採購的證據系統。",
+    title: "Proof and Conversion System",
+    description: "把案例、流程、驗證與 CTA 資產設計成可轉傳、可引用、可支撐 shortlist 與採購的證據系統。",
   },
 ];
 
@@ -126,24 +126,25 @@ export const homepageModules = [
 export const homepageCompactCaseEvidence = homepageModules;
 
 export const homepageBenchmarks = [
-  { source: "Stripe / Ramp 類型", title: "Outcome-first messaging", detail: "首頁前段先交代服務誰、創造什麼商業結果、下一步怎麼開始。", application: "道易首頁先做 buyer fit、價值與啟動路徑，再補背景。" },
-  { source: "Linear / Vercel 類型", title: "Dense but controlled", detail: "資訊可以密，但每個模組只解一個問題，階層清楚、掃讀快速。", application: "把複雜能力拆成高層 decision blocks，不再平均灑字。" },
-  { source: "成熟設計 / B2B agency 站", title: "Portable proof storytelling", detail: "案例先交付可轉傳摘要，再展開方法、流程與畫面。", application: "道易案例改成 evidence asset，而不是作品牆。" },
+  { source: "Stripe / Ramp / Clay 類型", title: "Outcome-first positioning", detail: "首頁前段先交代服務誰、改善哪個商務結果、下一步怎麼開始，而不是先談自己是誰。", application: "道易首頁把 buyer fit、核心成果、proof 與 CTA 前置。" },
+  { source: "Linear / Vercel / Notion 類型", title: "Dense but scannable UX", detail: "資訊可以密，但階層要穩，模組要明確，讓高意圖訪客能快速掃讀與定位自己。", application: "把複雜能力拆成 executive blocks、offer tracks 與 role-based sections。" },
+  { source: "B2B agency / design studio 強站", title: "Offer as productized path", detail: "不是列服務項目，而是把合作方式、輸出、週期與適用情境包成可購買的 path。", application: "道易把 solution page 重做成 buying guide，而非能力名詞清單。" },
+  { source: "成熟 SaaS case study 類型", title: "Portable proof storytelling", detail: "案例先交付 executive summary、結果訊號、適用情境與下一步，再展開細節。", application: "道易案例改成 shortlist-ready proof assets，而不是作品牆。" },
 ];
 
 export const homepageDecisionLayers = [
-  { label: "Layer 01", title: "Positioning clarity", detail: "五秒內說清楚替誰解什麼高價值商務問題。" },
-  { label: "Layer 02", title: "Solution architecture", detail: "讓首頁、方案頁、案例頁、Contact 各自負責一種商務任務。" },
-  { label: "Layer 03", title: "Evidence portability", detail: "證據先服務 shortlist、轉傳與採購溝通，再服務展示。" },
-  { label: "Layer 04", title: "Conversion operations", detail: "依成熟度提供不同 friction 的起手方式與回覆節奏。" },
+  { label: "Layer 01", title: "Category and buyer fit", detail: "五秒內說清楚服務誰、解什麼高價值問題、哪種團隊最適合。" },
+  { label: "Layer 02", title: "Offer architecture", detail: "讓首頁、Offer、案例、Contact 各自負責一種明確的商務任務。" },
+  { label: "Layer 03", title: "Proof portability", detail: "證據先服務 shortlist、轉傳、內部共識與採購溝通，再服務展示。" },
+  { label: "Layer 04", title: "Conversion design", detail: "依成熟度提供不同 friction 的起手方式與清楚回覆預期。" },
 ];
 
 export const homepageSitemap = [
-  ["首頁", "先讓買方完成 fit 判斷、理解 category 並知道下一步怎麼開始。"],
-  ["買方情境", "讓不同產業與角色判斷自己現在最該重建哪一層。"],
-  ["重建方案", "把 sprint、交付形式、風險與進場方式包成清楚 buying guide。"],
-  ["證據系統", "案例先當 evidence asset，再延伸成完整專案敘事。"],
-  ["啟動專案", "把 Quick Brief、Workshop、NDA 做成低摩擦決策入口。"],
+  ["首頁", "先完成 buyer fit、category framing、proof 與 CTA 雙軌判斷。"],
+  ["重建觀點", "解釋什麼情況該重建，不該再沿用舊站優化思維。"],
+  ["Offer 架構", "把網站重建、offer packaging、proof conversion 包成 buying guide。"],
+  ["案例證據", "案例先當 shortlist-ready proof asset，再延伸成完整專案敘事。"],
+  ["啟動重建", "把 Quick Brief、Workshop、NDA 做成低摩擦決策入口。"],
 ];
 
 export const heroActionSignals = [
@@ -193,17 +194,17 @@ export const personaPlaybooks = [
 export const solutionTracks = [
   {
     title: "Positioning and Homepage Sprint",
-    summary: "適合網站已跟不上商業成熟度，需要先重做定位、首頁結構與核心敘事。",
-    outputs: ["positioning thesis 與首屏主張", "新 sitemap 與頁面任務", "首頁 / 方案頁 / Contact 第一輪模組"],
+    summary: "適合網站已跟不上商業成熟度，需要先重做 category framing、首頁結構與核心敘事。",
+    outputs: ["positioning thesis 與首屏主張", "新 sitemap 與頁面任務", "首頁 / Offer / Contact 第一輪模組"],
   },
   {
-    title: "Solution Packaging Sprint",
-    summary: "適合能力很多但不好賣，需要把服務與能力重組成 buying committee 容易理解的方案敘事。",
-    outputs: ["solution map", "buyer question 與 objection map", "solution page 與啟動方式重組"],
+    title: "Offer Architecture Sprint",
+    summary: "適合能力很多但不好賣，需要把服務與能力重組成 buying committee 容易理解的 offer path。",
+    outputs: ["offer map", "buyer question 與 objection map", "offer page 與啟動方式重組"],
   },
   {
-    title: "Evidence System Sprint",
-    summary: "適合案例很多但不好用，想把作品牆改成真正支撐 shortlist 的證據系統。",
+    title: "Proof and Conversion Sprint",
+    summary: "適合案例很多但不好用，想把作品牆改成真正支撐 shortlist 與啟動對話的證據系統。",
     outputs: ["executive summary case 模板", "proof blocks 與轉傳情境", "CTA 與 follow-up 路徑設計"],
   },
 ];
