@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactFastFacts, contactModes, contactChecklist, homepageContactProof, siteConfig } from "@/lib/site";
+import { contactChecklist, contactDeliverables, contactFastFacts, contactModes, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "啟動專案",
-  description: "用更低摩擦但更成熟的方式，和道易科技啟動 enterprise website rebuild、solution 或 trust 專案。",
+  description: "用更低摩擦但更成熟的方式，和道易科技啟動 enterprise website rebuild、offer 或 proof 專案。",
   alternates: { canonical: "/contact" },
 };
 
@@ -14,9 +14,9 @@ export default function ContactPage() {
     <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
-          <span className="section-eyebrow">Start a Project</span>
+          <span className="section-eyebrow">Start a Rebuild</span>
           <h1>把第一次接洽設計成有節奏的啟動系統，專案就更容易開始。</h1>
-          <p>這一頁不是只放聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的啟動方式與回覆預期。</p>
+          <p>這一頁不是只放聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的起手方式、回覆預期與下一步節奏。</p>
         </div>
       </section>
 
@@ -31,9 +31,9 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Proof" title="讓對話更快進入正題的原因，是先把期待說清楚。">
+      <Section eyebrow="What you get" title="這不是填完表單等回覆，而是直接拿到可行的重建起點。">
         <div className="card-grid three-up">
-          {homepageContactProof.map((item) => (
+          {contactDeliverables.map((item) => (
             <article key={item} className="card rebuild-module-card">
               <p>{item}</p>
             </article>
@@ -53,7 +53,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Before you send" title="送出前，先想清楚這三件事，第一次對話會更有效。">
+      <Section eyebrow="Before you send" title="送出前先想清楚這三件事，第一次對話會更有效。">
         <div className="feature-surface two-column">
           <div>
             <ul className="bullet-list compact">{contactChecklist.map((item) => <li key={item}>{item}</li>)}</ul>

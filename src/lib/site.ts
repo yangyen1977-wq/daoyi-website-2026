@@ -88,8 +88,8 @@ export const heroFitSignals = [
 
 export const heroContactLadder = [
   { label: "Path 01", title: "Quick Brief", detail: "適合已知道問題方向，想先拿到定位切口、頁面優先序與建議 sprint。", cta: "3 分鐘開始", href: "/#quick-brief" },
-  { label: "Path 02", title: "Strategy Call", detail: "適合已進入內部討論，需要一起對齊 buyer、solution、proof gap 與 launch priority。", cta: "看啟動方式", href: "/contact" },
-  { label: "Path 03", title: "Email / NDA", detail: "適合涉及保密、投標、採購或法遵，先低風險確認 fit 與合作邊界。", cta: "先寄 Email", href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi Enterprise Website Rebuild / NDA")}` },
+  { label: "Path 02", title: "Decision Workshop", detail: "適合已進入內部討論，需要一起對齊 buyer、solution、proof gap、內頁角色與 launch priority。", cta: "看啟動方式", href: "/contact" },
+  { label: "Path 03", title: "Email / NDA", detail: "適合涉及保密、投標、採購或法遵，先低風險確認 fit、流程與合作邊界。", cta: "先寄 Email", href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi Enterprise Website Rebuild / NDA")}` },
 ];
 
 export const homepageContactProof = [
@@ -207,4 +207,100 @@ export const solutionTracks = [
     summary: "適合案例很多但不好用，想把作品牆改成真正支撐 shortlist 與啟動對話的證據系統。",
     outputs: ["executive summary case 模板", "proof blocks 與轉傳情境", "CTA 與 follow-up 路徑設計"],
   },
+];
+
+export const rebuildPrinciples = [
+  {
+    title: "Outcome before introduction",
+    detail: "首頁前 1-2 屏先講清楚 buyer fit、商務結果與下一步，而不是先鋪公司背景。",
+  },
+  {
+    title: "One page, one decision job",
+    detail: "首頁負責判斷與信任，Offer 頁負責購買理解，案例頁負責 proof，Contact 頁負責啟動。",
+  },
+  {
+    title: "Evidence must travel",
+    detail: "案例摘要要能被主管、業務與採購直接複述、轉傳、引用，而不是只能留在網站裡。",
+  },
+  {
+    title: "Conversion is a ladder",
+    detail: "讓 Quick Brief、Workshop、NDA 對應不同購買成熟度，降低第一次接觸的摩擦。",
+  },
+];
+
+export const homepageExecutiveAgenda = [
+  {
+    label: "01",
+    title: "Category clarity",
+    detail: "先讓買方知道道易服務的不是所有公司，而是高複雜度 B2B / 科技 / 製造 / AI 團隊。",
+  },
+  {
+    label: "02",
+    title: "Commercial architecture",
+    detail: "把網站從 company profile 重構成 decision interface，讓頁面各自承接不同商務任務。",
+  },
+  {
+    label: "03",
+    title: "Proof portability",
+    detail: "案例先交付 executive summary、結果訊號與適用情境，再往下展開方法與細節。",
+  },
+  {
+    label: "04",
+    title: "Lower-friction start",
+    detail: "依專案成熟度提供 Quick Brief、Decision Workshop、NDA，讓對話更容易開始。",
+  },
+];
+
+export const homepageRolePaths = [
+  {
+    role: "Founder / GM",
+    ask: "這家公司是否真的能幫我們把外部敘事與商務前台提升到下一個階段？",
+    answer: "首頁與 About 先回答 category、差異化與值得現在啟動的理由。",
+  },
+  {
+    role: "Marketing / Growth",
+    ask: "流量進站後，能不能更快理解價值、建立信任並進入對話？",
+    answer: "首頁模組、案例摘要與 CTA ladder 都被重新設計成更高轉換的商務入口。",
+  },
+  {
+    role: "Sales / PM",
+    ask: "方案、流程、交付與風險邊界，能不能被更容易轉述給內外部？",
+    answer: "Offer 架構頁重做成 buying guide，不再只是能力名詞清單。",
+  },
+  {
+    role: "Procurement / Compliance",
+    ask: "敏感專案能否先用低風險方式確認 fit、流程與合作邊界？",
+    answer: "Contact 頁保留 NDA / Email 路徑，避免第一次就暴露過多資訊。",
+  },
+];
+
+export const solutionBlueprints = [
+  {
+    title: "Reframe the category",
+    summary: "先重定服務誰、解什麼問題、買方為何現在值得談，不沿用舊站自我介紹順序。",
+    bullets: ["buyer fit", "核心成果", "競品替代品差異", "值得現在啟動的理由"],
+  },
+  {
+    title: "Package the offer",
+    summary: "把抽象能力整理成清楚的購買路徑、交付內容、週期、驗收與風險邊界。",
+    bullets: ["solution path", "delivery model", "objection handling", "starter sprint"],
+  },
+  {
+    title: "Systemize proof",
+    summary: "把案例、指標、流程、trust content 做成可引用的證據層，不讓資訊散落。",
+    bullets: ["executive summary", "result signal", "fit cue", "shortlist asset"],
+  },
+];
+
+export const contactDeliverables = [
+  "第一輪回覆直接指出更該先重做的是 positioning、IA、Offer、proof 還是 conversion flow。",
+  "提供建議 sitemap、首頁方向與最適合的 starter sprint，而不是只回一句收到。",
+  "若專案涉及保密、採購或法遵，可立即切換 NDA / Email 流程，降低內部阻力。",
+];
+
+export const thirdPartyScorecard = [
+  ["定位清晰度", "8.7/10", "已有鮮明 rebuild thesis，但首頁仍可再增加更具體的 buyer outcome 與 proof cue。"],
+  ["資訊架構", "8.5/10", "頁面角色已成形，這輪應進一步讓首頁像真正的 multi-section decision deck。"],
+  ["案例與證據", "8.3/10", "proof 思維對了，但可再強化 executive snapshot 與不同角色的閱讀入口。"],
+  ["轉換設計", "8.8/10", "CTA ladder 已比一般 B2B 官網成熟，適合繼續做成更清楚的 start system。"],
 ];

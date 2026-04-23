@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import { siteConfig } from "@/lib/site";
+import { homepageExecutiveAgenda, rebuildPrinciples, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "買方情境",
+  title: "重建觀點",
   description: "哪些 B2B、科技、製造與知識型團隊，最需要用 enterprise rebuild 思維重做官網。",
   alternates: { canonical: "/about" },
 };
@@ -31,19 +31,12 @@ const personas = [
   ["研究 / 永續 / 知識平台", "在高內容密度下維持清晰、權威與可引用。"],
 ];
 
-const operatingModel = [
-  { step: "01", title: "Reframe", detail: "先重定義市場定位、買方問題與官網角色。" },
-  { step: "02", title: "Restructure", detail: "重做 sitemap、首頁模組與內頁任務。" },
-  { step: "03", title: "Prove", detail: "把案例與 proof 寫成可複述的商務材料。" },
-  { step: "04", title: "Convert", detail: "把 Contact flow 做成低摩擦啟動入口。" },
-];
-
 export default function AboutPage() {
   return (
     <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
-          <span className="section-eyebrow">Positioning</span>
+          <span className="section-eyebrow">Rebuild Thesis</span>
           <h1>我們把官網看成 enterprise decision interface，不是公司簡介。</h1>
           <p>道易科技協助高複雜度團隊，把品牌、方案、案例、資料與轉換路徑重建成能支撐 shortlist、提案與採購前進的商務前台。</p>
         </div>
@@ -53,6 +46,17 @@ export default function AboutPage() {
         <div className="card-grid three-up">
           {fitCards.map((item) => (
             <article key={item.title} className="card trust-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Principles" title="這次重建遵循的是成熟 B2B 商務站的底層原則。">
+        <div className="card-grid four-up">
+          {rebuildPrinciples.map((item) => (
+            <article key={item.title} className="card rebuild-module-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
@@ -73,9 +77,9 @@ export default function AboutPage() {
 
       <Section eyebrow="Working model" title="2026 版本的合作方式，核心是先重設，再落地。">
         <div className="card-grid four-up">
-          {operatingModel.map((item) => (
-            <article key={item.step} className="card process-card">
-              <span className="step-index">{item.step}</span>
+          {homepageExecutiveAgenda.map((item) => (
+            <article key={item.label} className="card process-card">
+              <span className="step-index">{item.label}</span>
               <strong>{item.title}</strong>
               <p>{item.detail}</p>
             </article>
@@ -87,7 +91,7 @@ export default function AboutPage() {
         <div className="feature-surface two-column">
           <div>
             <h3>適合現在談的情況</h3>
-            <p>你已經有能力與案例，但外部敘事還不夠成熟、可信、好理解。</p>
+            <p>你已經有能力與案例，但外部敘事還不夠成熟、可信、好理解，導致高意圖流量與介紹流量沒有真正發揮價值。</p>
           </div>
           <div>
             <h3>最快的起手方式</h3>

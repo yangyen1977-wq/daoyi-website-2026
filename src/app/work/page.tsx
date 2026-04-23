@@ -4,7 +4,7 @@ import { Section } from "@/components/section";
 import { CaseOverviewStats } from "@/components/case-overview-stats";
 import { CaseSnapshots } from "@/components/case-snapshots";
 import { PersonaPlaybook } from "@/components/persona-playbook";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, thirdPartyScorecard } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "證據系統",
@@ -12,23 +12,65 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work" },
 };
 
+const proofLayers = [
+  {
+    title: "Executive summary first",
+    detail: "先讓高層與業務看到情境、改變、結果訊號與適用對象，再決定要不要深入。",
+  },
+  {
+    title: "Portable evidence",
+    detail: "案例內容要能被複述與轉傳，不該只是在網站上漂亮展示。",
+  },
+  {
+    title: "Decision-oriented detail",
+    detail: "方法、流程、交付與信任訊號要接在摘要後面，支援後續提問。",
+  },
+  {
+    title: "CTA after proof",
+    detail: "每個案例看完都應該接得上下一步，不讓信任停在閱讀階段。",
+  },
+];
+
 export default function WorkPage() {
   return (
     <main id="main-content">
       <section className="subpage-hero">
         <div className="shell narrow">
-          <span className="section-eyebrow">Case System</span>
-          <h1>案例頁重做成 executive proof layer，不再是作品集清單。</h1>
-          <p>新的案例系統先讓訪客看懂情境、交付、結果訊號與適用對象，再決定要不要深入看完整專案。</p>
+          <span className="section-eyebrow">Proof System</span>
+          <h1>案例頁重做成 executive proof layer，不再只是作品集清單。</h1>
+          <p>新的案例系統先讓訪客看懂情境、交付、結果訊號與適用對象，再往下看完整專案，這樣案例才真的能支撐 shortlist 與 buying committee 對話。</p>
         </div>
       </section>
 
-      <Section eyebrow="Case structure" title="案例採用 context / delivery / proof / fit 的重述方式。">
+      <Section eyebrow="Case structure" title="案例採用 context → shift → proof → fit 的重述方式。">
         <CaseOverviewStats />
+      </Section>
+
+      <Section eyebrow="Proof design" title="成熟的案例頁，不是更長，而是更可引用、更可判斷。">
+        <div className="card-grid four-up">
+          {proofLayers.map((item) => (
+            <article key={item.title} className="card decision-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
       </Section>
 
       <Section eyebrow="Snapshot first" title="先給可掃讀摘要，再展開完整案例。">
         <CaseSnapshots />
+      </Section>
+
+      <Section eyebrow="Third-party quick review" title="從第三方觀點看，目前 proof 方向正確，但還要更像可轉傳的商務資產。">
+        <div className="card-grid four-up">
+          {thirdPartyScorecard.slice(0, 3).map(([title, score, detail]) => (
+            <article key={title} className="card trust-card">
+              <span className="mini-label accent">{score}</span>
+              <h3>{title}</h3>
+              <p>{detail}</p>
+            </article>
+          ))}
+        </div>
       </Section>
 
       <Section eyebrow="Audience guide" title="不同角色看案例的重點不同，路徑也該不同。">
