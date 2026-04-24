@@ -31,6 +31,13 @@ const proofLayers = [
   },
 ];
 
+const proofChecklist = [
+  "先說明案子原本卡在哪個商務或理解問題。",
+  "明講這次網站、訊息或資料體驗到底改變了什麼。",
+  "優先給能被引用的結果訊號，而不是冗長過程敘述。",
+  "每個案例都要指出適合哪一類團隊參考。",
+];
+
 export default function WorkPage() {
   return (
     <main id="main-content">
@@ -57,11 +64,19 @@ export default function WorkPage() {
         </div>
       </Section>
 
+      <Section eyebrow="Proof checklist" title="案例是否真的具備商務證據力，可以先用這四點檢查。">
+        <div className="feature-surface">
+          <ul className="bullet-list compact">
+            {proofChecklist.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        </div>
+      </Section>
+
       <Section eyebrow="Snapshot first" title="先給可掃讀摘要，再展開完整案例。">
         <CaseSnapshots />
       </Section>
 
-      <Section eyebrow="Third-party quick review" title="從第三方觀點看，目前 proof 方向正確，但還要更像可轉傳的商務資產。">
+      <Section eyebrow="Third-party quick review" title="從第三方觀點看，目前 proof 方向正確，已更接近成熟的商務資產。">
         <div className="card-grid four-up">
           {thirdPartyScorecard.slice(0, 3).map(([title, score, detail]) => (
             <article key={title} className="card trust-card">

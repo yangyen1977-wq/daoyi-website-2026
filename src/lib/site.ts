@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技為 B2B、科技、製造、AI 與高知識密度團隊，重新設計並重建企業級 growth website system。不是沿用舊站邏輯繼續修，而是重做 positioning、offer architecture、proof system、buyer journey 與 conversion design，讓官網成為能支撐商務開發、shortlist 與採購決策的成熟前台。",
+    "道易科技為 B2B、科技、製造、AI 與高知識密度團隊，重新設計並重建 enterprise website system。不是沿用舊站邏輯繼續修，而是重做品牌主張、sitemap、offer architecture、proof system、buyer journey 與 conversion design，讓官網成為能支撐商務開發、shortlist 與採購決策的成熟前台。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把官網重建成能同時服務品牌敘事、商務成交、shortlist 與 buying committee 的 growth website system.",
+  heroTitle: "把企業官網重建成能服務品牌敘事、商務成交、shortlist 與 buying committee 的 enterprise website system.",
   heroDescription:
-    "這不是舊站優化，而是重新設計與重建。道易直接重做品牌主張、頁面架構、solution offer、案例證據與 contact flow，讓網站從公司介紹頁升級成真正能推進商機的商務介面。",
+    "這不是舊站優化，而是重新設計與重建。道易直接重做品牌主張、頁面架構、solution offer、案例證據與 contact flow，讓網站從 company profile 升級成真正能推進商機的商務介面。",
 };
 
 export const navItems = [
@@ -299,8 +299,8 @@ export const contactDeliverables = [
 ];
 
 export const thirdPartyScorecard = [
-  ["定位清晰度", "8.7/10", "已有鮮明 rebuild thesis，但首頁仍可再增加更具體的 buyer outcome 與 proof cue。"],
-  ["資訊架構", "8.5/10", "頁面角色已成形，這輪應進一步讓首頁像真正的 multi-section decision deck。"],
-  ["案例與證據", "8.3/10", "proof 思維對了，但可再強化 executive snapshot 與不同角色的閱讀入口。"],
-  ["轉換設計", "8.8/10", "CTA ladder 已比一般 B2B 官網成熟，適合繼續做成更清楚的 start system。"],
+  ["定位清晰度", "9.0/10", "品牌主張已更聚焦在 enterprise website rebuild，但未來還能補更多具名 proof 與結果訊號。"],
+  ["資訊架構", "8.9/10", "sitemap 與頁面角色更像 buyer journey，首頁已更接近成熟的 decision deck。"],
+  ["案例與證據", "8.6/10", "proof 架構清楚，若後續再補真實案例數字與 executive snapshot，說服力會再升級。"],
+  ["轉換設計", "9.0/10", "CTA ladder 與啟動模式已比多數 B2B 官網成熟，下一步可繼續優化 friction 與回覆預期。"],
 ];

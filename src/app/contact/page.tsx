@@ -9,6 +9,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
+const responseModel = [
+  {
+    title: "24h 內回覆",
+    detail: "不是只回收到，而是會指出目前最大卡點更像 positioning、offer、proof 還是 conversion。",
+  },
+  {
+    title: "建議起手 sprint",
+    detail: "會根據網站成熟度與內部情境，建議首頁、方案頁、案例系統或 Contact flow 的優先序。",
+  },
+  {
+    title: "低風險進場",
+    detail: "若涉及保密、採購或法遵，可改走 NDA / Email 路徑，不強迫一次揭露全部資訊。",
+  },
+];
+
 export default function ContactPage() {
   return (
     <main id="main-content">
@@ -26,6 +41,17 @@ export default function ContactPage() {
             <article key={item.label} className="card trust-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.value}</h3>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Response model" title="新版 Contact 頁，先明講你會拿到什麼。">
+        <div className="card-grid three-up">
+          {responseModel.map((item) => (
+            <article key={item.title} className="card rebuild-module-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
             </article>
           ))}
         </div>
