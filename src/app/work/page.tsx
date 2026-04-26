@@ -38,6 +38,21 @@ const proofChecklist = [
   "每個案例都要指出適合哪一類團隊參考。",
 ];
 
+const proofMaturityChecks = [
+  {
+    title: "不是作品牆，而是 shortlist asset",
+    detail: "每則案例都要先回答這案子解了什麼商務問題、為什麼值得參考、結果訊號是什麼。",
+  },
+  {
+    title: "先可引用，再求完整",
+    detail: "成熟案例會先給主管可複述的版本，再往下展開方法、流程與實作細節。",
+  },
+  {
+    title: "每個案例都要有 fit cue",
+    detail: "讓訪客快速知道這是 SaaS、製造、AI 顧問，還是高知識密度網站最值得參考。",
+  },
+];
+
 export default function WorkPage() {
   return (
     <main id="main-content">
@@ -69,6 +84,17 @@ export default function WorkPage() {
           <ul className="bullet-list compact">
             {proofChecklist.map((item) => <li key={item}>{item}</li>)}
           </ul>
+        </div>
+      </Section>
+
+      <Section eyebrow="Maturity check" title="這輪案例頁更往商務證據系統走，而不是純展示頁。">
+        <div className="card-grid three-up">
+          {proofMaturityChecks.map((item) => (
+            <article key={item.title} className="card rebuild-module-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
         </div>
       </Section>
 

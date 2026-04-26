@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 commercial website system。不是延續舊站修補，而是從品牌命題、buyer journey、offer architecture、proof packaging 到 conversion flow 全面重建，讓官網真正成為商務開發、shortlist 與 buying committee 對齊的前台。",
+    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 commercial website system。不是延續舊站修補，而是從品牌命題、buyer journey、offer architecture、proof packaging 到 conversion flow 全面重建，讓官網真正成為商務開發、shortlist 與 buying committee 對齊的商務前台。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
   heroTitle: "把企業官網重建成能被高層、行銷、業務與採購共同理解的 commercial decision interface.",
   heroDescription:
-    "道易不是接一個首頁改版，而是替商業成熟度已升級的團隊，重建 category framing、頁面架構、offer、case proof 與 contact flow。結果不是更漂亮的網站，而是更成熟的商務前台。",
+    "道易不是接一個首頁改版，而是替商業成熟度已升級的團隊，重建 category framing、頁面架構、offer、case proof 與 contact flow。結果不是更漂亮的網站，而是更成熟、更能成交的商務前台。",
 };
 
 export const navItems = [
