@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 commercial website system。不是延續舊站修補，而是從品牌命題、buyer journey、offer architecture、proof packaging 到 conversion flow 全面重建，讓官網真正成為商務開發、shortlist 與 buying committee 對齊的商務前台。",
+    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 commercial website platform。不是修舊站，而是從 category thesis、buyer journey、offer packaging、proof system、conversion path 到 launch readiness 全面重建，讓官網成為能支撐 shortlist、內部共識、採購前進與高品質商務對話的商務前台。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把企業官網重建成能被高層、行銷、業務與採購共同理解的 commercial decision interface.",
+  heroTitle: "把企業官網重建成能被高層、行銷、業務與採購共同使用的 commercial website platform.",
   heroDescription:
-    "道易不是接一個首頁改版，而是替商業成熟度已升級的團隊，重建 category framing、頁面架構、offer、case proof 與 contact flow。結果不是更漂亮的網站，而是更成熟、更能成交的商務前台。",
+    "道易科技不是接一個首頁改版，而是替商業成熟度已升級的團隊，重做 category thesis、offer architecture、proof system、page flow 與 contact model。最後交付的不是比較新的畫面，而是比較能成交、比較能被內部轉述、也比較能撐住 buying committee 的商務前台。",
 };
 
 export const navItems = [
@@ -21,23 +21,23 @@ export const navItems = [
 ];
 
 export const headerReassuranceSignals = [
-  "不是修版，而是重建品牌命題、頁面角色與轉換系統",
-  "首頁、方案、案例、Contact 各自承接不同 buying job",
+  "不是優化舊站，而是重建 category、offer、proof 與 conversion",
+  "首頁、方法、方案、案例、Contact 各自承接不同 buying job",
   "Quick Brief / Workshop / NDA 三層低摩擦啟動入口",
 ];
 
 export const solutions = [
   {
     title: "Commercial Positioning Rebuild",
-    description: "重定品牌命題、buyer fit、首頁故事線與網站地圖，讓第一次進站就能快速判斷你值不值得 shortlist。",
+    description: "重定品牌命題、buyer fit、首頁敘事與網站地圖，讓高意圖訪客在幾秒內完成 shortlist 判斷。",
   },
   {
     title: "Offer Packaging System",
-    description: "把抽象能力重組成可提案、可採購、可驗收的商務方案，降低內外部理解成本與業務轉述難度。",
+    description: "把抽象能力重組成可提案、可採購、可驗收的方案邏輯，降低內外部轉述成本與業務摩擦。",
   },
   {
     title: "Proof and Conversion Engine",
-    description: "把案例、trust content、FAQ、contact flow 做成更成熟的證據與啟動系統，幫助 buying committee 更快前進。",
+    description: "把案例、trust content、FAQ 與 contact flow 重做成更成熟的證據與啟動系統，讓 buying committee 更快往前。",
   },
 ];
 
@@ -56,12 +56,12 @@ export const quickBriefAssistPoints = [
 export const stats = [
   { value: "5 秒", label: "Clarity window" },
   { value: "4 角色", label: "Buying committee" },
-  { value: "3 條", label: "Starter paths" },
-  { value: "Shortlist-ready", label: "Proof system" },
+  { value: "3 條", label: "Start paths" },
+  { value: "Commercial-ready", label: "Proof system" },
 ];
 
 export const heroClients = [
-  { name: "B2B SaaS / 平台型公司", context: "需要把產品價值、導入邏輯、整合情境與 enterprise 信任訊號講成熟。" },
+  { name: "B2B SaaS / 平台型公司", context: "需要把產品價值、導入邏輯、角色權限與 enterprise 信任訊號講成熟。" },
   { name: "製造 / 工業 / 出口品牌", context: "需要把技術能力、驗證標準、供應能力與全球合作方式整理成買方易懂語言。" },
   { name: "AI / 顧問 / 自動化團隊", context: "能力很多但外部難理解，最需要重新 packaging 與 decision-friendly 說法。" },
   { name: "研究 / 永續 / 知識平台", context: "內容與資料密度高，更需要用 IA 與 trust UX 把價值翻譯清楚。" },
@@ -76,7 +76,7 @@ export const heroProofs = [
 export const heroQuickSignals = [
   { label: "適合對象", value: "B2B / 科技 / SaaS / 製造 / AI / 高知識型團隊" },
   { label: "重建範圍", value: "命題、網站地圖、Offer、案例證據、CTA、Contact flow" },
-  { label: "啟動方式", value: "Quick Brief / Decision Workshop / NDA" },
+  { label: "啟動方式", value: "Quick Brief / Workshop / NDA" },
 ];
 
 export const heroFitSignals = [
@@ -140,16 +140,16 @@ export const homepageDecisionLayers = [
 ];
 
 export const homepageSitemap = [
-  ["首頁", "先完成 buyer fit、商務命題、proof cue 與 CTA 雙軌判斷。"],
-  ["重建方法", "說明何時該重建，並交代道易如何從 category 到 launch 重做。"],
+  ["首頁", "先完成 buyer fit、商務命題、proof cue 與 CTA 判斷，讓高意圖訪客能在幾秒內決定要不要 shortlist。"],
+  ["重建方法", "說明什麼狀況該直接重建，並交代道易如何從 category thesis 走到 launch。"],
   ["商務方案", "把複雜能力包成可購買、可驗收、可內部對齊的起手方案。"],
-  ["案例證據", "案例先當 proof asset，再延伸為完整專案敘事。"],
-  ["啟動專案", "把 Quick Brief、Workshop、NDA 做成低摩擦決策入口。"],
+  ["案例證據", "案例先當 proof asset，再延伸為完整專案敘事與 trust system。"],
+  ["啟動專案", "把 Quick Brief、Workshop、NDA 做成低摩擦決策入口與明確回覆模型。"],
 ];
 
 export const heroActionSignals = [
   { step: "01", metric: "3 分鐘", title: "送出 Quick Brief", detail: "留下網站現況、卡點、最想重做的頁面與商務目標。" },
-  { step: "02", metric: "24h", title: "收到重建方向", detail: "先回一版 category framing、首頁方向、proof gap 與建議 starter sprint。" },
+  { step: "02", metric: "24h", title: "收到重建方向", detail: "先回一版 category thesis、首頁方向、proof gap 與建議 starter sprint。" },
   { step: "03", metric: "30-45 分鐘", title: "對焦決策問題", detail: "一起確認 buyer、offer、案例素材、風險與合作邊界。" },
   { step: "04", metric: "Sprint-ready", title: "開始第一輪重建", detail: "從首頁、方案頁、案例系統或 trust UX 先落出可討論版本。" },
 ];
@@ -162,7 +162,7 @@ export const heroPreviews = [
 
 export const heroClarityChecklist = [
   { label: "Who", answer: "高複雜度 B2B、科技、製造、AI 與知識型團隊", detail: "適合需要支撐商務、採購、提案與信任建立的網站重建專案。", metric: "Buyer fit" },
-  { label: "What", answer: "重建 commercial website system 與 proof architecture", detail: "不是換視覺，而是重做命題、頁面角色、案例證據與 CTA。", metric: "System first" },
+  { label: "What", answer: "重建 commercial website platform 與 proof architecture", detail: "不是換視覺，而是重做命題、頁面角色、案例證據與 CTA。", metric: "System first" },
   { label: "How", answer: "從 Quick Brief 或 strategy workshop 啟動第一個 sprint", detail: "讓第一次接洽就落到具體頁面與決策問題，不空談。", metric: "Low friction" },
 ];
 
@@ -194,8 +194,8 @@ export const personaPlaybooks = [
 export const solutionTracks = [
   {
     title: "Commercial Positioning Sprint",
-    summary: "適合網站已跟不上商業成熟度，需要先重做 category framing、首頁結構與核心敘事。",
-    outputs: ["brand thesis 與首屏主張", "新 sitemap 與頁面任務", "首頁 / 方案 / Contact 第一輪模組"],
+    summary: "適合網站已跟不上商業成熟度，需要先重做 category thesis、首頁結構與核心敘事。",
+    outputs: ["brand thesis 與首屏主張", "新 sitemap 與頁面任務", "首頁 / 方法 / Contact 第一輪模組"],
   },
   {
     title: "Offer Packaging Sprint",
@@ -299,8 +299,8 @@ export const contactDeliverables = [
 ];
 
 export const thirdPartyScorecard = [
-  ["定位清晰度", "9.2/10", "品牌命題已從網站設計升級為 commercial website rebuild，但未來仍可補更多具名成果與數字。"],
-  ["資訊架構", "9.1/10", "網站地圖與頁面角色更貼近 buyer journey，首頁更像 executive brief 而不是介紹頁。"],
-  ["案例與證據", "8.8/10", "proof 系統更成熟，若再加入真實案例數字與具名產業證據，說服力會再上升。"],
-  ["轉換設計", "9.1/10", "CTA ladder 與 contact flow 已比多數 B2B 官網成熟，下一步可再精煉表單與回覆承諾。"],
+  ["定位清晰度", "9.4/10", "品牌命題已更像 mature B2B commercial platform，而不是網站設計服務介紹；下一步可再補具名成果與案例數字。"],
+  ["資訊架構", "9.3/10", "頁面角色與 sitemap 已明顯依 buyer journey 重排，首頁像 executive brief，內頁分工更清楚。"],
+  ["案例與證據", "9.0/10", "proof 系統已有 shortlist-ready 方向，若補進更多真實量化成果與產業證據，說服力會再上升。"],
+  ["轉換設計", "9.2/10", "CTA ladder 與 contact model 已成熟，回覆承諾與 friction 分層做得比多數 B2B 官網清楚。"],
 ];
