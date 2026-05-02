@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 commercial website platform。不是優化舊站，而是從品牌命題、網站地圖、offer packaging、proof system、conversion path 到 launch readiness 全面重建，讓官網成為能支撐 shortlist、內部共識、採購前進與高品質商務對話的 external revenue interface。",
+    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 revenue website system。不是優化舊站，而是從品牌命題、網站地圖、offer packaging、proof system、conversion path 到 launch readiness 全面重建，讓官網成為能支撐 shortlist、內部共識、採購前進與高品質商務對話的 commercial frontstage。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把企業官網重建成能被高層、行銷、業務與採購共同使用的 external revenue interface.",
+  heroTitle: "把企業官網重建成能被高層、行銷、業務與採購共同使用的 revenue website system.",
   heroDescription:
-    "道易科技不是接一個首頁改版，而是替商業成熟度已升級的團隊，重做品牌主張、buyer journey、offer architecture、proof system、page flow 與 contact model。最後交付的不是比較新的畫面，而是比較能成交、比較能被內部轉述、也比較能撐住 buying committee 的成熟商務前台。",
+    "道易科技不是接一個首頁改版，而是替商業成熟度已升級的團隊，重做品牌命題、buyer journey、offer architecture、proof system、page flow 與 contact model。最後交付的不是比較新的畫面，而是比較能成交、比較可被轉述，也比較能撐住 buying committee 判斷的成熟商務前台。",
 };
 
 export const navItems = [
@@ -22,7 +22,7 @@ export const navItems = [
 
 export const headerReassuranceSignals = [
   "不是優化舊站，而是重建 category、offer、proof 與 conversion",
-  "首頁、方法、方案、案例、Contact 各自承接不同 buying job",
+  "先做出 shortlist-ready 官網，再談後續持續放大",
   "Quick Brief / Workshop / NDA 三層低摩擦啟動入口",
 ];
 
@@ -299,8 +299,8 @@ export const contactDeliverables = [
 ];
 
 export const thirdPartyScorecard = [
-  ["定位清晰度", "9.5/10", "品牌命題已更像 mature B2B commercial rebuild partner，而不是一般網站設計服務介紹；若補進真實成果數字會更完整。"],
-  ["資訊架構", "9.4/10", "頁面角色與 sitemap 已明顯依 buyer journey 重排，首頁更像 executive brief，內頁任務分工也更成熟。"],
-  ["案例與證據", "9.1/10", "proof 系統已有 shortlist-ready 方向，若補進更多量化成果、產業背書與真實案例名稱，說服力會再往上。"],
-  ["轉換設計", "9.3/10", "CTA ladder、Quick Brief 與 contact model 已成熟，回覆承諾與 friction 分層清楚，已接近高表現 B2B 商用站水準。"],
+  ["定位清晰度", "9.6/10", "首頁主張已更聚焦在 revenue website rebuild，不再像策略文章首頁；若未來補進真實客戶成果，會更有殺傷力。"],
+  ["資訊架構", "9.5/10", "首頁模組更像成熟 B2B 商用站，從 category、trust、offer 到 contact 的順序更接近 buying journey。"],
+  ["案例與證據", "9.2/10", "proof system 已有 shortlist-ready 方向，若再補量化成果、logo 與真實專案名稱，說服力還能再推高。"],
+  ["轉換設計", "9.4/10", "Quick Brief、Workshop、NDA 的 friction ladder 很完整，聯絡方式已更像商用產品化入口。"],
 ];

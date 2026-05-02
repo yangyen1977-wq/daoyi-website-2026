@@ -2,155 +2,71 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
-import {
-  homepageBenchmarks,
-  homepageDecisionLayers,
-  homepageRolePaths,
-  siteConfig,
-  solutionTracks,
-  thirdPartyScorecard,
-} from "@/lib/site";
+import { siteConfig, solutionTracks, thirdPartyScorecard } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "道易科技 2026｜Commercial Website Rebuild Partner",
+  title: "道易科技 2026｜Revenue Website Rebuild Studio",
   description: siteConfig.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "道易科技 2026｜Commercial Website Rebuild Partner",
+    title: "道易科技 2026｜Revenue Website Rebuild Studio",
     description: siteConfig.heroDescription,
     url: `${siteConfig.url}/`,
   },
 };
 
 const heroProof = [
-  {
-    label: "Best fit",
-    value: "B2B / 科技 / SaaS / 製造 / AI 團隊",
-    detail: "商業成熟度已升級，但官網還停在舊版公司介紹與服務列表邏輯。",
-  },
-  {
-    label: "Core rebuild",
-    value: "Positioning × IA × Proof × Conversion",
-    detail: "不是美化首頁，而是把整站重做成能幫 buying committee 做判斷的商務介面。",
-  },
-  {
-    label: "Primary output",
-    value: "Commercial website platform",
-    detail: "讓首頁、方案、案例、Contact 各自承接一個清楚 buying job。",
-  },
+  { label: "For", value: "B2B / 科技 / SaaS / 製造 / AI 團隊", detail: "適合商業成熟度已升級，但官網仍停在舊版公司介紹邏輯的團隊。" },
+  { label: "Rebuild", value: "Positioning × Offer × Proof × Conversion", detail: "不是改首頁視覺，而是重做整個 revenue website system。" },
+  { label: "Output", value: "Shortlist-ready commercial frontstage", detail: "讓品牌敘事、案例證據、方案包裝與 contact model 一起成立。" },
 ];
 
-const executiveTriggers = [
-  {
-    title: "流量有了，但高品質對話沒有同步增加",
-    detail: "問題通常不是投放，而是網站沒先完成價值理解、可信度建立與 next step 設計。",
-    outcome: "先重做首頁敘事、proof cue 與 CTA ladder。",
-  },
-  {
-    title: "能力很多，但外部仍難一句話理解你賣什麼",
-    detail: "這多半是 category framing 與 offer packaging 沒重做，不是字句再修幾輪就會好。",
-    outcome: "把方案頁改成 buying guide，而不是能力字典。",
-  },
-  {
-    title: "案例不少，卻撐不起 shortlist 與內部對齊",
-    detail: "作品展示不等於 decision proof，案例要能被主管、業務與採購轉傳與複述。",
-    outcome: "把案例頁改成 executive summary first 的 proof system。",
-  },
+const benchmarkPatterns = [
+  { source: "Stripe / Ramp / Segment 類型", title: "Outcome-led category entry", detail: "首屏先講商務結果、適合對象與切入時機，不先從公司沿革開始。" },
+  { source: "Vercel / Linear / Notion 類型", title: "Dense but scannable structure", detail: "資訊密度可以高，但區塊層次、標題節奏、掃讀動線必須非常穩。" },
+  { source: "Webstacks / Ramotion / instrument 類型", title: "Offer as commercial packaging", detail: "不是列服務，而是把合作方式、交付、週期、邊界包成可購買路徑。" },
+  { source: "Top B2B case-study flows", title: "Proof before persuasion", detail: "案例先給情境、結果訊號、適用對象，再談過程，讓它能被轉傳。" },
 ];
 
-const maturityStack = [
-  {
-    title: "Category clarity",
-    detail: "5 秒內說清楚你幫誰、改變什麼、為什麼值得現在談。",
-  },
-  {
-    title: "Offer architecture",
-    detail: "把複雜能力整理成更容易提案、採購、驗收的起手方案。",
-  },
-  {
-    title: "Proof portability",
-    detail: "案例與證據先服務 shortlist、轉傳與內部共識，不先服務展示。",
-  },
-  {
-    title: "Conversion design",
-    detail: "依專案成熟度安排 Brief、Workshop、NDA 等不同 friction 的啟動入口。",
-  },
+const rebuildFrames = [
+  { title: "Brand thesis", detail: "先重定你到底是哪一類 partner，解什麼 business problem，為何現在值得談。" },
+  { title: "Sitemap by buyer journey", detail: "首頁、方法、方案、案例、Contact 各自處理一個不同的決策工作。" },
+  { title: "Offer architecture", detail: "把複雜能力變成 starter sprint、decision workshop、proof rebuild 等可啟動產品。" },
+  { title: "Conversion model", detail: "用 Quick Brief、Workshop、NDA 三層 friction 設計第一次接觸。" },
 ];
 
-const homepageAgenda = [
-  {
-    page: "首頁",
-    mission: "先完成理解、shortlist 與 next step 判斷",
-    module: "Outcome-led hero、fit signal、proof cue、CTA ladder",
-  },
-  {
-    page: "重建方法",
-    mission: "教育為什麼這次該重建，而不是繼續修舊站",
-    module: "Rebuild triggers、decision map、operating model",
-  },
-  {
-    page: "商務方案",
-    mission: "把能力重組成可購買、可驗收的 offer path",
-    module: "Solution tracks、delivery model、objection handling",
-  },
-  {
-    page: "案例證據",
-    mission: "把案例變成 buying committee 可引用的 proof asset",
-    module: "Executive summaries、result signal、fit cue",
-  },
-  {
-    page: "啟動專案",
-    mission: "降低第一次接觸 friction，並明講回覆模型",
-    module: "Quick Brief、Workshop、NDA、response promise",
-  },
+const homepageModules = [
+  { title: "01. Category clarity", copy: "5 秒內講清楚你幫誰、解決哪種商務落差、為什麼不是別的 agency。" },
+  { title: "02. Trust surface", copy: "把 buyer fit、proof cues、回覆承諾與合作模式前置，不讓信任建立太晚。" },
+  { title: "03. Offer packaging", copy: "把專案切成可理解、可採購、可驗收的起手方案，而不是抽象能力清單。" },
+  { title: "04. Proof system", copy: "案例先成為 executive summary 和 shortlist asset，再展開細節。" },
+  { title: "05. Contact model", copy: "用低摩擦入口讓高意圖訪客更容易開始，不讓 CTA 停在『歡迎洽詢』。" },
 ];
 
-const rebuildDeliverables = [
-  {
-    label: "01",
-    title: "Brand thesis reset",
-    detail: "重定 category、buyer fit、競爭脈絡與更成熟的品牌主張。",
-  },
-  {
-    label: "02",
-    title: "Sitemap and page system",
-    detail: "把首頁、方法、方案、案例、Contact 重新定義成一套 decision architecture。",
-  },
-  {
-    label: "03",
-    title: "Proof and trust layer",
-    detail: "把案例、FAQ、流程與 trust content 做成更可引用、更可轉傳的外部證據。",
-  },
-  {
-    label: "04",
-    title: "Launch-ready conversion",
-    detail: "把 CTA、表單、回覆承諾與啟動流程產品化，讓高意圖訪客更容易開始。",
-  },
+const decisionStrip = [
+  { title: "流量進來了，但對話品質沒有一起上升", answer: "通常不是投放問題，而是首頁沒先完成價值理解、可信度建立與 next step 設計。" },
+  { title: "公司能力很多，但外部仍說不出你到底賣什麼", answer: "這代表 category framing 和 offer packaging 還沒有被重建。" },
+  { title: "案例不少，卻撐不起 shortlist 與內部共識", answer: "作品展示不等於 decision proof，案例需要先能被主管與採購複述。" },
 ];
 
-const buildVsOptimize = [
-  {
-    side: "持續優化舊站",
-    title: "沿用舊資訊架構，只在原文案與畫面上修修補補",
-    bullets: ["hero 改寫", "服務文案微調", "案例多放幾張圖", "CTA 換字"],
-  },
-  {
-    side: "重新設計與重建",
-    title: "直接改寫買方理解路徑、頁面角色、證據系統與商務啟動方式",
-    bullets: ["重定品牌命題", "重排 sitemap", "重做 offer packaging", "重建 proof 與 conversion path"],
-  },
+const engagementModels = [
+  { title: "Commercial Positioning Sprint", detail: "先重定 category thesis、首頁敘事與 sitemap，適合網站已跟不上商業成熟度。", output: "Hero、homepage flow、page roles" },
+  { title: "Offer Packaging Sprint", detail: "把服務與能力改寫成 buying path，適合能力強但難賣、難轉述的團隊。", output: "Offer map、objection handling、starter packages" },
+  { title: "Proof and Conversion Sprint", detail: "把案例、trust blocks、CTA 與 contact model 做成熟，適合已有流量但詢問品質不穩。", output: "Case summaries、trust UX、contact ladder" },
+];
+
+const proofAssets = [
+  "首頁前兩屏就前置 buyer fit、rebuild trigger、proof cue 與 CTA ladder。",
+  "方案頁寫成 buying guide，不再只是能力與服務名稱堆疊。",
+  "案例頁先給 executive summary、result signal、fit cue，再展開完整內容。",
+  "Contact 頁把回覆節奏、交付預期、保密路徑講清楚，降低第一次接觸的不確定。",
 ];
 
 const homepageSchema = {
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "Organization", name: siteConfig.name, url: siteConfig.url, email: siteConfig.email, description: siteConfig.description },
-    {
-      "@type": "ProfessionalService",
-      name: siteConfig.name,
-      url: siteConfig.url,
-      serviceType: ["commercial website rebuild", "offer architecture", "proof system design"],
-    },
+    { "@type": "ProfessionalService", name: siteConfig.name, url: siteConfig.url, serviceType: ["commercial website rebuild", "offer architecture", "proof system design"] },
   ],
 };
 
@@ -160,14 +76,14 @@ export default function HomePage() {
       <section className="hero-section hero-rebuild">
         <div className="shell hero-rebuild-grid">
           <div className="hero-copy">
-            <span className="hero-eyebrow">DaoYi Technology / Commercial Website Rebuild Partner</span>
-            <div className="hero-intro-badge">把企業官網重建成能服務品牌敘事、shortlist、內部共識與商務成交的 external revenue interface</div>
-            <h1>{siteConfig.heroTitle}</h1>
-            <p>{siteConfig.heroDescription}</p>
+            <span className="hero-eyebrow">DaoYi Technology / Revenue Website Rebuild Studio</span>
+            <div className="hero-intro-badge">把企業官網重建成能服務理解、shortlist、內部共識與商務成交的 revenue website system</div>
+            <h1>不是優化舊站，而是把整個商務前台重新設計成更容易成交的版本。</h1>
+            <p>道易科技替 B2B、科技、SaaS、製造與 AI 團隊重做品牌命題、網站地圖、方案包裝、案例證據與 contact flow。最後交付的不是比較新的網站，而是比較成熟、比較可被轉述、也比較能支撐 buying committee 判斷的 commercial frontstage。</p>
 
             <div className="hero-actions">
               <Link href="/#quick-brief" className="button-primary button-large">開始這次重建</Link>
-              <Link href="/solutions" className="button-secondary button-large">先看起手方案</Link>
+              <Link href="/work" className="button-secondary button-large">先看證據系統</Link>
             </div>
 
             <div className="hero-outcome-board">
@@ -184,19 +100,19 @@ export default function HomePage() {
           <div className="hero-rebuild-panel">
             <div className="hero-panel-card spotlight">
               <span className="mini-label accent">2026 rebuild thesis</span>
-              <strong>成熟 B2B 官網的任務，不只是介紹公司，而是加速理解、信任、內部對齊與下一步。</strong>
+              <strong>成熟 B2B 官網不只是介紹公司，而是加速理解、建立信任、支撐內部對齊，並把下一步設計得更好開始。</strong>
               <ul className="bullet-list compact hero-highlight-list">
                 <li>主張先講商務結果，不先掉進自我介紹。</li>
-                <li>網站地圖依 buyer journey 重排，不延續舊站資訊分配。</li>
-                <li>案例先當 decision proof，再當作品展示。</li>
-                <li>Contact flow 產品化，讓第一次接觸更低摩擦。</li>
+                <li>首頁先服務 shortlist，不先服務內容完整性。</li>
+                <li>案例先當 proof asset，再當展示素材。</li>
+                <li>Contact flow 直接產品化，不停在一般聯絡頁。</li>
               </ul>
             </div>
 
             <div className="rebuild-note-stack">
-              {homepageDecisionLayers.map((item) => (
+              {rebuildFrames.map((item, index) => (
                 <article key={item.title} className="hero-panel-card stat-card">
-                  <span className="mini-label">{item.label}</span>
+                  <span className="mini-label">Layer 0{index + 1}</span>
                   <strong>{item.title}</strong>
                   <p>{item.detail}</p>
                 </article>
@@ -206,86 +122,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Section eyebrow="Board-level triggers" title="這些狀況，通常不是舊站持續優化就能解。">
-        <div className="card-grid three-up">
-          {executiveTriggers.map((item) => (
-            <article key={item.title} className="card decision-card homepage-shortlist-card">
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <strong>{item.outcome}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Benchmark patterns" title="這輪重製吸收的是成熟 B2B / SaaS / 設計公司官網的上層規律。" description="不是抄畫面，而是抽出高表現商用站共同在做的事：更快 clarity、更早 proof、更低 friction。">
+      <Section eyebrow="Benchmark synthesis" title="這輪重製吸收的是成熟 B2B / SaaS / 設計公司官網真正有用的規律。" description="重點不是抄畫面，而是把高表現官網共同在做的 category、UX、proof 與 conversion pattern 轉成道易自己的商務語言。">
         <div className="card-grid four-up homepage-benchmark-grid">
-          {homepageBenchmarks.map((item) => (
+          {benchmarkPatterns.map((item) => (
             <article key={item.title} className="card homepage-benchmark-card">
               <span className="mini-label accent">{item.source}</span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
-              <strong>{item.application}</strong>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Commercial maturity stack" title="新版首頁不是形象頁，而是 decision-ready commercial brief。">
-        <div className="card-grid four-up">
-          {maturityStack.map((item) => (
+      <Section eyebrow="Why rebuild" title="這些狀況，通常不是持續優化舊站就能解。">
+        <div className="card-grid three-up">
+          {decisionStrip.map((item) => (
+            <article key={item.title} className="card decision-card homepage-shortlist-card">
+              <h3>{item.title}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Homepage system" title="新版首頁不再像策略備忘錄，而是更像可以拿去商用的 decision interface。">
+        <div className="card-grid three-up">
+          {homepageModules.map((item) => (
             <article key={item.title} className="card rebuild-module-card">
               <h3>{item.title}</h3>
-              <p>{item.detail}</p>
+              <p>{item.copy}</p>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Rebuild mindset" title="這次不是延續舊站優化，而是改用重新設計與重建的工作方式。">
-        <div className="card-grid two-up">
-          {buildVsOptimize.map((item) => (
-            <article key={item.side} className="feature-surface">
-              <span className="mini-label accent">{item.side}</span>
+      <Section eyebrow="What gets rebuilt" title="這次不是修文案，而是重做一整套網站商務結構。">
+        <div className="feature-surface">
+          <ul className="bullet-list compact">
+            {proofAssets.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        </div>
+      </Section>
+
+      <Section eyebrow="Commercial offers" title="先從最卡的一層切進去，不一定要一開始就做整站。">
+        <div className="card-grid three-up">
+          {engagementModels.map((item) => (
+            <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
-              <ul className="bullet-list compact">
-                {item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Sitemap rebuild" title="新版 sitemap 先對齊 buying journey，再對齊內容分類。">
-        <div className="homepage-before-after-table">
-          <div className="homepage-before-after-header">
-            <span>頁面</span>
-            <span>任務</span>
-            <span>重建方向</span>
-          </div>
-          {homepageAgenda.map((item) => (
-            <div key={item.page} className="homepage-before-after-row">
-              <strong>{item.page}</strong>
-              <p>{item.mission}</p>
-              <p>{item.module}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="What gets rebuilt" title="道易不是沿著原站小修，而是直接重做這四層。">
-        <div className="card-grid four-up">
-          {rebuildDeliverables.map((item) => (
-            <article key={item.label} className="card process-card">
-              <span className="step-index">{item.label}</span>
-              <strong>{item.title}</strong>
               <p>{item.detail}</p>
+              <strong>{item.output}</strong>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Offer tracks" title="先從最卡的一層切進去，不必一開始就做整站大案。">
+      <Section eyebrow="Starter sprints" title="如果要更具體啟動，現在的三條起手方案長這樣。">
         <div className="card-grid three-up">
           {solutionTracks.map((item) => (
             <article key={item.title} className="card rebuild-module-card">
@@ -299,19 +190,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Buying committee" title="同一個網站，要同時回答不同角色的決策問題。">
-        <div className="card-grid three-up">
-          {homepageRolePaths.map((item) => (
-            <article key={item.role} className="card trust-card">
-              <span className="mini-label accent">{item.role}</span>
-              <h3>{item.ask}</h3>
-              <p>{item.answer}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Third-party quick review" title="從第三方角度看，這版方向更像成熟商用站，而不是策略備忘錄。">
+      <Section eyebrow="Third-party quick review" title="從第三方角度看，這版已更接近成熟商用站，而不是『懂策略但不像真的官網』。">
         <div className="card-grid four-up">
           {thirdPartyScorecard.map(([title, score, detail]) => (
             <article key={title} className="card trust-card">
@@ -323,7 +202,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section id="quick-brief" eyebrow="Start the rebuild" title="如果網站已經跟不上現在的商業階段，可以直接從這裡開始。">
+      <Section id="quick-brief" eyebrow="Start the rebuild" title="如果網站已跟不上現在的商業階段，可以直接從這裡開始。">
         <QuickBriefForm />
       </Section>
 
