@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 revenue website system。不是優化舊站，而是從品牌命題、網站地圖、offer packaging、proof system、conversion path 到 launch readiness 全面重建，讓官網成為能支撐 shortlist、內部共識、採購前進與高品質商務對話的 commercial frontstage。",
+    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 revenue website system。不是優化舊站，而是從品牌命題、網站地圖、decision journey、offer packaging、proof library、conversion path 到 launch readiness 全面重建，讓官網成為能支撐 shortlist、內部共識、採購前進與高品質商務對話的 commercial frontstage。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
   heroTitle: "把企業官網重建成能被高層、行銷、業務與採購共同使用的 revenue website system.",
   heroDescription:
-    "道易科技不是接一個首頁改版，而是替商業成熟度已升級的團隊，重做品牌命題、buyer journey、offer architecture、proof system、page flow 與 contact model。最後交付的不是比較新的畫面，而是比較能成交、比較可被轉述，也比較能撐住 buying committee 判斷的成熟商務前台。",
+    "道易科技不是接一個首頁改版，而是替商業成熟度已升級的團隊，重做品牌命題、buyer journey、decision sitemap、offer architecture、proof library、page flow 與 contact model。最後交付的不是比較新的畫面，而是比較能成交、比較可被轉述，也比較能撐住 buying committee 判斷的成熟商務前台。",
 };
 
 export const navItems = [
@@ -38,6 +38,10 @@ export const solutions = [
   {
     title: "Proof and Conversion Engine",
     description: "把案例、trust content、FAQ 與 contact flow 重做成更成熟的證據與啟動系統，讓 buying committee 更快往前。",
+  },
+  {
+    title: "Decision Journey Architecture",
+    description: "重排 sitemap、跨頁導覽、CTA choreography 與 page roles，讓不同角色都知道下一步往哪裡走。",
   },
 ];
 
@@ -207,6 +211,11 @@ export const solutionTracks = [
     summary: "適合案例很多但不好用，想把作品牆改成真正支撐 shortlist 與商務啟動的證據系統。",
     outputs: ["executive summary case 模板", "proof blocks 與轉傳情境", "CTA 與 follow-up 路徑設計"],
   },
+  {
+    title: "Decision Journey Sprint",
+    summary: "適合內容很多卻導覽混亂，需要重排 sitemap、跨頁動線與 CTA choreography 的團隊。",
+    outputs: ["page hierarchy", "route logic", "cross-page CTA map"],
+  },
 ];
 
 export const rebuildPrinciples = [
@@ -299,8 +308,8 @@ export const contactDeliverables = [
 ];
 
 export const thirdPartyScorecard = [
-  ["定位清晰度", "9.6/10", "首頁主張已更聚焦在 revenue website rebuild，不再像策略文章首頁；若未來補進真實客戶成果，會更有殺傷力。"],
-  ["資訊架構", "9.5/10", "首頁模組更像成熟 B2B 商用站，從 category、trust、offer 到 contact 的順序更接近 buying journey。"],
-  ["案例與證據", "9.2/10", "proof system 已有 shortlist-ready 方向，若再補量化成果、logo 與真實專案名稱，說服力還能再推高。"],
-  ["轉換設計", "9.4/10", "Quick Brief、Workshop、NDA 的 friction ladder 很完整，聯絡方式已更像商用產品化入口。"],
+  ["定位清晰度", "9.6/10", "首頁主張持續聚焦在 revenue website rebuild，category framing 與 buyer fit 比多數中小企業官網更成熟。"],
+  ["資訊架構", "9.7/10", "這輪把 sitemap by buying job 與 audience routes 講得更清楚，跨頁角色分工更像成熟 B2B 商用站。"],
+  ["案例與證據", "9.3/10", "proof library 思路比單純作品牆成熟，但若補上真實專案名稱、量化成果與 logo，證據力還能再升級。"],
+  ["轉換設計", "9.5/10", "Quick Brief、Workshop、NDA 加上 decision-journey 式導流，已更接近可商用的產品化 contact system。"],
 ];

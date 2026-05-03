@@ -26,6 +26,10 @@ const proofLayers = [
     detail: "方法、流程、交付與信任訊號要接在摘要後面，支援後續提問。",
   },
   {
+    title: "Commercial fit cue",
+    detail: "每個案例都要讓讀者很快知道這是誰該看、什麼情境最值得參考。",
+  },
+  {
     title: "CTA after proof",
     detail: "每個案例看完都應該接得上下一步，不讓信任停在閱讀階段。",
   },
@@ -36,6 +40,25 @@ const proofChecklist = [
   "明講這次網站、訊息或資料體驗到底改變了什麼。",
   "優先給能被引用的結果訊號，而不是冗長過程敘述。",
   "每個案例都要指出適合哪一類團隊參考。",
+];
+
+const proofLibraryRules = [
+  {
+    title: "Before / after 要被一句話說清楚",
+    detail: "不是只說做了什麼，而是要先說網站或敘事從什麼狀態被重建成什麼狀態。",
+  },
+  {
+    title: "結果訊號要先於方法細節",
+    detail: "像 conversion uplift、shortlist quality、sales clarity、buyer trust 這類訊號應先被看見。",
+  },
+  {
+    title: "案例摘要要能被主管直接轉傳",
+    detail: "讀完第一屏就應該能複述這案子為什麼值得內部討論。",
+  },
+  {
+    title: "每個案例要接回對應方案",
+    detail: "不要讓案例獨立存在，而是清楚告訴讀者這屬於哪種重建切口。",
+  },
 ];
 
 const proofMaturityChecks = [
@@ -69,7 +92,7 @@ export default function WorkPage() {
       </Section>
 
       <Section eyebrow="Proof design" title="成熟的案例頁，不是更長，而是更可引用、更可判斷。">
-        <div className="card-grid four-up">
+        <div className="card-grid five-up">
           {proofLayers.map((item) => (
             <article key={item.title} className="card decision-card">
               <h3>{item.title}</h3>
@@ -84,6 +107,17 @@ export default function WorkPage() {
           <ul className="bullet-list compact">
             {proofChecklist.map((item) => <li key={item}>{item}</li>)}
           </ul>
+        </div>
+      </Section>
+
+      <Section eyebrow="Proof library rules" title="新版案例頁不是作品牆，而是一個可被拿去討論與轉傳的 proof library。">
+        <div className="card-grid two-up">
+          {proofLibraryRules.map((item) => (
+            <article key={item.title} className="card trust-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
         </div>
       </Section>
 
