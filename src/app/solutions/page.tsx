@@ -88,7 +88,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <Section eyebrow="Core tracks" title="三條能力主軸，對應三種最常見的商業問題。">
+      <Section eyebrow="Core tracks" title="四條重建主軸，對應官網最常見的四種商業卡點。">
         <div className="card-grid three-up">
           {solutions.map((item) => (
             <article key={item.title} className="card trust-card">
@@ -121,7 +121,7 @@ export default function SolutionsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Commercial packages" title="新版方案頁不只列主軸，也直接包成四條可啟動的商務路徑。">
+      <Section eyebrow="Commercial packages" title="新版方案頁不只列主軸，也把它們產品化成四條可採購、可啟動的商務路徑。">
         <div className="card-grid two-up">
           {commercialPackages.map((item) => (
             <article key={item.title} className="card trust-card">
@@ -133,7 +133,7 @@ export default function SolutionsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Delivery model" title="四個 starter sprint，對應四種常見的重建切入點。">
+      <Section eyebrow="Delivery model" title="四個 starter sprint，讓網站重建先從最值得重做的一層開始。">
         <div className="card-grid three-up">
           {solutionTracks.map((item) => (
             <article key={item.title} className="card rebuild-module-card">

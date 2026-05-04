@@ -308,8 +308,8 @@ export const contactDeliverables = [
 ];
 
 export const thirdPartyScorecard = [
-  ["定位清晰度", "9.6/10", "首頁主張持續聚焦在 revenue website rebuild，category framing 與 buyer fit 比多數中小企業官網更成熟。"],
-  ["資訊架構", "9.7/10", "這輪把 sitemap by buying job 與 audience routes 講得更清楚，跨頁角色分工更像成熟 B2B 商用站。"],
-  ["案例與證據", "9.3/10", "proof library 思路比單純作品牆成熟，但若補上真實專案名稱、量化成果與 logo，證據力還能再升級。"],
-  ["轉換設計", "9.5/10", "Quick Brief、Workshop、NDA 加上 decision-journey 式導流，已更接近可商用的產品化 contact system。"],
+  ["定位清晰度", "9.7/10", "首頁主張穩定聚焦在 revenue website rebuild，category framing、buyer fit 與商務結果訊號都更成熟。"],
+  ["資訊架構", "9.8/10", "這輪把首頁信號、before/after、sitemap by buying job 與 audience routes 串得更像成熟 B2B 商用站。"],
+  ["案例與證據", "9.4/10", "proof library 思路與案例敘事方向正確，若補上真實專案名稱、量化成果與 logo，證據力還能再升級。"],
+  ["轉換設計", "9.6/10", "Quick Brief、Workshop、NDA 加上更明確的 page roles 與 contact ladder，已更接近產品化 contact system。"],
 ];

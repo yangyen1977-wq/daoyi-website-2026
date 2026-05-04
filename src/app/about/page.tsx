@@ -117,7 +117,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Operating model" title="2026 版本的合作方式，核心是先重設，再落地。">
+      <Section eyebrow="Operating model" title="2026 版本的合作方式，核心不是修補，而是先重設商務結構，再快速落地。">
         <div className="card-grid four-up">
           {operatingModel.map((item) => (
             <article key={item.label} className="card process-card">
@@ -129,7 +129,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Why now" title="如果網站已經跟不上業務階段，現在就值得開始。">
+      <Section eyebrow="Why now" title="如果網站已經跟不上業務階段，現在就值得直接重建，不值得再拖在舊結構上。">
         <div className="feature-surface two-column">
           <div>
             <h3>適合現在談的情況</h3>

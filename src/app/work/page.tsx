@@ -110,7 +110,7 @@ export default function WorkPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Proof library rules" title="新版案例頁不是作品牆，而是一個可被拿去討論與轉傳的 proof library。">
+      <Section eyebrow="Proof library rules" title="新版案例頁不是作品牆，而是一個可被拿去討論、轉傳與支撐採購的 proof library。">
         <div className="card-grid two-up">
           {proofLibraryRules.map((item) => (
             <article key={item.title} className="card trust-card">
@@ -136,7 +136,7 @@ export default function WorkPage() {
         <CaseSnapshots />
       </Section>
 
-      <Section eyebrow="Third-party quick review" title="從第三方觀點看，目前 proof 方向正確，已更接近成熟的商務資產。">
+      <Section eyebrow="Third-party quick review" title="從第三方觀點看，目前案例系統方向正確，已更接近成熟 B2B 商務資產。">
         <div className="card-grid four-up">
           {thirdPartyScorecard.slice(0, 3).map(([title, score, detail]) => (
             <article key={title} className="card trust-card">

@@ -46,7 +46,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Response model" title="新版 Contact 頁，先明講你會拿到什麼。">
+      <Section eyebrow="Response model" title="新版 Contact 頁不只收資料，而是先明講你會拿到什麼。">
         <div className="card-grid three-up">
           {responseModel.map((item) => (
             <article key={item.title} className="card rebuild-module-card">
@@ -57,7 +57,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section eyebrow="What you get" title="這不是填完表單等回覆，而是直接拿到可行的重建起點。">
+      <Section eyebrow="What you get" title="這不是填完表單等回覆，而是直接拿到可行的重建起點與商務判斷。">
         <div className="card-grid three-up">
           {contactDeliverables.map((item) => (
             <article key={item} className="card rebuild-module-card">
