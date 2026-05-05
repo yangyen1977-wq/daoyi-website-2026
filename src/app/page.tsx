@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 const heroProof = [
   { label: "For", value: "B2B / 科技 / SaaS / 製造 / AI 團隊", detail: "適合商業成熟度已升級，但官網仍停在舊版公司介紹邏輯的團隊。" },
-  { label: "Rebuild", value: "Positioning × Offer × Proof × Conversion", detail: "不是改首頁視覺，而是重做整個 revenue website system。" },
-  { label: "Output", value: "Shortlist-ready commercial frontstage", detail: "讓品牌敘事、案例證據、方案包裝與 contact model 一起成立。" },
+  { label: "Rebuild", value: "Positioning × Offer × Proof × Conversion", detail: "不是改首頁視覺，而是重做整個 commercial website system。" },
+  { label: "Output", value: "Buyer-ready commercial frontstage", detail: "讓品牌敘事、案例證據、方案包裝與 contact model 一起成立。" },
 ];
 
 const benchmarkPatterns = [
@@ -27,14 +27,14 @@ const benchmarkPatterns = [
   { source: "Webstacks / Ramotion / instrument 類型", title: "Offer as commercial packaging", detail: "不是列服務，而是把合作方式、交付、週期、邊界包成可購買路徑。" },
   { source: "Top SaaS case-study flows", title: "Proof before persuasion", detail: "案例先給情境、結果訊號、適用對象，再談過程，讓它能被轉傳。" },
   { source: "Clay / Samsara / enterprise AI 類型", title: "Signal-rich trust layer", detail: "成熟科技站會把 buyer fit、交付速度、合作模式與風險控制訊號一起前置。" },
-  { source: "Top design studio rethink 類型", title: "Homepage as decision room", detail: "首頁不只是品牌展示，而是讓 founder、marketing、sales、procurement 都能找到自己的判斷線索。" },
+  { source: "Webflow Enterprise / design partner 類型", title: "Homepage as sales enablement", detail: "首頁不是形象牆，而是讓 founder、marketing、sales、procurement 都能快速找到自己的判斷入口。" },
 ];
 
 const executiveSignals = [
   { title: "Category", detail: "道易不是 generic agency，而是把網站重建成商務前台的 commercial rebuild partner。" },
   { title: "Buyer fit", detail: "鎖定 B2B、科技、製造、AI 與高知識密度團隊，不再對所有企業平均說話。" },
   { title: "Buying motion", detail: "首頁、方法、方案、案例、Contact 分別服務 shortlist、理解、採購、對齊與啟動。" },
-  { title: "Conversion", detail: "Quick Brief、Workshop、NDA 三層入口，讓不同成熟度的案子都能開始。" },
+  { title: "Commercial confidence", detail: "把回覆節奏、起手方式、proof 密度與風險控制訊號一起前置，降低陌生買方不確定感。" },
 ];
 
 const beforeAfterRows = [
@@ -88,6 +88,13 @@ const engagementModels = [
   { title: "Decision Journey Sprint", detail: "重做整站 sitemap、跨頁導流與 buyer path，適合內容很多但導覽與頁面任務互相打架的團隊。", output: "Page hierarchy、CTA choreography、route logic" },
 ];
 
+const commercialReadiness = [
+  { title: "Buyer-ready messaging", detail: "先回答買方現在最想知道的 fit、差異、風險與下一步，而不是先講自己做過很多事。" },
+  { title: "Productized entry offers", detail: "把合作方式寫成 starter sprint、decision workshop、proof rebuild，而不是抽象服務列表。" },
+  { title: "Proof that can travel", detail: "案例要能被主管、業務與採購直接複述、截圖、轉傳與內部引用。" },
+  { title: "Friction-aware conversion", detail: "Quick Brief、Workshop、NDA 各自對應不同成熟度與風險情境，減少第一次接觸卡住。" },
+];
+
 const proofAssets = [
   "首頁前兩屏就前置 buyer fit、rebuild trigger、proof cue 與 CTA ladder。",
   "方案頁寫成 buying guide，不再只是能力與服務名稱堆疊。",
@@ -125,9 +132,9 @@ export default function HomePage() {
       <section className="hero-section hero-rebuild">
         <div className="shell hero-rebuild-grid">
           <div className="hero-copy">
-            <span className="hero-eyebrow">DaoYi Technology / Revenue Website Rebuild Studio</span>
-            <div className="hero-intro-badge">把企業官網重建成能服務理解、shortlist、內部共識與商務成交的 revenue website system</div>
-            <h1>不是優化舊站，而是把整個商務前台重新設計成更容易成交的版本。</h1>
+            <span className="hero-eyebrow">DaoYi Technology / Commercial Website Rebuild Partner</span>
+            <div className="hero-intro-badge">把企業官網重建成能服務 shortlist、內部共識、採購推進與商務成交的 commercial website system</div>
+            <h1>不是優化舊站，而是把整個商務前台重新設計成更成熟、更 buyer-ready 的版本。</h1>
             <p>道易科技替 B2B、科技、SaaS、製造與 AI 團隊重做品牌命題、網站地圖、方案包裝、案例證據與 contact flow。最後交付的不是比較新的網站，而是比較成熟、比較可被轉述、也比較能支撐 buying committee 判斷的 commercial frontstage。</p>
 
             <div className="hero-actions">
@@ -198,6 +205,17 @@ export default function HomePage() {
         <div className="card-grid four-up">
           {executiveSignals.map((item) => (
             <article key={item.title} className="card rebuild-module-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Commercial readiness" title="這次重製不只改畫面，而是把成熟商務站最重要的四個底層能力補齊。">
+        <div className="card-grid four-up">
+          {commercialReadiness.map((item) => (
+            <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>

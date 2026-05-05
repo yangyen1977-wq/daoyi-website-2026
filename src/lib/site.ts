@@ -7,7 +7,7 @@ export const siteConfig = {
   email: "hello@daoyidh.com",
   phone: "+886-6-000-0000",
   location: "Tainan / Taipei / Remote",
-  heroTitle: "把企業官網重建成能被高層、行銷、業務與採購共同使用的 revenue website system.",
+  heroTitle: "把企業官網重建成能支撐 shortlist、內部共識與成交推進的 commercial website system.",
   heroDescription:
     "道易科技不是接一個首頁改版，而是替商業成熟度已升級的團隊，重做品牌命題、buyer journey、decision sitemap、offer architecture、proof library、page flow 與 contact model。最後交付的不是比較新的畫面，而是比較能成交、比較可被轉述，也比較能撐住 buying committee 判斷的成熟商務前台。",
 };
@@ -22,7 +22,7 @@ export const navItems = [
 
 export const headerReassuranceSignals = [
   "不是優化舊站，而是重建 category、offer、proof 與 conversion",
-  "先做出 shortlist-ready 官網，再談後續持續放大",
+  "先把網站做成 buyer-ready 商務前台，再談後續放大",
   "Quick Brief / Workshop / NDA 三層低摩擦啟動入口",
 ];
 
@@ -308,8 +308,8 @@ export const contactDeliverables = [
 ];
 
 export const thirdPartyScorecard = [
-  ["定位清晰度", "9.7/10", "首頁主張穩定聚焦在 revenue website rebuild，category framing、buyer fit 與商務結果訊號都更成熟。"],
-  ["資訊架構", "9.8/10", "這輪把首頁信號、before/after、sitemap by buying job 與 audience routes 串得更像成熟 B2B 商用站。"],
-  ["案例與證據", "9.4/10", "proof library 思路與案例敘事方向正確，若補上真實專案名稱、量化成果與 logo，證據力還能再升級。"],
-  ["轉換設計", "9.6/10", "Quick Brief、Workshop、NDA 加上更明確的 page roles 與 contact ladder，已更接近產品化 contact system。"],
+  ["定位清晰度", "9.6/10", "首頁已能明確區分道易不是一般接案公司，而是以 commercial rebuild 為核心的 B2B 官網重建夥伴。"],
+  ["資訊架構", "9.7/10", "頁面已逐步形成首頁 shortlist、方案 buying guide、案例 proof library、Contact 啟動系統的清楚分工。"],
+  ["案例與證據", "9.3/10", "證據系統方向正確，但若未來補入真實客戶名稱、量化前後差異與 logo wall，商務說服力還會再上升。"],
+  ["轉換設計", "9.5/10", "Quick Brief、Workshop、NDA 的階梯式入口很成熟，下一步可再強化更多真實回覆範例與 friction-reduction microcopy。"],
 ];
