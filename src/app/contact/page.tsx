@@ -10,18 +10,9 @@ export const metadata: Metadata = {
 };
 
 const responseModel = [
-  {
-    title: "24h 內回覆",
-    detail: "不是只回收到，而是會指出目前最大卡點更像 positioning、offer、proof 還是 conversion。",
-  },
-  {
-    title: "建議起手 sprint",
-    detail: "會根據網站成熟度與內部情境，建議首頁、方案頁、案例系統或 Contact flow 的優先序。",
-  },
-  {
-    title: "低風險進場",
-    detail: "若涉及保密、採購或法遵，可改走 NDA / Email 路徑，不強迫一次揭露全部資訊。",
-  },
+  { title: "24h 內回覆", detail: "不是只回收到，而是會指出目前最大卡點更像 positioning、offer、proof 還是 conversion。" },
+  { title: "建議起手 sprint", detail: "會根據網站成熟度與內部情境，建議首頁、方案頁、案例系統或 Contact flow 的優先序。" },
+  { title: "低風險進場", detail: "若涉及保密、採購或法遵，可改走 NDA / Email 路徑，不強迫一次揭露全部資訊。" },
 ];
 
 export default function ContactPage() {
