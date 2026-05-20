@@ -1,113 +1,68 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import { siteConfig, solutionTracks, solutions, solutionBlueprints } from "@/lib/site";
+import { SolutionCard } from "@/components/solution-card";
+import { StartModeCard } from "@/components/start-mode-card";
+import { SubpageHero } from "@/components/subpage-hero";
+import { solutionDetails, solutionMap, solutionsHero, solutionStartModes } from "@/lib/content/solutions";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "商務方案",
-  description: "把品牌主張、頁面架構、offer packaging、proof system 與 conversion design 重組成四條成熟商用路徑。",
+  title: "解決方案｜數據信任鏈、DPP、ESG 稽核與 AI-Ontology",
+  description: "道易科技以可信資料底座，提供數據信任鏈、DPP 數位產品護照、AI-Ontology 知識平台與 AIoT 回收履歷整合。",
   alternates: { canonical: "/solutions" },
 };
-
-const buyingGuide = [
-  ["網站看起來不差，但高意圖訪客還是很難快速判斷 fit", "先從 Commercial Positioning Sprint 開始，解首頁與 sitemap 問題。"],
-  ["能力很多，但業務、主管與外部買方都很難一句話說清你到底賣什麼", "先從 Offer Packaging Sprint 開始，重做 package 與 buying logic。"],
-  ["案例不少，卻還無法支撐 shortlist、提案或採購內部共識", "先從 Proof System Sprint 開始，讓 evidence 更能被引用。"],
-  ["內容很多，但跨頁動線很亂，訪客不知道下一步去哪", "先從 Decision Journey Sprint 開始，重排頁面角色、導覽順序與 CTA choreography。"],
-];
-
-const decisionFaq = [
-  { title: "為什麼不直接列所有服務？", detail: "因為成熟 B2B 買方不是在找能力名詞，而是在找適合自己現況的起手方案與可信交付方式。" },
-  { title: "為什麼方案要做成 sprint？", detail: "因為這能降低第一次合作門檻，也讓網站重建從大案變成可啟動、可評估、可擴充的流程。" },
-  { title: "為什麼方案頁要接案例與 Contact？", detail: "因為 buying guide 若不能直接接 proof 與下一步，就只是另一頁介紹文案。" },
-];
 
 export default function SolutionsPage() {
   return (
     <main id="main-content">
-      <section className="subpage-hero">
-        <div className="shell narrow">
-          <span className="section-eyebrow">Offer Architecture</span>
-          <h1>方案頁的任務不是列能力，而是把複雜服務包成可理解、可採購、可啟動的路徑。</h1>
-          <p>新版方案頁像 enterprise buying guide。它幫買方快速判斷該從哪個 sprint 開始、會拿到什麼、邊界在哪裡，以及下一步怎麼走。</p>
-        </div>
-      </section>
+      <SubpageHero
+        eyebrow={solutionsHero.eyebrow}
+        title={solutionsHero.title}
+        description={solutionsHero.description}
+        actions={[
+          { href: "/contact", label: "討論適合的方案" },
+          { href: "/work", label: "查看案例實績", variant: "secondary" },
+        ]}
+      />
 
-      <Section eyebrow="Core tracks" title="四條重建主軸，對應官網最常見的四種商業卡點。">
+      <Section eyebrow="Solution map" title="先看你要解決哪一種資料信任問題。">
+        <div className="card-grid four-up">
+          {solutionMap.map((item) => (
+            <SolutionCard key={item.title} title={item.title} description={item.description} />
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Buying guide" title="每個方案都先說清楚適用對象與可驗收成果。">
         <div className="card-grid two-up">
-          {solutions.map((item) => (
-            <article key={item.title} className="card trust-card">
+          {solutionDetails.map((item) => (
+            <article key={item.title} className="card offer-room-card">
+              <span className="mini-label accent">{item.eyebrow}</span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Buying guide" title="先判斷卡點在哪一層，再決定從哪條方案進去。">
-        <div className="card-grid two-up">
-          {buyingGuide.map(([title, detail]) => (
-            <article key={title} className="feature-surface">
-              <h3>{title}</h3>
-              <p>{detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Packaging layers" title="成熟商用方案，要同時處理 category、購買理解與交付信心。">
-        <div className="card-grid five-up">
-          {solutionBlueprints.map((item) => (
-            <article key={item.title} className="card decision-card">
-              <h3>{item.title}</h3>
-              <p>{item.summary}</p>
+              <p><strong>適合對象：</strong>{item.audience.join("、")}</p>
+              <p><strong>解決問題：</strong>{item.problems.join("、")}</p>
               <ul className="bullet-list compact">
-                {item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                {item.deliverables.map((deliverable) => <li key={deliverable}>{deliverable}</li>)}
               </ul>
+              <p><strong>相關技術：</strong>{item.technologies}</p>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Commercial packages" title="新版方案頁不只列主軸，也把它們產品化成四條可採購、可啟動的商務路徑。">
-        <div className="card-grid two-up">
-          {solutionTracks.map((item) => (
-            <article key={item.title} className="card trust-card">
-              <h3>{item.title}</h3>
-              <p>{item.summary}</p>
-              <ul className="bullet-list compact">
-                {item.outputs.map((output) => <li key={output}>{output}</li>)}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Decision FAQ" title="讓方案頁更像 buying guide，而不是靜態服務頁。">
+      <Section eyebrow="Recommended start" title="若還不確定完整範圍，先用一條流程或一批資料做 PoC。">
         <div className="card-grid three-up">
-          {decisionFaq.map((item) => (
-            <article key={item.title} className="card rebuild-module-card">
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
+          {solutionStartModes.map((item) => (
+            <StartModeCard key={item.title} title={item.title} detail={item.detail} fit={item.fit} />
           ))}
         </div>
-      </Section>
-
-      <Section eyebrow="Next step" title="如果不想一次做太大，可以先用一個短 sprint 把最卡的地方拆開。">
-        <div className="feature-surface two-column">
-          <div>
-            <h3>適合先做的短 sprint</h3>
-            <p>通常是首頁、Offer 頁、案例摘要格式、跨頁 sitemap，或 contact flow。先把最直接影響高品質對話的模組重建起來。</p>
-          </div>
-          <div>
-            <h3>下一步</h3>
-            <p><Link href="/contact" className="button-primary inline-button">描述你的專案狀態</Link></p>
-          </div>
+        <div className="section-actions">
+          <Link href="/contact" className="button-primary button-large">討論啟動方式</Link>
+          <a href={`mailto:${siteConfig.email}`} className="button-secondary button-large">寄信給道易</a>
         </div>
       </Section>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "DaoYi rebuild tracks", url: `${siteConfig.url}/solutions` }) }} />
     </main>
   );
 }

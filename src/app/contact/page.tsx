@@ -1,90 +1,104 @@
 import type { Metadata } from "next";
-import { Section } from "@/components/section";
 import { QuickBriefForm } from "@/components/quick-brief-form";
-import { contactChecklist, contactDeliverables, contactFastFacts, contactModes, siteConfig } from "@/lib/site";
+import { Section } from "@/components/section";
+import { StartModeCard } from "@/components/start-mode-card";
+import { SubpageHero } from "@/components/subpage-hero";
+import {
+  contactChecklist,
+  contactEmailTemplate,
+  contactFastFacts,
+  contactHero,
+  contactModes,
+  contactScenarios,
+} from "@/lib/content/contact";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "啟動專案",
-  description: "用更低摩擦但更成熟的方式，和道易科技啟動 enterprise website rebuild、offer 或 proof 專案。",
+  title: "聯絡我們｜啟動 DPP、ESG 稽核或 AI-Ontology 專案",
+  description: "與道易科技討論數據信任鏈、DPP 數位產品護照、ESG 高效稽核、AI-Ontology 知識平台與資料系統整合。",
   alternates: { canonical: "/contact" },
 };
-
-const responseModel = [
-  { title: "24h 內回覆", detail: "不是只回收到，而是會指出目前最大卡點更像 positioning、offer、proof 還是 conversion。" },
-  { title: "建議起手 sprint", detail: "會根據網站成熟度與內部情境，建議首頁、方案頁、案例系統或 Contact flow 的優先序。" },
-  { title: "低風險進場", detail: "若涉及保密、採購或法遵，可改走 NDA / Email 路徑，不強迫一次揭露全部資訊。" },
-];
 
 export default function ContactPage() {
   return (
     <main id="main-content">
-      <section className="subpage-hero">
-        <div className="shell narrow">
-          <span className="section-eyebrow">Start a Rebuild</span>
-          <h1>把第一次接洽設計成有節奏的啟動系統，專案就更容易開始。</h1>
-          <p>這一頁不是只放聯絡表單，而是讓不同風險層級、不同成熟度的團隊，都能找到適合自己的起手方式、回覆預期與下一步節奏。</p>
-        </div>
-      </section>
+      <SubpageHero
+        eyebrow={contactHero.eyebrow}
+        title={contactHero.title}
+        description={contactHero.description}
+        actions={[
+          { href: "#quick-brief", label: "填寫 Quick Brief" },
+          { href: `mailto:${siteConfig.email}`, label: "直接 Email 聯絡", variant: "secondary" },
+        ]}
+      />
 
-      <Section eyebrow="Fast facts" title="先知道回覆節奏與下一步，對話會更順。">
+      <Section eyebrow="Fast facts" title="第一次接洽會先對齊資料與風險，不只聊功能清單。">
         <div className="card-grid four-up">
           {contactFastFacts.map((item) => (
             <article key={item.label} className="card trust-card">
               <span className="mini-label accent">{item.label}</span>
               <h3>{item.value}</h3>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Response model" title="新版 Contact 頁不只收資料，而是先明講你會拿到什麼。">
-        <div className="card-grid three-up">
-          {responseModel.map((item) => (
-            <article key={item.title} className="card rebuild-module-card">
-              <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="What you get" title="這不是填完表單等回覆，而是直接拿到可行的重建起點與商務判斷。">
-        <div className="card-grid three-up">
-          {contactDeliverables.map((item) => (
-            <article key={item} className="card rebuild-module-card">
-              <p>{item}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Start modes" title="三種起手方式，對應三種常見專案狀態。">
-        <div className="card-grid three-up">
+      <Section eyebrow="Start modes" title="不用一開始就定完整系統，先選一種最接近現況的起手方式。">
+        <div className="card-grid four-up">
           {contactModes.map((item) => (
-            <article key={item.title} className="card decision-card">
-              <span className="mini-label accent">{item.title}</span>
-              <p>{item.detail}</p>
-              <strong>{item.fit}</strong>
-            </article>
+            <StartModeCard key={item.title} title={item.title} detail={item.detail} fit={item.fit} />
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Before you send" title="送出前先想清楚這三件事，第一次對話會更有效。">
+      <Section eyebrow="Before you send" title="如果能先準備這三件事，第一次會議會更有效。">
         <div className="feature-surface two-column">
           <div>
-            <ul className="bullet-list compact">{contactChecklist.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ul className="bullet-list compact">
+              {contactChecklist.map((item) => <li key={item}>{item}</li>)}
+            </ul>
           </div>
           <div>
             <h3>聯絡方式</h3>
-            <p>{siteConfig.email}</p>
+            <p><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
             <p>{siteConfig.location}</p>
           </div>
         </div>
       </Section>
 
-      <Section id="quick-brief" eyebrow="Quick Brief" title="用最短路徑，開始這次重建。">
+      <Section id="quick-brief" eyebrow="Quick Brief" title="用最短路徑，開始可信資料平台討論。">
         <QuickBriefForm />
+      </Section>
+
+      <Section eyebrow="Email / NDA" title={contactEmailTemplate.title}>
+        <div className="feature-surface two-column">
+          <div>
+            <p>{contactEmailTemplate.description}</p>
+            <p><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
+          </div>
+          <div>
+            <h3>Email 預填內容</h3>
+            <p><strong>主旨：</strong>{contactEmailTemplate.subject}</p>
+            <a
+              className="button-secondary button-large"
+              href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(contactEmailTemplate.subject)}&body=${encodeURIComponent(contactEmailTemplate.body)}`}
+            >
+              直接寄信給道易
+            </a>
+          </div>
+        </div>
+      </Section>
+
+      <Section eyebrow="Common situations" title="常見接洽情境。">
+        <div className="card-grid two-up">
+          {contactScenarios.map((item) => (
+            <article key={item.title} className="card decision-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
       </Section>
     </main>
   );

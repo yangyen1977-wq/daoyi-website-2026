@@ -1,41 +1,73 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import { siteConfig, homepageDecisionLayers, homepageRolePaths, rebuildPrinciples } from "@/lib/site";
+import { SubpageHero } from "@/components/subpage-hero";
+import { TrustFlowTimeline } from "@/components/trust-flow-timeline";
+import {
+  aboutAudiences,
+  aboutCapabilities,
+  aboutExperience,
+  aboutHero,
+  aboutPositioning,
+  aboutPrinciples,
+  aboutWorkflow,
+} from "@/lib/content/about";
 
 export const metadata: Metadata = {
-  title: "重建方法",
-  description: "道易科技如何用重新設計與重建思維，重做 B2B 官網的品牌、架構、證據與轉換。",
+  title: "關於道易｜可信資料平台與 AI-Ontology 團隊",
+  description: "道易科技從數位人文、AI 語意分析與資料平台出發，協助政府、學研、文化機構與企業建立可追溯、可查核、可維運的可信資料平台。",
   alternates: { canonical: "/about" },
 };
-
-const fitCards = [
-  { title: "能力很多，但網站像資訊倉庫", detail: "買方看完還是不知道你真正賣的是什麼，也不知道該不該往下談。" },
-  { title: "案例有料，但不能直接轉傳", detail: "主管、業務與採購需要的是可快速理解的 proof format，而不是作品牆。" },
-  { title: "內部成熟度已升級，對外敘事卻還停在舊版本", detail: "當商業階段變了，網站也要跟著重定 category、頁面角色與 CTA。" },
-];
-
-const operatingModel = [
-  { label: "01", title: "Reframe", detail: "先重定 category、buyer fit、競爭脈絡與為什麼現在值得談。" },
-  { label: "02", title: "Re-architect", detail: "重排 sitemap、首頁與內頁角色，讓網站開始服務購買流程。" },
-  { label: "03", title: "Proof", detail: "把案例、流程、資料與 trust content 做成更可引用的外部證據。" },
-  { label: "04", title: "Launch", detail: "用更低摩擦的 contact path 與 sprint 方式，把對話真正啟動起來。" },
-];
 
 export default function AboutPage() {
   return (
     <main id="main-content">
-      <section className="subpage-hero">
-        <div className="shell narrow">
-          <span className="section-eyebrow">Rebuild Thesis</span>
-          <h1>我們把官網看成 enterprise decision interface，不是公司簡介。</h1>
-          <p>道易科技協助高複雜度團隊，把品牌、方案、案例、資料與轉換路徑重建成能支撐 shortlist、提案與採購前進的商務前台。</p>
-        </div>
-      </section>
+      <SubpageHero eyebrow={aboutHero.eyebrow} title={aboutHero.title} description={aboutHero.description} />
 
-      <Section eyebrow="Fit signals" title="如果你有這些狀況，通常就不是微調能解。">
+      <Section eyebrow="Positioning" title="道易不是只做網站，而是協助資料被整理、被查詢、被驗證、被運用。">
+        <div className="feature-surface">
+          <ul className="bullet-list compact">
+            {aboutPositioning.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        </div>
+      </Section>
+
+      <Section eyebrow="How we got here" title="從數位人文到數據信任鏈，道易累積的是處理複雜資料的能力。">
+        <div className="card-grid four-up">
+          {aboutCapabilities.map((item) => (
+            <article key={item.title} className="card decision-card">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <ul className="bullet-list compact">
+                {item.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Who we work with" title="如果你的資料需要被追溯、查詢、稽核或對外揭露，道易就適合加入。">
+        <div className="card-grid two-up">
+          {aboutAudiences.map((item) => (
+            <article key={item.title} className="card evidence-matrix-card">
+              <span className="mini-label accent">Fit</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <ul className="bullet-list compact">
+                {item.solutions.map((solution) => <li key={solution}>{solution}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="How we work" title="先釐清資料，再設計平台；先驗證最小可行流程，再擴大導入。">
+        <TrustFlowTimeline steps={aboutWorkflow} />
+      </Section>
+
+      <Section eyebrow="Principles" title="我們做資料平台時，最在意三件事。">
         <div className="card-grid three-up">
-          {fitCards.map((item) => (
+          {aboutPrinciples.map((item) => (
             <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
@@ -44,67 +76,36 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Principles" title="這次重建遵循的是成熟 B2B 商務站的底層原則。">
-        <div className="card-grid four-up">
-          {rebuildPrinciples.map((item) => (
-            <article key={item.title} className="card rebuild-module-card">
+      <Section eyebrow="Experience" title="道易的案例橫跨循環經濟、數位產品護照、數位人文與國際研究平台。">
+        <div className="card-grid three-up">
+          {aboutExperience.map((item) => (
+            <article key={item.title} className="card evidence-matrix-card">
+              <span className="mini-label accent">Experience</span>
               <h3>{item.title}</h3>
-              <p>{item.detail}</p>
+              <p><strong>代表案例：</strong>{item.examples.join("、")}</p>
+              <ul className="bullet-list compact">
+                {item.capabilities.map((capability) => <li key={capability}>{capability}</li>)}
+              </ul>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Decision layers" title="成熟的官網，應該先讓不同角色快速找到自己的判斷入口。">
-        <div className="card-grid four-up">
-          {homepageDecisionLayers.map((item) => (
-            <article key={item.label} className="card decision-card">
-              <span className="mini-label accent">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Who it fits" title="這些團隊最適合用重建方式，而不是持續優化。">
-        <div className="card-grid four-up">
-          {homepageRolePaths.map((item) => (
-            <article key={item.role} className="card rebuild-module-card">
-              <h3>{item.role}</h3>
-              <p>{item.ask}</p>
-              <strong>{item.answer}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Operating model" title="2026 版本的合作方式，核心不是修補，而是先重設商務結構，再快速落地。">
-        <div className="card-grid four-up">
-          {operatingModel.map((item) => (
-            <article key={item.label} className="card process-card">
-              <span className="step-index">{item.label}</span>
-              <strong>{item.title}</strong>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Why now" title="如果網站已經跟不上業務階段，現在就值得直接重建，不值得再拖在舊結構上。">
+      <Section eyebrow="Next Step" title="帶著你的資料、流程或平台問題，先和道易討論第一步。">
         <div className="feature-surface two-column">
           <div>
-            <h3>適合現在談的情況</h3>
-            <p>你已經有能力與案例，但外部敘事還不夠成熟、可信、好理解，導致高意圖流量與介紹流量沒有真正發揮價值。</p>
+            <p>無論你正在規劃 DPP、ESG 稽核、循環經濟資料平台、AI-Ontology 知識平台，或想把既有系統升級成可信資料平台，都可以先從一次資料盤點開始。</p>
           </div>
           <div>
             <h3>下一步</h3>
-            <p><Link href="/contact" className="button-primary inline-button">前往啟動重建</Link></p>
+            <p>如果你的資料已經進入 DPP、ESG 稽核、回收履歷、知識平台或系統整合需求，可以先用一條流程或一批資料開始討論。</p>
+            <div className="section-actions">
+              <Link href="/contact" className="button-primary">聯絡道易</Link>
+              <Link href="/work" className="button-secondary">查看案例</Link>
+            </div>
           </div>
         </div>
       </Section>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "AboutPage", name: "DaoYi positioning", url: `${siteConfig.url}/about` }) }} />
     </main>
   );
 }

@@ -2,258 +2,449 @@ export const siteConfig = {
   name: "道易科技 DaoYi Technology",
   shortName: "DaoYi Technology",
   description:
-    "道易科技為 B2B、科技、SaaS、製造、AI 與高知識密度團隊，重新設計並重建 commercial website system。從品牌主張、網站地圖、buyer journey、offer packaging、proof library 到 contact conversion，一次把官網重構成更成熟的商務前台。",
+    "道易科技打造可追溯、可稽核、可驗證的數據信任鏈平台，協助企業、政府與研究機構完成 DPP、ESG 高效稽核、AI-Ontology 知識平台與資料系統整合。",
   url: "https://yangyen1977-wq.github.io/daoyi-website-2026",
-  email: "hello@daoyidh.com",
+  email: "service@daoyidh.com",
   phone: "+886-6-000-0000",
-  location: "Tainan / Taipei / Remote",
-  heroTitle: "把企業官網重建成能支撐 shortlist、內部共識與成交推進的 commercial website system.",
+  location: "Tainan / Taiwan",
+  heroTitle: "讓循環經濟、ESG 與知識資產，有一條可被驗證的數據信任鏈。",
   heroDescription:
-    "不是優化舊站，而是替商業成熟度已升級的團隊，重做 category thesis、頁面架構、offer、proof 與 conversion model。",
+    "道易科技以 Ontology 語義建模、AI、Merkle Tree、IPFS 與 TSA 時戳驗證技術，將分散且難以查核的資料轉化為可追溯、不可竄改、可高效稽核的可信任數據平台。",
 };
 
 export const navItems = [
   { href: "/", label: "首頁" },
-  { href: "/about", label: "重建方法" },
-  { href: "/solutions", label: "商務方案" },
-  { href: "/work", label: "案例證據" },
-  { href: "/contact", label: "啟動專案" },
+  { href: "/solutions", label: "解決方案" },
+  { href: "/technology", label: "技術核心" },
+  { href: "/work", label: "案例實績" },
+  { href: "/about", label: "關於道易" },
+  { href: "/contact", label: "聯絡我們" },
 ];
 
 export const headerReassuranceSignals = [
-  "不是小修，是重做 category、offer、proof 與 conversion",
-  "首頁先服務 shortlist、共識與採購推進",
-  "Quick Brief / Workshop / NDA 三層啟動入口",
+  "Data Trust Chain / DPP / ESG Audit",
+  "Ontology × AI × Merkle Proof",
+  "政府、學研、循環經濟與知識平台經驗",
+];
+
+export const trustMetrics = [
+  { value: "4", label: "核心解決方案" },
+  { value: "8+", label: "代表案例類型" },
+  { value: "24h", label: "初步需求回覆" },
+  { value: "1", label: "可信任資料底座" },
+];
+
+export const benchmarkSynthesis20260519 = [
+  {
+    pattern: "Outcome before technology",
+    learnedFrom: "2026 B2B / SaaS 官網案例",
+    application: "首頁先講 DPP、ESG 稽核與知識平台能替買方降低什麼風險，再展開 Merkle、IPFS、TSA 等技術。",
+  },
+  {
+    pattern: "Product experience layer",
+    learnedFrom: "高轉換 SaaS 首頁",
+    application: "用流程視覺呈現資料從產生、封存、驗證到稽核的路徑，讓訪客先理解平台如何運作。",
+  },
+  {
+    pattern: "Proof-dense case modules",
+    learnedFrom: "成熟科技服務與設計公司案例頁",
+    application: "案例不再只是作品清單，而是用問題、道易解法、技術標籤與可被信任的成果來呈現。",
+  },
+  {
+    pattern: "Low-risk buying start",
+    learnedFrom: "B2B demo / contact flow",
+    application: "聯絡頁提供資料盤點、DPP PoC、知識平台工作坊與 NDA 路徑，降低第一次接洽阻力。",
+  },
+];
+
+export const sitemap2026 = [
+  {
+    page: "首頁",
+    primaryJob: "30 秒內說清楚道易是數據信任鏈、DPP、ESG 稽核與 AI-Ontology 知識平台公司。",
+    modules: ["品牌主張", "痛點", "四大方案", "信任技術流程", "精選案例", "合作流程", "CTA"],
+  },
+  {
+    page: "解決方案",
+    primaryJob: "依客戶情境拆出可採購、可啟動、可驗收的四條解決方案。",
+    modules: ["數據信任鏈", "DPP", "AI-Ontology", "AIoT 回收履歷"],
+  },
+  {
+    page: "技術核心",
+    primaryJob: "讓技術買方與決策者理解可信資料如何被建立、封存、驗證與稽核。",
+    modules: ["Ontology", "Hash / Merkle", "IPFS", "TSA", "API", "AI 校驗", "Audit Trail"],
+  },
+  {
+    page: "案例實績",
+    primaryJob: "把政府、學研、循環經濟與國際案例整理成可驗證的信任證據。",
+    modules: ["案例摘要", "問題", "解法", "技術標籤", "價值"],
+  },
+  {
+    page: "聯絡我們",
+    primaryJob: "用資料盤點與 PoC 起手方式，讓高複雜度專案能低風險開始。",
+    modules: ["適合對象", "啟動方式", "需求表單", "Email / NDA"],
+  },
+];
+
+export const painPoints = [
+  {
+    title: "循環經濟資料難以被信任",
+    detail: "回收、再利用、碳足跡與產品履歷常分散在不同系統與單據中，人工彙整後仍難以支撐第三方查核。",
+  },
+  {
+    title: "ESG 與 DPP 需要可驗證證據",
+    detail: "供應鏈透明化與合規要求提高，企業需要的不只是資料庫，而是可追溯、不可竄改、可被稽核的證據鏈。",
+  },
+  {
+    title: "知識資產缺乏語意結構",
+    detail: "研究、文化、人物、文本與事件資料若沒有 Ontology 與語意關聯，查詢、分析與展示都會停留在資料堆積。",
+  },
 ];
 
 export const solutions = [
   {
-    title: "Commercial Positioning Sprint",
-    description: "重定品牌主張、buyer fit、首頁敘事與頁面角色，讓網站先完成高意圖買方的第一輪判斷。",
+    title: "數據信任鏈與高效稽核平台",
+    description:
+      "以標準化資料模型、Hash 指紋、Merkle Tree、IPFS 與 TSA 時戳，建立資料從產生到第三方查核的完整證據鏈。",
   },
   {
-    title: "Offer Packaging Sprint",
-    description: "把複雜能力包成可理解、可提案、可採購、可驗收的商務方案，不再只列服務名稱。",
+    title: "DPP 數位產品護照",
+    description:
+      "將產品材料、製程、碳資訊、維修與回收履歷轉化為可查詢的數位身分，支援 QR Code、供應鏈透明與合規準備。",
   },
   {
-    title: "Proof System Sprint",
-    description: "把案例、信任訊號與結果證據改寫成可被主管、業務與採購轉傳的 proof library。",
+    title: "AI 與 Ontology 知識平台",
+    description:
+      "把文本、人物、事件、地點與資料庫建模成知識網絡，支援 OCR、語意擷取、語意搜尋、研究資料庫與視覺化展示。",
   },
   {
-    title: "Decision Journey Sprint",
-    description: "重排 sitemap、跨頁導流與 CTA choreography，讓每一頁都承接一個明確 buying job。",
+    title: "AIoT 與回收履歷整合",
+    description:
+      "串接設備、感測器、影像辨識與現場流程，讓回收、拆解、檢測與入庫資料能被即時蒐集、校驗與追蹤。",
   },
 ];
 
-export const contactChannels = [
-  { label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-  { label: "Phone", value: siteConfig.phone, href: `tel:${siteConfig.phone}` },
-  { label: "Location", value: siteConfig.location, href: siteConfig.url },
+export const solutionDetails = [
+  {
+    title: "數據信任鏈與高效稽核平台",
+    bestFor: "太陽能板回收、再生資源、ESG 驗證、綠色金融與需要 D-MRV 的組織。",
+    outcomes: ["資料不可竄改證據鏈", "第三方快速抽驗", "Root Hash 與時間戳錨定", "稽核成本下降"],
+  },
+  {
+    title: "DPP 數位產品護照",
+    bestFor: "製造、出口、循環經濟、材料供應鏈與需要產品履歷透明化的團隊。",
+    outcomes: ["產品數位身分", "QR Code 查詢體驗", "材料與碳資訊欄位藍圖", "ESPR / DPP 合規準備"],
+  },
+  {
+    title: "AI 與 Ontology 知識平台",
+    bestFor: "政府、學研、文化館所、資料庫平台與高知識密度內容團隊。",
+    outcomes: ["Ontology 語義模型", "語意搜尋與資料關聯", "OCR / NLP 流程", "人物事件地點知識圖譜"],
+  },
+  {
+    title: "AIoT 與回收履歷整合",
+    bestFor: "現場流程資料化、影像辨識、設備資料串接與回收履歷自動化情境。",
+    outcomes: ["YOLO / 影像辨識整合", "現場資料採集", "異常偵測", "物理流程與數據一致性校驗"],
+  },
 ];
 
-export const quickBriefAssistPoints = [
-  "第一輪回覆直接指出目前更該先重做的是命題、IA、offer、proof 還是 conversion",
-  "會附首頁方向、頁面優先序與建議 starter sprint",
-  "敏感專案可切 NDA / Email 路徑，降低第一次接觸阻力",
+export const trustFlow = [
+  { title: "資料產生", detail: "從產品、設備、表單、OCR、影像或既有系統取得原始資料。" },
+  { title: "Ontology 標準化", detail: "定義欄位、關係、權限與查詢語意，讓資料能被理解與交換。" },
+  { title: "Hash 指紋", detail: "替資料或批次產生不可逆指紋，作為後續驗證基礎。" },
+  { title: "Merkle 聚合", detail: "將多筆資料聚合為 Root Hash，支援高效率抽驗與批次稽核。" },
+  { title: "IPFS / 儲存", detail: "將證據與檔案以可追溯方式保存，降低單點竄改風險。" },
+  { title: "TSA 時戳", detail: "用第三方時間戳證明資料在特定時間點已存在且未被改動。" },
+  { title: "稽核與展示", detail: "透過 API、Dashboard 或 DPP 頁面提供查詢、驗證與對外揭露。" },
 ];
 
-export const stats = [
-  { value: "5 秒", label: "Clarity window" },
-  { value: "4 類", label: "Buyer roles" },
-  { value: "3 條", label: "Start paths" },
-  { value: "1 套", label: "Commercial system" },
+export const coreTechnologies = [
+  { title: "Ontology 語義建模", detail: "把資料欄位、實體、事件與關係定義清楚，支撐後續查詢、驗證與 AI 應用。" },
+  { title: "Hash / Merkle Tree", detail: "建立資料完整性證明，讓大量紀錄能被快速驗證，不必逐筆人工比對。" },
+  { title: "IPFS 與證據保存", detail: "保存證據檔、附件與批次資料，形成可追溯的外部驗證線索。" },
+  { title: "TSA 時間戳", detail: "替 Root Hash 或關鍵證據加上可信時間，強化稽核與爭議處理能力。" },
+  { title: "API 與異質系統整合", detail: "串接 ERP、MES、IoT、資料庫、前台 DPP 與第三方稽核流程。" },
+  { title: "AI / AIoT 校驗", detail: "以 OCR、NLP、影像辨識與異常偵測協助資料擷取與現場一致性檢查。" },
+  { title: "Audit Trail 與權限", detail: "記錄資料異動、簽核、角色權限與查核結果，讓責任與證據可追蹤。" },
 ];
 
-export const heroClients = [
-  { name: "B2B SaaS / Platform", context: "需要把產品價值、導入流程、權限邏輯與 enterprise 信任訊號講成熟。" },
-  { name: "製造 / 工業 / 出口品牌", context: "需要把驗證能力、供應與合作方式翻成買方能快速判斷的商務語言。" },
-  { name: "AI / 顧問 / 自動化團隊", context: "能力很多，但外部仍難理解真正值得採購的是哪一段。" },
-  { name: "研究 / 永續 / 知識平台", context: "內容密度高，更需要 IA、proof 與 trust UX 才能撐住理解成本。" },
+export const caseStudies = [
+  {
+    title: "太陽能板回收履歷與數據信任鏈",
+    category: "ESG / 循環經濟",
+    problem: "回收流程涉及拆解、檢測、材料與碳資訊，若只靠人工表單難以支撐查核與碳價值認列。",
+    solution: "以 AIoT、影像辨識、資料模型與 Hash/Merkle 證據鏈建立可追溯履歷。",
+    value: "讓回收資料從流程紀錄升級為可被驗證、可抽驗、可供 ESG 與 DPP 使用的證據。",
+    tags: ["Data Trust Chain", "AIoT", "YOLO", "ESG Audit"],
+  },
+  {
+    title: "Easy DPP 數位產品護照",
+    category: "DPP / 供應鏈透明",
+    problem: "產品材料、來源、製程與回收資訊分散，對外揭露與內部管理都缺乏一致格式。",
+    solution: "建立產品數位身分、QR Code 查詢頁、資料欄位藍圖與可擴充的 DPP 架構。",
+    value: "協助企業提前準備供應鏈透明、ESPR / DPP 與永續揭露需求。",
+    tags: ["DPP", "QR Code", "Traceability", "Supply Chain"],
+  },
+  {
+    title: "國立臺灣文學館數位人文平台",
+    category: "數位人文 / 知識平台",
+    problem: "文學、人物、作品、地理與歷史資料龐雜，傳統網站難以呈現知識關係。",
+    solution: "透過資料庫、語意關聯與前台展示，讓研究資料能被查詢、閱讀與探索。",
+    value: "將文化資料轉化為可持續維護與對外展示的知識平台。",
+    tags: ["Digital Humanities", "Knowledge Platform", "Semantic Search"],
+  },
+  {
+    title: "捷克科學院國際研究資料平台",
+    category: "國際學研 / 資料庫",
+    problem: "跨語言、跨資料源的研究材料需要結構化整理與長期可查詢介面。",
+    solution: "建立研究資料庫、資料欄位結構與可對外展示的網站系統。",
+    value: "支援國際研究合作與長期學術資料保存。",
+    tags: ["Research Database", "International", "Metadata"],
+  },
+  {
+    title: "香港中文大學圖書館傳記資料庫",
+    category: "圖書館 / 人物資料",
+    problem: "作家及藝術家資料需要兼顧權威性、檢索效率與關聯呈現。",
+    solution: "以人物資料結構、分類與前台查詢設計支援資料管理與使用者探索。",
+    value: "提升傳記資料的可查詢性、可維護性與公共使用價值。",
+    tags: ["Biography Database", "Library", "Knowledge Graph"],
+  },
+  {
+    title: "社會網絡分析與人物知識本體",
+    category: "Ontology / 分析平台",
+    problem: "人物、事件與關係資料若沒有本體模型，難以做關聯分析與視覺化。",
+    solution: "建立人物、事件、組織、地點等語意模型，支援關係查詢與網絡分析。",
+    value: "讓資料從靜態列表變成可分析、可推論、可展示的知識網絡。",
+    tags: ["Ontology", "SNA", "Knowledge Graph"],
+  },
 ];
 
-export const heroProofs = [
-  { label: "Category", value: "Outcome before self-intro", description: "先回答買方會得到什麼結果，而不是先講公司背景。" },
-  { label: "Architecture", value: "One page, one buying job", description: "首頁、方案、案例、Contact 各自承接不同決策任務。" },
-  { label: "Conversion", value: "Low-friction contact ladder", description: "依成熟度安排 Brief、Workshop、NDA 三條起手方式。" },
-];
-
-export const heroQuickSignals = [
-  { label: "適合對象", value: "B2B / 科技 / SaaS / 製造 / AI" },
-  { label: "重建範圍", value: "命題、IA、Offer、Case、CTA、Contact" },
-  { label: "啟動方式", value: "Quick Brief / Workshop / NDA" },
-];
-
-export const heroFitSignals = [
-  "公司已經變成熟，但官網還停在舊版公司介紹邏輯。",
-  "能力很多，陌生買方卻還是很難一句話理解你到底賣什麼。",
-  "案例有料，但還不能被主管、業務或採購直接轉傳。",
-  "真正需要的不是修一版 hero，而是重做整個 buyer journey。",
-];
-
-export const heroContactLadder = [
-  { label: "Path 01", title: "Quick Brief", detail: "先拿到切入點、頁面優先序與 starter sprint 建議。", cta: "3 分鐘開始", href: "/#quick-brief" },
-  { label: "Path 02", title: "Decision Workshop", detail: "一起對齊 buyer、offer、proof gap、頁面任務與 launch priority。", cta: "看啟動流程", href: "/contact" },
-  { label: "Path 03", title: "Email / NDA", detail: "適合敏感專案、法遵或採購情境，先低風險確認 fit 與邊界。", cta: "先寄 Email", href: `mailto:${siteConfig.email}?subject=${encodeURIComponent("DaoYi Commercial Website Rebuild / NDA")}` },
-];
-
-export const homepageContactProof = [
-  "第一次回覆就指出更該先重做的是命題、IA、offer、proof 還是 friction。",
-  "直接建議頁面優先序、starter sprint 與內部先要對齊的決策問題。",
-  "敏感專案可先走 NDA 路徑，不必第一輪就揭露完整資訊。",
+export const processSteps = [
+  { title: "需求訪談與資料盤點", detail: "釐清對象、流程、資料來源、合規需求與目前系統邊界。" },
+  { title: "資料模型與證據模型設計", detail: "定義 Ontology、欄位、Hash 範圍、稽核節點與對外揭露層級。" },
+  { title: "平台原型與 API 規劃", detail: "確認 DPP 頁面、Dashboard、管理後台、資料交換與第三方驗證路徑。" },
+  { title: "系統開發與資料串接", detail: "實作前後台、資料流程、自動化驗證、權限與部署架構。" },
+  { title: "稽核測試、上線與維運", detail: "用實際資料測試驗證流程、修正權限與查詢體驗，建立後續維運節奏。" },
 ];
 
 export const contactFastFacts = [
-  { label: "First response", value: "24h 內" },
-  { label: "Decision workshop", value: "30-45 分鐘" },
-  { label: "Starter sprint", value: "3-7 天" },
-  { label: "Start modes", value: "Brief / Workshop / NDA" },
+  { label: "初步回覆", value: "24h 內" },
+  { label: "第一次會議", value: "30-45 分鐘" },
+  { label: "PoC 起手", value: "2-4 週" },
+  { label: "啟動方式", value: "盤點 / PoC / NDA" },
 ];
 
 export const contactModes = [
-  { title: "Quick Brief", detail: "已確認網站該重建，想先拿到定位切口、頁面優先序與 starter sprint 建議。", fit: "適合想快速確認方向與範圍的團隊" },
-  { title: "Decision Workshop", detail: "需要一起釐清 buyer、offer、proof gap、頁面任務與第一輪邊界。", fit: "適合跨部門與多角色參與的專案" },
-  { title: "Email / NDA", detail: "專案較敏感，想先確認 fit、流程與合作方式，再進一步分享素材。", fit: "適合法遵、採購、研發或保密需求較高的案子" },
+  {
+    title: "資料信任鏈盤點",
+    detail: "適合已有流程與資料，但還不確定如何建立證據鏈、稽核節點與對外揭露方式。",
+    fit: "輸出：資料來源清單、信任風險、初版技術路徑。",
+  },
+  {
+    title: "DPP / ESG PoC",
+    detail: "適合想先用一個產品、一條回收流程或一批資料驗證 DPP 與稽核可行性。",
+    fit: "輸出：欄位藍圖、QR 查詢原型、Hash / Merkle 驗證流程。",
+  },
+  {
+    title: "AI-Ontology 工作坊",
+    detail: "適合政府、學研、文化或知識密集團隊，先釐清資料模型、語意關係與平台架構。",
+    fit: "輸出：Ontology 草案、查詢場景、平台模組優先序。",
+  },
 ];
 
 export const contactChecklist = [
-  "目前最大卡點更像 category 不清、offer 不清、proof 不夠，還是啟動 friction 太高。",
-  "這次最想先重做哪一層，例如首頁、方案頁、案例證據系統或 trust content。",
-  "目前想先做短 sprint、工作坊，還是已準備進入完整重建。",
+  "目前有哪些資料來源、表單、檔案或既有系統需要串接。",
+  "哪些資料需要對外揭露，哪些只供內部或第三方稽核。",
+  "這次目標更偏 DPP、ESG 稽核、回收履歷，還是知識平台。",
 ];
 
-export const homepageModules = [
-  { label: "Category system", title: "先讓買方 5 秒內知道你幫誰、補哪個商務落差", evidence: "主張先講結果與 fit，而不是公司自述。" },
-  { label: "Buying architecture", title: "每頁各自承接一個 buying job，不再所有頁都講一點同樣的事", evidence: "首頁、方法、方案、案例、Contact 分工清楚。" },
-  { label: "Proof packaging", title: "案例先成為可轉傳的商務證據，再成為完整展示", evidence: "先給情境、改變、證據與適用對象。" },
-];
-
-export const homepageCompactCaseEvidence = homepageModules;
-
-export const homepageBenchmarks = [
-  { source: "Stripe / Ramp / Workday 類型", title: "Outcome-first positioning", detail: "首頁先講結果、適合對象與下一步，而不是公司歷史。", application: "道易首屏改成 commercial outcome + buyer fit + CTA。" },
-  { source: "Linear / Vercel / Notion 類型", title: "Dense but scannable UX", detail: "資訊密度可以高，但模組節奏和掃讀效率必須非常穩。", application: "首頁改成可快速掃描的 executive brief。" },
-  { source: "Webstacks / Ramotion / instrument 類型", title: "Offer as commercial packaging", detail: "不是列服務，而是把合作方式包成購買路徑。", application: "方案頁重寫成 buying guide。" },
-  { source: "Top SaaS case flows", title: "Proof before persuasion", detail: "案例先給 executive summary、結果訊號與適用情境。", application: "案例頁改成 proof library 而不是作品牆。" },
-];
-
-export const homepageDecisionLayers = [
-  { label: "Layer 01", title: "Category clarity", detail: "五秒內說清楚服務誰、解什麼問題、為何值得現在談。" },
-  { label: "Layer 02", title: "Offer architecture", detail: "把能力包成可理解、可採購、可驗收的合作起手方式。" },
-  { label: "Layer 03", title: "Proof portability", detail: "把案例先做成可轉傳、可引用的 executive asset。" },
-  { label: "Layer 04", title: "Conversion ladder", detail: "依成熟度安排 Quick Brief、Workshop、NDA，不讓第一次接觸卡住。" },
-];
-
-export const homepageSitemap = [
-  ["首頁", "先完成 buyer fit、category clarity、proof cue 與 CTA 判斷。"],
-  ["重建方法", "交代什麼情況該重建，以及如何從 thesis 走到 launch。"],
-  ["商務方案", "把複雜能力包成可購買、可啟動、可驗收的 sprint。"],
-  ["案例證據", "案例先當 proof asset，再延伸成完整專案敘事。"],
-  ["啟動專案", "把 Quick Brief、Workshop、NDA 做成清楚的起手入口。"],
-];
-
-export const heroActionSignals = [
-  { step: "01", metric: "3 分鐘", title: "送出 Quick Brief", detail: "留下網站現況、卡點、最想先重做的頁面。" },
-  { step: "02", metric: "24h", title: "收到重建方向", detail: "先回一版 category thesis、首頁方向、proof gap 與 starter sprint。" },
-  { step: "03", metric: "30-45 分鐘", title: "對焦決策問題", detail: "一起確認 buyer、offer、案例素材、風險與合作邊界。" },
-  { step: "04", metric: "Sprint-ready", title: "開始第一輪重建", detail: "從首頁、方案頁、案例系統或 trust UX 先落出可討論版本。" },
-];
-
-export const heroPreviews = [
-  { id: "clarity", label: "Stripe / Ramp 類型", metric: "Commercial clarity", summary: "高表現 B2B 首頁幾乎都先把 outcome、category、proof 與 CTA 放在前段。", checklist: ["主張先講結果", "適合對象清楚", "proof 先於自介", "CTA 至少雙軌"] },
-  { id: "structure", label: "Linear / Vercel 類型", metric: "Structured scanning", summary: "高資訊密度沒問題，但模組任務、節奏與層級必須穩。", checklist: ["模組任務清楚", "掃讀效率高", "密度高但不亂", "頁面角色分明"] },
-  { id: "proof", label: "Agency / SaaS case 類型", metric: "Portable proof", summary: "案例不是作品牆，而是 buying committee 可引用的商務證據。", checklist: ["情境先行", "結果可引用", "適用對象清楚", "CTA 接得上"] },
-];
-
-export const heroClarityChecklist = [
-  { label: "Who", answer: "高複雜度 B2B、科技、製造、AI 與知識型團隊", detail: "適合需要支撐商務、採購、提案與信任建立的網站重建專案。", metric: "Buyer fit" },
-  { label: "What", answer: "重建 commercial website system 與 proof architecture", detail: "不是換視覺，而是重做命題、頁面角色、案例證據與 CTA。", metric: "System first" },
-  { label: "How", answer: "從 Quick Brief 或 strategy workshop 啟動第一個 sprint", detail: "讓第一次接洽就落到具體頁面與決策問題。", metric: "Low friction" },
-];
-
-export const caseOverviewStats = [
-  { label: "Case format", value: "Context → Shift → Proof → Fit", detail: "案例先回答商務情境、改變了什麼、證據訊號與適用對象。" },
-  { label: "Decision use", value: "Shortlist-ready", detail: "能被主管、業務、PM 與採購快速轉傳與複述。" },
-  { label: "Proof style", value: "Executive summary first", detail: "先講可引用摘要與結果訊號，再展開完整內容。" },
-];
-
-export const executiveScorecards = [
-  { title: "Value proposition clarity", detail: "買方能否在幾秒內理解你服務誰、解什麼問題、為何值得談。" },
-  { title: "Decision-oriented IA", detail: "首頁、方案、案例、Contact 是否各司其職。" },
-  { title: "Proof portability", detail: "案例是否能被主管、業務與採購直接引用與轉傳。" },
-  { title: "Conversion readiness", detail: "是否提供不同阻力等級的啟動方式。" },
-];
-
-export const caseSnapshots = [
-  { id: "commercial-reframe", label: "Commercial reframe", context: "Category + homepage", title: "把首頁從公司介紹頁，重構成能支撐 shortlist 與 buying committee 對齊的商務首頁", summary: "成果不是畫面更新，而是讓高意圖訪客更快理解定位、可信度與下一步。", metrics: [ { label: "Challenge", value: "定位不清", detail: "公司能力不差，但外部無法快速理解真正最值得購買的部分" }, { label: "Delivery", value: "Message + IA + CTA", detail: "同步重做命題、頁面架構、proof cue 與 contact ladder" } ], highlights: ["首頁像 executive brief", "頁面任務明確", "CTA 依成熟度分層"], href: "/work" },
-  { id: "offer-system", label: "Offer packaging", context: "Buyer-ready solution", title: "把顧問、AI、自動化或複雜服務能力，重構成可提案、可採購、可驗收的網站敘事", summary: "讓主管、PM、採購與窗口能快速理解適用情境、交付方式、風險與邊界。", metrics: [ { label: "Challenge", value: "能力抽象", detail: "客戶知道你們會很多，但不知道跟自己的商業問題有什麼直接關係" }, { label: "Delivery", value: "Offer path", detail: "重新整理角色、問題、流程、輸出、proof 與驗收節點" } ], highlights: ["方案可被業務轉述", "交付與邊界講清楚", "起手方式更容易答應"], href: "/work" },
-  { id: "trust-system", label: "Proof system", context: "Evidence architecture", title: "把高內容密度與透明資料，整理成更可信、更好懂、更拿得去內部說服的外部證據系統", summary: "從欄位藍圖、閱讀順序、解釋節奏到 CTA 都一起設計，不讓資料只停在堆疊。", metrics: [ { label: "Challenge", value: "理解門檻高", detail: "資料很多，但外部看不懂其結構、意義與驗證方式" }, { label: "Delivery", value: "IA + trust UX", detail: "重做資訊層級、證據模組、讀者路徑與外部解釋方式" } ], highlights: ["欄位藍圖", "理解與查找路徑", "可信內容模組"], href: "/work" },
-];
-
-export const personaPlaybooks = [
-  { id: "marketing", title: "品牌 / 行銷 / Growth", headline: "網站要先幫買方理解價值，不然再多流量也很難變成高品質對話。", challenge: "流量、素材、案例都有，但命題與 proof 沒被整理成 buyer 容易判斷的順序。", win: "重做 hero、價值主張、case summary 與 CTA，讓網站先像商務入口。", metric: { label: "優先處理", value: "訊息清晰度 + proof 密度" }, checklist: ["重寫品牌命題", "建立 fit 區塊", "把案例摘要與 CTA 前置"], ctaHref: "/contact", ctaLabel: "討論首頁重建", helperText: "適合網站看似完整，但詢問品質與轉換效率不穩的團隊。" },
-  { id: "operations", title: "營運 / PM / 業務", headline: "需要讓服務、流程、時程與交付方式，被外部與內部都更容易理解。", challenge: "現有網站只有能力清單，沒有把真正合作方式與決策路徑講清楚。", win: "把方案頁與 contact flow 做成 buying guide，降低第一次溝通成本。", metric: { label: "優先處理", value: "方案結構 + 啟動節奏" }, checklist: ["定義 solution tracks", "把 starter sprint 產品化", "前置回覆節奏"], ctaHref: "/contact", ctaLabel: "規劃 solution sprint", helperText: "適合案型複雜、跨部門利害關係人多的專案。" },
-  { id: "trust", title: "法遵 / 永續 / 知識治理", headline: "高密度資訊不是問題，問題是網站有沒有把它整理成可信又好懂的體驗。", challenge: "內容很多，但目前站點沒有把資料、背景與價值翻成外部可理解的路徑。", win: "重做 IA、proof modules 與對外說明節奏，讓 trust content 真正發揮商務作用。", metric: { label: "優先處理", value: "IA + Trust UX" }, checklist: ["重做內容層級", "建立 trust modules", "設計外部理解路徑"], ctaHref: "/contact", ctaLabel: "討論 trust experience", helperText: "適合透明資料、合規敘事與高內容密度網站。" },
-];
-
-export const solutionTracks = [
-  {
-    title: "Commercial Positioning Sprint",
-    summary: "適合網站已跟不上商業成熟度，需要先重做 category thesis、首頁結構與核心敘事。",
-    outputs: ["brand thesis 與首屏主張", "新 sitemap 與頁面任務", "首頁 / 方法 / Contact 第一輪模組"],
-  },
-  {
-    title: "Offer Packaging Sprint",
-    summary: "適合能力很多但不好賣，需要把服務與能力重組成 buying committee 容易理解的 offer path。",
-    outputs: ["offer map", "buyer question / objection map", "方案頁與啟動方式重組"],
-  },
-  {
-    title: "Proof System Sprint",
-    summary: "適合案例很多但不好用，想把作品牆改成真正支撐 shortlist 與商務啟動的證據系統。",
-    outputs: ["executive summary case 模板", "proof blocks 與轉傳情境", "CTA 與 follow-up 路徑設計"],
-  },
-  {
-    title: "Decision Journey Sprint",
-    summary: "適合內容很多卻導覽混亂，需要重排 sitemap、跨頁動線與 CTA choreography 的團隊。",
-    outputs: ["page hierarchy", "route logic", "cross-page CTA map"],
-  },
-];
-
-export const rebuildPrinciples = [
-  { title: "Outcome before introduction", detail: "首頁前 1 到 2 屏先講清楚 buyer fit、商務結果與下一步，而不是先鋪公司介紹。" },
-  { title: "One page, one decision job", detail: "首頁負責理解與信任，方案頁負責購買理解，案例頁負責 proof，Contact 頁負責啟動。" },
-  { title: "Evidence must travel", detail: "案例摘要要能被主管、業務與採購直接複述、轉傳、引用。" },
-  { title: "Conversion is a ladder", detail: "讓 Quick Brief、Workshop、NDA 對應不同購買成熟度，降低第一次接觸摩擦。" },
-];
-
-export const homepageExecutiveAgenda = [
-  { label: "01", title: "Commercial category", detail: "先讓買方知道道易服務的是需要重建外部商務前台的高複雜度團隊。" },
-  { label: "02", title: "Buying architecture", detail: "把網站從 company profile 重構成 decision interface。" },
-  { label: "03", title: "Proof portability", detail: "案例先交付 executive summary、結果訊號與適用情境，再往下展開。" },
-  { label: "04", title: "Lower-friction start", detail: "依專案成熟度提供 Quick Brief、Decision Workshop、NDA。" },
-];
-
-export const homepageRolePaths = [
-  { role: "Founder / GM", ask: "這家公司能不能真的幫我們把對外敘事與商務前台提升到下一階段？", answer: "首頁與方法頁先回答 category、差異化與值得現在啟動的理由。" },
-  { role: "Marketing / Growth", ask: "流量進站後，能不能更快理解價值、建立信任並進入高品質對話？", answer: "首頁模組、案例摘要與 CTA ladder 都被重新設計成商務入口。" },
-  { role: "Sales / PM", ask: "方案、流程、交付與風險邊界，能不能更容易轉述給內外部？", answer: "方案頁重做成 buying guide，不再只是能力名詞清單。" },
-  { role: "Procurement / Compliance", ask: "敏感專案能否先用低風險方式確認 fit、流程與合作邊界？", answer: "Contact 頁保留 NDA / Email 路徑，避免第一次就暴露過多資訊。" },
-];
-
-export const solutionBlueprints = [
-  { title: "Reframe the category", summary: "先重定服務誰、解什麼問題、買方為何現在值得談。", bullets: ["buyer fit", "核心成果", "替代方案差異", "值得現在啟動的理由"] },
-  { title: "Package the offer", summary: "把抽象能力整理成清楚的購買路徑、交付內容、週期、驗收與邊界。", bullets: ["solution path", "delivery model", "objection handling", "starter sprint"] },
-  { title: "Systemize proof", summary: "把案例、指標、流程、trust content 做成可引用的證據層。", bullets: ["executive summary", "result signal", "fit cue", "shortlist asset"] },
-];
-
-export const contactDeliverables = [
-  "第一輪回覆直接指出更該先重做的是命題、IA、offer、proof 還是 conversion flow。",
-  "提供建議 sitemap、首頁方向與最適合的 starter sprint，而不是只回一句收到。",
-  "若專案涉及保密、採購或法遵，可立即切換 NDA / Email 流程，降低內部阻力。",
+export const quickBriefAssistPoints = [
+  "24 小時內回覆建議切入點與第一次會議需準備的資料。",
+  "若涉及商業機密、採購或研發細節，可先走 Email / NDA。",
+  "初期可先用 PoC 驗證一條流程，不必一次重建整套系統。",
 ];
 
 export const thirdPartyScorecard = [
-  ["定位清晰度", "9.7/10", "新版首頁更像成熟 B2B commercial front page，能更快說清楚 category、buyer fit 與商務結果。"],
-  ["資訊架構", "9.6/10", "首頁、方法、方案、案例、Contact 的 buying job 分工更清楚，不再像單頁延伸。"],
-  ["案例與證據", "9.4/10", "案例已朝 executive summary + proof asset 方向重做，若未來補真實客戶名與量化成果會更強。"],
-  ["轉換設計", "9.5/10", "Quick Brief、Workshop、NDA 的分層入口成熟，後續可再補更多 friction-reduction microcopy。"],
+  ["品牌定位", "8.6 / 10", "主軸已從一般技術服務轉向數據信任鏈、DPP 與 ESG 稽核，差異化更明確。"],
+  ["UX 架構", "8.3 / 10", "首頁以痛點、方案、技術流程、案例與 CTA 串起，符合 B2B 評估順序。"],
+  ["信任證據", "8.1 / 10", "案例分類與技術標籤清楚，但後續仍需補更多真實截圖、客戶引言與量化成果。"],
+  ["轉換設計", "8.4 / 10", "Contact 從一般表單升級為盤點、PoC、工作坊與 NDA 起手，較符合高複雜度專案。"],
+];
+
+export const liveSiteQuickReview = [
+  {
+    title: "總評",
+    score: "8.35 / 10",
+    detail: "以第三方角度看，新版已更像成熟商用科技官網：定位、資訊架構與案例證據明顯比舊站型服務介紹更清楚。",
+  },
+  {
+    title: "優先補強",
+    score: "Next",
+    detail: "建議下一輪補上產品介面截圖、DPP QR demo、平台資料流示意圖與客戶成果數字，讓信任感從文案進一步變成證據。",
+  },
+];
+
+// Compatibility data for reusable components that remain in the codebase.
+export const stats = trustMetrics;
+
+export const heroClients = [
+  { name: "循環經濟 / 回收", context: "回收履歷、ESG 證據鏈、D-MRV" },
+  { name: "製造 / 供應鏈", context: "DPP、產品履歷、材料透明化" },
+  { name: "政府 / 學研 / 文化", context: "Ontology、知識平台、資料庫" },
+];
+
+export const heroProofs = [
+  { label: "Trust", value: "Merkle", description: "批次資料完整性驗證。" },
+  { label: "Passport", value: "DPP", description: "產品履歷與 QR 查詢。" },
+  { label: "Knowledge", value: "Ontology", description: "語意建模與知識圖譜。" },
+];
+
+export const heroQuickSignals = [
+  { label: "主軸", value: "數據信任鏈 / DPP / ESG" },
+  { label: "技術", value: "Ontology / AI / Merkle / IPFS / TSA" },
+  { label: "起手", value: "資料盤點 / PoC / NDA" },
+];
+
+export const heroFitSignals = [
+  "需要把回收、產品、碳或供應鏈資料變成可查核證據。",
+  "需要建立 DPP、QR 查詢或產品履歷資料欄位。",
+  "需要將人物、文本、事件與資料庫整理成知識平台。",
+  "需要串接現場設備、影像辨識或既有系統資料。",
+];
+
+export const heroContactLadder = [
+  { label: "Path 01", title: "資料盤點", detail: "先確認資料來源、權限、稽核節點與對外揭露範圍。", cta: "開始盤點", href: "/#quick-brief" },
+  { label: "Path 02", title: "PoC 驗證", detail: "用一條流程或一批資料先驗證 DPP / ESG / 信任鏈可行性。", cta: "看方案", href: "/solutions" },
+  { label: "Path 03", title: "Email / NDA", detail: "涉及採購、商業機密或研發資料時，先用保密路徑開始。", cta: "先寄 Email", href: `mailto:${siteConfig.email}` },
+];
+
+export const homepageContactProof = quickBriefAssistPoints;
+
+export const homepageCompactCaseEvidence = caseStudies.slice(0, 3).map((item) => ({
+  label: item.category,
+  title: item.title,
+  evidence: item.value,
+}));
+
+export const heroClarityChecklist = [
+  { label: "Who", answer: "循環經濟、製造、政府、學研與高知識密度團隊", detail: "資料需要被追溯、稽核、查詢或對外揭露。", metric: "30 秒定位" },
+  { label: "What", answer: "可信任資料平台", detail: "以 DPP、ESG 稽核、AI-Ontology 與系統整合落地。", metric: "4 條方案" },
+  { label: "How", answer: "Ontology + Hash/Merkle + IPFS + TSA", detail: "從資料模型到第三方驗證建立完整信任鏈。", metric: "7 節點流程" },
+];
+
+export const heroActionSignals = [
+  { step: "01", metric: "24h", title: "初步回覆", detail: "先判斷適合資料盤點、PoC、工作坊或 NDA。" },
+  { step: "02", metric: "30-45m", title: "需求討論", detail: "對齊資料來源、稽核問題、角色權限與第一階段範圍。" },
+  { step: "03", metric: "2-4w", title: "PoC 起手", detail: "用一條流程或一批資料驗證可行性。" },
+];
+
+export const heroPreviews = solutions.map((item, index) => ({
+  id: `solution-${index + 1}`,
+  label: item.title,
+  metric: index === 0 ? "Audit" : index === 1 ? "DPP" : index === 2 ? "Ontology" : "AIoT",
+  summary: item.description,
+  checklist: solutionDetails[index]?.outcomes ?? [],
+}));
+
+export const caseOverviewStats = [
+  { label: "ESG / DPP", value: "2", detail: "回收履歷與數位產品護照。" },
+  { label: "Knowledge", value: "4+", detail: "數位人文、國際研究與人物資料庫。" },
+  { label: "Core tags", value: "10+", detail: "Ontology、AIoT、Traceability、Knowledge Graph。" },
+];
+
+export const caseSnapshots = caseStudies.slice(0, 4).map((item, index) => ({
+  id: `case-${index + 1}`,
+  label: item.category,
+  context: item.tags[0],
+  title: item.title,
+  summary: item.value,
+  metrics: [
+    { label: "Problem", value: "Before", detail: item.problem },
+    { label: "Solution", value: "DaoYi", detail: item.solution },
+  ],
+  highlights: item.tags,
+  href: "/work",
+}));
+
+export const personaPlaybooks = [
+  {
+    id: "esg",
+    title: "ESG / 永續負責人",
+    headline: "需要可信的一手資料支撐稽核與揭露。",
+    challenge: "資料分散且難以證明未被修改。",
+    win: "建立可追溯證據鏈與第三方驗證路徑。",
+    metric: { label: "Priority", value: "Audit-ready" },
+    checklist: ["資料來源盤點", "Hash / Merkle 驗證", "稽核 Dashboard"],
+    ctaHref: "/contact",
+    ctaLabel: "討論 ESG 稽核",
+    helperText: "可先從一條流程做 PoC。",
+  },
+  {
+    id: "research",
+    title: "學研 / 文化機構",
+    headline: "需要把資料庫變成可探索的知識平台。",
+    challenge: "人物、文本、事件與地點缺乏語意關聯。",
+    win: "用 Ontology 與語意搜尋提升資料使用價值。",
+    metric: { label: "Priority", value: "Knowledge graph" },
+    checklist: ["Ontology 草案", "檢索場景", "前台展示"],
+    ctaHref: "/contact",
+    ctaLabel: "討論知識平台",
+    helperText: "可先從資料模型工作坊開始。",
+  },
+];
+
+export const aboutHero = {
+  eyebrow: "About DaoYi",
+  title: "道易科技協助高複雜度資料，成為可理解、可驗證、可長期維運的平台。",
+  description:
+    "道易科技從數位人文與 AI 語意分析出發，長期協助政府、學研、文化機構與企業整理高知識密度資料。現在，我們將資料建模、AI、系統整合與可驗證技術整合成數據信任鏈，支援 DPP、ESG 稽核、回收履歷與 AI-Ontology 知識平台。",
+};
+
+export const aboutPositioning = [
+  "道易科技是專注於數據信任鏈、DPP、ESG 高效稽核與 AI-Ontology 知識平台的技術服務公司。",
+  "我們以 Ontology 語義建模、AI、資料平台開發與可驗證資料流程，協助客戶處理高複雜度資料。",
+  "我們的目標，是讓資料成為可追溯、可查核、可展示、可維運的可信任資產。",
+];
+
+export const aboutCapabilities = [
+  {
+    title: "數位人文與知識平台",
+    detail: "長期處理人物、作品、事件、地點、文本、翻譯、書目與文化資料，建立可查詢、可維護、可展示的知識平台。",
+  },
+  {
+    title: "AI 語意分析與資料擷取",
+    detail: "將 OCR、語意擷取、AI 查詢與影像辨識導入不同場景，協助資料從文本、影像或現場流程中被整理與驗證。",
+  },
+  {
+    title: "資料平台與系統整合",
+    detail: "處理後台資料、API、權限、資料流程與維運需求，讓資料平台成為可長期使用的系統。",
+  },
+  {
+    title: "可信資料與稽核流程",
+    detail: "將資料模型、Hash、Merkle Tree、IPFS、TSA、Audit Trail 與 API 整合成可驗證資料流程。",
+  },
+];
+
+export const aboutAudiences = [
+  {
+    title: "循環經濟與回收產業",
+    detail: "適合需要回收履歷數位化、現場資料串接、ESG 或 DPP 延伸資料整理的團隊。",
+  },
+  {
+    title: "製造品牌與供應鏈",
+    detail: "適合需要產品履歷透明化、材料與製程資料整理、QR 查詢與 DPP PoC 的團隊。",
+  },
+  {
+    title: "政府、學研與文化機構",
+    detail: "適合需要人物、文本、作品、事件與地點資料整理，並建立研究資料庫或知識平台的團隊。",
+  },
+  {
+    title: "資料治理與系統整合團隊",
+    detail: "適合需要多系統資料整合、後台資料管理、權限、稽核紀錄與 API 串接的組織。",
+  },
+];
+
+export const aboutPrinciples = [
+  "先釐清資料，再設計平台。",
+  "先驗證最小可行流程，再擴大導入。",
+  "讓技術支撐查核、維運與對外揭露，而不是只停留在展示。",
+  "把每個案例整理成問題、解法、技術與價值，讓決策者能判斷適配度。",
 ];

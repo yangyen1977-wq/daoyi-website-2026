@@ -39,7 +39,6 @@ const serviceStructuredData = solutions.map((solution) => ({
   "offers": {
     "@type": "Offer",
     "availability": "https://schema.org/InStock",
-    "price": "0",
     "priceCurrency": "TWD"
   }
 }));
@@ -77,8 +76,8 @@ const structuredData = [
       "addressLocality": "Tainan / Taipei",
       "addressCountry": "TW"
     },
-    "serviceType": ["B2B 官網改版", "AI 導入", "知識平台建置", "DPP / Traceability"],
-    "knowsAbout": ["B2B website redesign", "AI workflow", "knowledge platform", "digital product passport"],
+    "serviceType": ["數據信任鏈", "DPP 數位產品護照", "ESG 高效稽核", "AI-Ontology 知識平台", "AIoT 回收履歷"],
+    "knowsAbout": ["Data Trust Chain", "Digital Product Passport", "ESG audit", "Ontology", "Merkle Tree", "IPFS", "TSA timestamp"],
     "availableLanguage": ["zh-Hant", "en"]
   },
   {
@@ -89,7 +88,7 @@ const structuredData = [
     "inLanguage": ["zh-Hant", "en"],
     "potentialAction": {
       "@type": "ContactAction",
-      "name": "Request project brief",
+      "name": "Request trust data project brief",
       "target": `${siteConfig.url}/#quick-brief`
     }
   },
@@ -107,13 +106,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
+    default: `${siteConfig.name} | 數據信任鏈、DPP、ESG 稽核與 AI-Ontology 知識平台`,
     template: `%s | ${siteConfig.shortName}`,
   },
-  description: "道易科技以重新設計與重建思維，協助 B2B、科技、製造與研究型團隊，把品牌主張、案例證據、資料流程、RWD / 手機 CTA 與 Contact 轉換整成同一套可交付系統。",
+  description: siteConfig.description,
   applicationName: siteConfig.name,
   referrer: "origin-when-cross-origin",
-  keywords: ["道易科技", "DaoYi Technology", "B2B 官網改版", "AI 導入", "知識平台", "DPP", "數位產品護照"],
+  keywords: ["道易科技", "DaoYi Technology", "數據信任鏈", "DPP", "數位產品護照", "ESG 稽核", "Ontology", "Merkle Tree", "IPFS", "知識平台"],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -123,16 +122,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_TW",
     url: siteConfig.url,
-    title: `${siteConfig.name} | B2B 官網改版、AI 導入、知識平台、DPP 與資料流程整合`,
-    description: "把舊站持續優化，改成重新設計與重建。",
+    title: `${siteConfig.name} | 數據信任鏈、DPP、ESG 稽核與 AI-Ontology 知識平台`,
+    description: siteConfig.description,
     siteName: siteConfig.name,
     alternateLocale: ["zh_TW", "en_US"],
     images: [{ url: "/assets/daoyi-logo.png", width: 512, height: 512, alt: `${siteConfig.name} logo` }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | B2B 官網、AI、知識平台與 DPP 數位解決方案`,
-    description: "把品牌主張、案例證據、資料流程、RWD / 手機 CTA 與 Contact 轉換整成同一套可交付方案。",
+    title: `${siteConfig.name} | 數據信任鏈、DPP、ESG 稽核與 AI-Ontology 知識平台`,
+    description: siteConfig.description,
     images: ["/assets/daoyi-logo.png"],
   },
   robots: {

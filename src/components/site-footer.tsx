@@ -41,7 +41,7 @@ export function SiteFooter() {
       </div>
       <div className="shell footer-bottom">
         <span>© 2026 DaoYi Technology. Built with Next.js.</span>
-        <span>Rebuild × Evidence × Conversion</span>
+        <span>Data Trust Chain × DPP × AI-Ontology</span>
       </div>
     </footer>
   );
