@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { HeroPlatformMockup } from "@/components/hero-platform-mockup";
+import { HeroBanner } from "@/components/hero-banner";
 import { InteractiveTrustFlow } from "@/components/interactive-trust-flow";
 import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
 import { SolutionFitFinder } from "@/components/solution-fit-finder";
 import {
-  heroMockup,
   homeBenchmarkSynthesis,
   homeBuyerRoutes,
   homeConversionPaths,
@@ -49,7 +48,7 @@ export default function HomePage() {
           </div>
 
           <div className="hero-rebuild-panel">
-            <HeroPlatformMockup mockup={heroMockup} metrics={homeTrustMetrics} />
+            <HeroBanner metrics={homeTrustMetrics} />
           </div>
 
           <div className="hero-outcome-board">
