@@ -93,7 +93,7 @@ export const aboutExperience = [
   },
   {
     title: "國際研究資料平台",
-    examples: ["捷克科學院 The Persian Tadhkira Project", "ORIENT Card Catalog", "TLiT / Author Translation Website in Taiwan"],
-    capabilities: ["研究資料庫", "多語系與國際展示", "Metadata 與資料維護", "長期資料平台"],
+    examples: ["Taiwan Biographical Ontology", "ORIENT Card Catalog", "TLiT / Author Translation Website in Taiwan"],
+    capabilities: ["研究資料庫", "人物本體", "Metadata 與資料維護", "長期資料平台"],
   },
 ];

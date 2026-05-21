@@ -198,12 +198,12 @@ export const caseStudies = [
     tags: ["Digital Humanities", "Knowledge Platform", "Semantic Search"],
   },
   {
-    title: "捷克科學院國際研究資料平台",
-    category: "國際學研 / 資料庫",
-    problem: "跨語言、跨資料源的研究材料需要結構化整理與長期可查詢介面。",
-    solution: "建立研究資料庫、資料欄位結構與可對外展示的網站系統。",
-    value: "支援國際研究合作與長期學術資料保存。",
-    tags: ["Research Database", "International", "Metadata"],
+    title: "Taiwan Biographical Ontology",
+    category: "國際學研 / 人物本體",
+    problem: "台灣人物、組織、職位與生命歷程資料需要跨資料集整理，才能支援人物群體與職涯路徑研究。",
+    solution: "建立人物、組織、地點、職位與資料來源的本體資料平台，支援瀏覽、語意查詢與資料重用。",
+    value: "讓傳記資料成為可探索、可分析、可擴充的研究知識平台。",
+    tags: ["Taiwan Biographical Ontology", "Prosopography", "Linked Data"],
   },
   {
     title: "香港中文大學圖書館傳記資料庫",

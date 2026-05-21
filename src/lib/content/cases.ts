@@ -21,7 +21,7 @@ export const caseCategories = [
   {
     title: "國際研究 / 知識平台",
     detail: "適合想看國際研究資料庫、多語系資料展示、學術資料整理與長期維護型資料平台的團隊。",
-    examples: ["The Persian Tadhkira Project", "ORIENT Card Catalog", "TLiT"],
+    examples: ["Taiwan Biographical Ontology", "ORIENT Card Catalog", "TLiT"],
   },
   {
     title: "資料平台 / 系統整合",
@@ -74,18 +74,18 @@ export const caseStudies = [
     proofStatus: "待補：文學好臺誌截圖、外譯房截圖、可公開功能模組截圖。",
   },
   {
-    title: "捷克科學院國際研究資料平台",
-    category: "國際研究 / 知識平台 / 資料庫",
+    title: "Taiwan Biographical Ontology",
+    category: "國際研究 / 人物本體 / 知識平台",
     image: {
-      src: publicAssetPath("/assets/cases/persian-tadhkira-card.jpg"),
-      alt: "Persian Tadhkira Project 公開網站截圖",
-      caption: "公開候選圖：Persian Tadhkira Project",
+      src: publicAssetPath("/assets/cases/tbio-card.png"),
+      alt: "Taiwan Biographical Ontology 公開網站截圖",
+      caption: "公開候選圖：Taiwan Biographical Ontology / Oriental Institute, Czech Academy of Sciences",
     },
-    problem: "國際研究專案需要整理跨語言、跨地區、跨資料源的研究材料；若資料結構不足，研究成果難以被查詢、展示、引用與長期維護。",
-    solution: "協助國際研究團隊建立研究資料庫與展示平台，將研究材料以結構化方式整理，支援對外展示、資料瀏覽與長期維護。",
-    value: "支援國際研究合作與成果展示，讓研究資料從分散檔案轉化為可查詢資料庫。",
-    tags: ["Research Database", "Metadata", "International Collaboration", "Knowledge Platform", "Data Visualization"],
-    proofStatus: "待補：各子站首頁截圖、研究資料瀏覽頁截圖、可公開國際合作成果描述。",
+    problem: "台灣人物、組織、職位與生命歷程資料橫跨多個來源；若缺乏本體與 linked data 結構，研究者難以系統性比較人物群體、查詢關係與重用資料。",
+    solution: "以 Taiwan Biographical Ontology 整理人物、組織、地點、職位與資料來源，支援瀏覽、語意查詢、資料下載與研究資料集貢獻。",
+    value: "讓傳記資料從分散紀錄升級為可探索、可分析、可擴充的研究知識平台，支援台灣社會群體與職涯路徑研究。",
+    tags: ["Taiwan Biographical Ontology", "Prosopography", "Linked Data", "Knowledge Graph", "Research Database"],
+    proofStatus: "已補：TBIO 公開首頁截圖。公開頁面顯示資料涵蓋人物、組織與職位，並提供 Browse、Query、Sources 與資料下載路徑。",
   },
   {
     title: "香港中文大學圖書館傳記資料庫",
