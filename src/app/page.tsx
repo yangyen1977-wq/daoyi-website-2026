@@ -16,7 +16,6 @@ import {
   homeProofArchitecture,
   homeProcessSteps,
   homeSolutions,
-  homeSitemapStrategy,
   homeThirdPartyReview,
   homeTrustFlow,
   homeTrustMetrics,
@@ -91,22 +90,6 @@ export default function HomePage() {
               <span className="mini-label accent">{item.role}</span>
               <h3>{item.question}</h3>
               <p>{item.route}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Site architecture"
-        title="新版 sitemap 不是頁面清單，而是把買方決策拆成五個可前進的步驟。"
-        description="首頁負責定位，解決方案負責選路，技術核心負責降低風險，案例負責建立信任，聯絡頁負責收斂第一步。"
-      >
-        <div className="homepage-sitemap-grid">
-          {homeSitemapStrategy.map((item) => (
-            <article key={item.page} className="homepage-sitemap-card">
-              <span className="mini-label accent">{item.page}</span>
-              <h3>{item.role}</h3>
-              <p>{item.cta}</p>
             </article>
           ))}
         </div>

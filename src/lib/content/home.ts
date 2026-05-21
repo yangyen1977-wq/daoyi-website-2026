@@ -31,34 +31,6 @@ export const homeTrustMetrics = [
   { value: "1", label: "信任資料底座" },
 ];
 
-export const homeSitemapStrategy = [
-  {
-    page: "首頁",
-    role: "建立品牌類別、買方分流與核心信任主張。",
-    cta: "導向方案、案例或 Quick Brief。",
-  },
-  {
-    page: "解決方案",
-    role: "把四種採購情境拆開：信任鏈、DPP、AI-Ontology、AIoT。",
-    cta: "協助買方選擇第一個 PoC 範圍。",
-  },
-  {
-    page: "技術核心",
-    role: "讓 IT、稽核與產品負責人看懂 Ontology、Hash、Merkle、IPFS、TSA 的工作方式。",
-    cta: "承接技術型會議與 NDA 討論。",
-  },
-  {
-    page: "案例實績",
-    role: "用公開素材證明道易能處理跨域、高複雜度資料平台。",
-    cta: "讓相似產業快速找到可參照案例。",
-  },
-  {
-    page: "關於 / 聯絡",
-    role: "補足公司可信度、合作方式與第一步需求收斂。",
-    cta: "24 小時內回覆建議切入點。",
-  },
-];
-
 export const homeDecisionSignals = [
   {
     title: "不是把資料上鏈，而是先定義什麼值得被證明",
