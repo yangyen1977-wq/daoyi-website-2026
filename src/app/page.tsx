@@ -6,7 +6,6 @@ import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
 import { SolutionFitFinder } from "@/components/solution-fit-finder";
 import {
-  homeBenchmarkSynthesis,
   homeBuyerRoutes,
   homeConversionPaths,
   homeDecisionSignals,
@@ -62,22 +61,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <Section
-        eyebrow="2026 benchmark synthesis"
-        title="本輪重製採用成熟 B2B / SaaS 官網的共同規律：類別清楚、角色分流、證據前置、降低第一步風險。"
-        description="參考 2026 B2B / SaaS 網站趨勢後，本版不把研究放成裝飾，而是轉成首頁敘事、頁面架構與轉換設計。"
-      >
-        <div className="card-grid four-up">
-          {homeBenchmarkSynthesis.map((item) => (
-            <article key={item.title} className="card homepage-benchmark-card">
-              <span className="mini-label accent">{item.source}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       <Section eyebrow="Decision signals" title="道易的新品牌主張：不是做更多資料系統，而是讓關鍵資料能被相信。">
         <div className="card-grid three-up">

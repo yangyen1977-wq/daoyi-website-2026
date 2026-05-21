@@ -31,29 +31,6 @@ export const homeTrustMetrics = [
   { value: "1", label: "信任資料底座" },
 ];
 
-export const homeBenchmarkSynthesis = [
-  {
-    source: "2026 SaaS examples",
-    title: "用市場類別加差異點定錨",
-    detail: "首頁不再只說系統開發能力，而是定義為 Trust Data Systems：協助需要被查核的資料建立可信任平台。",
-  },
-  {
-    source: "B2B homepage UX",
-    title: "兩屏內讓買方找到自己的入口",
-    detail: "永續、供應鏈、研究資料與 IT 角色看到的問題不同，因此首頁先分流角色與採購情境，再承接方案。",
-  },
-  {
-    source: "B2B proof patterns",
-    title: "信任證據要分散在每段脈絡中",
-    detail: "案例、技術、流程與啟動方式都對應可驗證主張，不把 proof 放成單一展示區塊。",
-  },
-  {
-    source: "Conversion strategy",
-    title: "高單價專案要降低第一步風險",
-    detail: "CTA 從泛用聯絡改成資料盤點、DPP / ESG PoC、AI-Ontology workshop 與 NDA 路徑。",
-  },
-];
-
 export const homeSitemapStrategy = [
   {
     page: "首頁",
