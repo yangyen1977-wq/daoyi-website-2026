@@ -6,7 +6,6 @@ import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
 import { SolutionFitFinder } from "@/components/solution-fit-finder";
 import {
-  homeBuyerRoutes,
   homeConversionPaths,
   homeFeaturedCases,
   homeHero,
@@ -66,18 +65,6 @@ export default function HomePage() {
             <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Buyer routes" title="不同角色進站時，應該立刻找到自己的判斷入口。">
-        <div className="card-grid four-up">
-          {homeBuyerRoutes.map((item) => (
-            <article key={item.role} className="card trust-card">
-              <span className="mini-label accent">{item.role}</span>
-              <h3>{item.question}</h3>
-              <p>{item.route}</p>
             </article>
           ))}
         </div>

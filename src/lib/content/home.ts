@@ -64,29 +64,6 @@ export const homePainPoints = [
   },
 ];
 
-export const homeBuyerRoutes = [
-  {
-    role: "永續 / ESG / 稽核主管",
-    question: "現有資料能不能支撐 DPP、ESG 揭露或第三方抽驗？",
-    route: "先看數據信任鏈與高效稽核平台，再用資料盤點啟動 PoC。",
-  },
-  {
-    role: "製造 / 供應鏈 / 循環經濟團隊",
-    question: "產品、材料、維修與回收履歷能不能做成可查詢的產品護照？",
-    route: "先看 DPP 數位產品護照與 AIoT 回收履歷，確認資料來源與查詢場景。",
-  },
-  {
-    role: "政府 / 學研 / 文化資料單位",
-    question: "大量文本、人物、作品與事件資料能不能變成可探索的知識平台？",
-    route: "先看 AI-Ontology 知識平台與案例實績，再討論資料模型。",
-  },
-  {
-    role: "IT / 系統整合 / 產品負責人",
-    question: "這套信任資料底座能不能接既有系統、API、權限與維運流程？",
-    route: "先看技術核心頁，再用 NDA 或技術工作坊確認架構邊界。",
-  },
-];
-
 export const homeSolutions = [
   {
     title: "數據信任鏈與高效稽核平台",
