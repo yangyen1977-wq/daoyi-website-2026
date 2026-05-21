@@ -1,9 +1,9 @@
 export const homeHero = {
-  eyebrow: "DaoYi Technology / Verified Data Infrastructure",
-  badge: "DPP 數位產品護照 × ESG 高效稽核 × AI-Ontology 知識平台 × AIoT 回收履歷",
-  title: "把分散資料重建成可查詢、可稽核、可被第三方驗證的信任基礎設施。",
+  eyebrow: "DaoYi Technology / Trust Data Systems",
+  badge: "DPP × ESG Audit × AI-Ontology × AIoT Traceability",
+  title: "為需要被查核的資料，建立一套能被買方、稽核者與使用者相信的平台。",
   description:
-    "道易科技協助循環經濟、製造供應鏈、政府學研與高知識密度組織，將產品履歷、ESG 證據、研究資料與現場紀錄，轉成能支撐 DPP、稽核、查詢與長期維運的數據信任鏈。",
+    "道易科技協助循環經濟、製造供應鏈、政府學研與高知識密度組織，把產品履歷、ESG 證據、研究資料與現場紀錄，重建成可查詢、可驗證、可長期維運的信任資料系統。",
 };
 
 export const homeHeroCards = [
@@ -25,32 +25,75 @@ export const homeHeroCards = [
 ];
 
 export const homeTrustMetrics = [
-  { value: "4", label: "可採購方案入口" },
-  { value: "8+", label: "跨域案例類型" },
-  { value: "24h", label: "初步需求回覆" },
-  { value: "1", label: "共用信任資料底座" },
+  { value: "4", label: "方案切入點" },
+  { value: "6", label: "公開案例證據" },
+  { value: "24h", label: "初步回覆" },
+  { value: "1", label: "信任資料底座" },
 ];
 
 export const homeBenchmarkSynthesis = [
   {
-    source: "RNO1 / 2026 B2B SaaS homepage patterns",
-    title: "首屏要有具體、可驗證的主張",
-    detail: "本輪將首頁從技術名詞堆疊，改成先回答買方最在意的結果：資料能否被查詢、稽核與第三方驗證。",
+    source: "2026 SaaS examples",
+    title: "用市場類別加差異點定錨",
+    detail: "首頁不再只說系統開發能力，而是定義為 Trust Data Systems：協助需要被查核的資料建立可信任平台。",
   },
   {
-    source: "Moydus / SaaS website principles",
-    title: "先呈現 outcome，再展開 feature",
-    detail: "技術仍保留 Merkle、IPFS、TSA 與 Ontology，但放在 Trust Flow 與技術核心頁承接，不讓首屏變成工程規格表。",
+    source: "B2B homepage UX",
+    title: "兩屏內讓買方找到自己的入口",
+    detail: "永續、供應鏈、研究資料與 IT 角色看到的問題不同，因此首頁先分流角色與採購情境，再承接方案。",
   },
   {
-    source: "Flowtrix / B2B landing examples",
-    title: "案例需要支撐商務轉換",
-    detail: "案例區改以 proof asset 思維呈現，讓決策者先看到情境、解法與價值，再進案例頁看細節。",
+    source: "B2B proof patterns",
+    title: "信任證據要分散在每段脈絡中",
+    detail: "案例、技術、流程與啟動方式都對應可驗證主張，不把 proof 放成單一展示區塊。",
   },
   {
-    source: "Trajectory / B2B best practices",
-    title: "UX、信任與轉換必須一起設計",
-    detail: "首頁新增買方角色分流與啟動路徑，讓永續、IT、研究與管理者都能快速找到判斷入口。",
+    source: "Conversion strategy",
+    title: "高單價專案要降低第一步風險",
+    detail: "CTA 從泛用聯絡改成資料盤點、DPP / ESG PoC、AI-Ontology workshop 與 NDA 路徑。",
+  },
+];
+
+export const homeSitemapStrategy = [
+  {
+    page: "首頁",
+    role: "建立品牌類別、買方分流與核心信任主張。",
+    cta: "導向方案、案例或 Quick Brief。",
+  },
+  {
+    page: "解決方案",
+    role: "把四種採購情境拆開：信任鏈、DPP、AI-Ontology、AIoT。",
+    cta: "協助買方選擇第一個 PoC 範圍。",
+  },
+  {
+    page: "技術核心",
+    role: "讓 IT、稽核與產品負責人看懂 Ontology、Hash、Merkle、IPFS、TSA 的工作方式。",
+    cta: "承接技術型會議與 NDA 討論。",
+  },
+  {
+    page: "案例實績",
+    role: "用公開素材證明道易能處理跨域、高複雜度資料平台。",
+    cta: "讓相似產業快速找到可參照案例。",
+  },
+  {
+    page: "關於 / 聯絡",
+    role: "補足公司可信度、合作方式與第一步需求收斂。",
+    cta: "24 小時內回覆建議切入點。",
+  },
+];
+
+export const homeDecisionSignals = [
+  {
+    title: "不是把資料上鏈，而是先定義什麼值得被證明",
+    detail: "從買方會質疑的資料來源、版本、時間、權限與異動紀錄開始設計，而不是先堆技術名詞。",
+  },
+  {
+    title: "不是做一個查詢頁，而是建立能維護的資料治理流程",
+    detail: "DPP、Dashboard、API 與後台都回到同一套資料模型，避免前台好看但資料不可持續。",
+  },
+  {
+    title: "不是只交付系統，而是交付可進入稽核與採購討論的證據",
+    detail: "每個模組都要能回答：誰提供資料、何時存在、是否被修改、如何被第三方抽驗。",
   },
 ];
 
@@ -208,23 +251,23 @@ export const homeConversionPaths = [
 export const homeThirdPartyReview = [
   {
     metric: "定位清晰度",
-    score: "9.1/10",
-    note: "新版首頁已從技術能力展示，轉成 verified data infrastructure 的商務定位。",
+    score: "9.2/10",
+    note: "新版首頁已將道易定義為 Trust Data Systems 公司，差異點比一般系統開發商更清楚。",
   },
   {
     metric: "資訊架構",
-    score: "9.0/10",
-    note: "首頁、解決方案、技術核心、案例與聯絡頁分工明確，能服務不同買方角色。",
+    score: "9.1/10",
+    note: "頁面分工已接近成熟 B2B 站：首頁定錨、方案分流、技術降低風險、案例建立證據。",
   },
   {
     metric: "信任與案例",
-    score: "8.7/10",
-    note: "案例素材與 proof architecture 已成形，後續可持續補強更多量化成果與客戶引用語。",
+    score: "8.8/10",
+    note: "公開 proof asset 已足夠支撐專業感，下一階段可補更多客戶引用語與可公開成效數字。",
   },
   {
     metric: "轉換設計",
-    score: "8.9/10",
-    note: "CTA 不只導向聯絡表單，而是分成資料盤點、PoC、知識平台原型與 NDA 討論。",
+    score: "9.0/10",
+    note: "轉換路徑已從單一聯絡表單升級為低風險啟動方式，適合長決策週期專案。",
   },
 ];
 

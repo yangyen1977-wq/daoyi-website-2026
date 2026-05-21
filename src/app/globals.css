@@ -5469,6 +5469,72 @@ body {
   }
 }
 
+.homepage-sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.homepage-sitemap-card {
+  position: relative;
+  min-height: 230px;
+  padding: 22px 18px;
+  border: 1px solid rgba(16, 32, 51, 0.1);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(238, 247, 246, 0.72));
+  box-shadow: 0 18px 44px rgba(16, 48, 72, 0.08);
+}
+
+.homepage-sitemap-card::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  right: -20px;
+  width: 24px;
+  height: 1px;
+  background: rgba(42, 157, 143, 0.34);
+}
+
+.homepage-sitemap-card:last-child::after {
+  display: none;
+}
+
+.homepage-sitemap-card h3 {
+  margin-top: 18px;
+  color: var(--text-dark);
+  font-size: 1.02rem;
+  line-height: 1.38;
+}
+
+.homepage-sitemap-card p {
+  margin-top: 14px;
+  color: var(--text-body);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 1020px) {
+  .homepage-sitemap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .homepage-sitemap-card::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage-sitemap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homepage-sitemap-card {
+    min-height: auto;
+    padding: 20px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fit-finder-option,
   .interactive-flow-step,

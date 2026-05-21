@@ -10,6 +10,7 @@ import {
   homeBenchmarkSynthesis,
   homeBuyerRoutes,
   homeConversionPaths,
+  homeDecisionSignals,
   homeFeaturedCases,
   homeHero,
   homeHeroCards,
@@ -17,6 +18,7 @@ import {
   homeProofArchitecture,
   homeProcessSteps,
   homeSolutions,
+  homeSitemapStrategy,
   homeThirdPartyReview,
   homeTrustFlow,
   homeTrustMetrics,
@@ -64,13 +66,24 @@ export default function HomePage() {
 
       <Section
         eyebrow="2026 benchmark synthesis"
-        title="本輪重製採用成熟 B2B / SaaS 官網的共同規律：首屏可驗證、兩屏內分流、先證據後說服。"
-        description="這些不是外觀趨勢，而是讓高單價、長決策週期的買方更快判斷 fit、風險與下一步。"
+        title="本輪重製採用成熟 B2B / SaaS 官網的共同規律：類別清楚、角色分流、證據前置、降低第一步風險。"
+        description="參考 2026 B2B / SaaS 網站趨勢後，本版不把研究放成裝飾，而是轉成首頁敘事、頁面架構與轉換設計。"
       >
         <div className="card-grid four-up">
           {homeBenchmarkSynthesis.map((item) => (
             <article key={item.title} className="card homepage-benchmark-card">
               <span className="mini-label accent">{item.source}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Decision signals" title="道易的新品牌主張：不是做更多資料系統，而是讓關鍵資料能被相信。">
+        <div className="card-grid three-up">
+          {homeDecisionSignals.map((item) => (
+            <article key={item.title} className="card homepage-decision-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
@@ -96,6 +109,22 @@ export default function HomePage() {
               <span className="mini-label accent">{item.role}</span>
               <h3>{item.question}</h3>
               <p>{item.route}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Site architecture"
+        title="新版 sitemap 不是頁面清單，而是把買方決策拆成五個可前進的步驟。"
+        description="首頁負責定位，解決方案負責選路，技術核心負責降低風險，案例負責建立信任，聯絡頁負責收斂第一步。"
+      >
+        <div className="homepage-sitemap-grid">
+          {homeSitemapStrategy.map((item) => (
+            <article key={item.page} className="homepage-sitemap-card">
+              <span className="mini-label accent">{item.page}</span>
+              <h3>{item.role}</h3>
+              <p>{item.cta}</p>
             </article>
           ))}
         </div>
