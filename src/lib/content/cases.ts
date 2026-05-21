@@ -43,7 +43,7 @@ export const caseStudies = [
     solution: "將產品資料整理成可管理的 DPP 架構，讓材料、製程、環境資訊、回收指引與查詢體驗能接在一起。",
     value: "讓產品資料從靜態介紹升級為可維護的數位身分，為 DPP、ESG 與供應鏈透明化打底。",
     tags: ["DPP", "QR Code", "Product Data Model", "Traceability", "Supply Chain", "ESG"],
-    proofStatus: "已補：DPP QR 查詢頁公開重繪圖。待補：真實介面截圖、可公開產品示例、資料欄位截圖。",
+    proofStatus: "公開素材：DPP QR 查詢頁重繪圖，呈現產品身分、材料資訊、回收指引與驗證狀態。",
   },
   {
     title: "太陽能板回收 YOLO 辨識與履歷",
@@ -57,7 +57,7 @@ export const caseStudies = [
     solution: "將 AI / AIoT 應用於太陽能板回收場景，透過 YOLO 影像辨識、設備資料與流程紀錄整合，接回回收履歷與可信資料平台。",
     value: "降低現場資料只靠人工紀錄的風險，為 ESG 稽核、DPP 延伸與資料信任鏈建立資料來源。",
     tags: ["AIoT", "YOLO", "Image Recognition", "Traceability", "ESG Audit", "Data Trust Chain"],
-    proofStatus: "已補：公開版回收履歷流程重繪圖、履歷 dashboard mockup。待補：YOLO demo 圖、可公開現場素材。",
+    proofStatus: "公開素材：回收履歷 dashboard mockup，呈現 AI 影像證據、批次狀態、材料回收與信任鏈查核。",
   },
   {
     title: "國立臺灣文學館數位人文平台",
@@ -71,7 +71,7 @@ export const caseStudies = [
     solution: "建置數位人文資料平台，將文學與文化資料整理成可查詢、可展示、可維護的資料結構。",
     value: "將文化資料轉化為可查詢與可探索的知識平台，提升研究資料、館藏資料與公共展示的使用價值。",
     tags: ["Digital Humanities", "Knowledge Platform", "Semantic Search", "Metadata", "Data Platform"],
-    proofStatus: "待補：文學好臺誌截圖、外譯房截圖、可公開功能模組截圖。",
+    proofStatus: "公開素材：文學好臺誌公開網站截圖，呈現文學資料如何被整理、查詢與展示。",
   },
   {
     title: "Taiwan Biographical Ontology",
@@ -85,7 +85,7 @@ export const caseStudies = [
     solution: "以 Taiwan Biographical Ontology 整理人物、組織、地點、職位與資料來源，支援瀏覽、語意查詢、資料下載與研究資料集貢獻。",
     value: "讓傳記資料從分散紀錄升級為可探索、可分析、可擴充的研究知識平台，支援台灣社會群體與職涯路徑研究。",
     tags: ["Taiwan Biographical Ontology", "Prosopography", "Linked Data", "Knowledge Graph", "Research Database"],
-    proofStatus: "已補：TBIO 公開首頁截圖。公開頁面顯示資料涵蓋人物、組織與職位，並提供 Browse、Query、Sources 與資料下載路徑。",
+    proofStatus: "公開素材：TBIO 公開首頁截圖。公開頁面顯示資料涵蓋人物、組織與職位，並提供 Browse、Query、Sources 與資料下載路徑。",
   },
   {
     title: "香港中文大學圖書館傳記資料庫",
@@ -99,7 +99,7 @@ export const caseStudies = [
     solution: "以人物資料結構、分類與前台查詢設計支援資料管理與使用者探索，讓傳記資料能以更清楚的方式被維護與使用。",
     value: "提升傳記資料的可查詢性與可維護性，讓圖書館資料更容易被研究者與公眾使用。",
     tags: ["Biography Database", "Library", "Knowledge Graph", "Metadata", "Search"],
-    proofStatus: "已補：人物資料庫搜尋與詳情頁公開重繪圖。待補：可公開子站連結確認、真實人物資料列表與詳情頁截圖、客戶可公開成果描述。",
+    proofStatus: "公開素材：人物資料庫搜尋與詳情頁重繪圖，呈現搜尋、人物 profile、source records 與關係脈絡。",
   },
   {
     title: "社會網絡分析與人物知識本體",
@@ -113,7 +113,7 @@ export const caseStudies = [
     solution: "建立人物、事件、組織、地點等語意模型，支援關係查詢、社會網絡分析與資料視覺化。",
     value: "讓資料關係視覺化，支援人物與事件脈絡分析，將研究資料從資料庫升級為可探索知識網絡。",
     tags: ["Ontology", "SNA", "Knowledge Graph", "Semantic Model", "Visualization"],
-    proofStatus: "待補：關係圖或網絡圖截圖、搜尋與分析介面截圖、可公開研究資料示例。",
+    proofStatus: "公開素材：社會網絡分析平台截圖，呈現人物、事件、組織與地點關係如何轉成可探索的知識網絡。",
   },
 ];
 

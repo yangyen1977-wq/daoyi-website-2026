@@ -219,7 +219,7 @@ export const homeThirdPartyReview = [
   {
     metric: "信任與案例",
     score: "8.7/10",
-    note: "案例素材與 proof architecture 已成形，下一輪可補更多量化成果與客戶引用語。",
+    note: "案例素材與 proof architecture 已成形，後續可持續補強更多量化成果與客戶引用語。",
   },
   {
     metric: "轉換設計",

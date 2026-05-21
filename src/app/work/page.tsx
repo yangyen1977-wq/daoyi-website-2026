@@ -51,7 +51,7 @@ export default function WorkPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Next proof assets" title="下一輪最值得補的是能被買方直接查核的素材。">
+      <Section eyebrow="Proof roadmap" title="可逐步補強的公開證據素材，讓買方更容易查核成果。">
         <div className="card-grid three-up">
           {caseProofNeeds.map((item) => (
             <article key={item.title} className="card offer-room-card">

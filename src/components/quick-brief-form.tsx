@@ -173,7 +173,7 @@ export function QuickBriefForm() {
         <strong>送出後會發生什麼？</strong>
         <ul className="bullet-list compact">
           <li>會先開啟已填好的 Email，方便補流程、資料來源或 NDA 需求。</li>
-          <li>24 小時內會回覆建議切入點、會議時段與待補資料。</li>
+          <li>24 小時內會回覆建議切入點、會議時段與需要補充的資料。</li>
           <li>如果涉及採購、商業機密或研發細節，也可以直接改走 Email + NDA。</li>
         </ul>
       </div>
