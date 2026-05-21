@@ -16,7 +16,7 @@ export const caseCategories = [
   {
     title: "AI-Ontology / 數位人文",
     detail: "適合想看語意擷取、OCR、人物作品事件資料、知識圖譜與語意搜尋的團隊。",
-    examples: ["國立臺灣文學館數位人文平台", "社會網絡分析平台", "台灣傳記知識本體"],
+    examples: ["國立臺灣文學館好臺誌、外譯房", "社會網絡分析平台", "台灣傳記知識本體"],
   },
   {
     title: "國際研究 / 知識平台",
@@ -60,7 +60,7 @@ export const caseStudies = [
     proofStatus: "公開素材：回收履歷 dashboard mockup，呈現 AI 影像證據、批次狀態、材料回收與信任鏈查核。",
   },
   {
-    title: "國立臺灣文學館數位人文平台",
+    title: "國立臺灣文學館好臺誌、外譯房",
     category: "數位人文 / AI-Ontology / 知識平台",
     image: {
       src: publicAssetPath("/assets/cases/tlsg-nmtl-card.jpg"),
