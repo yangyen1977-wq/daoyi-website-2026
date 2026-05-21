@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
-import { DesktopQuickContact } from "@/components/desktop-quick-contact";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig, solutions, navItems } from "@/lib/site";
 import { absoluteUrl, socialPreviewImage } from "@/lib/metadata";
@@ -154,7 +153,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteHeader />
           {children}
           <SiteFooter />
-          <DesktopQuickContact />
           <MobileStickyCTA />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         </div>
