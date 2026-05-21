@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DaoYi Technology Website 2026
 
-## Getting Started
+道易科技 2026 新版官網，使用 Next.js static export 部署到 GitHub Pages。
 
-First, run the development server:
+Live site:
+
+- <https://yangyen1977-wq.github.io/daoyi-website-2026/>
+
+## Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Static export
+- GitHub Pages
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Local URL:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- <http://localhost:3000>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build Checks
 
-## Learn More
+Before pushing public changes, run:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+GITHUB_ACTIONS=true npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`GITHUB_ACTIONS=true` is intentional. It verifies the same GitHub Pages base path used by deployment:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/daoyi-website-2026`
 
-## Deploy on Vercel
+## Public Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/`
+- `/solutions/`
+- `/technology/`
+- `/work/`
+- `/about/`
+- `/contact/`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`/cases/` is a static noindex redirect page that points to `/work/`.
+
+## SEO Assets
+
+- Sitemap: `/sitemap.xml`
+- Robots: `/robots.txt`
+- Open Graph image: `/assets/daoyi-og-preview.png`
+- Canonical base: configured in `src/lib/site.ts`
+
+When switching to a custom domain, update `siteConfig.url` in `src/lib/site.ts`, then rebuild and verify sitemap, robots, canonical, Open Graph and Twitter Card URLs.
+
+## Launch Checklist
+
+See [docs/launch-checklist.md](docs/launch-checklist.md).
