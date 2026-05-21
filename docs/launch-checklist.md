@@ -1,28 +1,29 @@
 # DaoYi Website Launch Checklist
 
-This checklist covers the final steps before moving from the GitHub Pages preview URL to a production domain.
+This checklist covers the final steps for the production domain and search/analytics setup.
 
-## Current Preview
+## Current Production Setup
 
-- Preview URL: `https://yangyen1977-wq.github.io/daoyi-website-2026/`
+- Production URL: `https://daoyidh.com/`
 - Deployment: GitHub Pages
 - Source branch: `main`
 - Build command: `GITHUB_ACTIONS=true npm run build`
 - Output directory: `out`
+- Custom domain file: `public/CNAME`
+- GA4 measurement ID: `G-5Z6E62SWN9`
 
 ## Before Custom Domain Cutover
 
-- Confirm the production domain, for example `https://www.daoyidh.com` or another approved domain.
-- Decide whether the canonical domain should include `www`.
-- Confirm DNS access and GitHub Pages custom domain settings.
+- Confirm DNS access and GitHub Pages custom domain settings for `daoyidh.com`.
+- Decide whether `www.daoyidh.com` should redirect to `daoyidh.com`.
 - Confirm whether the old site needs redirects, DNS-only cutover, or parallel launch.
 - Confirm the final public phone number before replacing `+886-6-000-0000`.
 - Confirm final public case screenshots and whether any customer logo or quote can be shown.
 
 ## Code Changes for Custom Domain
 
-- Update `siteConfig.url` in `src/lib/site.ts`.
-- Add or update GitHub Pages `CNAME` only after the production domain is confirmed.
+- Keep `siteConfig.url` in `src/lib/site.ts` set to `https://daoyidh.com`.
+- Keep GitHub Pages `CNAME` set to `daoyidh.com`.
 - Rebuild with production settings and verify generated URLs in `out/sitemap.xml` and `out/robots.txt`.
 - Check canonical URLs on all public pages.
 - Check Open Graph and Twitter Card image URLs.
@@ -32,7 +33,7 @@ This checklist covers the final steps before moving from the GitHub Pages previe
 
 - Add the production domain property in Google Search Console.
 - Verify ownership using DNS TXT, HTML file, or meta tag.
-- Submit `https://<production-domain>/sitemap.xml`.
+- Submit `https://daoyidh.com/sitemap.xml`.
 - Inspect these URLs after deployment:
   - `/`
   - `/solutions/`
@@ -44,7 +45,7 @@ This checklist covers the final steps before moving from the GitHub Pages previe
 
 ## Analytics
 
-- Decide whether to use GA4, Plausible, Fathom, or another privacy-friendly analytics tool.
+- GA4 is installed with measurement ID `G-5Z6E62SWN9`.
 - Track these events:
   - Header CTA click
   - Mobile bottom CTA click

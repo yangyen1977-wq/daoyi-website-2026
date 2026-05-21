@@ -4,7 +4,7 @@
 
 Live site:
 
-- <https://yangyen1977-wq.github.io/daoyi-website-2026/>
+- <https://daoyidh.com/>
 
 ## Stack
 
@@ -36,7 +36,7 @@ GITHUB_ACTIONS=true npm run build
 
 `GITHUB_ACTIONS=true` is intentional. It verifies the same GitHub Pages base path used by deployment:
 
-- `/daoyi-website-2026`
+- `/`
 
 ## Public Pages
 
@@ -55,8 +55,10 @@ GITHUB_ACTIONS=true npm run build
 - Robots: `/robots.txt`
 - Open Graph image: `/assets/daoyi-og-preview.png`
 - Canonical base: configured in `src/lib/site.ts`
+- GitHub Pages custom domain: `public/CNAME`
+- GA4 measurement ID: configured in `src/lib/site.ts`
 
-When switching to a custom domain, update `siteConfig.url` in `src/lib/site.ts`, then rebuild and verify sitemap, robots, canonical, Open Graph and Twitter Card URLs.
+When switching domains, update `siteConfig.url` in `src/lib/site.ts`, update `public/CNAME`, then rebuild and verify sitemap, robots, canonical, Open Graph and Twitter Card URLs.
 
 ## Launch Checklist
 

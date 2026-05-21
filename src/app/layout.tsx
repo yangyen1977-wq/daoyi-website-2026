@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Geist } from "next/font/google";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
 import { SiteHeader } from "@/components/site-header";
@@ -155,6 +157,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteFooter />
           <MobileStickyCTA />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+          <Suspense fallback={null}>
+            <GoogleAnalytics measurementId={siteConfig.gaMeasurementId} />
+          </Suspense>
         </div>
       </body>
     </html>
