@@ -20,6 +20,27 @@ This checklist covers the final steps for the production domain and search/analy
 - Confirm the final public phone number before replacing `+886-6-000-0000`.
 - Confirm final public case screenshots and whether any customer logo or quote can be shown.
 
+## DNS Records
+
+GitHub Pages custom domain docs:
+
+- <https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site>
+
+For apex domain `daoyidh.com`, configure DNS to point to GitHub Pages:
+
+- `A @ 185.199.108.153`
+- `A @ 185.199.109.153`
+- `A @ 185.199.110.153`
+- `A @ 185.199.111.153`
+
+For `www.daoyidh.com`, either redirect it to `daoyidh.com` at the DNS/CDN layer, or configure a `CNAME` to the GitHub Pages host if `www` should also serve the site.
+
+Current check on 2026-05-21:
+
+- `daoyidh.com` still resolves to the existing server, not GitHub Pages.
+- `www.daoyidh.com` resolves through Cloudflare.
+- The new static site is deployed, but production-domain traffic will not reach it until DNS / Pages custom domain settings are completed.
+
 ## Code Changes for Custom Domain
 
 - Keep `siteConfig.url` in `src/lib/site.ts` set to `https://daoyidh.com`.
