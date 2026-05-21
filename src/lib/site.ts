@@ -5,7 +5,7 @@ export const siteConfig = {
     "道易科技打造可追溯、可稽核、可驗證的數據信任鏈平台，協助企業、政府與研究機構完成 DPP、ESG 高效稽核、AI-Ontology 知識平台與資料系統整合。",
   url: "https://daoyidh.com",
   email: "service@daoyidh.com",
-  phone: "+886-6-000-0000",
+  phone: "+886-6-268-0034",
   gaMeasurementId: "G-5Z6E62SWN9",
   location: "Tainan / Taiwan",
   heroTitle: "讓循環經濟、ESG 與知識資產，有一條可被驗證的數據信任鏈。",

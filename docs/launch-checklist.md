@@ -17,7 +17,7 @@ This checklist covers the final steps for the production domain and search/analy
 - Confirm DNS access and GitHub Pages custom domain settings for `daoyidh.com`.
 - Decide whether `www.daoyidh.com` should redirect to `daoyidh.com`.
 - Confirm whether the old site needs redirects, DNS-only cutover, or parallel launch.
-- Confirm the final public phone number before replacing `+886-6-000-0000`.
+- Public phone number is set to `+886-6-268-0034`.
 - Confirm final public case screenshots and whether any customer logo or quote can be shown.
 
 ## DNS Records
