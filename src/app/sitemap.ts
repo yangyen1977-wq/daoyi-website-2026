@@ -1,15 +1,24 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/site";
+import { absoluteUrl } from "@/lib/metadata";
 
 export const dynamic = "force-static";
 
-const routes = ["", "/solutions", "/technology", "/work", "/about", "/contact"];
+const lastModified = new Date("2026-05-20T00:00:00.000Z");
+
+const routes = [
+  { path: "/", priority: 1, changeFrequency: "weekly" as const },
+  { path: "/solutions", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/technology", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/work", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/about", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "/contact", priority: 0.7, changeFrequency: "monthly" as const },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
-    url: `${siteConfig.url}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.7,
+    url: absoluteUrl(route.path),
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
 }

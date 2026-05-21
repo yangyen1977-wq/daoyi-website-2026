@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { headerReassuranceSignals, navItems, siteConfig } from "@/lib/site";
+import { headerReassuranceSignals, navItems, publicAssetPath, siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +27,7 @@ export function SiteHeader() {
         <div className="site-header-topRow">
           <Link href="/" className="brand-mark" aria-label={siteConfig.name} onClick={() => setMenuOpen(false)}>
             <span className="brand-mark-logoWrap">
-              <Image src="/assets/daoyi-logo.png" alt="DaoYi Technology logo" width={44} height={44} className="brand-mark-logo" priority />
+              <Image src={publicAssetPath("/assets/daoyi-logo.png")} alt="DaoYi Technology logo" width={44} height={44} className="brand-mark-logo" priority />
             </span>
             <span>
               <strong>{siteConfig.name}</strong>

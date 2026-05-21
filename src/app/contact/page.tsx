@@ -12,12 +12,13 @@ import {
   contactScenarios,
 } from "@/lib/content/contact";
 import { siteConfig } from "@/lib/site";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "聯絡我們｜啟動 DPP、ESG 稽核或 AI-Ontology 專案",
   description: "與道易科技討論數據信任鏈、DPP 數位產品護照、ESG 高效稽核、AI-Ontology 知識平台與資料系統整合。",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

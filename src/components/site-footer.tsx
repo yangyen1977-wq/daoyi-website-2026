@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navItems, siteConfig } from "@/lib/site";
+import { navItems, publicAssetPath, siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="footer-brand">
           <div className="footer-brand-head">
             <span className="brand-mark-logoWrap footer-logoWrap">
-              <Image src="/assets/daoyi-logo.png" alt="DaoYi Technology logo" width={48} height={48} className="brand-mark-logo" />
+              <Image src={publicAssetPath("/assets/daoyi-logo.png")} alt="DaoYi Technology logo" width={48} height={48} className="brand-mark-logo" />
             </span>
             <div>
               <p className="footer-eyebrow">DaoYi Technology / 2026</p>

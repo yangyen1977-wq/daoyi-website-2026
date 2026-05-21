@@ -5,6 +5,7 @@ import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
 import { DesktopQuickContact } from "@/components/desktop-quick-contact";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig, solutions, navItems } from "@/lib/site";
+import { absoluteUrl, socialPreviewImage } from "@/lib/metadata";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,7 +20,7 @@ const breadcrumbList = {
     "@type": "ListItem",
     position: index + 1,
     name: item.label,
-    item: `${siteConfig.url}${item.href === "/" ? "" : item.href}`
+    item: absoluteUrl(item.href)
   }))
 };
 
@@ -89,7 +90,7 @@ const structuredData = [
     "potentialAction": {
       "@type": "ContactAction",
       "name": "Request trust data project brief",
-      "target": `${siteConfig.url}/#quick-brief`
+      "target": absoluteUrl("/#quick-brief")
     }
   },
   ...serviceStructuredData,
@@ -99,7 +100,7 @@ const structuredData = [
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#08111f",
+  themeColor: "#1f2524",
   colorScheme: "dark light",
 };
 
@@ -116,7 +117,7 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  alternates: { canonical: "/", languages: { "zh-TW": "/" } },
+  alternates: { canonical: siteConfig.url, languages: { "zh-TW": siteConfig.url } },
   formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: "website",
@@ -126,13 +127,13 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
     alternateLocale: ["zh_TW", "en_US"],
-    images: [{ url: "/assets/daoyi-logo.png", width: 512, height: 512, alt: `${siteConfig.name} logo` }],
+    images: [socialPreviewImage],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | 數據信任鏈、DPP、ESG 稽核與 AI-Ontology 知識平台`,
     description: siteConfig.description,
-    images: ["/assets/daoyi-logo.png"],
+    images: [socialPreviewImage.url],
   },
   robots: {
     index: true,
@@ -140,8 +141,8 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
   category: "technology",
-  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico", apple: "/favicon.ico" },
-  other: { "theme-color": "#08111f" },
+  icons: { icon: `${siteConfig.url}/favicon.ico`, shortcut: `${siteConfig.url}/favicon.ico`, apple: `${siteConfig.url}/favicon.ico` },
+  other: { "theme-color": "#1f2524" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

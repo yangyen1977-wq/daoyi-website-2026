@@ -5,16 +5,17 @@ import { Section } from "@/components/section";
 import { SubpageHero } from "@/components/subpage-hero";
 import { caseCategories, caseProofNeeds, caseStudies, workHero } from "@/lib/content/cases";
 import { siteConfig } from "@/lib/site";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "案例實績｜DPP、ESG、數位人文與知識平台",
   description: "道易科技案例涵蓋太陽能板回收履歷、Easy DPP、數位人文平台、國際研究資料庫與人物知識本體。",
-  alternates: { canonical: "/work" },
-};
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="work-page">
       <SubpageHero
         eyebrow={workHero.eyebrow}
         title={workHero.title}
@@ -42,9 +43,9 @@ export default function WorkPage() {
       <Section eyebrow="Featured cases" title="六個代表案例類型，對應道易的核心技術與服務場景。">
         <div className="card-grid two-up">
           {caseStudies.map((item) => (
-            <div key={item.title}>
+            <div className="case-study-proof-block" key={item.title}>
               <CaseStudyCard {...item} />
-              <p className="mini-label accent">{item.proofStatus}</p>
+              <p className="case-study-proof-status">{item.proofStatus}</p>
             </div>
           ))}
         </div>

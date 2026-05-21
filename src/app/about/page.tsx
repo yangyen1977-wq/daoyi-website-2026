@@ -12,12 +12,13 @@ import {
   aboutPrinciples,
   aboutWorkflow,
 } from "@/lib/content/about";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "關於道易｜可信資料平台與 AI-Ontology 團隊",
   description: "道易科技從數位人文、AI 語意分析與資料平台出發，協助政府、學研、文化機構與企業建立可追溯、可查核、可維運的可信資料平台。",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

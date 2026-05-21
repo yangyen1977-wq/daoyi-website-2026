@@ -12,6 +12,12 @@ export const siteConfig = {
     "道易科技以 Ontology 語義建模、AI、Merkle Tree、IPFS 與 TSA 時戳驗證技術，將分散且難以查核的資料轉化為可追溯、不可竄改、可高效稽核的可信任數據平台。",
 };
 
+export const siteBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function publicAssetPath(path: string) {
+  return `${siteBasePath}${path}`;
+}
+
 export const navItems = [
   { href: "/", label: "首頁" },
   { href: "/solutions", label: "解決方案" },

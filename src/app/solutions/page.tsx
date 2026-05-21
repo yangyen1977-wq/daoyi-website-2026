@@ -6,12 +6,13 @@ import { StartModeCard } from "@/components/start-mode-card";
 import { SubpageHero } from "@/components/subpage-hero";
 import { solutionDetails, solutionMap, solutionsHero, solutionStartModes } from "@/lib/content/solutions";
 import { siteConfig } from "@/lib/site";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "解決方案｜數據信任鏈、DPP、ESG 稽核與 AI-Ontology",
   description: "道易科技以可信資料底座，提供數據信任鏈、DPP 數位產品護照、AI-Ontology 知識平台與 AIoT 回收履歷整合。",
-  alternates: { canonical: "/solutions" },
-};
+  path: "/solutions",
+});
 
 export default function SolutionsPage() {
   return (

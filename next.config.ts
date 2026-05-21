@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     root: path.join(__dirname),
   },
   output: "export",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : "",
+  },
   images: {
     unoptimized: true,
   },

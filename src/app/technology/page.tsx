@@ -13,12 +13,13 @@ import {
   technologyTrustFlow,
 } from "@/lib/content/technology";
 import { siteConfig } from "@/lib/site";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "技術核心｜可信資料如何被建立",
   description: "道易科技以 Ontology、Hash、Merkle Tree、IPFS、TSA、API 與 AI/AIoT 校驗建立可信資料平台。",
-  alternates: { canonical: "/technology" },
-};
+  path: "/technology",
+});
 
 export default function TechnologyPage() {
   return (
