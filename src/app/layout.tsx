@@ -100,8 +100,8 @@ const structuredData = [
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1f2524",
-  colorScheme: "dark light",
+  themeColor: "#f7fbfc",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
@@ -142,7 +142,7 @@ export const metadata: Metadata = {
   },
   category: "technology",
   icons: { icon: `${siteConfig.url}/favicon.ico`, shortcut: `${siteConfig.url}/favicon.ico`, apple: `${siteConfig.url}/favicon.ico` },
-  other: { "theme-color": "#1f2524" },
+  other: { "theme-color": "#f7fbfc" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

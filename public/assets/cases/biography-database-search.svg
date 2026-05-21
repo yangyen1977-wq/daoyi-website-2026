@@ -4,19 +4,19 @@
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#f6fbff"/>
-      <stop offset="0.48" stop-color="#f4f8f2"/>
-      <stop offset="1" stop-color="#fbf4ea"/>
+      <stop offset="0.48" stop-color="#eef8f7"/>
+      <stop offset="1" stop-color="#f8fbff"/>
     </linearGradient>
     <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#252b29"/>
-      <stop offset="1" stop-color="#1d3150"/>
+      <stop offset="0" stop-color="#102033"/>
+      <stop offset="1" stop-color="#2f80ed"/>
     </linearGradient>
     <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#6f8f83"/>
-      <stop offset="1" stop-color="#5f758f"/>
+      <stop offset="0" stop-color="#2a9d8f"/>
+      <stop offset="1" stop-color="#2f80ed"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0f2942" flood-opacity="0.14"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#103048" flood-opacity="0.14"/>
     </filter>
   </defs>
 
@@ -25,94 +25,94 @@
   <circle cx="128" cy="588" r="172" fill="#e8effd" opacity="0.86"/>
 
   <g transform="translate(62 52)" font-family="Inter, Noto Sans TC, Arial, sans-serif">
-    <text x="0" y="0" fill="#252b29" font-size="27" font-weight="850">Biography Knowledge Platform</text>
-    <text x="0" y="34" fill="#6b716a" font-size="16" font-weight="650">Search people, inspect authority metadata, connect sources, and explore relationship context.</text>
+    <text x="0" y="0" fill="#102033" font-size="27" font-weight="850">Biography Knowledge Platform</text>
+    <text x="0" y="34" fill="#425668" font-size="16" font-weight="650">Search people, inspect authority metadata, connect sources, and explore relationship context.</text>
   </g>
 
   <g transform="translate(66 122)" filter="url(#shadow)" font-family="Inter, Noto Sans TC, Arial, sans-serif">
-    <rect width="1068" height="492" rx="32" fill="#ffffff" stroke="#d9e3ef"/>
+    <rect width="1068" height="492" rx="32" fill="#ffffff" stroke="#d8e9ee"/>
     <rect width="1068" height="72" rx="32" fill="url(#dark)"/>
     <rect y="40" width="1068" height="32" fill="url(#dark)"/>
     <text x="32" y="45" fill="#ffffff" font-size="18" font-weight="850">Biography Database</text>
     <rect x="238" y="20" width="470" height="34" rx="17" fill="#ffffff" opacity="0.12"/>
     <text x="262" y="42" fill="#d8e5f3" font-size="13" font-weight="700">Search name, place, work, role, date range</text>
-    <rect x="850" y="20" width="146" height="34" rx="17" fill="#e6eadf"/>
-    <circle cx="874" cy="37" r="6" fill="#6f8f83"/>
-    <text x="892" y="42" fill="#4f675c" font-size="13" font-weight="850">Authority ready</text>
+    <rect x="850" y="20" width="146" height="34" rx="17" fill="#dff6f2"/>
+    <circle cx="874" cy="37" r="6" fill="#2a9d8f"/>
+    <text x="892" y="42" fill="#1f6f67" font-size="13" font-weight="850">Authority ready</text>
 
     <g transform="translate(30 102)">
-      <rect width="294" height="338" rx="24" fill="#f8f6ef" stroke="#d9e3ef"/>
-      <text x="22" y="36" fill="#252b29" font-size="15" font-weight="850">Search Results</text>
-      <rect x="22" y="58" width="250" height="42" rx="14" fill="#ffffff" stroke="#d9e3ef"/>
-      <text x="40" y="84" fill="#6b716a" font-size="12" font-weight="750">keyword: poet / editor / archive</text>
+      <rect width="294" height="338" rx="24" fill="#f7fbfc" stroke="#d8e9ee"/>
+      <text x="22" y="36" fill="#102033" font-size="15" font-weight="850">Search Results</text>
+      <rect x="22" y="58" width="250" height="42" rx="14" fill="#ffffff" stroke="#d8e9ee"/>
+      <text x="40" y="84" fill="#425668" font-size="12" font-weight="750">keyword: poet / editor / archive</text>
       <g transform="translate(22 124)">
-        <rect width="250" height="58" rx="16" fill="#252b29"/>
+        <rect width="250" height="58" rx="16" fill="#102033"/>
         <circle cx="31" cy="29" r="16" fill="#9fb29d"/>
         <text x="62" y="25" fill="#ffffff" font-size="13" font-weight="850">Person Record A</text>
-        <text x="62" y="44" fill="#c9c5b7" font-size="11" font-weight="700">3 sources · 8 relations</text>
+        <text x="62" y="44" fill="#6b7e8f" font-size="11" font-weight="700">3 sources · 8 relations</text>
       </g>
       <g transform="translate(22 198)">
-        <rect width="250" height="58" rx="16" fill="#ffffff" stroke="#d9e3ef"/>
+        <rect width="250" height="58" rx="16" fill="#ffffff" stroke="#d8e9ee"/>
         <circle cx="31" cy="29" r="16" fill="#e8e5da"/>
-        <text x="62" y="25" fill="#252b29" font-size="13" font-weight="850">Person Record B</text>
-        <text x="62" y="44" fill="#6b716a" font-size="11" font-weight="700">2 sources · 5 relations</text>
+        <text x="62" y="25" fill="#102033" font-size="13" font-weight="850">Person Record B</text>
+        <text x="62" y="44" fill="#425668" font-size="11" font-weight="700">2 sources · 5 relations</text>
       </g>
       <g transform="translate(22 272)">
-        <rect width="250" height="42" rx="16" fill="#ffffff" stroke="#d9e3ef"/>
-        <text x="20" y="27" fill="#6b716a" font-size="12" font-weight="750">Filter by era, role, source type</text>
+        <rect width="250" height="42" rx="16" fill="#ffffff" stroke="#d8e9ee"/>
+        <text x="20" y="27" fill="#425668" font-size="12" font-weight="750">Filter by era, role, source type</text>
       </g>
     </g>
 
     <g transform="translate(354 102)">
-      <rect width="352" height="338" rx="24" fill="#ffffff" stroke="#d9e3ef"/>
-      <text x="26" y="38" fill="#252b29" font-size="17" font-weight="850">Person Profile</text>
+      <rect width="352" height="338" rx="24" fill="#ffffff" stroke="#d8e9ee"/>
+      <text x="26" y="38" fill="#102033" font-size="17" font-weight="850">Person Profile</text>
       <rect x="26" y="62" width="80" height="80" rx="22" fill="#edf5f2"/>
-      <path d="M66 88 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0" fill="#6f8f83" opacity="0.92"/>
-      <path d="M40 128 c8-20 44-20 52 0" fill="#6f8f83" opacity="0.92"/>
-      <text x="126" y="86" fill="#252b29" font-size="19" font-weight="900">Person Record A</text>
-      <text x="126" y="114" fill="#6b716a" font-size="12" font-weight="750">Authority ID · linked sources · verified metadata</text>
-      <rect x="126" y="128" width="112" height="26" rx="13" fill="#e6eadf"/>
-      <text x="146" y="146" fill="#4f675c" font-size="11" font-weight="850">Reviewed</text>
+      <path d="M66 88 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0" fill="#2a9d8f" opacity="0.92"/>
+      <path d="M40 128 c8-20 44-20 52 0" fill="#2a9d8f" opacity="0.92"/>
+      <text x="126" y="86" fill="#102033" font-size="19" font-weight="900">Person Record A</text>
+      <text x="126" y="114" fill="#425668" font-size="12" font-weight="750">Authority ID · linked sources · verified metadata</text>
+      <rect x="126" y="128" width="112" height="26" rx="13" fill="#dff6f2"/>
+      <text x="146" y="146" fill="#1f6f67" font-size="11" font-weight="850">Reviewed</text>
 
       <g transform="translate(26 182)">
-        <text x="0" y="0" fill="#252b29" font-size="14" font-weight="850">Metadata</text>
-        <rect x="0" y="20" width="300" height="10" rx="5" fill="#dbe6f3"/>
+        <text x="0" y="0" fill="#102033" font-size="14" font-weight="850">Metadata</text>
+        <rect x="0" y="20" width="300" height="10" rx="5" fill="#e8f3ff"/>
         <rect x="0" y="20" width="190" height="10" rx="5" fill="url(#brand)"/>
-        <text x="0" y="58" fill="#6b716a" font-size="12" font-weight="750">Names, roles, places, works, dates</text>
-        <text x="0" y="84" fill="#6b716a" font-size="12" font-weight="750">Controlled fields support long-term curation</text>
+        <text x="0" y="58" fill="#425668" font-size="12" font-weight="750">Names, roles, places, works, dates</text>
+        <text x="0" y="84" fill="#425668" font-size="12" font-weight="750">Controlled fields support long-term curation</text>
       </g>
 
       <g transform="translate(26 286)">
         <rect width="92" height="28" rx="14" fill="#e8e5da"/>
-        <text x="22" y="19" fill="#5f758f" font-size="11" font-weight="850">Person</text>
+        <text x="22" y="19" fill="#2f80ed" font-size="11" font-weight="850">Person</text>
         <rect x="106" width="92" height="28" rx="14" fill="#eef8f4"/>
-        <text x="130" y="19" fill="#4f675c" font-size="11" font-weight="850">Source</text>
+        <text x="130" y="19" fill="#1f6f67" font-size="11" font-weight="850">Source</text>
         <rect x="212" width="92" height="28" rx="14" fill="#fbf0d5"/>
         <text x="232" y="19" fill="#9b6a0b" font-size="11" font-weight="850">Relation</text>
       </g>
     </g>
 
     <g transform="translate(736 102)">
-      <rect width="302" height="156" rx="22" fill="#f8f6ef" stroke="#d9e3ef"/>
-      <text x="22" y="36" fill="#252b29" font-size="15" font-weight="850">Source Records</text>
-      <rect x="22" y="62" width="238" height="10" rx="5" fill="#dbe6f3"/>
-      <rect x="22" y="88" width="196" height="10" rx="5" fill="#dbe6f3"/>
-      <rect x="22" y="114" width="220" height="10" rx="5" fill="#dbe6f3"/>
-      <rect x="218" y="28" width="58" height="26" rx="13" fill="#e6eadf"/>
-      <text x="236" y="46" fill="#4f675c" font-size="11" font-weight="850">3 refs</text>
+      <rect width="302" height="156" rx="22" fill="#f7fbfc" stroke="#d8e9ee"/>
+      <text x="22" y="36" fill="#102033" font-size="15" font-weight="850">Source Records</text>
+      <rect x="22" y="62" width="238" height="10" rx="5" fill="#e8f3ff"/>
+      <rect x="22" y="88" width="196" height="10" rx="5" fill="#e8f3ff"/>
+      <rect x="22" y="114" width="220" height="10" rx="5" fill="#e8f3ff"/>
+      <rect x="218" y="28" width="58" height="26" rx="13" fill="#dff6f2"/>
+      <text x="236" y="46" fill="#1f6f67" font-size="11" font-weight="850">3 refs</text>
     </g>
 
     <g transform="translate(736 284)">
-      <rect width="302" height="156" rx="22" fill="#252b29"/>
+      <rect width="302" height="156" rx="22" fill="#102033"/>
       <text x="22" y="36" fill="#ffffff" font-size="15" font-weight="850">Relationship Context</text>
       <line x1="72" y1="86" x2="152" y2="64" stroke="#9fb29d" stroke-width="3"/>
-      <line x1="72" y1="86" x2="152" y2="118" stroke="#5f758f" stroke-width="3"/>
-      <line x1="152" y1="64" x2="230" y2="92" stroke="#b8793d" stroke-width="3"/>
+      <line x1="72" y1="86" x2="152" y2="118" stroke="#2f80ed" stroke-width="3"/>
+      <line x1="152" y1="64" x2="230" y2="92" stroke="#4fb7a9" stroke-width="3"/>
       <circle cx="72" cy="86" r="20" fill="#9fb29d"/>
-      <circle cx="152" cy="64" r="16" fill="#5f758f"/>
-      <circle cx="152" cy="118" r="16" fill="#b8793d"/>
+      <circle cx="152" cy="64" r="16" fill="#2f80ed"/>
+      <circle cx="152" cy="118" r="16" fill="#4fb7a9"/>
       <circle cx="230" cy="92" r="18" fill="#ffffff" opacity="0.86"/>
-      <text x="22" y="140" fill="#c9c5b7" font-size="12" font-weight="700">Person, work, place, and source graph</text>
+      <text x="22" y="140" fill="#6b7e8f" font-size="12" font-weight="700">Person, work, place, and source graph</text>
     </g>
   </g>
 </svg>
