@@ -3,7 +3,7 @@ import { absoluteUrl } from "@/lib/metadata";
 
 export const dynamic = "force-static";
 
-const lastModified = new Date("2026-05-20T00:00:00.000Z");
+const lastModified = new Date("2026-05-21T00:00:00.000Z");
 
 const routes = [
   { path: "/", priority: 1, changeFrequency: "weekly" as const },
