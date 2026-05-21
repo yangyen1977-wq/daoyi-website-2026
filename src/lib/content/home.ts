@@ -188,14 +188,20 @@ export const homeConversionPaths = [
   {
     title: "資料盤點與信任鏈診斷",
     detail: "適合還不確定資料來源、欄位與稽核場景的團隊，先用一次 workshop 找出最小可行證據鏈。",
+    cta: "用 Quick Brief 說明資料現況",
+    href: "/contact#quick-brief",
   },
   {
     title: "DPP / ESG PoC",
     detail: "適合已有產品、流程或回收場景，想先做一個可查詢、可驗證、可示範的 pilot。",
+    cta: "討論 PoC 起手範圍",
+    href: "/contact#quick-brief",
   },
   {
     title: "AI-Ontology 知識平台原型",
     detail: "適合政府、學研、文化與資料庫團隊，先確認資料模型、搜尋、展示與維運方式。",
+    cta: "描述知識平台場景",
+    href: "/contact#quick-brief",
   },
 ];
 

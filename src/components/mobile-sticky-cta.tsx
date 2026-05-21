@@ -22,7 +22,7 @@ export function MobileStickyCTA() {
       <div className="mobile-cta-content">
         <div className="mobile-cta-copy">
           <strong>先判斷值不值得談，再選 Quick Brief 或 Email / NDA</strong>
-          <span>手機版先把主 CTA、24h 回覆承諾與敏感專案備援路徑放在拇指可達區。</span>
+          <span>用 3 欄說明資料現況，或先用 Email 保留敏感資訊邊界。</span>
           <small>通常會先回覆建議切入點、推薦 sprint、需要補的資料，以及第一次會議怎麼更有效率。</small>
         </div>
         <div className="mobile-cta-actions">

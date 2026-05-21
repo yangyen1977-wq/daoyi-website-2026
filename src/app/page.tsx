@@ -153,7 +153,7 @@ export default function HomePage() {
             <article key={item.title} className="card decision-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
-              <Link href="/contact" className="case-link button-secondary button-small">討論這個入口</Link>
+              <Link href={item.href} className="case-link button-secondary button-small">{item.cta}</Link>
             </article>
           ))}
         </div>
