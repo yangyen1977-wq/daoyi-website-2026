@@ -31,21 +31,6 @@ export const homeTrustMetrics = [
   { value: "1", label: "信任資料底座" },
 ];
 
-export const homeDecisionSignals = [
-  {
-    title: "不是把資料上鏈，而是先定義什麼值得被證明",
-    detail: "從買方會質疑的資料來源、版本、時間、權限與異動紀錄開始設計，而不是先堆技術名詞。",
-  },
-  {
-    title: "不是做一個查詢頁，而是建立能維護的資料治理流程",
-    detail: "DPP、Dashboard、API 與後台都回到同一套資料模型，避免前台好看但資料不可持續。",
-  },
-  {
-    title: "不是只交付系統，而是交付可進入稽核與採購討論的證據",
-    detail: "每個模組都要能回答：誰提供資料、何時存在、是否被修改、如何被第三方抽驗。",
-  },
-];
-
 export const heroMockup = {
   platformLabel: "DaoYi Trust Platform",
   status: "Verified data chain",

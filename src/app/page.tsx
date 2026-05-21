@@ -8,7 +8,6 @@ import { SolutionFitFinder } from "@/components/solution-fit-finder";
 import {
   homeBuyerRoutes,
   homeConversionPaths,
-  homeDecisionSignals,
   homeFeaturedCases,
   homeHero,
   homeHeroCards,
@@ -60,17 +59,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <Section eyebrow="Decision signals" title="道易的新品牌主張：不是做更多資料系統，而是讓關鍵資料能被相信。">
-        <div className="card-grid three-up">
-          {homeDecisionSignals.map((item) => (
-            <article key={item.title} className="card homepage-decision-card">
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       <Section eyebrow="Why now" title="當資料不能被信任，合規、稽核與碳價值都無法成立。">
         <div className="card-grid three-up">
