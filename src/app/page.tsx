@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroPlatformMockup } from "@/components/hero-platform-mockup";
+import { InteractiveTrustFlow } from "@/components/interactive-trust-flow";
 import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
+import { SolutionFitFinder } from "@/components/solution-fit-finder";
 import {
   heroMockup,
   homeBenchmarkSynthesis,
@@ -110,6 +112,14 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <Section
+        eyebrow="Interactive fit finder"
+        title="先選現在最像的情境，快速判斷適合從哪條方案切入。"
+        description="訪客不用先理解所有技術名詞，也能用自己的資料狀態找到第一步。"
+      >
+        <SolutionFitFinder />
+      </Section>
+
       <Section eyebrow="Proof architecture" title="成熟的信任平台不是先做畫面，而是先設計什麼能被證明。">
         <div className="card-grid four-up">
           {homeProofArchitecture.map((item) => (
@@ -123,15 +133,7 @@ export default function HomePage() {
       </Section>
 
       <Section eyebrow="Trust flow" title="可信資料如何被建立：從產生、標準化、封存到第三方稽核。">
-        <div className="card-grid five-up">
-          {homeTrustFlow.map((item, index) => (
-            <article key={item.title} className="card process-card">
-              <span className="step-index">{String(index + 1).padStart(2, "0")}</span>
-              <strong>{item.title}</strong>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
+        <InteractiveTrustFlow items={homeTrustFlow} />
       </Section>
 
       <Section eyebrow="Featured proof" title="案例不再只是作品展示，而是對應 DPP、ESG、知識平台與國際研究的證據。">

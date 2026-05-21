@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CaseStudyCard } from "@/components/case-study-card";
+import { CaseLibraryFilter } from "@/components/case-library-filter";
 import { Section } from "@/components/section";
 import { SubpageHero } from "@/components/subpage-hero";
 import { caseCategories, caseProofNeeds, caseStudies, workHero } from "@/lib/content/cases";
@@ -41,14 +41,7 @@ export default function WorkPage() {
       </Section>
 
       <Section eyebrow="Featured cases" title="六個代表案例類型，對應道易的核心技術與服務場景。">
-        <div className="card-grid two-up">
-          {caseStudies.map((item) => (
-            <div className="case-study-proof-block" key={item.title}>
-              <CaseStudyCard {...item} />
-              <p className="case-study-proof-status">{item.proofStatus}</p>
-            </div>
-          ))}
-        </div>
+        <CaseLibraryFilter cases={caseStudies} />
       </Section>
 
       <Section eyebrow="Proof roadmap" title="可逐步補強的公開證據素材，讓買方更容易查核成果。">
