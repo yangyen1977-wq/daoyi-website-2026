@@ -1,191 +1,66 @@
 export const homeHero = {
-  eyebrow: "DaoYi Technology / Trust Data Systems",
-  badge: "DPP × ESG Audit × AI-Ontology × AIoT Traceability",
-  title: "為需要被查核的資料，建立一套能被買方、稽核者與使用者相信的平台。",
+  eyebrow: "DaoYi Technology",
+  badge: "資料平台 / 數位產品護照 / 知識資料整理",
+  title: "道易科技協助組織把複雜資料，做成可查詢、可驗證、可維護的平台。",
   description:
-    "道易科技協助循環經濟、製造供應鏈、政府學研與高知識密度組織，把產品履歷、ESG 證據、研究資料與現場紀錄，重建成可查詢、可驗證、可長期維運的信任資料系統。",
+    "我們整理產品履歷、ESG 與稽核證據、研究與文化資料、現場紀錄與既有資料庫，轉化成前後台、查詢頁、Dashboard 或 API，讓資料能被使用、被說明、被長期維運。",
 };
 
 export const homeHeroCards = [
   {
-    label: "DPP 查詢",
-    title: "產品履歷、材料來源、碳資訊與回收指引，可透過 QR Code 查詢。",
-    detail: "適合製造、供應鏈與循環經濟團隊，先用一個產品或一條流程驗證。",
+    label: "資料整理",
+    title: "把分散資料整理成清楚的欄位、關係與流程。",
+    detail: "先釐清資料來源、使用角色與更新方式，再規劃適合的平台結構。",
   },
   {
-    label: "稽核狀態",
-    title: "每批資料保留 Hash 指紋、時間證明與驗證結果，支援第三方查核。",
-    detail: "讓資料從內部紀錄升級為可被抽驗、可被佐證的證據。",
+    label: "平台建置",
+    title: "把資料做成可查詢、可管理、可串接的系統。",
+    detail: "包含前後台、查詢頁、Dashboard、API、權限與必要的資料匯入流程。",
   },
   {
-    label: "資料流程",
-    title: "資料從現場、系統或文件進入平台後，經過標準化、封存、驗證與展示。",
-    detail: "把資料模型、API、Dashboard 與查詢頁串成可維運的平台。",
+    label: "可信脈絡",
+    title: "讓重要資料能被驗證、追溯與說明。",
+    detail: "適合產品履歷、稽核證據、研究資料與需要長期維護的知識資料庫。",
   },
 ];
 
 export const homeTrustMetrics = [
-  { value: "4", label: "方案切入點" },
-  { value: "6", label: "公開案例證據" },
+  { value: "3", label: "主要服務" },
+  { value: "4", label: "適合 TA" },
   { value: "24h", label: "初步回覆" },
-  { value: "1", label: "信任資料底座" },
+  { value: "1", label: "明確切入點" },
 ];
 
-export const heroMockup = {
-  platformLabel: "DaoYi Trust Platform",
-  status: "Verified data chain",
-  navItems: ["DPP", "Evidence", "Audit", "Ontology"],
-  productPassport: {
-    title: "DPP Product Passport",
-    productId: "PV-RC-2026-001",
-    status: "Material source verified",
-    fields: ["Material origin", "Carbon data", "Recycling guide", "Lifecycle record"],
-  },
-  auditEvidence: {
-    title: "Audit Evidence",
-    status: "Integrity check passed",
-    fields: ["Hash fingerprint", "Merkle root", "TSA timestamp", "Audit trail"],
-  },
-  flow: ["Data In", "Ontology", "Hash", "Merkle", "IPFS", "TSA", "Audit"],
-};
-
-export const homePainPoints = [
+export const homeWhatWeDo = [
   {
-    title: "回收與供應鏈資料分散",
-    detail: "產品、設備、物流、回收、材料與碳資訊常散落在不同系統與表單中，人工彙整後仍難以回答資料從哪裡來、是否被修改、是否能被第三方查核。",
+    title: "資料平台與後台系統",
+    detail: "協助企業或組織把原本散在 Excel、文件、現場紀錄或舊系統中的資料，整理成可以查詢、管理、更新與維運的平台。",
   },
   {
-    title: "ESG 與 DPP 缺乏可驗證證據",
-    detail: "企業需要的不只是資料庫，而是能支撐供應鏈透明、產品履歷、ESG 揭露與稽核抽驗的證據鏈。",
+    title: "數位產品護照與履歷",
+    detail: "為產品、材料、回收流程或供應鏈資料建立可展示的數位身分，讓客戶、合作方或稽核者能理解資料脈絡。",
   },
   {
-    title: "知識資料難以關聯與重用",
-    detail: "研究、文化、人物、文本與事件資料如果沒有語意模型，只會停留在資料堆積，難以搜尋、分析、視覺化與長期維護。",
+    title: "研究與知識資料整理",
+    detail: "把人物、作品、文本、事件、地點或研究資料整理成可搜尋、可關聯、可視覺化的知識平台。",
   },
 ];
 
-export const homeSolutions = [
+export const homeTargetAudiences = [
   {
-    title: "數據信任鏈與高效稽核平台",
-    description: "建立資料從產生、封存、驗證到稽核的完整證據鏈，適合需要將回收、製造、物流、碳數據或流程紀錄轉化為可信證據的團隊。",
+    title: "製造與供應鏈團隊",
+    detail: "需要整理產品資料、材料來源、批次紀錄、供應鏈資訊或對外查詢頁的企業。",
   },
   {
-    title: "DPP 數位產品護照",
-    description: "為產品建立可查詢、可追溯、可合規的數位身分，整合材料來源、製造資訊、碳足跡、維修紀錄與回收指引。",
+    title: "循環經濟與 ESG 團隊",
+    detail: "需要把回收、碳資訊、永續揭露或稽核佐證資料整理成可追溯流程的團隊。",
   },
   {
-    title: "AI-Ontology 知識平台",
-    description: "將文本、人物、事件、地點與資料庫轉化為可分析的知識網絡，支援 OCR、語意擷取、Ontology 與知識圖譜。",
+    title: "政府、學研與文化單位",
+    detail: "需要整理研究資料、典藏資料、人物關係、文本資料或數位人文平台的單位。",
   },
   {
-    title: "AIoT 回收履歷整合",
-    description: "串接設備、影像辨識、感測器與回收流程，讓現場產生的資料能即時蒐集、校驗、追蹤並支撐稽核。",
+    title: "已有資料但缺平台的組織",
+    detail: "資料已經累積，但還缺少清楚的資料模型、管理後台、查詢介面或系統整合方式。",
   },
-];
-
-export const homeProofArchitecture = [
-  {
-    layer: "Claim",
-    title: "先定義要被證明的商務命題",
-    detail: "例如材料來源可追溯、回收批次可驗證、文本人物關係可查詢、資料異動可稽核。",
-  },
-  {
-    layer: "Data model",
-    title: "再建立欄位、實體、關係與權限",
-    detail: "用 Ontology 與資料模型讓資料不只是被保存，而是能被理解、交換與重用。",
-  },
-  {
-    layer: "Evidence chain",
-    title: "把重要紀錄轉成可驗證證據",
-    detail: "以 Hash、Merkle Tree、IPFS、TSA 與 audit trail，支撐完整性、時間性與抽驗效率。",
-  },
-  {
-    layer: "Decision surface",
-    title: "最後交付給不同角色能使用的介面",
-    detail: "DPP 查詢頁、Dashboard、API、管理後台與稽核報表，各自回答不同買方問題。",
-  },
-];
-
-export const homeTrustFlow = [
-  { title: "資料產生", detail: "設備、文件、影像、產品履歷、研究資料或既有系統資料進入平台。" },
-  { title: "Ontology 標準化", detail: "先定義實體、欄位、關係、角色權限與驗證規則，讓資料能被理解與交換。" },
-  { title: "Hash 指紋", detail: "為資料建立不可逆的完整性指紋，作為後續驗證依據。" },
-  { title: "Merkle Tree 聚合", detail: "將大量紀錄聚合成可快速驗證的 Root Hash，支援批次資料與抽樣稽核。" },
-  { title: "IPFS 儲存", detail: "保存關鍵證據、檔案與內容指紋，降低單點竄改與資料遺失風險。" },
-  { title: "TSA 時戳", detail: "透過可信時間戳證明資料在特定時間已存在，強化稽核與爭議處理基礎。" },
-  { title: "Root Hash 錨定", detail: "建立可供第三方驗證的信任錨點，讓資料完整性不只由平台自己宣稱。" },
-  { title: "稽核與查詢", detail: "企業、稽核者、供應鏈或使用者可透過 Dashboard、API 或 DPP 頁面查詢驗證結果。" },
-];
-
-export const homeFeaturedCases = [
-  {
-    title: "Easy DPP / 數位產品護照",
-    category: "DPP / 循環經濟",
-    value: "將產品生命週期資料整理成可查詢的數位身分，支援 QR Code 查詢、供應鏈透明與永續揭露。",
-    tags: ["DPP", "QR Code", "Traceability", "Product Data"],
-  },
-  {
-    title: "太陽能板回收 YOLO 辨識與履歷",
-    category: "AIoT / 回收履歷",
-    value: "整合影像辨識、現場資料與回收流程，讓回收履歷從人工紀錄升級為可追蹤、可驗證的資料鏈。",
-    tags: ["AIoT", "YOLO", "Recycling", "ESG Audit"],
-  },
-  {
-    title: "國立臺灣文學館數位人文平台",
-    category: "AI-Ontology / 數位人文",
-    value: "協助文學、人物、作品與主題資料被整理、查詢與展示，讓文化資料成為可持續維護的知識平台。",
-    tags: ["Digital Humanities", "Knowledge Platform", "Semantic Search"],
-  },
-];
-
-export const homeConversionPaths = [
-  {
-    title: "資料盤點與信任鏈診斷",
-    detail: "適合還不確定資料來源、欄位與稽核場景的團隊，先用一次 workshop 找出最小可行證據鏈。",
-    cta: "用 Quick Brief 說明資料現況",
-    href: "/contact#quick-brief",
-  },
-  {
-    title: "DPP / ESG PoC",
-    detail: "適合已有產品、流程或回收場景，想先做一個可查詢、可驗證、可示範的 pilot。",
-    cta: "討論 PoC 起手範圍",
-    href: "/contact#quick-brief",
-  },
-  {
-    title: "AI-Ontology 知識平台原型",
-    detail: "適合政府、學研、文化與資料庫團隊，先確認資料模型、搜尋、展示與維運方式。",
-    cta: "描述知識平台場景",
-    href: "/contact#quick-brief",
-  },
-];
-
-export const homeThirdPartyReview = [
-  {
-    metric: "定位清晰度",
-    score: "9.2/10",
-    note: "新版首頁已將道易定義為 Trust Data Systems 公司，差異點比一般系統開發商更清楚。",
-  },
-  {
-    metric: "資訊架構",
-    score: "9.1/10",
-    note: "頁面分工已接近成熟 B2B 站：首頁定錨、方案分流、技術降低風險、案例建立證據。",
-  },
-  {
-    metric: "信任與案例",
-    score: "8.8/10",
-    note: "公開 proof asset 已足夠支撐專業感，下一階段可補更多客戶引用語與可公開成效數字。",
-  },
-  {
-    metric: "轉換設計",
-    score: "9.0/10",
-    note: "轉換路徑已從單一聯絡表單升級為低風險啟動方式，適合長決策週期專案。",
-  },
-];
-
-export const homeProcessSteps = [
-  { title: "需求訪談與資料盤點", detail: "釐清目標客群、資料來源、流程邊界、既有系統與合規需求。" },
-  { title: "資料模型與證據模型設計", detail: "定義資料欄位、實體關係、驗證規則、權限與稽核節點。" },
-  { title: "平台原型與 API 規劃", detail: "先用可操作原型確認查詢、展示、驗證與系統串接方式。" },
-  { title: "系統開發與資料串接", detail: "建立前後台、資料流程、API、Dashboard 與必要的 AI / AIoT 整合。" },
-  { title: "稽核測試、上線與維運", detail: "測試驗證流程、權限、查詢效能與資料品質，完成上線後持續維護。" },
 ];

@@ -1,22 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroBanner } from "@/components/hero-banner";
-import { InteractiveTrustFlow } from "@/components/interactive-trust-flow";
-import { QuickBriefForm } from "@/components/quick-brief-form";
 import { Section } from "@/components/section";
-import { SolutionFitFinder } from "@/components/solution-fit-finder";
 import {
-  homeConversionPaths,
-  homeFeaturedCases,
   homeHero,
   homeHeroCards,
-  homePainPoints,
-  homeProofArchitecture,
-  homeProcessSteps,
-  homeSolutions,
-  homeThirdPartyReview,
-  homeTrustFlow,
+  homeTargetAudiences,
   homeTrustMetrics,
+  homeWhatWeDo,
 } from "@/lib/content/home";
 import { siteConfig } from "@/lib/site";
 import { createPageMetadata } from "@/lib/metadata";
@@ -38,8 +29,8 @@ export default function HomePage() {
             <h1>{homeHero.title}</h1>
             <p>{homeHero.description}</p>
             <div className="hero-actions">
-              <Link href="/solutions" className="button-primary button-large">查看解決方案</Link>
-              <Link href="/contact" className="button-secondary button-large">預約需求討論</Link>
+              <Link href="/contact" className="button-primary button-large">預約需求討論</Link>
+              <Link href="/work" className="button-secondary button-large">查看案例</Link>
             </div>
           </div>
 
@@ -59,9 +50,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Section eyebrow="Why now" title="當資料不能被信任，合規、稽核與碳價值都無法成立。">
+      <Section
+        eyebrow="What we do"
+        title="道易把分散的資料，整理成能查、能驗證、能長期維護的平台。"
+        description="我們不是只做網站或後台，而是從資料來源、欄位結構、查詢情境到維運方式一起設計，讓資料真的能被組織使用。"
+      >
         <div className="card-grid three-up">
-          {homePainPoints.map((item) => (
+          {homeWhatWeDo.map((item) => (
             <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
@@ -70,92 +65,30 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Solutions" title="四條解決方案，共用同一套可信任資料底座。">
+      <Section
+        eyebrow="TA"
+        title="適合正在把重要資料產品化、公開化或稽核化的團隊。"
+        description="如果你的資料已經影響客戶信任、內部決策、研究整理或永續揭露，道易可以協助把它變成清楚可用的系統。"
+      >
         <div className="card-grid four-up">
-          {homeSolutions.map((item) => (
+          {homeTargetAudiences.map((item) => (
             <article key={item.title} className="card decision-card">
               <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <p>{item.detail}</p>
             </article>
           ))}
         </div>
       </Section>
 
       <Section
-        eyebrow="Interactive fit finder"
-        title="先選現在最像的情境，快速判斷適合從哪條方案切入。"
-        description="訪客不用先理解所有技術名詞，也能用自己的資料狀態找到第一步。"
+        eyebrow="Next step"
+        title="如果你有一批重要資料需要整理、展示或驗證，可以先從一次需求討論開始。"
+        description="告訴我們資料類型、目前保存方式、預計給誰使用，道易會協助判斷適合先做平台、DPP、Dashboard、API 或知識資料整理。"
       >
-        <SolutionFitFinder />
-      </Section>
-
-      <Section eyebrow="Proof architecture" title="成熟的信任平台不是先做畫面，而是先設計什麼能被證明。">
-        <div className="card-grid four-up">
-          {homeProofArchitecture.map((item) => (
-            <article key={item.layer} className="card proof-narrative-card">
-              <span className="mini-label accent">{item.layer}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
+        <div className="hero-actions">
+          <Link href="/contact" className="button-primary button-large">聯絡道易</Link>
+          <Link href="/solutions" className="button-secondary button-large">看服務方向</Link>
         </div>
-      </Section>
-
-      <Section eyebrow="Trust flow" title="可信資料如何被建立：從產生、標準化、封存到第三方稽核。">
-        <InteractiveTrustFlow items={homeTrustFlow} />
-      </Section>
-
-      <Section eyebrow="Featured proof" title="案例不再只是作品展示，而是對應 DPP、ESG、知識平台與國際研究的證據。">
-        <div className="card-grid three-up">
-          {homeFeaturedCases.map((item) => (
-            <article key={item.title} className="card evidence-matrix-card">
-              <span className="mini-label accent">{item.category}</span>
-              <h3>{item.title}</h3>
-              <p>{item.value}</p>
-              <strong>{item.tags.join(" / ")}</strong>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Conversion ladder" title="第一次接觸不用直接進大型專案，可以從最能降低風險的一層開始。">
-        <div className="card-grid three-up">
-          {homeConversionPaths.map((item) => (
-            <article key={item.title} className="card decision-card">
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              <Link href={item.href} className="case-link button-secondary button-small">{item.cta}</Link>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Process" title="從資料盤點開始，最後交付可上線、可稽核、可維運的平台。">
-        <div className="card-grid five-up">
-          {homeProcessSteps.map((item, index) => (
-            <article key={item.title} className="card process-card">
-              <span className="step-index">{String(index + 1).padStart(2, "0")}</span>
-              <strong>{item.title}</strong>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Third-party quick review" title="以第三方商用官網標準快評：這版更像可信任資料平台公司，而不是一般系統開發商。">
-        <div className="card-grid four-up">
-          {homeThirdPartyReview.map((item) => (
-            <article key={item.metric} className="card trust-card">
-              <span className="mini-label accent">{item.score}</span>
-              <h3>{item.metric}</h3>
-              <p>{item.note}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="quick-brief" eyebrow="Start" title="讓你的資料成為可被信任、可被稽核、可被運用的資產。">
-        <QuickBriefForm />
       </Section>
     </main>
   );
