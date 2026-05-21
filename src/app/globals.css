@@ -5483,3 +5483,162 @@ body {
     transform: none;
   }
 }
+
+/* CSS interaction polish: subtle depth, 3D parallax, and proof-card flip cues. */
+.card,
+.feature-surface,
+.hero-platform-mockup,
+.fit-finder-result,
+.interactive-flow-detail,
+.case-study-proof-block {
+  transform-style: preserve-3d;
+}
+
+.card,
+.feature-surface,
+.case-study-proof-block {
+  position: relative;
+}
+
+.card,
+.feature-surface,
+.fit-finder-option,
+.interactive-flow-step,
+.case-filter-button,
+.case-study-proof-status,
+.hero-platform-mockup,
+.case-study-image img {
+  will-change: transform;
+}
+
+.card::after,
+.feature-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.42) 42%, transparent 68%);
+  opacity: 0;
+  transform: translateX(-36%);
+}
+
+.card > *,
+.feature-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-rebuild-panel,
+.case-study-proof-block {
+  perspective: 1100px;
+}
+
+.case-study-proof-status {
+  transform-origin: top center;
+  backface-visibility: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .card,
+  .feature-surface,
+  .hero-platform-mockup,
+  .fit-finder-result,
+  .interactive-flow-detail,
+  .case-study-proof-status {
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease,
+      background 220ms ease;
+  }
+
+  .card::after,
+  .feature-surface::after {
+    transition: opacity 220ms ease, transform 520ms ease;
+  }
+
+  .card:hover,
+  .feature-surface:hover {
+    transform: translateY(-5px) scale(1.012);
+    box-shadow: 0 26px 64px rgba(16, 48, 72, 0.12);
+    border-color: rgba(42, 157, 143, 0.24);
+  }
+
+  .card:hover::after,
+  .feature-surface:hover::after {
+    opacity: 1;
+    transform: translateX(42%);
+  }
+
+  .hero-rebuild-panel:hover .hero-platform-mockup {
+    transform: rotateX(2.2deg) rotateY(-3.2deg) translateY(-4px);
+    box-shadow: 0 34px 90px rgba(16, 48, 72, 0.16);
+  }
+
+  .hero-rebuild-panel:hover .mockup-card,
+  .hero-rebuild-panel:hover .dpp-card,
+  .hero-rebuild-panel:hover .mockup-flow {
+    transform: translateZ(18px);
+  }
+
+  .hero-rebuild-panel:hover .mockup-metric-strip {
+    transform: translateZ(10px);
+  }
+
+  .mockup-card,
+  .dpp-card,
+  .mockup-flow,
+  .mockup-metric-strip {
+    transition: transform 220ms ease;
+  }
+
+  .case-study-proof-block:hover .evidence-matrix-card {
+    transform: translateY(-6px) rotateX(1.6deg);
+  }
+
+  .case-study-proof-block:hover .case-study-image img {
+    transform: scale(1.035);
+  }
+
+  .case-study-proof-block:hover .case-study-proof-status {
+    transform: rotateX(-7deg) translateY(-4px);
+    border-color: rgba(42, 157, 143, 0.28);
+    box-shadow: 0 16px 36px rgba(16, 48, 72, 0.1);
+  }
+
+  .fit-finder-result:hover,
+  .interactive-flow-detail:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 64px rgba(16, 48, 72, 0.12);
+  }
+
+  .button-primary:hover,
+  .button-secondary:hover,
+  .header-cta:hover {
+    transform: translateY(-2px) scale(1.015);
+  }
+}
+
+@media (max-width: 760px), (prefers-reduced-motion: reduce) {
+  .card,
+  .feature-surface,
+  .hero-platform-mockup,
+  .fit-finder-result,
+  .interactive-flow-detail,
+  .case-study-proof-status,
+  .case-study-image img,
+  .mockup-card,
+  .dpp-card,
+  .mockup-flow,
+  .mockup-metric-strip {
+    transform: none;
+    will-change: auto;
+  }
+
+  .card::after,
+  .feature-surface::after {
+    display: none;
+  }
+}
