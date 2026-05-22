@@ -602,15 +602,26 @@ a:hover {
 
 .site-header-reassurance {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
   align-items: center;
   flex: 1 1 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-header-reassurance::-webkit-scrollbar {
+  display: none;
 }
 
 .site-header-reassurance-pill {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
+  white-space: nowrap;
   min-height: 32px;
   padding: 0 12px;
   border-radius: 999px;
