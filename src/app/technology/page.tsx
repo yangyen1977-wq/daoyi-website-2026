@@ -15,12 +15,17 @@ import {
 import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "技術核心｜資料信任鏈、DPP、ESG 稽核與 AI-Ontology 技術架構｜道易科技",
+const technologyPageTitle = "技術核心｜資料信任鏈、DPP、ESG 稽核與 AI-Ontology 技術架構｜道易科技";
+
+export const metadata: Metadata = {
+  ...createPageMetadata({
+  title: technologyPageTitle,
   description:
     "道易科技以 Ontology 語義建模、Hash、Merkle Tree、IPFS、TSA 時戳、API、Audit Trail 與 AI / AIoT 校驗，協助企業、政府與研究機構建立可追溯、可驗證、可稽核的可信資料平台。",
   path: "/technology",
-});
+  }),
+  title: { absolute: technologyPageTitle },
+};
 
 const technologyMailHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想與道易討論技術導入 / 資料信任鏈")}&body=${encodeURIComponent("您好，我想與道易討論資料信任鏈或可信資料平台技術導入。\n\n目前資料來源：\n目前流程或系統：\n希望支撐的用途：DPP / ESG 稽核 / 回收履歷 / AI-Ontology / 其他\n是否需要 NDA：\n\n謝謝。")}`;
 
