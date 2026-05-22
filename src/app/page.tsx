@@ -3,7 +3,6 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import {
-  homeBuyerPaths,
   homeHero,
   homeWhatWeDo,
 } from "@/lib/content/home";
@@ -48,22 +47,6 @@ export default function HomePage() {
             <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Choose your path"
-        title="不同角色進站時，先找到最接近自己的資料問題。"
-        description="成熟的 B2B 官網不只展示能力，而是讓訪客快速判斷下一步。道易首頁改成以買方情境作為入口。"
-      >
-        <div className="home-path-grid">
-          {homeBuyerPaths.map((item) => (
-            <article key={item.role} className="card home-path-card">
-              <span className="mini-label accent">{item.role}</span>
-              <p>{item.need}</p>
-              <Link href={item.href} className="inline-button">{item.next}</Link>
             </article>
           ))}
         </div>
