@@ -4,12 +4,8 @@ import Link from "next/link";
 import { Section } from "@/components/section";
 import {
   homeBuyerPaths,
-  homeCaseSignals,
   homeHero,
-  homeProofArchitecture,
-  homeSitemapRebuild,
   homeTargetAudiences,
-  homeThirdPartyReview,
   homeWhatWeDo,
 } from "@/lib/content/home";
 import { publicAssetPath, siteConfig } from "@/lib/site";
@@ -75,22 +71,6 @@ export default function HomePage() {
       </Section>
 
       <Section
-        eyebrow="System method"
-        title="從資料盤點到查核證據，用同一套方法落地。"
-        description="這輪重建把品牌主張從「會做哪些技術」改成「如何把資料變成可信系統」。"
-      >
-        <div className="home-architecture-grid">
-          {homeProofArchitecture.map((item) => (
-            <article key={item.step} className="home-architecture-step">
-              <span>{item.step}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         eyebrow="TA"
         title="適合正在把重要資料產品化、公開化或稽核化的團隊。"
         description="如果你的資料已經影響客戶信任、內部決策、研究整理或永續揭露，道易可以協助把它變成清楚可用的系統。"
@@ -102,55 +82,6 @@ export default function HomePage() {
               <p>{item.detail}</p>
             </article>
           ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Proof"
-        title="案例呈現改成讓買方判斷：問題、做法、結果是否相近。"
-        description="案例不只列作品名稱，而要讓決策者快速對照自己的資料情境。"
-      >
-        <div className="card-grid three-up">
-          {homeCaseSignals.map((item) => (
-            <article key={item.title} className="card home-proof-card">
-              <span className="mini-label accent">{item.type}</span>
-              <h3>{item.title}</h3>
-              <p>{item.result}</p>
-            </article>
-          ))}
-        </div>
-        <div className="section-actions">
-          <Link href="/work" className="button-secondary">查看完整案例實績</Link>
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="2026 Sitemap"
-        title="新版 sitemap 以買方決策旅程重排，而不是只列頁面。"
-        description="首頁負責定位與分流，解決方案負責選型，技術頁降低風險，案例頁建立信任，聯絡頁收斂下一步。"
-      >
-        <div className="home-sitemap-list">
-          {homeSitemapRebuild.map((item) => (
-            <article key={item.page} className="home-sitemap-item">
-              <strong>{item.page}</strong>
-              <p>{item.job}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Third-party quick review"
-        title="本輪快速總評"
-        description={homeThirdPartyReview.summary}
-      >
-        <div className="home-review-panel">
-          <strong>{homeThirdPartyReview.score}</strong>
-          <div className="home-review-metrics">
-            {homeThirdPartyReview.criteria.map((criterion) => (
-              <span key={criterion}>{criterion}</span>
-            ))}
-          </div>
         </div>
       </Section>
 
