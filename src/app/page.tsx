@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
-import { HeroBanner } from "@/components/hero-banner";
 import { Section } from "@/components/section";
 import {
   homeHero,
-  homeHeroCards,
   homeTargetAudiences,
-  homeTrustMetrics,
   homeWhatWeDo,
 } from "@/lib/content/home";
-import { siteConfig } from "@/lib/site";
+import { publicAssetPath, siteConfig } from "@/lib/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -19,33 +17,23 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function HomePage() {
+  const heroStyle = {
+    "--home-hero-image": `url("${publicAssetPath("/assets/home-hero-ai-network.png")}")`,
+  } as CSSProperties;
+
   return (
     <main id="main-content">
-      <section className="hero-section hero-rebuild">
-        <div className="shell hero-rebuild-grid">
-          <div className="hero-copy">
+      <section className="hero-section hero-rebuild home-hero-visual" style={heroStyle}>
+        <div className="home-hero-background" aria-hidden="true" />
+        <div className="shell home-hero-content">
+          <div className="hero-copy home-hero-copy">
             <span className="hero-eyebrow">{homeHero.eyebrow}</span>
             <div className="hero-intro-badge">{homeHero.badge}</div>
             <h1>{homeHero.title}</h1>
             <p>{homeHero.description}</p>
             <div className="hero-actions">
-              <Link href="/contact" className="button-primary button-large">預約需求討論</Link>
-              <Link href="/work" className="button-secondary button-large">查看案例</Link>
+              <Link href="/contact" className="button-primary button-large">了解更多 / 聯絡我們</Link>
             </div>
-          </div>
-
-          <div className="hero-rebuild-panel">
-            <HeroBanner metrics={homeTrustMetrics} />
-          </div>
-
-          <div className="hero-outcome-board">
-            {homeHeroCards.map((item) => (
-              <article key={item.label} className="hero-outcome-card">
-                <span className="mini-label accent">{item.label}</span>
-                <strong>{item.title}</strong>
-                <p>{item.detail}</p>
-              </article>
-            ))}
           </div>
         </div>
       </section>

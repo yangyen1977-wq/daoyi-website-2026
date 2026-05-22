@@ -1,9 +1,9 @@
 export const homeHero = {
   eyebrow: "DaoYi Technology",
-  badge: "資料平台 / 數位產品護照 / 知識資料整理",
-  title: "當資料需要對外揭露、接受稽核、支撐 DPP / ESG / 研究查詢時，道易協助你把分散資料變成可信任的系統資產。",
+  badge: "Digital Technology / AI Innovation / Trusted Data Systems",
+  title: "數位科技與 AI 創新，解決多元領域需求",
   description:
-    "我們整理產品履歷、ESG 與稽核證據、研究與文化資料、現場紀錄與既有資料庫，轉化成前後台、查詢頁、Dashboard 或 API，讓資料能被使用、被說明、被長期維運。",
+    "我們起源於數位人文，透過 AI 語意分析進行資料探勘；並延伸開發 YoLo 識別技術與數位產品護照系統（DPP），助企業在循環經濟中佔得先機。",
 };
 
 export const homeHeroCards = [
