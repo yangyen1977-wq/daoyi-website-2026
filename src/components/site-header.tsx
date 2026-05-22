@@ -9,8 +9,9 @@ import { headerReassuranceSignals, navItems, publicAssetPath, siteConfig } from 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const ctaHref = pathname === "/" ? "/#quick-brief" : "/contact";
-  const ctaLabel = pathname === "/" ? "預約討論" : "24h 內回覆";
+  const isTechnologyPage = pathname.startsWith("/technology");
+  const ctaHref = pathname === "/" ? "/#quick-brief" : isTechnologyPage ? "/contact?topic=technology" : "/contact";
+  const ctaLabel = pathname === "/" ? "預約討論" : isTechnologyPage ? "取得技術建議" : "24h 內回覆";
 
   useEffect(() => {
     const onResize = () => {

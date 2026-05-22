@@ -5430,6 +5430,322 @@ a:hover {
   line-height: 1.7;
 }
 
+.technology-hero {
+  padding: clamp(64px, 10vw, 118px) 0 56px;
+  background:
+    linear-gradient(135deg, rgba(42, 157, 143, 0.12), rgba(47, 128, 237, 0.08)),
+    var(--bg);
+}
+
+.technology-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.78fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: center;
+}
+
+.technology-hero-copy h1 {
+  margin-top: 14px;
+  color: var(--text-dark);
+  font-size: clamp(2.45rem, 6vw, 5.5rem);
+  line-height: 1.02;
+}
+
+.technology-hero-copy p {
+  max-width: 760px;
+  color: var(--text-body);
+  font-size: 1.08rem;
+  line-height: 1.78;
+}
+
+.technology-hero-lead {
+  margin-top: 22px;
+  color: var(--text-dark) !important;
+  font-size: 1.24rem !important;
+  line-height: 1.65 !important;
+}
+
+.technology-signal-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.technology-signal-strip span {
+  border: 1px solid rgba(42, 157, 143, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #1f5e58;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 9px 12px;
+}
+
+.technology-hero-diagram {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(42, 157, 143, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(239, 248, 247, 0.9));
+  box-shadow: 0 28px 80px rgba(16, 48, 72, 0.12);
+  padding: 22px;
+}
+
+.technology-hero-node {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(16, 48, 72, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 15px 16px 15px 48px;
+}
+
+.technology-hero-node:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 25px;
+  bottom: -12px;
+  width: 1px;
+  height: 12px;
+  background: rgba(42, 157, 143, 0.36);
+}
+
+.technology-hero-node span {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  color: #1e5c9f;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.technology-hero-node strong {
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.technology-hero-node p {
+  color: var(--text-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.technology-pain-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.technology-pain-card {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.7fr) repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.technology-pain-card h3 {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+}
+
+.technology-pain-card strong,
+.technology-solution-card strong,
+.technology-start-card strong {
+  display: block;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.technology-pain-card p,
+.technology-solution-card p,
+.technology-start-card p,
+.technology-deliverable-card p {
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.technology-flow {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(9rem, 1fr));
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.technology-flow-step {
+  position: relative;
+  min-width: 9rem;
+  border: 1px solid rgba(16, 48, 72, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 16px 42px rgba(16, 48, 72, 0.06);
+  padding: 18px;
+}
+
+.technology-flow-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: -10px;
+  width: 10px;
+  height: 1px;
+  background: rgba(42, 157, 143, 0.42);
+}
+
+.technology-flow-step span {
+  color: #1e5c9f;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.technology-flow-step h3 {
+  margin-top: 8px;
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.technology-flow-step p {
+  margin-top: 8px;
+  color: var(--text-body);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.technology-module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.technology-module-card,
+.technology-faq-item {
+  border: 1px solid rgba(16, 48, 72, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 18px 46px rgba(16, 48, 72, 0.07);
+  padding: 0;
+}
+
+.technology-module-card summary,
+.technology-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+}
+
+.technology-module-card summary::-webkit-details-marker,
+.technology-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.technology-module-card summary strong,
+.technology-faq-item summary {
+  color: var(--text-dark);
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.technology-module-body {
+  display: grid;
+  gap: 14px;
+  border-top: 1px solid rgba(16, 48, 72, 0.08);
+  padding: 18px 20px 20px;
+}
+
+.technology-module-body h3 {
+  color: #1f5e58;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.technology-module-body p,
+.technology-faq-item p {
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.technology-solution-card,
+.technology-start-card,
+.technology-deliverable-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.technology-solution-card .inline-button,
+.technology-start-card .inline-button {
+  margin-top: auto;
+}
+
+.technology-deliverable-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.technology-deliverable-card {
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.technology-deliverable-card h3 {
+  color: var(--text-dark);
+  font-size: 0.98rem;
+  line-height: 1.42;
+}
+
+.technology-faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.technology-faq-item p {
+  border-top: 1px solid rgba(16, 48, 72, 0.08);
+  padding: 0 20px 20px;
+}
+
+.technology-final-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 26px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(42, 157, 143, 0.2), rgba(47, 128, 237, 0.16)),
+    #0f1c33;
+  box-shadow: 0 28px 80px rgba(16, 48, 72, 0.16);
+  padding: clamp(28px, 5vw, 52px);
+}
+
+.technology-final-cta h2 {
+  max-width: 760px;
+  color: #ffffff;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.18;
+}
+
+.technology-final-cta p,
+.technology-final-cta small {
+  display: block;
+  max-width: 780px;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.technology-final-actions {
+  display: grid;
+  gap: 12px;
+  min-width: 220px;
+}
+
 @media (max-width: 1100px) {
   .solution-detail-card,
   .solution-card-footer {
@@ -5443,9 +5759,60 @@ a:hover {
   .solution-evidence-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .technology-hero-grid,
+  .technology-pain-card,
+  .technology-final-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-deliverable-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
+  .technology-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .technology-page > section:nth-of-type(1) {
+    order: 1;
+  }
+
+  .technology-page > section:nth-of-type(2) {
+    order: 2;
+  }
+
+  .technology-page > section:nth-of-type(3) {
+    order: 3;
+  }
+
+  .technology-page > section:nth-of-type(4) {
+    order: 4;
+  }
+
+  .technology-page > section:nth-of-type(7) {
+    order: 5;
+  }
+
+  .technology-page > section:nth-of-type(8) {
+    order: 6;
+  }
+
+  .technology-page > section:nth-of-type(5) {
+    order: 7;
+  }
+
+  .technology-page > section:nth-of-type(6) {
+    order: 8;
+  }
+
+  .technology-page > section:nth-of-type(9) {
+    order: 9;
+  }
+
   .solution-detail-grid,
   .solution-tech-grid,
   .solution-evidence-grid {
@@ -5454,6 +5821,50 @@ a:hover {
 
   .solution-detail-card {
     gap: 16px;
+  }
+
+  .technology-hero {
+    padding-top: 46px;
+  }
+
+  .technology-signal-strip span {
+    width: 100%;
+  }
+
+  .technology-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: visible;
+    gap: 12px;
+  }
+
+  .technology-flow-step {
+    min-width: 0;
+    padding-left: 56px;
+  }
+
+  .technology-flow-step:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    left: 28px;
+    bottom: -12px;
+    width: 1px;
+    height: 12px;
+  }
+
+  .technology-flow-step span {
+    position: absolute;
+    top: 19px;
+    left: 18px;
+  }
+
+  .technology-module-grid,
+  .technology-deliverable-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-final-actions {
+    min-width: 0;
   }
 }
 
