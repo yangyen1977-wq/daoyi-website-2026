@@ -93,10 +93,30 @@ export const solutionDetails = [
 ];
 
 export const solutionImplementationSteps = [
-  { title: "盤點資料來源", detail: "確認資料在哪裡、誰會更新、誰要查詢，以及哪些節點需要被驗證。" },
-  { title: "建立資料模型與證據模型", detail: "把欄位、關係、版本、來源與查核需求整理成可實作的結構。" },
-  { title: "做 PoC / Prototype", detail: "用一個產品、一條流程、一批資料或一個知識主題先驗證可行性。" },
-  { title: "串接使用介面與查核流程", detail: "依需求落到 Dashboard、API、QR 查詢頁、後台管理或稽核流程。" },
+  {
+    title: "盤點資料來源",
+    detail: "先釐清資料在哪裡、誰會更新、誰要查詢，以及哪些節點需要留下可驗證紀錄。",
+    input: "現有資料、表單、系統、設備或人工流程",
+    output: "資料來源圖、角色盤點、信任缺口清單",
+  },
+  {
+    title: "建立資料模型與證據模型",
+    detail: "把欄位、關係、版本、來源與查核需求整理成前後台都能實作的共同結構。",
+    input: "欄位樣本、流程節點、揭露與稽核需求",
+    output: "資料模型、證據模型、欄位與驗證規則",
+  },
+  {
+    title: "做 PoC / Prototype",
+    detail: "用一個產品、一條流程、一批資料或一個知識主題先驗證查詢、維護與驗證方式。",
+    input: "第一批資料、第一個場景、第一組使用者",
+    output: "Dashboard、QR 查詢頁、API 或知識平台原型",
+  },
+  {
+    title: "串接使用介面與查核流程",
+    detail: "把驗證後的資料流程接到 Dashboard、API、QR 查詢頁、後台管理或稽核介面。",
+    input: "PoC 結果、權限規則、系統串接需求",
+    output: "可上線平台、操作流程、維運與擴充路線",
+  },
 ];
 
 export const solutionStartModes = [

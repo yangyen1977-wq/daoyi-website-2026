@@ -252,14 +252,38 @@ export default function SolutionsPage() {
         </div>
       </Section>
 
-      <Section id="solution-flow" eyebrow="落地流程" title="先用小範圍驗證，再把可信資料平台擴出去。">
-        <div className="solution-process-timeline">
+      <Section
+        id="solution-flow"
+        eyebrow="落地流程"
+        title="從一批資料開始，把可信資料平台做成可驗證的導入路徑。"
+        description="道易不會一開始就要求完整規格書，而是先把資料、角色、查核需求與第一階段成果對齊，降低專案風險。"
+      >
+        <div className="solution-process-board">
+          <div className="solution-process-brief">
+            <span className="mini-label accent">Implementation blueprint</span>
+            <h3>每一步都要產生可討論、可開發、可驗證的成果。</h3>
+            <p>從資料盤點到系統串接，流程重點不是把功能列滿，而是確認哪些資料值得先做、哪些證據節點需要補強，以及第一階段如何交付可用成果。</p>
+          </div>
           {solutionImplementationSteps.map((step, index) => (
             <article key={step.title} className="card process-card solution-process-step">
-              <ProcessIcon index={index} />
-              <span className="mini-label accent">{String(index + 1).padStart(2, "0")}</span>
-              <h3>{step.title}</h3>
+              <div className="solution-process-step-head">
+                <div>
+                  <span className="solution-process-number">{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{step.title}</h3>
+                </div>
+                <ProcessIcon index={index} />
+              </div>
               <p>{step.detail}</p>
+              <div className="solution-process-meta">
+                <div>
+                  <strong>需要先看</strong>
+                  <span>{step.input}</span>
+                </div>
+                <div>
+                  <strong>階段輸出</strong>
+                  <span>{step.output}</span>
+                </div>
+              </div>
             </article>
           ))}
         </div>
