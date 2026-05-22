@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { quickBriefAssistPoints } from "@/lib/content/contact";
 import { siteConfig } from "@/lib/site";
 
 const projectFocusOptions = [
@@ -58,9 +57,9 @@ type FormState = {
   name: string;
   company: string;
   email: string;
-  phone: string;
   focus: (typeof projectFocusOptions)[number]["value"];
   sources: string[];
+  audienceScope: string;
   problem: string;
   confidentiality: (typeof confidentialityOptions)[number];
 };
@@ -70,9 +69,9 @@ export function QuickBriefForm() {
     name: "",
     company: "",
     email: "",
-    phone: "",
     focus: projectFocusOptions[0].value,
     sources: [],
+    audienceScope: "",
     problem: "",
     confidentiality: confidentialityOptions[0],
   });
@@ -102,7 +101,7 @@ export function QuickBriefForm() {
 
     const subject = encodeURIComponent(`Quick Brief｜${form.company}｜${form.focus}`);
     const body = encodeURIComponent(
-      `您好，我想與道易討論可信資料平台專案。\n\n姓名：${form.name}\n公司 / 單位：${form.company}\nEmail：${form.email}\n聯絡電話：${form.phone || "未提供"}\n\n這次最接近的需求：${form.focus}\n目前資料主要在哪裡：${form.sources.length ? form.sources.join("、") : "尚未選擇"}\n想先解決的問題：\n${form.problem || "尚未填寫"}\n\n是否涉及敏感或未公開資料：${form.confidentiality}\n\n請協助回覆建議切入點、第一次會議需準備的資料，以及是否適合先做 PoC 或 Email / NDA。\n`
+      `您好，我想與道易討論可信資料平台專案。\n\n姓名：${form.name}\n公司 / 單位：${form.company}\nEmail：${form.email}\n\n1. 這次最接近的需求：${form.focus}\n2. 目前資料主要在哪裡：${form.sources.length ? form.sources.join("、") : "尚未選擇"}\n3. 使用者 / 揭露範圍：\n${form.audienceScope || "尚未填寫"}\n4. 想先解決的問題：\n${form.problem || "尚未填寫"}\n5. 是否涉及敏感或未公開資料：${form.confidentiality}\n\n請協助回覆建議切入點、第一次會議需準備的資料，以及是否適合先做 PoC 或 Email / NDA。\n`
     );
 
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
@@ -112,14 +111,8 @@ export function QuickBriefForm() {
     <form id="quick-brief-form" className="quick-brief-form contact-brief-form" onSubmit={handleSubmit}>
       <div className="contact-brief-intro">
         <span className="mini-label accent">Quick Brief</span>
-        <h3>用 5 個問題，讓道易判斷你的資料專案第一步。</h3>
-        <p>這不是正式規格書，只是快速確認資料現況。請避免在表單中填寫機密細節；如果內容涉及供應鏈、研發、採購或未公開產品，請改用 Email / NDA 路徑。</p>
-      </div>
-
-      <div className="quick-brief-assist-list" aria-label="填寫說明">
-        {quickBriefAssistPoints.map((item) => (
-          <p key={item} className="quick-brief-assist-pill">{item}</p>
-        ))}
+        <h3>5 問 Quick Brief</h3>
+        <p>只需描述資料現況，不要填寫機密細節。送出時會開啟你的 Email 軟體並帶入內容。</p>
       </div>
 
       <div className="contact-form-grid">
@@ -135,14 +128,10 @@ export function QuickBriefForm() {
           <span>Email</span>
           <input type="email" value={form.email} onChange={(event) => handleChange("email", event.target.value)} placeholder="請輸入可聯絡信箱" autoComplete="email" required />
         </label>
-        <label className="form-field">
-          <span>聯絡電話，選填</span>
-          <input type="tel" value={form.phone} onChange={(event) => handleChange("phone", event.target.value)} placeholder="方便安排會議時使用" autoComplete="tel" />
-        </label>
       </div>
 
       <fieldset className="form-field quick-brief-focus-fieldset">
-        <legend>這次最接近哪一種需求？</legend>
+        <legend>1. 這次最接近哪一種需求？</legend>
         <div className="quick-brief-focus-grid" role="radiogroup" aria-label="專案焦點">
           {projectFocusOptions.map((option) => {
             const checked = form.focus === option.value;
@@ -165,7 +154,7 @@ export function QuickBriefForm() {
       </div>
 
       <fieldset className="form-field contact-checkbox-fieldset">
-        <legend>目前資料主要在哪裡？</legend>
+        <legend>2. 目前資料主要在哪裡？</legend>
         <div className="contact-checkbox-grid">
           {sourceOptions.map((source) => (
             <label key={source} className="contact-checkbox-card">
@@ -177,7 +166,17 @@ export function QuickBriefForm() {
       </fieldset>
 
       <label className="form-field">
-        <span>你最想先解決什麼？</span>
+        <span>3. 使用者 / 揭露範圍</span>
+        <textarea
+          value={form.audienceScope}
+          onChange={(event) => handleChange("audienceScope", event.target.value)}
+          placeholder="例如：給客戶掃 QR 查詢、給供應鏈夥伴看部分欄位、給第三方稽核者查核、只給內部管理者使用。"
+          rows={4}
+        />
+      </label>
+
+      <label className="form-field">
+        <span>4. 你最想先解決什麼？</span>
         <textarea
           value={form.problem}
           onChange={(event) => handleChange("problem", event.target.value)}
@@ -187,7 +186,7 @@ export function QuickBriefForm() {
       </label>
 
       <fieldset className="form-field contact-radio-fieldset">
-        <legend>是否涉及敏感或未公開資料？</legend>
+        <legend>5. 是否涉及敏感或未公開資料？</legend>
         <div className="contact-radio-grid">
           {confidentialityOptions.map((option) => (
             <label key={option} className={`contact-radio-card ${form.confidentiality === option ? "is-selected" : ""}`}>
@@ -199,8 +198,8 @@ export function QuickBriefForm() {
       </fieldset>
 
       <div className="quick-brief-action-group">
-        <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟預填 Email">
-          開啟預填 Email
+        <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="填寫 5 問 Quick Brief">
+          填寫 5 問 Quick Brief
         </button>
         <small>系統會開啟你的 Email 軟體，並自動帶入表單內容。你可以再補充資料或附檔後寄出。</small>
       </div>

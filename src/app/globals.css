@@ -7835,6 +7835,57 @@ body {
   display: none;
 }
 
+.contact-compact-page .contact-hero {
+  padding-bottom: 34px;
+}
+
+.contact-compact-hero-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(22rem, 0.72fr);
+}
+
+.contact-decision-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-decision-card {
+  border: 1px solid rgba(16, 48, 72, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 54px rgba(16, 48, 72, 0.08);
+  padding: clamp(18px, 3vw, 24px);
+}
+
+.contact-decision-card h2 {
+  margin: 10px 0 10px;
+  color: var(--text-dark);
+  font-size: clamp(1.3rem, 2.3vw, 1.75rem);
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.contact-decision-card p {
+  color: var(--text-body);
+  line-height: 1.62;
+}
+
+.contact-decision-card .inline-button {
+  margin-top: 16px;
+}
+
+.contact-compact-page .contact-brief-form {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.contact-compact-page .contact-meeting-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-compact-email-panel {
+  grid-template-columns: minmax(0, 0.82fr) minmax(20rem, 0.9fr);
+}
+
 @media (max-width: 1100px) {
   .contact-hero-grid,
   .contact-brief-layout,
@@ -7853,6 +7904,12 @@ body {
   .contact-situation-grid,
   .contact-meeting-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-compact-hero-grid,
+  .contact-compact-email-panel,
+  .contact-compact-page .contact-meeting-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -7886,7 +7943,7 @@ body {
   .contact-mobile-sticky {
     position: fixed;
     right: 12px;
-    bottom: calc(86px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     left: 12px;
     z-index: 40;
     display: grid;
@@ -7901,6 +7958,7 @@ body {
     background: linear-gradient(135deg, var(--primary), var(--primary-strong));
     box-shadow: 0 14px 34px rgba(16, 48, 72, 0.18);
     color: #ffffff;
+    font-size: 0.86rem;
     font-weight: 900;
     line-height: 1.2;
     padding: 13px 14px;
