@@ -4,12 +4,18 @@ import { useMemo, useState } from "react";
 import { CaseStudyCard } from "@/components/case-study-card";
 
 type CaseStudy = {
+  id: string;
   title: string;
   category: string;
+  filterGroup: string;
+  summary: string;
   problem: string;
   solution: string;
-  value: string;
+  deliverables: string[];
+  extension: string;
   tags: string[];
+  ctaLabel: string;
+  ctaHref: string;
   proofStatus: string;
   image?: {
     src: string;
@@ -23,14 +29,15 @@ type CaseLibraryFilterProps = {
 };
 
 const filters = [
-  { id: "all", label: "全部案例", match: () => true },
+  { id: "all", label: "全部", match: () => true },
   { id: "dpp", label: "DPP / ESG", match: (item: CaseStudy) => hasAny(item, ["DPP", "ESG", "循環", "回收"]) },
-  { id: "ontology", label: "Ontology / 知識平台", match: (item: CaseStudy) => hasAny(item, ["Ontology", "Knowledge", "知識", "數位人文"]) },
-  { id: "research", label: "研究 / 圖書館", match: (item: CaseStudy) => hasAny(item, ["研究", "圖書館", "Biography", "Biographical"]) },
+  { id: "ontology", label: "AI-Ontology", match: (item: CaseStudy) => hasAny(item, ["AI-Ontology", "Ontology", "Knowledge", "知識", "數位人文"]) },
+  { id: "research", label: "研究資料庫", match: (item: CaseStudy) => hasAny(item, ["研究", "Research", "Biographical", "Prosopography"]) },
+  { id: "platform", label: "圖書館 / 資料平台", match: (item: CaseStudy) => hasAny(item, ["圖書館", "Library", "平台", "Database"]) },
 ] as const;
 
 function hasAny(item: CaseStudy, keywords: string[]) {
-  const haystack = `${item.title} ${item.category} ${item.tags.join(" ")}`;
+  const haystack = `${item.title} ${item.category} ${item.filterGroup} ${item.tags.join(" ")}`;
   return keywords.some((keyword) => haystack.includes(keyword));
 }
 
@@ -64,7 +71,7 @@ export function CaseLibraryFilter({ cases }: CaseLibraryFilterProps) {
         目前顯示 {visibleCases.length} / {cases.length} 個案例
       </p>
 
-      <div className="card-grid two-up">
+      <div className="work-featured-grid">
         {visibleCases.map((item) => (
           <div className="case-study-proof-block" key={item.title}>
             <CaseStudyCard {...item} />

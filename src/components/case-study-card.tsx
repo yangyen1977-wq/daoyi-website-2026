@@ -1,12 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type CaseStudyCardProps = {
+  id: string;
   title: string;
   category: string;
+  summary: string;
   problem: string;
   solution: string;
-  value: string;
+  deliverables: string[];
+  extension: string;
   tags: string[];
+  ctaLabel: string;
+  ctaHref: string;
   image?: {
     src: string;
     alt: string;
@@ -14,9 +20,22 @@ type CaseStudyCardProps = {
   };
 };
 
-export function CaseStudyCard({ title, category, problem, solution, value, tags, image }: CaseStudyCardProps) {
+export function CaseStudyCard({
+  id,
+  title,
+  category,
+  summary,
+  problem,
+  solution,
+  deliverables,
+  extension,
+  tags,
+  ctaLabel,
+  ctaHref,
+  image,
+}: CaseStudyCardProps) {
   return (
-    <article className="card evidence-matrix-card">
+    <article id={id} className="card evidence-matrix-card work-case-card">
       {image ? (
         <figure className="case-study-image">
           <Image src={image.src} alt={image.alt} width={1200} height={675} />
@@ -25,12 +44,29 @@ export function CaseStudyCard({ title, category, problem, solution, value, tags,
       ) : null}
       <span className="mini-label accent">{category}</span>
       <h3>{title}</h3>
-      <p><strong>問題：</strong>{problem}</p>
-      <p><strong>解法：</strong>{solution}</p>
-      <p><strong>價值：</strong>{value}</p>
+      <p className="work-case-summary">{summary}</p>
+      <div className="work-case-field">
+        <strong>資料問題</strong>
+        <p>{problem}</p>
+      </div>
+      <div className="work-case-field">
+        <strong>道易做了什麼</strong>
+        <p>{solution}</p>
+      </div>
+      <div className="work-case-field">
+        <strong>交付成果</strong>
+        <ul className="bullet-list compact">
+          {deliverables.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      </div>
+      <div className="work-case-field">
+        <strong>適合延伸</strong>
+        <p>{extension}</p>
+      </div>
       <div className="hero-tags">
         {tags.map((tag) => <span key={tag}>{tag}</span>)}
       </div>
+      <Link href={ctaHref} className="inline-button">{ctaLabel}</Link>
     </article>
   );
 }
