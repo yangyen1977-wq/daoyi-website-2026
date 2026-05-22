@@ -5,7 +5,6 @@ import { Section } from "@/components/section";
 import {
   homeBuyerPaths,
   homeHero,
-  homeTargetAudiences,
   homeWhatWeDo,
 } from "@/lib/content/home";
 import { publicAssetPath, siteConfig } from "@/lib/site";
@@ -65,21 +64,6 @@ export default function HomePage() {
               <span className="mini-label accent">{item.role}</span>
               <p>{item.need}</p>
               <Link href={item.href} className="inline-button">{item.next}</Link>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="TA"
-        title="適合正在把重要資料產品化、公開化或稽核化的團隊。"
-        description="如果你的資料已經影響客戶信任、內部決策、研究整理或永續揭露，道易可以協助把它變成清楚可用的系統。"
-      >
-        <div className="card-grid four-up">
-          {homeTargetAudiences.map((item) => (
-            <article key={item.title} className="card decision-card">
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
             </article>
           ))}
         </div>
