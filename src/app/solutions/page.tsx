@@ -4,6 +4,8 @@ import { Section } from "@/components/section";
 import { SubpageHero } from "@/components/subpage-hero";
 import {
   solutionDetails,
+  solutionCaseEvidence,
+  solutionFaqs,
   solutionImplementationSteps,
   solutionScenarios,
   solutionStartModes,
@@ -11,12 +13,23 @@ import {
   solutionTechValues,
 } from "@/lib/content/solutions";
 import { createPageMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "解決方案｜數據信任鏈、DPP、ESG 稽核與 AI-Ontology",
-  description: "道易科技以可信資料底座，提供數據信任鏈、DPP 數位產品護照、AI-Ontology 知識平台與 AIoT 回收履歷整合。",
+  title: "解決方案選型｜DPP、ESG 稽核、AI-Ontology 與 AIoT 回收履歷",
+  description: "用 30 秒情境選型，判斷道易科技的數據信任鏈、DPP 數位產品護照、AI-Ontology 知識平台與 AIoT 回收履歷整合適合從哪裡開始。",
   path: "/solutions",
 });
+
+const emailNdaHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想先用 Email / NDA 討論可信資料平台")}&body=${encodeURIComponent("您好，我想先與道易討論可信資料平台需求。\n\n目前情境：\n可能涉及的資料：\n希望先確認的範圍：\n是否需要 NDA：\n\n謝謝。")}`;
+
+function startModeHref(label: string) {
+  if (label.includes("Email")) {
+    return emailNdaHref;
+  }
+
+  return `/contact?topic=${encodeURIComponent(label)}`;
+}
 
 export default function SolutionsPage() {
   return (
@@ -123,7 +136,7 @@ export default function SolutionsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="如何落地" title="先用小範圍驗證，再把可信資料平台擴出去。">
+      <Section id="solution-flow" eyebrow="落地流程" title="先用小範圍驗證，再把可信資料平台擴出去。">
         <div className="card-grid four-up">
           {solutionImplementationSteps.map((step, index) => (
             <article key={step.title} className="card process-card">
@@ -136,11 +149,12 @@ export default function SolutionsPage() {
       </Section>
 
       <Section
+        id="solution-start"
         eyebrow="Recommended start"
         title="不確定完整範圍？先從 PoC、資料盤點或工作坊開始。"
         description="不用一開始就定義完整系統。先把第一批資料、第一條流程或第一個知識主題跑通，會更容易判斷後續投資。"
       >
-        <div className="card-grid three-up">
+        <div className="card-grid four-up">
           {solutionStartModes.map((item) => (
             <article key={item.title} className="card solution-start-card">
               <span className="mini-label accent">{item.title}</span>
@@ -150,13 +164,38 @@ export default function SolutionsPage() {
               <ul className="bullet-list compact">
                 {item.deliverables.map((deliverable) => <li key={deliverable}>{deliverable}</li>)}
               </ul>
-              <Link href={`/contact?topic=${encodeURIComponent(item.cta)}`} className="inline-button">從這裡開始</Link>
+              {item.cta.includes("Email") ? (
+                <a href={startModeHref(item.cta)} className="inline-button">從這裡開始</a>
+              ) : (
+                <Link href={startModeHref(item.cta)} className="inline-button">從這裡開始</Link>
+              )}
             </article>
           ))}
         </div>
       </Section>
 
       <Section
+        id="solution-evidence"
+        eyebrow="案例證據"
+        title="用已公開案例，看四大方案如何落到實際資料場景。"
+        description="這裡只串接目前可公開說明的案例，不新增不存在的客戶、認證或成果承諾。"
+      >
+        <div className="solution-evidence-grid">
+          {solutionCaseEvidence.map((item) => (
+            <article key={item.title} className="card solution-evidence-card">
+              <span className="mini-label accent">{item.solution}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <div className="section-actions">
+          <Link href="/work" className="button-secondary button-large">查看完整案例</Link>
+        </div>
+      </Section>
+
+      <Section
+        id="solution-tech-value"
         eyebrow="技術翻譯"
         title="保留專業技術，但用商務價值說明它解決什麼問題。"
       >
@@ -173,6 +212,35 @@ export default function SolutionsPage() {
           <Link href="/contact" className="button-primary button-large">聯絡道易</Link>
         </div>
       </Section>
+
+      <Section
+        id="solution-faq"
+        eyebrow="FAQ"
+        title="常見問題先說清楚，降低第一次接洽的判斷成本。"
+      >
+        <div className="solution-faq-list">
+          {solutionFaqs.map((item) => (
+            <article key={item.question} className="card solution-faq-card">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <section id="solution-contact" className="section-block">
+        <div className="shell">
+          <div className="solution-final-cta">
+            <span className="section-eyebrow">Next step</span>
+            <h2>如果你有一批資料、產品履歷或知識內容需要整理，可以先用最短路徑開始。</h2>
+            <p>填寫 Quick Brief，或在涉及商業機密、供應鏈、採購、研發資料時先走 Email / NDA。道易會先協助判斷適合的起手方式與第一次會議需要準備的資料。</p>
+            <div className="section-actions">
+              <Link href="/contact#quick-brief" className="button-primary button-large">填寫 Quick Brief</Link>
+              <a href={emailNdaHref} className="button-secondary button-large">Email / NDA 聯絡</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

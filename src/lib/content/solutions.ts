@@ -101,6 +101,12 @@ export const solutionImplementationSteps = [
 
 export const solutionStartModes = [
   {
+    title: "資料信任鏈盤點",
+    fit: "已有資料平台、流程紀錄或 ESG 資料，但可信度、版本、時間證明或稽核流程不足。",
+    deliverables: ["資料來源盤點", "風險缺口分析", "證據模型草案", "導入路線"],
+    cta: "我想先做資料盤點",
+  },
+  {
     title: "DPP / ESG PoC",
     fit: "已有產品資料、回收流程或 ESG 資料，想先驗證可行性。",
     deliverables: ["欄位藍圖", "QR 查詢頁", "Dashboard 原型", "Hash / Merkle 驗證流程草案"],
@@ -113,10 +119,38 @@ export const solutionStartModes = [
     cta: "我想先安排工作坊",
   },
   {
-    title: "資料信任鏈盤點",
-    fit: "已有資料平台，但可信度、版本、時間證明或稽核流程不足。",
-    deliverables: ["資料來源盤點", "風險缺口分析", "證據模型草案", "導入路線"],
-    cta: "我想先做資料盤點",
+    title: "Email / NDA 路徑",
+    fit: "需求涉及未公開產品、供應鏈資料、採購、研發資訊或內部流程，暫時不適合直接填完整需求。",
+    deliverables: ["保密溝通邊界", "初步會議範圍", "可提供資料清單", "下一步安排"],
+    cta: "我想先用 Email / NDA",
+  },
+];
+
+export const solutionCaseEvidence = [
+  {
+    title: "Easy DPP 數位產品護照",
+    solution: "DPP 數位產品護照",
+    detail: "將產品材料、來源、製程、環境資訊與回收指引整理成可管理的 DPP 架構，讓產品資料從靜態介紹升級為可維護的數位身分。",
+  },
+  {
+    title: "太陽能板回收 YOLO 辨識與履歷",
+    solution: "數據信任鏈 / AIoT 回收履歷",
+    detail: "把影像辨識、設備資料與回收流程紀錄接回履歷平台，支援 ESG 稽核、DPP 延伸與資料來源追蹤。",
+  },
+  {
+    title: "國立臺灣文學館好臺誌、外譯房",
+    solution: "AI-Ontology 知識平台",
+    detail: "將文學與文化資料整理成可查詢、可展示、可維護的資料結構，支援公共展示與研究資料使用。",
+  },
+  {
+    title: "Taiwan Biographical Ontology",
+    solution: "國際研究 / 人物本體",
+    detail: "以人物、組織、地點、職位與來源資料建立可探索、可分析、可擴充的研究知識平台。",
+  },
+  {
+    title: "香港中文大學圖書館傳記資料庫",
+    solution: "資料平台 / 系統整合",
+    detail: "支援人物資料結構、分類與前台查詢設計，讓傳記資料更容易被研究者與公眾查找與使用。",
   },
 ];
 
@@ -128,4 +162,28 @@ export const solutionTechValues = [
   { term: "Audit Trail", value: "記錄誰在什麼時間修改了哪些資料。" },
   { term: "API", value: "讓前台、後台、查核端或外部系統能互相串接。" },
   { term: "Dashboard", value: "讓資料狀態、稽核結果與異常訊號可以被管理者掌握。" },
+  { term: "Semantic Search", value: "讓使用者用概念、脈絡與關係找到資料，而不只依賴關鍵字。" },
+];
+
+export const solutionFaqs = [
+  {
+    question: "我不知道該做 DPP、ESG 稽核平台，還是資料信任鏈，怎麼開始？",
+    answer: "可以先從資料信任鏈盤點開始。道易會協助整理資料來源、對外揭露需求、查核節點、使用角色與第一階段 PoC 範圍，再判斷適合走 DPP、ESG 稽核、AI-Ontology 或系統整合。",
+  },
+  {
+    question: "資料還不完整，可以先做嗎？",
+    answer: "可以。早期不一定要有完整資料庫，反而適合先用一個產品、一條流程、一批資料或一個知識主題做 PoC，確認欄位、維護流程、查詢方式與驗證需求。",
+  },
+  {
+    question: "如果內容涉及供應鏈、採購或研發機密怎麼辦？",
+    answer: "可以先走 Email / NDA 路徑。第一次只需要描述高階情境、目標與限制，等確認保密邊界後再提供較細的資料或流程內容。",
+  },
+  {
+    question: "道易會直接替我們承諾合規或認證結果嗎？",
+    answer: "不會誇大承諾。道易協助建立可追溯、可查核、可維護的資料平台與證據流程；實際認證、查核或合規判定仍需依第三方機構、法規與客戶資料狀態確認。",
+  },
+  {
+    question: "第一階段通常會拿到什麼？",
+    answer: "依起手方式不同，常見成果包含資料來源盤點、欄位藍圖、證據模型草案、QR 查詢頁或 Dashboard 原型、Ontology 草案、API 規劃與 PoC / MVP 範圍建議。",
+  },
 ];
