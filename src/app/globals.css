@@ -7141,6 +7141,25 @@ body {
   color: #1f5e58;
 }
 
+.work-decision-page .section-heading p {
+  color: #21384a;
+  font-weight: 650;
+}
+
+@media (max-width: 760px) {
+  .work-decision-page .section-heading p {
+    max-width: none;
+    border: 1px solid rgba(16, 48, 72, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 12px 30px rgba(16, 48, 72, 0.06);
+    padding: 14px 16px;
+    color: #142a3d;
+    font-weight: 700;
+    line-height: 1.68;
+  }
+}
+
 .technology-flow-step span,
 .technology-module-body h3,
 .technology-hero-node span,
