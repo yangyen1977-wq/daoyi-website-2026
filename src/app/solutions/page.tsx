@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
-import { SubpageHero } from "@/components/subpage-hero";
 import {
   solutionDetails,
   solutionCaseEvidence,
@@ -23,6 +22,145 @@ export const metadata: Metadata = createPageMetadata({
 
 const emailNdaHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想先用 Email / NDA 討論可信資料平台")}&body=${encodeURIComponent("您好，我想先與道易討論可信資料平台需求。\n\n目前情境：\n可能涉及的資料：\n希望先確認的範圍：\n是否需要 NDA：\n\n謝謝。")}`;
 
+const solutionVisuals = {
+  "data-trust-chain": {
+    label: "Audit proof",
+    nodes: ["Source", "Hash", "Root", "Audit"],
+    accent: "mint",
+  },
+  "dpp-product-passport": {
+    label: "Product passport",
+    nodes: ["Product", "QR", "Lifecycle", "Disclosure"],
+    accent: "blue",
+  },
+  "ai-ontology-platform": {
+    label: "Knowledge graph",
+    nodes: ["Text", "Entity", "Relation", "Search"],
+    accent: "teal",
+  },
+  "aiot-traceability": {
+    label: "AIoT traceability",
+    nodes: ["Device", "Vision", "Batch", "Record"],
+    accent: "green",
+  },
+} as const;
+
+function SolutionHeroVisual() {
+  return (
+    <div className="solutions-hero-art" aria-label="可信資料平台 3D 示意圖">
+      <svg viewBox="0 0 960 540" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="solutionsHeroPanel" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" stopColor="#f7fffd" />
+            <stop offset="52%" stopColor="#e9f7ff" />
+            <stop offset="100%" stopColor="#dff8f1" />
+          </linearGradient>
+          <linearGradient id="solutionsHeroCore" x1="0%" x2="100%">
+            <stop offset="0%" stopColor="#2a9d8f" />
+            <stop offset="100%" stopColor="#2f80ed" />
+          </linearGradient>
+          <filter id="solutionsHeroShadow" x="-20%" y="-20%" width="140%" height="150%">
+            <feDropShadow dx="0" dy="20" stdDeviation="22" floodColor="#103048" floodOpacity="0.16" />
+          </filter>
+        </defs>
+        <rect width="960" height="540" rx="42" fill="url(#solutionsHeroPanel)" />
+        <g opacity="0.55">
+          <path d="M90 120H870M90 210H870M90 300H870M90 390H870" stroke="#9ec8d4" strokeWidth="1" />
+          <path d="M180 70V470M330 70V470M480 70V470M630 70V470M780 70V470" stroke="#9ec8d4" strokeWidth="1" />
+        </g>
+        <g filter="url(#solutionsHeroShadow)">
+          <path d="M205 335L480 190L755 335L480 480Z" fill="#ffffff" />
+          <path d="M205 335L480 480V428L205 286Z" fill="#d8eef4" />
+          <path d="M755 335L480 480V428L755 286Z" fill="#c5e5ef" />
+          <path d="M205 286L480 140L755 286L480 428Z" fill="#ffffff" />
+          <path d="M312 286L480 198L648 286L480 372Z" fill="url(#solutionsHeroCore)" opacity="0.96" />
+        </g>
+        {[
+          [246, 210, "DPP"],
+          [716, 210, "ESG"],
+          [246, 382, "AI"],
+          [716, 382, "Audit"],
+        ].map(([x, y, label]) => (
+          <g key={label} className="solutions-hero-node">
+            <circle cx={x} cy={y} r="42" fill="#ffffff" stroke="#b9e5df" strokeWidth="2" />
+            <circle cx={x} cy={y} r="18" fill="#2a9d8f" opacity="0.16" />
+            <text x={x} y={Number(y) + 6} textAnchor="middle" fill="#17364d" fontSize="22" fontWeight="800">{label}</text>
+          </g>
+        ))}
+        <path d="M288 226C360 184 406 174 480 198C548 176 596 184 674 226" fill="none" stroke="#2a9d8f" strokeWidth="5" strokeLinecap="round" opacity="0.52" />
+        <path d="M288 366C360 408 406 420 480 372C548 420 596 408 674 366" fill="none" stroke="#2f80ed" strokeWidth="5" strokeLinecap="round" opacity="0.45" />
+        <g>
+          <rect x="376" y="254" width="208" height="70" rx="20" fill="#0f2d46" opacity="0.92" />
+          <text x="480" y="284" textAnchor="middle" fill="#dffaff" fontSize="19" fontWeight="800">Trusted Data</text>
+          <text x="480" y="310" textAnchor="middle" fill="#a9d7dd" fontSize="15">Model / Proof / Query</text>
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function SolutionConceptIcon({ id }: { id: keyof typeof solutionVisuals }) {
+  const visual = solutionVisuals[id];
+
+  return (
+    <div className={`solution-concept-icon solution-concept-icon-${visual.accent}`} aria-hidden="true">
+      <svg viewBox="0 0 320 320">
+        <defs>
+          <linearGradient id={`iconBase-${id}`} x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#e7f7f4" />
+          </linearGradient>
+          <linearGradient id={`iconAccent-${id}`} x1="0%" x2="100%">
+            <stop offset="0%" stopColor="#2a9d8f" />
+            <stop offset="100%" stopColor="#2f80ed" />
+          </linearGradient>
+        </defs>
+        <path d="M68 188L160 138L252 188L160 238Z" fill={`url(#iconBase-${id})`} stroke="#bce4df" strokeWidth="2" />
+        <path d="M68 188L160 238V270L68 220Z" fill="#d3edf2" />
+        <path d="M252 188L160 238V270L252 220Z" fill="#bfdee8" />
+        <path d="M112 144L160 118L208 144L160 170Z" fill={`url(#iconAccent-${id})`} opacity="0.96" />
+        <path d="M112 144V184L160 212V170Z" fill="#258f86" opacity="0.86" />
+        <path d="M208 144V184L160 212V170Z" fill="#236fb7" opacity="0.82" />
+        {visual.nodes.map((node, index) => {
+          const coords = [
+            [76, 84],
+            [244, 84],
+            [76, 254],
+            [244, 254],
+          ][index];
+          return (
+            <g key={node}>
+              <circle cx={coords[0]} cy={coords[1]} r="24" fill="#ffffff" stroke="#aadbd8" strokeWidth="2" />
+              <circle cx={coords[0]} cy={coords[1]} r="9" fill="#2a9d8f" opacity="0.2" />
+              <path d={`M${coords[0]} ${coords[1]}C130 124 190 124 160 170`} fill="none" stroke="#73c7c3" strokeWidth="3" strokeLinecap="round" opacity="0.62" />
+            </g>
+          );
+        })}
+        <text x="160" y="50" textAnchor="middle" fill="#17364d" fontSize="19" fontWeight="900">{visual.label}</text>
+      </svg>
+    </div>
+  );
+}
+
+function ProcessIcon({ index }: { index: number }) {
+  const labels = ["Source", "Model", "PoC", "Run"];
+
+  return (
+    <div className="solution-process-icon" aria-hidden="true">
+      <svg viewBox="0 0 180 180">
+        <path d="M34 106L90 74L146 106L90 138Z" fill="#ffffff" stroke="#b8e4df" strokeWidth="2" />
+        <path d="M34 106L90 138V154L34 122Z" fill="#d6eef1" />
+        <path d="M146 106L90 138V154L146 122Z" fill="#c3e2e9" />
+        <circle cx="90" cy="78" r="30" fill="#2a9d8f" opacity="0.16" />
+        <circle cx="90" cy="78" r="18" fill="#2a9d8f" />
+        <path d="M62 42C78 24 110 24 126 42" fill="none" stroke="#2f80ed" strokeWidth="6" strokeLinecap="round" opacity="0.52" />
+        <text x="90" y="84" textAnchor="middle" fill="#ffffff" fontSize="20" fontWeight="900">{index + 1}</text>
+        <text x="90" y="128" textAnchor="middle" fill="#17364d" fontSize="17" fontWeight="900">{labels[index]}</text>
+      </svg>
+    </div>
+  );
+}
+
 function startModeHref(label: string) {
   if (label.includes("Email")) {
     return emailNdaHref;
@@ -34,15 +172,20 @@ function startModeHref(label: string) {
 export default function SolutionsPage() {
   return (
     <main id="main-content" className="solutions-page">
-      <SubpageHero
-        eyebrow={solutionsHero.eyebrow}
-        title={solutionsHero.title}
-        description={solutionsHero.description}
-        actions={[
-          { href: "#solution-fit", label: "判斷適合哪個方案" },
-          { href: "/work", label: "查看案例實績", variant: "secondary" },
-        ]}
-      />
+      <section className="solutions-hero">
+        <div className="shell solutions-hero-grid">
+          <div className="solutions-hero-copy">
+            <span className="hero-eyebrow">{solutionsHero.eyebrow}</span>
+            <h1>{solutionsHero.title}</h1>
+            <p>{solutionsHero.description}</p>
+            <div className="hero-actions">
+              <Link href="#solution-fit" className="button-primary button-large">判斷適合哪個方案</Link>
+              <Link href="/work" className="button-secondary button-large">查看案例實績</Link>
+            </div>
+          </div>
+          <SolutionHeroVisual />
+        </div>
+      </section>
 
       <section className="section-block solutions-hero-points">
         <div className="shell">
@@ -79,9 +222,10 @@ export default function SolutionsPage() {
         title="每個方案都先講問題、適合對象與第一階段交付成果。"
         description="技術會保留在卡片底部，但優先讓決策者看懂：這個方案解決什麼、誰適合、合作後會拿到什麼。"
       >
-        <div className="solution-detail-stack">
+        <div className="solution-detail-grid-cards">
           {solutionDetails.map((item) => (
             <article key={item.id} id={item.id} className="card solution-detail-card">
+              <SolutionConceptIcon id={item.id as keyof typeof solutionVisuals} />
               <div className="solution-detail-main">
                 <span className="mini-label accent">{item.eyebrow}</span>
                 <h3>{item.title}</h3>
@@ -95,27 +239,21 @@ export default function SolutionsPage() {
               </div>
 
               <div className="solution-detail-grid">
-                <div>
+                <div className="solution-mini-field">
                   <strong>適合誰</strong>
-                  <ul className="bullet-list compact">
-                    {item.audience.map((audience) => <li key={audience}>{audience}</li>)}
-                  </ul>
+                  <p>{item.audience.slice(0, 2).join("、")}</p>
                 </div>
-                <div>
+                <div className="solution-mini-field">
                   <strong>常見卡點</strong>
-                  <ul className="bullet-list compact">
-                    {item.problems.map((problem) => <li key={problem}>{problem}</li>)}
-                  </ul>
+                  <p>{item.problems.slice(0, 2).join("、")}</p>
                 </div>
-                <div>
+                <div className="solution-mini-field">
                   <strong>道易怎麼做</strong>
                   <p>{item.approach}</p>
                 </div>
-                <div className="solution-deliverable-box">
+                <div className="solution-deliverable-box solution-mini-field">
                   <strong>第一階段會交付</strong>
-                  <ul className="bullet-list compact">
-                    {item.deliverables.map((deliverable) => <li key={deliverable}>{deliverable}</li>)}
-                  </ul>
+                  <p>{item.deliverables.slice(0, 3).join("、")}</p>
                 </div>
               </div>
 
@@ -137,9 +275,10 @@ export default function SolutionsPage() {
       </Section>
 
       <Section id="solution-flow" eyebrow="落地流程" title="先用小範圍驗證，再把可信資料平台擴出去。">
-        <div className="card-grid four-up">
+        <div className="solution-process-timeline">
           {solutionImplementationSteps.map((step, index) => (
-            <article key={step.title} className="card process-card">
+            <article key={step.title} className="card process-card solution-process-step">
+              <ProcessIcon index={index} />
               <span className="mini-label accent">{String(index + 1).padStart(2, "0")}</span>
               <h3>{step.title}</h3>
               <p>{step.detail}</p>
