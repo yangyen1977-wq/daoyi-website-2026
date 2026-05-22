@@ -568,15 +568,6 @@ a:hover {
   line-height: 1.25;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .hero-banner,
-  .hero-banner-core,
-  .hero-banner-node,
-  .hero-banner-proof-card {
-    transition: transform 220ms ease, box-shadow 220ms ease;
-  }
-}
-
 @media (max-width: 1100px) {
   .hero-banner {
     min-height: 560px;
@@ -5868,7 +5859,6 @@ body {
 /* CSS interaction polish: subtle depth, 3D parallax, and proof-card flip cues. */
 .card,
 .feature-surface,
-.hero-banner,
 .hero-platform-mockup,
 .fit-finder-result,
 .interactive-flow-detail,
@@ -5888,7 +5878,6 @@ body {
 .interactive-flow-step,
 .case-filter-button,
 .case-study-proof-status,
-.hero-banner,
 .hero-platform-mockup,
 .case-study-image img {
   will-change: transform;
@@ -5926,7 +5915,6 @@ body {
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .card,
   .feature-surface,
-  .hero-banner,
   .hero-platform-mockup,
   .fit-finder-result,
   .interactive-flow-detail,
@@ -5959,20 +5947,6 @@ body {
   .hero-rebuild-panel:hover .hero-platform-mockup {
     transform: rotateX(2.2deg) rotateY(-3.2deg) translateY(-4px);
     box-shadow: 0 34px 90px rgba(16, 48, 72, 0.16);
-  }
-
-  .hero-rebuild-panel:hover .hero-banner {
-    transform: rotateX(1.8deg) rotateY(-2.8deg) translateY(-4px);
-    box-shadow: 0 34px 90px rgba(16, 48, 72, 0.17);
-  }
-
-  .hero-rebuild-panel:hover .hero-banner-core {
-    transform: translate(-50%, -50%) translateZ(28px);
-  }
-
-  .hero-rebuild-panel:hover .hero-banner-node,
-  .hero-rebuild-panel:hover .hero-banner-proof-card {
-    transform: translateZ(16px);
   }
 
   .hero-rebuild-panel:hover .mockup-card,
@@ -6022,7 +5996,6 @@ body {
 @media (max-width: 760px), (prefers-reduced-motion: reduce) {
   .card,
   .feature-surface,
-  .hero-banner,
   .hero-platform-mockup,
   .fit-finder-result,
   .interactive-flow-detail,
