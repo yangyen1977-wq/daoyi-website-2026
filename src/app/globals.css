@@ -7095,3 +7095,56 @@ body {
     display: none;
   }
 }
+
+/* Contrast hardening pass */
+:root {
+  --primary: #1f766d;
+  --primary-strong: #1e5c9f;
+  --text-muted: #4f6374;
+  --text-body: #2f4356;
+}
+
+.brand-mark small,
+.footer-eyebrow,
+.mini-label,
+.section-eyebrow,
+.hero-eyebrow,
+.step-index,
+.accent,
+.case-study-image figcaption,
+.mockup-status-badge,
+.mockup-pass-pill {
+  color: #1f5e58;
+  font-weight: 800;
+}
+
+.header-cta,
+.button-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #ffffff;
+}
+
+.site-header-reassurance-pill,
+.hero-tags span,
+.quick-brief-assist-pill,
+.contact-proof-pill,
+.evidence-matrix-card .hero-tags span {
+  color: #24495a;
+  font-weight: 800;
+}
+
+.case-study-proof-status {
+  color: #315363;
+}
+
+.work-decision-page .work-case-field > strong {
+  color: #1f5e58;
+}
+
+.technology-flow-step span,
+.technology-module-body h3,
+.technology-hero-node span,
+.work-method-step span,
+.work-comparison-item dt {
+  color: #1e5c9f;
+}
