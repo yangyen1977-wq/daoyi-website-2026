@@ -82,20 +82,35 @@ function SolutionConceptIcon({ id }: { id: keyof typeof solutionVisuals }) {
 }
 
 function ProcessIcon({ index }: { index: number }) {
-  const labels = ["Source", "Model", "PoC", "Run"];
+  const icons = [
+    {
+      src: "/assets/solution-process-data-discovery.webp",
+      alt: "盤點資料來源等角立體圖示",
+    },
+    {
+      src: "/assets/solution-process-data-modeling.webp",
+      alt: "建立資料模型與證據模型等角立體圖示",
+    },
+    {
+      src: "/assets/solution-process-prototyping.webp",
+      alt: "PoC Prototype 等角立體圖示",
+    },
+    {
+      src: "/assets/solution-process-system-integration.webp",
+      alt: "串接使用介面與查核流程等角立體圖示",
+    },
+  ];
+  const icon = icons[index];
 
   return (
-    <div className="solution-process-icon" aria-hidden="true">
-      <svg viewBox="0 0 180 180">
-        <path d="M34 106L90 74L146 106L90 138Z" fill="#ffffff" stroke="#b8e4df" strokeWidth="2" />
-        <path d="M34 106L90 138V154L34 122Z" fill="#d6eef1" />
-        <path d="M146 106L90 138V154L146 122Z" fill="#c3e2e9" />
-        <circle cx="90" cy="78" r="30" fill="#2a9d8f" opacity="0.16" />
-        <circle cx="90" cy="78" r="18" fill="#2a9d8f" />
-        <path d="M62 42C78 24 110 24 126 42" fill="none" stroke="#2f80ed" strokeWidth="6" strokeLinecap="round" opacity="0.52" />
-        <text x="90" y="84" textAnchor="middle" fill="#ffffff" fontSize="20" fontWeight="900">{index + 1}</text>
-        <text x="90" y="128" textAnchor="middle" fill="#17364d" fontSize="17" fontWeight="900">{labels[index]}</text>
-      </svg>
+    <div className="solution-process-icon">
+      <Image
+        src={publicAssetPath(icon.src)}
+        alt={icon.alt}
+        width={640}
+        height={640}
+        sizes="(max-width: 760px) 104px, 118px"
+      />
     </div>
   );
 }
