@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import {
@@ -10,7 +12,7 @@ import {
   technologyTrustFlow,
 } from "@/lib/content/technology";
 import { createPageMetadata } from "@/lib/metadata";
-import { siteConfig } from "@/lib/site";
+import { publicAssetPath, siteConfig } from "@/lib/site";
 
 const technologyPageTitle = "技術核心｜資料信任鏈、DPP、ESG 稽核與 AI-Ontology 技術架構｜道易科技";
 
@@ -25,6 +27,22 @@ export const metadata: Metadata = {
 };
 
 const technologyMailHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想與道易討論技術導入 / 資料信任鏈")}&body=${encodeURIComponent("您好，我想與道易討論資料信任鏈或可信資料平台技術導入。\n\n目前資料來源：\n目前流程或系統：\n希望支撐的用途：DPP / ESG 稽核 / 回收履歷 / AI-Ontology / 其他\n是否需要 NDA：\n\n謝謝。")}`;
+
+const moduleVisuals = [
+  { src: "/assets/technology-icon-ontology.svg", alt: "Ontology 語義建模圖示", label: "Ontology" },
+  { src: "/assets/technology-icon-merkle.svg", alt: "Hash Merkle Tree 驗證圖示", label: "Merkle" },
+  { src: "/assets/technology-icon-tsa.svg", alt: "TSA 時戳與證據保存圖示", label: "TSA" },
+  { src: "/assets/technology-icon-api.svg", alt: "API 與系統整合圖示", label: "API" },
+  { src: "/assets/technology-icon-ai.svg", alt: "AI 與 AIoT 校驗圖示", label: "AI" },
+  { src: "/assets/technology-icon-audit.svg", alt: "Audit Trail 與角色權限圖示", label: "Audit Trail" },
+] as const;
+
+const solutionVisuals = [
+  { src: "/assets/solutions-icon-data-trust-chain.webp", alt: "數據信任鏈與 ESG 稽核情境圖" },
+  { src: "/assets/solutions-icon-dpp.webp", alt: "DPP 數位產品護照 QR 查詢情境圖" },
+  { src: "/assets/solutions-icon-ai-ontology.webp", alt: "AI-Ontology 知識平台情境圖" },
+  { src: "/assets/solutions-icon-aiot-traceability.webp", alt: "AIoT 回收履歷整合情境圖" },
+] as const;
 
 export default function TechnologyPage() {
   return (
@@ -45,14 +63,26 @@ export default function TechnologyPage() {
             </div>
           </div>
 
-          <aside className="technology-hero-diagram" aria-label="資料信任鏈示意圖">
-            {technologyHeroFlow.map((node, index) => (
-              <div key={node.title} className="technology-hero-node">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{node.title}</strong>
-                <p>{node.detail}</p>
-              </div>
-            ))}
+          <aside className="technology-hero-visual-card" aria-label="資料信任鏈 3D 視覺與流程示意">
+            <div className="technology-hero-art">
+              <Image
+                src={publicAssetPath("/assets/technology-hero-data-trust-chain.svg")}
+                alt="資料來源匯聚成可信證據鏈的 3D 抽象視覺"
+                width={1080}
+                height={720}
+                priority
+                sizes="(max-width: 1100px) 100vw, 48vw"
+              />
+            </div>
+            <div className="technology-hero-diagram" aria-label="資料信任鏈示意圖">
+              {technologyHeroFlow.map((node, index) => (
+                <div key={node.title} className="technology-hero-node">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{node.title}</strong>
+                  <p>{node.detail}</p>
+                </div>
+              ))}
+            </div>
           </aside>
         </div>
       </section>
@@ -62,6 +92,18 @@ export default function TechnologyPage() {
         eyebrow="Trust Flow"
         title="從資料進入到查詢稽核，保留必要證據節點"
       >
+        <div className="technology-pipeline" aria-label="資料信任流程管線">
+          {technologyTrustFlow.map((step, index) => (
+            <div
+              key={step.title}
+              className="technology-pipeline-step"
+              style={{ "--step-index": index } as CSSProperties}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{step.title}</strong>
+            </div>
+          ))}
+        </div>
         <div className="technology-flow">
           {technologyTrustFlow.map((step, index) => (
             <article key={step.title} className="technology-flow-step">
@@ -80,28 +122,39 @@ export default function TechnologyPage() {
       >
         <div className="technology-module-grid">
           {technologyModules.map((item, index) => (
-            <details key={item.title} className="technology-module-card" open={index === 0}>
-              <summary>
-                <span className="mini-label accent">Module {String(index + 1).padStart(2, "0")}</span>
-                <strong>{item.title}</strong>
-              </summary>
+            <article key={item.title} className="technology-module-card">
+              <div className="technology-module-head">
+                <div className="technology-module-icon">
+                  <Image
+                    src={publicAssetPath(moduleVisuals[index].src)}
+                    alt={moduleVisuals[index].alt}
+                    width={320}
+                    height={320}
+                    sizes="92px"
+                  />
+                </div>
+                <div>
+                  <span className="mini-label accent">Module {String(index + 1).padStart(2, "0")} · {moduleVisuals[index].label}</span>
+                  <h3>{item.title}</h3>
+                </div>
+              </div>
               <div className="technology-module-body">
                 <div>
-                  <h3>回答的問題</h3>
+                  <h4>回答的問題</h4>
                   <p>{item.question}</p>
                 </div>
                 <div>
-                  <h3>道易如何使用</h3>
+                  <h4>道易如何使用</h4>
                   <p>{item.usage}</p>
                 </div>
                 <div>
-                  <h3>可交付內容</h3>
+                  <h4>可交付內容</h4>
                   <ul className="bullet-list compact">
                     {item.deliverables.map((deliverable) => <li key={deliverable}>{deliverable}</li>)}
                   </ul>
                 </div>
               </div>
-            </details>
+            </article>
           ))}
         </div>
       </Section>
@@ -111,8 +164,18 @@ export default function TechnologyPage() {
         title="同一套可信資料底座，支撐四種解決方案"
       >
         <div className="card-grid four-up">
-          {technologySolutionMap.map((item) => (
+          {technologySolutionMap.map((item, index) => (
             <article key={item.title} className="card technology-solution-card">
+              <div className="technology-solution-visual">
+                <Image
+                  src={publicAssetPath(solutionVisuals[index].src)}
+                  alt={solutionVisuals[index].alt}
+                  width={768}
+                  height={768}
+                  loading="lazy"
+                  sizes="(max-width: 760px) 70vw, 220px"
+                />
+              </div>
               <h3>{item.title}</h3>
               <strong>適合情境</strong>
               <p>{item.fit}</p>

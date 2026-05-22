@@ -1,0 +1,44 @@
+<svg width="1080" height="720" viewBox="0 0 1080 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="720" rx="44" fill="#071426"/>
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(714 314) rotate(124) scale(360 480)">
+      <stop stop-color="#20E0C2" stop-opacity=".72"/>
+      <stop offset=".46" stop-color="#2F80ED" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cube" x1="390" y1="168" x2="716" y2="543" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8FFFA" stop-opacity=".86"/>
+      <stop offset=".52" stop-color="#2AD9BE" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#2F80ED" stop-opacity=".18"/>
+    </linearGradient>
+    <filter id="glow" x="160" y="58" width="760" height="604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="720" rx="44" fill="url(#g1)"/>
+  <path d="M97 151h866M97 273h866M97 395h866M97 517h866M193 82v556M351 82v556M509 82v556M667 82v556M825 82v556" stroke="#FFFFFF" stroke-opacity=".055"/>
+  <g opacity=".9">
+    <path d="M154 430c92-48 161-61 242-31 72 27 107 92 189 88 104-5 161-113 287-103" stroke="#2BE7C8" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 16"/>
+    <path d="M148 284c73-38 136-50 202-22 68 29 108 103 194 91 104-15 144-142 291-137" stroke="#2F80ED" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 18"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M552 126l221 128v256L552 638 331 510V254l221-128z" fill="url(#cube)" fill-opacity=".28" stroke="#BDFCF2" stroke-opacity=".78" stroke-width="2.5"/>
+    <path d="M331 254l221 128 221-128M552 382v256" stroke="#BDFCF2" stroke-opacity=".72" stroke-width="2.5"/>
+    <path d="M552 126v256M331 510l221-128 221 128" stroke="#7CF4E3" stroke-opacity=".32" stroke-width="2"/>
+    <circle cx="552" cy="382" r="58" fill="#071426" fill-opacity=".58" stroke="#6FF8E4" stroke-width="2"/>
+    <path d="M520 384h64M552 352v64" stroke="#6FF8E4" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g fill="#DFFFF9" font-family="Arial, sans-serif" font-weight="700" font-size="22" opacity=".86">
+    <text x="158" y="207">DATA SOURCES</text>
+    <text x="762" y="317">PROOF LAYER</text>
+    <text x="143" y="560">AUDIT QUERY</text>
+  </g>
+  <g>
+    <circle cx="182" cy="302" r="10" fill="#2BE7C8"/>
+    <circle cx="278" cy="262" r="7" fill="#2F80ED"/>
+    <circle cx="842" cy="384" r="10" fill="#2BE7C8"/>
+    <circle cx="764" cy="220" r="7" fill="#FFFFFF"/>
+    <circle cx="364" cy="447" r="8" fill="#FFFFFF"/>
+  </g>
+</svg>

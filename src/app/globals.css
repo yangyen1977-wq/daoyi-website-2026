@@ -6302,6 +6302,312 @@ a:hover {
   min-width: 220px;
 }
 
+.technology-hero-visual-card {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  border: 1px solid rgba(111, 248, 228, 0.22);
+  border-radius: 20px;
+  background:
+    linear-gradient(145deg, rgba(7, 20, 38, 0.96), rgba(14, 40, 66, 0.88)),
+    #071426;
+  box-shadow: 0 28px 90px rgba(16, 48, 72, 0.22);
+  padding: 14px;
+  overflow: hidden;
+  animation: technology-visual-enter 900ms ease both;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  transform-style: preserve-3d;
+}
+
+.technology-hero-visual-card::before {
+  content: "";
+  position: absolute;
+  inset: -35% -20% auto auto;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(42, 217, 190, 0.32), rgba(47, 128, 237, 0.08) 52%, transparent 72%);
+  pointer-events: none;
+}
+
+.technology-hero-visual-card:hover {
+  transform: perspective(900px) rotateX(2deg) rotateY(-4deg) translateY(-4px);
+  box-shadow: 0 34px 110px rgba(16, 48, 72, 0.28), 0 0 42px rgba(42, 217, 190, 0.16);
+}
+
+.technology-hero-art {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.technology-hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.technology-hero-visual-card .technology-hero-diagram {
+  z-index: 1;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  border: 1px solid rgba(111, 248, 228, 0.16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  padding: 10px;
+  backdrop-filter: blur(12px);
+}
+
+.technology-hero-visual-card .technology-hero-node {
+  min-width: 0;
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+}
+
+.technology-hero-visual-card .technology-hero-node:not(:last-child)::after {
+  display: none;
+}
+
+.technology-hero-visual-card .technology-hero-node span {
+  position: static;
+  color: #6ff8e4;
+}
+
+.technology-hero-visual-card .technology-hero-node strong {
+  color: #ffffff;
+  font-size: 0.76rem;
+}
+
+.technology-hero-visual-card .technology-hero-node p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.72rem;
+}
+
+.technology-pipeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 18px;
+  border: 1px solid rgba(42, 157, 143, 0.16);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(247, 255, 253, 0.86), rgba(240, 248, 255, 0.9));
+  overflow: hidden;
+}
+
+.technology-pipeline::before,
+.technology-pipeline::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 44px;
+  height: 2px;
+  border-radius: 999px;
+}
+
+.technology-pipeline::before {
+  background: rgba(16, 48, 72, 0.12);
+}
+
+.technology-pipeline::after {
+  right: auto;
+  width: 84%;
+  background: linear-gradient(90deg, #2f80ed, #2ad9be);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: technology-line-draw 1200ms ease forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
+}
+
+.technology-pipeline-step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+  color: var(--text-body);
+  opacity: 0.64;
+  transform: translateY(8px);
+  animation: technology-step-light 520ms ease forwards;
+  animation-delay: calc(var(--step-index) * 100ms);
+}
+
+.technology-pipeline-step span {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(42, 157, 143, 0.2);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1e5c9f;
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(16, 48, 72, 0.1);
+}
+
+.technology-pipeline-step strong {
+  color: var(--text-dark);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.technology-flow {
+  grid-template-columns: repeat(7, minmax(9rem, 1fr));
+}
+
+.technology-module-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.technology-module-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid rgba(111, 248, 228, 0.2);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(241, 250, 249, 0.72));
+  box-shadow: 0 18px 52px rgba(16, 48, 72, 0.08);
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.technology-module-card::before {
+  content: "";
+  position: absolute;
+  inset: -42px -48px auto auto;
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(47, 128, 237, 0.16), transparent 70%);
+  pointer-events: none;
+}
+
+.technology-module-card:hover {
+  transform: scale(1.03);
+  border-color: rgba(42, 217, 190, 0.42);
+  box-shadow: 0 24px 70px rgba(16, 48, 72, 0.13), 0 0 34px rgba(42, 217, 190, 0.12);
+}
+
+.technology-module-head {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.technology-module-icon {
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: inset 0 0 0 1px rgba(16, 48, 72, 0.06);
+  padding: 8px;
+}
+
+.technology-module-icon img {
+  display: block;
+  width: 66px;
+  height: 66px;
+}
+
+.technology-module-head h3 {
+  margin-top: 6px;
+  color: var(--text-dark);
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+.technology-module-body {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(16, 48, 72, 0.08);
+  padding: 16px 0 0;
+}
+
+.technology-module-body h4 {
+  color: #1f5e58;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.technology-solution-visual {
+  display: grid;
+  place-items: center;
+  min-height: 168px;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(42, 217, 190, 0.18), transparent 58%),
+    linear-gradient(145deg, rgba(248, 251, 255, 0.96), rgba(238, 249, 247, 0.86));
+  overflow: hidden;
+  animation: technology-slide-up 700ms ease both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 36%;
+}
+
+.technology-solution-visual img {
+  width: min(190px, 76%);
+  height: auto;
+  transition: transform 220ms ease;
+}
+
+.technology-solution-card:hover .technology-solution-visual img {
+  transform: translateY(-6px);
+}
+
+@keyframes technology-visual-enter {
+  from {
+    opacity: 0;
+    transform: translateX(34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes technology-line-draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes technology-line-draw-y {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes technology-step-light {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes technology-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1100px) {
   .solution-detail-card,
   .solution-card-footer {
@@ -6320,6 +6626,14 @@ a:hover {
   .technology-pain-card,
   .technology-final-cta {
     grid-template-columns: 1fr;
+  }
+
+  .technology-hero-visual-card .technology-hero-diagram {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .technology-module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .technology-deliverable-grid {
@@ -6425,6 +6739,48 @@ a:hover {
   .technology-module-grid,
   .technology-deliverable-grid {
     grid-template-columns: 1fr;
+  }
+
+  .technology-hero-visual-card {
+    border-radius: 16px;
+    padding: 10px;
+  }
+
+  .technology-hero-visual-card .technology-hero-diagram,
+  .technology-pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-pipeline {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .technology-pipeline::before,
+  .technology-pipeline::after {
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    transform-origin: top;
+  }
+
+  .technology-pipeline::after {
+    height: calc(100% - 80px);
+    transform: scaleY(0);
+    animation-name: technology-line-draw-y;
+  }
+
+  .technology-pipeline-step {
+    grid-template-columns: 52px minmax(0, 1fr);
+    justify-items: start;
+    text-align: left;
+  }
+
+  .technology-module-head {
+    grid-template-columns: 72px minmax(0, 1fr);
   }
 
   .technology-final-actions {
