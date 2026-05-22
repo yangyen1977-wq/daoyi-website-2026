@@ -4,13 +4,10 @@ import Link from "next/link";
 import { Section } from "@/components/section";
 import {
   solutionDetails,
-  solutionCaseEvidence,
-  solutionFaqs,
   solutionImplementationSteps,
   solutionScenarios,
   solutionStartModes,
   solutionsHero,
-  solutionTechValues,
 } from "@/lib/content/solutions";
 import { createPageMetadata } from "@/lib/metadata";
 import { publicAssetPath, siteConfig } from "@/lib/site";
@@ -163,8 +160,8 @@ export default function SolutionsPage() {
       <Section
         id="solution-fit"
         eyebrow="30 秒選型"
-        title="先看你是哪一種需求，再決定該看哪個方案。"
-        description="這一區不是從技術名詞出發，而是用你手上的資料、流程與對外揭露情境，快速對應到可能的第一步。"
+        title="先用資料情境判斷，不必先理解所有技術名詞。"
+        description="如果你還不確定該做 DPP、ESG 稽核、知識平台或回收履歷，先從最接近的資料問題開始。"
       >
         <div className="card-grid four-up">
           {solutionScenarios.map((item) => (
@@ -180,8 +177,8 @@ export default function SolutionsPage() {
 
       <Section
         eyebrow="四大解決方案"
-        title="道易把資料建模、可信驗證、AI 輔助與平台整合，轉換成企業決策者看得懂的導入選項。"
-        description="你可以依照產品揭露、ESG 稽核、知識平台或現場履歷需求，快速判斷哪一個方案最適合先做 PoC、盤點或完整平台。"
+        title="四個方案對應四種資料問題：產品揭露、稽核證據、知識整理、現場履歷。"
+        description="每張卡片只保留判斷需要的資訊：適合誰、卡在哪裡、道易怎麼做、第一階段交付什麼。"
       >
         <div className="solution-detail-grid-cards">
           {solutionDetails.map((item, index) => (
@@ -256,7 +253,7 @@ export default function SolutionsPage() {
         id="solution-flow"
         eyebrow="落地流程"
         title="從一批資料開始，把可信資料平台做成可驗證的導入路徑。"
-        description="道易不會一開始就要求完整規格書，而是先把資料、角色、查核需求與第一階段成果對齊，降低專案風險。"
+        description="先跑通最小資料流程，再決定是否擴大成完整平台。"
       >
         <div className="solution-process-board">
           <div className="solution-process-brief">
@@ -276,10 +273,6 @@ export default function SolutionsPage() {
               <p>{step.detail}</p>
               <div className="solution-process-meta">
                 <div>
-                  <strong>需要先看</strong>
-                  <span>{step.input}</span>
-                </div>
-                <div>
                   <strong>階段輸出</strong>
                   <span>{step.output}</span>
                 </div>
@@ -293,7 +286,7 @@ export default function SolutionsPage() {
         id="solution-start"
         eyebrow="Recommended start"
         title="不確定完整範圍？先從 PoC、資料盤點或工作坊開始。"
-        description="不用一開始就定義完整系統。先把第一批資料、第一條流程或第一個知識主題跑通，會更容易判斷後續投資。"
+        description="把第一批資料跑通，比一次規劃完整系統更容易降低風險。"
       >
         <div className="card-grid four-up">
           {solutionStartModes.map((item) => (
@@ -315,66 +308,12 @@ export default function SolutionsPage() {
         </div>
       </Section>
 
-      <Section
-        id="solution-evidence"
-        eyebrow="案例證據"
-        title="用已公開案例，看四大方案如何落到實際資料場景。"
-        description="這裡只串接目前可公開說明的案例，不新增不存在的客戶、認證或成果承諾。"
-      >
-        <div className="solution-evidence-grid">
-          {solutionCaseEvidence.map((item) => (
-            <article key={item.title} className="card solution-evidence-card">
-              <span className="mini-label accent">{item.solution}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="section-actions">
-          <Link href="/work" className="button-secondary button-large">查看完整案例</Link>
-        </div>
-      </Section>
-
-      <Section
-        id="solution-tech-value"
-        eyebrow="技術翻譯"
-        title="保留專業技術，但用商務價值說明它解決什麼問題。"
-      >
-        <div className="solution-tech-grid">
-          {solutionTechValues.map((item) => (
-            <article key={item.term} className="card solution-tech-card">
-              <strong>{item.term}</strong>
-              <p>{item.value}</p>
-            </article>
-          ))}
-        </div>
-        <div className="section-actions">
-          <Link href="/technology" className="button-secondary button-large">看技術核心</Link>
-          <Link href="/contact" className="button-primary button-large">聯絡道易</Link>
-        </div>
-      </Section>
-
-      <Section
-        id="solution-faq"
-        eyebrow="FAQ"
-        title="常見問題先說清楚，降低第一次接洽的判斷成本。"
-      >
-        <div className="solution-faq-list">
-          {solutionFaqs.map((item) => (
-            <article key={item.question} className="card solution-faq-card">
-              <h3>{item.question}</h3>
-              <p>{item.answer}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
       <section id="solution-contact" className="section-block">
         <div className="shell">
           <div className="solution-final-cta">
             <span className="section-eyebrow">Next step</span>
-            <h2>如果你有一批資料、產品履歷或知識內容需要整理，可以先用最短路徑開始。</h2>
-            <p>填寫 Quick Brief，或在涉及商業機密、供應鏈、採購、研發資料時先走 Email / NDA。道易會先協助判斷適合的起手方式與第一次會議需要準備的資料。</p>
+            <h2>有一批資料、產品履歷或知識內容要整理？先確認第一步。</h2>
+            <p>填寫 Quick Brief，或在涉及商業機密時先走 Email / NDA。道易會先判斷適合的起手方式與第一次會議要準備的資料。</p>
             <div className="section-actions">
               <Link href="/contact#quick-brief" className="button-primary button-large">填寫 Quick Brief</Link>
               <a href={emailNdaHref} className="button-secondary button-large">Email / NDA 聯絡</a>
