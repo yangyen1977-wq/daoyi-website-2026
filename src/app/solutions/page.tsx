@@ -192,10 +192,18 @@ export default function SolutionsPage() {
               data-index={String(index + 1).padStart(2, "0")}
               data-mark={solutionCardMarks[item.id as keyof typeof solutionCardMarks]}
             >
-              <span className="solution-card-watermark" aria-hidden="true">
-                {String(index + 1).padStart(2, "0")} {solutionCardMarks[item.id as keyof typeof solutionCardMarks]}
-              </span>
-              <SolutionConceptIcon id={item.id as keyof typeof solutionVisuals} />
+              <div className="solution-card-visual" aria-hidden="true">
+                <div className="solution-card-visual-meta">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{solutionCardMarks[item.id as keyof typeof solutionCardMarks]}</strong>
+                </div>
+                <div className="solution-card-visual-lines">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <SolutionConceptIcon id={item.id as keyof typeof solutionVisuals} />
+              </div>
               <div className="solution-detail-main">
                 <span className="mini-label accent">{item.eyebrow}</span>
                 <h3>{item.title}</h3>
