@@ -26,25 +26,25 @@ const emailNdaHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("�
 const solutionVisuals = {
   "data-trust-chain": {
     label: "Audit proof",
-    asset: "/assets/solutions-icon-data-trust-chain.svg",
+    asset: "/assets/solutions-icon-data-trust-chain.webp",
     alt: "Data Trust Chain 數據信任鏈 3D 概念圖示",
     accent: "mint",
   },
   "dpp-product-passport": {
     label: "Product passport",
-    asset: "/assets/solutions-icon-dpp.svg",
+    asset: "/assets/solutions-icon-dpp.webp",
     alt: "Digital Product Passport 數位產品護照 3D 概念圖示",
     accent: "blue",
   },
   "ai-ontology-platform": {
     label: "Knowledge graph",
-    asset: "/assets/solutions-icon-ai-ontology.svg",
+    asset: "/assets/solutions-icon-ai-ontology.webp",
     alt: "AI-Ontology 知識平台 3D 概念圖示",
     accent: "teal",
   },
   "aiot-traceability": {
     label: "AIoT traceability",
-    asset: "/assets/solutions-icon-aiot-traceability.svg",
+    asset: "/assets/solutions-icon-aiot-traceability.webp",
     alt: "AIoT Traceability 回收履歷整合 3D 概念圖示",
     accent: "green",
   },
@@ -73,8 +73,8 @@ function SolutionConceptIcon({ id }: { id: keyof typeof solutionVisuals }) {
       <Image
         src={publicAssetPath(visual.asset)}
         alt={visual.alt}
-        width={512}
-        height={512}
+        width={768}
+        height={768}
         sizes="(max-width: 760px) 184px, 220px"
       />
     </div>
