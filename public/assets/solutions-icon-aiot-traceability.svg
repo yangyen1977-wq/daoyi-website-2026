@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">AIoT Traceability 3D icon</title>
+  <desc id="desc">A recycling conveyor with smart camera, YOLO detection mesh, IoT sensors and cloud dashboard.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#eef8fb"/>
+    </linearGradient>
+    <linearGradient id="belt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f80ed"/>
+      <stop offset="1" stop-color="#0f2d46"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#103048" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="56" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <path d="M92 330l270-154 76 44-270 154z" fill="url(#belt)"/>
+    <path d="M92 330l76 44v46l-76-44z" fill="#c8e5ee"/>
+    <path d="M438 220v46L168 420v-46z" fill="#9bcbdc"/>
+    <path d="M132 326l222-126" stroke="#fff" stroke-width="7" opacity=".38"/>
+  </g>
+  <g fill="#fff" stroke="#a8deda" stroke-width="3">
+    <path d="M190 196h94v72h-94z"/>
+    <path d="M208 176h58l18 20h-94z"/>
+  </g>
+  <circle cx="237" cy="232" r="18" fill="#2a9d8f"/>
+  <path d="M237 232l88 76" stroke="#2a9d8f" stroke-width="5" stroke-linecap="round"/>
+  <g fill="none" stroke="#40f2bc" stroke-width="4" opacity=".76">
+    <rect x="310" y="292" width="76" height="52" rx="8"/>
+    <path d="M310 306h76M324 292v52M372 292v52"/>
+  </g>
+  <g fill="#ff9f1c">
+    <path d="M328 312l30-17 30 17-30 17z"/>
+    <path d="M328 312v28l30 17v-28z" opacity=".8"/>
+    <path d="M388 312v28l-30 17v-28z" opacity=".62"/>
+  </g>
+  <g fill="#fff" stroke="#b6e4df" stroke-width="3">
+    <rect x="296" y="98" width="128" height="76" rx="24"/>
+    <circle cx="104" cy="212" r="26"/>
+    <circle cx="408" cy="374" r="26"/>
+  </g>
+  <g fill="none" stroke="#2a9d8f" stroke-width="5" stroke-linecap="round">
+    <path d="M296 136c-54 0-86 20-98 54M360 174c-2 58 10 100 48 174M130 212c52-10 104-4 156 18"/>
+  </g>
+  <g fill="#17364d" font-family="Arial, sans-serif" font-weight="900">
+    <text x="322" y="132" font-size="18">YOLO</text>
+    <text x="322" y="156" font-size="14">Cloud DB</text>
+  </g>
+  <g fill="#2a9d8f">
+    <circle cx="104" cy="212" r="8"/>
+    <circle cx="408" cy="374" r="8"/>
+  </g>
+</svg>

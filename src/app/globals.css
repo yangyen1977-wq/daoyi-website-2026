@@ -8046,12 +8046,14 @@ body {
   align-self: flex-end;
   margin: -8px -4px -8px 0;
   filter: drop-shadow(0 22px 28px rgba(16, 48, 72, 0.12));
+  transition: transform 0.28s ease, filter 0.28s ease;
 }
 
-.solution-concept-icon svg {
+.solution-concept-icon img {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .solution-concept-icon-blue {
@@ -8062,6 +8064,13 @@ body {
 .solution-concept-icon-mint,
 .solution-concept-icon-teal {
   filter: drop-shadow(0 22px 30px rgba(42, 157, 143, 0.16));
+}
+
+.solutions-page .solution-detail-card:hover .solution-concept-icon {
+  transform: translateY(-6px);
+  filter:
+    drop-shadow(0 10px 30px rgba(0, 100, 255, 0.1))
+    drop-shadow(0 22px 30px rgba(16, 48, 72, 0.13));
 }
 
 .solutions-page .solution-detail-grid {
@@ -8145,6 +8154,18 @@ body {
     animation: solutionsScrollFade both ease-out;
     animation-timeline: view();
     animation-range: entry 0% cover 28%;
+  }
+
+  .solution-detail-card:nth-child(2) {
+    animation-delay: 100ms;
+  }
+
+  .solution-detail-card:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  .solution-detail-card:nth-child(4) {
+    animation-delay: 300ms;
   }
 
   .solution-process-icon {

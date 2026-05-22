@@ -26,22 +26,26 @@ const emailNdaHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("�
 const solutionVisuals = {
   "data-trust-chain": {
     label: "Audit proof",
-    nodes: ["Source", "Hash", "Root", "Audit"],
+    asset: "/assets/solutions-icon-data-trust-chain.svg",
+    alt: "Data Trust Chain 數據信任鏈 3D 概念圖示",
     accent: "mint",
   },
   "dpp-product-passport": {
     label: "Product passport",
-    nodes: ["Product", "QR", "Lifecycle", "Disclosure"],
+    asset: "/assets/solutions-icon-dpp.svg",
+    alt: "Digital Product Passport 數位產品護照 3D 概念圖示",
     accent: "blue",
   },
   "ai-ontology-platform": {
     label: "Knowledge graph",
-    nodes: ["Text", "Entity", "Relation", "Search"],
+    asset: "/assets/solutions-icon-ai-ontology.svg",
+    alt: "AI-Ontology 知識平台 3D 概念圖示",
     accent: "teal",
   },
   "aiot-traceability": {
     label: "AIoT traceability",
-    nodes: ["Device", "Vision", "Batch", "Record"],
+    asset: "/assets/solutions-icon-aiot-traceability.svg",
+    alt: "AIoT Traceability 回收履歷整合 3D 概念圖示",
     accent: "green",
   },
 } as const;
@@ -65,41 +69,14 @@ function SolutionConceptIcon({ id }: { id: keyof typeof solutionVisuals }) {
   const visual = solutionVisuals[id];
 
   return (
-    <div className={`solution-concept-icon solution-concept-icon-${visual.accent}`} aria-hidden="true">
-      <svg viewBox="0 0 320 320">
-        <defs>
-          <linearGradient id={`iconBase-${id}`} x1="0%" x2="100%" y1="0%" y2="100%">
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="100%" stopColor="#e7f7f4" />
-          </linearGradient>
-          <linearGradient id={`iconAccent-${id}`} x1="0%" x2="100%">
-            <stop offset="0%" stopColor="#2a9d8f" />
-            <stop offset="100%" stopColor="#2f80ed" />
-          </linearGradient>
-        </defs>
-        <path d="M68 188L160 138L252 188L160 238Z" fill={`url(#iconBase-${id})`} stroke="#bce4df" strokeWidth="2" />
-        <path d="M68 188L160 238V270L68 220Z" fill="#d3edf2" />
-        <path d="M252 188L160 238V270L252 220Z" fill="#bfdee8" />
-        <path d="M112 144L160 118L208 144L160 170Z" fill={`url(#iconAccent-${id})`} opacity="0.96" />
-        <path d="M112 144V184L160 212V170Z" fill="#258f86" opacity="0.86" />
-        <path d="M208 144V184L160 212V170Z" fill="#236fb7" opacity="0.82" />
-        {visual.nodes.map((node, index) => {
-          const coords = [
-            [76, 84],
-            [244, 84],
-            [76, 254],
-            [244, 254],
-          ][index];
-          return (
-            <g key={node}>
-              <circle cx={coords[0]} cy={coords[1]} r="24" fill="#ffffff" stroke="#aadbd8" strokeWidth="2" />
-              <circle cx={coords[0]} cy={coords[1]} r="9" fill="#2a9d8f" opacity="0.2" />
-              <path d={`M${coords[0]} ${coords[1]}C130 124 190 124 160 170`} fill="none" stroke="#73c7c3" strokeWidth="3" strokeLinecap="round" opacity="0.62" />
-            </g>
-          );
-        })}
-        <text x="160" y="50" textAnchor="middle" fill="#17364d" fontSize="19" fontWeight="900">{visual.label}</text>
-      </svg>
+    <div className={`solution-concept-icon solution-concept-icon-${visual.accent}`}>
+      <Image
+        src={publicAssetPath(visual.asset)}
+        alt={visual.alt}
+        width={512}
+        height={512}
+        sizes="(max-width: 760px) 184px, 220px"
+      />
     </div>
   );
 }
