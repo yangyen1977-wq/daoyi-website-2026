@@ -6,48 +6,75 @@ import { siteConfig } from "@/lib/site";
 
 const projectFocusOptions = [
   {
-    value: "數據信任鏈 / ESG 稽核",
-    label: "數據信任鏈 / ESG 稽核",
-    detail: "適合需要讓回收、碳、供應鏈或流程資料可被第三方查核的團隊。",
-  },
-  {
     value: "DPP 數位產品護照",
     label: "DPP 數位產品護照",
-    detail: "適合想先做產品履歷、QR 查詢、材料欄位與供應鏈透明化的專案。",
+    detail: "產品資料、材料、製程、QR 查詢、供應鏈揭露。",
+  },
+  {
+    value: "ESG / 資料信任鏈稽核",
+    label: "ESG / 資料信任鏈稽核",
+    detail: "回收、碳、供應鏈、第三方查核、資料來源追溯。",
   },
   {
     value: "AI-Ontology 知識平台",
     label: "AI-Ontology 知識平台",
-    detail: "整理人物、文本、事件、地點、資料庫與語意搜尋的整體平台規劃。",
+    detail: "人物、文本、事件、地點、研究資料、語意搜尋。",
   },
   {
     value: "AIoT / 回收履歷整合",
     label: "AIoT / 回收履歷整合",
-    detail: "適合要串接現場設備、影像辨識、感測資料與回收流程的情境。",
+    detail: "設備、影像辨識、感測資料、現場流程與回收批次。",
   },
   {
     value: "資料平台 / 系統整合",
     label: "資料平台 / 系統整合",
-    detail: "已有資料庫或系統，需要重新規劃 API、權限、Dashboard 或資料流程。",
+    detail: "已有資料庫、網站、後台、ERP、MES 或 API 需要整合。",
   },
   {
-    value: "先做資料盤點",
-    label: "先做資料盤點",
-    detail: "還不確定要從 DPP、ESG、AI 還是知識平台開始，先盤點資料與風險。",
+    value: "還不確定，想先盤點",
+    label: "還不確定，想先盤點",
+    detail: "目前只知道資料很多、流程複雜，需要先釐清方向。",
   },
+] as const;
+
+const sourceOptions = [
+  "Excel / Google Sheet",
+  "PDF / Word / 文件檔",
+  "既有網站或 CMS",
+  "內部資料庫",
+  "ERP / MES / CRM",
+  "API / 外部系統",
+  "設備 / 感測器 / 影像",
+  "還沒整理，只有人工流程",
+];
+
+const confidentialityOptions = [
+  "不涉及，可以先用表單簡述",
+  "可能涉及，希望先 Email 確認",
+  "涉及商業機密，建議先 NDA",
 ] as const;
 
 type FormState = {
   name: string;
   company: string;
+  email: string;
+  phone: string;
   focus: (typeof projectFocusOptions)[number]["value"];
+  sources: string[];
+  problem: string;
+  confidentiality: (typeof confidentialityOptions)[number];
 };
 
 export function QuickBriefForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
     company: "",
+    email: "",
+    phone: "",
     focus: projectFocusOptions[0].value,
+    sources: [],
+    problem: "",
+    confidentiality: confidentialityOptions[0],
   });
 
   const selectedFocus = useMemo(
@@ -55,99 +82,74 @@ export function QuickBriefForm() {
     [form.focus]
   );
 
-  const recommendedStart = useMemo(() => {
-    if (form.focus.includes("信任鏈") || form.focus.includes("ESG")) {
-      return "建議先盤點資料來源、稽核節點、Hash 範圍與第三方驗證流程。";
-    }
-
-    if (form.focus.includes("AI") || form.focus.includes("流程")) {
-      return "建議先釐清現場資料來源、影像辨識節點、設備串接與可驗收資料欄位。";
-    }
-
-    if (form.focus.includes("知識平台")) {
-      return "建議先整理 Ontology 草案、檢索場景、角色權限與內容治理優先順序。";
-    }
-
-    if (form.focus.includes("DPP")) {
-      return "建議先盤點 traceability 欄位藍圖、法規脈絡、QR 查詢與產品履歷體驗。";
-    }
-
-    return "建議先做資料盤點，確認來源、權限、對外揭露範圍與第一個 PoC 流程。";
-  }, [form.focus]);
-
-  const isDisabled = useMemo(() => !form.name || !form.company, [form.name, form.company]);
+  const isDisabled = useMemo(() => !form.name || !form.company || !form.email, [form.name, form.company, form.email]);
 
   function handleChange<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
   }
 
+  function toggleSource(source: string) {
+    setForm((prev) => ({
+      ...prev,
+      sources: prev.sources.includes(source)
+        ? prev.sources.filter((item) => item !== source)
+        : [...prev.sources, source],
+    }));
+  }
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const subject = encodeURIComponent(`道易科技可信資料專案討論 - ${form.company}`);
+    const subject = encodeURIComponent(`Quick Brief｜${form.company}｜${form.focus}`);
     const body = encodeURIComponent(
-      `姓名：${form.name}\n公司 / 單位：${form.company}\n主要關注：${form.focus}\n\n目前資料來源或流程：\n希望解決的問題：DPP / ESG 稽核 / 回收履歷 / 知識平台 / 系統整合\n是否需要 NDA：\n希望時程：\n補充網址或文件：\n\n請協助安排 30 分鐘會議，了解道易科技的建議。`
+      `您好，我想與道易討論可信資料平台專案。\n\n姓名：${form.name}\n公司 / 單位：${form.company}\nEmail：${form.email}\n聯絡電話：${form.phone || "未提供"}\n\n這次最接近的需求：${form.focus}\n目前資料主要在哪裡：${form.sources.length ? form.sources.join("、") : "尚未選擇"}\n想先解決的問題：\n${form.problem || "尚未填寫"}\n\n是否涉及敏感或未公開資料：${form.confidentiality}\n\n請協助回覆建議切入點、第一次會議需準備的資料，以及是否適合先做 PoC 或 Email / NDA。\n`
     );
 
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
   }
 
   return (
-    <form id="quick-brief-form" className="quick-brief-form feature-surface" onSubmit={handleSubmit}>
-      <span className="mini-label accent">Low-friction intake / 3 欄先開始</span>
-      <h3>先用 3 欄確認資料信任專案的起點</h3>
-      <p>這裡只問姓名、公司與本次焦點。重點不是第一次就填滿所有規格，而是先讓道易判斷更適合從資料盤點、DPP PoC、AI-Ontology 工作坊或 NDA 路徑開始。</p>
-      <div className="quick-brief-priority-note">
-        <strong>送出後 24h 內，你會先拿到什麼？</strong>
-        <p>不是只有收到回信，而是先拿到建議切入點、第一次會議需準備的資料、PoC 是否可行，以及目前是否適合先走 NDA。</p>
+    <form id="quick-brief-form" className="quick-brief-form contact-brief-form" onSubmit={handleSubmit}>
+      <div className="contact-brief-intro">
+        <span className="mini-label accent">Quick Brief</span>
+        <h3>用 5 個問題，讓道易判斷你的資料專案第一步。</h3>
+        <p>這不是正式規格書，只是快速確認資料現況。請避免在表單中填寫機密細節；如果內容涉及供應鏈、研發、採購或未公開產品，請改用 Email / NDA 路徑。</p>
       </div>
 
-      <div className="quick-brief-start-recommendation" aria-live="polite">
-        <span className="mini-label accent">Recommended start</span>
-        <strong>{selectedFocus.label}</strong>
-        <p>{recommendedStart}</p>
+      <div className="quick-brief-assist-list" aria-label="填寫說明">
+        {quickBriefAssistPoints.map((item) => (
+          <p key={item} className="quick-brief-assist-pill">{item}</p>
+        ))}
       </div>
 
-      <label className="form-field">
-        <span>姓名</span>
-        <input
-          type="text"
-          value={form.name}
-          onChange={(event) => handleChange("name", event.target.value)}
-          placeholder="王小明"
-          autoComplete="name"
-          required
-        />
-      </label>
-
-      <label className="form-field">
-        <span>公司 / 單位</span>
-        <input
-          type="text"
-          value={form.company}
-          onChange={(event) => handleChange("company", event.target.value)}
-          placeholder="例如：回收業者 / 製造品牌 / 研究單位 / 文化機構"
-          autoComplete="organization"
-          required
-        />
-      </label>
+      <div className="contact-form-grid">
+        <label className="form-field">
+          <span>姓名</span>
+          <input type="text" value={form.name} onChange={(event) => handleChange("name", event.target.value)} placeholder="請輸入姓名" autoComplete="name" required />
+        </label>
+        <label className="form-field">
+          <span>公司 / 單位</span>
+          <input type="text" value={form.company} onChange={(event) => handleChange("company", event.target.value)} placeholder="請輸入公司或單位名稱" autoComplete="organization" required />
+        </label>
+        <label className="form-field">
+          <span>Email</span>
+          <input type="email" value={form.email} onChange={(event) => handleChange("email", event.target.value)} placeholder="請輸入可聯絡信箱" autoComplete="email" required />
+        </label>
+        <label className="form-field">
+          <span>聯絡電話，選填</span>
+          <input type="tel" value={form.phone} onChange={(event) => handleChange("phone", event.target.value)} placeholder="方便安排會議時使用" autoComplete="tel" />
+        </label>
+      </div>
 
       <fieldset className="form-field quick-brief-focus-fieldset">
-        <legend>這次最需要什麼？</legend>
-        <p className="quick-brief-field-hint">直接點選最接近的起點即可，手機上比傳統下拉更快，也更不容易選錯。</p>
+        <legend>這次最接近哪一種需求？</legend>
         <div className="quick-brief-focus-grid" role="radiogroup" aria-label="專案焦點">
           {projectFocusOptions.map((option) => {
             const checked = form.focus === option.value;
 
             return (
               <label key={option.value} className={`quick-brief-focus-card ${checked ? "is-selected" : ""}`}>
-                <input
-                  type="radio"
-                  name="focus"
-                  value={option.value}
-                  checked={checked}
-                  onChange={() => handleChange("focus", option.value)}
-                />
+                <input type="radio" name="focus" value={option.value} checked={checked} onChange={() => handleChange("focus", option.value)} />
                 <span className="quick-brief-focus-title">{option.label}</span>
                 <small>{option.detail}</small>
               </label>
@@ -156,29 +158,52 @@ export function QuickBriefForm() {
         </div>
       </fieldset>
 
+      <div className="quick-brief-start-recommendation" aria-live="polite">
+        <span className="mini-label accent">目前選擇</span>
+        <strong>{selectedFocus.label}</strong>
+        <p>{selectedFocus.detail}</p>
+      </div>
+
+      <fieldset className="form-field contact-checkbox-fieldset">
+        <legend>目前資料主要在哪裡？</legend>
+        <div className="contact-checkbox-grid">
+          {sourceOptions.map((source) => (
+            <label key={source} className="contact-checkbox-card">
+              <input type="checkbox" checked={form.sources.includes(source)} onChange={() => toggleSource(source)} />
+              <span>{source}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      <label className="form-field">
+        <span>你最想先解決什麼？</span>
+        <textarea
+          value={form.problem}
+          onChange={(event) => handleChange("problem", event.target.value)}
+          placeholder="例如：產品資料想做 QR 查詢、回收流程需要被稽核、人物資料需要做成知識平台、既有資料庫難以維護、資料要對外揭露但不知道哪些能公開。"
+          rows={5}
+        />
+      </label>
+
+      <fieldset className="form-field contact-radio-fieldset">
+        <legend>是否涉及敏感或未公開資料？</legend>
+        <div className="contact-radio-grid">
+          {confidentialityOptions.map((option) => (
+            <label key={option} className={`contact-radio-card ${form.confidentiality === option ? "is-selected" : ""}`}>
+              <input type="radio" name="confidentiality" value={option} checked={form.confidentiality === option} onChange={() => handleChange("confidentiality", option)} />
+              <span>{option}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
       <div className="quick-brief-action-group">
-        <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟已填好的道易科技專案詢問郵件">
-          開啟已填好詢問信
+        <button type="submit" className="button-primary button-large" disabled={isDisabled} aria-label="開啟預填 Email">
+          開啟預填 Email
         </button>
-        <a className="button-secondary inline-button" href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易科技討論資料信任專案 / NDA")}&body=${encodeURIComponent("目前資料或流程：\n希望先聊的範圍：\n是否需要 NDA：\n補充說明：")}`}>
-          先寄資料 / NDA
-        </a>
+        <small>系統會開啟你的 Email 軟體，並自動帶入表單內容。你可以再補充資料或附檔後寄出。</small>
       </div>
-      <div className="quick-brief-assist-list" aria-label="聯絡輔助說明">
-        {quickBriefAssistPoints.map((item) => (
-          <p key={item} className="quick-brief-assist-pill">{item}</p>
-        ))}
-      </div>
-      <div className="quick-brief-reassurance">
-        <strong>送出後會發生什麼？</strong>
-        <ul className="bullet-list compact">
-          <li>會先開啟已填好的 Email，方便補流程、資料來源或 NDA 需求。</li>
-          <li>24 小時內會回覆建議切入點、會議時段與需要補充的資料。</li>
-          <li>如果涉及採購、商業機密或研發細節，也可以直接改走 Email + NDA。</li>
-        </ul>
-      </div>
-      <small className="quick-brief-hint">表單刻意維持低摩擦：先確認資料場景與專案方向，再於第一次會議補齊技術、合規與系統邊界。</small>
-      <small className="quick-brief-hint">提交後會開啟郵件，預先填好主旨與內容；若不想先填表，也可直接用 Email 開始。</small>
     </form>
   );
 }

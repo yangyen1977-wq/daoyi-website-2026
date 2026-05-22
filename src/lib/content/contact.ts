@@ -1,75 +1,149 @@
 export const contactHero = {
-  eyebrow: "Start a Trust Data Project",
-  title: "先用一條流程、一批資料或一個知識場景，驗證可信資料平台怎麼落地。",
+  eyebrow: "Contact DaoYi Technology",
+  title: "帶著一批資料、一條流程或一個產品案例，先確認可信資料平台的第一步。",
   description:
-    "高複雜度資料專案不必一次談完整系統。可以先從資料盤點、PoC、工作坊或 NDA 路徑開始，確認資料來源、風險、稽核需求、對外揭露範圍與技術邊界。",
+    "不需要一開始就定完整系統。道易會先協助你釐清資料來源、使用者角色、對外揭露範圍、稽核需求與技術邊界，再判斷適合從資料盤點、DPP PoC、ESG 稽核流程、AI-Ontology 工作坊或 Email/NDA 路徑開始。",
+  note: "24 小時內回覆初步建議。若涉及未公開產品、供應鏈、採購或研發資料，建議先走 Email / NDA。",
 };
 
-export const contactFastFacts = [
-  { label: "初步回覆", value: "24h 內", detail: "回覆建議切入點，並確認是否需要先簽 NDA 或改用 Email 溝通。" },
-  { label: "第一次會議", value: "30-45 分鐘", detail: "聚焦資料來源、使用者角色、對外揭露範圍、既有系統與第一階段目標。" },
-  { label: "PoC 起手", value: "2-4 週", detail: "可先驗證一個產品、一條流程、一批資料或一個知識主題。" },
-  { label: "啟動方式", value: "盤點 / PoC / NDA", detail: "從資料盤點、PoC、工作坊或 Email / NDA 路徑開始。" },
+export const contactHeroOutcomes = [
+  { title: "建議切入點", detail: "判斷適合先做資料盤點、PoC、工作坊，還是 NDA 溝通。" },
+  { title: "第一次會議準備清單", detail: "告訴你需要補哪些資料來源、流程、角色或既有系統資訊。" },
+  { title: "PoC 可行性初判", detail: "評估是否能先用一個產品、一條流程、一批資料或一個知識主題驗證。" },
+  { title: "保密溝通建議", detail: "若涉及商業機密、供應鏈、研發或採購資料，先確認哪些內容不適合在表單揭露。" },
 ];
 
-export const contactModes = [
-  {
-    title: "資料信任鏈盤點",
-    detail: "適合已有流程與資料，但還不確定如何建立證據鏈、稽核節點與對外揭露方式。",
-    fit: "輸出：資料來源清單、信任風險、初版資料流程圖與技術路徑。",
-  },
-  {
-    title: "DPP / ESG PoC",
-    detail: "適合想先用一個產品、一條回收流程或一批資料驗證 DPP 與稽核可行性。",
-    fit: "輸出：欄位藍圖、QR 查詢原型、Hash / Merkle 驗證流程。",
-  },
-  {
-    title: "AI-Ontology 工作坊",
-    detail: "適合政府、學研、文化或知識密集團隊，先釐清資料模型、語意關係與平台架構。",
-    fit: "輸出：Ontology 草案、查詢場景、平台模組優先序與 AI 導入節點。",
-  },
-  {
-    title: "Email / NDA 路徑",
-    detail: "適合需求涉及商業機密、採購、研發資料、供應鏈資訊、未公開產品或內部流程的團隊。",
-    fit: "輸出：初步會議範圍、資料提供邊界、保密溝通路徑與下一步安排。",
-  },
-];
+export const contactHeroStats = ["24h 初步回覆", "30-45 min 第一次會議", "1 批資料即可開始"];
 
-export const contactChecklist = [
-  "目前有哪些資料來源、表單、檔案或既有系統需要串接。",
-  "哪些資料需要對外揭露，哪些只供內部、合作夥伴或第三方查核。",
-  "這次目標更偏 DPP、ESG 稽核、回收履歷、知識平台，還是資料系統整合。",
+export const contactRoutes = [
+  {
+    title: "我想先快速確認方向",
+    label: "Quick Brief",
+    fit: "你手上已有產品資料、ESG 資料、回收流程、研究資料、舊系統或 Excel，但還不確定該先做 DPP、資料信任鏈、AI-Ontology 還是系統整合。",
+    outcome: "24 小時內回覆建議切入點、第一次會議需準備的資料，以及是否適合先做 PoC。",
+    cta: "填寫 Quick Brief",
+    href: "#quick-brief",
+  },
+  {
+    title: "需求涉及保密資料",
+    label: "Email / NDA",
+    fit: "未公開產品、供應鏈資訊、採購資料、研發流程、客戶資料、內部系統架構，暫時不適合直接填在表單中。",
+    outcome: "先確認討論範圍、保密邊界與可提供資料清單，再安排後續會議。",
+    cta: "先用 Email / NDA 聯絡",
+    href: "#email-nda",
+  },
+  {
+    title: "我已經有一批資料想驗證",
+    label: "資料盤點 / PoC",
+    fit: "你想先用一個產品、一條回收流程、一批 ESG 資料、一組人物文本資料或一個既有資料庫，驗證是否能做成查詢頁、Dashboard、API 或可信資料流程。",
+    outcome: "資料來源盤點、欄位藍圖、PoC 範圍建議，以及第一階段交付物初步判斷。",
+    cta: "描述我的資料情境",
+    href: "#quick-brief",
+  },
 ];
 
 export const quickBriefAssistPoints = [
-  "24 小時內回覆建議切入點與第一次會議需準備的資料。",
-  "若涉及商業機密、採購或研發細節，可先走 Email / NDA。",
-  "初期可先用 PoC 驗證一條流程，不必一次重建整套系統。",
+  "表單只用來快速確認資料現況，不是正式規格書。",
+  "請避免填寫機密細節；涉及供應鏈、研發、採購或未公開產品時，請改用 Email / NDA。",
+  "系統會開啟你的 Email 軟體，並自動帶入表單內容。",
 ];
 
-export const contactScenarios = [
+export const contactMeetingSteps = [
   {
-    title: "我還不知道要做 DPP 還是 ESG 稽核平台",
-    detail: "可以先從資料信任鏈盤點開始，釐清資料來源、對外揭露需求、查核節點與使用角色。",
+    step: "01",
+    title: "確認目標",
+    detail: "你希望資料被誰使用？是給客戶、合作夥伴、第三方稽核者、研究者、內部管理者，還是一般大眾？",
   },
   {
-    title: "我們只有一批資料，還沒有完整系統",
-    detail: "這很適合先做 PoC，用一個產品、一條流程或一批資料驗證欄位、查詢頁與資料維護方式。",
+    step: "02",
+    title: "盤點資料來源",
+    detail: "資料目前在哪裡？是 Excel、文件、資料庫、設備、影像、API、既有網站，還是人工流程？",
   },
   {
-    title: "我們已有網站或資料庫，但資料關係很複雜",
-    detail: "可以先做 AI-Ontology 工作坊，整理資料類型、關係、查詢場景與平台模組。",
+    step: "03",
+    title: "找出信任缺口",
+    detail: "哪些資料需要被驗證？哪些需要留下版本、時間、來源、操作紀錄或第三方查核證據？",
   },
   {
-    title: "我們不確定哪些資料可以公開",
-    detail: "可以先走 Email / NDA 路徑。第一次只需要描述高階情境、目標與限制。",
+    step: "04",
+    title: "建議第一階段",
+    detail: "判斷適合先做資料盤點、DPP / ESG PoC、AI-Ontology 工作坊、系統整合規劃，或 Email / NDA 溝通。",
+  },
+];
+
+export const contactPrepCards = [
+  {
+    title: "資料來源",
+    detail: "目前有哪些資料、表單、檔案、系統、設備或人工紀錄？資料是否已經有固定欄位、更新者與保存位置？",
+  },
+  {
+    title: "使用者與揭露範圍",
+    detail: "誰需要看這些資料？哪些內容可以公開？哪些只能給內部、合作夥伴、稽核者或特定角色查看？",
+  },
+  {
+    title: "目前最卡的地方",
+    detail: "是資料太散、難以查詢、無法證明來源、缺少後台、維護困難，還是需要對外揭露但不確定怎麼做？",
+  },
+];
+
+export const contactSituationCards = [
+  {
+    title: "我想讓產品資料可以被掃描、查詢與對外揭露",
+    start: "DPP 數位產品護照 PoC",
+    detail: "產品身分、材料資料、製程資訊、回收指引、QR 查詢頁、後台維護流程。",
+    cta: "討論 DPP PoC",
+    href: "/contact?topic=dpp-poc#quick-brief",
+  },
+  {
+    title: "我需要讓 ESG、回收或供應鏈資料可以被第三方查核",
+    start: "資料信任鏈盤點",
+    detail: "資料來源、稽核節點、Hash / Merkle 驗證流程、Dashboard、API 查核流程。",
+    cta: "盤點資料信任鏈",
+    href: "/contact?topic=data-trust-chain#quick-brief",
+  },
+  {
+    title: "我有大量人物、文本、事件、地點或研究資料",
+    start: "AI-Ontology 工作坊",
+    detail: "核心實體、資料關係、查詢場景、語意搜尋、知識圖譜或資料平台架構。",
+    cta: "規劃 AI-Ontology",
+    href: "/contact?topic=ai-ontology#quick-brief",
+  },
+  {
+    title: "我已有網站、資料庫或後台，但資料很難維護或整合",
+    start: "資料平台 / 系統整合盤點",
+    detail: "資料模型、角色權限、API、後台維護流程、Dashboard 與查詢頁。",
+    cta: "討論系統整合",
+    href: "/contact?topic=system-integration#quick-brief",
   },
 ];
 
 export const contactEmailTemplate = {
-  title: "比較適合先用 Email 說明？",
+  title: "如果資料涉及商業機密，請先用 Email 說明高階情境。",
   description:
-    "如果需求涉及未公開產品、供應鏈資料、內部流程、研發資訊或客戶資料，可以先寄 Email 給道易。我們可以先確認討論範圍與保密方式，再安排會議。",
+    "若需求包含未公開產品、供應鏈資訊、採購資料、研發流程、客戶資料或內部系統架構，請不要直接在表單填寫細節。你可以先用 Email 說明專案目標、資料類型與希望解決的問題，道易會先協助確認討論範圍與保密方式。",
   subject: "想與道易討論可信資料平台 / DPP / ESG / AI-Ontology 專案",
-  body: "您好，我想與道易討論一個資料平台或可信資料專案。\n\n目前初步情境：\n\n- 專案類型：\n- 目前資料來源：\n- 希望解決的問題：\n- 是否需要 NDA：\n- 希望討論時間：\n\n謝謝。",
+  body: "您好，我想與道易討論資料平台專案。\n\n公司 / 單位：\n專案方向：\n目前資料類型：\n希望解決的問題：\n是否涉及保密資料：\n希望安排會議時間：\n\n補充說明：\n",
 };
+
+export const contactCaseEntrypoints = [
+  {
+    title: "Easy DPP 數位產品護照",
+    fit: "製造、品牌、材料、循環經濟團隊。",
+    compare: "產品資料、材料、製程、QR 查詢頁、供應鏈透明。",
+  },
+  {
+    title: "太陽能板回收 YOLO 辨識與履歷",
+    fit: "回收處理、再生資源、ESG 團隊。",
+    compare: "影像、設備、批次、材料、流程、Dashboard、資料信任鏈。",
+  },
+  {
+    title: "AI-Ontology / 數位人文平台",
+    fit: "政府、學研、文化機構、研究團隊。",
+    compare: "人物、作品、文本、事件、地點、語意搜尋、知識圖譜。",
+  },
+  {
+    title: "資料平台 / 系統整合",
+    fit: "已有資料庫、舊系統、Excel 或內部流程，但缺少清楚後台與查詢介面的組織。",
+    compare: "資料模型、搜尋、權限、API、後台維護流程。",
+  },
+];
