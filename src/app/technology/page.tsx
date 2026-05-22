@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import {
-  dataToEvidencePrinciples,
-  technologyDeliverables,
-  technologyFaqs,
   technologyHero,
   technologyHeroFlow,
   technologyModules,
@@ -61,35 +58,9 @@ export default function TechnologyPage() {
       </section>
 
       <Section
-        eyebrow="Pain to Proof"
-        title="資料要被信任，不能只靠資料庫保存"
-        description="當資料要支撐 DPP、ESG 揭露、供應鏈透明、回收履歷、研究查詢或第三方稽核時，資料本身必須能被理解、被驗證、被追溯，也要能在合適權限下被查詢。"
-      >
-        <div className="technology-pain-grid">
-          {dataToEvidencePrinciples.map((item) => (
-            <article key={item.title} className="card technology-pain-card">
-              <h3>{item.title}</h3>
-              <div>
-                <strong>問題</strong>
-                <p>{item.problem}</p>
-              </div>
-              <div>
-                <strong>道易如何處理</strong>
-                <p>{item.method}</p>
-              </div>
-              <div>
-                <strong>價值</strong>
-                <p>{item.value}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         id="trust-flow"
         eyebrow="Trust Flow"
-        title="從資料產生到第三方稽核，每一步都留下可驗證證據"
+        title="從資料進入到查詢稽核，保留必要證據節點"
       >
         <div className="technology-flow">
           {technologyTrustFlow.map((step, index) => (
@@ -104,8 +75,8 @@ export default function TechnologyPage() {
 
       <Section
         eyebrow="Core Modules"
-        title="每一個技術選擇，都要回答一個稽核問題"
-        description="這一頁不把技術當成展示名詞，而是把每個模組對應到實際查核問題。當資料要被第三方、合作方或內部治理流程採信時，技術必須能說明它解決了哪一段信任缺口。"
+        title="每個技術模組，都對應一段資料信任缺口"
+        description="不把技術當展示名詞，而是說清楚它回答哪個查核問題、如何使用、會交付什麼。"
       >
         <div className="technology-module-grid">
           {technologyModules.map((item, index) => (
@@ -137,7 +108,7 @@ export default function TechnologyPage() {
 
       <Section
         eyebrow="Technology to Solutions"
-        title="同一套可信資料底座，支撐不同產業場景"
+        title="同一套可信資料底座，支撐四種解決方案"
       >
         <div className="card-grid four-up">
           {technologySolutionMap.map((item) => (
@@ -154,24 +125,9 @@ export default function TechnologyPage() {
       </Section>
 
       <Section
-        eyebrow="Deliverables"
-        title="不是只導入技術，而是交付可落地的資料信任架構"
-        description="道易會依照資料現況與導入階段，將技術轉換成可討論、可開發、可驗證的交付物。"
-      >
-        <div className="technology-deliverable-grid">
-          {technologyDeliverables.map((item) => (
-            <article key={item.title} className="card technology-deliverable-card">
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         eyebrow="Recommended Start"
         title="先找出資料信任鏈最需要補強的一段"
-        description="不需要一開始就規劃完整平台。先用一批資料、一條流程、一個產品或一個知識主題，找出最值得補強的信任節點。"
+        description="不需要一開始就規劃完整平台。先用一批資料、一條流程、一個產品或一個知識主題，確認第一階段。"
       >
         <div className="card-grid three-up">
           {technologyStartModes.map((item) => (
@@ -188,25 +144,13 @@ export default function TechnologyPage() {
         </div>
       </Section>
 
-      <Section eyebrow="FAQ" title="常見技術問題">
-        <div className="technology-faq-list">
-          {technologyFaqs.map((item, index) => (
-            <details key={item.question} className="technology-faq-item" open={index === 0}>
-              <summary>{item.question}</summary>
-              <p>{item.answer}</p>
-            </details>
-          ))}
-        </div>
-      </Section>
-
       <section className="section-block">
         <div className="shell">
           <div className="technology-final-cta">
             <div>
               <span className="section-eyebrow">Next step</span>
               <h2>帶著一批資料、一條流程或一個產品來討論</h2>
-              <p>道易會先協助判斷：哪些資料需要被驗證、哪些節點需要保留證據、是否適合從 DPP、ESG PoC、資料信任鏈健檢或 AI-Ontology Workshop 開始。</p>
-              <small>通常會先回覆建議切入點、推薦的第一階段範圍、需要補充的資料，以及第一次會議如何更有效率。</small>
+              <p>道易會先協助判斷哪些資料需要被驗證、哪些節點需要保留證據，以及是否適合從 PoC、健檢或工作坊開始。</p>
             </div>
             <div className="technology-final-actions">
               <Link href="/contact?topic=technology" className="button-primary button-large">討論技術導入</Link>
