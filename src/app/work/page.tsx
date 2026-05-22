@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CaseLibraryFilter } from "@/components/case-library-filter";
 import { Section } from "@/components/section";
 import { SubpageHero } from "@/components/subpage-hero";
-import { caseCategories, caseProofNeeds, caseStudies, workHero } from "@/lib/content/cases";
-import { siteConfig } from "@/lib/site";
+import { caseCategories, caseStudies, workHero } from "@/lib/content/cases";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -42,23 +40,6 @@ export default function WorkPage() {
 
       <Section eyebrow="Featured cases" title="六個代表案例類型，對應道易的核心技術與服務場景。">
         <CaseLibraryFilter cases={caseStudies} />
-      </Section>
-
-      <Section eyebrow="Proof roadmap" title="可逐步補強的公開證據素材，讓買方更容易查核成果。">
-        <div className="card-grid three-up">
-          {caseProofNeeds.map((item) => (
-            <article key={item.title} className="card offer-room-card">
-              <h3>{item.title}</h3>
-              <ul className="bullet-list compact">
-                {item.items.map((proof) => <li key={proof}>{proof}</li>)}
-              </ul>
-            </article>
-          ))}
-        </div>
-        <div className="section-actions">
-          <Link href="/contact" className="button-primary button-large">討論類似案例</Link>
-          <a href={`mailto:${siteConfig.email}`} className="button-secondary button-large">寄信給道易</a>
-        </div>
       </Section>
     </main>
   );
