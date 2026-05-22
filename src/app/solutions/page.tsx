@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import {
@@ -12,7 +13,7 @@ import {
   solutionTechValues,
 } from "@/lib/content/solutions";
 import { createPageMetadata } from "@/lib/metadata";
-import { siteConfig } from "@/lib/site";
+import { publicAssetPath, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "解決方案選型｜DPP、ESG 稽核、AI-Ontology 與 AIoT 回收履歷",
@@ -48,53 +49,14 @@ const solutionVisuals = {
 function SolutionHeroVisual() {
   return (
     <div className="solutions-hero-art" aria-label="可信資料平台 3D 示意圖">
-      <svg viewBox="0 0 960 540" role="img" aria-hidden="true">
-        <defs>
-          <linearGradient id="solutionsHeroPanel" x1="0%" x2="100%" y1="0%" y2="100%">
-            <stop offset="0%" stopColor="#f7fffd" />
-            <stop offset="52%" stopColor="#e9f7ff" />
-            <stop offset="100%" stopColor="#dff8f1" />
-          </linearGradient>
-          <linearGradient id="solutionsHeroCore" x1="0%" x2="100%">
-            <stop offset="0%" stopColor="#2a9d8f" />
-            <stop offset="100%" stopColor="#2f80ed" />
-          </linearGradient>
-          <filter id="solutionsHeroShadow" x="-20%" y="-20%" width="140%" height="150%">
-            <feDropShadow dx="0" dy="20" stdDeviation="22" floodColor="#103048" floodOpacity="0.16" />
-          </filter>
-        </defs>
-        <rect width="960" height="540" rx="42" fill="url(#solutionsHeroPanel)" />
-        <g opacity="0.55">
-          <path d="M90 120H870M90 210H870M90 300H870M90 390H870" stroke="#9ec8d4" strokeWidth="1" />
-          <path d="M180 70V470M330 70V470M480 70V470M630 70V470M780 70V470" stroke="#9ec8d4" strokeWidth="1" />
-        </g>
-        <g filter="url(#solutionsHeroShadow)">
-          <path d="M205 335L480 190L755 335L480 480Z" fill="#ffffff" />
-          <path d="M205 335L480 480V428L205 286Z" fill="#d8eef4" />
-          <path d="M755 335L480 480V428L755 286Z" fill="#c5e5ef" />
-          <path d="M205 286L480 140L755 286L480 428Z" fill="#ffffff" />
-          <path d="M312 286L480 198L648 286L480 372Z" fill="url(#solutionsHeroCore)" opacity="0.96" />
-        </g>
-        {[
-          [246, 210, "DPP"],
-          [716, 210, "ESG"],
-          [246, 382, "AI"],
-          [716, 382, "Audit"],
-        ].map(([x, y, label]) => (
-          <g key={label} className="solutions-hero-node">
-            <circle cx={x} cy={y} r="42" fill="#ffffff" stroke="#b9e5df" strokeWidth="2" />
-            <circle cx={x} cy={y} r="18" fill="#2a9d8f" opacity="0.16" />
-            <text x={x} y={Number(y) + 6} textAnchor="middle" fill="#17364d" fontSize="22" fontWeight="800">{label}</text>
-          </g>
-        ))}
-        <path d="M288 226C360 184 406 174 480 198C548 176 596 184 674 226" fill="none" stroke="#2a9d8f" strokeWidth="5" strokeLinecap="round" opacity="0.52" />
-        <path d="M288 366C360 408 406 420 480 372C548 420 596 408 674 366" fill="none" stroke="#2f80ed" strokeWidth="5" strokeLinecap="round" opacity="0.45" />
-        <g>
-          <rect x="376" y="254" width="208" height="70" rx="20" fill="#0f2d46" opacity="0.92" />
-          <text x="480" y="284" textAnchor="middle" fill="#dffaff" fontSize="19" fontWeight="800">Trusted Data</text>
-          <text x="480" y="310" textAnchor="middle" fill="#a9d7dd" fontSize="15">Model / Proof / Query</text>
-        </g>
-      </svg>
+      <Image
+        src={publicAssetPath("/assets/solutions-hero-data-crystal.png")}
+        alt="分散資料透過安全管道匯聚成透明可信資料晶體"
+        width={1024}
+        height={572}
+        priority
+        sizes="(max-width: 1100px) 100vw, 52vw"
+      />
     </div>
   );
 }
