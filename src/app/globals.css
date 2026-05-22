@@ -8019,6 +8019,7 @@ body {
 
 .solutions-page .solution-detail-card {
   position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -8037,16 +8038,36 @@ body {
 .solutions-page .solution-detail-card::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 18px auto auto 18px;
+  width: min(46%, 260px);
+  aspect-ratio: 1;
+  border-radius: 999px;
   pointer-events: none;
   background:
-    linear-gradient(135deg, rgba(42, 157, 143, 0.14), transparent 34%),
-    linear-gradient(315deg, rgba(47, 128, 237, 0.12), transparent 38%);
-  opacity: 0.56;
+    radial-gradient(circle at 34% 32%, rgba(42, 157, 143, 0.2), transparent 56%),
+    radial-gradient(circle at 68% 66%, rgba(31, 111, 139, 0.16), transparent 58%);
+  filter: blur(8px);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.solutions-page .solution-detail-card .solution-card-watermark {
+  position: absolute;
+  top: 28px;
+  left: 24px;
+  max-width: 58%;
+  color: rgba(10, 52, 73, 0.2);
+  font-size: clamp(4.4rem, 7.4vw, 7.2rem);
+  font-weight: 800;
+  line-height: 0.86;
+  letter-spacing: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .solutions-page .solution-detail-card > * {
   position: relative;
+  z-index: 1;
 }
 
 .solutions-page .solution-detail-card:hover {
@@ -8058,19 +8079,44 @@ body {
 }
 
 .solution-concept-icon {
+  position: relative;
   width: min(100%, 220px);
   aspect-ratio: 1;
   align-self: flex-end;
   margin: -8px -4px -8px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(236, 251, 248, 0.72)),
+    radial-gradient(circle at 18% 42%, rgba(42, 157, 143, 0.18), transparent 38%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 18px 44px rgba(24, 74, 100, 0.08);
   filter: drop-shadow(0 22px 28px rgba(16, 48, 72, 0.12));
   transition: transform 0.28s ease, filter 0.28s ease;
 }
 
+.solution-concept-icon::before {
+  content: "";
+  position: absolute;
+  inset: 12px auto 12px 12px;
+  width: 42%;
+  border-radius: 8px;
+  background-image: radial-gradient(circle, rgba(31, 111, 139, 0.18) 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: 0.55;
+  mask-image: linear-gradient(90deg, #000, transparent);
+  pointer-events: none;
+}
+
 .solution-concept-icon img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 0.28s ease, filter 0.28s ease;
 }
 
 .solution-concept-icon-blue {
@@ -8088,6 +8134,11 @@ body {
   filter:
     drop-shadow(0 10px 30px rgba(0, 100, 255, 0.1))
     drop-shadow(0 22px 30px rgba(16, 48, 72, 0.13));
+}
+
+.solutions-page .solution-detail-card:hover .solution-concept-icon img {
+  transform: translateY(-6px);
+  filter: drop-shadow(0 10px 30px rgba(0, 100, 255, 0.1));
 }
 
 .solutions-page .solution-detail-grid {
@@ -8356,6 +8407,19 @@ body {
     width: min(100%, 184px);
     align-self: center;
     margin: -4px auto -8px;
+  }
+
+  .solutions-page .solution-detail-card .solution-card-watermark {
+    font-size: 3.5rem;
+  }
+
+  .solutions-page .solution-detail-card::before {
+    width: 220px;
+    opacity: 0.72;
+  }
+
+  .solution-concept-icon::before {
+    opacity: 0.35;
   }
 
   .solution-process-icon {

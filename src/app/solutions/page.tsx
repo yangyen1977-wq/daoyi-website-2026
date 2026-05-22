@@ -50,6 +50,13 @@ const solutionVisuals = {
   },
 } as const;
 
+const solutionCardMarks = {
+  "data-trust-chain": "TRUST",
+  "dpp-product-passport": "DPP",
+  "ai-ontology-platform": "ONTO",
+  "aiot-traceability": "AIoT",
+} as const;
+
 function SolutionHeroVisual() {
   return (
     <div className="solutions-hero-art" aria-label="可信資料平台 3D 示意圖">
@@ -173,12 +180,21 @@ export default function SolutionsPage() {
 
       <Section
         eyebrow="四大解決方案"
-        title="每個方案都先講問題、適合對象與第一階段交付成果。"
-        description="技術會保留在卡片底部，但優先讓決策者看懂：這個方案解決什麼、誰適合、合作後會拿到什麼。"
+        title="道易把資料建模、可信驗證、AI 輔助與平台整合，轉換成企業決策者看得懂的導入選項。"
+        description="你可以依照產品揭露、ESG 稽核、知識平台或現場履歷需求，快速判斷哪一個方案最適合先做 PoC、盤點或完整平台。"
       >
         <div className="solution-detail-grid-cards">
-          {solutionDetails.map((item) => (
-            <article key={item.id} id={item.id} className="card solution-detail-card">
+          {solutionDetails.map((item, index) => (
+            <article
+              key={item.id}
+              id={item.id}
+              className="card solution-detail-card"
+              data-index={String(index + 1).padStart(2, "0")}
+              data-mark={solutionCardMarks[item.id as keyof typeof solutionCardMarks]}
+            >
+              <span className="solution-card-watermark" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")} {solutionCardMarks[item.id as keyof typeof solutionCardMarks]}
+              </span>
               <SolutionConceptIcon id={item.id as keyof typeof solutionVisuals} />
               <div className="solution-detail-main">
                 <span className="mini-label accent">{item.eyebrow}</span>
