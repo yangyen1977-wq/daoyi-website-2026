@@ -393,10 +393,16 @@ a:hover {
 
 .hero-banner-network {
   position: relative;
-  min-height: 250px;
+  display: grid;
+  grid-template-columns: minmax(98px, 118px) minmax(132px, 1fr) minmax(98px, 118px);
+  grid-template-rows: repeat(3, minmax(76px, 1fr));
+  gap: 12px 24px;
+  align-items: center;
+  min-height: 318px;
   border: 1px solid rgba(16, 48, 72, 0.1);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.48);
+  padding: 26px 32px;
 }
 
 .hero-banner-network::before,
@@ -417,7 +423,7 @@ a:hover {
 
 .hero-banner-core,
 .hero-banner-node {
-  position: absolute;
+  position: relative;
   display: grid;
   place-items: center;
   text-align: center;
@@ -428,12 +434,13 @@ a:hover {
 }
 
 .hero-banner-core {
-  top: 50%;
-  left: 50%;
+  grid-column: 2;
+  grid-row: 1 / 4;
+  justify-self: center;
+  align-self: center;
   width: 132px;
   height: 132px;
   border-radius: 999px;
-  transform: translate(-50%, -50%);
   background: linear-gradient(135deg, rgba(42, 157, 143, 0.14), rgba(47, 128, 237, 0.14)), rgba(255, 255, 255, 0.9);
 }
 
@@ -452,8 +459,8 @@ a:hover {
 }
 
 .hero-banner-node {
-  width: 92px;
-  min-height: 70px;
+  width: 100%;
+  min-height: 76px;
   border-radius: 8px;
   padding: 10px;
 }
@@ -471,29 +478,28 @@ a:hover {
 }
 
 .hero-banner-node.node-1 {
-  top: 24px;
-  left: 24px;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .hero-banner-node.node-2 {
-  top: 24px;
-  right: 24px;
+  grid-column: 3;
+  grid-row: 1;
 }
 
 .hero-banner-node.node-3 {
-  top: 50%;
-  left: 18px;
-  transform: translateY(-50%);
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .hero-banner-node.node-4 {
-  right: 18px;
-  bottom: 36px;
+  grid-column: 3;
+  grid-row: 3;
 }
 
 .hero-banner-node.node-5 {
-  left: 24px;
-  bottom: 28px;
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .hero-banner-proof-grid {
@@ -581,12 +587,16 @@ a:hover {
   }
 
   .hero-banner-network {
-    min-height: 210px;
+    grid-template-columns: minmax(74px, 88px) minmax(104px, 1fr) minmax(74px, 88px);
+    grid-template-rows: repeat(3, minmax(62px, 1fr));
+    gap: 8px 10px;
+    min-height: 246px;
+    padding: 14px;
   }
 
   .hero-banner-core {
-    width: 112px;
-    height: 112px;
+    width: 104px;
+    height: 104px;
   }
 
   .hero-banner-core strong {
