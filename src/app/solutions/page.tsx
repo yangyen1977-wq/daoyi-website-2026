@@ -204,12 +204,10 @@ export default function SolutionsPage() {
               <div className="solution-detail-main">
                 <span className="mini-label accent">{item.eyebrow}</span>
                 <h3>{item.title}</h3>
-                <p className="solution-summary">{item.summary}</p>
                 <div className="solution-cta-row">
                   <Link href={`/contact?topic=${encodeURIComponent(item.cta)}`} className="button-primary">
                     {item.cta}
                   </Link>
-                  <Link href="/work" className="button-secondary">看相關案例</Link>
                 </div>
               </div>
 
@@ -219,7 +217,7 @@ export default function SolutionsPage() {
                   <p>{item.audience.slice(0, 2).join("、")}</p>
                 </div>
                 <div className="solution-mini-field">
-                  <strong>常見卡點</strong>
+                  <strong>卡在哪裡</strong>
                   <p>{item.problems.slice(0, 2).join("、")}</p>
                 </div>
                 <div className="solution-mini-field">
@@ -227,21 +225,8 @@ export default function SolutionsPage() {
                   <p>{item.approach}</p>
                 </div>
                 <div className="solution-deliverable-box solution-mini-field">
-                  <strong>第一階段會交付</strong>
+                  <strong>第一階段交付什麼</strong>
                   <p>{item.deliverables.slice(0, 3).join("、")}</p>
-                </div>
-              </div>
-
-              <div className="solution-card-footer">
-                <div>
-                  <strong>使用技術</strong>
-                  <div className="tag-list">
-                    {item.technologies.map((tech) => <span key={tech}>{tech}</span>)}
-                  </div>
-                </div>
-                <div>
-                  <strong>相關案例</strong>
-                  <p>{item.cases.join("、")}</p>
                 </div>
               </div>
             </article>
