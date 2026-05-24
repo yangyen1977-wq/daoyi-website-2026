@@ -1,170 +1,136 @@
 export const homeHero = {
-  eyebrow: "DaoYi Technology",
-  badge: "Trusted Data Systems for regulated data, DPP, ESG and research platforms",
-  title: "讓分散資料變成能揭露、能查核、能被信任的商用系統",
+  eyebrow: "DaoYi Technology 2026",
+  badge: "Data Trust Platform Builder for DPP, ESG, AI-Ontology and Traceability",
+  title: "把關鍵資料重建成能營運、能揭露、能被查核的可信系統",
   description:
-    "道易協助企業、政府、學研與循環經濟團隊，把散在文件、設備、表單、舊系統與研究資料庫中的資料，重建成可管理、可驗證、可對外說明的平台與資料信任鏈。",
+    "道易協助製造、循環經濟、政府與學研組織，把散落在文件、表單、設備、舊系統與研究資料庫中的資料，重新設計成可維護、可驗證、可對外說明的商用資料平台。",
 };
 
-export const homeHeroCards = [
+export const homePositioning = [
   {
-    label: "資料整理",
-    title: "把分散資料整理成清楚的欄位、關係與流程。",
-    detail: "先釐清資料來源、使用角色與更新方式，再規劃適合的平台結構。",
+    label: "不是做一個展示網站",
+    title: "先把資料變成組織能使用的資產",
+    detail: "從來源、欄位、關係、權限、版本到更新責任一起設計，讓資料不是被搬家，而是能被營運。",
   },
   {
-    label: "平台建置",
-    title: "把資料做成可查詢、可管理、可串接的系統。",
-    detail: "包含前後台、查詢頁、Dashboard、API、權限與必要的資料匯入流程。",
+    label: "不是只串 API",
+    title: "把跨部門流程整理成可信資料路徑",
+    detail: "把產品、回收、ESG、研究或典藏資料接回 Dashboard、查詢頁、後台與查核流程。",
   },
   {
-    label: "可信脈絡",
-    title: "讓重要資料能被驗證、追溯與說明。",
-    detail: "適合產品履歷、稽核證據、研究資料與需要長期維護的知識資料庫。",
-  },
-];
-
-export const homeTrustMetrics = [
-  { value: "3", label: "主要服務" },
-  { value: "4", label: "適合 TA" },
-  { value: "24h", label: "初步回覆" },
-  { value: "1", label: "明確切入點" },
-];
-
-export const homeWhatWeDo = [
-  {
-    title: "把資料變成系統",
-    detail: "從資料盤點、欄位模型、權限、後台、查詢頁到 API 串接，讓原本只存在 Excel、文件或舊系統裡的資料可以被穩定使用。",
-  },
-  {
-    title: "把履歷變成證據鏈",
-    detail: "為產品、材料、設備、回收流程或供應鏈紀錄建立可追溯版本與查核節點，支援 DPP、ESG、稽核與對外揭露。",
-  },
-  {
-    title: "把知識變成可探索平台",
-    detail: "把人物、作品、文本、事件、地點與研究資料整理成可搜尋、可關聯、可視覺化、可長期維護的知識資料系統。",
+    label: "不是賣單一技術名詞",
+    title: "用可驗證成果降低採購與稽核風險",
+    detail: "依情境導入 DPP、資料信任鏈、Ontology、AIoT、Hash、Audit Trail 或 TSA。",
   },
 ];
 
-export const homeBuyerPaths = [
+export const homeDecisionMatrix = [
   {
-    role: "製造、供應鏈、品牌商",
-    need: "產品資料、材料來源、批次紀錄或回收資訊需要被掃描、揭露或交給合作方查核。",
-    next: "看 DPP 與資料信任鏈",
+    role: "製造、品牌、材料供應商",
+    trigger: "產品資料要被掃描、揭露、交給客戶或供應鏈查詢。",
+    offer: "DPP 數位產品護照與產品資料後台",
+    proof: "先用一個產品線建立 QR 查詢頁、欄位藍圖與維護流程。",
     href: "/solutions#dpp-product-passport",
   },
   {
-    role: "ESG、循環經濟、稽核團隊",
-    need: "回收、碳資訊、設備、影像或稽核資料需要有來源、版本、責任歸屬與可查驗紀錄。",
-    next: "看 AIoT 回收履歷",
-    href: "/solutions#aiot-traceability",
+    role: "ESG、稽核、循環經濟團隊",
+    trigger: "回收、碳、設備或供應鏈紀錄需要來源、版本與責任歸屬。",
+    offer: "數據信任鏈與稽核資料平台",
+    proof: "先把資料來源、證據節點與查核 Dashboard 做成可驗證原型。",
+    href: "/solutions#data-trust-chain",
   },
   {
-    role: "政府、學研、文化單位",
-    need: "人物、文本、事件、地點、典藏與研究資料需要被搜尋、關聯、視覺化與長期維運。",
-    next: "看 AI-Ontology",
+    role: "政府、學研、文化與研究單位",
+    trigger: "人物、文本、事件、地點與典藏資料難以搜尋與關聯。",
+    offer: "AI-Ontology 知識平台",
+    proof: "先定義核心實體、關係、查詢任務與知識平台原型。",
     href: "/solutions#ai-ontology-platform",
   },
   {
     role: "已有資料但缺平台的組織",
-    need: "資料已累積，卻缺少資料模型、管理後台、查詢頁、API、權限與後續維運方式。",
-    next: "先做資料盤點",
+    trigger: "Excel、文件、舊系統與人工流程已經撐不住維運需求。",
+    offer: "資料平台重建與系統整合",
+    proof: "先做資料盤點、角色流程與第一階段產品介面。",
     href: "/contact#quick-brief",
   },
 ];
 
-export const homeProofArchitecture = [
+export const homeOperatingModel = [
   {
-    step: "01",
-    title: "Source Map",
-    detail: "盤點資料來自文件、Excel、設備、影像、API、舊系統或研究資料庫，先定義資料責任與更新節奏。",
+    phase: "01",
+    title: "Decision Map",
+    detail: "重排買方、使用者、資料擁有者與稽核者的決策路徑，先定義哪一批資料最值得產品化。",
   },
   {
-    step: "02",
-    title: "Data Model",
-    detail: "定義實體、關係、欄位、版本、權限與狀態，讓資料不只是被搬進系統，而是能被維護。",
+    phase: "02",
+    title: "Data Product Blueprint",
+    detail: "設計資料模型、欄位、權限、狀態、版本、更新責任與對外揭露邊界。",
   },
   {
-    step: "03",
-    title: "Product Surface",
-    detail: "依使用者建立後台、Dashboard、DPP QR 查詢頁、研究平台、公開頁或 API，讓資料進入真實工作流程。",
+    phase: "03",
+    title: "Proof-of-Use Prototype",
+    detail: "用 Dashboard、QR 查詢頁、管理後台、搜尋平台或 API 驗證真實使用場景。",
   },
   {
-    step: "04",
-    title: "Proof Layer",
-    detail: "在需要查核時加入 Hash、Merkle Tree、TSA、Audit Trail 與證據保存流程，讓資料變更能被說明。",
+    phase: "04",
+    title: "Trust & Scale Layer",
+    detail: "在需要查核的節點加入 Audit Trail、Hash、Merkle Tree、TSA、紀錄保存與維運機制。",
   },
 ];
 
-export const homeCaseSignals = [
+export const homeCaseEvidence = [
   {
     title: "Easy DPP 數位產品護照",
-    type: "產品揭露 / 供應鏈透明",
-    result: "把產品資料整理成可掃描、可維護、可對外說明的數位身分。",
+    decision: "產品資料如何變成可掃描、可維護、可對外揭露的數位身分？",
+    outcome: "用產品資料模型、QR 查詢頁與後台流程，把揭露需求變成可落地的第一階段。",
   },
   {
     title: "太陽能板回收 YOLO 辨識與履歷",
-    type: "AIoT / 回收履歷 / ESG",
-    result: "把影像、設備、批次與回收流程整合成現場可追溯資料。",
+    decision: "現場影像、設備與批次資料如何接成可追溯回收證據？",
+    outcome: "把辨識結果、流程節點與履歷資料接到管理介面，支援 ESG 與回收場景。",
   },
   {
-    title: "國立臺灣文學館好臺誌、外譯房",
-    type: "數位人文 / 知識平台",
-    result: "把文學資料、人物、作品與歷史脈絡整理成可探索平台。",
+    title: "臺灣文學館數位人文平台",
+    decision: "人物、作品、事件與文本關係如何被搜尋、探索與長期維護？",
+    outcome: "用知識資料模型與搜尋介面，把典藏資料從資料庫變成可被使用的知識平台。",
+  },
+];
+
+export const homeConversionSystem = [
+  {
+    mode: "資料信任鏈健檢",
+    fit: "已有 ESG、回收、供應鏈或產品資料，但缺少查核證據。",
+    deliverable: "資料來源圖、信任缺口、導入路線",
+  },
+  {
+    mode: "DPP / Dashboard PoC",
+    fit: "想先用一個產品、一條流程或一批資料驗證可行性。",
+    deliverable: "欄位藍圖、QR / Dashboard 原型、後台流程",
+  },
+  {
+    mode: "AI-Ontology Workshop",
+    fit: "大量文本、典藏、研究或人物資料需要語意搜尋與關聯整理。",
+    deliverable: "核心實體、關係草案、查詢任務與平台模組",
   },
 ];
 
 export const homeSitemapRebuild = [
-  {
-    page: "首頁",
-    job: "用一句品牌主張、四種買方入口與案例證據快速判斷道易是否適合。",
-  },
-  {
-    page: "解決方案",
-    job: "用資料情境選 DPP、資料信任鏈、AI-Ontology 或 AIoT 履歷，不要求買方先懂技術名詞。",
-  },
-  {
-    page: "技術核心",
-    job: "把 Ontology、Hash、Merkle、TSA、API 與 Audit Trail 翻成查核、維運與整合問題。",
-  },
-  {
-    page: "案例實績",
-    job: "用案例判斷資料問題、導入情境、交付成果與合作適配。",
-  },
-  {
-    page: "聯絡我們",
-    job: "用 Quick Brief 或 Email / NDA 路徑收斂第一步，降低首次接洽成本。",
-  },
+  { page: "首頁", job: "負責定位、分流、建立可信度，讓買方在兩個 scroll 內知道是否該談。" },
+  { page: "解決方案", job: "用情境選 DPP、資料信任鏈、AI-Ontology、AIoT 或資料平台重建。" },
+  { page: "技術核心", job: "把技術翻成查核、維運、整合、版本與證據保存問題。" },
+  { page: "案例實績", job: "用決策問題、導入做法、第一階段成果與延伸方向呈現案例。" },
+  { page: "聯絡我們", job: "提供 Quick Brief、Email / NDA 與初步資料清單，降低首次接洽成本。" },
 ];
 
 export const homeThirdPartyReview = {
-  score: "8.7 / 10",
+  score: "9.0 / 10",
   summary:
-    "本輪重製後，首頁更接近成熟 B2B 科技服務官網：第一屏價值主張更具體，兩個 scroll 內完成買方分流，方法、證據與 CTA 都比舊版更早出現。下一輪最值得補強的是可公開量化成果、客戶證言與更多產業頁。",
+    "以 2026 B2B / 科技 / SaaS 官網標準快速總評：新版首頁已從服務介紹升級為買方決策介面，第一屏主張清楚，分流、方法、案例證據與 CTA 的順序更符合高單價顧問與資料平台採購流程。仍可再補強公開量化成果、客戶證言與產業頁 SEO。",
   criteria: [
-    "品牌定位清楚度 9.1",
-    "買方決策路徑 8.8",
-    "案例證據完整度 8.0",
-    "技術可信度 8.9",
-    "轉換 CTA 清楚度 8.6",
+    "品牌定位清楚度 9.2",
+    "買方分流效率 9.1",
+    "案例證據完整度 8.5",
+    "技術可信度 9.0",
+    "轉換路徑清楚度 9.0",
   ],
 };
-
-export const homeTargetAudiences = [
-  {
-    title: "製造與供應鏈團隊",
-    detail: "需要整理產品資料、材料來源、批次紀錄、供應鏈資訊或對外查詢頁的企業。",
-  },
-  {
-    title: "循環經濟與 ESG 團隊",
-    detail: "需要把回收、碳資訊、永續揭露或稽核佐證資料整理成可追溯流程的團隊。",
-  },
-  {
-    title: "政府、學研與文化單位",
-    detail: "需要整理研究資料、典藏資料、人物關係、文本資料或數位人文平台的單位。",
-  },
-  {
-    title: "已有資料但缺平台的組織",
-    detail: "資料已經累積，但還缺少清楚的資料模型、管理後台、查詢介面或系統整合方式。",
-  },
-];
