@@ -3,20 +3,19 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import {
-  homeCaseEvidence,
-  homeConversionSystem,
-  homeDecisionMatrix,
   homeHero,
-  homeOperatingModel,
-  homePositioning,
+  homeBuyerPaths,
+  homeCaseSignals,
+  homeProofArchitecture,
   homeSitemapRebuild,
   homeThirdPartyReview,
+  homeWhatWeDo,
 } from "@/lib/content/home";
 import { publicAssetPath, siteConfig } from "@/lib/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "道易科技 2026｜可信資料平台、DPP、ESG 稽核與 AI-Ontology",
+  title: "道易科技 2026｜數據信任鏈、DPP、ESG 稽核與 AI-Ontology 知識平台",
   description: siteConfig.description,
   path: "/",
 });
@@ -38,30 +37,28 @@ export default function HomePage() {
             <p>{homeHero.description}</p>
             <div className="hero-actions">
               <Link href="/contact#quick-brief" className="button-primary button-large">用一批資料討論第一步</Link>
-              <Link href="/work" className="button-secondary button-large">查看案例證據</Link>
+              <Link href="/work" className="button-secondary button-large">查看案例實績</Link>
             </div>
           </div>
-          <aside className="home-hero-proof" aria-label="道易 2026 官網重製方向">
-            <strong>Trusted data systems, not one-off websites.</strong>
+          <div className="home-hero-proof" aria-label="道易服務重點">
+            <strong>From scattered data to trusted system assets</strong>
             <div>
-              <span>DPP</span>
-              <span>ESG / Audit</span>
-              <span>AI-Ontology</span>
-              <span>Traceability</span>
+              <span>DPP / ESG</span>
+              <span>Ontology / AI</span>
+              <span>Audit Trail</span>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
       <Section
-        eyebrow="Brand Position"
-        title="道易的新版定位：幫組織把資料重建成可營運的可信系統。"
-        description="參考成熟 B2B / SaaS 官網後，本輪不再把首頁當服務型錄，而是當買方決策介面：先說清楚價值，再用情境、方法與證據讓對方判斷下一步。"
+        eyebrow="What we do"
+        title="道易把分散的資料，整理成能查、能驗證、能長期維護的平台。"
+        description="我們不是只做網站或後台，而是從資料來源、欄位結構、查詢情境到維運方式一起設計，讓資料真的能被組織使用。"
       >
-        <div className="home-position-grid">
-          {homePositioning.map((item) => (
-            <article key={item.title} className="card home-position-card">
-              <span className="card-kicker">{item.label}</span>
+        <div className="card-grid three-up">
+          {homeWhatWeDo.map((item) => (
+            <article key={item.title} className="card trust-card">
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
@@ -70,56 +67,30 @@ export default function HomePage() {
       </Section>
 
       <Section
-        eyebrow="Decision Matrix"
-        title="讓不同買方不用先懂技術名詞，也能找到自己的資料問題。"
-        description="高單價科技服務的首頁要縮短判斷時間。新版用角色、觸發情境、道易提供什麼與第一階段如何驗證來分流。"
+        eyebrow="Buyer paths"
+        title="不用先懂技術名詞，先從你的資料情境進站。"
+        description="成熟 B2B 官網的首頁要替買方減少判斷成本。道易新版首頁把需求分成四種入口，讓不同角色能快速找到下一頁。"
       >
-        <div className="home-decision-table-wrap">
-          <table className="home-decision-table">
-            <thead>
-              <tr>
-                <th>買方角色</th>
-                <th>現在卡在哪裡</th>
-                <th>道易切入方式</th>
-                <th>第一階段證據</th>
-              </tr>
-            </thead>
-            <tbody>
-              {homeDecisionMatrix.map((item) => (
-                <tr key={item.role}>
-                  <th scope="row">{item.role}</th>
-                  <td>{item.trigger}</td>
-                  <td>
-                    <Link href={item.href}>{item.offer}</Link>
-                  </td>
-                  <td>{item.proof}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="home-decision-cards">
-          {homeDecisionMatrix.map((item) => (
-            <article key={item.role} className="card home-decision-card">
-              <span className="card-kicker">{item.role}</span>
-              <h3>{item.offer}</h3>
-              <p>{item.trigger}</p>
-              <p>{item.proof}</p>
-              <Link href={item.href} className="inline-button">看適合方案</Link>
+        <div className="home-path-grid">
+          {homeBuyerPaths.map((path) => (
+            <article key={path.role} className="card home-path-card">
+              <span className="card-kicker">{path.role}</span>
+              <p>{path.need}</p>
+              <Link href={path.href} className="inline-button">{path.next}</Link>
             </article>
           ))}
         </div>
       </Section>
 
       <Section
-        eyebrow="90-Day Build Logic"
-        title="從資料決策地圖到可信平台，用一條可落地的導入路徑取代抽象顧問詞。"
-        description="新版把道易的方法呈現成可採購、可驗收、可擴充的工作流，讓買方知道第一階段會發生什麼。"
+        eyebrow="System method"
+        title="道易交付的不是單頁展示，而是一條可維護的資料產品路徑。"
+        description="從資料來源到查核證據，每一層都對應到後續維運、揭露、稽核與擴充。"
       >
-        <div className="home-operating-grid">
-          {homeOperatingModel.map((step) => (
-            <article key={step.phase} className="home-operating-step">
-              <span>{step.phase}</span>
+        <div className="home-architecture-grid">
+          {homeProofArchitecture.map((step) => (
+            <article key={step.step} className="home-architecture-step">
+              <span>{step.step}</span>
               <h3>{step.title}</h3>
               <p>{step.detail}</p>
             </article>
@@ -128,32 +99,16 @@ export default function HomePage() {
       </Section>
 
       <Section
-        eyebrow="Evidence"
-        title="案例不只展示作品，而是回答買方會問的決策問題。"
-        description="B2B 官網的案例要替採購、主管與技術窗口建立共識。新版首頁將代表案例改成問題與成果對照。"
+        eyebrow="Proof"
+        title="案例呈現從作品清單，改成買方能判斷的資料問題與交付結果。"
+        description="B2B 科技服務需要讓買方看到適用情境，而不是只展示漂亮頁面。"
       >
         <div className="card-grid three-up">
-          {homeCaseEvidence.map((item) => (
-            <article key={item.title} className="card home-evidence-card">
-              <span className="card-kicker">{item.title}</span>
-              <h3>{item.decision}</h3>
-              <p>{item.outcome}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Conversion Paths"
-        title="把首次接洽設計成三種低摩擦入口。"
-        description="不是要求買方一開始就定完整系統，而是讓對方用現有資料狀態選擇最合適的第一步。"
-      >
-        <div className="home-conversion-grid">
-          {homeConversionSystem.map((item) => (
-            <article key={item.mode} className="card home-conversion-card">
-              <h3>{item.mode}</h3>
-              <p>{item.fit}</p>
-              <strong>{item.deliverable}</strong>
+          {homeCaseSignals.map((item) => (
+            <article key={item.title} className="card home-proof-card">
+              <span className="card-kicker">{item.type}</span>
+              <h3>{item.title}</h3>
+              <p>{item.result}</p>
             </article>
           ))}
         </div>
@@ -161,8 +116,8 @@ export default function HomePage() {
 
       <Section
         eyebrow="2026 Sitemap"
-        title="整站架構改以買方決策路徑重排。"
-        description="首頁說清楚定位與分流；解決方案負責選型；技術核心建立信任；案例實績提供證據；聯絡頁降低第一步成本。"
+        title="整站架構改以買方決策路徑重排，而不是公司內部服務分類。"
+        description="首頁負責說清楚定位與分流；解決方案負責選型；技術核心建立信任；案例實績提供證據；聯絡頁降低第一步成本。"
       >
         <div className="home-sitemap-list">
           {homeSitemapRebuild.map((item) => (
@@ -175,7 +130,8 @@ export default function HomePage() {
       </Section>
 
       <Section
-        eyebrow="Third-party Quick Review"
+        id="quick-brief"
+        eyebrow="Third-party quick review"
         title="以 B2B / 科技 / SaaS 官網標準快速總評。"
         description={homeThirdPartyReview.summary}
       >
@@ -190,13 +146,13 @@ export default function HomePage() {
       </Section>
 
       <Section
-        eyebrow="Next Step"
-        title="帶一批真實資料來，道易會協助判斷最小可行的第一階段。"
-        description="提供資料類型、保存方式、預計使用者與查核需求，即可先討論適合做盤點、PoC、工作坊、Dashboard、DPP 或知識平台。"
+        eyebrow="Next step"
+        title="如果你有一批重要資料需要整理、展示或驗證，可以先從一次需求討論開始。"
+        description="告訴我們資料類型、目前保存方式、預計給誰使用，道易會協助判斷適合先做平台、DPP、Dashboard、API 或知識資料整理。"
       >
         <div className="hero-actions">
-          <Link href="/contact#quick-brief" className="button-primary button-large">24h 內取得初步建議</Link>
-          <Link href="/solutions" className="button-secondary button-large">查看解決方案</Link>
+          <Link href="/contact" className="button-primary button-large">聯絡道易</Link>
+          <Link href="/solutions" className="button-secondary button-large">看服務方向</Link>
         </div>
       </Section>
     </main>
