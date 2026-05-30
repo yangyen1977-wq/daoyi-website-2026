@@ -10,7 +10,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const isTechnologyPage = pathname.startsWith("/technology");
-  const ctaHref = pathname === "/" ? "/#quick-brief" : isTechnologyPage ? "/contact?topic=technology" : "/contact";
+  const ctaHref = pathname === "/" ? "/contact#quick-brief" : isTechnologyPage ? "/contact?topic=technology" : "/contact";
   const ctaLabel = pathname === "/" ? "預約討論" : isTechnologyPage ? "取得技術建議" : "24h 內回覆";
 
   useEffect(() => {

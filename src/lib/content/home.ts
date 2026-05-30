@@ -1,9 +1,9 @@
 export const homeHero = {
   eyebrow: "DaoYi Technology",
   badge: "Trusted Data Systems for DPP, ESG, AI-Ontology",
-  title: "把重要資料做成能公開、能查核、能被長期信任的系統資產",
+  title: "把分散資料整理成可查、可驗、可維護的可信平台",
   description:
-    "道易協助企業、政府、學研與循環經濟團隊，把分散在文件、設備、表單、舊系統與研究資料庫中的資料，整理成可管理、可驗證、可對外說明的平台。",
+    "道易協助企業、政府、研究與循環經濟團隊，把產品、ESG、回收、研究與知識資料，整理成能管理、能查核、能對外說明的系統資產。",
 };
 
 export const homeHeroCards = [
@@ -48,28 +48,28 @@ export const homeWhatWeDo = [
 
 export const homeBuyerPaths = [
   {
-    role: "製造 / 供應鏈",
-    need: "產品資料、材料來源與回收資訊需要被掃描或揭露。",
-    next: "先看 DPP / 資料信任鏈",
+    role: "產品資料要被掃描、查詢與對外揭露",
+    need: "把產品資料、材料、製程、供應鏈與回收資訊整理成可更新、可揭露的數位身分。",
+    next: "DPP 數位產品護照",
     href: "/solutions#dpp-product-passport",
   },
   {
-    role: "ESG / 循環經濟",
-    need: "回收、碳資訊、設備或稽核資料需要有來源、版本與查核節點。",
-    next: "先看 ESG / AIoT 回收履歷",
-    href: "/solutions#aiot-traceability",
+    role: "ESG、回收或供應鏈資料需要被查核",
+    need: "讓資料來源、版本、時間、修改紀錄與稽核證據有脈絡可查。",
+    next: "數據信任鏈與高效稽核平台",
+    href: "/solutions#data-trust-chain",
   },
   {
-    role: "政府 / 學研 / 文化",
-    need: "人物、文本、事件、地點與典藏資料需要被搜尋、關聯與維護。",
-    next: "先看 AI-Ontology",
+    role: "人物、文本、事件或研究資料需要被搜尋",
+    need: "把複雜資料整理成可搜尋、可關聯、可視覺化的知識網絡。",
+    next: "AI-Ontology 知識平台",
     href: "/solutions#ai-ontology-platform",
   },
   {
-    role: "已有資料但缺平台",
-    need: "資料已累積，卻缺少資料模型、後台、查詢頁、API 或維運流程。",
-    next: "先做資料盤點",
-    href: "/contact#quick-brief",
+    role: "設備、影像辨識與現場流程要接回平台",
+    need: "把現場設備、影像、批次與流程資料串成可追蹤、可管理的回收履歷。",
+    next: "AIoT 回收履歷整合",
+    href: "/solutions#aiot-traceability",
   },
 ];
 
@@ -101,16 +101,90 @@ export const homeCaseSignals = [
     title: "Easy DPP 數位產品護照",
     type: "產品揭露 / 供應鏈透明",
     result: "把產品資料整理成可掃描、可維護的數位身分。",
+    proof: "從產品欄位到 QR 查詢頁，先跑通可揭露的 DPP 原型。",
+    fit: "材料、來源、製程與回收指引分散在部門、供應商與文件中。",
+    approach: "整理 DPP 欄位架構、公開查詢頁與後台維護邏輯。",
+    deliverables: "欄位藍圖、QR Code 查詢頁、後台資料維護流程。",
+    href: "/work#featured-cases",
   },
   {
     title: "太陽能板回收 YOLO 辨識與履歷",
     type: "AIoT / 回收履歷 / ESG",
     result: "把影像、設備、批次與回收流程整合成可追溯資料。",
+    proof: "把現場影像、批次與回收節點整理成可查核 Dashboard 脈絡。",
+    fit: "回收資料分散在影像、設備、批次與人工紀錄中。",
+    approach: "整合 YOLO、現場資料與回收履歷，規劃可查核資料結構。",
+    deliverables: "影像辨識資料整合、回收批次資料模型、Dashboard 規劃。",
+    href: "/work#featured-cases",
   },
   {
     title: "國立臺灣文學館好臺誌、外譯房",
     type: "數位人文 / 知識平台",
     result: "把文學資料、人物、作品與歷史脈絡整理成可探索平台。",
+    proof: "把人物、作品、主題與年代關係轉成可搜尋、可維護的平台。",
+    fit: "人物、作品、地點、主題與年代關係不易用一般網站呈現。",
+    approach: "建置可查詢、可維護的數位人文資料平台。",
+    deliverables: "資料結構設計、前台查詢展示、後台內容維護流程。",
+    href: "/work#featured-cases",
+  },
+];
+
+export const homeTrustQuestions = [
+  {
+    question: "這筆資料代表什麼？",
+    answer: "Ontology 語義建模",
+    detail: "定義產品、材料、設備、批次、人物、作品、事件、地點與文件等核心實體與關係。",
+  },
+  {
+    question: "這筆資料有沒有被改過？",
+    answer: "Hash / Merkle Tree",
+    detail: "為資料建立完整性指紋，支援批次驗證與單筆抽驗。",
+  },
+  {
+    question: "這筆資料在什麼時間點存在？",
+    answer: "TSA 與證據保存",
+    detail: "保留時間戳、Root Hash 錨定紀錄、附件關聯與內容指紋。",
+  },
+  {
+    question: "既有系統與現場資料如何接入？",
+    answer: "API / AIoT / 系統整合",
+    detail: "串接 ERP、MES、IoT、資料庫、影像辨識、查詢頁與稽核流程。",
+  },
+  {
+    question: "誰建立、修改、查詢或驗證資料？",
+    answer: "Audit Trail 與角色權限",
+    detail: "建立操作紀錄、角色權限、查核結果與資料狀態。",
+  },
+];
+
+export const homeStartModes = [
+  {
+    title: "資料信任鏈盤點",
+    fit: "已有資料平台或 ESG 資料，但缺少版本、時間證明或稽核流程。",
+    output: "資料來源盤點、風險缺口分析、導入路線。",
+    cta: "開始資料盤點",
+    href: "/contact?topic=data-trust-audit",
+  },
+  {
+    title: "DPP / ESG PoC",
+    fit: "已有產品資料、回收流程或 ESG 資料，想先驗證可行性。",
+    output: "欄位藍圖、QR 查詢頁、Dashboard 原型。",
+    cta: "規劃 PoC",
+    href: "/contact?topic=dpp-esg-poc",
+  },
+  {
+    title: "AI-Ontology Workshop",
+    fit: "有大量文本、人物、事件或研究資料，想導入語意搜尋或知識圖譜。",
+    output: "核心實體與關係草案、查詢場景、平台模組建議。",
+    cta: "安排工作坊",
+    href: "/contact?topic=ai-ontology-workshop",
+  },
+  {
+    title: "Email / NDA 路徑",
+    fit: "需求涉及未公開產品、供應鏈、採購、研發或內部流程。",
+    output: "保密溝通邊界、初步會議範圍、可提供資料清單。",
+    cta: "先走保密聯繫",
+    href: "/contact#quick-brief",
   },
 ];
 
