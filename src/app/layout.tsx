@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Suspense } from "react";
 import { Geist } from "next/font/google";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteFooter } from "@/components/site-footer";
@@ -15,8 +14,8 @@ const geistSans = Geist({
 });
 
 const breadcrumbList = {
-  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": absoluteUrl("/#breadcrumb"),
   "itemListElement": navItems.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -26,34 +25,42 @@ const breadcrumbList = {
 };
 
 const serviceStructuredData = solutions.map((solution) => ({
-  "@context": "https://schema.org",
   "@type": "Service",
+  "@id": absoluteUrl(`/solutions#${encodeURIComponent(solution.title)}`),
   "name": solution.title,
   "serviceType": solution.title,
   "description": solution.description,
   "provider": {
     "@type": "Organization",
-    "name": siteConfig.name,
-    "url": siteConfig.url,
-    "email": siteConfig.email,
+    "@id": absoluteUrl("/#organization"),
   },
-  "areaServed": "Asia-Pacific",
+  "areaServed": ["TW", "Asia-Pacific"],
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "企業、政府、學研、循環經濟與供應鏈團隊"
+  },
   "offers": {
     "@type": "Offer",
     "availability": "https://schema.org/InStock",
+    "url": absoluteUrl("/contact#quick-brief"),
     "priceCurrency": "TWD"
   }
 }));
 
-const structuredData = [
-  {
-    "@context": "https://schema.org",
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
     "@type": "Organization",
+    "@id": absoluteUrl("/#organization"),
     "name": siteConfig.name,
+    "legalName": "道易科技股份有限公司",
+    "alternateName": "DaoYi Technology Co., Ltd.",
     "url": siteConfig.url,
     "email": siteConfig.email,
+    "telephone": siteConfig.phone,
     "logo": `${siteConfig.url}/assets/daoyi-logo.png`,
-    "sameAs": ["https://daoyidh.com"],
+    "sameAs": [siteConfig.url],
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -62,11 +69,12 @@ const structuredData = [
         "areaServed": "TW",
         "availableLanguage": ["zh-Hant", "en"]
       }
-    ]
+    ],
+    "knowsAbout": ["Data Trust Chain", "Digital Product Passport", "ESG audit", "Ontology", "Merkle Tree", "IPFS", "TSA timestamp"]
   },
   {
-    "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": absoluteUrl("/#professional-service"),
     "name": siteConfig.name,
     "url": siteConfig.url,
     "description": siteConfig.description,
@@ -78,25 +86,29 @@ const structuredData = [
       "addressLocality": "Tainan / Taipei",
       "addressCountry": "TW"
     },
+    "parentOrganization": {
+      "@type": "Organization",
+      "@id": absoluteUrl("/#organization")
+    },
     "serviceType": ["數據信任鏈", "DPP 數位產品護照", "ESG 高效稽核", "AI-Ontology 知識平台", "AIoT 回收履歷"],
-    "knowsAbout": ["Data Trust Chain", "Digital Product Passport", "ESG audit", "Ontology", "Merkle Tree", "IPFS", "TSA timestamp"],
     "availableLanguage": ["zh-Hant", "en"]
   },
   {
-    "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": absoluteUrl("/#website"),
     "name": siteConfig.shortName,
     "url": siteConfig.url,
     "inLanguage": ["zh-Hant", "en"],
     "potentialAction": {
       "@type": "ContactAction",
       "name": "Request trust data project brief",
-      "target": absoluteUrl("/#quick-brief")
+      "target": absoluteUrl("/contact#quick-brief")
     }
   },
   ...serviceStructuredData,
   breadcrumbList
-];
+  ]
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -157,9 +169,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteFooter />
           <MobileStickyCTA />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-          <Suspense fallback={null}>
-            <GoogleAnalytics measurementId={siteConfig.gaMeasurementId} />
-          </Suspense>
+          <GoogleAnalytics measurementId={siteConfig.gaMeasurementId} />
         </div>
       </body>
     </html>

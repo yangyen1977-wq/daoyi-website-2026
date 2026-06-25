@@ -9342,14 +9342,14 @@ body {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: var(--home-hero-image);
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   opacity: 0;
   transform: scale(1.05);
   transform-origin: center right;
+}
+
+.home-hero-background img {
+  object-fit: cover;
+  object-position: right center;
 }
 
 .hero-section.home-hero-visual::before {
@@ -9701,8 +9701,11 @@ main > .hero-section.home-hero-visual ~ .section-block .card > * {
   }
 
   .home-hero-background {
-    background-position: 68% center;
-    background-attachment: scroll;
+    transform-origin: 68% center;
+  }
+
+  .home-hero-background img {
+    object-position: 68% center;
   }
 
   .hero-section.home-hero-visual::before {

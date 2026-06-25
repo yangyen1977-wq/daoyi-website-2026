@@ -1,35 +1,6 @@
-"use client";
-
 import Script from "next/script";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
-
-declare global {
-  interface Window {
-    dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 export function GoogleAnalytics({ measurementId }: { measurementId?: string }) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    if (!measurementId || typeof window.gtag !== "function") {
-      return;
-    }
-
-    const queryString = searchParams.toString();
-    const pagePath = queryString ? `${pathname}?${queryString}` : pathname;
-
-    window.gtag("config", measurementId, {
-      page_path: pagePath,
-      page_location: window.location.href,
-      page_title: document.title,
-    });
-  }, [measurementId, pathname, searchParams]);
-
   if (!measurementId) {
     return null;
   }
@@ -42,7 +13,7 @@ export function GoogleAnalytics({ measurementId }: { measurementId?: string }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${measurementId}', { send_page_view: false });
+          gtag('config', '${measurementId}');
         `}
       </Script>
     </>

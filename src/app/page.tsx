@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/section";
 import {
@@ -20,14 +20,18 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function HomePage() {
-  const heroStyle = {
-    "--home-hero-image": `url("${publicAssetPath("/assets/home-hero-ai-network.png")}")`,
-  } as CSSProperties;
-
   return (
     <main id="main-content">
-      <section className="hero-section hero-rebuild home-hero-visual" style={heroStyle}>
-        <div className="home-hero-background" aria-hidden="true" />
+      <section className="hero-section hero-rebuild home-hero-visual">
+        <div className="home-hero-background" aria-hidden="true">
+          <Image
+            src={publicAssetPath("/assets/home-hero-ai-network.webp")}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="shell home-hero-content">
           <div className="hero-copy home-hero-copy">
             <span className="hero-eyebrow">{homeHero.eyebrow}</span>

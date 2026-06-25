@@ -9,7 +9,7 @@ export function MobileStickyCTA() {
   const pathname = usePathname();
   const hiddenRoutes = ["/contact"];
   const [dismissed, setDismissed] = useState(false);
-  const primaryHref = pathname === "/" ? "/#quick-brief" : "/contact";
+  const primaryHref = pathname === "/" ? "/contact#quick-brief" : "/contact";
   const primaryLabel = pathname === "/" ? "3 欄拿建議" : "24h 內拿建議";
   const secondaryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("想先和道易討論新專案 / NDA")}&body=${encodeURIComponent("目前網址或資料：\n希望先聊的範圍：\n是否需要 NDA：\n補充說明：")}`;
 
